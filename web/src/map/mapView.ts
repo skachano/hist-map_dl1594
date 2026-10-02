@@ -1,0 +1,247 @@
+// The map: settlement cells and points styled per place by the colour mode, hatching for places
+// held only in part, the duchy's outline, and in the districts mode the bailliages and the lands
+// outside them as labelled areas.
+import {
+  type FilterSpecification, type GeoJSONSource, Map as MapLibre, type MapGeoJSONFeature, type MapMouseEvent, Marker,
+  setWorkerUrl,
+} from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
+// MapLibre looks for its worker next to its own module, which bundling moves; hand it
+// Vite's bundled copy instead (same in dev and in the production build).
+import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
+import { MAP_CENTER, MAP_ZOOM, PLACE_ZOOM } from "../config";
+import type { Dataset } from "../data/types";
+import { DISTRICT } from "../model/colors";
+import { DUCHY, type PlaceStyle } from "../model/places";
+import { ICON_PIXEL_RATIO, iconName, SHAPES, shapeImage } from "./icons";
+
+const BASEMAP_STYLE = "https://tiles.openfreemap.org/styles/positron";
+const BASEMAP_DROP = /^(building|aeroway|airport|road_area_pier|road_pier|highway_path|highway_minor|highway-name|highway-shield|road_shield|railway|tunnel|label_village|label_other)/;
+
+setWorkerUrl(workerUrl);
+
+export interface MapCallbacks {
+  onHover(placeId: string | undefined, point: { x: number; y: number }): void;
+  onSelect(placeId: string | undefined): void;
+}
+
+const EMPTY: GeoJSON.FeatureCollection = { type: "FeatureCollection", features: [] };
+
+function placePoints(data: Dataset): GeoJSON.FeatureCollection {
+  const features: GeoJSON.Feature[] = [];
+  for (const p of data.places.values()) {
+    if (p.kind !== "settlement" || p.lat === undefined || p.lon === undefined) continue;
+    features.push({
+      type: "Feature",
+      id: p.id,
+      properties: { id: p.id, icon: iconName(p.type), approx: !!p.approx },
+      geometry: { type: "Point", coordinates: [p.lon, p.lat] },
+    });
+  }
+  return { type: "FeatureCollection", features };
+}
+
+/** Bounds of a geometry's coordinates: [west, south, east, north]. */
+function extend(box: [number, number, number, number], coords: unknown): void {
+  if (typeof (coords as number[])[0] === "number") {
+    const [x, y] = coords as number[];
+    box[0] = Math.min(box[0], x); box[1] = Math.min(box[1], y); box[2] = Math.max(box[2], x); box[3] = Math.max(box[3], y);
+  } else for (const c of coords as unknown[]) extend(box, c);
+}
+
+/** 45 degree hairline hatch, ink on transparent (the texture channel for places held in part). */
+function hatch(size = 8): { width: number; height: number; data: Uint8Array } {
+  const data = new Uint8Array(size * size * 4);
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      if ((x + y) % size === 0) data.set([11, 11, 11, 170], (y * size + x) * 4);
+    }
+  }
+  return { width: size, height: size, data };
+}
+
+/** The top administrative areas: the bailliages and the lands outside them (level 1). */
+export function topDistricts(data: Dataset): string[] {
+  return data.territories.features
+    .filter((f) => f.properties?.hierarchy === "admin" && f.properties?.level === 1)
+    .map((f) => String(f.properties?.id));
+}
+
+export class MapView {
+  readonly map: MapLibre;
+  private ready: Promise<void>;
+  private styled = new Set<string>();
+  private lastSelected?: string;
+  private zoomNext?: string;
+  private cellsById = new Map<string, GeoJSON.Feature>();
+  /** cell owner of each place: places placed at one point share its cell */
+  private cellOf = new Map<string, string>();
+  private labels: Marker[] = [];
+
+  constructor(container: HTMLElement, private data: Dataset, callbacks: MapCallbacks) {
+    for (const f of data.cells.features) {
+      const id = String(f.properties?.id);
+      this.cellsById.set(id, f);
+      this.cellOf.set(id, id);
+      for (const other of (f.properties?.also ?? []) as string[]) this.cellOf.set(other, id);
+    }
+    this.map = new MapLibre({
+      container,
+      center: MAP_CENTER,
+      zoom: MAP_ZOOM,
+      minZoom: 6,
+      maxZoom: 13,
+      attributionControl: { compact: true },
+      // OpenFreeMap's grey "positron" vector style (no key; OpenStreetMap data). The historical
+      // layers carry the colour; the base map only gives water, relief, towns and main roads.
+      style: BASEMAP_STYLE,
+    });
+    this.ready = new Promise((resolve) => this.map.on("load", () => {
+      this.trimBasemap();
+      this.addLayers();
+      this.fitDuchy();
+      resolve();
+    }));
+    // The container changes size when the phone layout opens the panel below the map.
+    new ResizeObserver(() => this.map.resize()).observe(container);
+
+    const hover = (e: MapMouseEvent & { features?: MapGeoJSONFeature[] }) => {
+      const id = e.features?.[0]?.properties?.id as string | undefined;
+      this.map.getCanvas().style.cursor = id ? "pointer" : "";
+      callbacks.onHover(id, e.point);
+    };
+    this.map.on("mousemove", "cells-fill", hover);
+    this.map.on("mousemove", "places-icon", hover);
+    this.map.on("mouseleave", "cells-fill", (e) => callbacks.onHover(undefined, e.point));
+    this.map.on("click", (e) => {
+      const hit = this.map.queryRenderedFeatures(e.point, { layers: ["places-icon", "cells-fill"] })[0];
+      callbacks.onSelect(hit?.properties?.id as string | undefined);
+    });
+  }
+
+  /** Drop the base map's detail that would crowd a 16th-century map: buildings, airports, minor
+   *  roads and paths, road names and shields, villages' modern names (the atlas draws its own). */
+  private trimBasemap(): void {
+    for (const layer of this.map.getStyle().layers ?? []) {
+      if (BASEMAP_DROP.test(layer.id)) this.map.removeLayer(layer.id);
+    }
+  }
+
+  private addLayers(): void {
+    const m = this.map;
+    m.addImage("hatch", hatch());
+    for (const type of Object.keys(SHAPES)) {
+      m.addImage(iconName(type), shapeImage(type), { sdf: true, pixelRatio: ICON_PIXEL_RATIO });
+    }
+    m.addSource("cells", { type: "geojson", data: this.data.cells, promoteId: "id" });
+    m.addSource("shared-cells", { type: "geojson", data: EMPTY });
+    m.addSource("territories", { type: "geojson", data: this.data.territories });
+    m.addSource("places", { type: "geojson", data: placePoints(this.data), promoteId: "id" });
+
+    const state = (key: string) => ["feature-state", key] as ["feature-state", string];
+    const hidden: FilterSpecification = ["==", ["get", "id"], ""];
+    // Districts mode: the bailliages and the lands outside them, white borders between neighbours.
+    m.addLayer({ id: "district-fill", type: "fill", source: "territories", filter: hidden,
+      paint: { "fill-color": DISTRICT, "fill-opacity": 0.35 } });
+    m.addLayer({
+      id: "cells-fill", type: "fill", source: "cells",
+      paint: { "fill-color": ["coalesce", state("fill"), "rgba(0,0,0,0)"], "fill-opacity": 0.75 },
+    });
+    m.addLayer({ id: "cells-shared", type: "fill", source: "shared-cells", paint: { "fill-pattern": "hatch" } });
+    m.addLayer({ id: "cells-line", type: "line", source: "cells",
+      paint: { "line-color": "#fcfcfb", "line-width": 0.6 } });
+    m.addLayer({ id: "district-line", type: "line", source: "territories", filter: hidden,
+      paint: { "line-color": "#fcfcfb", "line-width": 2.5 } });
+    m.addLayer({ id: "duchy", type: "line", source: "territories", filter: ["==", ["get", "id"], DUCHY],
+      paint: { "line-color": "#52514e", "line-width": 0.8 } });
+    // Settlements: the shape says what kind of place (map/icons.ts), the fill what the mode shows.
+    m.addLayer({
+      id: "places-icon", type: "symbol", source: "places",
+      layout: {
+        "icon-image": ["get", "icon"],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 7, 0.35, 11, 0.8, 13, 1],
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true,
+      },
+      paint: {
+        // placed at their commune: hollow (outline only), so the approximation stays visible
+        "icon-color": ["case", ["get", "approx"], "rgba(255,255,255,0)", ["coalesce", state("fill"), "#ffffff"]],
+        "icon-halo-color": "#52514e",
+        "icon-halo-width": 0.9,
+      },
+    });
+    m.addLayer({ id: "selected", type: "circle", source: "places", filter: hidden,
+      paint: { "circle-radius": 10, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": "#0b0b0b",
+        "circle-stroke-width": 2 } });
+    m.addLayer({ id: "selected-area", type: "line", source: "territories", filter: hidden,
+      paint: { "line-color": "#0b0b0b", "line-width": 3 } });
+  }
+
+  /** The whole duchy in view, unless the URL asks for a place (which then comes into view). */
+  private fitDuchy(): void {
+    const duchy = this.data.territories.features.find((f) => f.properties?.id === DUCHY);
+    if (!duchy || !("coordinates" in duchy.geometry)) return;
+    const box: [number, number, number, number] = [Infinity, Infinity, -Infinity, -Infinity];
+    extend(box, duchy.geometry.coordinates);
+    this.map.fitBounds(box, { padding: 24, duration: 0 });
+  }
+
+  /** Zoom in on a place when it is next selected (a place picked from a list). */
+  zoomTo(placeId: string): void {
+    this.zoomNext = placeId;
+  }
+
+  private reveal(placeId: string): void {
+    const p = this.data.places.get(placeId);
+    const zoom = this.zoomNext === placeId;
+    this.zoomNext = undefined;
+    if (p?.lat === undefined || p.lon === undefined) return;
+    if (!zoom && this.map.getBounds().contains([p.lon, p.lat])) return;
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.map.easeTo({ center: [p.lon, p.lat], duration: still ? 0 : 600,
+      ...(zoom ? { zoom: Math.max(this.map.getZoom(), PLACE_ZOOM) } : {}) });
+  }
+
+  /** Draw the places' styles; `districts` lists the areas to show as labelled districts (or none). */
+  async render(styles: Map<string, PlaceStyle>, districts: string[], names: Map<string, string>,
+    selected?: string): Promise<void> {
+    await this.ready;
+    const m = this.map;
+    m.setFilter("selected", ["==", ["get", "id"], selected ?? ""]);
+    const selectedIsTerritory = this.data.places.get(selected ?? "")?.kind === "territory";
+    m.setFilter("selected-area", ["==", ["get", "id"], selectedIsTerritory ? selected! : ""]);
+    if (selected && (selected !== this.lastSelected || selected === this.zoomNext)) this.reveal(selected);
+    this.lastSelected = selected;
+
+    const shown: FilterSpecification = ["in", ["get", "id"], ["literal", districts]];
+    m.setFilter("district-fill", shown);
+    m.setFilter("district-line", shown);
+    for (const label of this.labels) label.remove();
+    this.labels = [];
+    for (const id of districts) {
+      const p = this.data.places.get(id);
+      if (p?.lat === undefined || p.lon === undefined) continue;
+      const el = document.createElement("div");
+      el.className = "terr-label";
+      el.textContent = names.get(id) ?? id;
+      this.labels.push(new Marker({ element: el }).setLngLat([p.lon, p.lat]).addTo(m));
+    }
+
+    const shared: GeoJSON.Feature[] = [];
+    for (const [id, s] of styles) {
+      const st = { fill: s.fill ?? null };
+      m.setFeatureState({ source: "places", id }, st);
+      const cell = this.cellOf.get(id);
+      if (cell === id) m.setFeatureState({ source: "cells", id: cell }, st);
+      if (cell === id && s.shared) shared.push(this.cellsById.get(cell)!);
+    }
+    for (const id of this.styled) {
+      if (!styles.has(id)) {
+        m.setFeatureState({ source: "places", id }, { fill: null });
+        if (this.cellOf.get(id) === id) m.setFeatureState({ source: "cells", id }, { fill: null });
+      }
+    }
+    this.styled = new Set(styles.keys());
+    (m.getSource("shared-cells") as GeoJSONSource).setData({ type: "FeatureCollection", features: shared });
+  }
+}

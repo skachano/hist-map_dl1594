@@ -469,6 +469,41 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
   - Place panel with the entries, the index identification and the two chains (district and realm).
   - Copy the i18n with the new vocabulary.
 - Done when: the map shows the whole duchy coloured by tenure, and clicking a place shows its entries with their numbers and pages.
+- **Status: done.** Vanilla TypeScript with MapLibre in `web/src/`, adapted from hist_map without the year:
+  - **Data:** `data/types.ts` and `load.ts` for the Stage 7 files (cache-busted by the data version); entries are indexed by number.
+  - **State:** `state/store.ts`, with the state mirrored in the URL: `#/map?color=tenure|holder|district|realm&lang=fr&place=saint-avold&c=…`. No year, no right types.
+  - **Model:** `model/places.ts` gives each place's chains up each hierarchy (one per parent, so a village "en partie" in two prévôtés has two), the division a realm answers to, the main holding (domain first, then fief, clergy, safeguard), whether it is held in part, the kind of realm it lies in, its style per mode and the legend counts. `model/colors.ts` holds the colours.
+  - **Map:** `map/mapView.ts`, `icons.ts`.
+    - Cells and points coloured per mode through feature state; places at one point share their cell, and the place that owns it colours it.
+    - Hatching for places held in part or jointly; points placed at their commune are hollow.
+    - The duchy's outline, thin and grey; the map fits it on load.
+    - In the districts mode, the bailliages and the lands outside them as grey areas with white borders and labels.
+  - **Header** (`ui/controls.ts`): the title, the four colour modes as tabs, the language switch. No year bar.
+  - **Legend** (`ui/legend.ts`) for each mode:
+    - tenure: domain, fief, church lands, safeguard, not stated, with counts
+    - holder: the three coloured holders, "holder not named" and the picker for other holders
+    - realm: counties, lordships/terres/fiefs, church lands, in no named realm
+    - district: the 21 top divisions, as links
+    - always the hatching key, the kinds of place, and notes that areas are approximate and that blank land is not Lorraine in the Dénombrement
+  - **Place panel** (`ui/panel.ts`):
+    - names in four languages and the book's spellings
+    - type in four languages
+    - the editor's identification (kind, commune, canton, département), or "not identified"
+    - District and Realm chains, clickable from the top down
+    - for territories: what they answer to, their counterpart on the same land with its basis, their holders, and their member territories and places
+    - the location's reliability (approximate, uncertain, not located)
+    - every holding with its tenure, holder ("not named" for fiefs and church lands without one), share and entry numbers
+    - every entry naming the place: number, the text in « », section or list, district, realm and page
+    - the source line
+  - **Tooltip:** name, kind of place, tenure and holder (tenure and holder modes), and the district chain, or the realm chain in the realm mode.
+  - **i18n:** the interface strings in EN/FR/DE/JA. Vocabulary labels come from `meta.json`; names fall back through French.
+  - Checked by screenshot, with no console errors:
+    - tenure in English and German at 1280 px
+    - districts in French with Saint-Avold selected (entries 2240 and 2267 with pages 114–115, district and realm chains)
+    - realms with Guessling (the abbey of Saint-Avold's lands)
+    - Japanese on a phone (390 px: map above, panel below)
+  - Tests: 13 vitest tests (config, URL state, place chains, tenure order, sharing, kinds of realm, styles per mode, tooltip position).
+  - Carried to Stage 9: the Territories, Holders, Table, Church & resources and About views. The view tabs appear once there is more than one view.
 
 ### Stage 9: Screens
 Implement the remaining screens from §3 in this order: Territories, Table, Holders, Church & resources, About.

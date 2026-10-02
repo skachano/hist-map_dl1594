@@ -1,0 +1,103 @@
+// Interface strings in English, French, German and Japanese, and name lookup with fallback.
+import type { Labels, Lang, Names } from "./data/types";
+
+export const LANGS: Lang[] = ["en", "fr", "de", "ja"];
+
+const STRINGS = {
+  title: { en: "Duchy of Lorraine in 1594", fr: "Le duché de Lorraine en 1594", de: "Das Herzogtum Lothringen 1594",
+    ja: "1594年のロレーヌ公国" },
+  language: { en: "Language", fr: "Langue", de: "Sprache", ja: "言語" },
+  views: { en: "Views", fr: "Vues", de: "Ansichten", ja: "表示" },
+  view_map: { en: "Map", fr: "Carte", de: "Karte", ja: "地図" },
+  colourBy: { en: "Colour by", fr: "Couleurs", de: "Färben nach", ja: "色分け" },
+  mode_tenure: { en: "Tenure", fr: "Tenure", de: "Besitzart", ja: "保有形態" },
+  mode_holder: { en: "Holder", fr: "Détenteur", de: "Inhaber", ja: "保有者" },
+  mode_district: { en: "Districts", fr: "Circonscriptions", de: "Verwaltungsbezirke", ja: "行政区画" },
+  mode_realm: { en: "Realms", fr: "Seigneuries", de: "Herrschaften", ja: "封建領" },
+  mode_tenure_title: { en: "Ducal domain, fiefs and church lands", fr: "Domaine ducal, fiefs et terres d'Église",
+    de: "Herzogliche Domäne, Lehen und Kirchengut", ja: "公爵直轄領・封土・教会領" },
+  mode_holder_title: { en: "Who holds each place, where the book says", fr: "Qui détient chaque lieu, quand le livre le dit",
+    de: "Wer jeden Ort hält, soweit das Buch es sagt", ja: "各地の保有者（本書に記載がある場合）" },
+  mode_district_title: { en: "The bailliages and the lands outside them", fr: "Les bailliages et les terres hors bailliage",
+    de: "Die Ämter und die Gebiete außerhalb", ja: "バイイ管区とその外の地" },
+  mode_realm_title: { en: "Places inside a named county, lordship or church lands",
+    fr: "Lieux d'un comté, d'une seigneurie ou d'un temporel nommé",
+    de: "Orte in einer genannten Grafschaft, Herrschaft oder einem Kirchengut", ja: "名のある伯領・領・教会領に属する地" },
+  tenureLegend: { en: "Tenure in 1594", fr: "Tenure en 1594", de: "Besitzart 1594", ja: "1594年の保有形態" },
+  holderLegend: { en: "Holders", fr: "Détenteurs", de: "Inhaber", ja: "保有者" },
+  districtLegend: { en: "Bailliages and lands outside them", fr: "Bailliages et terres hors bailliage",
+    de: "Ämter und Gebiete außerhalb", ja: "バイイ管区とその外の地" },
+  realmLegend: { en: "Kinds of realm", fr: "Types de seigneurie", de: "Arten von Herrschaften", ja: "封建領の種別" },
+  realm_county: { en: "Counties", fr: "Comtés", de: "Grafschaften", ja: "伯領" },
+  realm_lordship: { en: "Lordships, terres and fiefs", fr: "Terres, seigneuries et fiefs", de: "Herrschaften und Lehen",
+    ja: "領と封土" },
+  realm_temporality: { en: "Church lands", fr: "Temporels d'Église", de: "Kirchengut", ja: "教会領" },
+  notInRealm: { en: "In no named realm", fr: "Hors de toute seigneurie nommée", de: "In keiner genannten Herrschaft",
+    ja: "名のある封建領に属さない" },
+  otherTenure: { en: "Under ducal safeguard", fr: "Sous la sauvegarde du duc", de: "Unter herzoglichem Schirm",
+    ja: "公爵の保護下" },
+  noTenure: { en: "Not stated", fr: "Non précisé", de: "Nicht angegeben", ja: "記載なし" },
+  holderNotNamed: { en: "Holder not named", fr: "Détenteur non nommé", de: "Inhaber nicht genannt", ja: "保有者の記載なし" },
+  otherHolders: { en: "Other holders", fr: "Autres détenteurs", de: "Andere Inhaber", ja: "その他の保有者" },
+  giveColour: { en: "Colour this holder", fr: "Colorer ce détenteur", de: "Diesen Inhaber einfärben", ja: "この保有者に色をつける" },
+  resetColours: { en: "Reset colours", fr: "Couleurs par défaut", de: "Farben zurücksetzen", ja: "色を元に戻す" },
+  shared: { en: "Partly (\"en partie\", \"pour la moitié\")", fr: "En partie, pour la moitié",
+    de: "Teilweise („en partie“, „pour la moitié“)", ja: "一部（「en partie」「pour la moitié」）" },
+  settlementTypes: { en: "Kinds of place", fr: "Types de lieux", de: "Arten von Orten", ja: "地点の種別" },
+  places: { en: "places", fr: "lieux", de: "Orte", ja: "地点" },
+  approxAreas: { en: "Areas are approximate: the book lists places, not boundaries.",
+    fr: "Les surfaces sont approximatives : le livre donne des lieux, pas des limites.",
+    de: "Flächen sind Näherungen: das Buch nennt Orte, keine Grenzen.", ja: "範囲は概略です。本書は地名を挙げていますが、境界は示していません。" },
+  blankLand: { en: "Blank: not Lorraine in the Dénombrement (the Three Bishoprics, the Barrois, the Empire)",
+    fr: "En blanc : hors de la Lorraine du Dénombrement (Trois-Évêchés, Barrois, Empire)",
+    de: "Weiß: nicht Lothringen laut Dénombrement (Drei Bistümer, Barrois, Reich)",
+    ja: "白地：一覧に載らない地（三司教領・バロワ・帝国領）" },
+  sharePart: { en: "in part", fr: "en partie", de: "zum Teil", ja: "一部" },
+  shareHalf: { en: "half", fr: "pour la moitié", de: "zur Hälfte", ja: "半分" },
+  shareJoint: { en: "jointly", fr: "en commun", de: "gemeinsam", ja: "共同" },
+  close: { en: "Close", fr: "Fermer", de: "Schließen", ja: "閉じる" },
+  names: { en: "Names", fr: "Noms", de: "Namen", ja: "名称" },
+  spellings: { en: "In the book", fr: "Dans le livre", de: "Im Buch", ja: "本書での表記" },
+  type: { en: "Type", fr: "Type", de: "Art", ja: "種別" },
+  index: { en: "The editor's identification (1870)", fr: "Identification de l'éditeur (1870)",
+    de: "Bestimmung des Herausgebers (1870)", ja: "編者による比定（1870年）" },
+  commune: { en: "commune of", fr: "commune de", de: "Gemeinde", ja: "所属自治体" },
+  canton: { en: "canton of", fr: "canton de", de: "Kanton", ja: "カントン" },
+  lostPlace: { en: "Not identified, or no longer exists", fr: "Non identifié, ou disparu", de: "Nicht bestimmt oder abgegangen",
+    ja: "比定できない、または消滅した地" },
+  district: { en: "District", fr: "Circonscription", de: "Bezirk", ja: "行政区画" },
+  realm: { en: "Realm", fr: "Seigneurie", de: "Herrschaft", ja: "封建領" },
+  answersTo: { en: "Answers to", fr: "Ressortit à", de: "Untersteht", ja: "管轄" },
+  sameLand: { en: "Same land as", fr: "Même territoire que", de: "Dasselbe Gebiet wie", ja: "同じ範囲" },
+  heldBy: { en: "Held by", fr: "Détenu par", de: "Gehalten von", ja: "保有者" },
+  tenure: { en: "Tenure", fr: "Tenure", de: "Besitzart", ja: "保有形態" },
+  entries: { en: "In the Dénombrement", fr: "Dans le Dénombrement", de: "Im Dénombrement", ja: "一覧での記載" },
+  entry: { en: "No.", fr: "n°", de: "Nr.", ja: "番号" },
+  pages: { en: "p.", fr: "p.", de: "S.", ja: "p." },
+  approximate: { en: "Approximate location (placed at its commune)", fr: "Localisation approximative (placé sur sa commune)",
+    de: "Ungefähre Lage (bei der Gemeinde verortet)", ja: "位置は概略（所属する自治体に配置）" },
+  lowConfidence: { en: "Location uncertain", fr: "Localisation incertaine", de: "Lage unsicher", ja: "位置は不確か" },
+  unlocated: { en: "Not located", fr: "Non localisé", de: "Nicht verortet", ja: "位置不明" },
+  members: { en: "Places", fr: "Lieux", de: "Orte", ja: "所属地" },
+  subTerritories: { en: "Territories", fr: "Territoires", de: "Territorien", ja: "下位の領域" },
+  loading: { en: "Loading…", fr: "Chargement…", de: "Wird geladen…", ja: "読み込み中…" },
+  loadError: { en: "The data could not be loaded.", fr: "Les données n'ont pas pu être chargées.",
+    de: "Die Daten konnten nicht geladen werden.", ja: "データを読み込めませんでした。" },
+  source: { en: "Source", fr: "Source", de: "Quelle", ja: "出典" },
+} satisfies Record<string, Record<Lang, string>>;
+
+export type StringKey = keyof typeof STRINGS;
+
+export function t(key: StringKey, lang: Lang): string {
+  return STRINGS[key][lang];
+}
+
+/** A place or entity name in `lang`, falling back through French (the book's language). */
+export function name(names: Names | undefined, lang: Lang, fallback = ""): string {
+  return names?.[lang] ?? names?.fr ?? names?.en ?? names?.de ?? fallback;
+}
+
+/** A vocabulary label in `lang`, falling back to English (Japanese labels are optional). */
+export function label(labels: Labels | undefined, lang: Lang, fallback = ""): string {
+  return labels?.[lang] ?? labels?.en ?? fallback;
+}

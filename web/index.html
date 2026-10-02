@@ -6,8 +6,13 @@
     <title>Duchy of Lorraine 1594</title>
   </head>
   <body>
+    <header id="header"></header>
     <main id="stage">
       <div id="map" role="application" aria-label="Map"></div>
+      <aside id="legend" aria-live="polite"></aside>
+      <aside id="panel" hidden></aside>
+      <div id="tooltip" role="tooltip" hidden></div>
+      <p id="status" role="status"></p>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
