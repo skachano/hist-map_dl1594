@@ -1,0 +1,5 @@
+id,name_en,name_fr,name_de,entity_type,color,source_page,confidence,notes
+abbey-saint-avold,Abbey of Saint-Avold,Abbaye de Saint-Avold,Abtei Saint-Avold,abbey,,115,,
+duchy-lorraine,Duke of Lorraine,Duc de Lorraine,Herzog von Lothringen,duchy,,35,,"""Vostre Altesse"", ""Son Altesse"": Charles III in 1594."
+house-eberstein,Counts of Eberstein,Comtes d'Eberstein,Grafen von Eberstein,noble_house,,89,high,
+house-oberstein,Lords of Oberstein,Sieurs d'Oberstein,Herren von Oberstein,noble_house,,89,medium,"""les sieurs comtes d'Eberstein et Oberstein"": read as two houses."

@@ -14,6 +14,7 @@ def main() -> None:
     val.add_argument("--info", action="store_true", help="also print information-level findings")
     sub.add_parser("schema", help="Stage 2: export JSON Schema per table to data/schema/")
     sub.add_parser("parse", help="Stage 3: parse the Dénombrement into data/extracted/ (entries, territories, chaumes)")
+    sub.add_parser("curate", help="Stage 4: build data/curated/*.csv + data/review/report.md")
     args = parser.parse_args()
 
     if args.cmd == "info":
@@ -54,6 +55,15 @@ def main() -> None:
             print(f"  {issue}")
         print(f"sections: {dict(Counter(e.section for e in main_entries))}")
         print(f"-> {(config.EXTRACTED_DIR / 'parse_report.md').relative_to(config.ROOT)}")
+    elif args.cmd == "curate":
+        from denombrement.curate import build
+        out = build.build()
+        build.write(out)
+        print(f"entries: {len(out.entries)}, places: {len(out.places)}, memberships: {len(out.memberships)}, "
+              f"entities: {len(out.entities)}, holdings: {len(out.holdings)}, features: {len(out.features)}")
+        print("\n".join(l for l in out.report if l.startswith("- Dénombrement entries matched")
+                        or l.startswith("- How all")))
+        print(f"-> data/curated/*.csv, {(build.REVIEW_DIR / 'report.md').relative_to(config.ROOT)}")
     elif args.cmd == "extract-text":
         from denombrement.text import extract
         extract.run()

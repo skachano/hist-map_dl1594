@@ -1,0 +1,94 @@
+# Review decisions applied by `make curate` on top of the parse (data/extracted/) and the
+# index (data/raw/). Edit this file and data/curated/manual/*.csv, never the generated tables.
+
+# Modern names of territory seats the OCR garbled. Keys are the parse's territory keys
+# (data/extracted/territories.jsonl); the curated id becomes <type>-<seat>.
+territory_seats:
+  bailiwick-chastel-sur-moze: Châtel-sur-Moselle
+  bailiwick-hatonchastel: Hattonchâtel
+  bailiwick-aspremont: Apremont
+  bailiwick-epinal: Épinal
+  ban-anoul: Anould
+  ban-bellefbntaiiic: Bellefontaine
+  ban-cleuveey: Clefcy
+  ban-duc-de-clcuvccy: Ban-le-Duc          # "Le ban le duc de Cleuvecy", beside the ban of Clefcy
+  ban-etival: Étival
+  ban-grandvillcrs-et-dompierre: Grandvillers et Dompierre
+  ban-i-fressv: Fraize                      # "Le ban i'_* Fressv" (p. 51): medium confidence
+  ban-maizcy: Maizey
+  ban-sardcy: Sardey
+  ban-tcintruz: Taintrux
+  ban-tic-ramonch-tmp: Ramonchamp           # "La Grande Mairie du ban de Ramonchamp"
+  ban-vagny: Vagney
+  ban-vaudieouri: Vaudicourt
+  castellany-coude-et-val-des-faulx: Condé et Val des Faulx   # Condé is Custines (note p. 4)
+  district-bcaurains: Beaurains
+  district-biche: Bitche
+  lordship-biche: Bitche
+  district-morhangc: Morhange
+  lordship-morhangc: Morhange
+  district-pfahibourg: Phalsbourg
+  lordship-pfahibourg: Phalsbourg
+  district-puttclcngcs: Puttelange
+  lordship-puttclcngcs: Puttelange
+  district-sarraibe: Sarralbe
+  lordship-sarraibe: Sarralbe
+  district-spilzemberg: Spitzemberg
+  lordship-spilzemberg: Spitzemberg
+  district-sarech: Sarreck
+  lordship-sarech: Sarreck
+  lordship-bcaurains: Beaurains
+  lordship-chatelet: Le Châtelet
+  lordship-commcrcy: Commercy
+  lordship-faucompicrre: Faucompierre
+  lordship-fonlenoy: Fontenoy-le-Château
+  lordship-l-alloeud: l'Alleu               # "Terre de l'Alloeud": the franc-alleu of Fontenoy (note p. 4)
+  lordship-l-avantgarde: L'Avant-Garde
+  lordship-wardc-du-sauley: Warde du Saulcy
+  lordship-warssberg: Varsberg
+  mayoralty-beitrimonstier: Bertrimoutier
+  mayoralty-meurthc: Meurthe
+  mayoralty-roilingen: Rolbing
+  mayoralty-sainctc-margucree: Sainte-Marguerite
+  mayoralty-sehorbach: Schorbach
+  mayoralty-usuaircs: Usuaires
+  mayoralty-waldsborn: Walschbronn
+  office-sarregucmines: Sarreguemines
+  office-seliawcmbourg: Schaumbourg
+  office-sirsperg: Siersberg
+  office-valderfanges: Vaudrevange
+  provostship-chaslenois-et-neufchnsteau: Châtenois et Neufchâteau
+  provostship-darncy: Darney
+  provostship-dompairc-et-valfroieourt: Dompaire et Valfroicourt
+  provostship-einvillc: Einville
+  provostship-gondrcville: Gondreville
+  provostship-mirecourt-et-reuioneourt: Mirecourt et Remoncourt
+  val-val-d-ajol: Ajol
+  val-val-d-arol: Harol                     # "Le Val d'Arol (Harol)"
+
+# Holders of feudal realms, where the book says who holds them. Keys are curated territory ids.
+realm_holders:
+  fief-keltern-ostern: [house-eberstein, house-oberstein]   # "tenuz en fied de Son Altesse par les sieurs comtes d'Eberstein et Oberstein" (p. 89)
+  county-vaudemont: duchy-lorraine          # "Bailliage du comté de Vaudémont", with its Domaine (p. 95)
+  county-blamont: duchy-lorraine            # with its Domaine (p. 105)
+  lordship-deneuvre: duchy-lorraine         # with its Domaine (p. 107)
+  lordship-bitche: duchy-lorraine           # with its Domaine (p. 109); reunited to the domain (p. 136)
+  lordship-phalsbourg: duchy-lorraine       # bought by Charles III (introduction, p. V)
+  lordship-hombourg-et-saint-avold: duchy-lorraine   # bought by Charles III (introduction, p. V)
+
+# Names for entries whose text is a description rather than a name.
+entry_names:
+  2176: Lothringen      # "Sur la montagne … les ruines d'un chasteau … appelle Lothringen" (p. 111)
+  2177: Altheim         # "Elle consiste en ce seul village d'Altheim" (p. 111)
+
+# Index lines for entries whose numbers led to the wrong line (checked by name and district).
+entry_index:
+  1003: Chaumouzcy      # "Chamoysy", old form of Chaumousey; the index prints 1005
+  1836: Lebcuville      # "Lebeufville" (Lebeuville), not Herbeuville
+  1891: Saulx-en-Voévre # "Sault" in the bailliage of Hattonchâtel, not Le Sautel
+  2244: Guemviller      # "Gunweiller" (Guenviller), not Buweiler
+
+# Places for entries the index doesn't identify (a new place with the entry's name).
+entry_places:
+  1411: nittel          # "Nittel" (office of Siersberg); the index has no line for it
+  1580: gersweiler      # "Gersweiller" (office of Sarreguemines)

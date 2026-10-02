@@ -19,6 +19,8 @@ make info              # paths and the source PDF
 make extract           # Stage 1: PDF -> data/raw/ (page text, parts, index, old forms, corrections)
 make validate          # Stage 2: check data/curated/ against the schema and vocab.yaml
 make schema            # Stage 2: export JSON Schemas to data/schema/
+make parse             # Stage 3: parse the Dénombrement -> data/extracted/ (+ parse_report.md)
+make curate            # Stage 4: data/curated/*.csv + data/review/report.md (edit rules.yaml, manual/)
 ```
 
 ## The source PDF

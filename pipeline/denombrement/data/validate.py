@@ -86,7 +86,7 @@ def _unique(rows, table, key, err) -> set[str]:
 
 def seat(p) -> str:
     """The seat part of a territory id: "provostship-deneuvre" -> "deneuvre"."""
-    prefix = p.place_type + "-"
+    prefix = "temporality-abbey-" if p.place_type == "temporality" else p.place_type.replace("_", "-") + "-"
     return p.id[len(prefix):] if p.id.startswith(prefix) else p.id
 
 
@@ -105,7 +105,7 @@ def _check_places(ds: Dataset, places, entity_ids, fk, err, warn, info) -> None:
         elif p.hierarchy != ttypes[p.place_type].get("hierarchy"):
             err("places", line, f"a {p.place_type} is {ttypes[p.place_type].get('hierarchy')}, "
                                 f"but hierarchy is {p.hierarchy}")
-        if not p.id.startswith(p.place_type + "-") and p.id != DUCHY:
+        if p.id == seat(p) and p.id != DUCHY:
             warn("places", line, f"territory id should be '{p.place_type}-<seat>'")
         if p.holder_id:
             for holder in p.holder_id:
@@ -225,8 +225,14 @@ def _check_memberships(ds: Dataset, places, place_ids, fk, err, warn, info) -> N
         return any(p not in seen and to_duchy(p, seen | {pid}) for p in parents.get(pid, ()))
 
     lines = {p.id: line for line, p in ds.places}
+    # Places named only in the thematic lists (the abbeys of Metz and Toul…) need not be in the duchy.
+    in_main = {e.place_id for _, e in ds.entries if e.series == "main"}
+    in_lists = {e.place_id for _, e in ds.entries if e.series != "main"}
     for p in places.values():
         if p.id == DUCHY or p.id in cyclic or (p.kind == "territory" and p.hierarchy == "feudal"):
+            continue
+        if p.kind == "settlement" and p.id in in_lists - in_main and not parents.get(p.id):
+            info("places", lines[p.id], f"'{p.id}' is only in the thematic lists")
             continue
         if not to_duchy(p.id):
             err("places", lines[p.id], f"'{p.id}' does not reach the duchy through its memberships")

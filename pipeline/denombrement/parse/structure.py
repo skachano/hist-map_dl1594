@@ -459,6 +459,7 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
     dependents: dict[str, set[str]] = {}  # division key -> the realms said to depend on it
     collecting: str | None = None        # "listed" or a division key, while a list sentence goes on
     outside = False
+    realm_before: Territory | None = None  # the realm an abbey's lands interrupt
 
     def add(t: Territory) -> Territory:
         if t.key in out.territories:      # "Ban d'Uxegney, comme dessus": the same territory again
@@ -496,6 +497,14 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
             if b.cost >= 1.0:
                 e.flags.append(f"number read from '{b.token}'")
             out.entries.append(e)
+            m = re.search(r"abba\S*\s+(?:dudict |de |d')\s*(?P<x>[^,]+),.*de laquelle d[eé]pendent les villages", text)
+            if series == "main" and m:
+                # "L'abbaye dudict Sainct-Avol, …, de laquelle dépendent les villages cy-après":
+                # the entries that follow are the abbey's lands.
+                seat = gazetteer.modern_name(m.group("x").strip())
+                realm_before = realm
+                realm = add(Territory(f"temporality-abbey-{slug(seat)}", "temporality", "feudal", seat, 3, b.page,
+                                      text, ressort=[a for a in admin if a.level <= 2][-1].key))
             continue
 
         text = b.text
@@ -524,6 +533,8 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
             continue
         if sec and (not info or len(f) < 40 or "clerg" in f or "sauvegard" in f):
             section = sec
+            if realm is not None and realm.type == "temporality":
+                realm = realm_before  # an abbey's lands end with their section
             if re.search(r"\bpour (le clerg|les fi)", f) and not f.startswith("pour"):
                 # "Sainct-Diey et Raon pour le clergé": the section covers the whole prévôté.
                 admin = [t for t in admin if t.level <= 2]
@@ -535,7 +546,7 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
                 seat = gazetteer.modern_name(seat)
                 t = add(Territory(f"temporality-abbey-{slug(seat)}", "temporality", "feudal", seat, 3, b.page,
                                   text, ressort=[a for a in admin if a.level <= 2][-1].key))
-                realm = t
+                realm_before, realm = realm, t
             continue
         if not info or (text.rstrip().endswith(",") and not next_is_entry):
             out.prose.append({"page": b.page, "text": text, "context": admin[-1].key})

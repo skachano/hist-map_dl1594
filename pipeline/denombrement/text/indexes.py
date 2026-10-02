@@ -46,7 +46,19 @@ def normalize(text: str) -> str:
     return text
 _ARR = re.compile(r"^(?:arr|air)\.?\s*(?:d[e'’]\s*)?(?P<x>.+)$", re.I)
 _XREF = re.compile(r"^(?:Voy|Yoy|Vov)\.?\s*(?P<x>.+)$")
-_REGION = re.compile(r"\(([^()]*(?:Meurthe|Moselle|Meuse|Vosges|Marne|Rhin|Pr\.|Bav\.|Luxembourg|Saône)[^()]*)\)\s*$")
+_REGION = re.compile(r"\(([^()]*(?:Meur\S*|M[cr]?eurth\S*|Mo[sz]\S*le|Meus\S*|Vosg\S*|Marne|Rhin|Pr\s*\.?|Bav\S*|Luxemb\S*|Sa[oô]ne)[^()]*)\)[\s.;,]*$")
+_REGION_NAMES = [("Meurthe", r"^m\S*u\S*r"), ("Moselle", r"^mo"), ("Meuse", r"^meus|^mcus"), ("Vosges", r"^vosg"),
+                 ("Haute-Marne", r"marne"), ("Bas-Rhin", r"^bas"), ("Haut-Rhin", r"^haut-?rhin"), ("Pr.", r"^pr"),
+                 ("Bav.", r"^bav"), ("Luxembourg", r"^luxemb"), ("Haute-Saône", r"sa[oô]ne")]
+
+
+def region_name(text: str) -> str:
+    """The département or state an index line gives, its OCR misspellings mended ("Meurthc")."""
+    t = text.strip(" .;,").lower()
+    for name, pattern in _REGION_NAMES:
+        if re.search(pattern, t):
+            return name
+    return text.strip()
 _STATE = re.compile(r"(grand[- ]duché d'Oldenbourg|grand[- ]duché de Luxembourg|Luxembourg)", re.I)
 
 
@@ -217,7 +229,7 @@ def parse_entry(page: str, text: str) -> IndexEntry:
     for i in range(len(fields) - 1, -1, -1):
         r = _REGION.search(fields[i])
         if r:
-            e.region = r.group(1).strip()
+            e.region = region_name(r.group(1))
             fields[i] = fields[i][: r.start()].strip()
             break
     for f in fields:

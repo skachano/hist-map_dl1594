@@ -339,6 +339,40 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
   - Write the review report: entries without a place, places claimed by entries in distant districts, settlements with no district, realms with no `ressort` or no holder, names the index leaves unidentified, holders not resolved, numbers repaired.
   - Hand fixes go in `manual/` and `rules.yaml`, never into generated tables, so `make curate` can always be re-run.
 - Done when: the validator is green, at least 95% of main-list entries have a place, and the report is worked through.
+- **Status: done, with review items left.** `make curate` (about 30 s) writes `data/curated/*.csv` and `data/review/report.md` from `data/extracted/`, `data/raw/index.csv` and `old_forms.csv`, `rules.yaml` and `manual/entities.csv`. Code is in `pipeline/denombrement/curate/` (`build.py`, `corrections.py`). The validator is green: 0 errors, 0 warnings, 50 information notes.
+  - **Matching.** An entry is matched to an index line by number and name together, because the index's numbers are misread like the list's (Malgrange, entry 3, is indexed under 5).
+    - Names are compared without articles, with "Sainct" = "Saint", the scan's c/e and l/t confusions made equal, and against the first part of compound modern names ("Charmes" = "Charmes-sur-Moselle"). The table of old forms bridges spellings that look nothing alike ("Marchainville" → Maxéville).
+    - Order of preference:
+      1. the line with the entry's number, when the name fits (≥ 0.5)
+      2. a line whose number differs by one confused digit, when its name fits clearly better (≥ 0.75, and 0.3 better)
+      3. the only line with the number, when the old and new names still share something (≥ 0.25)
+      4. a line with a confused number (≥ 0.8)
+      5. a line whose number reads loosely as this one, or whose numbers are garbled (≥ 0.82)
+      6. the name alone (≥ 0.9)
+    - A strong name match beats a weak number match: Sarrebourg's index line lost its numbers to the OCR.
+    - A thematic-list entry with a weak match takes the place of the Dénombrement entry with the same name.
+    - Thresholds were raised until wrong matches stopped showing up in the review: a missing match is reported, a wrong one isn't.
+  - **Result:** 2,174 of 2,288 Dénombrement entries (95.0%) match an index line.
+    - By match kind: 1,918 by number and name, 240 by a confused number, 77 by number only, 88 by a loose number, 20 by name, 6 by rule.
+    - 127 entries (including list entries) aren't in the index and get a place of their own, flagged `low` confidence.
+    - 1,916 settlements: 1,498 villages, 270 hamlets, 38 farmsteads, 31 towns, 20 bourgs… 98 are `lost` (the index gives no modern commune).
+  - **Corrections:** 52 of the 66 machine-applicable corrections apply. The page numbers they cite are misread too (3 for 5: "p. 258" for 238), so nearby pages and those variants are searched. The 14 left change spellings inside other lines or name lines the OCR garbled. The report lists them, with the 11 corrections that need reading.
+  - **Territories:** 135 (107 divisions, 28 realms, 15 pairs). Their ids use the type key with hyphens (`town-district-marsal`) and `temporality-abbey-<seat>` for church lands. The parse also opens an abbey's lands from an entry ("L'abbaye dudict Sainct-Avol, … de laquelle dépendent les villages cy-après") and closes them at the next section.
+  - **Holdings:** 2,031 (774 domain, 832 fief, 425 clergy). Domain and safeguards are the duke's; fiefs and clergy take their realm's holder when the book gives one. Entries listed without a section heading under a realm of the duke count as domain, under a realm with another holder as fief; 168 stay `other` where the realm's holder is unknown.
+  - **`rules.yaml` (worked through):**
+    - modern names for 61 garbled territory seats
+    - realm holders the book gives (Keltern-Ostern: Eberstein and Oberstein; Vaudémont, Blâmont, Deneuvre, Bitche, Phalsbourg, Hombourg and Saint-Avold: the duke), each with its source
+    - names for two descriptive entries (2176 Lothringen, 2177 Altheim)
+    - four index lines and two new places for entries the numbers misled (Chamoysy = Chaumousey, Lebeufville, Sault = Saulx-en-Woëvre, Gunweiller = Guenviller; Nittel, Gersweiler)
+  - **Checks:**
+    - The 51 hand-checked entries of the Stage 2 sample all get the same place and section (`tests/test_curate.py`). The only difference is the index's OCR spelling of the names ("Tholcy").
+    - Places in more than one bailliage: 45. Most are genuine (fiefs are listed under the prévôté they owe homage to, and some villages are split: "Dommart-aux-Bois pour le tiers et les deux tiers à Chastel"). The six that were wrong matches are fixed in `rules.yaml`.
+  - **Left for later:**
+    - Place names are the index's spellings, OCR'd ("Picrrevillc"); Stage 5 replaces them with Wikidata's.
+    - `modern_country` is provisional (the index gives the state on few lines); Stage 5 sets it from the coordinates.
+    - 20 realms have no holder, because the book doesn't name one: Morhange, Forbach, Puttelange, Beaurains, Faulquemont, Chaligny, Commercy, Sarralbe…
+    - The 40 shares keep their wording but have no `share_with` holders yet.
+  - Tests: 7 more pytest tests in `tests/test_curate.py` (names, similarity, number variants, the matcher, correction pages, agreement with the sample). 58 in all.
 
 ### Stage 5: Geocoding & names
 - Tasks:
