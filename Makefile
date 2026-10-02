@@ -5,7 +5,7 @@ COMPOSE  := docker compose
 PIPELINE := $(COMPOSE) run --rm pipeline
 WEB      := $(COMPOSE) run --rm web
 
-.PHONY: help build install dev test test-py test-web info pipeline-shell web-shell clean
+.PHONY: help build install dev test test-py test-web info extract pipeline-shell web-shell clean
 
 help:
 	@echo "make build          Build the Docker images"
@@ -13,6 +13,7 @@ help:
 	@echo "make dev            Run the Vite dev server on http://localhost:5174"
 	@echo "make test           Run pytest and vitest in containers"
 	@echo "make info           Show the pipeline's paths and the source PDF"
+	@echo "make extract        Stage 1: PDF -> data/raw/ (pages, parts, index, old forms, corrections)"
 	@echo "make pipeline-shell Shell in the pipeline container"
 	@echo "make web-shell      Shell in the web container"
 
@@ -38,6 +39,9 @@ test-web: web/node_modules
 
 info:
 	$(PIPELINE) python -m denombrement info
+
+extract:
+	$(PIPELINE) python -m denombrement extract-text
 
 pipeline-shell:
 	$(PIPELINE) bash

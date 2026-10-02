@@ -7,6 +7,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(prog="denombrement")
     sub = parser.add_subparsers(dest="cmd")
     sub.add_parser("info", help="show paths and the source PDF")
+    sub.add_parser("extract-text", help="Stage 1: PDF -> pages, parts, index, old forms, corrections in data/raw/")
     args = parser.parse_args()
 
     if args.cmd == "info":
@@ -17,6 +18,9 @@ def main() -> None:
             print(f"source:    {config.source_pdf().name}")
         except FileNotFoundError as e:
             print(f"source:    missing ({e})")
+    elif args.cmd == "extract-text":
+        from denombrement.text import extract
+        extract.run()
     else:
         parser.print_help()
 

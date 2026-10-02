@@ -16,6 +16,7 @@ make build             # build images
 make dev               # http://localhost:5174
 make test              # pytest + vitest
 make info              # paths and the source PDF
+make extract           # Stage 1: PDF -> data/raw/ (page text, parts, index, old forms, corrections)
 ```
 
 ## The source PDF
