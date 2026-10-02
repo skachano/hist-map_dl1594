@@ -1,0 +1,90 @@
+{
+  "additionalProperties": false,
+  "description": "A thematic item without a number: mine, chaume (summer pasture), river.",
+  "properties": {
+    "source_page": {
+      "anyOf": [
+        {
+          "pattern": "^\\d{1,3}(?:-\\d{1,3})?(?:;\\s*\\d{1,3}(?:-\\d{1,3})?)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Page"
+    },
+    "confidence": {
+      "default": "high",
+      "title": "Confidence",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Id",
+      "type": "string"
+    },
+    "theme": {
+      "title": "Theme",
+      "enum": [
+        "mine",
+        "gem",
+        "chaume",
+        "river"
+      ]
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "place_id": {
+      "anyOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Place Id"
+    },
+    "attrs": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Attrs"
+    }
+  },
+  "required": [
+    "id",
+    "theme",
+    "name"
+  ],
+  "title": "features",
+  "type": "object"
+}

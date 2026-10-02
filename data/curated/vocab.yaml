@@ -1,0 +1,138 @@
+# Controlled vocabularies with English / French / German / Japanese labels.
+# Keys are what the CSV files store; add new keys here as parsing finds them.
+
+# Kinds of settlement, also used for the descriptors of an entry ("chasteau et village").
+place_types:
+  town:          {en: town, fr: ville, de: Stadt, ja: 都市}
+  small_town:    {en: small town, fr: bourg, de: Flecken, ja: 小都市（ブール）}
+  village:       {en: village, fr: village, de: Dorf, ja: 村}
+  hamlet:        {en: hamlet, fr: hameau, de: Weiler, ja: 小村}
+  farmstead:     {en: farmstead, fr: cense, de: Hofgut, ja: 農場}
+  grange:        {en: grange, fr: gagnage, de: Gutshof, ja: 農地（ガニャージュ）}
+  castle:        {en: castle, fr: château, de: Burg, ja: 城}
+  pleasure_house: {en: country house, fr: maison de plaisance, de: Lustschloss, ja: 別邸}
+  palace:        {en: palace, fr: palais, de: Palast, ja: 宮殿}
+  abbey:         {en: abbey, fr: abbaye, de: Abtei, ja: 修道院}
+  priory:        {en: priory, fr: prieuré, de: Priorat, ja: 小修道院}
+  convent:       {en: convent, fr: couvent, de: Kloster, ja: 女子修道院・会院}
+  collegiate_church: {en: collegiate church, fr: église collégiale, de: Stiftskirche, ja: 参事会教会}
+  cathedral:     {en: cathedral, fr: cathédrale, de: Dom, ja: 司教座聖堂}
+  commandery:    {en: commandery, fr: commanderie, de: Kommende, ja: 騎士団管区}
+  charterhouse:  {en: charterhouse, fr: chartreuse, de: Kartause, ja: カルトゥジオ会修道院}
+  hospital:      {en: hospital, fr: hôpital, de: Spital, ja: 救護院}
+  glassworks:    {en: glassworks, fr: verrerie, de: Glashütte, ja: ガラス工房}
+  saltworks:     {en: saltworks, fr: saline, de: Saline, ja: 製塩所}
+  mill:          {en: mill, fr: moulin, de: Mühle, ja: 水車場}
+  mine:          {en: mine, fr: mine, de: Bergwerk, ja: 鉱山}
+  mint:          {en: mint, fr: monnaie, de: Münzstätte, ja: 造幣所}
+  arsenal:       {en: arsenal, fr: arsenal, de: Zeughaus, ja: 兵器庫}
+  market:        {en: market, fr: marché, de: Markt, ja: 市場}
+  passage:       {en: pass, fr: passage, de: Pass, ja: 峠道}
+  deserted_village: {en: deserted village, fr: village détruit, de: Wüstung, ja: 廃村}
+
+# Territories, each in one hierarchy: administrative divisions or feudal realms.
+territory_types:
+  duchy:         {hierarchy: admin, en: duchy, fr: duché, de: Herzogtum, ja: 公国}
+  bailiwick:     {hierarchy: admin, en: bailiwick, fr: bailliage, de: Amt (Bailliage), ja: バイイ管区}
+  provostship:   {hierarchy: admin, en: provostship, fr: prévôté, de: Propstei, ja: 代官区}
+  sub_provostship: {hierarchy: admin, en: sub-provostship, fr: sous-prévôté, de: Unterpropstei, ja: 副代官区}
+  castellany:    {hierarchy: admin, en: castellany, fr: châtellenie, de: Kellerei, ja: 城代管区}
+  office:        {hierarchy: admin, en: office, fr: office, de: Amt, ja: 管区（アムト）}
+  receivership:  {hierarchy: admin, en: receivership, fr: recette, de: Rezeptur, ja: 収税区}
+  landschultheisserei: {hierarchy: admin, en: rural provostship, fr: Landschultesserie, de: Landschultheißerei, ja: 農村代官区}
+  ban:           {hierarchy: admin, en: ban, fr: ban, de: Bann, ja: バン（管轄区）}
+  mayoralty:     {hierarchy: admin, en: mayoralty, fr: mairie, de: Meierei, ja: 村長区}
+  val:           {hierarchy: admin, en: valley district, fr: val, de: Tal, ja: 谷区}
+  county:        {hierarchy: feudal, en: county, fr: comté, de: Grafschaft, ja: 伯領}
+  marquisate:    {hierarchy: feudal, en: marquisate, fr: marquisat, de: Markgrafschaft, ja: 侯爵領}
+  barony:        {hierarchy: feudal, en: barony, fr: baronnie, de: Freiherrschaft, ja: 男爵領}
+  lordship:      {hierarchy: feudal, en: lordship, fr: terre et seigneurie, de: Herrschaft, ja: 領}
+  fief:          {hierarchy: feudal, en: fief, fr: fief, de: Lehen, ja: 封土}
+  allod:         {hierarchy: feudal, en: allod, fr: franc-alleu, de: Allod, ja: 自由地（アロード）}
+  temporality:   {hierarchy: feudal, en: church lands, fr: temporel, de: Kirchengut, ja: 教会領}
+
+# How a place or territory is linked to its parent.
+relations:
+  admin:   {en: lies in, fr: est situé dans, de: liegt in, ja: 所属（行政）}
+  feudal:  {en: part of, fr: fait partie de, de: gehört zu, ja: 所属（封建）}
+  ressort: {en: answers to, fr: ressortit à, de: untersteht, ja: 管轄（裁判・臣従）}
+
+# Why an administrative division and a feudal realm are recorded as covering the same land.
+counterpart_bases:
+  heading:   {en: the heading names both, fr: le titre nomme les deux, de: die Überschrift nennt beide, ja: 見出しが両方を挙げる}
+  slot:      {en: the realm stands where a division would, fr: la terre tient la place d'une circonscription, de: die Herrschaft steht an der Stelle eines Amtes, ja: 所領が管区の位置にある}
+  alix_list: {en: listed by Alix as a part of the duchy, fr: nommé par Alix parmi les parties du duché, de: von Alix als Teil des Herzogtums genannt, ja: アリクスが公国の構成部分として挙げる}
+  rule:      {en: set after review, fr: établi après vérification, de: nach Prüfung festgelegt, ja: 検討の上で設定}
+
+# The sub-headings of the Dénombrement.
+sections:
+  domain:    {en: domain, fr: domaine, de: Domäne, ja: 直轄領}
+  fief:      {en: fiefs, fr: fiedvez, de: Lehen, ja: 封土}
+  clergy:    {en: clergy, fr: clergé, de: Geistlichkeit, ja: 聖職者領}
+  safeguard: {en: safeguards, fr: sauvegardes, de: Schirm, ja: 保護下の村}
+  other:     {en: other, fr: autres, de: Sonstiges, ja: その他}
+
+# Tenure of a place, derived from its entries.
+tenures:
+  domain:    {en: ducal domain, fr: domaine ducal, de: herzogliche Domäne, ja: 公爵直轄領}
+  fief:      {en: fief, fr: fief, de: Lehen, ja: 封土}
+  clergy:    {en: church land, fr: terre d'Église, de: Kirchengut, ja: 教会領}
+  safeguard: {en: under ducal safeguard, fr: sous la sauvegarde du duc, de: unter herzoglichem Schirm, ja: 公爵の保護下}
+
+# The lists an entry belongs to: the Dénombrement itself, or one of the thematic lists after it.
+series:
+  main:          {en: Dénombrement, fr: Dénombrement, de: Dénombrement, ja: 一覧本編}
+  towns:         {en: towns and bourgs, fr: villes et bourgs, de: Städte und Flecken, ja: 都市とブール}
+  cathedrals:    {en: cathedral churches, fr: églises cathédrales, de: Kathedralkirchen, ja: 司教座聖堂}
+  collegiates:   {en: collegiate churches, fr: églises collégiales, de: Stiftskirchen, ja: 参事会教会}
+  abbeys_m:      {en: abbeys of monks, fr: abbayes de religieux, de: Männerklöster, ja: 男子修道院}
+  abbeys_f:      {en: abbeys of nuns, fr: abbayes de dames, de: Frauenklöster, ja: 女子修道院}
+  convents_f:    {en: convents of nuns, fr: couvents de religieuses, de: Nonnenkonvente, ja: 女子修道会院}
+  grey_sisters:  {en: Grey Sisters, fr: Sœurs grises, de: Graue Schwestern, ja: 灰色修道女会}
+  other_sisters: {en: other sisters, fr: autres sœurs, de: andere Schwestern, ja: その他の修道女会}
+  priories:      {en: priories, fr: prieurés, de: Priorate, ja: 小修道院}
+  friaries:      {en: Franciscan friaries, fr: couvents de Cordeliers, de: Franziskanerkonvente, ja: フランシスコ会修道院}
+  convents_m:    {en: other religious houses, fr: couvents d'autres religieux, de: andere Männerkonvente, ja: その他の男子修道会院}
+  commanderies:  {en: commanderies of St John, fr: commanderies de Saint-Jean, de: Johanniterkommenden, ja: ヨハネ騎士団管区}
+  charterhouses: {en: charterhouse, fr: chartreuse, de: Kartause, ja: カルトゥジオ会修道院}
+
+religious_orders:
+  benedictine:       {en: Benedictine, fr: bénédictin, de: Benediktiner, ja: ベネディクト会}
+  cistercian:        {en: Cistercian, fr: cistercien, de: Zisterzienser, ja: シトー会}
+  premonstratensian: {en: Premonstratensian, fr: prémontré, de: Prämonstratenser, ja: プレモントレ会}
+  augustinian:       {en: Augustinian canons, fr: chanoines réguliers de saint Augustin, de: Augustiner-Chorherren, ja: アウグスチノ修道参事会}
+  cluniac:           {en: Cluniac, fr: clunisien, de: Cluniazenser, ja: クリュニー会}
+  carthusian:        {en: Carthusian, fr: chartreux, de: Kartäuser, ja: カルトゥジオ会}
+  franciscan:        {en: Franciscan, fr: franciscain (cordelier), de: Franziskaner, ja: フランシスコ会}
+  poor_clares:       {en: Poor Clares, fr: clarisses, de: Klarissen, ja: クララ会}
+  dominican:         {en: Dominican, fr: dominicain, de: Dominikaner, ja: ドミニコ会}
+  minim:             {en: Minim, fr: minime, de: Minimen, ja: ミニモ会}
+  capuchin:          {en: Capuchin, fr: capucin, de: Kapuziner, ja: カプチン会}
+  jesuit:            {en: Jesuit, fr: jésuite, de: Jesuiten, ja: イエズス会}
+  antonine:          {en: Antonine, fr: antonin, de: Antoniter, ja: アントニオ会}
+  hospitaller:       {en: Knights of St John, fr: ordre de Saint-Jean de Jérusalem, de: Johanniter, ja: ヨハネ騎士団}
+  teutonic:          {en: Teutonic Order, fr: ordre Teutonique, de: Deutscher Orden, ja: ドイツ騎士団}
+
+entity_types:
+  duchy:          {en: duchy, fr: duché, de: Herzogtum, ja: 公国}
+  temporal_bishopric: {en: prince-bishopric, fr: évêché temporel, de: Hochstift, ja: 司教領}
+  archbishopric:  {en: archbishopric, fr: archevêché, de: Erzstift, ja: 大司教領}
+  county:         {en: county, fr: comté, de: Grafschaft, ja: 伯領}
+  noble_house:    {en: noble house, fr: maison noble, de: Adelshaus, ja: 貴族家}
+  person:         {en: person, fr: personne, de: Person, ja: 人物}
+  abbey:          {en: abbey / convent, fr: abbaye / couvent, de: Abtei / Kloster, ja: 修道院}
+  priory:         {en: priory, fr: prieuré, de: Priorat, ja: 小修道院}
+  chapter:        {en: chapter, fr: chapitre, de: Stift / Kapitel, ja: 参事会}
+  military_order: {en: military order, fr: ordre militaire, de: Ritterorden, ja: 騎士修道会}
+  city:           {en: city, fr: cité, de: Stadt, ja: 都市}
+
+feature_themes:
+  mine:   {en: mine, fr: mine, de: Bergwerk, ja: 鉱山}
+  gem:    {en: gemstones, fr: pierres précieuses, de: Edelsteine, ja: 宝石}
+  chaume: {en: summer pasture, fr: chaume, de: Hochweide, ja: 高地放牧地}
+  river:  {en: river, fr: rivière, de: Fluss, ja: 川}
+
+confidence:
+  high:   {en: high, fr: élevée, de: hoch, ja: 高}
+  medium: {en: medium, fr: moyenne, de: mittel, ja: 中}
+  low:    {en: low, fr: faible, de: niedrig, ja: 低}

@@ -159,19 +159,20 @@ def expand_numbers(tokens: list[str]) -> list[int]:
     for tok in tokens:
         a, _, b = tok.partition("-")
         start = _full(int(a), prev)
-        end = _full(int(b), start) if b else start
+        end = _full(int(b), start, inclusive=True) if b else start
         out.extend(range(start, end + 1) if end >= start else [start])
         prev = end
     return out
 
 
-def _full(n: int, prev: int | None) -> int:
-    """`38` after 1537 is 1538; `13` after 1098 is 1113 (the next one with these last digits)."""
+def _full(n: int, prev: int | None, inclusive: bool = False) -> int:
+    """`38` after 1537 is 1538; `13` after 1098 is 1113 (the next one with these last digits).
+    A range's end may equal its start (`inclusive`)."""
     if prev is None or len(str(n)) >= len(str(prev)):
         return n
     width = len(str(n))
     full = int(str(prev)[: len(str(prev)) - width] + str(n).zfill(width))
-    return full if full > prev else full + 10 ** width
+    return full if full > prev or (inclusive and full == prev) else full + 10 ** width
 
 
 def _is_number_field(f: str) -> bool:

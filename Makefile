@@ -5,7 +5,7 @@ COMPOSE  := docker compose
 PIPELINE := $(COMPOSE) run --rm pipeline
 WEB      := $(COMPOSE) run --rm web
 
-.PHONY: help build install dev test test-py test-web info extract pipeline-shell web-shell clean
+.PHONY: help build install dev test test-py test-web info extract validate schema pipeline-shell web-shell clean
 
 help:
 	@echo "make build          Build the Docker images"
@@ -14,6 +14,8 @@ help:
 	@echo "make test           Run pytest and vitest in containers"
 	@echo "make info           Show the pipeline's paths and the source PDF"
 	@echo "make extract        Stage 1: PDF -> data/raw/ (pages, parts, index, old forms, corrections)"
+	@echo "make validate       Stage 2: check data/curated/ (FKs, vocab, hierarchies, entry sequence)"
+	@echo "make schema         Stage 2: export JSON Schema per table to data/schema/"
 	@echo "make pipeline-shell Shell in the pipeline container"
 	@echo "make web-shell      Shell in the web container"
 
@@ -42,6 +44,12 @@ info:
 
 extract:
 	$(PIPELINE) python -m denombrement extract-text
+
+validate:
+	$(PIPELINE) python -m denombrement validate
+
+schema:
+	$(PIPELINE) python -m denombrement schema
 
 pipeline-shell:
 	$(PIPELINE) bash

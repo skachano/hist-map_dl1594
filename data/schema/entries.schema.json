@@ -1,0 +1,231 @@
+{
+  "additionalProperties": false,
+  "description": "One numbered item of the book, as printed (OCR-corrected).",
+  "properties": {
+    "source_page": {
+      "anyOf": [
+        {
+          "pattern": "^\\d{1,3}(?:-\\d{1,3})?(?:;\\s*\\d{1,3}(?:-\\d{1,3})?)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Page"
+    },
+    "confidence": {
+      "default": "high",
+      "title": "Confidence",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "no": {
+      "pattern": "^(?:[1-9]\\d{0,3}|x-\\d{1,3}-\\d{1,2})$",
+      "title": "No",
+      "type": "string"
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "descriptors": {
+      "items": {
+        "type": "string",
+        "enum": [
+          "town",
+          "small_town",
+          "village",
+          "hamlet",
+          "farmstead",
+          "grange",
+          "castle",
+          "pleasure_house",
+          "palace",
+          "abbey",
+          "priory",
+          "convent",
+          "collegiate_church",
+          "cathedral",
+          "commandery",
+          "charterhouse",
+          "hospital",
+          "glassworks",
+          "saltworks",
+          "mill",
+          "mine",
+          "mint",
+          "arsenal",
+          "market",
+          "passage",
+          "deserted_village"
+        ]
+      },
+      "title": "Descriptors",
+      "type": "array"
+    },
+    "district_id": {
+      "anyOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "District Id"
+    },
+    "realm_id": {
+      "anyOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Realm Id"
+    },
+    "section": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "domain",
+            "fief",
+            "clergy",
+            "safeguard",
+            "other"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Section"
+    },
+    "holder_id": {
+      "items": {
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "type": "string"
+      },
+      "title": "Holder Id",
+      "type": "array"
+    },
+    "share": {
+      "anyOf": [
+        {
+          "pattern": "^(?:\\d+/\\d+|part|joint)$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Share"
+    },
+    "share_with": {
+      "items": {
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "type": "string"
+      },
+      "title": "Share With",
+      "type": "array"
+    },
+    "series": {
+      "default": "main",
+      "title": "Series",
+      "enum": [
+        "main",
+        "towns",
+        "cathedrals",
+        "collegiates",
+        "abbeys_m",
+        "abbeys_f",
+        "convents_f",
+        "grey_sisters",
+        "other_sisters",
+        "priories",
+        "friaries",
+        "convents_m",
+        "commanderies",
+        "charterhouses"
+      ]
+    },
+    "order": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "benedictine",
+            "cistercian",
+            "premonstratensian",
+            "augustinian",
+            "cluniac",
+            "carthusian",
+            "franciscan",
+            "poor_clares",
+            "dominican",
+            "minim",
+            "capuchin",
+            "jesuit",
+            "antonine",
+            "hospitaller",
+            "teutonic"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Order"
+    },
+    "place_id": {
+      "anyOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Place Id"
+    }
+  },
+  "required": [
+    "no",
+    "text",
+    "name"
+  ],
+  "title": "entries",
+  "type": "object"
+}

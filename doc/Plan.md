@@ -51,14 +51,14 @@ It is a **single snapshot** around 1594. Marsal is "added", which dates the text
 - **Environment and frontend:** the same as hist_map: everything runs in Docker; Vite + TypeScript + MapLibre GL, a static SPA, deployed to GitHub Pages; UI languages EN/FR/DE/JA.
 
 ## 2. Data model
-IDs are slugs (`saint-avold`, `prevote-dompaire`). Every fact carries `source_page` (printed page), `confidence` (high/medium/low) and `notes`. CSV conventions are the same as in hist_map: list cells are `|`-separated, and `source_page` looks like `49`, `50-52` or `14;131`.
+IDs are slugs (`saint-avold`, `provostship-dompaire`). Territory ids are `<territory type>-<seat>`, with the type's vocabulary key (`provostship-deneuvre`, `lordship-deneuvre`), so that counterparts share their seat. Every fact carries `source_page` (printed page), `confidence` (high/medium/low) and `notes`. CSV conventions are the same as in hist_map: list cells are `|`-separated, and `source_page` looks like `49`, `50-52` or `14;131`.
 
 The key change from hist_map is that **a numbered entry is not a place**. One village can appear under several numbers: in two prévôtés, as part domain and part fief, and again in the thematic lists. So entries and places are separate tables.
 
 ### `entries`: the book's numbered items (generated, then corrected)
 | field | description |
 |---|---|
-| `no` | the editor's number (1–~2447); unnumbered items get `x-<page>-<n>` |
+| `no` | the editor's number (1–2487); unnumbered items get `x-<page>-<n>` |
 | `text` | the entry as printed, OCR-corrected ("Hombourg, chasteau, ville et église collégiatte Sainct-Estienne") |
 | `name` | the name part ("Hombourg") |
 | `descriptors[]` | vocabulary keys from the description (`castle`, `town`, `collegiate_church`) |
@@ -66,9 +66,9 @@ The key change from hist_map is that **a numbered entry is not a place**. One vi
 | `realm_id` | the feudal realm it stands under (FK to `places`), from the nearest feudal heading; empty when there is none |
 | `section` | `domain`, `fief`, `clergy`, `safeguard`, `other` (from the sub-heading) |
 | `holder_id[]` | the holder named in the heading or the entry (FK to `entities`); empty for domain = the duke |
-| `share` | `part` ("en partie"), `1/2` ("pour la moitié contre"), or empty |
+| `share` | `part` ("en partie"), `1/2` ("pour la moitié contre"), `joint` (co-holders named together without shares), or empty |
 | `share_with[]` | the other party in a share (FK to `entities`) |
-| `list` | `main` for the Dénombrement; `towns`, `cathedrals`, `collegiates`, `abbeys_m`, `abbeys_f`, `priories`, `commanderies`… for the thematic lists |
+| `series` | `main` for the Dénombrement; `towns`, `cathedrals`, `collegiates`, `abbeys_m`, `abbeys_f`, `convents_f`, `grey_sisters`, `other_sisters`, `priories`, `friaries`, `convents_m`, `commanderies`, `charterhouses` for the thematic lists |
 | `order` | religious order for abbeys and priories (Benedictine, Premonstratensian, Cistercian…) |
 | `place_id` | the resolved place (FK to `places`), or empty when unidentified |
 | `source_page`, `confidence`, `notes` | |
@@ -79,7 +79,7 @@ The same columns as hist_map's `places.csv`: `id`, `kind` (`settlement` / `terri
 - `lost`: the place no longer exists or could not be identified (italics in the index)
 - for territories only:
   - `hierarchy`: `admin` or `feudal`, set by the territory type
-  - `holder_id`: who holds a feudal realm (the duke for the counties of Vaudémont, Blâmont and Bitche, a vassal or a church body otherwise); empty for administrative divisions
+  - `holder_id[]`: who holds a feudal realm (the duke for the counties of Vaudémont, Blâmont and Bitche, a vassal or a church body otherwise; co-holders together, as for Keltern-Ostern); empty for administrative divisions
   - `counterpart_id`: the territory of the other hierarchy that covers the same land (prévôté of Deneuvre ↔ lordship of Deneuvre), so the app can link them
   - `counterpart_basis`: why the pair exists: `heading`, `slot`, `alix_list` or `rule` (see below)
 
@@ -128,7 +128,7 @@ There is no `rulers` table: the book names holders, not reigns.
 `id`, `theme` (`mine`, `chaume`, `river`, `gem`), `name`, `place_id` (where it is), `attrs` (metals; gîtes; the places along a river), `source_page`.
 
 ### `vocab.yaml`
-Labels in EN/FR/DE/JA for:
+Labels in EN/FR/DE/JA for (also `relations`, `counterpart_bases`, `sections`, `series` and `feature_themes`):
 - `place_types`: hist_map's list plus cense, gagnage, verrerie, saline, mine, chaume, priory, commandery, collegiate church, chartreuse
 - `territory_types`, each with its hierarchy:
   - administrative: bailliage, prévôté, sous-prévôté, châtellenie, office, recette, Landschultheisserei, ban, mairie, val
@@ -259,6 +259,38 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
   - `vocab.yaml`, starting from hist_map's and adding the territory types, tenures and orders.
   - A validator for: foreign keys; vocabulary membership; numbers unique and in sequence; every main-list entry has a district and a section; every territory has a hierarchy; `admin`, `feudal` and `ressort` links join the right hierarchies (§2); every settlement reaches the duchy; counterparts point at each other; no membership cycles.
 - Done when: the validator passes on hand-written rows for the Nancy prévôté (entries 1–30), the fiefs of the office of Schaumburg and the abbey of Saint-Avold.
+- **Status: done.** Code is in `pipeline/denombrement/data/` (`models.py`, `store.py`, `validate.py`, `schema.py`). `make validate` checks `data/curated/` (`--dir` for another directory, `--info` for information-level findings); `make schema` writes `data/schema/*.schema.json`, with the vocabulary keys as enums.
+  - Tables: `entries`, `places`, `memberships`, `entities`, `holdings`, `features`; no table has years. `vocab.yaml` has labels in four languages for place types (also used as entry descriptors), territory types (each with its hierarchy), relations, counterpart bases, sections, tenures, series, religious orders, entity types, feature themes and confidence.
+  - **Errors:**
+    - foreign keys and vocabulary membership (list fields item by item)
+    - missing labels or a missing territory hierarchy in the vocabulary
+    - duplicate ids and entry numbers, and numbers outside 1–2487
+    - a Dénombrement entry without its district or section
+    - a district that isn't administrative, or a realm that isn't feudal
+    - a territory whose hierarchy doesn't match its type
+    - a holder on an administrative division
+    - counterparts that don't point back, or are in the same hierarchy
+    - `admin`/`feudal`/`ressort` links between the wrong kinds of territory
+    - a settlement or division that doesn't reach the duchy
+    - membership cycles
+    - shares adding up to more than one
+  - **Warnings:**
+    - entries out of sequence
+    - an entry's district or realm not mirrored by a membership
+    - counterparts with different seats
+    - a paired realm whose `ressort` isn't its counterpart
+    - a realm that reaches nothing in the duchy
+    - domain held by someone other than the duke
+  - **Information:**
+    - numbers missing from the sequence
+    - realms without a holder
+    - counterpart pairs whose member sets differ
+  - The hand-checked sample is in `pipeline/tests/fixtures/sample/`: 51 entries, 60 places, 70 memberships, 4 entities and 55 holdings. It has 0 errors and 0 warnings; the three info findings are expected (Chaligny's holder isn't named there; the sample covers part of the numbering; the abbey's villages and the fief of Valmont are in the castellany but not in the duke's lordship).
+    - The prévôté of Nancy: the domain (1–29), the first clergy entry (30), and the county of Chaligny answering to it.
+    - The office of Schaumburg: domain, clergy ("Tholey, partie") and fiefs. Inside it, the prévôté of Keltern-Ostern, which is also a fief of the counts of Eberstein and Oberstein (a `heading` pair with two holders).
+    - The castellanies and lordships of Hombourg and Saint-Avold (a `heading` pair outside the bailliages), with the abbey of Saint-Avold and its villages as a church temporality answering to the castellany.
+  - The sample confirmed that index numbers need checking against names: Malgrange (3), Jarville (13) and Parey-Saint-Césaire (23) are indexed under 5, 15 and 25, and the corrections replace the index's identification of 1547 (Haupersweiler, not Urexweiler).
+  - Tests: 26 more pytest tests in `tests/test_data.py` (the sample is valid; each check fires on a broken copy of it; the schema has the vocabulary enums). Stage 1 fix: an index range whose end equals its start ("75-75") no longer expands to a hundred numbers.
 
 ### Stage 3: Parsing the Dénombrement
 - Tasks:

@@ -1,0 +1,77 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "source_page": {
+      "anyOf": [
+        {
+          "pattern": "^\\d{1,3}(?:-\\d{1,3})?(?:;\\s*\\d{1,3}(?:-\\d{1,3})?)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Page"
+    },
+    "confidence": {
+      "default": "high",
+      "title": "Confidence",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "child_id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Child Id",
+      "type": "string"
+    },
+    "parent_id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Parent Id",
+      "type": "string"
+    },
+    "relation": {
+      "title": "Relation",
+      "enum": [
+        "admin",
+        "feudal",
+        "ressort"
+      ]
+    },
+    "share": {
+      "anyOf": [
+        {
+          "pattern": "^(?:\\d+/\\d+|part|joint)$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Share"
+    }
+  },
+  "required": [
+    "child_id",
+    "parent_id",
+    "relation"
+  ],
+  "title": "memberships",
+  "type": "object"
+}

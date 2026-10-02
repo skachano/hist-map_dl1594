@@ -1,0 +1,61 @@
+id,kind,name_fr,name_de,name_en,variants,place_type,lat,lon,wikidata_id,geonames_id,modern_country,index_kind,index_commune,index_canton,index_dept,lost,hierarchy,holder_id,counterpart_id,counterpart_basis,source_page,confidence,notes
+duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,duchy,,,,,,,,,,,admin,,,,34,high,
+bailiwick-nancy,territory,Bailliage de Nancy,Amt Nancy,Bailiwick of Nancy,,bailiwick,,,,,,,,,,,admin,,,,34,high,
+provostship-nancy,territory,Prévôté et châtellenie de Nancy,Propstei Nancy,Provostship of Nancy,,provostship,,,,,,,,,,,admin,,,,34-35,high,"""la prévosté et chastellainie de Nancy"": one division."
+county-chaligny,territory,Comté de Chaligny,Grafschaft Chaligny,County of Chaligny,Challigny,county,,,,,,,,,,,feudal,,,,35,high,"Depends on the prévôté of Nancy ""pour l'esgard des fiedz, foid, hommages et aydes extraordinaires""."
+bailiwick-allemagne,territory,Bailliage d'Allemagne,Deutsches Amt,German Bailiwick,,bailiwick,,,,,,,,,,,admin,,,,77,high,
+office-schaumburg,territory,Office et châtellenie de Schaumbourg,Amt Schaumburg,Office of Schaumburg,Schawembourg,office,,,,,DE,,,,,,admin,,,,86,high,"""L'office et chastellainie de Schawembourg"": one division."
+provostship-keltern-ostern,territory,Prévôté de Keltern-Ostern,Propstei Keltern-Ostern,Provostship of Keltern-Ostern,Keuern-Ostern,provostship,,,,,DE,,,,,,admin,,fief-keltern-ostern,heading,89,high,"""et autres villages de la chastellainie de Schawembourg"": in the office of Schaumburg."
+fief-keltern-ostern,territory,Fief de Keltern-Ostern,Lehen Keltern-Ostern,Fief of Keltern-Ostern,,fief,,,,,DE,,,,,,feudal,house-eberstein|house-oberstein,provostship-keltern-ostern,heading,89,high,"""tenuz en fied de Son Altesse par les sieurs comtes d'Eberstein et Oberstein"""
+castellany-hombourg-saint-avold,territory,Châtellenies de Hombourg et Saint-Avold,Kellereien Homburg und Sankt Avold,Castellanies of Hombourg and Saint-Avold,,castellany,,,,,FR,,,,,,admin,,lordship-hombourg-saint-avold,heading,114,high,"Among the ""villes, prévostez et chastellainies … qui ne sont d'aucuns bailliages""."
+lordship-hombourg-saint-avold,territory,Terres et seigneuries de Hombourg et Saint-Avold,Herrschaften Homburg und Sankt Avold,Lordships of Hombourg and Saint-Avold,,lordship,,,,,FR,,,,,,feudal,duchy-lorraine,castellany-hombourg-saint-avold,heading,114,high,
+temporality-abbey-saint-avold,territory,Temporel de l'abbaye de Saint-Avold,Kirchengut der Abtei Sankt Nabor,Lands of the abbey of Saint-Avold,,temporality,,,,,FR,,,,,,feudal,abbey-saint-avold,,,115,high,"""de laquelle dépendent les villages cy-après déclarez"""
+nancy,settlement,Nancy,Nanzig,Nancy,,town,,,,,FR,,,Nancy,Meurthe,,,,,,35,high,
+saint-nicolas-de-port,settlement,Saint-Nicolas-de-Port,,Saint-Nicolas-de-Port,Sainct-Nicolas|Port,small_town,,,,,FR,,,Saint-Nicolas,Meurthe,,,,,,36,high,
+la-malgrange,settlement,La Malgrange,,La Malgrange,,castle,,,,,FR,ham.,Jarville,,,,,,,,36,high,Indexed under 5 (a misread 3).
+le-saulrupt,settlement,Le Saulrupt,,Le Saulrupt,Le Saulruz,castle,,,,,FR,écart (chât.),Nancy,,,,,,,,36,high,
+art-sur-meurthe,settlement,Art-sur-Meurthe,,Art-sur-Meurthe,Arth-sur-Meurthe,village,,,,,FR,,,Saint-Nicolas,,,,,,,36,high,
+champigneulles,settlement,Champigneulles,,Champigneulles,,village,,,,,FR,,,Nancy-Est,,,,,,,36,high,
+dombasle-sur-meurthe,settlement,Dombasle-sur-Meurthe,,Dombasle-sur-Meurthe,Dombasle,village,,,,,FR,,,Saint-Nicolas,,,,,,,36,high,
+frouard,settlement,Frouard,,Frouard,,small_town,,,,,FR,,,Nancy-Nord,,,,,,,36,high,
+gerarcourt,settlement,Gérarcourt,,Gérarcourt,Giradcourt,hamlet,,,,,FR,ham.,Ville-en-Vermois,,,,,,,,36,medium,
+heillecourt,settlement,Heillecourt,,Heillecourt,Haillecourt,village,,,,,FR,,,Nancy-Ouest,,,,,,,36,high,
+houdemont,settlement,Houdemont,,Houdemont,,village,,,,,FR,,,Nancy-Ouest,,,,,,,36,high,
+houdelmont,settlement,Houdelmont,,Houdelmont,,village,,,,,FR,,,Vézelise,,,,,,,36,high,
+jarville-la-malgrange,settlement,Jarville-la-Malgrange,,Jarville-la-Malgrange,Jarville,village,,,,,FR,,,Nancy-Ouest,,,,,,,36,high,Indexed under 15 (a misread 13).
+laxou,settlement,Laxou,,Laxou,Laixou,village,,,,,FR,,,Nancy-Nord,,,,,,,36,high,
+lupcourt,settlement,Lupcourt,,Lupcourt,Loupcourt,village,,,,,FR,,,Saint-Nicolas,,,,,,,36,high,
+ludres,settlement,Ludres,,Ludres,,village,,,,,FR,,,Nancy-Ouest,,,,,,,36,high,
+laneuveville-devant-nancy,settlement,Laneuveville-devant-Nancy,,Laneuveville-devant-Nancy,La Neufville,village,,,,,FR,,,Saint-Nicolas,,,,,,,36,high,
+malzeville,settlement,Malzéville,,Malzéville,Maïzéville,village,,,,,FR,,,Nancy-Est,,,,,,,36,high,
+maxeville,settlement,Maxéville,,Maxéville,Marchainville,village,,,,,FR,,,Nancy-Nord,,,,,,,36,high,
+manoncourt-en-vermois,settlement,Manoncourt-en-Vermois,,Manoncourt-en-Vermois,Manoncourt,village,,,,,FR,,,Saint-Nicolas,,,,,,,36,high,
+pulnoy,settlement,Pulnoy,,Pulnoy,Pullenoy,village,,,,,FR,,,Nancy-Est,,,,,,,36,high,
+pierreville,settlement,Pierreville,,Pierreville,,village,,,,,FR,,,Vézelise,,,,,,,36,high,
+parey-saint-cesaire,settlement,Parey-Saint-Césaire,,Parey-Saint-Césaire,Parey-Sainct-Coesar,village,,,,,FR,,,Vézelise,,,,,,,36,high,Indexed under 25 (a misread 23).
+remicourt,settlement,Remicourt,,Remicourt,Remycourt,hamlet,,,,,FR,ham.,Villers-lès-Nancy,,,,,,,,36,high,
+richardmenil,settlement,Richardménil,,Richardménil,Richardmesnil,village,,,,,FR,,,Saint-Nicolas,,,,,,,36,high,
+varangeville,settlement,Varangéville,,Varangéville,Varengéville,village,,,,,FR,,,Saint-Nicolas,,,,,,,36,high,
+vandoeuvre-les-nancy,settlement,Vandœuvre-lès-Nancy,,Vandœuvre-lès-Nancy,Vendeuvre,village,,,,,FR,,,Nancy-Ouest,,,,,,,36,high,
+ville-en-vermois,settlement,Ville-en-Vermois,,Ville-en-Vermois,,village,,,,,FR,,,Saint-Nicolas,,,,,,,36,high,
+villers-les-nancy,settlement,Villers-lès-Nancy,,Villers-lès-Nancy,Viller,village,,,,,FR,,,Nancy-Nord,,,,,,,36,high,
+azelot,settlement,Azelot,,Azelot,,village,,,,,FR,,,Saint-Nicolas,,,,,,,37,high,
+schaumburg,settlement,Schaumbourg,Schaumburg,Schaumburg,Schawembourg,castle,,,,,DE,ferme (chât.),Tholey,,Pr.,,,,,,86,high,
+tholey,settlement,Tholey,Tholey,Tholey,,village,,,,,DE,,,Ottweiler,Pr.,,,,,,86-87,high,
+kostenbach,settlement,Kostenbach,Kostenbach,Kostenbach,Costenbach,village,,,,,DE,vil.,Otzenhausen,Trêves landkreis,Pr.,,,,,,86,high,
+wehingen,settlement,Wehingen,Wehingen,Wehingen,,village,,,,,DE,vil.,Orscholz,Saarburg,Pr.,,,,,,88,high,
+bettingen,settlement,Bettingen,Bettingen,Bettingen,,village,,,,,DE,,,Saarlouis,Pr.,,,,,,88,high,
+aussen,settlement,Außen,Außen,Aussen,,village,,,,,DE,vil.,Bettingen,Saarlouis,Pr.,,,,,,88,high,
+limbach,settlement,Limbach,Limbach,Limbach,,village,,,,,DE,vil.,Bettingen,,,,,,,,88,high,
+oberkirchen,settlement,Oberkirchen,Oberkirchen,Oberkirchen,Kelternostern|Catharin-Ostern,village,,,,,DE,,,,,,,,,,89,high,"""anciennement Catharin-Ostern"" (index)."
+haupersweiler,settlement,Haupersweiler,Haupersweiler,Haupersweiler,Huprechtzweiller,village,,,,,DE,vil.,Oberkirchen,,,,,,,,89,high,The corrections replace the index's Urexweiler (p. 254) by Haupersweiler for 1547.
+sotzweiler,settlement,Sotzweiler,Sotzweiler,Sotzweiler,Sutzweiller,village,,,,,DE,vil.,Tholey,,,,,,,,89,high,
+bleysspach,settlement,Bleysspach,,Bleysspach,,village,,,,,DE,,,,,true,,,,,89,low,Unidentified: the index gives only the castellany of Schaumburg.
+grugelborn,settlement,Grügelborn,Grügelborn,Grügelborn,Krulborn|Krügelborn,village,,,,,DE,vil.,Oberkirchen,,,,,,,,89,high,Added by the corrections (p. 215) for 1550.
+hombourg-haut,settlement,Hombourg-Haut,Oberhomburg,Hombourg-Haut,Hombourg,town,,,,,FR,,,Saint-Avold,Moselle,,,,,,114,medium,Not in the index under 2239; the castle town above Hombourg-Bas.
+saint-avold,settlement,Saint-Avold,Sankt Avold,Saint-Avold,Sainct-Avol|Sainct-Nabor,town,,,,,FR,,,Saint-Avold,Moselle,,,,,,114-115,high,
+hombourg-bas,settlement,Hombourg-Bas,Niederhomburg,Hombourg-Bas,Hombourg,village,,,,,FR,,,Saint-Avold,Moselle,,,,,,114,high,
+guessling,settlement,Guessling,Gisslingen,Guessling,Geysslingen,village,,,,,FR,,,Grostenquin,Moselle,,,,,,115,high,
+hemering,settlement,Hémering,Hemeringen,Hémering,Hemeringen,village,,,,,FR,,,Grostenquin,Moselle,,,,,,115,high,
+teting,settlement,Téting,Tetingen,Téting,Tettingen,village,,,,,FR,,,Faulquemont,Moselle,,,,,,115,high,
+valmont,settlement,Valmont,Walmen,Valmont,Walmen,village,,,,,FR,,,Saint-Avold,Moselle,,,,,,115,high,

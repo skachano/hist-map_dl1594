@@ -17,6 +17,8 @@ make dev               # http://localhost:5174
 make test              # pytest + vitest
 make info              # paths and the source PDF
 make extract           # Stage 1: PDF -> data/raw/ (page text, parts, index, old forms, corrections)
+make validate          # Stage 2: check data/curated/ against the schema and vocab.yaml
+make schema            # Stage 2: export JSON Schemas to data/schema/
 ```
 
 ## The source PDF

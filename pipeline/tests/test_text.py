@@ -47,6 +47,7 @@ def test_expand_numbers():
     assert indexes.expand_numbers(["2240", "67", "2355", "2402"]) == [2240, 2267, 2355, 2402]
     assert indexes.expand_numbers(["709-715"]) == list(range(709, 716))
     assert indexes.expand_numbers(["1098", "13"]) == [1098, 1113]
+    assert indexes.expand_numbers(["2471", "75-75"]) == [2471, 2475]
 
 
 def test_parse_index_entry():
