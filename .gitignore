@@ -1,0 +1,26 @@
+# Source scan: never committed (see doc/Plan.md §1). The README says where to get it.
+pdf/
+*.pdf
+# Page text extracted from the scan (rebuilt by make extract)
+data/raw/
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+
+# Node / web
+web/node_modules/
+web/dist/
+web/public/data/
+.npm/
+
+# screenshots from web/scripts/screenshot.mjs
+web/shots/
+
+# Playwright output
+web/test-results/

@@ -1,0 +1,40 @@
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: docker/pipeline.Dockerfile
+    image: hist-map-dl1594-pipeline
+    environment:
+      HOME: /tmp
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    volumes:
+      - .:/work
+    working_dir: /work/pipeline
+
+  # Port 5174, so this atlas and hist_map (5173) can run side by side.
+  web:
+    build:
+      context: .
+      dockerfile: docker/web.Dockerfile
+    image: hist-map-dl1594-web
+    environment:
+      HOME: /tmp
+      npm_config_cache: /tmp/.npm
+      npm_config_update_notifier: "false"
+    volumes:
+      - ./web:/work/web
+    ports:
+      - "5174:5174"
+
+  # Headless Chromium for screenshots and end-to-end tests (Stage 8/10). The image
+  # version must match the playwright package in web/package.json.
+  e2e:
+    image: mcr.microsoft.com/playwright:v1.63.0-noble
+    environment:
+      HOME: /tmp
+      APP_URL: http://web:5174
+    volumes:
+      - ./web:/work/web
+    working_dir: /work/web
+    depends_on:
+      - web
