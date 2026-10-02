@@ -414,6 +414,22 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
   - Approximate and far-away places add no land, as in hist_map.
   - Later: the Bitche boundary walk as a line, and the rivers.
 - Done when: the bailliage and prévôté areas render without gaps, the feudal realms render inside them, and the enclaves of Metz and Toul show as holes.
+- **Status: done.** `make geometry` (a few seconds) writes `data/geometry/cells.geojson` (1,382 settlement cells, 0.3 MB) and `territories.geojson` (131 areas, 0.2 MB), plus previews in `data/review/areas-bailliages.png` and `areas-realms.png`. Code is in `pipeline/denombrement/geo/territories.py`.
+  - **Cells.** Each located settlement point gets a Voronoi cell in EPSG:3035, clipped to 6 km around the settlements. Places at one point (a hamlet placed at its commune) share its cell.
+  - **Neutral seeds.** The Wikidata communes of the region that the book doesn't list take cells of their own and belong to no territory: 2,944 of them. A commune isn't neutral when it is one of our places' Wikidata items, lies within 1.5 km of a listed settlement, or bears the name of one of the book's places (unlocated ones included) or of a commune the index gives for a hamlet. Without that last test, the book's own unlocated villages made holes inside Lorraine.
+  - **Areas.** A division's area is the union of the cells of the settlements it reaches through `admin` links, a realm's through `feudal` links. A settlement in two divisions gives its cell to the first in the book's order (a link that isn't "en partie"); the other division lists it in `shared`, for hatching in the app.
+  - **No land** comes from places placed at their commune, matched with low confidence, or flagged far from their district. They stay members and keep their points.
+  - Feature properties are `{id, hierarchy, place_type, level, settlements, shared[]}`, with one version per territory and no years.
+  - **Checks:**
+    - Metz, Toul and Verdun lie in no area: the enclaves of the Three Bishoprics are holes.
+    - The bailliages tile the duchy at about 13,000 km² in all, the bailliage d'Allemagne in the north-east, Vosges in the south, Nancy in the centre with the prévôté of Saint-Dié to the east.
+    - The realms render inside them (Vaudémont, Blâmont, Bitche, Keltern-Ostern around Oberkirchen, Morhange, Faulquemont, Commercy west of Toul).
+    - Two runs give identical files.
+  - **Known gaps:**
+    - Nancy (36 pieces) and Apremont (37) are fragmented. Most pieces are fiefs listed under a prévôté they owe homage to while lying elsewhere, and Apremont was interleaved with the Barrois.
+    - Small holes remain where the book's villages are unlocated.
+    - 4 territories have no located members: the bans of Grandvillers et Dompierre, Maizey and Vaudicourt, and the mairie of Steinbach.
+  - Tests: 3 pytest tests in `tests/test_territories.py` (which places add no land, a neutral seed makes a hole, cells are clipped). 66 in all.
 
 ### Stage 7: Data build
 - Tasks: compile the curated data into `web/public/data/`:

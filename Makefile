@@ -5,7 +5,7 @@ COMPOSE  := docker compose
 PIPELINE := $(COMPOSE) run --rm pipeline
 WEB      := $(COMPOSE) run --rm web
 
-.PHONY: help build install dev test test-py test-web info extract validate schema parse curate geocode data pipeline-shell web-shell clean
+.PHONY: help build install dev test test-py test-web info extract validate schema parse curate geocode geometry data pipeline-shell web-shell clean
 
 help:
 	@echo "make build          Build the Docker images"
@@ -17,7 +17,8 @@ help:
 	@echo "make parse          Stage 3: parse the Dénombrement -> data/extracted/ (+ parse_report.md)"
 	@echo "make curate         Stage 4: rebuild data/curated/*.csv + data/review/report.md"
 	@echo "make geocode        Stage 5: coordinates + modern names (Wikidata, GeoNames), then run make curate"
-	@echo "make data           parse, curate, geocode, curate: the whole chain after a change to rules.yaml or manual/"
+	@echo "make geometry       Stage 6: settlement cells + territory areas -> data/geometry/"
+	@echo "make data           parse, curate, geocode, curate, geometry: the whole chain after a change to rules.yaml or manual/"
 	@echo "make validate       Stage 2: check data/curated/ (FKs, vocab, hierarchies, entry sequence)"
 	@echo "make schema         Stage 2: export JSON Schema per table to data/schema/"
 	@echo "make pipeline-shell Shell in the pipeline container"
@@ -58,10 +59,13 @@ curate:
 geocode:
 	$(PIPELINE) python -m denombrement geocode
 
+geometry:
+	$(PIPELINE) python -m denombrement geometry
+
 # Geocoding reads the curated places and memberships; curate then merges the coordinates.
 data:
 	$(PIPELINE) sh -c "python -m denombrement parse && python -m denombrement curate \
-	  && python -m denombrement geocode && python -m denombrement curate"
+	  && python -m denombrement geocode && python -m denombrement curate && python -m denombrement geometry"
 
 validate:
 	$(PIPELINE) python -m denombrement validate

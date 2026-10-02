@@ -22,7 +22,8 @@ make schema            # Stage 2: export JSON Schemas to data/schema/
 make parse             # Stage 3: parse the Dénombrement -> data/extracted/ (+ parse_report.md)
 make curate            # Stage 4: data/curated/*.csv + data/review/report.md (edit rules.yaml, manual/)
 make geocode           # Stage 5: coordinates + modern names (Wikidata, GeoNames), then run make curate
-make data              # parse, curate, geocode, curate: the whole chain
+make geometry          # Stage 6: settlement cells + territory areas -> data/geometry/
+make data              # parse, curate, geocode, curate, geometry: the whole chain
 ```
 
 Geocoding downloads Wikidata's settlements in the region (cached in `data/raw/geo_cache/`) and

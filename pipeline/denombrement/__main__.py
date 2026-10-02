@@ -16,6 +16,7 @@ def main() -> None:
     sub.add_parser("parse", help="Stage 3: parse the Dénombrement into data/extracted/ (entries, territories, chaumes)")
     sub.add_parser("curate", help="Stage 4: build data/curated/*.csv + data/review/report.md")
     sub.add_parser("geocode", help="Stage 5: coordinates and modern names -> data/curated/geocoding.csv")
+    sub.add_parser("geometry", help="Stage 6: settlement cells and territory areas -> data/geometry/")
     args = parser.parse_args()
 
     if args.cmd == "info":
@@ -71,6 +72,9 @@ def main() -> None:
     elif args.cmd == "geocode":
         from denombrement.geo import geocode
         geocode.run()
+    elif args.cmd == "geometry":
+        from denombrement.geo import territories
+        territories.run()
     elif args.cmd == "extract-text":
         from denombrement.text import extract
         extract.run()
