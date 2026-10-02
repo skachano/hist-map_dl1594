@@ -15,6 +15,7 @@ def main() -> None:
     sub.add_parser("schema", help="Stage 2: export JSON Schema per table to data/schema/")
     sub.add_parser("parse", help="Stage 3: parse the Dénombrement into data/extracted/ (entries, territories, chaumes)")
     sub.add_parser("curate", help="Stage 4: build data/curated/*.csv + data/review/report.md")
+    sub.add_parser("geocode", help="Stage 5: coordinates and modern names -> data/curated/geocoding.csv")
     args = parser.parse_args()
 
     if args.cmd == "info":
@@ -58,12 +59,18 @@ def main() -> None:
     elif args.cmd == "curate":
         from denombrement.curate import build
         out = build.build()
+        geocoded = build.merge_geocoding(out)
         build.write(out)
+        if geocoded:
+            print(f"geocoding merged for {geocoded} places (data/curated/geocoding.csv)")
         print(f"entries: {len(out.entries)}, places: {len(out.places)}, memberships: {len(out.memberships)}, "
               f"entities: {len(out.entities)}, holdings: {len(out.holdings)}, features: {len(out.features)}")
         print("\n".join(l for l in out.report if l.startswith("- Dénombrement entries matched")
                         or l.startswith("- How all")))
         print(f"-> data/curated/*.csv, {(build.REVIEW_DIR / 'report.md').relative_to(config.ROOT)}")
+    elif args.cmd == "geocode":
+        from denombrement.geo import geocode
+        geocode.run()
     elif args.cmd == "extract-text":
         from denombrement.text import extract
         extract.run()

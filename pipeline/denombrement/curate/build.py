@@ -582,5 +582,109 @@ def write(out: Built) -> None:
     dump(models.Entity, sorted(out.entities.values(), key=lambda e: e["id"]))
     dump(models.Holding, out.holdings)
     dump(models.Feature, out.features)
+    # Japanese names (the app's fourth language), keyed by the final ids; manual ones win.
+    ja = {p["id"]: p["_name_ja"] for p in out.places.values() if p.get("_name_ja")}
+    for r in load_manual("names_ja"):
+        ja[r["id"]] = (r["name_ja"], "manual")
+    with (config.CURATED_DIR / "names_ja.csv").open("w", newline="") as f:
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(["id", "name_ja", "source"])
+        for pid in sorted(ja):
+            w.writerow([pid, *ja[pid]])
     REVIEW_DIR.mkdir(parents=True, exist_ok=True)
     (REVIEW_DIR / "report.md").write_text("\n".join(out.report) + "\n")
+
+
+def merge_geocoding(out: Built) -> int:
+    """Stage 5's coordinates and modern names into the places (data/curated/geocoding.csv).
+    Kept out of `build()`, which the geocoder reads: its names must not feed back."""
+    path = config.CURATED_DIR / "geocoding.csv"
+    if not path.exists():
+        return 0
+    n = 0
+    for g in csv.DictReader(path.open()):
+        p = out.places.get(g["place_id"])
+        if p is None:
+            continue
+        n += 1
+        p["geo_method"], p["geo_confidence"] = g["method"], g["confidence"]
+        if g.get("name_ja"):
+            p["_name_ja"] = (g["name_ja"], "wikidata" if g["method"] != "territory" else "seat + type")
+        if g["lat"]:
+            p["lat"], p["lon"] = g["lat"], g["lon"]
+        p["wikidata_id"], p["geonames_id"] = g["wikidata_id"], g["geonames_id"]
+        if p["kind"] == "settlement":
+            if g["name_fr"] and g["name_fr"] != p["name_fr"]:
+                # The modern name; the index's spelling joins the book's as a variant.
+                variants = [v for v in (p.get("variants") or "").split("|") if v]
+                p["variants"] = "|".join(dict.fromkeys(variants + [p["name_fr"]]))
+                p["name_fr"] = g["name_fr"]
+            p["name_de"] = g["name_de"] or p.get("name_de", "")
+            p["name_en"] = g["name_en"] or p.get("name_en", "")
+            if g["country"]:
+                p["modern_country"] = g["country"]
+            if g["note"]:
+                p["notes"] = "; ".join(x for x in (p.get("notes"), g["note"]) if x)
+    _report_geocoding(out)
+    _rekey(out)
+    return n
+
+
+def _report_geocoding(out: Built) -> None:
+    settlements = [p for p in out.places.values() if p["kind"] == "settlement"]
+    identified = [p for p in settlements if p.get("lost") != "true"
+                  and (p.get("index_canton") or p.get("index_commune") or p.get("index_dept"))]
+    located = [p for p in identified if p.get("lat")]
+    methods = Counter((p.get("geo_method") or "", p.get("geo_confidence") or "") for p in settlements)
+    lines = ["", "## Geocoding to check (Stage 5)", "",
+             f"- Settlements located: {sum(1 for p in settlements if p.get('lat'))}/{len(settlements)}; "
+             f"of those the index identifies: {len(located)}/{len(identified)} "
+             f"({100 * len(located) / max(1, len(identified)):.1f}%).",
+             f"- By method and confidence: {dict(sorted(methods.items()))}.",
+             "- Rules for these go in the `geocode` section of `rules.yaml`: "
+             "`{wikidata: Q…}`, `{lat, lon}`, `{approximate: other-place}` or `{unlocated: true}`, with a `note`.",
+             "", "### Identified by the index but not located", ""]
+    lines += [f"- `{p['id']}` {p['name_fr']} — canton {p.get('index_canton') or '–'}, commune "
+              f"{p.get('index_commune') or '–'} ({p.get('variants', '')[:40]})"
+              for p in identified if not p.get("lat")] or ["- none"]
+    lines += ["", "### Located with low confidence or far from their district", ""]
+    lines += [f"- `{p['id']}` {p['name_fr']} ({p.get('geo_method')}): {p.get('notes', '')[-90:]}"
+              for p in settlements if p.get("lat") and p.get("geo_confidence") == "low"
+              and p.get("geo_method") != "approximate"] or ["- none"]
+    out.report += lines
+
+
+def _rekey(out: Built) -> None:
+    """Settlement ids from their modern names where the location is reliable ("tholcy" -> "tholey"),
+    so that ids (and the app's URLs) don't carry the index's OCR spelling."""
+    taken = set(out.places)
+    renames: dict[str, str] = {}
+    for pid, p in sorted(out.places.items()):
+        if p["kind"] != "settlement" or p.get("geo_confidence") not in ("high", "medium"):
+            continue
+        new = slug(p["name_fr"])
+        if not new or new == pid:
+            continue
+        if new in taken:
+            continue  # a namesake keeps its index-based id
+        taken.discard(pid)
+        taken.add(new)
+        renames[pid] = new
+    if not renames:
+        return
+    out.places = {renames.get(k, k): {**v, "id": renames.get(k, k)} for k, v in out.places.items()}
+    for e in out.entries:
+        e["place_id"] = renames.get(e["place_id"], e["place_id"])
+    for m in out.memberships:
+        m["child_id"] = renames.get(m["child_id"], m["child_id"])
+        m["parent_id"] = renames.get(m["parent_id"], m["parent_id"])
+    for h in out.holdings:
+        h["place_id"] = renames.get(h["place_id"], h["place_id"])
+    for f in out.features:
+        f["place_id"] = renames.get(f["place_id"], f["place_id"]) if f.get("place_id") else f.get("place_id")
+    # The review report names places by their ids too.
+    out.report = [_rename_in(line, renames) for line in out.report]
+
+
+def _rename_in(line: str, renames: dict[str, str]) -> str:
+    return re.sub(r"`([a-z0-9-]+)`", lambda m: f"`{renames.get(m.group(1), m.group(1))}`", line)

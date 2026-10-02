@@ -382,6 +382,29 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
   - Hamlets and lost places are placed at their commune and marked approximate, as in hist_map.
   - Names: the French name is the modern one from the index; German and English come from Wikidata, and Japanese from the hist_map method.
 - Done when: at least 95% of identified places have coordinates, and the rest are listed in the report.
+- **Status: done.** `make geocode` (about 3 minutes; the downloads are cached in `data/raw/geo_cache/`) writes `data/curated/geocoding.csv`. `make curate` merges it into `places.csv` and `names_ja.csv` and adds "Geocoding to check" to the review report. `make data` runs parse, curate, geocode and curate. Code is in `pipeline/denombrement/geo/` (`wikidata.py`, `geonames.py`, `geocode.py`).
+  - **Different from hist_map: a regional download.** The places' names are the index's OCR spellings ("Picrrevillc", "Tholcy"), so exact-label queries would miss most of them. Instead, every settlement Wikidata has in the box 5.3–7.8°E, 47.8–50.0°N is downloaded once, in 0.5° tiles: 7,689 items (communes, former communes, German municipalities and Ortsteile, villages, hamlets, castles and abbeys, with fr/de/en/ja labels). Add the GeoNames dumps (7,668 entries) and hist_map's hand-checked geocoding of the bailliage d'Allemagne (948 places, copied into the cache), and the matching is local.
+  - **Keys:** Stage 4's loose name key, with this font's b/h confusion made equal too ("Robrbacb" = Rohrbach). Database labels are also indexed by the base of compound names ("Sierck-les-Bains" → Sierck). Canton and commune names lose OCR junk first ("île Gorze", "Fresnes-en-Voèvre(Meuse;, 1891").
+  - **Anchors and matching:**
+    1. A place's anchor is the commune the index gives (hamlets), else the canton's chef-lieu, found near the canton.
+    2. Candidates within 12 km of a commune or 25 km of a canton are scored by name similarity (≥ 0.84), class (settlements first) and distance.
+    3. A hamlet the databases lack is placed at its commune (`approximate`).
+    4. Without an anchor, an exact name that points to one spot in the region is taken.
+  - **Second pass:** the median of the reliable located members of the place's districts (not bailliages, which are too large).
+    - Places with no anchor, an ambiguous match, or more than 35 km away are matched again within 30 km of it. Short names (under 7 letters) must match almost exactly there, so "Viller" goes to Villers-lès-Nancy, not Ville-en-Vermois.
+    - A hamlet placed far away is moved to its commune's namesake near the district (Rupt-sur-Moselle, not Rupt-en-Woëvre).
+    - A match on the index's own canton or commune keeps its confidence even when it is far from its district (fiefs owe homage to distant prévôtés: Coussey, Celles-sur-Plaine); anything else that far becomes `low`.
+  - Ties are broken in a fixed order: two runs give byte-identical files.
+  - **Result:** 1,681 of 1,916 settlements located (87.7%). Of the places the index identifies, 1,625 of 1,685 (96.4%).
+    - By method: Wikidata 914 (643 high), hist_map 434, GeoNames 146, approximate (at their commune) 187.
+    - 235 unlocated: mostly entries the index doesn't identify and places it calls lost, plus 60 identified places with heavily OCR'd names, listed in the report.
+    - 64 matches are `low` confidence and listed for review.
+    - A map of the located settlements by bailliage (`data/review/geocoding.png`) shows each bailliage as a coherent area.
+  - **Names:** a settlement located with medium or high confidence takes Wikidata's French name ("Tholey" for the index's "Tholcy"), and the index's spelling joins the book's spellings as variants. German and English come from Wikidata. Its id is re-keyed from the modern name (`tholey`) where no namesake has it; all references follow. `modern_country` comes from Wikidata or GeoNames.
+    - Territories get a label point at their seat (a member settlement of the seat's name), else the centre of their located members: 134 of 135.
+    - Japanese: Wikidata's label for settlements (few villages have one), the seat's Japanese name plus the type for territories ("ナンシー代官区"), and `manual/names_ja.csv` wins: 103 names. The app falls back to French.
+  - Hand decisions go in the `geocode` section of `rules.yaml`: `{wikidata: Q…}`, `{lat, lon}`, `{approximate: place}` or `{unlocated: true}`, with a note. None were needed to reach the target.
+  - Tests: 5 pytest tests in `tests/test_geo.py` (keys, names, the namesake nearest to the anchor, OCR tolerance, distance). 63 in all.
 
 ### Stage 6: Territory geometry
 - Tasks:

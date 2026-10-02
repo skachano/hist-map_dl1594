@@ -21,7 +21,14 @@ make validate          # Stage 2: check data/curated/ against the schema and voc
 make schema            # Stage 2: export JSON Schemas to data/schema/
 make parse             # Stage 3: parse the Dénombrement -> data/extracted/ (+ parse_report.md)
 make curate            # Stage 4: data/curated/*.csv + data/review/report.md (edit rules.yaml, manual/)
+make geocode           # Stage 5: coordinates + modern names (Wikidata, GeoNames), then run make curate
+make data              # parse, curate, geocode, curate: the whole chain
 ```
+
+Geocoding downloads Wikidata's settlements in the region (cached in `data/raw/geo_cache/`) and
+the GeoNames dumps for FR, DE and LU. It also uses hist_map's checked geocoding of the bailliage
+d'Allemagne when it is there:
+`cp ../hist_map/data/curated/geocoding.csv data/raw/geo_cache/hist_map_geocoding.csv`.
 
 ## The source PDF
 

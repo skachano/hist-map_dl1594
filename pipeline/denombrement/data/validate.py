@@ -271,6 +271,8 @@ def coverage(ds: Dataset) -> list[str]:
     territories = [p for _, p in ds.places if p.kind == "territory"]
     main = [e for _, e in ds.entries if e.series == "main"]
     located = [p for p in settlements if p.lat is not None]
+    identified = [p for p in settlements if not p.lost and (p.index_canton or p.index_commune or p.index_dept)]
+    identified_located = [p for p in identified if p.lat is not None]
     with_place = [e for _, e in ds.entries if e.place_id]
     return [
         f"entries: {len(ds.entries)} ({len(main)} in the Dénombrement), places: {len(ds.places)} "
@@ -278,6 +280,7 @@ def coverage(ds: Dataset) -> list[str]:
         f"{sum(t.hierarchy == 'feudal' for t in territories)} realms), memberships: {len(ds.memberships)}, "
         f"entities: {len(ds.entities)}, holdings: {len(ds.holdings)}, features: {len(ds.features)}",
         f"entries with a place: {len(with_place)}/{len(ds.entries)}; settlements geocoded: "
-        f"{len(located)}/{len(settlements)}; counterpart pairs: "
+        f"{len(located)}/{len(settlements)} (identified by the index: {len(identified_located)}/{len(identified)}); "
+        f"counterpart pairs: "
         f"{sum(1 for t in territories if t.counterpart_id and t.hierarchy == 'admin')}",
     ]

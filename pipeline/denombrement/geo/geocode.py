@@ -1,0 +1,422 @@
+"""Stage 5: coordinates and modern names for the settlements; label points for territories.
+
+Every settlement Wikidata and GeoNames have in the region is matched locally against a
+place's names (the index's name and the book's spellings), compared loosely (no article,
+"Sainct" = "Saint", the scan's c/e and l/t confusions made equal). The index gives each
+place an anchor: the commune of a hamlet, else the canton's chef-lieu. Candidates are scored
+by name, class and distance to that anchor. A second pass uses the median of the other
+located members of the place's district, for places without an anchor, matched ambiguously
+or lying far from their district. Hamlets the databases lack are placed at their commune.
+
+Output: data/curated/geocoding.csv, read by `make curate`; hand decisions
+go in the `geocode` section of rules.yaml.
+"""
+from __future__ import annotations
+
+import csv
+import difflib
+import math
+import re
+from collections import Counter, defaultdict
+from dataclasses import dataclass, field
+
+from denombrement import config
+from denombrement.curate import build as curate
+from denombrement.curate.build import _SUFFIX, fold
+from denombrement.curate.build import name_key as _name_key
+from denombrement.data.store import load_vocab
+from denombrement.geo import geonames, wikidata
+
+OUT_FILE = config.CURATED_DIR / "geocoding.csv"
+# hist_map's geocoding (the bailliage d'Allemagne, checked by hand), copied into the cache: the
+# container sees only this project. `cp ../hist_map/data/curated/geocoding.csv data/raw/geo_cache/hist_map_geocoding.csv`
+HIST_MAP = config.RAW_DIR / "geo_cache" / "hist_map_geocoding.csv"
+COLUMNS = ["place_id", "lat", "lon", "wikidata_id", "geonames_id", "name_fr", "name_de", "name_en", "name_ja", "country",
+           "method", "confidence", "note"]
+
+ANCHOR_KM = {"commune": 12.0, "canton": 25.0, "context": 30.0}
+NAME_CUTOFF = 0.84         # loose-key similarity for a name match near an anchor
+GLOBAL_CUTOFF = 0.92       # without an anchor
+FAR_KM = 35.0              # a place this far from its district's other members is re-matched
+_DIRECTIONS = re.compile(r"-(?:nord|sud|est|ouest|sud-est|sud-ouest|nord-est|nord-ouest|esl|nonl)\b.*$", re.I)
+
+
+def name_key(name: str) -> str:
+    """Stage 4's loose key, with this font's b/h confusion made equal too ("Robrbacb" = Rohrbach)."""
+    return _name_key(name).replace("b", "h")
+
+
+def label_keys(name: str) -> set[str]:
+    """Keys for a database label and the base of a compound name ("Sierck-les-Bains" -> Sierck)."""
+    return {k for k in (name_key(name), name_key(_SUFFIX.sub("", name))) if k}
+
+
+def clean_place_name(name: str) -> str:
+    """An index canton or commune without OCR junk: "île Gorze" (de Gorze), "Fresnes-en-Voèvre(Meuse;, 1891"."""
+    name = re.sub(r"\(.*$|,.*$", "", name)
+    name = re.sub(r"^(?:[a-zîïé']{1,3}\s+)+", "", name.strip())  # stray lower-case words before the name
+    return _DIRECTIONS.sub("", name).strip(" .;")
+
+
+def km(a: tuple[float, float], b: tuple[float, float]) -> float:
+    lat1, lon1, lat2, lon2 = map(math.radians, (*a, *b))
+    h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lon2 - lon1) / 2) ** 2
+    return 6371 * 2 * math.asin(math.sqrt(h))
+
+
+@dataclass
+class Cand:
+    source: str               # wikidata, geonames, hist_map
+    lat: float
+    lon: float
+    keys: set[str]
+    rank: float               # settlements above castles and abbeys above localities
+    country: str | None
+    qid: str | None = None
+    geonameid: int | None = None
+    fr: str | None = None
+    de: str | None = None
+    en: str | None = None
+    ja: str | None = None
+
+
+class Gazetteer:
+    """Candidates by loose name key and by 0.1° grid cell."""
+
+    def __init__(self, items: dict[str, dict], gn: list[dict], seed: list[dict]):
+        self.cands: list[Cand] = []
+        for it in items.values():
+            keys = {k for l in ("fr", "de", "en") if it[l] for k in label_keys(it[l])}
+            rank = 3 if it["types"] & wikidata.SETTLEMENT_CLASSES else 2
+            self.cands.append(Cand("wikidata", it["lat"], it["lon"], {k for k in keys if k}, rank, it["country"],
+                                   qid=it["qid"], fr=it["fr"], de=it["de"], en=it["en"], ja=it["ja"]))
+        for e in gn:
+            rank = 2.5 if e["feature"].startswith("P.") else 1.5
+            self.cands.append(Cand("geonames", e["lat"], e["lon"], {k for n in e["names"] for k in label_keys(n)}, rank,
+                                   e["country"], geonameid=e["geonameid"], fr=e["name"]))
+        for s in seed:
+            self.cands.append(Cand("hist_map", s["lat"], s["lon"], label_keys(s["name_fr"]), 3.2, None,
+                                   qid=s["wikidata_id"] or None, fr=s["name_fr"], de=s["name_de"] or None,
+                                   en=s["name_en"] or None))
+        self.by_key: dict[str, list[Cand]] = defaultdict(list)
+        self.grid: dict[tuple[int, int], list[Cand]] = defaultdict(list)
+        for c in self.cands:
+            for k in c.keys:
+                self.by_key[k].append(c)
+            self.grid[(int(c.lat * 10), int(c.lon * 10))].append(c)
+        self.keys_by_initial: dict[str, list[str]] = defaultdict(list)
+        for k in self.by_key:
+            self.keys_by_initial[k[:2]].append(k)
+
+    def near(self, point: tuple[float, float], radius_km: float) -> list[Cand]:
+        r = int(radius_km / 7) + 1  # a 0.1° cell is 7-11 km here
+        la, lo = int(point[0] * 10), int(point[1] * 10)
+        out = []
+        for i in range(la - r, la + r + 1):
+            for j in range(lo - r, lo + r + 1):
+                out.extend(c for c in self.grid.get((i, j), []) if km(point, (c.lat, c.lon)) <= radius_km)
+        return out
+
+    @staticmethod
+    def sim(keys: set[str], c: Cand) -> float:
+        best = 0.0
+        for k in keys:
+            if k in c.keys:
+                return 1.0
+            for ck in c.keys:
+                if ck[:1] == k[:1]:  # 'Ackerbach' is not 'Kerbach'
+                    best = max(best, difflib.SequenceMatcher(None, k, ck).ratio())
+        return best
+
+    def best_near(self, keys: set[str], point: tuple[float, float], radius: float,
+                  cutoff: float = NAME_CUTOFF) -> tuple[Cand, float, float] | None:
+        """(candidate, similarity, km) for the best match near `point`."""
+        scored = []
+        for c in self.near(point, radius):
+            s = self.sim(keys, c)
+            if s >= cutoff:
+                d = km(point, (c.lat, c.lon))
+                scored.append((s * 2 + c.rank * 0.15 - d / radius * 0.5, c, s, d))
+        if not scored:
+            return None
+        _, c, s, d = max(scored, key=lambda x: (x[0], tiebreak(x[1])))
+        return c, s, d
+
+    def exact(self, keys: set[str]) -> list[Cand]:
+        return [c for k in sorted(keys) for c in self.by_key.get(k, [])]
+
+    def fuzzy(self, keys: set[str], cutoff: float = GLOBAL_CUTOFF) -> list[tuple[Cand, float]]:
+        out = []
+        for k in sorted(keys):
+            for hit in difflib.get_close_matches(k, self.keys_by_initial.get(k[:2], []), n=3, cutoff=cutoff):
+                out.extend((c, difflib.SequenceMatcher(None, k, hit).ratio()) for c in self.by_key[hit])
+        return out
+
+
+@dataclass
+class Result:
+    place_id: str
+    lat: float | None = None
+    lon: float | None = None
+    wikidata_id: str | None = None
+    geonames_id: int | None = None
+    name_fr: str | None = None
+    name_de: str | None = None
+    name_en: str | None = None
+    name_ja: str | None = None
+    country: str | None = None
+    method: str = "unlocated"
+    confidence: str = "low"
+    note: str = ""
+    anchor: tuple[float, float] | None = field(default=None, repr=False)
+
+
+def tiebreak(c: Cand) -> tuple:
+    """A fixed order for equally good candidates: runs must give identical files."""
+    return (c.rank, c.source, c.qid or "", c.geonameid or 0, c.lat, c.lon)
+
+
+def place_names(p: dict) -> set[str]:
+    """The place's names, split at "ou", "aliàs" and brackets."""
+    names = {p["name_fr"], *[v for v in (p.get("variants") or "").split("|") if v]}
+    out = set()
+    for n in names:
+        for part in re.split(r"\s+(?:ou|aliàs|alias|et)\s+|[()]", n):
+            part = re.sub(r",.*$", "", part).strip(" .")
+            if len(part) >= 3:
+                out.add(part)
+    return out
+
+
+def take(res: Result, c: Cand, confidence: str, note: str) -> None:
+    res.lat, res.lon = round(c.lat, 5), round(c.lon, 5)
+    res.wikidata_id = c.qid
+    res.geonames_id = c.geonameid
+    res.name_de, res.name_en, res.name_ja = c.de, c.en, c.ja
+    if c.source in ("wikidata", "hist_map") and c.fr and confidence != "low":
+        res.name_fr = c.fr  # a reliable match gives the modern spelling; else the index's stays
+    res.country = c.country or res.country
+    res.method = c.source
+    res.confidence, res.note = confidence, note
+
+
+def run() -> dict[str, Result]:
+    vocab = load_vocab(config.CURATED_DIR / "vocab.yaml")
+    rules = (curate.load_rules().get("geocode") or {})
+    built = curate.build()
+    places = built.places
+    memberships = built.memberships
+
+    print("loading Wikidata (region, cached by tile) ...")
+    items = wikidata.region()
+    print(f"  {len(items)} items")
+    print("loading GeoNames dumps (FR, DE, LU) ...")
+    gn = geonames.region()
+    print(f"  {len(gn)} entries")
+    seed = list(csv.DictReader(HIST_MAP.open())) if HIST_MAP.exists() else []
+    seed = [s for s in seed if s.get("lat") and s.get("method") not in ("approximate", "unlocated", "territory")]
+    for s in seed:
+        s["lat"], s["lon"] = float(s["lat"]), float(s["lon"])
+    print(f"  {len(seed)} located places from hist_map")
+    gaz = Gazetteer(items, gn, seed)
+
+    anchors: dict[str, tuple[float, float] | None] = {}
+
+    def locate(name: str, near: tuple[float, float] | None = None) -> tuple[float, float] | None:
+        """A commune or canton seat the index names."""
+        key = (name, near)
+        if key in anchors:
+            return anchors[key]
+        keys = {name_key(clean_place_name(name))} - {""}
+        if not keys:
+            anchors[key] = None
+            return None
+        cands = [c for c in gaz.exact(keys) if c.rank >= 2.5]
+        if not cands:
+            cands = [c for c, s in gaz.fuzzy(keys, 0.85) if c.rank >= 2.5]
+        if near:
+            cands = [c for c in cands if km(near, (c.lat, c.lon)) <= 30] or []
+            cands.sort(key=lambda c: (km(near, (c.lat, c.lon)), tiebreak(c)))
+        else:
+            cands.sort(key=tiebreak, reverse=True)
+        anchors[key] = (cands[0].lat, cands[0].lon) if cands else None
+        return anchors[key]
+
+    results: dict[str, Result] = {}
+    for pid, p in places.items():
+        if p["kind"] != "settlement":
+            continue
+        res = Result(pid, name_fr=p["name_fr"], country=p.get("modern_country") or None)
+        results[pid] = res
+        rule = rules.get(pid)
+        if rule and ("lat" in rule or "wikidata" in rule or rule.get("unlocated") or "approximate" in rule):
+            continue  # applied after the automatic passes
+        keys = {name_key(n) for n in place_names(p)} - {""}
+        canton = locate(p["index_canton"]) if p.get("index_canton") else None
+        commune = locate(p["index_commune"], canton) if p.get("index_commune") else None
+        res.anchor = commune or canton
+        if commune or canton:
+            kind = "commune" if commune else "canton"
+            hit = gaz.best_near(keys, res.anchor, ANCHOR_KM[kind])
+            if hit:
+                c, s, d = hit
+                take(res, c, "high" if s >= 0.95 else "medium", f"{s:.2f} near the index's {kind} ({d:.0f} km)")
+                continue
+            if commune:
+                res.lat, res.lon = round(commune[0], 5), round(commune[1], 5)
+                res.method, res.confidence = "approximate", "low"
+                res.note = f"not in Wikidata/GeoNames; placed at its commune {p['index_commune']}"
+                continue
+            if any(difflib.SequenceMatcher(None, k, name_key(clean_place_name(p["index_canton"]))).ratio() >= 0.85
+                   for k in keys):
+                res.lat, res.lon = round(canton[0], 5), round(canton[1], 5)
+                res.method, res.confidence, res.note = "canton", "medium", "the chef-lieu of its canton"
+                continue
+        # No anchor: an exact name, unambiguous in the region.
+        exact = [c for c in gaz.exact(keys) if c.rank >= 2.5]
+        spots = {(round(c.lat, 2), round(c.lon, 2)) for c in exact}
+        if exact and len({(round(a, 1), round(b, 1)) for a, b in spots}) == 1:
+            take(res, max(exact, key=tiebreak), "medium", "exact name, no anchor")
+        elif exact:
+            take(res, max(exact, key=tiebreak), "low", f"ambiguous without an anchor ({len(spots)} spots)")
+
+    _refine(results, places, memberships, gaz, locate)
+    _apply_rules(results, rules, items)
+
+    # Territories: a label point at the seat (a settlement of the seat's name in the territory),
+    # else at the centre of their located members; Japanese names from the seat.
+    children: dict[str, list[str]] = defaultdict(list)
+    for m in memberships:
+        children[m["parent_id"]].append(m["child_id"])
+
+    def members(tid: str, seen: frozenset = frozenset()) -> list[str]:
+        out = []
+        for c in children.get(tid, []):
+            if c in results:
+                out.append(c)
+            elif c not in seen:
+                out += members(c, seen | {tid})
+        return out
+
+    for pid, p in places.items():
+        if p["kind"] != "territory":
+            continue
+        seat = re.sub(r"^.*?\b(?:de la|de|d'|du|des)\s*", "", p["name_fr"], count=1) if " " in p["name_fr"] else p["name_fr"]
+        mem = [m for m in members(pid) if results[m].lat is not None]
+        seat_res = next((results[m] for m in mem if name_key(results[m].name_fr or "") == name_key(seat.split(" et ")[0])
+                         or name_key(places[m]["name_fr"]) == name_key(seat.split(" et ")[0])), None)
+        res = Result(pid, name_fr=p["name_fr"], method="territory", confidence="medium")
+        if seat_res:
+            res.lat, res.lon, res.note = seat_res.lat, seat_res.lon, f"seat: {seat_res.place_id}"
+        elif mem:
+            res.lat = round(sum(results[m].lat for m in mem) / len(mem), 5)
+            res.lon = round(sum(results[m].lon for m in mem) / len(mem), 5)
+            res.note = f"centre of {len(mem)} located member(s)"
+        else:
+            res.note = "no seat or located members"
+        type_ja = vocab["territory_types"].get(p["place_type"], {}).get("ja", "")
+        seat_ja = seat_res.name_ja if seat_res and seat_res.name_ja else None
+        res.name_ja = f"{seat_ja}{type_ja}" if seat_ja else None
+        results[pid] = res
+
+    _write(results)
+    settlements = [r for r in results.values() if r.method != "territory"]
+    located = sum(r.lat is not None for r in settlements)
+    print(f"settlements located: {located}/{len(settlements)} ({100 * located / max(1, len(settlements)):.1f}%)")
+    for (method, conf), n in sorted(Counter((r.method, r.confidence) for r in settlements).items()):
+        print(f"  {method:12} {conf:6} {n}")
+    terr = [r for r in results.values() if r.method == "territory"]
+    print(f"territories: {len(terr)}, with a label point: {sum(r.lat is not None for r in terr)}")
+    return results
+
+
+def _refine(results: dict[str, Result], places: dict, memberships: list[dict], gaz: Gazetteer, locate) -> None:
+    """Second pass: the median of the other located members of a place's districts."""
+    parents: dict[str, set[str]] = defaultdict(set)
+    members: dict[str, list[str]] = defaultdict(list)
+    for m in memberships:
+        if m["relation"] == "admin":
+            parents[m["child_id"]].add(m["parent_id"])
+            members[m["parent_id"]].append(m["child_id"])
+    reliable = {pid for pid, r in results.items() if r.lat is not None and r.confidence != "low"}
+
+    def centre(tid: str, exclude: str):
+        if places.get(tid, {}).get("place_type") in ("bailiwick", "duchy"):
+            return None  # too large to say where a member is
+        pts = [(results[c].lat, results[c].lon) for c in members.get(tid, []) if c in reliable and c != exclude]
+        if len(pts) < 3:
+            return None
+        lats, lons = sorted(a for a, _ in pts), sorted(b for _, b in pts)
+        return lats[len(lats) // 2], lons[len(lons) // 2]
+
+    changed = flagged = 0
+    for pid, res in results.items():
+        centres = [c for t in parents.get(pid, ()) if (c := centre(t, pid))]
+        if not centres:
+            continue
+        context = (sum(a for a, _ in centres) / len(centres), sum(b for _, b in centres) / len(centres))
+        far = res.lat is None or km(context, (res.lat, res.lon)) > FAR_KM
+        weak = res.confidence == "low" or "no anchor" in res.note
+        if not (far or weak):
+            continue
+        p = places[pid]
+        if res.method == "approximate" and far and p.get("index_commune"):
+            # Placed at the wrong namesake of its commune (Rupt-en-Woëvre for Rupt-sur-Moselle):
+            # the commune near the district instead.
+            commune = locate(p["index_commune"], context)
+            if commune:
+                res.lat, res.lon = round(commune[0], 5), round(commune[1], 5)
+                res.note = f"not in Wikidata/GeoNames; placed at its commune {p['index_commune']} (near its district)"
+                changed += 1
+                continue
+        keys = {name_key(n) for n in place_names(p)} - {""}
+        # Short names have many near neighbours: they must match almost exactly.
+        cutoff = 0.95 if min((len(k) for k in keys), default=0) < 7 else 0.86
+        hit = gaz.best_near(keys, context, ANCHOR_KM["context"], cutoff=cutoff)
+        if hit and (far or res.method == "approximate" or hit[0].qid != res.wikidata_id):
+            c, s, d = hit
+            take(res, c, "medium" if s >= 0.95 else "low", f"{s:.2f} near its district's other members ({d:.0f} km)")
+            changed += 1
+        elif hit:
+            res.confidence = "medium" if res.confidence == "low" and hit[1] >= 0.95 else res.confidence
+        elif far and res.lat is not None:
+            # A match on the index's own canton or commune stands: fiefs can lie far from the
+            # prévôté they owe homage to. Anything else that far is doubtful.
+            if "near the index's" not in res.note:
+                res.confidence = "low"
+            res.note = (res.note + "; " if res.note else "") + f"{km(context, (res.lat, res.lon)):.0f} km from its district"
+            flagged += 1
+    print(f"district context: {changed} place(s) re-matched, {flagged} flagged as far from their district")
+
+
+def _apply_rules(results: dict[str, Result], rules: dict, items: dict) -> None:
+    """rules.yaml `geocode`: {place: {wikidata: Q…}|{lat, lon}|{approximate: other-place}|{unlocated: true}, note}."""
+    for pid, rule in rules.items():
+        res = results.get(pid)
+        if res is None:
+            continue
+        note = rule.get("note", "set in rules.yaml")
+        if "wikidata" in rule and rule["wikidata"] in items:
+            it = items[rule["wikidata"]]
+            res.lat, res.lon, res.wikidata_id = round(it["lat"], 5), round(it["lon"], 5), it["qid"]
+            res.name_fr, res.name_de, res.name_en, res.name_ja = it["fr"] or res.name_fr, it["de"], it["en"], it["ja"]
+            res.country, res.method, res.confidence, res.note = it["country"], "rule", "high", note
+        elif "lat" in rule:
+            res.lat, res.lon, res.method, res.confidence, res.note = rule["lat"], rule["lon"], "rule", "high", note
+        elif "approximate" in rule and results.get(rule["approximate"]) and results[rule["approximate"]].lat:
+            t = results[rule["approximate"]]
+            res.lat, res.lon, res.method, res.confidence, res.note = t.lat, t.lon, "approximate", "low", note
+        elif rule.get("unlocated"):
+            res.lat = res.lon = None
+            res.method, res.confidence, res.note = "unlocated", "low", note
+        for lang in ("fr", "de", "en"):
+            if rule.get(f"name_{lang}"):
+                setattr(res, f"name_{lang}", rule[f"name_{lang}"])
+
+
+def _write(results: dict[str, Result]) -> None:
+    with OUT_FILE.open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=COLUMNS, lineterminator="\n")
+        w.writeheader()
+        for r in sorted(results.values(), key=lambda r: r.place_id):
+            w.writerow({c: ("" if getattr(r, c) is None else getattr(r, c)) for c in COLUMNS})

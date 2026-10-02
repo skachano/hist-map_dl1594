@@ -148,6 +148,10 @@ class Place(Provenance):
     index_canton: str | None = None
     index_dept: str | None = None
     lost: bool = False                # no longer exists, or could not be identified
+    # How the place was located (Stage 5): wikidata, geonames, hist_map, approximate (at its
+    # commune), canton, rule, territory (a label point), unlocated; and how reliably.
+    geo_method: str | None = None
+    geo_confidence: Literal["high", "medium", "low"] | None = None
     # Territories only.
     hierarchy: Literal["admin", "feudal"] | None = None
     holder_id: list[Slug] = Field(default_factory=list)  # who holds a feudal realm (co-holders together)
