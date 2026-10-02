@@ -29,7 +29,7 @@ from denombrement.data.models import entry_number
 OUT_DIR = config.WEB_DATA_DIR
 SIZE_BUDGET = 2_000_000
 TENURE_ORDER = ["domain", "fief", "clergy", "safeguard"]
-SOURCE = ("Thierry Alix, Dénombrement du duché de Lorraine (1594), éd. H. Lepage, "
+SOURCE = ("Thierry Alix, Dénombrement du duché de Lorraine (1594), éd. H. L. et A. de B., "
           "Recueil de documents sur l'histoire de Lorraine, Nancy, 1870")
 
 

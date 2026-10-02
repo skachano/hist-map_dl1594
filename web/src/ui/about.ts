@@ -1,0 +1,102 @@
+// About & sources: the book and its edition, what the map shows and how to read it, how the data
+// was made, and the sources' terms. Written out in each language.
+import type { Dataset, Lang } from "../data/types";
+import { t } from "../i18n";
+import { fill, h } from "./dom";
+
+interface Section { title: string; paragraphs: string[] }
+
+const TEXT: Record<Lang, Section[]> = {
+  en: [
+    { title: "The book", paragraphs: [
+      "In 1594 Thierry Alix, president of the Chambre des Comptes of Lorraine and keeper of the ducal archives, drew up for Duke Charles III a description of the duchy: its bailliages, prévôtés, offices and lordships, and under each of them the towns, villages, castles and abbeys it contained, divided into the duke's domain, the fiefs and the church lands.",
+      "The manuscript is lost. The text survives in copies, one of which the editors who sign \"H. L. et A. de B.\" published in 1870 in the Recueil de documents sur l'histoire de Lorraine. The editors numbered the 2,487 entries and added a table of old forms and a table of place names identifying each entry with a commune of 1870. This atlas is built from that edition, which is in the public domain.",
+    ] },
+    { title: "What the map shows", paragraphs: [
+      "The map shows the duchy as Alix describes it in 1594. It has no time line: the book describes one moment.",
+      "Two hierarchies are kept apart. Administrative divisions (bailliages, prévôtés, offices, châtellenies, bans, mairies) tile the duchy. Feudal realms (counties, terres and lordships, named fiefs, church lands) cover only their own places. Where a division and a realm cover the same land, both are recorded and linked: the panel says why.",
+      "Tenure is what the book's sub-headings say: Domaine (the duke's), Fiedvez (fiefs), Clergé (church lands), and the villages under the duke's safeguard. Places held only in part (\"en partie\", \"pour la moitié\") are hatched.",
+      "Areas are approximate. The book lists places, not boundaries: each located village gets the land nearer to it than to any other, and a territory's area is the sum of its villages' land. Land the Dénombrement doesn't list, such as the Three Bishoprics around Metz, Toul and Verdun, the Barrois and the Empire, is left blank.",
+    ] },
+    { title: "How the data was made", paragraphs: [
+      "The scan's OCR text was read page by page, the entry numbers recovered through the scan's misreadings, and the headings parsed into the two hierarchies. Each entry was matched to the editor's identification in the index by its number and its name, and the editor's corrections were applied. Places were located with Wikidata and GeoNames near the commune or canton the index gives; hamlets the databases lack sit at their commune and are drawn hollow.",
+      "About 95% of the places the index identifies are located. Doubtful identifications and locations are marked in the panel, and every entry links to its page in the 1870 edition.",
+    ] },
+    { title: "Sources and terms", paragraphs: [
+      "Thierry Alix, Dénombrement du duché de Lorraine (1594), ed. H. L. et A. de B., Recueil de documents sur l'histoire de Lorraine, Nancy, 1870 (public domain).",
+      "Base map © OpenStreetMap contributors (ODbL), via OpenFreeMap. Place data from Wikidata (CC0) and GeoNames (CC BY 4.0). The atlas's data is under CC BY 4.0, its code under the MIT licence.",
+    ] },
+  ],
+  fr: [
+    { title: "Le livre", paragraphs: [
+      "En 1594, Thierry Alix, président de la Chambre des comptes de Lorraine et garde du Trésor des chartes, dressa pour le duc Charles III une description du duché : ses bailliages, prévôtés, offices et seigneuries, et sous chacun les villes, villages, châteaux et abbayes qu'il comprenait, répartis entre le domaine du duc, les fiefs et le clergé.",
+      "Le manuscrit est perdu. Le texte subsiste dans des copies, dont l'une fut publiée en 1870, par les éditeurs qui signent « H. L. et A. de B. », dans le Recueil de documents sur l'histoire de Lorraine. Les éditeurs ont numéroté les 2 487 articles et ajouté une table des formes anciennes et une table des noms de lieux qui identifie chaque article avec une commune de 1870. Cet atlas repose sur cette édition, qui est dans le domaine public.",
+    ] },
+    { title: "Ce que montre la carte", paragraphs: [
+      "La carte montre le duché tel qu'Alix le décrit en 1594. Elle n'a pas de frise chronologique : le livre décrit un moment.",
+      "Deux hiérarchies sont distinguées. Les circonscriptions administratives (bailliages, prévôtés, offices, châtellenies, bans, mairies) couvrent tout le duché. Les seigneuries (comtés, terres et seigneuries, fiefs nommés, temporels d'Église) ne couvrent que leurs propres lieux. Quand une circonscription et une seigneurie couvrent le même territoire, les deux sont enregistrées et liées ; le panneau dit pourquoi.",
+      "La tenure est celle que donnent les sous-titres du livre : Domaine (celui du duc), Fiedvez (fiefs), Clergé, et les villages sous la sauvegarde du duc. Les lieux tenus en partie (« en partie », « pour la moitié ») sont hachurés.",
+      "Les surfaces sont approximatives. Le livre donne des lieux, pas des limites : chaque village localisé reçoit les terres plus proches de lui que de tout autre, et la surface d'un territoire est la somme de celles de ses villages. Les terres que le Dénombrement ne cite pas, comme les Trois-Évêchés autour de Metz, Toul et Verdun, le Barrois ou l'Empire, restent en blanc.",
+    ] },
+    { title: "Comment les données ont été faites", paragraphs: [
+      "Le texte océrisé du scan a été lu page par page, les numéros des articles retrouvés malgré les erreurs de lecture, et les titres analysés en deux hiérarchies. Chaque article a été rapproché de l'identification de l'éditeur dans la table par son numéro et son nom, et les corrections de l'éditeur ont été appliquées. Les lieux ont été localisés avec Wikidata et GeoNames près de la commune ou du canton que donne la table ; les écarts absents des bases sont placés sur leur commune et dessinés en creux.",
+      "Environ 95 % des lieux identifiés par la table sont localisés. Les identifications et localisations douteuses sont signalées dans le panneau, et chaque article renvoie à sa page dans l'édition de 1870.",
+    ] },
+    { title: "Sources et conditions", paragraphs: [
+      "Thierry Alix, Dénombrement du duché de Lorraine (1594), éd. H. L. et A. de B., Recueil de documents sur l'histoire de Lorraine, Nancy, 1870 (domaine public).",
+      "Fond de carte © contributeurs d'OpenStreetMap (ODbL), via OpenFreeMap. Données de lieux : Wikidata (CC0) et GeoNames (CC BY 4.0). Les données de l'atlas sont sous licence CC BY 4.0, son code sous licence MIT.",
+    ] },
+  ],
+  de: [
+    { title: "Das Buch", paragraphs: [
+      "1594 verfasste Thierry Alix, Präsident der lothringischen Rechenkammer und Hüter des herzoglichen Archivs, für Herzog Karl III. eine Beschreibung des Herzogtums: seine Ämter (bailliages), Propsteien, Kellereien und Herrschaften und darunter die Städte, Dörfer, Burgen und Abteien, geschieden in die Domäne des Herzogs, die Lehen und das Kirchengut.",
+      "Die Handschrift ist verloren. Der Text ist in Abschriften erhalten, von denen die Herausgeber, die mit „H. L. et A. de B.“ zeichnen, 1870 eine im Recueil de documents sur l'histoire de Lorraine veröffentlichten. Die Herausgeber nummerierten die 2 487 Einträge und fügten eine Tabelle der alten Namensformen und ein Ortsregister hinzu, das jeden Eintrag einer Gemeinde von 1870 zuordnet. Der Atlas beruht auf dieser gemeinfreien Ausgabe.",
+    ] },
+    { title: "Was die Karte zeigt", paragraphs: [
+      "Die Karte zeigt das Herzogtum, wie Alix es 1594 beschreibt. Sie hat keine Zeitleiste: das Buch beschreibt einen Zeitpunkt.",
+      "Zwei Gliederungen werden getrennt. Die Verwaltungsbezirke (Ämter, Propsteien, Kellereien, Banne, Meiereien) decken das ganze Herzogtum. Die Herrschaften (Grafschaften, Herrschaften, genannte Lehen, Kirchengut) decken nur ihre eigenen Orte. Wo ein Bezirk und eine Herrschaft dasselbe Gebiet umfassen, sind beide verzeichnet und verknüpft; das Seitenfeld sagt, warum.",
+      "Die Besitzart folgt den Zwischentiteln des Buchs: Domaine (die des Herzogs), Fiedvez (Lehen), Clergé (Kirchengut) und die Dörfer unter herzoglichem Schirm. Nur teilweise gehaltene Orte („en partie“, „pour la moitié“) sind schraffiert.",
+      "Flächen sind Näherungen. Das Buch nennt Orte, keine Grenzen: jedes verortete Dorf erhält das Land, das ihm näher liegt als jedem anderen, und die Fläche eines Territoriums ist die Summe seiner Dörfer. Land, das der Dénombrement nicht nennt, etwa die Drei Bistümer um Metz, Toul und Verdun, das Barrois und das Reich, bleibt weiß.",
+    ] },
+    { title: "Wie die Daten entstanden", paragraphs: [
+      "Der OCR-Text des Scans wurde Seite für Seite gelesen, die Nummern der Einträge trotz Lesefehlern wiederhergestellt und die Überschriften in die zwei Gliederungen zerlegt. Jeder Eintrag wurde über Nummer und Namen mit der Bestimmung des Herausgebers im Register verbunden, und dessen Berichtigungen wurden angewandt. Die Orte wurden mit Wikidata und GeoNames nahe der Gemeinde oder dem Kanton verortet, die das Register nennt; Weiler, die dort fehlen, liegen bei ihrer Gemeinde und sind hohl gezeichnet.",
+      "Rund 95 % der vom Register bestimmten Orte sind verortet. Unsichere Bestimmungen und Lagen sind im Seitenfeld vermerkt, und jeder Eintrag verweist auf seine Seite in der Ausgabe von 1870.",
+    ] },
+    { title: "Quellen und Bedingungen", paragraphs: [
+      "Thierry Alix, Dénombrement du duché de Lorraine (1594), hg. H. L. et A. de B., Recueil de documents sur l'histoire de Lorraine, Nancy 1870 (gemeinfrei).",
+      "Grundkarte © OpenStreetMap-Mitwirkende (ODbL), über OpenFreeMap. Ortsdaten aus Wikidata (CC0) und GeoNames (CC BY 4.0). Die Daten des Atlas stehen unter CC BY 4.0, sein Code unter der MIT-Lizenz.",
+    ] },
+  ],
+  ja: [
+    { title: "本書について", paragraphs: [
+      "1594年、ロレーヌ会計院長で公爵文書庫の管理者であったティエリ・アリクスは、公爵シャルル3世のために公国の記述を作成した。バイイ管区・代官区・管区・領ごとに、そこに含まれる都市・村・城・修道院を挙げ、公爵の直轄領・封土・教会領に分けている。",
+      "原本は失われ、写本によって伝わる。そのひとつを「H. L. et A. de B.」と署名する編者が1870年に『ロレーヌ史料集』で刊行した。編者は2,487項目に番号を振り、旧地名表と、各項目を1870年の自治体に比定する地名索引を付した。本地図はこのパブリックドメインの版にもとづく。",
+    ] },
+    { title: "地図の見方", paragraphs: [
+      "地図は1594年にアリクスが記述した公国を示す。本書はひとつの時点を記述しているため、年表はない。",
+      "二つの階層を区別している。行政区画（バイイ管区・代官区・管区・城代管区・バン・村長区）は公国全体を覆う。封建領（伯領・領・名のある封土・教会領）は自らに属する地のみを覆う。同じ範囲を区画と封建領が覆う場合は両方を記録して結びつけ、その根拠を詳細欄に示す。",
+      "保有形態は本書の小見出しによる。Domaine（公爵の直轄領）、Fiedvez（封土）、Clergé（教会領）、そして公爵の保護下にある村である。一部のみ保有される地（「en partie」「pour la moitié」）には斜線を引く。",
+      "範囲は概略である。本書は地名を挙げるが境界は示さない。位置の判明した各村に、他のどの村よりも近い土地を割り当て、領域の範囲はその村々の土地の和とした。メス・トゥール・ヴェルダンの三司教領、バロワ、帝国領など、一覧に載らない土地は白地のままである。",
+    ] },
+    { title: "データの作成", paragraphs: [
+      "スキャンのOCR文字をページごとに読み、誤読を考慮して項目番号を復元し、見出しを二つの階層に分解した。各項目は番号と名前によって索引の編者による比定と照合し、編者の訂正を反映した。地点は索引が示す自治体またはカントンの近くで Wikidata と GeoNames により位置を特定した。データベースにない小村は所属自治体に置き、中空の記号で描いている。",
+      "索引が比定する地のおよそ95%の位置が判明している。不確かな比定や位置は詳細欄に示し、各項目には1870年版のページを付している。",
+    ] },
+    { title: "出典と利用条件", paragraphs: [
+      "Thierry Alix, Dénombrement du duché de Lorraine (1594), éd. H. L. et A. de B., Recueil de documents sur l'histoire de Lorraine, Nancy, 1870（パブリックドメイン）。",
+      "背景地図 © OpenStreetMap contributors (ODbL)、OpenFreeMap経由。地点データは Wikidata (CC0) と GeoNames (CC BY 4.0) による。本地図のデータは CC BY 4.0、コードは MIT ライセンス。",
+    ] },
+  ],
+};
+
+export function renderAbout(root: HTMLElement, data: Dataset, lang: Lang): void {
+  const c = data.meta.counts;
+  fill(root,
+    h("article", { class: "about" },
+      h("h2", {}, t("view_about", lang)),
+      ...TEXT[lang].flatMap((s) => [h("h3", {}, s.title), ...s.paragraphs.map((p) => h("p", {}, p))]),
+      h("p", { class: "muted" }, `${t("dataVersion", lang)} ${data.meta.version} · ${c.entries} ${t("entriesShown", lang)} · `
+        + `${c.located}/${c.settlements} ${t("placesLocated", lang)} · ${c.territories} ${t("subTerritories", lang).toLowerCase()}`),
+    ),
+  );
+}

@@ -11,7 +11,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { MAP_CENTER, MAP_ZOOM, PLACE_ZOOM } from "../config";
 import type { Dataset } from "../data/types";
-import { DISTRICT } from "../model/colors";
+import { DISTRICT, REALM_COLOURS } from "../model/colors";
 import { DUCHY, type PlaceStyle } from "../model/places";
 import { ICON_PIXEL_RATIO, iconName, SHAPES, shapeImage } from "./icons";
 
@@ -19,6 +19,14 @@ const BASEMAP_STYLE = "https://tiles.openfreemap.org/styles/positron";
 const BASEMAP_DROP = /^(building|aeroway|airport|road_area_pier|road_pier|highway_path|highway_minor|highway-name|highway-shield|road_shield|railway|tunnel|label_village|label_other)/;
 
 setWorkerUrl(workerUrl);
+
+/** Territory areas to draw: their ids, the hierarchy (realms are coloured by kind, divisions grey),
+ *  and whether the areas themselves are what the reader hovers and clicks (the Territories view). */
+export interface AreaLayer {
+  ids: string[];
+  feudal: boolean;
+  interactive: boolean;
+}
 
 export interface MapCallbacks {
   onHover(placeId: string | undefined, point: { x: number; y: number }): void;
@@ -77,6 +85,7 @@ export class MapView {
   /** cell owner of each place: places placed at one point share its cell */
   private cellOf = new Map<string, string>();
   private labels: Marker[] = [];
+  private areasInteractive = false;
 
   constructor(container: HTMLElement, private data: Dataset, callbacks: MapCallbacks) {
     for (const f of data.cells.features) {
@@ -113,7 +122,18 @@ export class MapView {
     this.map.on("mousemove", "cells-fill", hover);
     this.map.on("mousemove", "places-icon", hover);
     this.map.on("mouseleave", "cells-fill", (e) => callbacks.onHover(undefined, e.point));
+    this.map.on("mousemove", "area-fill", (e) => {
+      if (!this.areasInteractive) return;
+      const id = this.smallestArea(e.features ?? []);
+      this.map.getCanvas().style.cursor = id ? "pointer" : "";
+      callbacks.onHover(id, e.point);
+    });
+    this.map.on("mouseleave", "area-fill", (e) => { if (this.areasInteractive) callbacks.onHover(undefined, e.point); });
     this.map.on("click", (e) => {
+      if (this.areasInteractive) {
+        callbacks.onSelect(this.smallestArea(this.map.queryRenderedFeatures(e.point, { layers: ["area-fill"] })));
+        return;
+      }
       const hit = this.map.queryRenderedFeatures(e.point, { layers: ["places-icon", "cells-fill"] })[0];
       callbacks.onSelect(hit?.properties?.id as string | undefined);
     });
@@ -140,9 +160,14 @@ export class MapView {
 
     const state = (key: string) => ["feature-state", key] as ["feature-state", string];
     const hidden: FilterSpecification = ["==", ["get", "id"], ""];
-    // Districts mode: the bailliages and the lands outside them, white borders between neighbours.
-    m.addLayer({ id: "district-fill", type: "fill", source: "territories", filter: hidden,
-      paint: { "fill-color": DISTRICT, "fill-opacity": 0.35 } });
+    // Territory areas: divisions grey, realms by kind; white borders between neighbours.
+    m.addLayer({ id: "area-fill", type: "fill", source: "territories", filter: hidden,
+      paint: {
+        "fill-color": ["case", ["==", ["get", "hierarchy"], "feudal"],
+          ["match", ["get", "place_type"], "county", REALM_COLOURS.county, "temporality", REALM_COLOURS.temporality,
+            REALM_COLOURS.lordship], DISTRICT],
+        "fill-opacity": ["case", ["==", ["get", "hierarchy"], "feudal"], 0.55, 0.35],
+      } });
     m.addLayer({
       id: "cells-fill", type: "fill", source: "cells",
       paint: { "fill-color": ["coalesce", state("fill"), "rgba(0,0,0,0)"], "fill-opacity": 0.75 },
@@ -150,7 +175,7 @@ export class MapView {
     m.addLayer({ id: "cells-shared", type: "fill", source: "shared-cells", paint: { "fill-pattern": "hatch" } });
     m.addLayer({ id: "cells-line", type: "line", source: "cells",
       paint: { "line-color": "#fcfcfb", "line-width": 0.6 } });
-    m.addLayer({ id: "district-line", type: "line", source: "territories", filter: hidden,
+    m.addLayer({ id: "area-line", type: "line", source: "territories", filter: hidden,
       paint: { "line-color": "#fcfcfb", "line-width": 2.5 } });
     m.addLayer({ id: "duchy", type: "line", source: "territories", filter: ["==", ["get", "id"], DUCHY],
       paint: { "line-color": "#52514e", "line-width": 0.8 } });
@@ -175,6 +200,23 @@ export class MapView {
         "circle-stroke-width": 2 } });
     m.addLayer({ id: "selected-area", type: "line", source: "territories", filter: hidden,
       paint: { "line-color": "#0b0b0b", "line-width": 3 } });
+  }
+
+  /** Among overlapping areas under the cursor, the smallest (the most specific). */
+  private smallestArea(features: MapGeoJSONFeature[]): string | undefined {
+    return [...features].sort((a, b) => (a.properties?.settlements ?? 0) - (b.properties?.settlements ?? 0))[0]
+      ?.properties?.id as string | undefined;
+  }
+
+  /** Fit the map to a territory's area (a realm picked from a list or a panel). */
+  fitArea(placeId: string): void {
+    const box: [number, number, number, number] = [Infinity, Infinity, -Infinity, -Infinity];
+    for (const f of this.data.territories.features) {
+      if (f.properties?.id === placeId && "coordinates" in f.geometry) extend(box, f.geometry.coordinates);
+    }
+    if (box[0] === Infinity) return;
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.ready.then(() => this.map.fitBounds(box, { padding: 60, maxZoom: PLACE_ZOOM, duration: still ? 0 : 600 }));
   }
 
   /** The whole duchy in view, unless the URL asks for a place (which then comes into view). */
@@ -202,9 +244,11 @@ export class MapView {
       ...(zoom ? { zoom: Math.max(this.map.getZoom(), PLACE_ZOOM) } : {}) });
   }
 
-  /** Draw the places' styles; `districts` lists the areas to show as labelled districts (or none). */
-  async render(styles: Map<string, PlaceStyle>, districts: string[], names: Map<string, string>,
+  /** Draw the places' styles and the territory areas, labelled. */
+  async render(styles: Map<string, PlaceStyle>, areas: AreaLayer, names: Map<string, string>,
     selected?: string): Promise<void> {
+    const districts = areas.ids;
+    this.areasInteractive = areas.interactive;
     await this.ready;
     const m = this.map;
     m.setFilter("selected", ["==", ["get", "id"], selected ?? ""]);
@@ -214,8 +258,9 @@ export class MapView {
     this.lastSelected = selected;
 
     const shown: FilterSpecification = ["in", ["get", "id"], ["literal", districts]];
-    m.setFilter("district-fill", shown);
-    m.setFilter("district-line", shown);
+    m.setFilter("area-fill", shown);
+    m.setFilter("area-line", shown);
+    m.setLayoutProperty("cells-fill", "visibility", areas.interactive ? "none" : "visible");
     for (const label of this.labels) label.remove();
     this.labels = [];
     for (const id of districts) {

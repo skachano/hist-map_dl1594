@@ -508,6 +508,38 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
 ### Stage 9: Screens
 Implement the remaining screens from §3 in this order: Territories, Table, Holders, Church & resources, About.
 - Done when: every screen works in all four languages at 1280 px and on a phone, with no console errors.
+- **Status: done.** Six views in the header: Map, Territories, Holders, Table, Church & resources, About & sources. On a phone the view buttons wrap to two rows.
+  - **URL state** (`state/store.ts`): `#/territories?h=feudal&lvl=2`, `#/holders?entity=…`, `#/church?layer=abbeys`, `#/table?d=…&r=…&t=…&hd=…&s=…&q=…`.
+  - **Territories** (`ui/sideViews.ts`, `model/territories.ts`):
+    - Administrative divisions or feudal realms, one level at a time or all levels.
+    - Divisions are drawn grey; realms are coloured by kind (county, lordship/terre/fief, church lands).
+    - The list gives each area's kind and number of places.
+    - Areas are hovered and clicked on the map, and the smallest area under the pointer wins.
+    - The panel opens with the area outlined.
+  - **Links** (`ui/navigate.ts`):
+    - A territory picked from any list opens Territories at its hierarchy and level, with the map fitted to it.
+    - A village picked from the table or a thematic list opens the map, zoomed in on it.
+  - **Place panel:** a territory's members are now in the book's order, each with its entry number.
+  - **Table** (`ui/pages.ts`):
+    - Every entry in the book's order: number, text, place, district, realm, section or list, holders and page.
+    - Filters by district (with the divisions below it), realm, section, holder, list and words.
+    - CSV export of the filtered rows. The toolbar stays in view.
+    - Domain and safeguard entries without a named holder count as the duke's.
+  - **Holders:** pick any holder to see the realms they hold and their places by tenure. The map colours those places, hatched where held in part, and draws the realms.
+  - **Church & resources:**
+    - Towns, cathedrals and collegiates, abbeys (with their order), priories, convents and commanderies, as the book's thematic lists.
+    - Each entry links to its place, which is coloured on the map.
+    - The chaumes are listed by provostship with their gîtes, and are not located.
+  - **About & sources** (`ui/about.ts`), in four languages:
+    - the book and its 1870 edition (signed "H. L. et A. de B.")
+    - what the map shows and doesn't
+    - how the data was made
+    - sources and terms, with the data version and coverage
+  - Checked by screenshot, with no console errors: every view in EN/FR/DE/JA at 1280 px and at 390 × 844. Also checked in a browser:
+    - table → map
+    - holder → territory
+    - table filters from the URL
+  - Tests: 20 vitest tests, adding territory levels, the table's holders and filters, and the new URL keys.
 
 ### Stage 10: QA & polish
 - Tasks:

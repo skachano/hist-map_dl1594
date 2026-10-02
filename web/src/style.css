@@ -100,7 +100,7 @@ label.kind { display: flex; align-items: center; gap: 6px; margin: 6px 0; font-s
 label.kind select { min-width: 0; flex: 1; border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
   padding: 4px 6px; }
 #side ul.groups { list-style: none; padding: 0; font-size: 13px; }
-#side ul.groups .swatch { display: inline-block; vertical-align: -1px; }
+#side ul.groups .swatch, #side ul.realms .swatch { display: inline-block; vertical-align: -1px; }
 #side ul.realms { padding-left: 18px; }
 #side ul.realms button[aria-pressed="true"] { font-weight: 700; color: var(--ink); }
 .terr-label { font: 600 11px/1.1 system-ui, sans-serif; color: var(--ink); text-align: center; max-width: 120px;
@@ -114,9 +114,9 @@ label.kind select { min-width: 0; flex: 1; border: 1px solid var(--border); bord
 .toolbar select { max-width: 260px; }
 .table-wrap { overflow: auto; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface); }
 /* Table view: the toolbar stays on top and the table scrolls below it, so its column headers stick too. */
-body[data-view="matrix"] #page { display: flex; flex-direction: column; overflow: hidden; padding-bottom: 12px; }
-body[data-view="matrix"] #page .toolbar { flex: none; }
-body[data-view="matrix"] #page .table-wrap { flex: 1; min-height: 0; }
+body[data-view="table"] #page { display: flex; flex-direction: column; overflow: hidden; padding-bottom: 12px; }
+body[data-view="table"] #page .toolbar { flex: none; }
+body[data-view="table"] #page .table-wrap { flex: 1; min-height: 0; }
 /* Changes view: the same, with the histogram and the list scrolling below the toolbar. */
 body[data-view="changes"] #page { display: flex; flex-direction: column; overflow: hidden; padding-bottom: 0; }
 body[data-view="changes"] #page .toolbar { flex: none; }
@@ -182,7 +182,7 @@ ol.changes li li { margin-bottom: 6px; }
   header { padding: 6px 8px; }
   header h1 { font-size: 14px; flex-basis: 100%; }
   .views, .tabs { flex: 1 1 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
-  .views { flex-basis: 100%; }
+  .views { flex-basis: 100%; flex-wrap: wrap; } /* six views: two rows, none hidden off screen */
   .views > *, .tabs > * { flex: none; }
   #legend .note { display: none; }
   /* Nothing scrolls over the map on phones (an overlaying scroller left the WebGL map

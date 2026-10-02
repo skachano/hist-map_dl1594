@@ -83,7 +83,11 @@ export function renderPanel(root: HTMLElement, data: Dataset, state: State, stor
   const members = isTerritory ? childrenOf(data).get(place.id) ?? [] : [];
   const memberTerritories = members.filter((m) => data.places.get(m.id)?.kind === "territory").map((m) => m.id);
   const memberSettlements = members.filter((m) => data.places.get(m.id)?.kind === "settlement").map((m) => m.id);
-  const byName = (a: string, b: string) => placeName(a).localeCompare(placeName(b), lang);
+  // The book's order: by the first entry that names the member; places the book never numbers come last.
+  const firstNo = (id: string) => Math.min(Infinity, ...(data.places.get(id)?.entries ?? []).map((n) => parseInt(String(n), 10)));
+  const bookOrder = (a: string, b: string) => firstNo(a) - firstNo(b) || placeName(a).localeCompare(placeName(b), lang);
+  const member = (id: string) => h("li", {},
+    Number.isFinite(firstNo(id)) ? h("span", { class: "no" }, `${firstNo(id)} `) : "", link(id));
 
   fill(root,
     h("button", { class: "close", "aria-label": t("close", lang), onclick: () => store.set({ place: undefined }) }, "×"),
@@ -122,11 +126,11 @@ export function renderPanel(root: HTMLElement, data: Dataset, state: State, stor
     entries.length ? h("h3", {}, t("entries", lang)) : null,
     entries.length ? h("ul", { class: "entries" }, ...entries.map(entryItem)) : null,
     memberTerritories.length ? h("h3", {}, `${t("subTerritories", lang)} (${memberTerritories.length})`) : null,
-    memberTerritories.length ? h("ul", { class: "members" }, ...memberTerritories.sort(byName).map((id) => h("li", {}, link(id))))
+    memberTerritories.length ? h("ul", { class: "members" }, ...memberTerritories.sort(bookOrder).map(member))
       : null,
     memberSettlements.length ? h("h3", {}, `${t("members", lang)} (${memberSettlements.length})`) : null,
     memberSettlements.length ? h("ul", { class: "members cols" },
-      ...memberSettlements.sort(byName).map((id) => h("li", {}, link(id)))) : null,
+      ...memberSettlements.sort(bookOrder).map(member)) : null,
     h("p", { class: "muted" }, `${t("source", lang)}: Alix, Dénombrement (1594), éd. 1870`
       + (place.pages ? `, ${t("pages", lang)} ${place.pages}` : "")),
   );
