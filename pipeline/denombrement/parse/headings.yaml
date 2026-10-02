@@ -1,0 +1,53 @@
+# Headings of the Dénombrement whose type or level the words alone don't settle.
+# A key matches a heading by its start, ignoring case, accents, spaces and punctuation; a key
+# ending with "." must match the whole heading ("Raon." but not "Raon,"). Fields: types
+# (territory type keys), level (1 = bailliage, 2 = prévôté, 3 = ban/mairie), seat (when the heading
+# names none or the OCR garbles it), prose (a label, not a territory), section and descriptor (for
+# the entries that follow), pair (also record the other hierarchy, with `basis`), outside (the
+# lands outside the bailliages start here).
+
+"Raon.":                    {types: [district], level: 3, seat: Raon-l'Étape}   # part of the prévôté of Saint-Dié et Raon
+"Bassigny.":                {prose: true}     # a group label inside the fiefs of Châtenois
+"Trèverois.":               {prose: true}     # a group label inside the fiefs of Sierck
+"Premier.":                 {prose: true}     # "first:" before a list
+"Ensuivent les villages":  {prose: true}
+"Pour la commune haulte":  {prose: true}
+"Noms des verreries":      {prose: true, section: other, descriptor: glassworks}
+"Les verreries des grandz": {prose: true}
+"Soubz la recepte de Dompaire": {prose: true}
+"Menus verres":            {prose: true}
+"Gagnages.":                {prose: true, section: other, descriptor: grange}
+"Droictz et sauvegardes":  {prose: true}
+"Les passages de Lutzelbourg": {prose: true}
+"Ez prévosté et chastellainie de Nancy": {types: [provostship], level: 2, seat: Nancy}
+"Ez prévosté et cbaslcllainîc de Nancy": {types: [provostship], level: 2, seat: Nancy}
+"Pour la prévosté et soub-pr": {types: [provostship], level: 2, seat: Sierck}     # the prévôté of Sierck, in four parts
+"Prévosté.":               {types: [provostship], level: 3, seat: Sierck (prévôté propre)}
+"Soub-prévosté":           {types: [sub_provostship], level: 3, seat: Sierck}
+"Soub-piévoàlé":           {types: [sub_provostship], level: 3, seat: Sierck}
+"Landt-Schult":            {types: [landschultheisserei], level: 3, seat: Sierck}
+"Prévosté de Conchen":     {types: [provostship], level: 3, seat: Condé (Sierck)}
+"La Court de Perle":       {types: [district], level: 3, seat: Perl}
+"Prévosté du ban de Tantymont": {types: [provostship], level: 3, seat: Tantimont}
+"Prévosté de Keuern":      {types: [provostship, fief], level: 3, seat: Keltern-Ostern, pair: true, basis: heading}
+"Prévosté et sergenterie de Rum": {types: [provostship], level: 3, seat: Rimling}
+"Comté de Blamont":        {types: [county], level: 1, seat: Blâmont, pair: true, basis: alix_list}
+"Prévosté et chastellainie de Dcneuvre": {types: [provostship, lordship], level: 1, seat: Deneuvre, pair: true, basis: heading}  # "Prévosté, terre et seigneurie de Deneuvre" in Alix's contents
+"Bailliage du comté de Vaudémont": {types: [bailiwick, county], level: 1, seat: Vaudémont, pair: true, basis: heading}
+"Bainville-aux-Mirouers":  {types: [district], level: 2, seat: Bainville-aux-Miroirs}
+"BainvilIc-aux-Mirouers":  {types: [district], level: 2, seat: Bainville-aux-Miroirs}
+"Le Sargaw.":               {types: [district], level: 2, seat: Saargau}
+"Mertzig.":                 {types: [district], level: 2, seat: Merzig}
+"Sainct-Hîppolile.":        {types: [district], level: 2, seat: Saint-Hippolyte}
+"Sainct-Hippolite.":        {types: [district], level: 2, seat: Saint-Hippolyte}
+"Sulrzbach.":               {types: [district], level: 2, seat: Soultzbach}
+"Sultzbach.":               {types: [district], level: 2, seat: Soultzbach}
+"Le Val de Liepvre":       {types: [val], level: 2, seat: Liepvre}
+"La terre de la Warde de W": {types: [lordship], level: 3, seat: Warde de Wisembach}
+"La terre de la Warde du S": {types: [lordship], level: 3, seat: Warde du Saulcy}
+"Le Val-d':\\jou":               {types: [val], level: 3, seat: Val-d'Ajol}
+"Le Val d'Arol":           {types: [val], level: 3, seat: Val d'Arol}
+"Autres villes, pr":       {outside: true}   # the lands outside the bailliages
+"La ville de Sarrebourg":  {types: [town_district], level: 2, seat: Sarrebourg}
+"La ville et chastellainie de Marsal": {types: [town_district, castellany], level: 2, seat: Marsal}
+"Les chastellainies":      {types: [castellany, lordship], level: 2, seat: Hombourg et Saint-Avold, pair: true, basis: heading}

@@ -13,6 +13,7 @@ def main() -> None:
     val.add_argument("--dir", type=Path, default=config.CURATED_DIR, help="dataset directory (default data/curated)")
     val.add_argument("--info", action="store_true", help="also print information-level findings")
     sub.add_parser("schema", help="Stage 2: export JSON Schema per table to data/schema/")
+    sub.add_parser("parse", help="Stage 3: parse the Dénombrement into data/extracted/ (entries, territories, chaumes)")
     args = parser.parse_args()
 
     if args.cmd == "info":
@@ -39,6 +40,20 @@ def main() -> None:
         from denombrement.data import schema
         for path in schema.export():
             print(path.relative_to(config.ROOT))
+    elif args.cmd == "parse":
+        from collections import Counter
+
+        from denombrement.parse import features, report, structure
+        result = structure.run()
+        chaumes = features.run()
+        report.write(result, chaumes)
+        main_entries = [e for e in result.entries if e.series == "main"]
+        print(f"entries: {len(result.entries)} ({len(main_entries)} in the Dénombrement), "
+              f"territories: {len(result.territories)}, chaumes: {len(chaumes)}")
+        for issue in result.issues:
+            print(f"  {issue}")
+        print(f"sections: {dict(Counter(e.section for e in main_entries))}")
+        print(f"-> {(config.EXTRACTED_DIR / 'parse_report.md').relative_to(config.ROOT)}")
     elif args.cmd == "extract-text":
         from denombrement.text import extract
         extract.run()
