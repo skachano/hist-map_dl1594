@@ -24,3 +24,8 @@ web/shots/
 
 # Playwright output
 web/test-results/
+
+# Editor autosave and lock files
+\#*#
+.#*
+*~

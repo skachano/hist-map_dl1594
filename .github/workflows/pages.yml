@@ -35,7 +35,11 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/pipeline
         run: python -m pytest -q
-      # Stage 7 adds the data build here: python -m denombrement build-data
+      - name: Compile the web data
+        working-directory: pipeline
+        env:
+          PYTHONPATH: ${{ github.workspace }}/pipeline
+        run: python -m denombrement build-data
 
       - uses: actions/setup-node@v4
         with:

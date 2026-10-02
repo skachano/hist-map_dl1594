@@ -394,17 +394,23 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
     - Places with no anchor, an ambiguous match, or more than 35 km away are matched again within 30 km of it. Short names (under 7 letters) must match almost exactly there, so "Viller" goes to Villers-lès-Nancy, not Ville-en-Vermois.
     - A hamlet placed far away is moved to its commune's namesake near the district (Rupt-sur-Moselle, not Rupt-en-Woëvre).
     - A match on the index's own canton or commune keeps its confidence even when it is far from its district (fiefs owe homage to distant prévôtés: Coussey, Celles-sur-Plaine); anything else that far becomes `low`.
+  - **One place per Wikidata item** (added in Stage 7, when two places turned out to share items).
+    - When two places are matched to one item, the one whose name fits it best keeps it; the other looks again with that item excluded, or stays unlocated.
+    - A village's own name is compared without the b/h folding (Hénaménil is not Bénaménil), and only the anchors use it.
+    - A match on the base of a compound name counts 0.9 (Sexey-lès-Bois is not Sexey-aux-Forges), and one on the book's old spelling 0.95 rather than the index's name. Entry 1516 is spelt "Budingen", Buding's German name, but the index says Budange.
+    - The name weighs most in the score, so an exact hamlet beats a neighbouring commune of a near name.
+    - Two index lines for the same village (same canton, near-identical names) keep the item, and `make curate` merges them into one place.
   - Ties are broken in a fixed order: two runs give byte-identical files.
-  - **Result:** 1,681 of 1,916 settlements located (87.7%). Of the places the index identifies, 1,625 of 1,685 (96.4%).
-    - By method: Wikidata 914 (643 high), hist_map 434, GeoNames 146, approximate (at their commune) 187.
-    - 235 unlocated: mostly entries the index doesn't identify and places it calls lost, plus 60 identified places with heavily OCR'd names, listed in the report.
-    - 64 matches are `low` confidence and listed for review.
+  - **Result:** 1,661 of 1,916 settlements located (86.7%). Of the places the index identifies, 1,610 of 1,685 (95.5%).
+    - By method: Wikidata 886 (624 high), hist_map 414, GeoNames 171, approximate (at their commune) 190.
+    - 255 unlocated: mostly entries the index doesn't identify and places it calls lost, plus 75 identified places with heavily OCR'd names or whose only match belonged to another place, listed in the report.
+    - 66 matches are `low` confidence and listed for review.
     - A map of the located settlements by bailliage (`data/review/geocoding.png`) shows each bailliage as a coherent area.
   - **Names:** a settlement located with medium or high confidence takes Wikidata's French name ("Tholey" for the index's "Tholcy"), and the index's spelling joins the book's spellings as variants. German and English come from Wikidata. Its id is re-keyed from the modern name (`tholey`) where no namesake has it; all references follow. `modern_country` comes from Wikidata or GeoNames.
     - Territories get a label point at their seat (a member settlement of the seat's name), else the centre of their located members: 134 of 135.
     - Japanese: Wikidata's label for settlements (few villages have one), the seat's Japanese name plus the type for territories ("ナンシー代官区"), and `manual/names_ja.csv` wins: 103 names. The app falls back to French.
   - Hand decisions go in the `geocode` section of `rules.yaml`: `{wikidata: Q…}`, `{lat, lon}`, `{approximate: place}` or `{unlocated: true}`, with a note. None were needed to reach the target.
-  - Tests: 5 pytest tests in `tests/test_geo.py` (keys, names, the namesake nearest to the anchor, OCR tolerance, distance). 63 in all.
+  - Tests: 6 pytest tests in `tests/test_geo.py` (keys, names, the namesake nearest to the anchor, OCR tolerance, b and h kept apart in village names, distance).
 
 ### Stage 6: Territory geometry
 - Tasks:
@@ -441,6 +447,19 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
 
   It refuses to build while there are validation errors.
 - Done when: the build is deterministic (a rebuild is byte-identical) and the data stays under about 2 MB.
+- **Status: done.** `make build-data` writes `web/public/data/` (git-ignored; `make dev` builds it when missing) and refuses to run while the curated data has validation errors. `make data` runs the whole chain: parse, curate, geocode, curate, geometry, build-data. Code is in `pipeline/denombrement/web_data.py`. The GitHub Pages workflow builds the data again from the committed `data/curated/` and `data/geometry/`.
+  - **Size and determinism:** 1.76 MB in all (places 821 kB, entries 378 kB, cells 328 kB, territories 222 kB, meta 11 kB), within the 2 MB budget. A rebuild is byte-identical. Empty fields are omitted; zeros are kept.
+  - **File formats** (keys as the app sees them):
+    - `meta.json`: `year`, `source`, `version` (a hash of the data files), `counts`, and every vocabulary with its en/fr/de/ja labels (`territory_types` with their `hierarchy`).
+    - `places.json`: `{id, kind, type, name:{fr,de,en,ja}, variants[], index:{kind, commune, canton, dept}, lat, lon, geo, approx, lost, wd, country, h, holder[], counterpart, basis, parents:[{id, rel, share}], tenure, hold:[{t, h, share, with[], e[]}], entries[], pages, conf}`. `tenure` is the place's main tenure (domain, else fief, else clergy, else safeguard); `hold` lists every holding with its entries.
+    - `entries.json`: in the book's order, `{no, text, name, desc[], district, realm, section, holders[], share, with[], series, order, place, page, conf}`. `series` is absent for the Dénombrement itself. The text is the full entry: the book is in the public domain.
+    - `entities.json`: `{id, type, name:{en,fr,de,ja}, rank, holdings}`.
+    - `features.json`: the chaumes, `{id, theme, name, place, attrs:{gistes, provostship, also[]}, page}`.
+    - `territories.geojson`: `{id, hierarchy, place_type, level, settlements, shared[]}`. `cells.geojson`: `{id, also[]}`.
+  - Fixes this stage needed:
+    - Two places could share a Wikidata item (47 cases). The geocoder now gives an item to one place, and curate merges genuine duplicates (see Stage 5).
+    - A place's own name no longer appears among its variants.
+  - Tests: 3 pytest tests in `tests/test_web_data.py` (compact output keeps zeros, feature attributes, the built files: order, links, counterparts). 70 in all.
 
 ### Stage 8: Frontend core
 - Tasks:

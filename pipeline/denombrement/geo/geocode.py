@@ -51,6 +51,38 @@ def label_keys(name: str) -> set[str]:
     return {k for k in (name_key(name), name_key(_SUFFIX.sub("", name))) if k}
 
 
+BASE = "~"     # marks a key that is only the base of a compound name
+SPELLING = "+"  # marks a key from the book's old spellings rather than the index's name
+WEIGHTS = {"": 1.0, BASE: 0.9, SPELLING: 0.95, SPELLING + BASE: 0.85}
+
+
+def place_keys(p: dict) -> set[str]:
+    """A place's keys: its index name, then (marked) the book's spellings, which count a little
+    less (entry 1516 is spelt "Budingen", but the index says Budange, not Buding/Büdingen)."""
+    own = raw_keys(place_names({"name_fr": p["name_fr"]}))
+    spellings = raw_keys(place_names({"name_fr": "", "variants": p.get("variants") or ""})) - own
+    return own | {SPELLING + k for k in spellings if k.removeprefix(BASE) not in {o.removeprefix(BASE) for o in own}}
+
+
+def raw_keys(names) -> set[str]:
+    """Stage 4's loose keys (c/e, l/t) of names, without the b/h folding: for a village's own
+    name that folding is too loose (Hénaménil is not Bénaménil). The base of a compound name is
+    kept, marked, as a weaker key ("Charmes-sur-Moselle" -> "~charmes")."""
+    out = set()
+    for n in names:
+        full, base = _name_key(n), _name_key(_SUFFIX.sub("", n))
+        if full:
+            out.add(full)
+        if base and base != full:
+            out.add(BASE + base)
+    return out
+
+
+def cand_keys(names) -> set[str]:
+    """A database label's keys: its full name and, unmarked, the base of a compound name."""
+    return {k for n in names for k in (_name_key(n), _name_key(_SUFFIX.sub("", n))) if k}
+
+
 def clean_place_name(name: str) -> str:
     """An index canton or commune without OCR junk: "île Gorze" (de Gorze), "Fresnes-en-Voèvre(Meuse;, 1891"."""
     name = re.sub(r"\(.*$|,.*$", "", name)
@@ -78,6 +110,7 @@ class Cand:
     de: str | None = None
     en: str | None = None
     ja: str | None = None
+    raw: set[str] = field(default_factory=set)  # keys without the b/h folding, for a place's own name
 
 
 class Gazetteer:
@@ -86,18 +119,20 @@ class Gazetteer:
     def __init__(self, items: dict[str, dict], gn: list[dict], seed: list[dict]):
         self.cands: list[Cand] = []
         for it in items.values():
-            keys = {k for l in ("fr", "de", "en") if it[l] for k in label_keys(it[l])}
+            labels = [it[l] for l in ("fr", "de", "en") if it[l]]
+            keys = {k for n in labels for k in label_keys(n)}
             rank = 3 if it["types"] & wikidata.SETTLEMENT_CLASSES else 2
             self.cands.append(Cand("wikidata", it["lat"], it["lon"], {k for k in keys if k}, rank, it["country"],
-                                   qid=it["qid"], fr=it["fr"], de=it["de"], en=it["en"], ja=it["ja"]))
+                                   qid=it["qid"], fr=it["fr"], de=it["de"], en=it["en"], ja=it["ja"],
+                                   raw=cand_keys(labels)))
         for e in gn:
             rank = 2.5 if e["feature"].startswith("P.") else 1.5
             self.cands.append(Cand("geonames", e["lat"], e["lon"], {k for n in e["names"] for k in label_keys(n)}, rank,
-                                   e["country"], geonameid=e["geonameid"], fr=e["name"]))
+                                   e["country"], geonameid=e["geonameid"], fr=e["name"], raw=cand_keys(e["names"])))
         for s in seed:
             self.cands.append(Cand("hist_map", s["lat"], s["lon"], label_keys(s["name_fr"]), 3.2, None,
                                    qid=s["wikidata_id"] or None, fr=s["name_fr"], de=s["name_de"] or None,
-                                   en=s["name_en"] or None))
+                                   en=s["name_en"] or None, raw=cand_keys([s["name_fr"]])))
         self.by_key: dict[str, list[Cand]] = defaultdict(list)
         self.grid: dict[tuple[int, int], list[Cand]] = defaultdict(list)
         for c in self.cands:
@@ -119,24 +154,34 @@ class Gazetteer:
 
     @staticmethod
     def sim(keys: set[str], c: Cand) -> float:
+        """How well a place's raw keys fit a candidate's names. A key that is only the base of the
+        place's compound name ("sexey" of Sexey-les-Bois) fits at 0.9: Sexey-aux-Forges has it too."""
         best = 0.0
         for k in keys:
-            if k in c.keys:
-                return 1.0
-            for ck in c.keys:
+            mark = k[:len(k) - len(k.lstrip(BASE + SPELLING))]
+            weight = WEIGHTS.get(mark, 0.85)
+            k = k[len(mark):]
+            if k in c.raw:
+                best = max(best, weight)
+                continue
+            for ck in c.raw:
                 if ck[:1] == k[:1]:  # 'Ackerbach' is not 'Kerbach'
-                    best = max(best, difflib.SequenceMatcher(None, k, ck).ratio())
+                    best = max(best, weight * difflib.SequenceMatcher(None, k, ck).ratio())
         return best
 
     def best_near(self, keys: set[str], point: tuple[float, float], radius: float,
-                  cutoff: float = NAME_CUTOFF) -> tuple[Cand, float, float] | None:
-        """(candidate, similarity, km) for the best match near `point`."""
+                  cutoff: float = NAME_CUTOFF, exclude: frozenset = frozenset()) -> tuple[Cand, float, float] | None:
+        """(candidate, similarity, km) for the best match near `point`, ignoring items in `exclude`."""
         scored = []
         for c in self.near(point, radius):
+            if c.qid and c.qid in exclude:
+                continue
             s = self.sim(keys, c)
             if s >= cutoff:
                 d = km(point, (c.lat, c.lon))
-                scored.append((s * 2 + c.rank * 0.15 - d / radius * 0.5, c, s, d))
+                # The name counts most: an exact hamlet beats a neighbouring commune of a near name
+                # (Budange, not Buding).
+                scored.append((s * 4 + c.rank * 0.15 - d / radius * 0.5, c, s, d))
         if not scored:
             return None
         _, c, s, d = max(scored, key=lambda x: (x[0], tiebreak(x[1])))
@@ -251,7 +296,7 @@ def run() -> dict[str, Result]:
         rule = rules.get(pid)
         if rule and ("lat" in rule or "wikidata" in rule or rule.get("unlocated") or "approximate" in rule):
             continue  # applied after the automatic passes
-        keys = {name_key(n) for n in place_names(p)} - {""}
+        keys = place_keys(p)
         canton = locate(p["index_canton"]) if p.get("index_canton") else None
         commune = locate(p["index_commune"], canton) if p.get("index_commune") else None
         res.anchor = commune or canton
@@ -273,7 +318,8 @@ def run() -> dict[str, Result]:
                 res.method, res.confidence, res.note = "canton", "medium", "the chef-lieu of its canton"
                 continue
         # No anchor: an exact name, unambiguous in the region.
-        exact = [c for c in gaz.exact(keys) if c.rank >= 2.5]
+        exact = [c for c in gaz.exact({name_key(n) for n in place_names(p)} - {""}) if c.rank >= 2.5
+                 and gaz.sim(keys, c) >= 0.95]
         spots = {(round(c.lat, 2), round(c.lon, 2)) for c in exact}
         if exact and len({(round(a, 1), round(b, 1)) for a, b in spots}) == 1:
             take(res, max(exact, key=tiebreak), "medium", "exact name, no anchor")
@@ -281,6 +327,7 @@ def run() -> dict[str, Result]:
             take(res, max(exact, key=tiebreak), "low", f"ambiguous without an anchor ({len(spots)} spots)")
 
     _refine(results, places, memberships, gaz, locate)
+    _one_place_per_item(results, places, gaz)
     _apply_rules(results, rules, items)
 
     # Territories: a label point at the seat (a settlement of the seat's name in the territory),
@@ -369,9 +416,9 @@ def _refine(results: dict[str, Result], places: dict, memberships: list[dict], g
                 res.note = f"not in Wikidata/GeoNames; placed at its commune {p['index_commune']} (near its district)"
                 changed += 1
                 continue
-        keys = {name_key(n) for n in place_names(p)} - {""}
+        keys = place_keys(p)
         # Short names have many near neighbours: they must match almost exactly.
-        cutoff = 0.95 if min((len(k) for k in keys), default=0) < 7 else 0.86
+        cutoff = 0.95 if min((len(k.lstrip(BASE + SPELLING)) for k in keys), default=0) < 7 else 0.86
         hit = gaz.best_near(keys, context, ANCHOR_KM["context"], cutoff=cutoff)
         if hit and (far or res.method == "approximate" or hit[0].qid != res.wikidata_id):
             c, s, d = hit
@@ -387,6 +434,47 @@ def _refine(results: dict[str, Result], places: dict, memberships: list[dict], g
             res.note = (res.note + "; " if res.note else "") + f"{km(context, (res.lat, res.lon)):.0f} km from its district"
             flagged += 1
     print(f"district context: {changed} place(s) re-matched, {flagged} flagged as far from their district")
+
+
+def _one_place_per_item(results: dict[str, Result], places: dict, gaz: Gazetteer) -> None:
+    """Two places matched to one Wikidata item: the one whose name fits it best keeps it. The
+    other keeps it too when both are the same place (the same name, or the same canton in the
+    index: two index lines for one village); otherwise it looks again without that item."""
+    by_qid: dict[str, list[str]] = defaultdict(list)
+    for pid, r in results.items():
+        if r.wikidata_id and r.lat is not None:
+            by_qid[r.wikidata_id].append(pid)
+    taken = frozenset(by_qid)
+    moved = 0
+    for qid, pids in sorted(by_qid.items()):
+        if len(pids) < 2:
+            continue
+        cand = next((c for c in gaz.cands if c.qid == qid), None)
+        if cand is None:
+            continue
+        fit = {pid: gaz.sim(place_keys(places[pid]), cand) for pid in pids}
+        winner = max(sorted(pids), key=lambda pid: (fit[pid], {"high": 2, "medium": 1}.get(results[pid].confidence, 0)))
+        for pid in sorted(pids):
+            if pid == winner:
+                continue
+            same_canton = places[pid].get("index_canton") and \
+                name_key(places[pid]["index_canton"]) == name_key(places[winner].get("index_canton") or "")
+            same_name = difflib.SequenceMatcher(None, name_key(places[pid]["name_fr"]),
+                                                name_key(places[winner]["name_fr"])).ratio() >= 0.9
+            if fit[pid] >= 0.95 and same_canton and same_name:
+                continue  # the same village twice in the index: curate merges them
+            res = results[pid]
+            point = res.anchor or (res.lat, res.lon)
+            hit = gaz.best_near(place_keys(places[pid]), point, ANCHOR_KM["canton"], exclude=taken)
+            if hit:
+                take(res, hit[0], "medium" if hit[1] >= 0.95 else "low",
+                     f"{hit[1]:.2f}; {qid} went to {winner}, whose name fits it better")
+            else:
+                res.lat = res.lon = res.wikidata_id = None
+                res.method, res.confidence = "unlocated", "low"
+                res.note = f"its match {qid} went to {winner}, whose name fits it better"
+            moved += 1
+    print(f"one place per item: {moved} place(s) moved off a shared Wikidata item")
 
 
 def _apply_rules(results: dict[str, Result], rules: dict, items: dict) -> None:

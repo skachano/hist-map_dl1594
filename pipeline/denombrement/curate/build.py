@@ -625,9 +625,53 @@ def merge_geocoding(out: Built) -> int:
                 p["modern_country"] = g["country"]
             if g["note"]:
                 p["notes"] = "; ".join(x for x in (p.get("notes"), g["note"]) if x)
+    _merge_same_item(out)
     _report_geocoding(out)
     _rekey(out)
     return n
+
+
+def _merge_same_item(out: Built) -> None:
+    """Two index lines for one village (the geocoder left them on one Wikidata item, with the
+    same canton): one place, whose variants, entries, memberships and holdings are the union."""
+    groups: dict[str, list[str]] = defaultdict(list)
+    for pid, p in sorted(out.places.items()):
+        if p["kind"] == "settlement" and p.get("wikidata_id") and p.get("geo_confidence") in ("high", "medium"):
+            groups[p["wikidata_id"]].append(pid)
+    into: dict[str, str] = {}
+    for pids in groups.values():
+        keep = pids[0]
+        for other in pids[1:]:
+            into[other] = keep
+            k, o = out.places[keep], out.places.pop(other)
+            names = [v for v in (k.get("variants") or "").split("|") + (o.get("variants") or "").split("|")
+                     + [o["name_fr"]] if v and v != k["name_fr"]]
+            k["variants"] = "|".join(dict.fromkeys(names))
+            k["notes"] = "; ".join(x for x in (k.get("notes"), f"merged with {other} (same Wikidata item and canton)") if x)
+    if not into:
+        return
+    for e in out.entries:
+        e["place_id"] = into.get(e["place_id"], e["place_id"])
+    seen, kept = set(), []
+    for m in out.memberships:
+        m["child_id"] = into.get(m["child_id"], m["child_id"])
+        key = (m["child_id"], m["parent_id"], m["relation"])
+        if key not in seen:
+            seen.add(key)
+            kept.append(m)
+    out.memberships = kept
+    merged: dict[tuple, dict] = {}
+    for h in out.holdings:
+        h["place_id"] = into.get(h["place_id"], h["place_id"])
+        key = (h["place_id"], h["tenure"], h["holder_id"], h["share"])
+        if key in merged:
+            merged[key]["via_entry"] = "|".join(sorted(set(merged[key]["via_entry"].split("|") + h["via_entry"].split("|")),
+                                                       key=lambda x: int(x) if x.isdigit() else 0))
+        else:
+            merged[key] = h
+    out.holdings = list(merged.values())
+    out.report.append(f"\n- Merged {len(into)} place(s) that are another index line for the same village: "
+                      + ", ".join(f"`{a}` → `{b}`" for a, b in sorted(into.items())))
 
 
 def _report_geocoding(out: Built) -> None:

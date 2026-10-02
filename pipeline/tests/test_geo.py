@@ -26,19 +26,25 @@ def _gaz(*cands):
 
 
 def test_best_near_prefers_the_namesake_near_the_anchor():
-    near = Cand("wikidata", 48.70, 6.20, geocode.label_keys("Viller"), 3, "FR", qid="Q1")
-    far = Cand("wikidata", 49.40, 6.70, geocode.label_keys("Viller"), 3, "FR", qid="Q2")
+    near = Cand("wikidata", 48.70, 6.20, geocode.label_keys("Viller"), 3, "FR", qid="Q1", raw=geocode.raw_keys(["Viller"]))
+    far = Cand("wikidata", 49.40, 6.70, geocode.label_keys("Viller"), 3, "FR", qid="Q2", raw=geocode.raw_keys(["Viller"]))
     g = _gaz(near, far)
-    hit = g.best_near({geocode.name_key("Viller")}, (48.69, 6.18), 25)
+    hit = g.best_near(geocode.raw_keys(["Viller"]), (48.69, 6.18), 25)
     assert hit and hit[0].qid == "Q1"
-    assert g.best_near({geocode.name_key("Viller")}, (47.0, 5.0), 25) is None
+    assert g.best_near(geocode.raw_keys(["Viller"]), (47.0, 5.0), 25) is None
+    assert g.best_near(geocode.raw_keys(["Viller"]), (48.69, 6.18), 25, exclude=frozenset({"Q1"})) is None
 
 
 def test_best_near_tolerates_ocr():
-    c = Cand("wikidata", 48.9, 6.0, geocode.label_keys("Maidières"), 3, "FR", qid="Q3")
-    hit = _gaz(c).best_near({geocode.name_key("Maidiures")}, (48.9, 6.03), 25)
+    c = Cand("wikidata", 48.9, 6.0, geocode.label_keys("Maidières"), 3, "FR", qid="Q3", raw=geocode.raw_keys(["Maidières"]))
+    hit = _gaz(c).best_near(geocode.raw_keys(["Maidiures"]), (48.9, 6.03), 25)
     assert hit and hit[0].qid == "Q3" and hit[1] >= 0.84
 
 
 def test_km():
     assert 108 < geocode.km((48.0, 6.0), (49.0, 6.0)) < 114
+
+
+def test_village_names_keep_b_and_h_apart():
+    c = Cand("wikidata", 48.6, 6.6, geocode.label_keys("Bénaménil"), 3, "FR", qid="Q4", raw=geocode.raw_keys(["Bénaménil"]))
+    assert Gazetteer.sim(geocode.raw_keys(["Hénaménil"]), c) < 1.0
