@@ -81,11 +81,14 @@ export function renderPanel(root: HTMLElement, data: Dataset, state: State, stor
     const group = (src: "book" | "index" | "old", key: StringKey) => {
       const items = spell.filter((x) => x.src === src);
       return items.length ? h("dd", { class: "spell" }, h("span", { class: "muted" }, `${t(key, lang)}: `),
-        items.map((x) => x.e?.length ? `${x.s} (${x.e.join(", ")})` : x.s).join(" · ")) : null;
+        [...new Set(items.map((x) => x.s))].join(" · ")) : null;
     };
     return spell.length ? [h("dt", {}, t("spellings", lang)), group("book", "spellBook"), group("index", "spellIndex"),
       group("old", "spellOld")] : [];
   };
+  // The editor's index on its own, beside its identification: each of its headings for the place,
+  // with the entries it sends the place to.
+  const indexLines = (place.spell ?? []).filter((x) => x.src === "index" && x.e?.length);
   const entries = (place.entries ?? []).map((no) => data.entryByNo.get(no)).filter((e): e is Entry => !!e);
   // An entry that names other places too ("Volfflingen et Weissweiler"): the others, as links.
   const others = (e: Entry) => [e.place, ...(e.also ?? [])].filter((id): id is string => !!id && id !== place.id);
@@ -123,6 +126,8 @@ export function renderPanel(root: HTMLElement, data: Dataset, state: State, stor
       where || place.lost ? h("dt", {}, t("index", lang)) : null,
       where ? h("dd", {}, where) : null,
       place.lost ? h("dd", { class: "muted" }, t("lostPlace", lang)) : null,
+      indexLines.length ? h("dt", {}, t("indexNumbers", lang)) : null,
+      ...indexLines.map((x) => h("dd", { class: "index-line" }, `${x.s}: ${t("entry", lang)} ${x.e!.join(", ")}`)),
       admin.length ? h("dt", {}, t("district", lang)) : null,
       ...admin.map(crumbs),
       feudal.length ? h("dt", {}, t("realm", lang)) : null,

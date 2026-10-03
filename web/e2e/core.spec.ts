@@ -122,8 +122,11 @@ test("settlements are drawn with one shape per kind of place, keyed in the legen
 test("spellings by source: the lists, the editor's index and the table of old forms", async ({ page }) => {
   await open(page, "#/map?lang=en&place=croismare");
   const spell = page.locator("#panel dd.spell");
-  await expect(spell.filter({ hasText: "In the lists" })).toContainText("(255)");
-  await expect(spell.filter({ hasText: "In the editor's index (1870)" })).toContainText("Croismare (255)");
+  await expect(spell.filter({ hasText: "In the lists" })).toContainText("Haùonvitter");
+  await expect(spell.filter({ hasText: "In the editor's index" })).toHaveText("In the editor's index: Croismare");
+  await expect(spell.filter({ hasText: "(" })).toHaveCount(0);   // no numbers among the spellings
+  // the index's numbers, in a section of their own
+  await expect(page.locator("#panel dd.index-line")).toHaveText(["Croismare: No. 255"]);
   await expect(spell.filter({ hasText: "Table of old forms" })).toContainText("Hadonviller");
 });
 
