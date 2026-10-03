@@ -37,8 +37,8 @@ describe("places", () => {
     expect(isShared(places.get("einvaux")!)).toBe(true);
     expect(isShared(places.get("pierrefort")!)).toBe(false);
   });
-  it("styles places per mode", () => {
-    expect(placeStyles(data, "tenure", []).get("pierrefort")?.fill).toBe(TENURE_COLOURS.fief);
-    expect(placeStyles(data, "tenure", []).get("einvaux")).toEqual({ fill: TENURE_COLOURS.domain, shared: true });
+  it("colours places by their main tenure", () => {
+    expect(placeStyles(data).get("pierrefort")?.fill).toBe(TENURE_COLOURS.fief);
+    expect(placeStyles(data).get("einvaux")).toEqual({ fill: TENURE_COLOURS.domain, shared: true });
   });
 });

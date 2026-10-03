@@ -1,6 +1,5 @@
-// The map: settlement cells and points styled per place by the colour mode, hatching for places
-// held only in part, the duchy's outline, and in the districts mode the bailliages and the lands
-// outside them as labelled areas.
+// The map: settlement cells and points styled per place by the view (tenure on the Tenures tab),
+// hatching for places held only in part, the duchy's outline, and the territories' areas, labelled.
 import {
   type FilterSpecification, type GeoJSONSource, Map as MapLibre, type MapGeoJSONFeature, type MapMouseEvent, Marker,
   setWorkerUrl,
@@ -172,7 +171,7 @@ export class MapView {
       paint: { "line-color": "#fcfcfb", "line-width": 2.5 } });
     m.addLayer({ id: "duchy", type: "line", source: "territories", filter: ["==", ["get", "id"], DUCHY],
       paint: { "line-color": "#52514e", "line-width": 0.8 } });
-    // Settlements: the shape says what kind of place (map/icons.ts), the fill what the mode shows.
+    // Settlements: the shape says what kind of place (map/icons.ts), the fill what the view shows.
     m.addLayer({
       id: "places-icon", type: "symbol", source: "places",
       layout: {

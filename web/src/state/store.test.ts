@@ -3,22 +3,21 @@ import { parseHash, toHash } from "./store";
 
 describe("URL state", () => {
   it("round-trips the map", () => {
-    const s = parseHash("#/map?color=holder&lang=fr&place=saint-avold&c=a,b");
-    expect(s).toMatchObject({ view: "map", mode: "holder", lang: "fr", place: "saint-avold", colours: ["a", "b"] });
-    // the districts and realms modes moved to the Territories view: an old link shows tenure
-    expect(parseHash("#/map?color=district&lang=fr").mode).toBe("tenure");
+    const s = parseHash("#/map?lang=fr&place=saint-avold");
+    expect(s).toMatchObject({ view: "map", lang: "fr", place: "saint-avold" });
     expect(parseHash(toHash(s))).toEqual(s);
+    // links from the time of the colour modes still open the Tenures map
+    expect(toHash(parseHash("#/map?color=holder&lang=fr&c=a,b"))).toBe("#/map?lang=fr");
   });
   it("round-trips the other views", () => {
-    for (const hash of ["#/territories?color=tenure&lang=de&h=feudal&lvl=0", "#/holders?color=tenure&lang=en&entity=x",
-      "#/church?color=tenure&lang=ja&layer=abbeys", "#/table?color=tenure&lang=fr&d=provostship-nancy&t=fief&q=chasteau"]) {
+    for (const hash of ["#/territories?lang=de&h=feudal&lvl=0", "#/holders?lang=en&entity=x",
+      "#/church?lang=ja&layer=abbeys", "#/table?lang=fr&d=provostship-nancy&t=fief&q=chasteau"]) {
       expect(toHash(parseHash(hash))).toBe(hash);
     }
   });
   it("falls back to defaults", () => {
     const s = parseHash("#/nowhere?color=rainbow&lang=xx&lvl=9&layer=x");
     expect(s.view).toBe("map");
-    expect(s.mode).toBe("tenure");
     expect(s.level).toBeUndefined();
     expect(s.layer).toBeUndefined();
   });

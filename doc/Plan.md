@@ -146,11 +146,11 @@ Labels in EN/FR/DE/JA for (also `relations`, `counterpart_bases`, `sections`, `s
 ## 3. App screens
 All screens share the UI language switch (EN/FR/DE/JA, which changes both labels and place names) and the place panel. There is no year bar.
 
-1. **Map** (default): settlement cells and points, coloured by one of these:
+1. **Tenures** (default; named Map until after Stage 10): settlement cells and points, coloured by tenure. Originally there were these modes:
    - **tenure**: domain / fief / clergy, with safeguard and other tenures in grey (three validated CVD-safe colours plus grey, as in hist_map)
    - **holder**: the legend picks which holders get the three colours, as in hist_map
 
-   The **district** and **realm** modes were dropped after Stage 10: the Territories view shows the same divisions and realms, at every level, with clickable areas.
+   The **district** and **realm** modes were dropped after Stage 10: the Territories view shows the same divisions and realms, at every level, with clickable areas. The **holder** mode was dropped after that: the Holders view maps one holder's places. With tenure the only colouring, the tab was renamed Tenures.
 
    Hatching marks shared places ("en partie", "pour la moitié"). Places outside the duchy that the book doesn't list (the Three Bishoprics, the Barrois) are left blank and labelled.
 2. **Territories:** hist_map's Territories view without the year, with a switch between the two hierarchies (`#/territories?h=admin|feudal&lvl=…`):
@@ -623,6 +623,13 @@ Requested: drop the Districts and Realms modes from the Map, which repeat the Te
   - The code and strings of the two modes are gone: realm kinds per place, the bailliage labels on the Map, the district legend.
   - The Territories view keeps the realm colours.
   - Tests were updated: the Map has two colour tabs, and an old mode in the URL falls back to Tenure.
+
+### After Stage 10: the Tenures tab
+Requested: remove the Holder mode from the Map tab, and rename the Map tab to Tenures.
+- **Status: done.**
+  - The map colours by tenure only. The colour-mode tabs, the holder legend (the three coloured holders, the picker, "reset colours") and the `color=` and `c=` URL keys are gone; the Holders view keeps its own map of one holder's places.
+  - The tab is called Tenures, Tenures, Besitzarten and 保有形態. Its URL stays `#/map`, and links from the time of the modes still open it.
+  - The performance test now times re-renders by switching the language: up to 7 ms.
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.

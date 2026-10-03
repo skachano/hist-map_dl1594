@@ -1,8 +1,7 @@
 // What the map and the panel need to know about a place: its chains up each hierarchy, its
 // main tenure and holder, the kind of realm it lies in, and how to draw it in each mode.
 import type { Dataset, Holding, Place } from "../data/types";
-import type { Mode } from "../state/store";
-import { holderColour, OTHER, TENURE_COLOURS } from "./colors";
+import { TENURE_COLOURS } from "./colors";
 
 export const DUCHY = "duchy-lorraine";
 const TENURE_ORDER = ["domain", "fief", "clergy", "safeguard"];
@@ -53,37 +52,28 @@ export interface PlaceStyle {
   shared?: boolean;
 }
 
-/** How each located settlement is drawn in a mode. The districts mode colours areas, not places. */
-export function placeStyles(data: Dataset, mode: Mode, coloured: string[]): Map<string, PlaceStyle> {
+/** How each located settlement is drawn on the Tenures map: the colour of its main tenure. */
+export function placeStyles(data: Dataset): Map<string, PlaceStyle> {
   const styles = new Map<string, PlaceStyle>();
   for (const p of data.places.values()) {
     if (p.kind !== "settlement" || p.lat === undefined) continue;
-    let fill: string | undefined;
-    if (mode === "tenure") {
-      const t = mainHolding(p)?.t;
-      fill = t ? TENURE_COLOURS[t] : undefined;
-    } else {
-      const h = mainHolding(p);
-      fill = h ? holderColour(h.h, coloured) ?? OTHER : undefined;
-    }
+    const t = mainHolding(p)?.t;
+    const fill = t ? TENURE_COLOURS[t] : undefined;
     if (fill) styles.set(p.id, { fill, shared: isShared(p) });
   }
   return styles;
 }
 
-/** Counts behind the legend: places per tenure and per holder (absent: not named). */
-export function counts(data: Dataset): { tenure: Map<string, number>; holder: Map<string | undefined, number>;
-  shared: number } {
+/** Counts behind the legend: places per tenure, and those held in part. */
+export function counts(data: Dataset): { tenure: Map<string, number>; shared: number } {
   const tenure = new Map<string, number>();
-  const holder = new Map<string | undefined, number>();
   let shared = 0;
   const bump = <K>(m: Map<K, number>, k: K) => m.set(k, (m.get(k) ?? 0) + 1);
   for (const p of data.places.values()) {
     if (p.kind !== "settlement" || p.lat === undefined) continue;
     const h = mainHolding(p);
     bump(tenure, h?.t ?? "");
-    if (h) bump(holder, h.h);
     if (h && isShared(p)) shared++;
   }
-  return { tenure, holder, shared };
+  return { tenure, shared };
 }

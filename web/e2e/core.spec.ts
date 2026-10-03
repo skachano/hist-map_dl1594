@@ -1,20 +1,19 @@
 import { expect, test } from "@playwright/test";
 import { legendTitle, mapSettled, open } from "./helpers";
 
-test("colour modes change what the map shows and the URL", async ({ page }) => {
-  const errors = await open(page, "#/map?color=tenure&lang=en");
-  const tabs = page.getByRole("navigation", { name: "Colour by" });
-  await expect(tabs.getByRole("button", { name: "Tenure" })).toHaveAttribute("aria-pressed", "true");
-  await expect(tabs.getByRole("button")).toHaveCount(2);   // districts and realms are the Territories view's
-  const before = await legendTitle(page).innerText();
-  await tabs.getByRole("button", { name: "Holder", exact: true }).click();
-  await expect(page).toHaveURL(/color=holder/);
-  await expect(legendTitle(page)).not.toHaveText(before);
+test("the Tenures tab colours the map by tenure, with no colour modes", async ({ page }) => {
+  const errors = await open(page, "#/map?color=holder&lang=en");   // a link from the time of the modes
+  const views = page.getByRole("navigation", { name: "Views" });
+  await expect(views.getByRole("button", { name: "Tenures" })).toHaveAttribute("aria-pressed", "true");
+  await expect(views.getByRole("button", { name: "Map" })).toHaveCount(0);
+  await expect(page.getByRole("navigation", { name: "Colour by" })).toHaveCount(0);
+  await expect(legendTitle(page)).toHaveText("Tenure in 1594");
+  await expect(page).not.toHaveURL(/color=/);
   expect(errors).toEqual([]);
 });
 
 test("language switch translates the interface and the names", async ({ page }) => {
-  await open(page, "#/map?color=tenure&lang=en&place=saint-avold");
+  await open(page, "#/map?lang=en&place=saint-avold");
   await expect(page.locator("#panel h2")).toHaveText("Saint-Avold");
   await page.getByRole("button", { name: "Deutsch" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "de");
@@ -29,7 +28,7 @@ test("language switch translates the interface and the names", async ({ page }) 
 });
 
 test("place panel lists every entry naming the place, with numbers, sections and pages", async ({ page }) => {
-  await open(page, "#/map?color=tenure&lang=en&place=saint-avold");
+  await open(page, "#/map?lang=en&place=saint-avold");
   const panel = page.locator("#panel");
   await expect(panel).toContainText("FR Saint-Avold · DE Sankt Avold · EN Saint-Avold");
   const entries = panel.locator("ul.entries > li");
@@ -50,7 +49,7 @@ test("place panel lists every entry naming the place, with numbers, sections and
 });
 
 test("a place split between two prévôtés shows both district chains", async ({ page }) => {
-  await open(page, "#/map?color=tenure&lang=en&place=athienville");
+  await open(page, "#/map?lang=en&place=athienville");
   const crumbs = page.locator("#panel .crumbs");
   await expect(crumbs).toHaveCount(2);
   await expect(crumbs.nth(0)).toContainText("Bailiwick of Nancy");
@@ -68,7 +67,7 @@ test("keyboard: panel takes focus, Escape closes it and returns focus; skip link
   await page.keyboard.press("Escape");
   await expect(page.locator("#panel")).toBeHidden();
   await expect(link).toBeFocused();
-  await open(page, "#/map?color=tenure&lang=en");
+  await open(page, "#/map?lang=en");
   await page.reload(); // a hash change keeps focus where it was; the skip link is for a fresh page
   await expect(page.locator("#header h1")).toBeVisible();
   await page.keyboard.press("Tab");
@@ -79,7 +78,7 @@ test("keyboard: panel takes focus, Escape closes it and returns focus; skip link
 });
 
 test("the hover tooltip stays inside the map near the edges (no scrollbar)", async ({ page }) => {
-  await open(page, "#/map?color=tenure&lang=en");
+  await open(page, "#/map?lang=en");
   await mapSettled(page); // a drag during the opening fit is lost
   const box = (await page.locator("#map").boundingBox())!;
   // drag the duchy into the bottom-right corner, so villages sit at the map's edges
@@ -108,7 +107,7 @@ test("the hover tooltip stays inside the map near the edges (no scrollbar)", asy
 });
 
 test("settlements are drawn with one shape per kind of place, keyed in the legend", async ({ page }) => {
-  await open(page, "#/map?color=tenure&lang=en");
+  await open(page, "#/map?lang=en");
   const key = page.locator("#legend ul.shapes");
   await expect(key.locator("li").first()).toBeVisible();
   await expect(key.locator("svg")).toHaveCount(await key.locator("li").count());
@@ -121,7 +120,7 @@ test("settlements are drawn with one shape per kind of place, keyed in the legen
 });
 
 test("spellings by source: the lists, the editor's index and the table of old forms", async ({ page }) => {
-  await open(page, "#/map?color=tenure&lang=en&place=croismare");
+  await open(page, "#/map?lang=en&place=croismare");
   const spell = page.locator("#panel dd.spell");
   await expect(spell.filter({ hasText: "In the lists" })).toContainText("(255)");
   await expect(spell.filter({ hasText: "In the editor's index (1870)" })).toContainText("Croismare (255)");
@@ -129,7 +128,7 @@ test("spellings by source: the lists, the editor's index and the table of old fo
 });
 
 test("an entry naming two places is listed under both, each linking the other", async ({ page }) => {
-  await open(page, "#/map?color=tenure&lang=en&place=woelfling");
+  await open(page, "#/map?lang=en&place=woelfling");
   const entry = page.locator("#panel ul.entries > li").filter({ hasText: "No. 2230" });
   await expect(entry).toBeVisible();
   await entry.getByRole("button", { name: "Wiesviller" }).click();

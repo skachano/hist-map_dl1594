@@ -1,7 +1,7 @@
 import { loadDataset } from "./data/load";
 import { label, name, t } from "./i18n";
 import { type AreaLayer, MapView } from "./map/mapView";
-import { colouredHolders, SERIES } from "./model/colors";
+import { SERIES } from "./model/colors";
 import { chains, mainHolding, type PlaceStyle, placeStyles } from "./model/places";
 import { currentLevel, shownAreas } from "./model/territories";
 import { parseHash, type State, Store, toHash } from "./state/store";
@@ -26,7 +26,6 @@ async function start(): Promise<void> {
   const store = new Store(parseHash(location.hash));
   $("status").remove();
 
-  const colours = (state: State) => colouredHolders(data.entities, state.colours?.filter((id) => data.entities.has(id)));
   const tooltip = $("tooltip");
   const vocab = data.meta.vocab;
 
@@ -79,7 +78,7 @@ async function start(): Promise<void> {
   });
 
   /** What the map draws in each view: the places' colours and the territory areas. */
-  const mapLayers = (state: State, coloured: string[]): { styles: Map<string, PlaceStyle>; areas: AreaLayer } => {
+  const mapLayers = (state: State): { styles: Map<string, PlaceStyle>; areas: AreaLayer } => {
     const none: AreaLayer = { ids: [], feudal: false, interactive: false };
     if (state.view === "territories") {
       const feudal = !!state.feudal;
@@ -105,23 +104,22 @@ async function start(): Promise<void> {
       for (const e of layerEntries(data, state.layer ?? "abbeys")) if (e.place) styles.set(e.place, { fill: colour });
       return { styles, areas: none };
     }
-    return { styles: placeStyles(data, state.mode, coloured), areas: none };
+    return { styles: placeStyles(data), areas: none };
   };
 
   const render = (state: State, previous?: State) => {
     const started = performance.now();
     const focusedBefore = document.activeElement as HTMLElement | null; // views re-render below
-    const coloured = colours(state);
     document.documentElement.lang = state.lang;
     document.title = t("title", state.lang);
     document.body.dataset.view = state.view;
     document.body.classList.toggle("panel-open", !!state.place);
     renderHeader($("header"), data, store);
-    const { styles, areas } = mapLayers(state, coloured);
+    const { styles, areas } = mapLayers(state);
     const onMap = state.view !== "table" && state.view !== "about";
     const side = $("side"), page = $("page"), legend = $("legend");
     legend.hidden = state.view !== "map";
-    if (state.view === "map") renderLegend(legend, data, state, store, coloured);
+    if (state.view === "map") renderLegend(legend, data, state);
     side.hidden = !["territories", "holders", "church"].includes(state.view);
     if (state.view === "territories") renderTerritoriesView(side, data, state, store);
     else if (state.view === "holders") renderHoldersView(side, data, state, store);

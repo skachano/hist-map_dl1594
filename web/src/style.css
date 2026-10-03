@@ -49,10 +49,7 @@ header {
 .topline { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; min-width: 0; }
 header h1 { font-size: 16px; margin: 0; flex: 1 1 auto; }
 .views { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
-.tabs { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
-.tabs select { border: 1px solid var(--border); border-radius: 6px; background: var(--surface); padding: 4px 6px; }
 .langs { display: flex; gap: 2px; }
-.rightbar { display: flex; align-items: center; gap: 6px; min-width: 0; }
 /* map stage */
 #stage { position: relative; min-height: 0; }
 #map { position: absolute; inset: 0; }
@@ -71,8 +68,6 @@ aside {
 #legend { max-height: calc(100% - 32px); overflow: auto; }
 #legend .others, #legend .keys { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--hairline); }
 #legend .others li { grid-template-columns: 16px 1fr auto; }
-.pick { border: none; padding: 0; background: none; color: var(--muted); font-size: 12px; line-height: 1; }
-.pick:hover { color: var(--link); }
 
 /* buttons that read as links */
 button.link { border: none; background: none; padding: 0; color: var(--link); text-align: left; cursor: pointer; }
@@ -181,9 +176,9 @@ ol.changes li li { margin-bottom: 6px; }
 @media (max-width: 640px) {
   header { padding: 6px 8px; }
   header h1 { font-size: 14px; flex-basis: 100%; }
-  .views, .tabs { flex: 1 1 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .views { flex: 1 1 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
   .views { flex-basis: 100%; flex-wrap: wrap; } /* six views: two rows, none hidden off screen */
-  .views > *, .tabs > * { flex: none; }
+  .views > * { flex: none; }
   #legend .note { display: none; }
   /* Nothing scrolls over the map on phones (an overlaying scroller left the WebGL map
      unpainted): the screen splits, map above, legend / list / place panel below. */

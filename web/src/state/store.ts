@@ -1,5 +1,5 @@
 // Application state, mirrored in the URL hash so any view can be linked:
-//   #/map?color=tenure&lang=fr&place=saint-avold
+//   #/map?lang=fr&place=saint-avold   (the Tenures tab; links with the old colour modes still open it)
 //   #/territories?h=feudal&lvl=1     #/holders?entity=abbey-saint-avold     #/church?layer=abbeys
 //   #/table?d=provostship-nancy&t=fief&q=chasteau
 import type { Lang } from "../data/types";
@@ -7,9 +7,6 @@ import { LANGS } from "../i18n";
 
 export const VIEWS = ["map", "territories", "holders", "table", "church", "about"] as const;
 export type View = (typeof VIEWS)[number];
-/** The map's colour modes. Districts and realms are the Territories view's (an old link falls back to tenure). */
-export const MODES = ["tenure", "holder"] as const;
-export type Mode = (typeof MODES)[number];
 export const LAYERS = ["towns", "churches", "abbeys", "priories", "convents", "commanderies", "chaumes"] as const;
 export type Layer = (typeof LAYERS)[number];
 
@@ -29,11 +26,8 @@ export interface TableFilters {
 
 export interface State {
   view: View;
-  mode: Mode;
   lang: Lang;
   place?: string;
-  /** holders given the three map colours in holder mode (default: the three most prominent) */
-  colours?: string[];
   /** territories view: which hierarchy, and which level (0 = all) */
   feudal?: boolean;
   level?: number;
@@ -44,7 +38,7 @@ export interface State {
   filters?: TableFilters;
 }
 
-export const DEFAULT_STATE: State = { view: "map", mode: "tenure", lang: "en" };
+export const DEFAULT_STATE: State = { view: "map", lang: "en" };
 const FILTER_KEYS: [keyof TableFilters, string][] = [["district", "d"], ["realm", "r"], ["section", "t"],
   ["holder", "hd"], ["series", "s"], ["q", "q"]];
 
@@ -52,7 +46,6 @@ export function parseHash(hash: string): State {
   const [path, query = ""] = hash.replace(/^#\/?/, "").split("?");
   const q = new URLSearchParams(query);
   const lang = q.get("lang") as Lang;
-  const mode = q.get("color") as Mode;
   const layer = q.get("layer") as Layer;
   const filters: TableFilters = {};
   for (const [key, short] of FILTER_KEYS) {
@@ -61,10 +54,8 @@ export function parseHash(hash: string): State {
   }
   return {
     view: (VIEWS as readonly string[]).includes(path) ? (path as View) : DEFAULT_STATE.view,
-    mode: (MODES as readonly string[]).includes(mode) ? mode : DEFAULT_STATE.mode,
     lang: LANGS.includes(lang) ? lang : browserLang(),
     place: q.get("place") ?? undefined,
-    colours: q.get("c")?.split(",").filter(Boolean).slice(0, 3) || undefined,
     feudal: q.get("h") === "feudal" || undefined,
     level: ["0", "1", "2", "3"].includes(q.get("lvl") ?? "") ? Number(q.get("lvl")) : undefined,
     entity: q.get("entity") ?? undefined,
@@ -74,9 +65,8 @@ export function parseHash(hash: string): State {
 }
 
 export function toHash(s: State): string {
-  const q = new URLSearchParams({ color: s.mode, lang: s.lang });
+  const q = new URLSearchParams({ lang: s.lang });
   if (s.place) q.set("place", s.place);
-  if (s.colours?.length) q.set("c", s.colours.join(","));
   if (s.feudal) q.set("h", "feudal");
   if (s.level !== undefined) q.set("lvl", String(s.level));
   if (s.entity) q.set("entity", s.entity);
