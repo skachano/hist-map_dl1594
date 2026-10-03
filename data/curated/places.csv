@@ -1,5 +1,5 @@
 id,kind,name_fr,name_de,name_en,variants,old_forms,place_type,lat,lon,wikidata_id,geonames_id,modern_country,index_kind,index_commune,index_canton,index_dept,lost,geo_method,geo_confidence,hierarchy,holder_id,counterpart_id,counterpart_basis,source_page,confidence,notes
-bailiwick-allemagne,territory,Bailliage d'Allemagne,Amt (Bailliage) Allemagne,Bailiwick of Allemagne,,,bailiwick,49.25188,6.70954,,,,,,,,,territory,medium,admin,,,,77,high,
+bailiwick-allemagne,territory,Bailliage d'Allemagne,Amt (Bailliage) Allemagne,Bailiwick of Allemagne,,,bailiwick,49.25168,6.70995,,,,,,,,,territory,medium,admin,,,,77,high,
 bailiwick-apremont,territory,Bailliage d'Apremont,Amt (Bailliage) Apremont,Bailiwick of Apremont,Aspremont,,bailiwick,48.85528,5.63917,,,,,,,,,territory,medium,admin,,,,101,high,
 bailiwick-chatel-sur-moselle,territory,Bailliage de Châtel-sur-Moselle,Amt (Bailliage) Châtel-sur-Moselle,Bailiwick of Châtel-sur-Moselle,Chastel~sur-Moze',,bailiwick,48.31417,6.39306,,,,,,,,,territory,medium,admin,,,,97,high,
 bailiwick-epinal,territory,Bailliage d'Épinal,Amt (Bailliage) Épinal,Bailiwick of Épinal,Espinal,,bailiwick,48.17361,6.45167,,,,,,,,,territory,medium,admin,,,,99,high,
@@ -60,7 +60,7 @@ district-sarralbe,territory,Circonscription de Sarralbe,Bezirk Sarralbe,District
 district-sarreck,territory,Circonscription de Sarreck,Bezirk Sarreck,District of Sarreck,Sarech,,district,48.77771,7.03869,,,,,,,,,territory,medium,admin,,lordship-sarreck,slot,108,high,
 district-soultzbach,territory,Circonscription de Soultzbach,Bezirk Soultzbach,District of Soultzbach,,,district,48.05521,7.22067,,,,,,,,,territory,medium,admin,,,,108,high,
 district-spitzemberg,territory,Circonscription de Spitzemberg,Bezirk Spitzemberg,District of Spitzemberg,,,district,48.30756,7.04417,,,,,,,,,territory,medium,admin,,lordship-spitzemberg,slot,109,high,
-duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.6921,6.51542,,,,,,,,,territory,medium,admin,,,,34,high,
+duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69205,6.51551,,,,,,,,,territory,medium,admin,,,,34,high,
 fief-keltern-ostern,territory,Fief de Keltern-Ostern,Lehen Keltern-Ostern,Fief of Keltern-Ostern,,,fief,49.52336,7.1118,,,,,,,,,territory,medium,feudal,house-eberstein|house-oberstein,provostship-keltern-ostern,heading,89,high,
 lordship-beaurains,territory,Terre et seigneurie de Beaurains,Herrschaft Beaurains,Lordship of Beaurains,Bcaurains,,lordship,49.27899,6.6082,,,,,,,,,territory,medium,feudal,,district-beaurains,slot,93,high,
 lordship-bitche,territory,Terre et seigneurie de Bitche,Herrschaft Bitche,Lordship of Bitche,Biche,,lordship,49.10026,7.36709,,,,,,,,,territory,medium,feudal,duchy-lorraine,district-bitche,slot,109,high,
@@ -1744,7 +1744,7 @@ scharhmorther,settlement,Scharhmorther,,,Schartzmorther,,village,,,,,FR,prévôt
 schaumberg,settlement,Schaumberg,,,Scliawembourg,,farmstead,49.4833,7.03333,,,FR,ferme (chat.),Tholey,,,,approximate,low,,,,,86,high,not in Wikidata/GeoNames; placed at its commune Tholey
 schellembach,settlement,Schellembach,,,Schellembach. î »,,village,49.44251,6.96423,,,FR,officede Schambourg,,,,true,hist_map,low,,,,,87,high,0.92 near its district's other members (5 km)
 scheuem,settlement,Scheuem,,,Sclicurcn,,village,49.4833,7.03333,,,FR,v:'.,Tholey,,,,approximate,low,,,,,87,high,not in Wikidata/GeoNames; placed at its commune Tholey
-scheuer-hof,settlement,Scheuer-Hof,,,Schcuren,,farmstead,49.59,6.31611,,2960106,LU,ferme dépendant du vil. de Nohn,,,,true,geonames,medium,,,,,81,medium,"added by correction 67; exact name, no anchor"
+scheuer-hof,settlement,Scheuer-Hof,,,Schcuren,,farmstead,49.4847,6.54064,,,DE,ferme dépendant du vil. de Nohn,,,,true,approximate,low,,,,,81,medium,"added by correction 67; Scheuer-Hof, a farm of the village of Nohn (Saarland) that no longer exists (the editor's corrections); not the Scheuer-Hof in Luxembourg. Placed at Nohn"
 schmalenthal-les-baerenthal,settlement,Schmalenthal-lès-Baerenthal,,,Schraalemhal|Schmalenthal,,deserted_village,48.989,7.4921,Q3475438,,FR,ham. détruit,Baerenlhal,Bitche (Th,,,hist_map,high,,,,,111,high,1.00 near the index's commune (2 km)
 schorbach,settlement,Schorbach,Schorbach,Schorbach,Schorbach|Sehorbach,,village,49.07917,7.40583,Q22143,,FR,,,Bitehe,,,hist_map,high,,,,,110,high,1.00 near the index's canton (3 km)
 schweix,settlement,Schweix,Schweix,Schweix,Schweigs|Schweii,,village,49.12639,7.51194,Q646606,,DE,,,Pirmasens,Bav.,,hist_map,medium,,,,,110,high,0.86 near the index's canton (10 km)

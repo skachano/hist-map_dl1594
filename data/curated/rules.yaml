@@ -102,3 +102,4 @@ geocode:
   chatlemagnc-ou-chatemagnc: {approximate: abaticourt, name_fr: Chattemagne, note: "Chattemagne or Chatemagne (ban de): a part of Abaucourt's territory, where a castle stood (the index)"}
   valdwisse: {wikidata: Q22157, note: "Waldwisse (the index's Valdwisse, canton de Sierck)"}
   gongelfang: {approximate: valdwisse, name_fr: Gongelfang, note: "Gongelfang (Golstingen, Golsfingen in the table of old forms), a hamlet of Waldwisse; not Gostingen in Luxembourg. Not in Wikidata or GeoNames: placed at Waldwisse"}
+  scheuer-hof: {approximate: nohn, note: "Scheuer-Hof, a farm of the village of Nohn (Saarland) that no longer exists (the editor's corrections); not the Scheuer-Hof in Luxembourg. Placed at Nohn"}

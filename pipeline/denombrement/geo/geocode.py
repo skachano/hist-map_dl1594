@@ -587,6 +587,7 @@ def _apply_rules(results: dict[str, Result], rules: dict, items: dict) -> None:
         elif "approximate" in rule and results.get(rule["approximate"]) and results[rule["approximate"]].lat:
             t = results[rule["approximate"]]
             res.lat, res.lon, res.method, res.confidence, res.note = t.lat, t.lon, "approximate", "low", note
+            res.country = t.country or res.country   # in the same country as the place it is put at
         elif rule.get("unlocated"):
             res.lat = res.lon = None
             res.method, res.confidence, res.note = "unlocated", "low", note
