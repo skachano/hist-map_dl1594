@@ -598,10 +598,12 @@ def _apply_rules(results: dict[str, Result], rules: dict, items: dict, commune_a
         elif "approximate" in rule and results.get(rule["approximate"]) and results[rule["approximate"]].lat:
             t = results[rule["approximate"]]
             res.lat, res.lon, res.method, res.confidence, res.note = t.lat, t.lon, "approximate", "low", note
+            res.wikidata_id = res.geonames_id = res.name_de = res.name_en = res.name_ja = None
             res.country = t.country or res.country   # in the same country as the place it is put at
         elif "at" in rule and commune_at and (pt := commune_at(rule["at"], pid)):
             res.lat, res.lon = round(pt[0], 5), round(pt[1], 5)
-            res.wikidata_id = res.geonames_id = None
+            # the wrong match goes, with the names it brought
+            res.wikidata_id = res.geonames_id = res.name_de = res.name_en = res.name_ja = None
             res.method, res.confidence, res.note = "approximate", "low", note
         elif rule.get("unlocated"):
             res.lat = res.lon = None

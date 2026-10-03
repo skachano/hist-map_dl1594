@@ -1148,7 +1148,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1148,Toutainville.,Toutainville,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,totainville,75,high,
 1149,Moncourt.,Moncourt,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,maconcourt,75,high,
 1150,Hignéville.,Hignéville,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,hagneville,75,high,
-1151,Le Mesnil-cn-Sainctois.,Le Mesnil-cn-Sainctois,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,menil-en-xainlois,75,high,
+1151,Le Mesnil-cn-Sainctois.,Le Mesnil-cn-Sainctois,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,menil-en-xaintois,75,high,
 1152,Longchamps.,Longchamps,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,longchamp-sous-chatenois,75,high,
 1153,Noncourt.,Noncourt,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,noncourt,75,medium,index match by confused number (1.00)
 1154,"Gcrbonval, prieuré' de l'ordre dépendant de",Gcrbonval,priory,provostship-chatenois-et-neufchateau,,clergy,,,,main,,gerbonvaux,75,high,
@@ -1198,7 +1198,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1198,Rebeufville.,Rebeufville,,provostship-chatenois-et-neufchateau,,fief,,,,main,,rebeuville,77,high,
 1199,Auzainvillcr.,Auzainvillcr,,provostship-chatenois-et-neufchateau,,fief,,,,main,,auzainvilliers,77,high,
 1200,Roncourt.,Roncourt,,provostship-chatenois-et-neufchateau,,fief,,,,main,,roncourt,77,high,
-1201,Mesuil-sur-Vcirc.,Mesuil-sur-Vcirc,,provostship-chatenois-et-neufchateau,,fief,,,,main,,menil-en-xaintois,77,medium,index match by number (0.42)
+1201,Mesuil-sur-Vcirc.,Mesuil-sur-Vcirc,,provostship-chatenois-et-neufchateau,,fief,,,,main,,menil-balleville,77,medium,index match by number (0.42)
 1202,Gémonville.,Gémonville,,provostship-chatenois-et-neufchateau,,fief,,,,main,,gemonville,77,high,
 1203,Lonchamps.,Lonchamps,,provostship-chatenois-et-neufchateau,,fief,,,,main,,longchamp-sous-chatenois,77,medium,index match by confused number (0.89)
 1204,Sirques.,Sirques,,provostship-sierck-prevote-propre,,domain,,,,main,,sierck,78,high,

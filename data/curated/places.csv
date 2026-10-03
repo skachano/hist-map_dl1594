@@ -6,7 +6,7 @@ bailiwick-epinal,territory,Bailliage d'Épinal,Amt (Bailliage) Épinal,Bailiwick
 bailiwick-hattonchatel,territory,Bailliage d'Hattonchâtel,Amt (Bailliage) Hattonchâtel,Bailiwick of Hattonchâtel,Hatonchastel,,bailiwick,48.9918,5.70113,,,,,,,,,territory,medium,admin,,,,100,high,
 bailiwick-nancy,territory,Bailliage de Nancy,Amt (Bailliage) Nancy,Bailiwick of Nancy,,,bailiwick,48.69278,6.18361,,,,,,,,,territory,medium,admin,,,,34,high,
 bailiwick-vaudemont,territory,Bailliage de Vaudémont,Amt (Bailliage) Vaudémont,Bailiwick of Vaudémont,,,bailiwick,48.41694,6.05611,,,,,,,,,territory,medium,admin,,county-vaudemont,heading,95,high,
-bailiwick-vosges,territory,Bailliage de Vosges,Amt (Bailliage) Vosges,Bailiwick of Vosges,,,bailiwick,48.15271,6.35275,,,,,,,,,territory,medium,admin,,,,56,high,
+bailiwick-vosges,territory,Bailliage de Vosges,Amt (Bailliage) Vosges,Bailiwick of Vosges,,,bailiwick,48.15275,6.35253,,,,,,,,,territory,medium,admin,,,,56,high,
 ban-anould,territory,Ban d'Anould,Bann Anould,Ban of Anould,Anoul,,ban,48.18556,6.94556,,,,,,,,,territory,medium,admin,,,,45,high,
 ban-arches,territory,Ban d'Arches,Bann Arches,Ban of Arches,,,ban,48.11833,6.5275,,,,,,,,,territory,medium,admin,,,,59,high,
 ban-ban-le-duc,territory,Ban de Ban-le-Duc,Bann Ban-le-Duc,Ban of Ban-le-Duc,duc de Clcuvccy,,ban,48.16742,6.96954,,,,,,,,,territory,medium,admin,,,,46,high,
@@ -60,7 +60,7 @@ district-sarralbe,territory,Circonscription de Sarralbe,Bezirk Sarralbe,District
 district-sarreck,territory,Circonscription de Sarreck,Bezirk Sarreck,District of Sarreck,Sarech,,district,48.75105,7.04966,,,,,,,,,territory,medium,admin,,lordship-sarreck,slot,108,high,
 district-soultzbach,territory,Circonscription de Soultzbach,Bezirk Soultzbach,District of Soultzbach,,,district,48.05521,7.22067,,,,,,,,,territory,medium,admin,,,,108,high,
 district-spitzemberg,territory,Circonscription de Spitzemberg,Bezirk Spitzemberg,District of Spitzemberg,,,district,48.30756,7.04417,,,,,,,,,territory,medium,admin,,lordship-spitzemberg,slot,109,high,
-duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69023,6.51577,,,,,,,,,territory,medium,admin,,,,34,high,
+duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69024,6.51572,,,,,,,,,territory,medium,admin,,,,34,high,
 fief-keltern-ostern,territory,Fief de Keltern-Ostern,Lehen Keltern-Ostern,Fief of Keltern-Ostern,,,fief,49.52336,7.1118,,,,,,,,,territory,medium,feudal,house-eberstein|house-oberstein,provostship-keltern-ostern,heading,89,high,
 lordship-beaurains,territory,Terre et seigneurie de Beaurains,Herrschaft Beaurains,Lordship of Beaurains,Bcaurains,,lordship,49.27905,6.60822,,,,,,,,,territory,medium,feudal,,district-beaurains,slot,93,high,
 lordship-bitche,territory,Terre et seigneurie de Bitche,Herrschaft Bitche,Lordship of Bitche,Biche,,lordship,49.10534,7.36535,,,,,,,,,territory,medium,feudal,duchy-lorraine,district-bitche,slot,109,high,
@@ -1099,13 +1099,13 @@ le-hario,settlement,Le Hario,,,Le Haryol,,village,,,,,FR,granges éparses au Val
 le-hubert,settlement,Le Hubert,,,Du Hubert,,hamlet,48.03278,6.03556,,,FR,ham. (verrerie),Claudon,,,,approximate,low,,,,,73,high,not in Wikidata/GeoNames; placed at its commune Claudon
 le-kouaux,settlement,Le Kouaux,,,Rouau,,village,48.34278,7.01389,,,FR,hani.,Ban-de Sapt,Senones,,,approximate,low,,,,,49,high,not in Wikidata/GeoNames; placed at its commune Ban-de Sapt
 le-mazcville,settlement,Le Mazcville,,,Mauzeville,,hamlet,48.18583,7.00139,,,FR,ham.,Fraize,,,,approximate,low,,,,,51,high,not in Wikidata/GeoNames; placed at its commune Fraize
-le-menil,settlement,Ménil-de-Senones,Ménil-de-Senones,Ménil-de-Senones,Le Mesnil|Le Ménil,,hamlet,48.36389,6.85806,,,FR,ham.,Elival,,,,approximate,low,,,,,47,medium,"le Ménil, a hamlet of Étival (the index); not Ménil-de-Senones"
+le-menil,settlement,Ménil-de-Senones,,,Le Mesnil|Le Ménil,,hamlet,48.36389,6.85806,,,FR,ham.,Elival,,,,approximate,low,,,,,47,medium,"le Ménil, a hamlet of Étival (the index); not Ménil-de-Senones"
 le-menil-229,settlement,Le Ménil,,,Le Mesnil,,village,47.90477,6.78209,,3003464,FR,ancienne grange du ban de Longchamp (B.),,,,true,geonames,medium,,,,,65,high,"1.00; Q904120 went to le-menil-ramonchamp, whose name fits it better"
 le-menil-bellefontainc,settlement,Le Ménil,,,Le Mesnil,,hamlet,48.01306,6.44278,,,FR,ham.,Bellefontainc,,,,approximate,low,,,,,65,high,a hamlet of Bellefontaine (the index)
 le-menil-harol,settlement,Le Ménil,,,Le Mcsnil|Le Mesnil,,hamlet,48.13685,6.257,,12315031,FR,ham.,Harol,,,,geonames,high,,,,,70,high,1.00 near the index's commune (2 km)
 le-menil-ramonchamp,settlement,Le Ménil,Le Ménil,Le Ménil,Le Mesnil,,village,47.90722,6.78278,Q904120,,FR,,,Ramonchamp,,,wikidata,high,,,,,60,high,1.00 near the index's canton (4 km)
 le-mesnil,settlement,Le Mesnil,,Le Mesnil,Le Mesnil|Ménil,,hamlet,48.33828,6.18983,Q109575428,,FR,ham.,Girecourt-lez-Viéville,,,,wikidata,high,,,,,67,high,0.95 near the index's commune (0 km)
-le-monccl,settlement,Le Monccl,,Moncel-sur-Vair,MonceL,,hamlet,48.23639,6.95972,,,FR,ham.,Sattlcy,,,,approximate,low,,,,,48,high,a hamlet of Saulcy (the index)
+le-monccl,settlement,Le Monccl,,,MonceL,,hamlet,48.23639,6.95972,,,FR,ham.,Sattlcy,,,,approximate,low,,,,,48,high,a hamlet of Saulcy (the index)
 le-moncel,settlement,Le Moncel,,,Le Monccl,,hamlet,47.925,6.48333,,,FR,ham.,Val-d'Ajol,,,,approximate,low,,,,,63,medium,not in Wikidata/GeoNames; placed at its commune Val-d'Ajol
 le-paire,settlement,Le Paire,,,,,village,48.18893,6.94365,,12315007,FR,bam.,Anould,,,,geonames,medium,,,,,45,high,0.89 near the index's commune (0 km)
 le-paire-moyenmoulier,settlement,Le Paire,,,La Paire,,hamlet,48.36822,6.9318,,12314948,FR,ham.,Moyenmoulier,,,,geonames,high,,,,,48,medium,1.00 near the index's commune (2 km)
@@ -1146,7 +1146,7 @@ lerrain,settlement,Lerrain,Lerrain,Lerrain,Larrin,,village,48.14333,6.14778,Q732
 les-ableuvenettes,settlement,Les Ableuvenettes,Les Ableuvenettes,Les Ableuvenettes,Abvcfvenet-la-Pelite|Les Ableuveneltes,,village,48.19028,6.18611,Q196504,,FR,"t, km de Dompaire",,,,true,wikidata,medium,,,,,70,high,"exact name, no anchor"
 les-ainias,settlement,Les Ainias,,,Les Amyas,,hamlet,47.94944,6.76917,,,FR,ham.,Saulxures,,,,approximate,low,,,,,61,medium,not in Wikidata/GeoNames; placed at its commune Saulxures (near its district)
 les-champs,settlement,Les Champs,,,,,hamlet,47.925,6.48333,,,FR,ham,Val-d'Ajol,,,,approximate,low,,,,,63,high,not in Wikidata/GeoNames; placed at its commune Val-d'Ajol
-les-champs-de-laxci,settlement,Champ-le-Duc,Champ-le-Duc,Champ-le-Duc,Champ de Laxey|Les Champs-de-Laxci,,hamlet,48.13528,6.75278,,,FR,ham.,Champdray,,,,approximate,low,,,,,57,high,a hamlet of Champdray (the index); not Champ-le-Duc
+les-champs-de-laxci,settlement,Champ-le-Duc,,,Champ de Laxey|Les Champs-de-Laxci,,hamlet,48.13528,6.75278,,,FR,ham.,Champdray,,,,approximate,low,,,,,57,high,a hamlet of Champdray (the index); not Champ-le-Duc
 les-chenes,settlement,Les Chênes,,,Les Chcsncs,,hamlet,47.925,6.48333,,,FR,ham.,Val-d'Ajol,,,,approximate,low,,,,,63,high,not in Wikidata/GeoNames; placed at its commune Val-d'Ajol
 les-cotes,settlement,Les Côtes,,,La Costc,,hamlet,47.925,6.48333,,,FR,ham,Val-d'Ajol,,,,approximate,low,,,,,63,high,not in Wikidata/GeoNames; placed at its commune Val-d'Ajol
 les-cours,settlement,Les Cours,,,Le Cours,,hamlet,48.41361,7.04194,,,FR,ham.,Saulcy,,,,approximate,low,,,,,50,high,not in Wikidata/GeoNames; placed at its commune Saulcy; 20 km from the index's commune Saulcy
@@ -1228,7 +1228,7 @@ mailing,settlement,Mailing,Malling,Malling,Mellick,Mcllick,village,49.42278,6.29
 mailing-boulay,settlement,Mailing,Malling,Malling,HaUingen,Mcllick,village,,,,,FR,,,Boulay,,,unlocated,low,,,,,115,high,"its match Q22057 went to mailing, whose name fits it better"
 mailly-sur-seille,settlement,Mailly-sur-Seille,Mailly-sur-Seille,Mailly-sur-Seille,Mailly,,village,48.91056,6.245,Q1065790,,FR,,,Nomcny,Meurthe,,wikidata,high,,,,,104,high,1.00 near the index's canton (3 km)
 mainvillers,settlement,Mainvillers,Mainvillers,Mainvillers,Maulveiller|MainviHers,,village,49.02,6.54361,Q21965,,FR,,,Faulqucmont,,,hist_map,medium,,,,,83,medium,0.86 near the index's canton (5 km)
-maisons-de-raon-ce,settlement,Raon-aux-Bois,Raon-aux-Bois,Raon-aux-Bois,Raon|Maisons-de-Raon. ce,,village,48.01301,6.44346,,,FR,,Bellcfontainc,,,,approximate,low,,,,,60,high,an écart of Bellefontaine (the index); not Raon-aux-Bois
+maisons-de-raon-ce,settlement,Raon-aux-Bois,,,Raon|Maisons-de-Raon. ce,,village,48.01301,6.44346,,,FR,,Bellcfontainc,,,,approximate,low,,,,,60,high,an écart of Bellefontaine (the index); not Raon-aux-Bois
 maixe,settlement,Maixe,Maixe,Maixe,Marches,Marches,village,48.645,6.43944,Q208280,,FR,,,dcLunéville-Nont,,,wikidata,medium,,,,,43,medium,"exact name, no anchor; the index's canton dcLunéville-Nont is not found"
 maizery,settlement,Maizery,Maizery,Maizery,,,village,49.10611,6.33611,Q22213,,FR,,,Pange,,,wikidata,high,,,,,104,high,1.00 near the index's canton (3 km)
 maizey,settlement,Maizey,Maizey,Maizey,Maizcy|Maîzcy,,village,48.92472,5.51167,Q1386775,,FR,,,Saint-Mihiel,Meuse,,wikidata,high,,,,,101,high,1.00 near the index's canton (4 km)
@@ -1287,9 +1287,9 @@ meligny-le-petit,settlement,Méligny-le-Petit,Méligny-le-Petit,Méligny-le-Peti
 melomenil,settlement,Méloménil,,,Malomesnil,,hamlet,48.09593,6.31924,,12315049,FR,ham.,Uzemain,,,,geonames,high,,,,,71,high,1.00 near the index's commune (2 km)
 memenil,settlement,Méménil,Méménil,Méménil,Memesnil|Mesmesnil|Mémenil,,village,48.22028,6.61111,Q778359,,FR,,,Bruyères,,,wikidata,high,,,,,56,high,1.00 near the index's canton (8 km)
 menemel,settlement,Menemel,,,Menemcl,,village,,,,,FR,"ban de Fraize, prévôté de Saint-Dié",,,,true,unlocated,low,,,,,51,high,
-menil,settlement,Ménil,Le Ménil,Le Ménil,Mesnil,,village,48.58944,6.50167,,,FR,faubourg de Lunévilie (vil.),,,,true,approximate,low,,,,,43,medium,"Ménil, a suburb of Lunéville (the index); not Ménil-sur-Belvitte"
-menil-en-xainlois,settlement,Ménil-en-Xaintois,,,Le Mesnil-cn-Sainctois|Ménil-en-Xaînlois,,village,48.30824,5.97316,,2994554,FR,,,Mirecourt,Vosges,,geonames,medium,,,,,75,high,"1.00; Q211721 went to menil-balleville, whose name fits it better"
-menil-en-xaintois,settlement,Ménil-en-Xaintois,Ménil-en-Xaintois,Ménil-en-Xaintois,Mesuil-sur-Vcirc|Ménil,,hamlet,48.30722,5.97472,Q211721,,FR,ham.,Balléville,,,,wikidata,high,,,,,77,medium,1.00 near the index's commune (10 km)
+menil,settlement,Ménil,,,Mesnil,,village,48.58944,6.50167,,,FR,faubourg de Lunévilie (vil.),,,,true,approximate,low,,,,,43,medium,"Ménil, a suburb of Lunéville (the index); not Ménil-sur-Belvitte"
+menil-balleville,settlement,Ménil-sur-Vair,,,Mesuil-sur-Vcirc|Ménil,,hamlet,48.33031,5.84842,,,FR,ham.,Balléville,,,,approximate,low,,,,,77,medium,"Mesnil-sur-Veire (entry 1201), now Ménil-sur-Vair, a hamlet of Balléville (the index: 'Ménil, ham., com. de Balléville'); not Ménil-en-Xaintois. Placed at Balléville"
+menil-en-xaintois,settlement,Ménil-en-Xaintois,Ménil-en-Xaintois,Ménil-en-Xaintois,Le Mesnil-cn-Sainctois|Ménil-en-Xaînlois,,village,48.30722,5.97472,Q211721,,FR,,,Mirecourt,Vosges,,wikidata,high,,,,,75,high,1.00 near the index's canton (12 km)
 menil-evaux-ct-menil,settlement,Ménil,,,Le Mcsnil,,hamlet,48.31574,6.30126,,12314980,FR,ham.,Evaux-ct-Ménil,,,,geonames,high,,,,,66,high,1.00 near the index's commune (1 km)
 menil-flin,settlement,Flin,,,Mairie du Mesnil et Flin|Ménil-Flin,,hamlet,48.49753,6.65493,,3018260,FR,ham.,Flin,,,,geonames,medium,,,,,107,high,"0.95; Q1101374 went to flin, whose name fits it better"
 menil-la-tour,settlement,Ménil-la-Tour,Ménil-la-Tour,Ménil-la-Tour,Mcsnil-Iez-Toul|Méni!-la-Tour,,village,48.76611,5.86333,Q668510,,FR,,,Toul-Nord,,,wikidata,high,,,,,104,high,0.95 near the index's canton (10 km)
@@ -1385,7 +1385,7 @@ neunkirch,settlement,Neunkirch,,,Neunkirchen,,village,49.12005,7.08942,,,FR,,,Sa
 neunkirchen,settlement,Neunkirchen,Neunkirchen,Neunkirchen,,,village,49.5489,7.06139,Q1263067,,DE,,,Oilwciler,Pr.,,hist_map,medium,,,,,89,high,1.00 near its district's other members (7 km); the index's canton Oilwciler is not found
 neunkirchen-les-bouzonville,settlement,Neunkirchen-lès-Bouzonville,Neunkirchen,Neunkirchen-lès-Bouzonville,Neunkirchen,,village,49.35472,6.55472,Q22373,,FR,,,Bouzonville,Moselle,,hist_map,high,,,,,82,medium,1.00 near the index's canton (7 km)
 neuulhann,settlement,Neuulhann,,,Neunthann,,grange,,,,,FR,gagnage de la seigneurie de Bilche,,,,true,unlocated,low,,,,,113,high,
-neuvcville,settlement,La Neuveville-sous-Montfort,La Neuveville-sous-Montfort,La Neuveville-sous-Montfort,Neufvîlle-lez-Grand-Fontaine|Neuvcville,,hamlet,49.20944,5.93703,,,FR,ham.,Valleroy,,,,approximate,low,,,,,104,high,a hamlet of Valleroy (the index)
+neuvcville,settlement,La Neuveville-sous-Montfort,,,Neufvîlle-lez-Grand-Fontaine|Neuvcville,,hamlet,49.20944,5.93703,,,FR,ham.,Valleroy,,,,approximate,low,,,,,104,high,a hamlet of Valleroy (the index)
 neuves-maisons,settlement,Neuves-Maisons,Neuves-Maisons,Neuves-Maisons,Les Neuves-Maisons,,village,48.61611,6.10361,Q627247,,FR,,,Nancy-Ouest,,,wikidata,high,,,,,40,high,1.00 near the index's canton (10 km)
 neuviller-sur-moselle,settlement,Neuviller-sur-Moselle,Neuviller-sur-Moselle,Neuviller-sur-Moselle,Neufviller|Prieuré de Neufviller|Nctivillcr-sur-Mosdlc,,village,48.4925,6.28722,Q221213,,FR,,,Haroué,,,wikidata,medium,,,,,38,high,0.90 near the index's canton (8 km)
 neuvillers-sur-fave,settlement,Neuvillers-sur-Fave,Neuvillers-sur-Fave,Neuvillers-sur-Fave,Neufviller|NcuvilIer-sur-Favc,,village,48.27833,7.0375,Q195340,,FR,,,Saint-Dié,Vosges,,wikidata,medium,,,,,47,medium,0.91 near the index's canton (7 km)
@@ -1522,7 +1522,7 @@ quevilloncourt,settlement,Quevilloncourt,Quevilloncourt,Quevilloncourt,Queveiilo
 racecourt,settlement,Racécourt,Racécourt,Racécourt,Baeecourt|Racécourl,,village,48.2575,6.18889,Q902839,,FR,,,Dompaire,,,wikidata,high,,,,,69,high,1.00 near the index's canton (5 km)
 racrange,settlement,Racrange,Rakringen,Racrange,Reckrangcs|Reckranges,Reckranges,village,48.92278,6.67333,Q22407,,FR,,,Grostenquin,,,hist_map,high,,,,,92,medium,1.00 near the index's canton (8 km)
 rainbucouri,settlement,Rainbucouri,,,Rambuescouri,,village,,,,,FR,,,Saint-Mihiel,Meuse,,unlocated,low,,,,,104,high,
-rainville,settlement,Rainville,Rainville,Rainville,,,village,48.35778,5.88444,Q266513,,FR,,,Chàrcnois,,,wikidata,medium,,,,,75,high,1.00 near its district's other members (5 km)
+rainville,settlement,Rainville,Rainville,Rainville,,,village,48.35778,5.88444,Q266513,,FR,,,Chàrcnois,,,wikidata,medium,,,,,75,high,1.00 near its district's other members (6 km)
 ramecourt,settlement,Ramecourt,Ramecourt,Ramecourt,Bamecourt|Bomecourt|Remecourt,,village,48.31083,6.10028,Q1462324,,FR,,,Mirecourt,Vosges,,wikidata,high,,,,,67,high,1.00 near the index's canton (3 km)
 rammelfangen,settlement,Rammelfangen,Rammelfangen,Rammelfangen,Remclfangen|Rantmelfangen,,village,49.3314,6.63306,Q1542603,,FR,vil.,ibn,,,,hist_map,medium,,,,,84,high,0.88 near the index's commune (2 km)
 ramonchamp,settlement,Ramonchamp,Ramonchamp,Ramonchamp,Ramonchamps,,village,47.89167,6.73972,Q199653,,FR,,,Ramonchamp,,,wikidata,high,,,,,62,medium,1.00 near the index's canton (0 km)
@@ -1601,7 +1601,7 @@ rodalbe,settlement,Rodalbe,Rodalbe,Rodalbe,Rodalben,,village,48.90833,6.70278,Q2
 rode-les-morhange,settlement,Rode-lès-Morhange,,Rode,Rode,,hamlet,48.91743,6.61465,Q22079408,,FR,ham.,Morhangc,,,,hist_map,high,,,,,92,high,added by correction 60; 1.00 near the index's commune (2 km)
 roden,settlement,Roden,Roden,Roden,,,village,49.3167,6.75,Q2160979,,FR,vil.,Fraulautern,,,,hist_map,high,,,,,84,high,1.00 near the index's commune (1 km)
 rodlach,settlement,Rodlach,Rodlach,Rodlach,Rodlach|Rodelach,,village,49.34103,6.46707,Q3438201,,FR,vil.,Bibiche,,,,hist_map,high,,,,,80,high,0.95 near the index's commune (2 km)
-rohr,settlement,Rohr,Rohr,Rohr,For,,hamlet,49.05167,7.42528,,,FR,ham. absorbé par ?a villede Bitche (Th.),,,,true,approximate,low,,,,,109,high,a hamlet absorbed by the town of Bitche (the index)
+rohr,settlement,Rohr,,,For,,hamlet,49.05167,7.42528,,,FR,ham. absorbé par ?a villede Bitche (Th.),,,,true,approximate,low,,,,,109,high,a hamlet absorbed by the town of Bitche (the index)
 rohrbach,settlement,Rohrbach,Rohrbach,Rohrbach-lès-Bitche,Rorbach|Rohrbaeh,,village,49.04528,7.265,Q22028,,FR,,,Rohrbaeh,,,hist_map,high,,,,,111,high,1.00 near the index's canton (0 km)
 rolbing,settlement,Rolbing,Rolbingen,Rolbing,Roïlingen,,village,49.17167,7.43972,Q21944,,FR,,,Volmunster,,,hist_map,high,,,,,111,high,1.00 near the index's canton (8 km)
 rollainville,settlement,Rollainville,Rollainville,Rollainville,RollainvUle|Rollamville,,village,48.36194,5.73889,Q211762,,FR,,,Neufchàteau,Vosges,,wikidata,medium,,,,,75,high,0.87 near the index's canton (3 km)
@@ -1657,7 +1657,7 @@ saint-boingt,settlement,Saint-Boingt,Saint-Boingt,Saint-Boingt,Sainct-Boin|Saint
 saint-die-des-vosges,settlement,Saint-Dié-des-Vosges,Saint-Dié-des-Vosges,Saint-Dié-des-Vosges,La ville dudict Sainct Dicy|Sainct-Dicy|Sainct-Diey|Saint-Dié,,town,48.28417,6.94917,Q34427,,FR,,,Saint-Dié,Vosges,,wikidata,high,,,,,45,medium,1.00 near the index's canton (0 km)
 saint-don,settlement,Saint-Don,,,Sainct-Don,,priory,,,,,FR,"anc. prieuré, près de",,Dombasle,,,unlocated,low,,,,,37,medium,
 saint-elophe,settlement,Saint-Élophe,,Saint-Élophe,Sainct-Alophe|Saint-Elophe,,village,48.40966,5.74261,Q71808724,,FR,,,Coussey,,,wikidata,high,,,,,76,high,1.00 near the index's canton (4 km)
-saint-epvre,settlement,Saint-Epvre,Saint-Epvre,Saint-Epvre,Abbaye de Sainct-Epvre-lez-Toul|Sainct-Epvrc,,village,48.67611,5.89444,,,FR,faubourg de Toul (vil. el abbaye),,,,true,approximate,low,,,,,55,high,"Saint-Epvre, a suburb of Toul with its abbey (the index)"
+saint-epvre,settlement,Saint-Epvre,,,Abbaye de Sainct-Epvre-lez-Toul|Sainct-Epvrc,,village,48.67611,5.89444,,,FR,faubourg de Toul (vil. el abbaye),,,,true,approximate,low,,,,,55,high,"Saint-Epvre, a suburb of Toul with its abbey (the index)"
 saint-etienne-les-remiremont,settlement,Saint-Étienne-lès-Remiremont,Saint-Étienne-lès-Remiremont,Saint-Étienne-lès-Remiremont,Sainct-Esliennc|Sainct-Eslienne|Saint-Etienne,,village,48.02361,6.60444,Q203434,,FR,,,Remiremont,Vosges,,wikidata,high,,,,,61,high,1.00 near the index's canton (1 km)
 saint-firmin,settlement,Saint-Firmin,Saint-Firmin,Saint-Firmin,Sainct-Finnin|Sainct-Firmin,,village,48.41917,6.13278,Q1098444,,FR,,,Haroué,,,wikidata,high,,,,,66,high,1.00 near the index's canton (6 km)
 saint-genest,settlement,Saint-Genest,Saint-Genest,Saint-Genest,Sainct-Genois,,village,48.35444,6.52444,Q1378377,,FR,,,Rambervillers,Vosges,,wikidata,high,,,,,99,medium,1.00 near the index's canton (8 km)
@@ -1937,21 +1937,21 @@ ville-sur-illon,settlement,Ville-sur-Illon,Ville-sur-Illon,Ville-sur-Illon,Villc
 ville-sur-madon,settlement,Ville-sur-Madon,,,,,hamlet,48.4858,6.17175,,11971563,FR,ham.,Ormes,,,,geonames,high,,,,,38,high,1.00 near the index's commune (2 km)
 villecey-sur-mad,settlement,Villecey-sur-Mad,Villecey-sur-Mad,Villecey-sur-Mad,Villecey-sur-Maz,,village,49.00667,5.95917,Q1098546,,FR,,,Gorze,Moselle,,wikidata,high,,,,,54,high,1.00 near the index's canton (6 km)
 villeeel-sur-trin,settlement,Villeeel-sur-Trin,,,,,village,,,,,,,,,,,unlocated,low,,,,,54,low,not found in the index
-viller,settlement,Viller,Weiler,Viller,,Weiller,village,48.58944,6.50167,,,FR,faubourg de Lunéville (vit.),,,,true,approximate,low,,,,,43,high,"Viller, a suburb of Lunéville (the index)"
+viller,settlement,Viller,,,,Weiller,village,48.58944,6.50167,,,FR,faubourg de Lunéville (vit.),,,,true,approximate,low,,,,,43,high,"Viller, a suburb of Lunéville (the index)"
 viller-asscnoncourt,settlement,Viller,Weiler,Viller,WUler,Weiller,farmstead,,,,,FR,ferme (cense-fief),Asscnoncourt,,,,unlocated,low,,,,,91,high,"its match Q22294 went to viller-grostenquin, whose name fits it better"
 viller-grostenquin,settlement,Viller,Weiler,Viller,Weiller,Weiller,village,48.985,6.64639,Q22294,,FR,,,Grostenquin,,,hist_map,high,,,,,94,high,1.00 near the index's canton (7 km)
 villers,settlement,Villers,Villers,Villers,Viller,,village,48.30167,6.17333,Q903361,,FR,,,Mirecourt,Vosges,,wikidata,high,,,,,67,high,1.00 near the index's canton (3 km)
 villers-bettnach,settlement,Villers-Bettnach,Weiler-Bettnach,Villers-Bettnach,Viller-Bctnach|Viller-Betinach|Villers-Beltnach,,abbey,49.23375,6.36139,Q661154,,FR,,,Vigy,Moselle,,hist_map,high,,,,,80,medium,1.00 near the index's canton (6 km)
 villers-en-haye,settlement,Villers-en-Haye,Villers-en-Haye,Villers-en-Haye,Villcy-en-Hey|Villcrs-cn-Haye,,village,48.8275,6.01194,Q1159880,,FR,,,Domévre,Meurthe,,wikidata,medium,,,,,39,high,"exact name, no anchor"
 villers-ies-moivron,settlement,Villers-Iès-Moivron,,,Villicr-lez-Mouveron,,village,48.81458,6.25148,,2968369,FR,,,Nomeny,Meurthe,,geonames,medium,,,,,51,high,0.94 near the index's canton (9 km)
-villers-le-prud-homme,settlement,Ville-au-Val,Ville-au-Val,Ville-au-Val,Viller|Villers-le-Prud'homme,,village,48.84833,6.12111,,,FR,éc. et chap.,Ville-au-Val,,,,approximate,low,,,,,105,high,an écart and chapel of Ville-au-Val (the index)
+villers-le-prud-homme,settlement,Ville-au-Val,,,Viller|Villers-le-Prud'homme,,village,48.84833,6.12111,,,FR,éc. et chap.,Ville-au-Val,,,,approximate,low,,,,,105,high,an écart and chapel of Ville-au-Val (the index)
 villers-les-nancy,settlement,Villers-lès-Nancy,Villers-lès-Nancy,Villers-lès-Nancy,Viller,,village,48.67306,6.15472,Q1414358,,FR,,,Nancy-Nord,,,wikidata,high,,,,,36,high,1.00 near the index's canton (3 km)
 villers-sous-preny,settlement,Villers-sous-Prény,Villers-sous-Prény,Villers-sous-Prény,Viller-soubz-Preny,,village,48.94333,5.99889,Q1095776,,FR,,,Pont-à-Mousson,Meurthe,,wikidata,high,,,,,54,high,1.00 near the index's canton (6 km)
 villers-stoncourt,settlement,Villers-Stoncourt,Villers-Stoncourt,Villers-Stoncourt,ViUer et|Villcrs-Stoncourt,,village,49.05667,6.41694,Q21926,,FR,vil.,Chanville,Pange,,,wikidata,high,,,,,53,high,1.00 near the index's commune (2 km)
 villette-au-val-sainei-gregoire,settlement,Villette au val Sainei-Grégoire,,,Villetlc au val Sainct-Grégoire. que souloient tenir en fieù du duché de Lorraine les seigneur de Hasstatt,,village,,,,,FR,,,,,true,unlocated,low,,,,,108,medium,
 villey-le-sec,settlement,Villey-le-Sec,Villey-le-Sec,Villey-le-Sec,Viller-ie-See|Viller-le-Sec,,village,48.65889,5.97694,Q208724,,FR,,,Toul-Sud,,,wikidata,high,,,,,55,high,1.00 near the index's canton (6 km)
 villey-saint-etienne,settlement,Villey-Saint-Étienne,Villey-Saint-Étienne,Villey-Saint-Étienne,Viller-Sainct-Esticnne|Villey-Saint-Etiennc,,village,48.73083,5.97778,Q1098437,,FR,,,Domévre,Meurthe,,wikidata,medium,,,,,55,high,"exact name, no anchor"
-villing,settlement,Villing,Villing,Villing,Wellingen|Wuirfingen,"Wiliingen|Wellingen|Wevllingen|Wulffingen, aliàs Wellingen",farmstead,49.19417,6.53417,,,FR,ferme,Denting,àvjulay,,,approximate,low,,,,,83,medium,a farm of Denting (the index); not the village of Villing
+villing,settlement,Villing,,,Wellingen|Wuirfingen,"Wiliingen|Wellingen|Wevllingen|Wulffingen, aliàs Wellingen",farmstead,49.19417,6.53417,,,FR,ferme,Denting,àvjulay,,,approximate,low,,,,,83,medium,a farm of Denting (the index); not the village of Villing
 villing-bouzonville,settlement,Villing,Villing,Villing,Willingen,"Wiliingen|Wellingen|Wevllingen|Wulffingen, aliàs Wellingen",village,49.28111,6.63083,Q21712,,FR,,,Bouzonville,Moselle,,hist_map,high,,,,,93,high,1.00 near the index's canton (7 km)
 villoncourt,settlement,Villoncourt,Villoncourt,Villoncourt,ViUoncourt|Villoncourl|Villoneourt,,village,48.26278,6.51111,Q1097029,,FR,,,Chàtel,,,wikidata,high,,,,,57,medium,1.00 near the index's canton (10 km)
 vilsberg,settlement,Vilsberg,Wilsberg,Vilsberg,Wilssberg,,village,48.78611,7.25444,Q22006,,FR,,,Phalsbourg,,,hist_map,high,,,,,114,medium,1.00 near the index's canton (2 km)
