@@ -448,6 +448,14 @@ def build() -> Built:
                                 "printed": x.printed if x.printed != str(x.entry) else "", "status": x.status,
                                 "source_page": x.row.page, "confidence": "high" if x.sim >= 0.5 else "medium",
                                 "notes": x.note, "_row": id(x.row)})
+    # rules.yaml index_spellings: the index's spellings of an entry that no surviving index line
+    # carries (a line the editor's corrections deleted, a footnote): {entry: [spelling, …]}.
+    for no, names in (rules.get("index_spellings") or {}).items():
+        e = by_no[int(no)]
+        for name in names:
+            out.index_links.append({"place_id": e["place_id"], "entry_no": str(no), "index_name": name, "printed": "",
+                                    "status": "manual", "source_page": e["page"], "confidence": "medium",
+                                    "notes": "rules.yaml index_spellings", "_row": None})
     # The editor's table of old forms: an old spelling next to the 1870 name of an index line.
     by_index_name: dict[str, set[str]] = defaultdict(set)
     for x in out.index_links:
@@ -698,8 +706,9 @@ def write(out: Built) -> None:
     dump(models.Feature, out.features)
     links, seen = [], set()
     for x in sorted(out.index_links, key=lambda x: (x["place_id"], int(x["entry_no"]))):
-        if (x["place_id"], x["entry_no"]) not in seen:   # two index lines merged into one place
-            seen.add((x["place_id"], x["entry_no"]))
+        key = (x["place_id"], x["entry_no"], name_key(x["index_name"]))
+        if key not in seen:   # two index lines of one spelling merged into one place
+            seen.add(key)
             links.append(x)
     dump(models.IndexLink, links)
     # Japanese names (the app's fourth language), keyed by the final ids; manual ones win.

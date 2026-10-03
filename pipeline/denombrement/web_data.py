@@ -87,7 +87,10 @@ def build() -> dict[str, int]:
         if no not in entries_of[x.place_id]:
             entries_of[x.place_id].append(no)
             also[x.entry_no].append(x.place_id)
-        index_of[x.place_id].setdefault(x.index_name, []).append(no)
+        # the numbers the index gives for the spelling: not those it doesn't print on that line
+        nos = index_of[x.place_id].setdefault(x.index_name, [])
+        if "number not printed" not in (x.notes or ""):
+            nos.append(no)
     for nos in entries_of.values():
         nos.sort(key=lambda n: n if isinstance(n, int) else 0)
 

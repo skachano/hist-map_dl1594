@@ -1488,7 +1488,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1488,Gronich.,Gronich,,office-schaumbourg,,domain,,,,main,,gronig,87,high,
 1489,Gedessweiller.,Gedessweiller,,office-schaumbourg,,domain,,,,main,,gehweiler,87,high,
 1490,Budweillcr.,Budweillcr,,office-schaumbourg,,domain,,,,main,,buweiler,87,medium,index match by loose number (0.89); number read from '14i>0'
-1491,Sambach.,Sambach,,office-schaumbourg,,domain,,,,main,,sambach,87,low,index match by none (0.00)
+1491,Sambach.,Sambach,,office-schaumbourg,,domain,,,,main,,gresaubach,87,high,
 1492,Golbacli.,Golbacli,,office-schaumbourg,,domain,,,,main,,goldlktch,87,medium,index match by number (0.47)
 1493,Bcttingen.,Bcttingen,,office-schaumbourg,,domain,,,,main,,bettingen,87,high,
 1494,Aussen.,Aussen,,office-schaumbourg,,domain,,,,main,,aussen,87,medium,index match by loose number (1.00)

@@ -92,7 +92,7 @@ badinenil,,,,,Badinénil,,,,FR,unlocated,low,
 badmenil-aux-bois,48.30222,6.51917,Q633343,,Badménil-aux-Bois,Badménil-aux-Bois,Badménil-aux-Bois,,FR,wikidata,medium,"exact name, no anchor; the index's canton Chute is not found"
 baffe,48.16028,6.57194,Q753273,,La Baffe,La Baffe,La Baffe,,FR,wikidata,high,1.00 near the index's canton (9 km)
 bagneux,48.55833,5.8825,Q1002005,,Bagneux,Bagneux,Bagneux,バニュー,FR,wikidata,medium,"exact name, no anchor"
-bailiwick-allemagne,49.2513,6.71106,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 544 located member(s)
+bailiwick-allemagne,49.25086,6.70921,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 543 located member(s)
 bailiwick-apremont,48.85528,5.63917,,,Bailliage d'Apremont,,,アスプルモン＝ラ＝フォレバイイ管区,,territory,medium,seat: apremonl
 bailiwick-chatel-sur-moselle,48.31417,6.39306,,,Bailliage de Châtel-sur-Moselle,,,,,territory,medium,seat: chatel-sur-mosclle
 bailiwick-epinal,48.17361,6.45167,,,Bailliage d'Épinal,,,エピナルバイイ管区,,territory,medium,seat: epinal
@@ -500,7 +500,7 @@ dreisbach,49.485,6.565,Q1258065,,Dreisbach,Dreisbach,Dreisbach,,FR,hist_map,high
 drogny,49.2467,6.41639,Q16507718,,Drogny,Drogny,Drogny,,FR,hist_map,high,1.00 near the index's commune (0 km)
 droiteval,48.03278,6.03556,,,Droiteval,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Claudon
 drouville,48.67111,6.40806,Q227707,,Drouville,Drouville,Drouville,,FR,wikidata,high,1.00 near the index's canton (11 km)
-duchy-lorraine,48.69043,6.51571,,,Duché de Lorraine,,,,,territory,medium,centre of 2323 located member(s)
+duchy-lorraine,48.69008,6.5152,,,Duché de Lorraine,,,,,territory,medium,centre of 2322 located member(s)
 duren,49.3036,6.66222,Q1271996,,Düren,Düren,Düren,,DE,wikidata,high,1.00 near the index's commune (1 km)
 eberswillcr,49.27513,6.401,,,Ebersviller,,,,FR,hist_map,medium,0.91 near the index's canton (10 km)
 eblange,49.22333,6.48194,Q21674,,Éblange,Eblingen,Éblange,,FR,hist_map,high,1.00 near the index's canton (5 km)
@@ -737,7 +737,7 @@ hadomey,,,,,Hadomey,,,,FR,unlocated,low,the index's commune Rèhéray is not fou
 hagecourt,48.23667,6.15444,Q1409726,,Hagécourt,Hagécourt,Hagécourt,,FR,wikidata,high,1.00 near the index's canton (5 km)
 hageville,49.03194,5.86139,Q1065906,,Hagéville,Hagéville,Hagéville,,FR,wikidata,high,1.00 near the index's canton (10 km)
 hagneville,48.20517,6.00026,,3013923,Haréville,,,,FR,geonames,low,"0.84; Q567870 went to hareville-sous-monlforl, whose name fits it better"
-hahnweiler,49.57444,7.22222,Q566894,,Hahnweiler,Hahnweiler,Hahnweiler,,DE,hist_map,low,1.00 near its district's other members (14 km); 21 km from the index's commune Berscbweiler
+hahnweiler,49.57444,7.22222,Q566894,,Hahnweiler,Hahnweiler,Hahnweiler,,DE,hist_map,low,1.00 near its district's other members (15 km); 21 km from the index's commune Berscbweiler
 haigneville,48.48639,6.34306,Q1000236,,Haigneville,Haigneville,Haigneville,アイヌヴィル,FR,wikidata,high,1.00 near the index's canton (2 km)
 hailigny-lcz-verrieres,48.32222,6.46111,Q200132,,Hadigny-les-Verrières,Hadigny-les-Verrières,Hadigny-les-Verrières,,FR,wikidata,high,0.95 near the index's canton (5 km)
 haillainville,48.39278,6.48194,Q188809,,Haillainville,Haillainville,Haillainville,,FR,wikidata,high,1.00 near the index's canton (11 km)
@@ -781,7 +781,7 @@ hazelbourg,48.68558,7.20489,,,Hazelbourg,,,,FR,hist_map,high,1.00 near the index
 hechlingen,,,,,Hechlingen,,,,,unlocated,low,
 heckcnransbach,49.05829,6.98056,Q15073095,,Heckenransbach,Heckenransbach,Heckenransbach,,FR,hist_map,high,1.00 near the index's commune (2 km)
 heckling,49.30415,6.53918,Q3129188,,Heckling,Heckling,Heckling,,FR,hist_map,high,1.00 near the index's canton (1 km); 38 km from its district
-heiiselhofen,49.42865,6.94988,,2906296,Heiiselhofen,,,,DE,geonames,low,0.87 near its district's other members (6 km)
+heiiselhofen,49.42865,6.94988,,2906296,Heiiselhofen,,,,DE,geonames,low,0.87 near its district's other members (5 km)
 heillecourt,48.6525,6.19417,Q209252,,Heillecourt,Heillecourt,Heillecourt,,FR,wikidata,high,1.00 near the index's canton (5 km)
 heining,49.30917,6.58889,Q21641,,Heining,Heiningen,Heining-lès-Bouzonville,,FR,hist_map,high,1.00 near the index's canton (4 km)
 hellendorii,49.4824,6.45756,,,Hellendorf,,,,DE,hist_map,medium,0.90 near the index's commune (6 km)
@@ -1393,7 +1393,7 @@ oeiicville,48.33444,6.02056,Q745719,,Oëlleville,Oëlleville,Oëlleville,,FR,wik
 oeting,49.17361,6.91472,Q21657,,Oeting,Ötingen,Œting,,FR,hist_map,medium,"exact name, no anchor; the index's canton Forbacli is not found"
 office-boulay,49.18333,6.49361,,,Office de Boulay,,,,,territory,medium,seat: boulay
 office-sarreguemines,49.11056,7.06722,,,Office de Sarreguemines,,,,,territory,medium,seat: sarreguemines
-office-schaumbourg,49.48577,7.03961,,,Office de Schaumbourg,,,,,territory,medium,centre of 82 located member(s)
+office-schaumbourg,49.48568,7.03128,,,Office de Schaumbourg,,,,,territory,medium,centre of 81 located member(s)
 office-siersberg,49.3686,6.67861,,,Office de Siersberg,,,,,territory,medium,seat: siersberg
 office-vaudrevange,49.32287,6.76822,,,Office de Vaudrevange,,,,,territory,medium,centre of 10 located member(s)
 offroieourl,48.27833,6.04028,Q216892,,Offroicourt,Offroicourt,Offroicourt,,FR,wikidata,high,1.00 near the index's canton (11 km)
@@ -1704,7 +1704,6 @@ salivai,48.8028,6.56639,Q3469824,,Salival,Salival,Salival,,FR,wikidata,medium,0.
 salonne,48.79111,6.49611,Q21994,,Salonnes,Salonnes,Salonnes,,FR,hist_map,medium,0.93 near the index's canton (4 km)
 saltzbronn,49.00136,7.04146,,,Saltzbronn,Salzbronn,,,FR,hist_map,medium,"exact name, no anchor; the index's commune Snrralbe is not found"
 sam-bey,,,,,Sam-bey,,,,FR,unlocated,low,
-sambach,49.49308,7.71445,Q22693723,,Sambach,Sambach,,,DE,wikidata,low,"exact name, no anchor; 54 km from its district"
 san-bouryon,,,,,San Bouryon,,,,FR,unlocated,low,
 san-de-chaste,,,,,San de Chaste!,,,,FR,unlocated,low,
 san-de-la-seine,,,,,San de la Seine,,,,FR,unlocated,low,
@@ -1734,7 +1733,7 @@ saxon,48.42592,6.07905,,2975497,Saxon,,,,FR,geonames,high,1.00 near the index's 
 scbweyen,49.15861,7.39028,Q22086,,Schweyen,Schweyen,Schweyen,,FR,hist_map,medium,0.89 near the index's canton (5 km); the index's commune I.outzwiller is not found
 scharhmorther,,,,,Scharhmorther,,,,FR,unlocated,low,
 schaumberg,49.4833,7.03333,,,Schaumberg,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Tholey
-schellembach,49.44251,6.96423,,,Schellembach,,,,FR,hist_map,low,0.92 near its district's other members (5 km)
+schellembach,49.44251,6.96423,,,Schellembach,,,,FR,hist_map,low,0.92 near its district's other members (4 km)
 scheuem,49.4833,7.03333,,,Scheuem,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Tholey
 scheuer-hof,49.4847,6.54064,,,Scheuer-Hof,,,,DE,approximate,low,"Scheuer-Hof, a farm of the village of Nohn (Saarland) that no longer exists (the editor's corrections); not the Scheuer-Hof in Luxembourg. Placed at Nohn"
 schmalenthal,48.989,7.4921,Q3475438,,Schmalenthal-lès-Baerenthal,,,,FR,hist_map,high,1.00 near the index's commune (2 km)
