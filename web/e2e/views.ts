@@ -1,8 +1,8 @@
 // One URL per view and state worth checking, shared by the layout and accessibility suites.
 export const VIEWS = [
   "#/map?color=tenure&lang=en",
-  "#/map?color=realm&lang=fr&place=saint-avold",
-  "#/map?color=district&lang=ja",
+  "#/map?color=holder&lang=fr&place=saint-avold",
+  "#/map?color=tenure&lang=ja",
   "#/territories?lang=en&place=bailiwick-nancy",
   "#/territories?lang=de&h=feudal&lvl=0",
   "#/holders?lang=en&entity=duchy-lorraine",

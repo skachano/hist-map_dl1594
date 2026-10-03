@@ -11,7 +11,7 @@ test("load, mode changes and the table stay within budget", async ({ page }) => 
   const [firstRender] = await measures(page, "render:map");
 
   const tabs = page.getByRole("navigation", { name: "Colour by" });
-  for (const name of ["Holder", "Districts", "Realms", "Tenure", "Holder", "Districts", "Realms", "Tenure"]) {
+  for (const name of ["Holder", "Tenure", "Holder", "Tenure", "Holder", "Tenure", "Holder", "Tenure"]) {
     await tabs.getByRole("button", { name, exact: true }).click();
   }
   await expect(tabs.getByRole("button", { name: "Tenure" })).toHaveAttribute("aria-pressed", "true");

@@ -5,15 +5,11 @@ test("colour modes change what the map shows and the URL", async ({ page }) => {
   const errors = await open(page, "#/map?color=tenure&lang=en");
   const tabs = page.getByRole("navigation", { name: "Colour by" });
   await expect(tabs.getByRole("button", { name: "Tenure" })).toHaveAttribute("aria-pressed", "true");
-  for (const [name, key] of [["Holder", "holder"], ["Districts", "district"], ["Realms", "realm"]]) {
-    const before = await legendTitle(page).innerText();
-    await tabs.getByRole("button", { name, exact: true }).click();
-    await expect(page).toHaveURL(new RegExp(`color=${key}`));
-    await expect(legendTitle(page)).not.toHaveText(before);
-  }
-  // the districts mode labels the bailliages on the map
-  await tabs.getByRole("button", { name: "Districts" }).click();
-  await expect(page.locator(".terr-label").filter({ hasText: "Bailiwick of Nancy" })).toHaveCount(1);
+  await expect(tabs.getByRole("button")).toHaveCount(2);   // districts and realms are the Territories view's
+  const before = await legendTitle(page).innerText();
+  await tabs.getByRole("button", { name: "Holder", exact: true }).click();
+  await expect(page).toHaveURL(/color=holder/);
+  await expect(legendTitle(page)).not.toHaveText(before);
   expect(errors).toEqual([]);
 });
 
@@ -54,7 +50,7 @@ test("place panel lists every entry naming the place, with numbers, sections and
 });
 
 test("a place split between two prévôtés shows both district chains", async ({ page }) => {
-  await open(page, "#/map?color=district&lang=en&place=athienville");
+  await open(page, "#/map?color=tenure&lang=en&place=athienville");
   const crumbs = page.locator("#panel .crumbs");
   await expect(crumbs).toHaveCount(2);
   await expect(crumbs.nth(0)).toContainText("Bailiwick of Nancy");

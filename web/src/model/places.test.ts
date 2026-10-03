@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { Dataset, Place } from "../data/types";
-import { chains, isShared, mainHolding, placeStyles, realmKind, ressortOf } from "./places";
-import { REALM_COLOURS, TENURE_COLOURS } from "./colors";
+import { chains, isShared, mainHolding, placeStyles, ressortOf } from "./places";
+import { TENURE_COLOURS } from "./colors";
 
 const P = (p: Partial<Place> & { id: string }): Place => ({ kind: "territory", type: "village", name: { fr: p.id }, ...p });
 const places = new Map<string, Place>([
@@ -37,16 +37,8 @@ describe("places", () => {
     expect(isShared(places.get("einvaux")!)).toBe(true);
     expect(isShared(places.get("pierrefort")!)).toBe(false);
   });
-  it("knows the kind of realm", () => {
-    expect(realmKind("pierrefort", places)).toBe("lordship");
-    expect(realmKind("guessling", places)).toBe("temporality");
-    expect(realmKind("einvaux", places)).toBeUndefined();
-  });
   it("styles places per mode", () => {
     expect(placeStyles(data, "tenure", []).get("pierrefort")?.fill).toBe(TENURE_COLOURS.fief);
     expect(placeStyles(data, "tenure", []).get("einvaux")).toEqual({ fill: TENURE_COLOURS.domain, shared: true });
-    expect(placeStyles(data, "realm", []).get("guessling")?.fill).toBe(REALM_COLOURS.temporality);
-    expect(placeStyles(data, "realm", []).has("einvaux")).toBe(false);
-    expect(placeStyles(data, "district", []).size).toBe(0);
   });
 });

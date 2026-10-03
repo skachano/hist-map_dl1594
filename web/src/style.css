@@ -209,4 +209,3 @@ ol.changes li li { margin-bottom: 6px; }
 #panel ul.entries .no { font-weight: 600; font-variant-numeric: tabular-nums; }
 #panel ul.entries q { quotes: "« " " »"; }
 #panel ul.holdings { padding-left: 18px; }
-#legend ul.districts { max-height: 40vh; overflow: auto; }

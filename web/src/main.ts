@@ -1,6 +1,6 @@
 import { loadDataset } from "./data/load";
 import { label, name, t } from "./i18n";
-import { type AreaLayer, MapView, topDistricts } from "./map/mapView";
+import { type AreaLayer, MapView } from "./map/mapView";
 import { colouredHolders, SERIES } from "./model/colors";
 import { chains, mainHolding, type PlaceStyle, placeStyles } from "./model/places";
 import { currentLevel, shownAreas } from "./model/territories";
@@ -27,7 +27,6 @@ async function start(): Promise<void> {
   $("status").remove();
 
   const colours = (state: State) => colouredHolders(data.entities, state.colours?.filter((id) => data.entities.has(id)));
-  const districts = topDistricts(data);
   const tooltip = $("tooltip");
   const vocab = data.meta.vocab;
 
@@ -35,7 +34,7 @@ async function start(): Promise<void> {
     onHover(placeId, point) {
       tooltip.hidden = !placeId;
       if (!placeId) return;
-      const { lang, mode } = store.state;
+      const { lang } = store.state;
       const p = data.places.get(placeId);
       if (!p) return;
       const placeName = (id: string) => name(data.places.get(id)?.name, lang, id);
@@ -51,17 +50,14 @@ async function start(): Promise<void> {
         h("div", { class: "muted" }, label(vocab.place_types[p.type], lang, p.type)),
       ];
       const held = mainHolding(p);
-      if (mode === "tenure" || mode === "holder") {
-        lines.push(h("div", {}, held
-          ? label(vocab.tenures[held.t], lang, held.t)
-            + (held.h ? ` · ${name(data.entities.get(held.h)?.name, lang, held.h)}`
-              : held.t !== "domain" ? ` · ${t("holderNotNamed", lang)}` : "")
-            + (held.share ? ` (${shareLabel(held.share, lang)})` : "")
-          : t("noTenure", lang)));
-      }
-      const chain = mode === "realm" ? chains(p.id, "feudal", data.places)[0] : chains(p.id, "admin", data.places)[0];
+      lines.push(h("div", {}, held
+        ? label(vocab.tenures[held.t], lang, held.t)
+          + (held.h ? ` · ${name(data.entities.get(held.h)?.name, lang, held.h)}`
+            : held.t !== "domain" ? ` · ${t("holderNotNamed", lang)}` : "")
+          + (held.share ? ` (${shareLabel(held.share, lang)})` : "")
+        : t("noTenure", lang)));
+      const chain = chains(p.id, "admin", data.places)[0];
       if (chain?.length) lines.push(h("div", { class: "muted" }, [...chain].reverse().map(placeName).join(" › ")));
-      else if (mode === "realm") lines.push(h("div", { class: "muted" }, t("notInRealm", lang)));
       fill(tooltip, h("strong", {}, placeName(placeId)), ...lines);
       }
       const area = tooltip.offsetParent as HTMLElement | null; // the map's stage
@@ -109,8 +105,7 @@ async function start(): Promise<void> {
       for (const e of layerEntries(data, state.layer ?? "abbeys")) if (e.place) styles.set(e.place, { fill: colour });
       return { styles, areas: none };
     }
-    const ids = state.mode === "district" ? districts : [];
-    return { styles: placeStyles(data, state.mode, coloured), areas: { ...none, ids } };
+    return { styles: placeStyles(data, state.mode, coloured), areas: none };
   };
 
   const render = (state: State, previous?: State) => {
@@ -126,7 +121,7 @@ async function start(): Promise<void> {
     const onMap = state.view !== "table" && state.view !== "about";
     const side = $("side"), page = $("page"), legend = $("legend");
     legend.hidden = state.view !== "map";
-    if (state.view === "map") renderLegend(legend, data, state, store, coloured, districts);
+    if (state.view === "map") renderLegend(legend, data, state, store, coloured);
     side.hidden = !["territories", "holders", "church"].includes(state.view);
     if (state.view === "territories") renderTerritoriesView(side, data, state, store);
     else if (state.view === "holders") renderHoldersView(side, data, state, store);

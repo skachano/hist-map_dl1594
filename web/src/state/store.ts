@@ -7,7 +7,8 @@ import { LANGS } from "../i18n";
 
 export const VIEWS = ["map", "territories", "holders", "table", "church", "about"] as const;
 export type View = (typeof VIEWS)[number];
-export const MODES = ["tenure", "holder", "district", "realm"] as const;
+/** The map's colour modes. Districts and realms are the Territories view's (an old link falls back to tenure). */
+export const MODES = ["tenure", "holder"] as const;
 export type Mode = (typeof MODES)[number];
 export const LAYERS = ["towns", "churches", "abbeys", "priories", "convents", "commanderies", "chaumes"] as const;
 export type Layer = (typeof LAYERS)[number];

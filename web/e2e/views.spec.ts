@@ -51,7 +51,7 @@ test("territories: a member link walks down a level, a chain link back up", asyn
 });
 
 test("a realm link opens the feudal realms, fitted to the realm", async ({ page }) => {
-  await open(page, "#/map?color=realm&lang=en&place=vezelise");
+  await open(page, "#/map?color=tenure&lang=en&place=vezelise");
   const panel = page.locator("#panel");
   await panel.locator(".crumbs").getByRole("button", { name: "County of Vaudémont" }).click();
   await expect(page).toHaveURL(/#\/territories\?.*place=county-vaudemont/);

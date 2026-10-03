@@ -68,13 +68,6 @@ function hatch(size = 8): { width: number; height: number; data: Uint8Array } {
   return { width: size, height: size, data };
 }
 
-/** The top administrative areas: the bailliages and the lands outside them (level 1). */
-export function topDistricts(data: Dataset): string[] {
-  return data.territories.features
-    .filter((f) => f.properties?.hierarchy === "admin" && f.properties?.level === 1)
-    .map((f) => String(f.properties?.id));
-}
-
 export class MapView {
   readonly map: MapLibre;
   private ready: Promise<void>;

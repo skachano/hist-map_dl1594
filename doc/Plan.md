@@ -149,8 +149,8 @@ All screens share the UI language switch (EN/FR/DE/JA, which changes both labels
 1. **Map** (default): settlement cells and points, coloured by one of these:
    - **tenure**: domain / fief / clergy, with safeguard and other tenures in grey (three validated CVD-safe colours plus grey, as in hist_map)
    - **holder**: the legend picks which holders get the three colours, as in hist_map
-   - **district**: bailliage areas with white borders and labels instead of eight colours
-   - **realm**: places inside a named feudal realm, coloured by the kind of realm (county, lordship/terre, church temporality), and the rest in grey
+
+   The **district** and **realm** modes were dropped after Stage 10: the Territories view shows the same divisions and realms, at every level, with clickable areas.
 
    Hatching marks shared places ("en partie", "pour la moitié"). Places outside the duchy that the book doesn't list (the Three Bishoprics, the Barrois) are left blank and labelled.
 2. **Territories:** hist_map's Territories view without the year, with a switch between the two hierarchies (`#/territories?h=admin|feudal&lvl=…`):
@@ -614,6 +614,15 @@ Requested: membership of settlements to divisions and realms isn't clear-cut; re
   - **Areas** (`geo/territories.py`), as in hist_map: every membership counts. A settlement in two divisions puts its cell in both areas, which overlap there, and both list it as `shared`.
     - 134 territories have an area (131 before): the bans of Grandvillers and Dompierre, Maizey and Vaudicourt now do. Only the mairie of Steimbach has no located member.
   - Tests: 3 more pytest tests: a settlement in both areas, the shared lands rule, and the manual rows reaching the table.
+
+### After Stage 10: the Map without the Districts and Realms modes
+Requested: drop the Districts and Realms modes from the Map, which repeat the Territories view.
+- **Status: done.** The Map keeps the Tenure and Holder modes. An old link with `color=district` or `color=realm` opens the Map in Tenure.
+  - The tooltip always gives the district chain.
+  - The legend always has the hatching key.
+  - The code and strings of the two modes are gone: realm kinds per place, the bailliage labels on the Map, the district legend.
+  - The Territories view keeps the realm colours.
+  - Tests were updated: the Map has two colour tabs, and an old mode in the URL falls back to Tenure.
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.

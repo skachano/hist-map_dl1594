@@ -3,8 +3,10 @@ import { parseHash, toHash } from "./store";
 
 describe("URL state", () => {
   it("round-trips the map", () => {
-    const s = parseHash("#/map?color=realm&lang=fr&place=saint-avold&c=a,b");
-    expect(s).toMatchObject({ view: "map", mode: "realm", lang: "fr", place: "saint-avold", colours: ["a", "b"] });
+    const s = parseHash("#/map?color=holder&lang=fr&place=saint-avold&c=a,b");
+    expect(s).toMatchObject({ view: "map", mode: "holder", lang: "fr", place: "saint-avold", colours: ["a", "b"] });
+    // the districts and realms modes moved to the Territories view: an old link shows tenure
+    expect(parseHash("#/map?color=district&lang=fr").mode).toBe("tenure");
     expect(parseHash(toHash(s))).toEqual(s);
   });
   it("round-trips the other views", () => {
