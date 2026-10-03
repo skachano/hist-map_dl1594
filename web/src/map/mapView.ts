@@ -255,7 +255,10 @@ export class MapView {
     const shown: FilterSpecification = ["in", ["get", "id"], ["literal", districts]];
     m.setFilter("area-fill", shown);
     m.setFilter("area-line", shown);
-    m.setLayoutProperty("cells-fill", "visibility", areas.interactive ? "none" : "visible");
+    // The Territories tab draws only the territories' borders, not each village's cell.
+    for (const layer of ["cells-fill", "cells-line"]) {
+      m.setLayoutProperty(layer, "visibility", areas.interactive ? "none" : "visible");
+    }
     for (const label of this.labels) label.remove();
     this.labels = [];
     for (const id of districts) {
