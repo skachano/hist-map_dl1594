@@ -79,3 +79,9 @@ def test_merged_index_lines_are_split():
     assert rows.get("Hœlling") == [2166] and rows.get("Hoéville") == [483]
     assert rows.get("Velle") == [1763] and rows.get("Velle-sur-Moselle") == [202]
     assert build.slug("Hœlling") == "hoelling"
+
+
+def test_a_remark_after_the_numbers_is_not_part_of_them():
+    e = indexes.parse_entry("254", "Nieder-Saubach, vil., com. de Lebach, canton de Saarlouis (Pr.), 1491. "
+                                   "(C'est Sambach, ou plutôt Saubach, de la p. 245.)")
+    assert e.numbers == [1491] and e.commune == "Lebach"

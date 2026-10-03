@@ -7,7 +7,6 @@ not in index,,,,,725,La Grande Mairie,61,,la-grande-mairie,
 not in index,,,,,727,La Poyrie,61,,la-poyrie,
 not in index,,,,,763,Xouaruz,62,,xouaruz,
 not in index,,,,,838,Buz,64,,buz,
-not in index,,,,,846,Forrcsteric du ban de Longchamps,65,,forrcsteric-du-ban-de-longchamps,
 not in index,,,,,865,C'vrjus,65,,c-vrjus,
 not in index,,,,,888,Bappel,66,,bappel,
 not in index,,,,,1038,Pierreficte,71,,pierreficte,
@@ -15,11 +14,9 @@ not in index,,,,,1045,Abvefvenet-la-Grande,71,,abvefvenet-la-grande,
 not in index,,,,,1053,Basigny,72,,basigny,
 not in index,,,,,1238,Hymerstroff,79,,hymerstroff,
 not in index,,,,,1319,Edelnigen,81,,edelnigen,
-not in index,,,,,1323,Hechlingen,81,,hechlingen,
 not in index,,,,,1334,Bcltsstroff,81,,bcltsstroff,
 not in index,,,,,1335,Ansclnigen,81,,ansclnigen,
 not in index,,,,,1342,Ryol,82,,ryol,
-not in index,,,,,1471,Zuracliten,86,,zuracliten,
 not in index,,,,,1646,Ilcyligcnner,92,,ilcyligcnner,
 not in index,,,,,1659,Hyrelbach,92,,hyrelbach,
 not in index,,,,,1693,Kerlingen,93,,kerlingen,
@@ -52,6 +49,7 @@ no entry,192,Boucheporn,2275,,,,,1.00,,"printed 2275: Niderwessen, which is Nied
 no entry,202,Domjulien,927,,,,,1.00,domjulien,Dombasle (927) is Dombasle-en-Xaintois
 no entry,203,Edling,1519,,,,,1.00,edling,Edlingen (1719) is Adelange
 no entry,208,Fosses (les Hautes et Basses-),2154,,,,,1.00,,"printed 2154: Drulben, which is Trulben"
+no entry,217,Hestroff,1351,,,,,1.00,hestroff,the editor's corrections: 'ce numéro doit être effacé à l'art. Hestroff' (1351 is Helstroff)
 no entry,217,Hilsprich',2196,,,,,1.00,,"printed 2196: Zell, which is Zellen; no entry fits Hilsprich"
 no entry,218,Honzrath,1653,,,,,1.00,,"printed 1653: Himradt, which is Hellimer; no entry of Merzig fits"
 no entry,219,Hymont,1,,,,,1.00,hymont,Chenymont (971) is Chenilmont
@@ -104,6 +102,7 @@ manual,246,Scheuer-Hof,1507,,1307,Schcuren,81,1.00,scheuer-hof,"corrections: ""s
 manual,233,Nennig,1517,,1317,Neunieh,81,1.00,nennig,printed 1317
 manual,254,Tûnsdorf (Tunstrofï),1518,,1318,Timstorff,81,1.00,tunsdorf,printed 1318
 manual,189,"Bcrg"" mit Schloss",1521,,1321,Berg,81,1.00,berg,printed 1321
+manual,216,Heckling,1525,,1323,Hechlingen,81,1.00,heckling,"the scan reads 1525, which is Rathen's (Zurachten, the editor's corrections); Heckling is Hechlingen, 1323"
 manual,198,Colmen,1551,,1331,Golman,81,1.00,colmen,printed 1331
 manual,218,Hombourgou Hombourg-sur-Kaner,1352,,1332,Hombourg auiïdcr Kandcl,81,1.00,hombourg-sur-kaner,printed 1332
 manual,255,Valdwisse,1553,,1333,Waldtvtiss,81,1.00,waldwisse,printed 1333
@@ -355,6 +354,7 @@ corrected,239,Pomern,1311,,1341,Pomern,82,1.00,pomern,
 corrected,244,Rudling,1543,,1343,Rodingcn,82,0.95,rudling,
 corrected,261,Wies,1544,,1344,Wiss,82,0.75,wies,
 corrected,207,Flasgarten,1550,,1350,Hassgarten,82,0.80,flasgarten,
+corrected,210,HelslrofF,1551,,1351,Helstorff,82,0.89,helstroff,
 corrected,233,Neunkirchen,1552,,1352,Neunkirchen,82,1.00,neunkirchen-les-bouzonville,
 corrected,213,Gross-Hemmersdorf,1553,,1353,Hyrmestroff,82,0.95,grosshemmersdorf,
 corrected,259,Volmerange,1557,,1357,Wolmcringen,82,0.95,volmerange,
@@ -387,7 +387,6 @@ corrected,229,Merchingen,57,,1437,Morehingen,85,0.95,merchingen,
 corrected,229,Mcnningen,1465,,1463,Memmingcn,86,0.95,menningen,
 corrected,195,Caste!,,,1469,Kastel,86,0.95,kastel-les-otzenhausen,number not printed in the index
 corrected,195,Buweiler,,,1490,Budweillcr,87,0.89,buweiler,number not printed in the index
-corrected,213,Gresaubach,,,1491,Sambach,87,0.71,gresaubach,number not printed in the index
 corrected,186,Aussen,,,1494,Aussen,87,1.00,aussen,number not printed in the index
 corrected,261,Wicsbach,1493,,1495,Wissbach,87,0.88,wiesbach,
 corrected,252,Thalecksweiler,,,1498,Exweiller,87,0.95,thalexweiler,number not printed in the index
@@ -562,7 +561,6 @@ spelling differs,221,Kerperieh-ilemmersdorf,22,,1422,Hvmerrslorlï,84,0.42,kerpr
 spelling differs,217,Heiiselhofen (voy. Aschbach),1478,,1478,Haînuclhoven,87,0.46,heiiselhofen,
 spelling differs,212,GoldlKtch,1492,,1492,Golbacli,87,0.47,goldlktch,
 spelling differs,235,Oberkirchen* (anciennement Catharin-Ostern),1511,,1511,Kelternostern,88,0.48,oberkirchen,check: the entry no line claims
-spelling differs,216,Heckling,1525,,1525,Zurachtcn,88,0.35,heckling,
 spelling differs,235,Oberkirchen* (anciennement Catharin-Ostern),46,,1546,Kctternostern,89,0.48,oberkirchen,
 spelling differs,190,Bideslroft,1621,,1621,BuderetortT,91,0.48,bidestroff,
 spelling differs,225,LostrofJf,1645,,1645,Alstorff-lez-Leyningcn,92,0.41,lostroff,
@@ -1279,6 +1277,7 @@ agrees,209,Franould,842,,842,Franoull,64,0.88,franould,
 agrees,199,Côte (la),843,,843,La Coste,64,0.89,la-cote,
 agrees,238,Poirie (la),844,,844,La Poitie,65,0.83,la-poirie-dommarlin,
 agrees,187,Bamont,845,,845,Baymont,65,0.95,bamont,
+agrees,208,Foresterie (la),846,,846,Forrcsteric du ban de Longchamps,65,0.53,la-foresterie,
 agrees,239,Pré-Derrière,848,,848,Le Prey,65,0.95,pre-derriere,
 agrees,200,Demrupl,849,,849,Demeruz,65,0.71,demrupl,
 agrees,229,Ménil (le),850,,850,Le Mesnil,65,0.91,le-menil-229,
@@ -1663,7 +1662,6 @@ agrees,203,Eimersdorf,1339,,1339,Eymerstorlï,82,0.67,eimersdorf,
 agrees,220,Ising',1340,,1340,Lugsingen,82,0.57,ising,
 agrees,262,Zeurange',1345,,1345,Zuzingen,82,0.62,zeurange,
 agrees,229,Mensberg,1346,,1346,Mentzberg,82,0.82,meinsberg,
-agrees,217,Hestroff,1351,,1351,Helstorff,82,0.82,hestroff,
 agrees,207,FilstrofT,1354,,1354,Felstorff,82,0.67,filstroff,
 agrees,252,Théding,1355,,1355,Tedingen,82,0.80,theding,
 agrees,244,Rosbruch,1356,,1356,Bossbruckcn,82,0.63,rosbruck,
@@ -1738,6 +1736,7 @@ agrees,187,Iîachem,1466,,1466,Bachcn,86,0.62,iiachem,
 agrees,246,Schaumberg,1467,,1467,Scliawembourg,86,0.61,schaumberg,
 agrees,253,Tholcy,1468,,1468,Tholey,86,1.00,tholey,
 agrees,199,Costenbach (Kostcnbach),1470,,1470,Kostenbach,86,0.67,kostenbach,
+agrees,241,Rathcn,1471,,1471,Zuracliten,86,0.62,rathen,
 agrees,225,Limbacb,1472,,1472,Limbach,86,0.86,limbach,
 agrees,225,Lindschcid,1473,,1473,Lindtschidi,86,0.86,lindscheid,
 agrees,252,Thelcy,1474,,1474,Theley,86,1.00,theley,
@@ -1754,6 +1753,7 @@ agrees,224,Linden,1486,,1486,Zurlinden,87,0.95,linden,
 agrees,236,Osenbaeh,1487,,1487,Ostcmbach,87,0.82,osenbaeh,
 agrees,213,Gronig,1488,,1488,Gronich,87,0.77,gronig,
 agrees,210,Gehweiler,1489,,1489,Gedessweiller,87,0.80,gehweiler,
+agrees,254,Nicder-Sauhach,1491,,1491,Sambach,87,0.50,niedersaubach,
 agrees,190,Bettingen,1493,,1493,Bcttingen,87,1.00,bettingen,
 agrees,189,Secitteldingcn,1496,,1496,Beehteldingen,87,0.81,secitteldingcn,
 agrees,248,Sotzweiler,1499,,1499,Suhzwciller,87,0.76,sotzweiler,
@@ -1778,6 +1778,7 @@ agrees,191,Bliesen,1521,,1521,Blicssen,88,0.93,bliesen,
 agrees,184,Aisweilcr,1522,,1522,Altzweiller,88,0.95,asweiler,
 agrees,228,Marpingen,1523,,1523,Merpingen,88,0.95,marpingen,
 agrees,199,Costenbach (Kostcnbach),1524,,1524,Kostembach,88,0.60,kostenbach,
+agrees,241,Rathcn,1525,,1525,Zurachtcn,88,0.67,rathen,
 agrees,195,Caste!,1526,,1526,Kastcl,88,0.95,kastel-les-otzenhausen,
 agrees,260,Wchingen,1527,,1527,Wchingen,88,1.00,wehingen,
 agrees,190,Bettingen,1528,,1528,Bettingcn,88,1.00,bettingen,

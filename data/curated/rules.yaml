@@ -84,7 +84,6 @@ entry_names:
 # Index lines for entries whose numbers led to the wrong line (checked by name and district).
 entry_index:
   1003: Chaumouzcy      # "Chamoysy", old form of Chaumousey; the index prints 1005
-  1491: Gresaubach      # "Sambach" in the list, "Sanbach" in the index, "Saubach" in its footnote: Gresaubach (Lebach). The editor's corrections delete Sanbach for "Nieder-Saubach, com. de Lebach, 1491", the neighbouring village
   1672: Berus           # "La ville de Beaurains, Berriss": the index prints "Saarlouis (Pr.) 1672" without its comma
   1836: Lebcuville      # "Lebeufville" (Lebeuville), not Herbeuville
   1891: Saulx-en-Voévre # "Sault" in the bailliage of Hattonchâtel, not Le Sautel
@@ -113,7 +112,7 @@ index_lines:
 
 # The index's spellings of an entry that no surviving index line carries ({entry: [spelling, …]}).
 index_spellings:
-  1491: [Sanbach, Saubach]   # the index's line, deleted by the editor's corrections, and its footnote
+  1491: [Sanbach, Saubach]   # the index's line, which the editor's corrections replace by Nieder-Saubach, and its footnote
 
 # Places for entries the index doesn't identify (a new place with the entry's name).
 entry_places:

@@ -197,9 +197,13 @@ def _is_number_field(f: str) -> bool:
         sum(c.isdigit() for c in f) >= 1 or (len(f) <= 3 and bool(_NUMERIC.match(f))))
 
 
+_REMARK = re.compile(r"(\d[*'’]?)\s*\.\s*\([^()]*\)\s*\.?\s*$")
+
+
 def parse_entry(page: str, text: str) -> IndexEntry:
     e = IndexEntry(page, text)
-    fields = split_fields(normalize(text).rstrip(" .;"))
+    # A remark in brackets after the numbers ("1491. (C'est Sambach, ou plutôt Saubach…)") is not part of them.
+    fields = split_fields(_REMARK.sub(r"\1.", normalize(text)).rstrip(" .;"))
     # Trailing entry numbers.
     tail: list[str] = []
     while len(fields) > 1 and _is_number_field(fields[-1]):
