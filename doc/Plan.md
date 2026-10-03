@@ -546,6 +546,28 @@ Implement the remaining screens from §3 in this order: Territories, Table, Hold
   - Port hist_map's Playwright suites (`core`, `views`, `layout`, `a11y`, `perf`) without the year tests.
   - Add tests for: the place panel listing several entries; a split place; the territory levels; table filters and CSV export.
 - Done when: `make e2e` passes, and axe reports no serious or critical violations.
+- **Status: done.** `make e2e` starts the dev server and runs Playwright in its container (`web/playwright.config.ts`, `web/e2e/`). There are 45 tests, about 45 s, stable over repeated runs.
+  - **core:**
+    - the colour modes
+    - the language switch (interface and place names)
+    - Saint-Avold's panel: four entries with numbers and pages, and two holdings
+    - Athienville, split between the prévôtés of Einville and Lunéville: two district chains
+    - keyboard focus into and out of the panel, and the skip link to the table
+    - the tooltip kept inside the map
+    - the shapes of places
+  - **views:**
+    - the territory hierarchies and levels
+    - walking down a level from the panel and back up
+    - a realm link fitted on the map
+    - the holder picker
+    - the table filters, its sticky toolbar and headers, the CSV export, and a place opened zoomed on the map
+    - Church & resources, and the About page in four languages
+  - **layout** (desktop and Pixel 7): ten view states are never wider than the screen and log no errors. **a11y:** axe (WCAG 2.1 A/AA) on the same ten states.
+  - **perf:** data load 0.3 s, first render under 20 ms, mode changes under 15 ms, table about 0.1 s. The budgets are 3 s, 200 ms and 1.5 s.
+  - Fixed on the way:
+    - Territory links in the place panel now open the Territories view at their hierarchy and level, as list links do.
+    - The skip link ("Skip the map: show the entries as a table") was missing.
+    - The About page's scroll area takes keyboard focus. This was axe's only finding.
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.

@@ -10,6 +10,8 @@ const LANG_NAMES: Record<Lang, string> = { en: "English", fr: "Français", de: "
 export function renderHeader(root: HTMLElement, _data: Dataset, store: Store): void {
   const { lang, mode, view } = store.state;
   fill(root,
+    view !== "table" ? h("button", { class: "skip", onclick: () => store.set({ view: "table" }) },
+      t("skipToTable", lang)) : null,
     h("div", { class: "topline" },
       h("h1", {}, t("title", lang)),
       VIEWS.length > 1 ? h("nav", { class: "views", "aria-label": t("views", lang) },

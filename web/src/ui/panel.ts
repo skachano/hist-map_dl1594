@@ -7,6 +7,7 @@ import { label, LANGS, name, t } from "../i18n";
 import { chains, ressortOf } from "../model/places";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
+import { openPlace } from "./navigate";
 
 const childrenCache = new WeakMap<Dataset, Map<string, { id: string; rel: string }[]>>();
 
@@ -44,7 +45,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, state: State, stor
   const vocab = data.meta.vocab;
   const placeName = (id: string) => name(data.places.get(id)?.name, lang, id);
   const entityName = (id: string) => name(data.entities.get(id)?.name, lang, id);
-  const link = (id: string) => h("button", { class: "link", "data-place": id, onclick: () => store.set({ place: id }) },
+  const link = (id: string) => h("button", { class: "link", "data-place": id, onclick: () => openPlace(store, data, id) },
     placeName(id));
   const typeLabels = (p: Place) => {
     const labels = (p.kind === "territory" ? vocab.territory_types : vocab.place_types)[p.type];
