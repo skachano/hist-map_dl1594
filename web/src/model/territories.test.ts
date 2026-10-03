@@ -27,7 +27,7 @@ describe("territories", () => {
     expect(realmGroup("fief")).toBe("lordship");
     expect(realmGroup("temporality")).toBe("other");   // church lands: hist_map has no group for them
     expect(realmGroup("provostship")).toBe("office");
-    expect(realmGroup("bailiwick")).toBe("office");
+    expect(realmGroup("bailiwick")).toBe("bailiwick");   // violet, apart from the offices inside them
     expect(realmGroup("ban")).toBe("other");
   });
 });

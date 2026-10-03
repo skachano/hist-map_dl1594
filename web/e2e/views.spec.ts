@@ -162,7 +162,8 @@ test("territories: one kind of realm at every level, and the colour key of the k
   await open(page, "#/territories?lang=en");
   const side = page.locator("#side");
   const groups = side.locator("ul.groups li");
-  await expect(groups.filter({ hasText: "Offices, castellanies, provostships" })).toContainText("20");
+  await expect(groups.filter({ hasText: "Bailliages" })).toContainText("8");
+  await expect(groups.filter({ hasText: "Offices, castellanies, provostships" })).toContainText("12");
   const menu = side.getByRole("combobox", { name: "Kind of realm" });
   await menu.selectOption("provostship");
   await expect(page).toHaveURL(/kind=provostship/);

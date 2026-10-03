@@ -26,6 +26,7 @@ const STRINGS = {
   level2Feudal: { en: "Realms within them", fr: "Seigneuries incluses", de: "Herrschaften darin", ja: "その中の封建領" },
   level0Feudal: { en: "All levels", fr: "Tous les niveaux", de: "Alle Ebenen", ja: "すべての階層" },
   realmsShown: { en: "Realms", fr: "Territoires", de: "Territorien", ja: "領域" },
+  groupBailiwick: { en: "Bailliages", fr: "Bailliages", de: "Ämter (Bailliages)", ja: "バイイ管区" },
   groupOffice: { en: "Offices, castellanies, provostships", fr: "Offices, châtellenies, prévôtés",
     de: "Ämter, Kellereien, Propsteien", ja: "管区・城代管区・代官区" },
   groupLordship: { en: "Lordships and fiefs", fr: "Seigneuries et fiefs", de: "Herrschaften und Lehen", ja: "領と封土" },

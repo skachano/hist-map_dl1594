@@ -651,6 +651,7 @@ Requested: make the Territories screen follow the colour scheme and the structur
     - The notes on divisions and realms and the per-realm swatches are gone, as in hist_map.
   - Not taken from hist_map: the year and the "realms outside the bailiwick" switch, which this book doesn't need.
   - The Territories tab draws only the territories' borders: the villages' cells are hidden there (they stay on the other tabs).
+  - The bailliages have a colour of their own: hist_map's violet (its marquisates', which this book doesn't have), the one fourth hue that validates against the other three and the grey. The prévôtés, offices and castellanies inside them stay blue.
   - Tests: vitest for the groups and the kind filter; one more Playwright test (kind menu and key). 19 vitest and 49 Playwright tests pass.
 
 ### After Stage 10: lost villages, hamlets and farms checked

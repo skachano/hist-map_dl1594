@@ -13,4 +13,8 @@ export const TENURE_COLOURS: Record<string, string> = {
   domain: SERIES[0], fief: SERIES[1], clergy: SERIES[2], safeguard: OTHER,
 };
 /** Territories: the colour of each kind of realm, as in hist_map (model/territories.ts groups the types). */
-export const GROUP_COLOUR = { office: SERIES[0], lordship: SERIES[1], county: SERIES[2], other: REALM_OTHER } as const;
+/** Bailliages: hist_map's fourth hue (its marquisates), violet, the one fourth hue that validates
+ *  all-pairs against SERIES and OTHER on a map (dataviz checker: worst CVD ΔE 9.2, normal vision 16.3). */
+export const BAILIWICK = "#4a3aa7";
+export const GROUP_COLOUR = { bailiwick: BAILIWICK, office: SERIES[0], lordship: SERIES[1], county: SERIES[2],
+  other: REALM_OTHER } as const;

@@ -26,7 +26,7 @@ export function layerEntries(data: Dataset, layer: Layer): Entry[] {
 }
 
 const GROUP_LABEL: Record<RealmGroup, StringKey> = {
-  office: "groupOffice", county: "groupCounty", lordship: "groupLordship", other: "groupOther" };
+  bailiwick: "groupBailiwick", office: "groupOffice", county: "groupCounty", lordship: "groupLordship", other: "groupOther" };
 const KIND_GROUP_LABEL: Record<(typeof KINDS)[number]["group"], StringKey> = {
   administrative: "kindsAdministrative", feudal: "kindsFeudal" };
 

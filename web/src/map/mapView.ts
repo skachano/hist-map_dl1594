@@ -155,10 +155,11 @@ export class MapView {
     const hidden: FilterSpecification = ["==", ["get", "id"], ""];
     // Territory areas, as in hist_map: realms coloured by kind (offices blue, lordships orange, counties
     // green, the rest dark grey), white borders between neighbours.
-    const coloured = [...typesIn("office"), ...typesIn("lordship"), ...typesIn("county")];
+    const coloured = [...typesIn("bailiwick"), ...typesIn("office"), ...typesIn("lordship"), ...typesIn("county")];
     m.addLayer({ id: "area-fill", type: "fill", source: "territories", filter: hidden,
       paint: {
-        "fill-color": ["match", ["get", "place_type"], typesIn("office"), GROUP_COLOUR.office,
+        "fill-color": ["match", ["get", "place_type"], typesIn("bailiwick"), GROUP_COLOUR.bailiwick,
+          typesIn("office"), GROUP_COLOUR.office,
           typesIn("lordship"), GROUP_COLOUR.lordship, typesIn("county"), GROUP_COLOUR.county, GROUP_COLOUR.other],
         // The neutral grey has no hue to stand out on the grey basemap: only darkness can.
         "fill-opacity": ["match", ["get", "place_type"], coloured, 0.45, 0.75],

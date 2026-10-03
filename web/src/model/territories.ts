@@ -40,15 +40,16 @@ export function levelsOf(data: Dataset, feudal: boolean): number[] {
 
 /** Kinds of realm, coloured as in hist_map: offices and their like in blue, lordships and fiefs in
  *  orange, counties in green, and the rest (bans, mairies, vals, church lands) in a dark grey. The
- *  book has no principality or marquisate, hist_map's other two groups. */
+ *  bailliages take hist_map's violet (its marquisates': the book has none), so they stand apart
+ *  from the prévôtés and offices inside them. */
 const GROUPS: Record<string, Exclude<RealmGroup, "other">> = {
-  bailiwick: "office", provostship: "office", sub_provostship: "office", castellany: "office", office: "office",
+  bailiwick: "bailiwick", provostship: "office", sub_provostship: "office", castellany: "office", office: "office",
   district: "office", town_district: "office",
   lordship: "lordship", fief: "lordship",
   county: "county",
 };
-export type RealmGroup = "office" | "county" | "lordship" | "other";
-export const GROUP_ORDER: RealmGroup[] = ["office", "county", "lordship", "other"];
+export type RealmGroup = "bailiwick" | "office" | "county" | "lordship" | "other";
+export const GROUP_ORDER: RealmGroup[] = ["bailiwick", "office", "county", "lordship", "other"];
 
 export function realmGroup(type: string): RealmGroup {
   return GROUPS[type] ?? "other";
