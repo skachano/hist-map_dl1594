@@ -752,7 +752,73 @@ def merge_geocoding(out: Built) -> int:
     _merge_same_item(out)
     _report_geocoding(out)
     _rekey(out)
+    _manual_memberships(out)
+    _shared_lands(out)
     return n
+
+
+def _manual_memberships(out: Built) -> None:
+    """manual/memberships.csv: memberships the lists don't give by themselves (a territory's own
+    seat, listed elsewhere), each with its page and why. Keyed by the final place ids."""
+    have = {(m["child_id"], m["parent_id"], m["relation"]) for m in out.memberships}
+    added = []
+    for r in load_manual("memberships"):
+        if r["child_id"] not in out.places or r["parent_id"] not in out.places:
+            raise ValueError(f"manual/memberships.csv: unknown place in {r['child_id']} -> {r['parent_id']}")
+        if (r["child_id"], r["parent_id"], r["relation"]) not in have:
+            out.memberships.append({k: r.get(k, "") for k in models.Membership.model_fields if k in r})
+            added.append(f"`{r['child_id']}` → `{r['parent_id']}` ({r['notes']})")
+    out.report += ["", "## Memberships added by hand (manual/memberships.csv)", "",
+                   *(f"- {a}" for a in added)] if added else []
+
+
+def _shared_lands(out: Built) -> None:
+    """A division and a realm on the same land (counterpart pairs: the office and the lordship of
+    Forbach) share their lands, as in hist_map: the realm's places are in the division, and the
+    division's places, its sub-divisions' included, are the realm's unless they are in another realm."""
+    kids: dict[str, list[dict]] = defaultdict(list)
+    for m in out.memberships:
+        if m["relation"] != "ressort":
+            kids[m["parent_id"]].append(m)
+
+    def settlements(tid: str) -> dict[str, dict]:
+        found, seen, queue = {}, {tid}, [tid]
+        while queue:
+            for m in kids.get(queue.pop(), ()):
+                c = m["child_id"]
+                if out.places[c]["kind"] == "settlement":
+                    found.setdefault(c, m)
+                elif c not in seen:
+                    seen.add(c)
+                    queue.append(c)
+        return found
+
+    feudal_of: dict[str, set[str]] = defaultdict(set)
+    for m in out.memberships:
+        if m["relation"] == "feudal":
+            feudal_of[m["child_id"]].add(m["parent_id"])
+    added: list[str] = []
+    for a, p in sorted(out.places.items()):
+        f = p.get("counterpart_id")
+        if p.get("hierarchy") != "admin" or not f or f not in out.places:
+            continue
+        basis = p.get("counterpart_basis") or ""
+        note = f"shared lands of {p['name_fr']} and {out.places[f]['name_fr']} (the same land: {basis})"
+        in_a, in_f = settlements(a), settlements(f)
+        for c, like in sorted(in_f.items()):
+            if c not in in_a:
+                out.memberships.append({"child_id": c, "parent_id": a, "relation": "admin", "share": "",
+                                        "source_page": like.get("source_page", ""), "confidence": "medium",
+                                        "notes": note})
+                added.append(f"`{c}` → `{a}`")
+        for c, like in sorted(in_a.items()):
+            if c not in in_f and not (feudal_of[c] - {f}):
+                out.memberships.append({"child_id": c, "parent_id": f, "relation": "feudal", "share": "",
+                                        "source_page": like.get("source_page", ""), "confidence": "medium",
+                                        "notes": note})
+                added.append(f"`{c}` → `{f}`")
+    out.report += ["", "## Shared lands of a division and its realm", "",
+                   f"- {len(added)} membership(s) added: " + ", ".join(added) if added else "- none added"]
 
 
 def _merge_same_item(out: Built) -> None:

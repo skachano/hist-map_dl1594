@@ -105,7 +105,7 @@ The two records of a pair:
 A realm that lies inside a division without covering all of it (the terre of Pierrefort in the prévôté of Nancy) is not a pair. It stays a feudal realm with a `ressort`.
 
 ### `memberships`: the two hierarchies
-`child_id`, `parent_id`, `relation`, `share` (`part` when the book says "en partie"), `source_page`. There are no years. A place may have several parents. `relation` is one of:
+`child_id`, `parent_id`, `relation`, `share` (`part` when the book says "en partie"), `source_page`, `confidence`, `notes`. There are no years. A place may have several parents, as in hist_map: one row per territory it belongs to. Besides the lists' headings, rows come from `manual/memberships.csv` (with their page and why) and from the shared lands of a division and its realm. `relation` is one of:
 - `admin`: a settlement or division lies in an administrative division (village → ban → prévôté → bailliage → duchy)
 - `feudal`: a settlement or realm is part of a feudal realm (village → lordship; lordship → county when the book says so)
 - `ressort`: a feudal realm answers to an administrative division for homage, aids and justice (county of Chaligny → prévôté of Nancy)
@@ -419,14 +419,14 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
 - Tasks:
   - Voronoi cells from all located settlements, as in hist_map, plus **neutral seed points** for communes in the bounding box that the book does not list (from Wikidata). Without them, the cells of Lorraine villages would cover the bishoprics' enclaves and the Barrois.
   - Dissolve cells per hierarchy: administrative divisions at each level (they tile the duchy), then feudal realms from their own members only (they leave gaps). There is one version per territory, with no years.
-  - Split places (two divisions, "en partie") give their cell to the first division and are hatched in the others.
+  - Split places (two divisions, "en partie") are in both areas, as in hist_map (changed after Stage 10; it was the first division only).
   - Approximate and far-away places add no land, as in hist_map.
   - Later: the Bitche boundary walk as a line, and the rivers.
 - Done when: the bailliage and prévôté areas render without gaps, the feudal realms render inside them, and the enclaves of Metz and Toul show as holes.
 - **Status: done.** `make geometry` (a few seconds) writes `data/geometry/cells.geojson` (1,382 settlement cells, 0.3 MB) and `territories.geojson` (131 areas, 0.2 MB), plus previews in `data/review/areas-bailliages.png` and `areas-realms.png`. Code is in `pipeline/denombrement/geo/territories.py`.
   - **Cells.** Each located settlement point gets a Voronoi cell in EPSG:3035, clipped to 6 km around the settlements. Places at one point (a hamlet placed at its commune) share its cell.
   - **Neutral seeds.** The Wikidata communes of the region that the book doesn't list take cells of their own and belong to no territory: 2,944 of them. A commune isn't neutral when it is one of our places' Wikidata items, lies within 1.5 km of a listed settlement, or bears the name of one of the book's places (unlocated ones included) or of a commune the index gives for a hamlet. Without that last test, the book's own unlocated villages made holes inside Lorraine.
-  - **Areas.** A division's area is the union of the cells of the settlements it reaches through `admin` links, a realm's through `feudal` links. A settlement in two divisions gives its cell to the first in the book's order (a link that isn't "en partie"); the other division lists it in `shared`, for hatching in the app.
+  - **Areas.** A division's area is the union of the cells of the settlements it reaches through `admin` links, a realm's through `feudal` links. A settlement in two divisions is in both, as in hist_map: its cell is in both areas, which overlap there, and both list it in `shared`. (Until the change after Stage 10, it gave its cell to the first division in the book's order.)
   - **No land** comes from places placed at their commune, matched with low confidence, or flagged far from their district. They stay members and keep their points.
   - Feature properties are `{id, hierarchy, place_type, level, settlements, shared[]}`, with one version per territory and no years.
   - **Checks:**
@@ -598,6 +598,22 @@ Requested after Stage 10: the index's names and the lists' names don't always ma
     - A strong match near the index's commune or canton is no longer moved by the district pass; places set in `rules.yaml` (new `geocode` section) are left alone by the automatic passes.
     - 1,720 of 1,901 settlements are located, 95.7% of those the index identifies.
   - Tests: 5 more pytest tests (`tests/test_reconcile.py`), 2 more Playwright tests (spellings by source; an entry naming two places). 75 pytest, 20 vitest and 47 Playwright tests pass.
+
+### After Stage 10: settlements in several territories, as in hist_map
+Requested: membership of settlements to divisions and realms isn't clear-cut; record a settlement's memberships in every territory it belongs to, the way hist_map does.
+- **Status: done.**
+  - **Rows from the lists** were already one per territory (a village "en partie" under two prévôtés, a fief's village under its office and its lordship): 186 settlements are in two divisions, 16 in three, and 9 in two realms.
+  - **`manual/memberships.csv`**, as in hist_map: the memberships the lists don't give, each with its page and why. Applied after the places get their final ids. 7 rows, each a territory's own seat listed elsewhere.
+    - the bans of Belmont, Bouxières, Grandvillers and Dompierre, and Saint-Dié
+    - the lordship of Varsberg
+    - the sous-prévôté of Sierck
+    - Not added, because the seat is uncertain: the mairie of Longchamp (three Longchamps), the mairie of Steimbach (only the Steinbach of Saarland is found), and the val of Harol (Harol is the seat of the ban of Harol).
+  - **Shared lands of a division and its realm** (hist_map's `split_memberships`, here for the counterpart pairs): the realm's places are in the division, and the division's places are the realm's unless they are in another realm.
+    - It adds nothing today: every pair already has the same members, and the 11 places of the castellany of Hombourg and Saint-Avold outside its lordship are the abbey of Saint-Avold's.
+    - It keeps future data consistent; the report lists what it adds.
+  - **Areas** (`geo/territories.py`), as in hist_map: every membership counts. A settlement in two divisions puts its cell in both areas, which overlap there, and both list it as `shared`.
+    - 134 territories have an area (131 before): the bans of Grandvillers and Dompierre, Maizey and Vaudicourt now do. Only the mairie of Steimbach has no located member.
+  - Tests: 3 more pytest tests: a settlement in both areas, the shared lands rule, and the manual rows reaching the table.
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.

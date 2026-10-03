@@ -68,3 +68,10 @@ def test_curated_data_agrees_with_the_sample():
         assert c["section"] == f["section"], f["no"]
         assert build.similarity(places[c["place_id"]]["name_fr"], sample_places[f["place_id"]]["name_fr"]) >= 0.7 \
             or f["no"] in ("1470", "1549", "1550"), (f["no"], places[c["place_id"]]["name_fr"])  # C/K, unidentified
+
+
+def test_manual_memberships_are_in_the_curated_table():
+    have = {(m["child_id"], m["parent_id"], m["relation"])
+            for m in csv.DictReader((config.CURATED_DIR / "memberships.csv").open())}
+    for r in csv.DictReader((config.CURATED_DIR / "manual" / "memberships.csv").open()):
+        assert (r["child_id"], r["parent_id"], r["relation"]) in have, r["child_id"]

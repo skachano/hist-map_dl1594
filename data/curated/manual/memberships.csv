@@ -1,0 +1,8 @@
+child_id,parent_id,relation,share,source_page,confidence,notes
+belmont-sur-buttant,ban-belmont,admin,,58,medium,"the unit's own seat: 'Ban de Belmont' (provostship of Bruyères), the Belmont near Bruyères"
+bouxieres-aux-bois,ban-bouxieres,admin,,70,medium,"the unit's own seat: 'Ban de Bouxières' (provostship of Dompaire), where Bouxières-aux-Bois is listed"
+grandvillers,ban-grandvillers-et-dompierre,admin,,58,high,the unit's own seat: 'Ban de Grandvillers et Dompierre'
+dompierre,ban-grandvillers-et-dompierre,admin,,58,high,the unit's own seat: 'Ban de Grandvillers et Dompierre'
+saint-die-des-vosges,ban-saint-die,admin,,46,high,the unit's own seat: 'Ban de Saint-Dié'
+varsberg,lordship-varsberg,feudal,,84,high,the unit's own seat: 'Seigneurie de Varsberg'
+sierck,sub-provostship-sierck,admin,,78,high,the unit's own seat: 'Sous-prévôté de Sierck'

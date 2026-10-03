@@ -9,8 +9,9 @@
    hierarchy: administrative divisions through `admin` links (village -> ban -> prévôté ->
    bailliage), feudal realms through `feudal` links. Divisions tile the duchy; realms cover only
    their members, so the land between them stays empty.
-3. A settlement in two divisions ("en partie", or listed under two prévôtés) gives its cell to
-   the first one in the book's order; the others list it as `shared` (the app hatches it).
+3. A settlement in two divisions ("en partie", listed under two prévôtés, or the seat of a ban
+   listed in its prévôté) is in both, as in hist_map: its cell is in both areas, which overlap
+   there, and both list it as `shared` (the app hatches it).
 4. Places placed only approximately (a hamlet at its commune) or doubtfully add no land; they
    stay members and keep their points.
 
@@ -121,32 +122,20 @@ def run() -> None:
     cells = {ids[0]: point_cells[pt] for pt, ids in by_point.items()}
     cell_of = {pid: ids[0] for ids in by_point.values() for pid in ids}
 
-    # Primary links: a settlement's first link of each hierarchy, in the book's order (the
-    # memberships table keeps it); later ones make it `shared`.
-    primary: dict[tuple[str, str], str] = {}
-    secondary: dict[tuple[str, str], list[str]] = defaultdict(list)
+    # Every link counts, as in hist_map: a settlement listed under two prévôtés ("en partie", or
+    # twice) is in both, and its cell in both areas. `shared` names the members that are also in
+    # another territory of the same hierarchy (the app hatches them).
     children: dict[tuple[str, str], list[str]] = defaultdict(list)
+    parents_of: dict[tuple[str, str], set[str]] = defaultdict(set)
     for _, m in ds.memberships:
-        if m.relation not in ("admin", "feudal"):
+        if m.relation not in ("admin", "feudal") or m.child_id not in places:
             continue
-        child = places.get(m.child_id)
-        if child and child.kind == "settlement":
-            key = (m.child_id, m.relation)
-            if key not in primary and m.share != "part":
-                primary[key] = m.parent_id
-            else:
-                secondary[key].append(m.parent_id)
-        else:
-            children[(m.parent_id, m.relation)].append(m.child_id)
-    # A settlement listed only "en partie" still needs a home.
-    for key, parents in list(secondary.items()):
-        if key not in primary:
-            primary[key] = parents.pop(0)
-    for (child, relation), parent in primary.items():
-        children[(parent, relation)].append(child)
+        children[(m.parent_id, m.relation)].append(m.child_id)
+        if places[m.child_id].kind == "settlement":
+            parents_of[(m.child_id, m.relation)].add(m.parent_id)
 
     def members(tid: str, relation: str) -> tuple[set[str], set[str]]:
-        """(settlements whose cells form the area, settlements shared with another division)."""
+        """(settlements whose cells form the area, those of them also in another territory)."""
         own, seen, queue = set(), {tid}, [tid]
         while queue:
             for c in children.get((queue.pop(), relation), ()):
@@ -155,7 +144,7 @@ def run() -> None:
                 elif c not in seen:
                     seen.add(c)
                     queue.append(c)
-        shared = {c for (c, rel), parents in secondary.items() if rel == relation and set(parents) & seen} - own
+        shared = {c for c in own if len(parents_of[(c, relation)]) > 1}
         return own, shared
 
     depth: dict[str, int] = {}
