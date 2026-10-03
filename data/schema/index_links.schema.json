@@ -1,0 +1,85 @@
+{
+  "additionalProperties": false,
+  "description": "A number printed in the editor's index, sending a place to an entry: the index's spelling\nnext to the book's. One entry can name several places, and a place many entries.",
+  "properties": {
+    "source_page": {
+      "anyOf": [
+        {
+          "pattern": "^\\d{1,3}(?:-\\d{1,3})?(?:;\\s*\\d{1,3}(?:-\\d{1,3})?)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Page"
+    },
+    "confidence": {
+      "default": "high",
+      "title": "Confidence",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "place_id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Place Id",
+      "type": "string"
+    },
+    "entry_no": {
+      "pattern": "^(?:[1-9]\\d{0,3}|x-\\d{1,3}-\\d{1,2})$",
+      "title": "Entry No",
+      "type": "string"
+    },
+    "index_name": {
+      "title": "Index Name",
+      "type": "string"
+    },
+    "printed": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Printed"
+    },
+    "status": {
+      "enum": [
+        "agrees",
+        "spelling differs",
+        "corrected",
+        "also named",
+        "manual"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "place_id",
+    "entry_no",
+    "index_name",
+    "status"
+  ],
+  "title": "index_links",
+  "type": "object"
+}

@@ -9,7 +9,7 @@ import yaml
 from pydantic import ValidationError
 
 from denombrement import config
-from denombrement.data.models import TABLES, Entity, Entry, Feature, Holding, Membership, Place
+from denombrement.data.models import TABLES, Entity, Entry, Feature, Holding, IndexLink, Membership, Place
 
 LANGS = ("en", "fr", "de", "ja")
 
@@ -35,6 +35,7 @@ class Dataset:
     entities: list[tuple[int, Entity]] = field(default_factory=list)
     holdings: list[tuple[int, Holding]] = field(default_factory=list)
     features: list[tuple[int, Feature]] = field(default_factory=list)
+    index_links: list[tuple[int, IndexLink]] = field(default_factory=list)
     issues: list[Issue] = field(default_factory=list)  # parse errors found while loading
 
 

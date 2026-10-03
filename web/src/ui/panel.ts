@@ -3,7 +3,7 @@
 // Dénombrement that names the place, with its number, text and page. A territory also shows its
 // holder, the division it answers to, its counterpart on the same land, and its members.
 import type { Dataset, Entry, Place } from "../data/types";
-import { label, LANGS, name, t } from "../i18n";
+import { label, LANGS, name, type StringKey, t } from "../i18n";
 import { chains, ressortOf } from "../model/places";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
@@ -70,7 +70,25 @@ export function renderPanel(root: HTMLElement, data: Dataset, state: State, stor
       : place.approx ? t("approximate", lang) : place.geo === "low" ? t("lowConfidence", lang) : ""
     : "";
 
+  // The place's spellings, by source: the lists' (with their entries), the editor's index (with
+  // the numbers it gives), the edition's table of old forms. A territory has its seat as printed.
+  const spellings = (): (HTMLElement | null)[] => {
+    if (place.kind === "territory") {
+      return place.variants?.length ? [h("dt", {}, t("spellings", lang)),
+        h("dd", { class: "muted" }, place.variants.join(", "))] : [];
+    }
+    const spell = place.spell ?? [];
+    const group = (src: "book" | "index" | "old", key: StringKey) => {
+      const items = spell.filter((x) => x.src === src);
+      return items.length ? h("dd", { class: "spell" }, h("span", { class: "muted" }, `${t(key, lang)}: `),
+        items.map((x) => x.e?.length ? `${x.s} (${x.e.join(", ")})` : x.s).join(" · ")) : null;
+    };
+    return spell.length ? [h("dt", {}, t("spellings", lang)), group("book", "spellBook"), group("index", "spellIndex"),
+      group("old", "spellOld")] : [];
+  };
   const entries = (place.entries ?? []).map((no) => data.entryByNo.get(no)).filter((e): e is Entry => !!e);
+  // An entry that names other places too ("Volfflingen et Weissweiler"): the others, as links.
+  const others = (e: Entry) => [e.place, ...(e.also ?? [])].filter((id): id is string => !!id && id !== place.id);
   const entryItem = (e: Entry) => h("li", {},
     h("span", { class: "no" }, `${t("entry", lang)} ${e.no}`), " ",
     h("q", {}, e.text),
@@ -79,7 +97,9 @@ export function renderPanel(root: HTMLElement, data: Dataset, state: State, stor
       e.district ? placeName(e.district) : "",
       e.realm ? placeName(e.realm) : "",
       e.page ? `${t("pages", lang)} ${e.page}` : "",
-    ].filter(Boolean).join(" · ")));
+    ].filter(Boolean).join(" · "),
+    others(e).length ? h("span", {}, ` · ${t("withPlaces", lang)} `, ...others(e).flatMap((id, i) => [i ? ", " : "", link(id)]))
+      : ""));
 
   const members = isTerritory ? childrenOf(data).get(place.id) ?? [] : [];
   const memberTerritories = members.filter((m) => data.places.get(m.id)?.kind === "territory").map((m) => m.id);
@@ -97,8 +117,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, state: State, stor
       h("dt", {}, t("names", lang)),
       h("dd", {}, `FR ${place.name.fr ?? "—"} · DE ${place.name.de ?? "—"} · EN ${place.name.en ?? "—"}`
         + (place.name.ja ? ` · JA ${place.name.ja}` : "")),
-      place.variants?.length ? h("dt", {}, t("spellings", lang)) : null,
-      place.variants?.length ? h("dd", { class: "muted" }, place.variants.join(", ")) : null,
+      ...spellings(),
       h("dt", {}, t("type", lang)),
       h("dd", {}, typeLabels(place)),
       where || place.lost ? h("dt", {}, t("index", lang)) : null,

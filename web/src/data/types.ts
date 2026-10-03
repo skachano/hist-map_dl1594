@@ -26,12 +26,23 @@ export interface Holding {
   e: (number | string)[];
 }
 
+/** A spelling of a place: in the lists (with their entries), in the editor's index (with the
+ *  numbers it sends the place to), or in the edition's table of old forms. */
+export interface Spelling {
+  s: string;
+  src: "book" | "index" | "old";
+  e?: (number | string)[];
+}
+
 export interface Place {
   id: string;
   kind: "settlement" | "territory";
   type: string;
   name: Names;
+  /** territories: the seat as printed */
   variants?: string[];
+  /** settlements: every spelling, by source */
+  spell?: Spelling[];
   index?: { kind?: string; commune?: string; canton?: string; dept?: string };
   lat?: number;
   lon?: number;
@@ -69,7 +80,9 @@ export interface Entry {
   /** absent for the Dénombrement itself, else the thematic list */
   series?: string;
   order?: string;
+  /** the place the entry is matched to; `also`: the other places the index sends to it */
   place?: string;
+  also?: string[];
   page?: string;
   conf?: string;
 }

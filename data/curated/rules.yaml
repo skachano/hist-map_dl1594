@@ -84,11 +84,19 @@ entry_names:
 # Index lines for entries whose numbers led to the wrong line (checked by name and district).
 entry_index:
   1003: Chaumouzcy      # "Chamoysy", old form of Chaumousey; the index prints 1005
+  1672: Berus           # "La ville de Beaurains, Berriss": the index prints "Saarlouis (Pr.) 1672" without its comma
   1836: Lebcuville      # "Lebeufville" (Lebeuville), not Herbeuville
   1891: Saulx-en-Voévre # "Sault" in the bailliage of Hattonchâtel, not Le Sautel
   2244: Guemviller      # "Gunweiller" (Guenviller), not Buweiler
+  2259: Ponlpierre      # "Steinbiderstorff": Steinbiedersdorf, Pontpierre's German name (no line prints 2259)
 
 # Places for entries the index doesn't identify (a new place with the entry's name).
 entry_places:
   1411: nittel          # "Nittel" (office of Siersberg); the index has no line for it
-  1580: gersweiler      # "Gersweiller" (office of Sarreguemines)
+
+# Locations: {wikidata: Q…}, {lat, lon}, {approximate: other-place} or {unlocated: true}, with a note.
+geocode:
+  abaticourt: {wikidata: Q269866, note: "Abaucourt, canton de Nomeny (the scan reads Abaticourt); not Aboncourt-sur-Seille"}
+  hombourg-ilatit: {wikidata: Q22926, note: "Hombourg-Haut (the scan reads Hombourg-Ilatit)"}
+  hombourgou-hombourg-sur-kaner: {wikidata: Q22152, name_fr: Hombourg-sur-Kaner, note: "Hombourg or Hombourg-sur-Kaner, canton de Metzervisse: Hombourg-Budange"}
+  chatlemagnc-ou-chatemagnc: {approximate: abaticourt, name_fr: Chattemagne, note: "Chattemagne or Chatemagne (ban de): a part of Abaucourt's territory, where a castle stood (the index)"}

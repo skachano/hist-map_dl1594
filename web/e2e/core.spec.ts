@@ -123,3 +123,25 @@ test("settlements are drawn with one shape per kind of place, keyed in the legen
   });
   expect(images).toEqual([true, true, true]);
 });
+
+test("spellings by source: the lists, the editor's index and the table of old forms", async ({ page }) => {
+  await open(page, "#/map?color=tenure&lang=en&place=croismare");
+  const spell = page.locator("#panel dd.spell");
+  await expect(spell.filter({ hasText: "In the lists" })).toContainText("(255)");
+  await expect(spell.filter({ hasText: "In the editor's index (1870)" })).toContainText("Croismare (255)");
+  await expect(spell.filter({ hasText: "Table of old forms" })).toContainText("Hadonviller");
+});
+
+test("an entry naming two places is listed under both, each linking the other", async ({ page }) => {
+  await open(page, "#/map?color=tenure&lang=en&place=woelfling");
+  const entry = page.locator("#panel ul.entries > li").filter({ hasText: "No. 2230" });
+  await expect(entry).toBeVisible();
+  await entry.getByRole("button", { name: "Wiesviller" }).click();
+  await expect(page.locator("#panel h2")).toHaveText("Wiesviller");
+  await expect(page.locator("#panel ul.entries > li").filter({ hasText: "No. 2230" })
+    .getByRole("button", { name: /^W(oe|œ)lfling/ })).toBeVisible();
+  await open(page, "#/table?lang=en&q=Volfflingcn");
+  const row = page.locator("table.matrix tbody tr").first();
+  await expect(row.getByRole("button", { name: /^W(oe|œ)lfling/ })).toBeVisible();
+  await expect(row.getByRole("button", { name: "Wiesviller" })).toBeVisible();
+});

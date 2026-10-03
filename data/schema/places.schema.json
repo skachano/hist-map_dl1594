@@ -83,6 +83,13 @@
       "title": "Variants",
       "type": "array"
     },
+    "old_forms": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Old Forms",
+      "type": "array"
+    },
     "place_type": {
       "title": "Place Type",
       "enum": [
@@ -123,6 +130,8 @@
         "ban",
         "mayoralty",
         "val",
+        "town_district",
+        "district",
         "county",
         "marquisate",
         "barony",
@@ -254,6 +263,35 @@
       "default": false,
       "title": "Lost",
       "type": "boolean"
+    },
+    "geo_method": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Geo Method"
+    },
+    "geo_confidence": {
+      "anyOf": [
+        {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Geo Confidence"
     },
     "hierarchy": {
       "anyOf": [

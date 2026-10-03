@@ -53,6 +53,9 @@ def validate(ds: Dataset) -> list[Issue]:
     _check_shares(ds, err)
     for line, f in ds.features:
         fk("features", line, "place_id", f.place_id, place_ids, "places")
+    for line, x in ds.index_links:
+        fk("index_links", line, "place_id", x.place_id, place_ids, "places")
+        fk("index_links", line, "entry_no", x.entry_no, entry_nos, "entries")
     return issues
 
 

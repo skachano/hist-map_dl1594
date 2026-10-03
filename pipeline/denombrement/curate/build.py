@@ -18,7 +18,7 @@ from pathlib import Path
 import yaml
 
 from denombrement import config
-from denombrement.curate import corrections
+from denombrement.curate import corrections, reconcile
 from denombrement.data import models
 from denombrement.data.store import load_vocab
 from denombrement.parse import numbering
@@ -196,6 +196,9 @@ class Built:
     holdings: list[dict] = field(default_factory=list)
     features: list[dict] = field(default_factory=list)
     report: list[str] = field(default_factory=list)
+    entries_raw: list[dict] = field(default_factory=list)
+    index_links: list[dict] = field(default_factory=list)
+    resolution: reconcile.Resolution | None = None
 
 
 def _country(region: str) -> str | None:
@@ -244,6 +247,7 @@ def build() -> Built:
     rows = corrections.load_index()
     old_forms = corrections.load_old_forms()
     corr_log = corrections.apply(rows, old_forms)
+    commune_fixes = _canonical_seats(rows)
     matcher = Matcher(rows, old_forms)
     # The index names the département or state on some lines of a canton only: carry it over.
     canton_region: dict[str, Counter] = defaultdict(Counter)
@@ -340,7 +344,18 @@ def build() -> Built:
             continue
         matches[e["no"]] = matcher.match(e["no"], e["name"])
 
-    def place_for_row(row: corrections.IndexRow, e: dict, m: Match) -> str:
+    # Every number of every index line, resolved to the entry it means (curate/reconcile.py). An
+    # entry the matcher left alone takes the line whose number names it.
+    resolution = reconcile.resolve(matcher.rows, entries, matches, matcher.sim, similarity)
+    for no, links in resolution.by_entry().items():
+        unmatched = matches[no].row is None and matches[no].how == "none"
+        # …and so does one whose line no longer claims it (a correction or a decision by hand)
+        dropped = matches[no].row is not None and all(x.row is not matches[no].row for x in links)
+        if unmatched or dropped:
+            best = max(links, key=lambda x: (x.status == "manual", x.sim))
+            matches[no] = Match(best.row, "index number", best.sim, "medium")
+
+    def place_for_row(row: corrections.IndexRow, e: dict, m: Match | None) -> str:
         rid = id(row)
         if rid in row_ids:
             return row_ids[rid]
@@ -418,6 +433,35 @@ def build() -> Built:
         e["match"] = m
         if e.get("district"):
             district_seen[pid].add(key_map[e["district"]])
+    # The index's links: every place an entry names, the matched one first.
+    by_no = {e["no"]: e for e in entries}
+    for x in resolution.links:
+        if x.entry is None or x.status in ("unresolved", "no entry"):
+            continue
+        e = by_no[x.entry]
+        pid = place_for_row(x.row, e, None)
+        if pid != e["place_id"] and pid not in e.setdefault("also", []):
+            e["also"].append(pid)
+            variants[pid].add(e["name"])
+        out.index_links.append({"place_id": pid, "entry_no": str(x.entry), "index_name": display_name(x.row.entry.name),
+                                "printed": x.printed if x.printed != str(x.entry) else "", "status": x.status,
+                                "source_page": x.row.page, "confidence": "high" if x.sim >= 0.5 else "medium",
+                                "notes": x.note, "_row": id(x.row)})
+    # The editor's table of old forms: an old spelling next to the 1870 name of an index line.
+    by_index_name: dict[str, set[str]] = defaultdict(set)
+    for x in out.index_links:
+        by_index_name[name_key(x["index_name"])].add(x["place_id"])
+    for f in old_forms:
+        if f.get("ok") != "1" or not f["modern"]:
+            continue
+        for pid in by_index_name.get(name_key(display_name(f["modern"])), ()):
+            forms = out.places[pid].setdefault("_old", [])
+            old = clean.fix_name(f["old"].strip(" ."))
+            if old not in forms:
+                forms.append(old)
+    for p in out.places.values():
+        if p.get("_old"):
+            p["old_forms"] = "|".join(p.pop("_old"))
     for pid, names in variants.items():
         p = out.places[pid]
         p["variants"] = "|".join(sorted(n for n in names if n != p["name_fr"]))
@@ -454,22 +498,22 @@ def build() -> Built:
             "share_with": "", "series": e["series"], "order": e.get("order") or "", "place_id": e["place_id"],
             "source_page": e["page"], "confidence": m.confidence, "notes": "; ".join(notes),
         })
-        pid = e["place_id"]
-        if e["series"] == "main":
-            for rel, parent in (("admin", district), ("feudal", realm)):
-                if parent and (pid, parent, rel) not in seen_links:
-                    seen_links.add((pid, parent, rel))
-                    out.memberships.append({"child_id": pid, "parent_id": parent, "relation": rel,
-                                            "share": "part" if e.get("share") == "part" and rel == "admin" else "",
-                                            "source_page": e["page"]})
-            if section in ("domain", "fief", "clergy", "safeguard"):
-                for h in holder or [""]:
-                    share = e.get("share") or ("joint" if len(holder) > 1 else "")
-                    key = (pid, section, h, share)
-                    row = holding_rows.setdefault(key, {"place_id": pid, "tenure": section, "holder_id": h,
-                                                        "share": share, "share_with": "", "via_entry": [],
-                                                        "source_page": e["page"]})
-                    row["via_entry"].append(str(e["no"]))
+        for pid in [e["place_id"], *e.get("also", [])]:
+            if e["series"] == "main":
+                for rel, parent in (("admin", district), ("feudal", realm)):
+                    if parent and (pid, parent, rel) not in seen_links:
+                        seen_links.add((pid, parent, rel))
+                        out.memberships.append({"child_id": pid, "parent_id": parent, "relation": rel,
+                                                "share": "part" if e.get("share") == "part" and rel == "admin" else "",
+                                                "source_page": e["page"]})
+                if section in ("domain", "fief", "clergy", "safeguard"):
+                    for h in holder or [""]:
+                        share = e.get("share") or ("joint" if len(holder) > 1 else "")
+                        key = (pid, section, h, share)
+                        row = holding_rows.setdefault(key, {"place_id": pid, "tenure": section, "holder_id": h,
+                                                            "share": share, "share_with": "", "via_entry": [],
+                                                            "source_page": e["page"]})
+                        row["via_entry"].append(str(e["no"]))
     for row in holding_rows.values():
         row["via_entry"] = "|".join(row["via_entry"])
         # "1/2" twice for one holder at one place is the same half, listed under two headings.
@@ -489,7 +533,76 @@ def build() -> Built:
 
     out.report = _report(out, entries, matches, unmatched, district_seen, territories, key_map, corr_log,
                          unresolved_holders, rows)
+    out.resolution = resolution
+    out.report += ["", "## Index communes and cantons, spelling set", "",
+                   f"- {len(commune_fixes)} spellings set to the index's usual one: "
+                   + "; ".join(commune_fixes[:400])]
+    out.entries_raw = entries
     return out
+
+
+def _seat_key(name: str) -> str:
+    """A commune or canton as the index prints it, for comparing: no footnote marks, no "de",
+    the scan's Y for V at the start ("Yal-d'Ajol"), "-Nord"/"-Sud" kept."""
+    n = re.sub(r"^(?:canton\s+)?(?:de\s+la\s+|de\s+|d['’]\s*|du\s+|dc\s+|d<;\s*|«le\s+|«\s*)", "", name.strip(), flags=re.I)
+    n = re.sub(r"[*\d'’!°)]+$", "", n).strip(" .,;")
+    n = re.sub(r"^Y(?=[aeiouéè])", "V", clean.fix_name(n))
+    n = re.sub(r"(?:(?<=n)|(?<=our))l(?=$|-)", "t", n)     # "Gelvécourl", "Sainl-Dié": t read as l (not Perl)
+    return n.replace("1'", "l'")
+
+
+_OCR_DAMAGE = re.compile(r"[^A-Za-zÀ-ÖØ-öø-ÿ'’ .()\-]|\d|ii|ï|^(?:Y[aeiouéè]|ll|fl|il|Il|«)|[a-zà-ÿ][A-Z]"
+                         r"|(?:nl|rl|cl|sl)(?:\b|-)")
+
+
+def _garbled(name: str) -> bool:
+    """Does the scan show in this name? "Saint-Michel" is a name; "Sainl-Mihlel", "Yittel" are not."""
+    return bool(_OCR_DAMAGE.search(name.strip(" .*'’")))
+
+
+def _canonical_seats(rows) -> list[str]:
+    """The index's communes and cantons, OCR-garbled now and then ("Bouzonviiie"), set to the
+    spelling the index prints most: a canton named on other lines, or a line of its own."""
+    from collections import Counter as _C
+    seen: _C = _C()
+    for r in rows:
+        for v in (r.entry.canton, r.entry.commune, r.entry.near):
+            if v:
+                seen[_seat_key(v)] += 1
+        if not r.entry.xref:
+            seen[_seat_key(display_name(r.entry.name))] += 2   # a line of its own: a commune
+    known: dict[str, str] = {}
+    for k, n in seen.most_common():           # the most printed clean spelling of each name first
+        if n >= 2 and len(name_key(k)) >= 3 and not _garbled(k):
+            known.setdefault(name_key(k), k)
+    keys = list(known)
+    log, cache = [], {}
+
+    def fix(v: str) -> str:
+        if v in cache:
+            return cache[v]
+        k = _seat_key(v)
+        best = None
+        if _garbled(v) and _garbled(k):       # misread past cleaning: a clean spelling the index prints more?
+            nk = name_key(k)
+            best = known.get(nk)
+            if best is None and len(nk) >= 5:
+                close = [c for c in difflib.get_close_matches(nk, keys, n=3, cutoff=0.8)
+                         if c[0] == nk[0] and abs(len(c) - len(nk)) <= 1]
+                best = known[close[0]] if close else None
+            if best is not None and seen[best] <= seen[k]:
+                best = None
+        cache[v] = best or k
+        if cache[v] != v:
+            log.append(f"{v} → {cache[v]}")
+        return cache[v]
+
+    for r in rows:
+        e = r.entry
+        e.canton = fix(e.canton) if e.canton else e.canton
+        e.commune = fix(e.commune) if e.commune else e.commune
+        e.near = fix(e.near) if e.near else e.near
+    return sorted(set(log))
 
 
 def _fix_shares(out: Built) -> None:
@@ -582,6 +695,12 @@ def write(out: Built) -> None:
     dump(models.Entity, sorted(out.entities.values(), key=lambda e: e["id"]))
     dump(models.Holding, out.holdings)
     dump(models.Feature, out.features)
+    links, seen = [], set()
+    for x in sorted(out.index_links, key=lambda x: (x["place_id"], int(x["entry_no"]))):
+        if (x["place_id"], x["entry_no"]) not in seen:   # two index lines merged into one place
+            seen.add((x["place_id"], x["entry_no"]))
+            links.append(x)
+    dump(models.IndexLink, links)
     # Japanese names (the app's fourth language), keyed by the final ids; manual ones win.
     ja = {p["id"]: p["_name_ja"] for p in out.places.values() if p.get("_name_ja")}
     for r in load_manual("names_ja"):
@@ -593,6 +712,11 @@ def write(out: Built) -> None:
             w.writerow([pid, *ja[pid]])
     REVIEW_DIR.mkdir(parents=True, exist_ok=True)
     (REVIEW_DIR / "report.md").write_text("\n".join(out.report) + "\n")
+    if out.resolution:
+        counts = reconcile.write(out.resolution, out.entries, {x["_row"]: x["place_id"] for x in out.index_links})
+        lines = reconcile.report(counts)
+        with (REVIEW_DIR / "report.md").open("a") as f:
+            f.write("\n".join(lines) + "\n")
 
 
 def merge_geocoding(out: Built) -> int:
@@ -647,11 +771,15 @@ def _merge_same_item(out: Built) -> None:
             names = [v for v in (k.get("variants") or "").split("|") + (o.get("variants") or "").split("|")
                      + [o["name_fr"]] if v and v != k["name_fr"]]
             k["variants"] = "|".join(dict.fromkeys(names))
+            forms = [v for v in (k.get("old_forms") or "").split("|") + (o.get("old_forms") or "").split("|") if v]
+            k["old_forms"] = "|".join(dict.fromkeys(forms))
             k["notes"] = "; ".join(x for x in (k.get("notes"), f"merged with {other} (same Wikidata item and canton)") if x)
     if not into:
         return
     for e in out.entries:
         e["place_id"] = into.get(e["place_id"], e["place_id"])
+    for x in out.index_links:
+        x["place_id"] = into.get(x["place_id"], x["place_id"])
     seen, kept = set(), []
     for m in out.memberships:
         m["child_id"] = into.get(m["child_id"], m["child_id"])
@@ -724,6 +852,8 @@ def _rekey(out: Built) -> None:
         m["parent_id"] = renames.get(m["parent_id"], m["parent_id"])
     for h in out.holdings:
         h["place_id"] = renames.get(h["place_id"], h["place_id"])
+    for x in out.index_links:
+        x["place_id"] = renames.get(x["place_id"], x["place_id"])
     for f in out.features:
         f["place_id"] = renames.get(f["place_id"], f["place_id"]) if f.get("place_id") else f.get("place_id")
     # The review report names places by their ids too.

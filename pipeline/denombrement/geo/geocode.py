@@ -214,6 +214,7 @@ class Result:
     confidence: str = "low"
     note: str = ""
     anchor: tuple[float, float] | None = field(default=None, repr=False)
+    fixed: bool = field(default=False, repr=False)     # set by a rule: the automatic passes leave it
 
 
 def tiebreak(c: Cand) -> tuple:
@@ -287,6 +288,16 @@ def run() -> dict[str, Result]:
         anchors[key] = (cands[0].lat, cands[0].lon) if cands else None
         return anchors[key]
 
+    def seats(name: str) -> list[tuple[float, float]]:
+        """Every commune or canton seat of that name."""
+        keys = {name_key(clean_place_name(name))} - {""}
+        cands = [c for c in gaz.exact(keys) if c.rank >= 2.5]
+        # a commune merged since ("Thiaucourt" is Thiaucourt-Regniéville)
+        cands += [c for k in keys for hit in gaz.keys_by_initial.get(k[:2], []) if hit.startswith(k) and len(hit) > len(k) + 3
+                  for c in gaz.by_key[hit] if c.rank >= 2.5]
+        cands = cands or [c for c, s in gaz.fuzzy(keys, 0.85) if c.rank >= 2.5]
+        return sorted({(c.lat, c.lon) for c in cands})
+
     results: dict[str, Result] = {}
     for pid, p in places.items():
         if p["kind"] != "settlement":
@@ -326,8 +337,10 @@ def run() -> dict[str, Result]:
         elif exact:
             take(res, max(exact, key=tiebreak), "low", f"ambiguous without an anchor ({len(spots)} spots)")
 
+    _apply_rules(results, rules, items)   # first, so that the passes below leave these alone
     _refine(results, places, memberships, gaz, locate)
     _one_place_per_item(results, places, gaz)
+    _check_index(results, places, gaz, seats, rules, memberships)
     _apply_rules(results, rules, items)
 
     # Territories: a label point at the seat (a settlement of the seat's name in the territory),
@@ -398,6 +411,8 @@ def _refine(results: dict[str, Result], places: dict, memberships: list[dict], g
 
     changed = flagged = 0
     for pid, res in results.items():
+        if res.fixed:
+            continue
         centres = [c for t in parents.get(pid, ()) if (c := centre(t, pid))]
         if not centres:
             continue
@@ -405,6 +420,14 @@ def _refine(results: dict[str, Result], places: dict, memberships: list[dict], g
         far = res.lat is None or km(context, (res.lat, res.lon)) > FAR_KM
         weak = res.confidence == "low" or "no anchor" in res.note
         if not (far or weak):
+            continue
+        if "near the index's" in res.note and res.confidence == "high":
+            # The editor's commune or canton says where it is, and the name fits it well: the
+            # district doesn't move it. (A canton's name can be ambiguous: a loose match near
+            # the wrong Saint-Nicolas gives way to the district.)
+            if far:
+                res.note += f"; {km(context, (res.lat, res.lon)):.0f} km from its district"
+                flagged += 1
             continue
         p = places[pid]
         if res.method == "approximate" and far and p.get("index_commune"):
@@ -436,6 +459,74 @@ def _refine(results: dict[str, Result], places: dict, memberships: list[dict], g
     print(f"district context: {changed} place(s) re-matched, {flagged} flagged as far from their district")
 
 
+def _district_context(results: dict[str, Result], places: dict, memberships: list[dict]) -> dict[str, tuple]:
+    """Each settlement's district context: the median of the other reliably located members of its
+    districts, for choosing among namesakes (a bailliage will do for that)."""
+    parents: dict[str, set[str]] = defaultdict(set)
+    members: dict[str, list[str]] = defaultdict(list)
+    for m in memberships:
+        if m["relation"] == "admin":
+            parents[m["child_id"]].add(m["parent_id"])
+            members[m["parent_id"]].append(m["child_id"])
+    reliable = {pid for pid, r in results.items() if r.lat is not None and r.confidence != "low"}
+    out = {}
+    for pid in results:
+        centres = []
+        for t in parents.get(pid, ()):
+            if places.get(t, {}).get("place_type") == "duchy":
+                continue
+            pts = [(results[c].lat, results[c].lon) for c in members.get(t, []) if c in reliable and c != pid]
+            if len(pts) >= 3:
+                lats, lons = sorted(a for a, _ in pts), sorted(b for _, b in pts)
+                centres.append((lats[len(lats) // 2], lons[len(lons) // 2]))
+        if centres:
+            out[pid] = (sum(a for a, _ in centres) / len(centres), sum(b for _, b in centres) / len(centres))
+    return out
+
+
+def _check_index(results: dict[str, Result], places: dict, gaz: Gazetteer, seats, rules: dict,
+                 memberships: list[dict]) -> None:
+    """Last: every place where the index names its commune or canton must lie there. Names
+    repeat (two Berschweilers, three Colombeys): the one nearest the place's district is meant,
+    else the one nearest the match. A match far from it is made again near it, or marked doubtful."""
+    context = _district_context(results, places, memberships)
+    moved = flagged = missing = 0
+    for pid, res in results.items():
+        p = places[pid]
+        if pid in rules or not (p.get("index_commune") or p.get("index_canton")):
+            continue
+        kind = "commune" if p.get("index_commune") else "canton"
+        where = p.get("index_commune") or p.get("index_canton")
+        pts = seats(where)
+        if not pts:
+            res.note = (res.note + "; " if res.note else "") + f"the index's {kind} {where} is not found"
+            missing += 1
+            continue
+        if res.lat is None:
+            continue
+        if pid in context and len(pts) > 1:
+            anchor = min(pts, key=lambda pt: km(pt, context[pid]))
+            if km(anchor, context[pid]) > FAR_KM:     # no seat of that name near the district
+                anchor = min(pts, key=lambda pt: km(pt, (res.lat, res.lon)))
+        else:
+            anchor = min(pts, key=lambda pt: km(pt, (res.lat, res.lon)))
+        d = km(anchor, (res.lat, res.lon))
+        if d <= ANCHOR_KM[kind]:
+            continue
+        hit = gaz.best_near(place_keys(p), anchor, ANCHOR_KM[kind])
+        if hit:
+            c, s, dd = hit
+            take(res, c, "high" if s >= 0.95 else "medium",
+                 f"{s:.2f} near the index's {kind} ({dd:.0f} km); was {d:.0f} km away")
+            moved += 1
+        else:
+            res.confidence = "low"
+            res.note = (res.note + "; " if res.note else "") + f"{d:.0f} km from the index's {kind} {where}"
+            flagged += 1
+    print(f"index check: {moved} place(s) matched again near the index's commune or canton, {flagged} flagged, "
+          f"{missing} with a commune or canton not found")
+
+
 def _one_place_per_item(results: dict[str, Result], places: dict, gaz: Gazetteer) -> None:
     """Two places matched to one Wikidata item: the one whose name fits it best keeps it. The
     other keeps it too when both are the same place (the same name, or the same canton in the
@@ -453,9 +544,10 @@ def _one_place_per_item(results: dict[str, Result], places: dict, gaz: Gazetteer
         if cand is None:
             continue
         fit = {pid: gaz.sim(place_keys(places[pid]), cand) for pid in pids}
-        winner = max(sorted(pids), key=lambda pid: (fit[pid], {"high": 2, "medium": 1}.get(results[pid].confidence, 0)))
+        winner = max(sorted(pids), key=lambda pid: (results[pid].fixed, fit[pid],
+                                                    {"high": 2, "medium": 1}.get(results[pid].confidence, 0)))
         for pid in sorted(pids):
-            if pid == winner:
+            if pid == winner or results[pid].fixed:
                 continue
             same_canton = places[pid].get("index_canton") and \
                 name_key(places[pid]["index_canton"]) == name_key(places[winner].get("index_canton") or "")
@@ -484,6 +576,7 @@ def _apply_rules(results: dict[str, Result], rules: dict, items: dict) -> None:
         if res is None:
             continue
         note = rule.get("note", "set in rules.yaml")
+        res.fixed = True
         if "wikidata" in rule and rule["wikidata"] in items:
             it = items[rule["wikidata"]]
             res.lat, res.lon, res.wikidata_id = round(it["lat"], 5), round(it["lon"], 5), it["qid"]

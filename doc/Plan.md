@@ -74,7 +74,7 @@ The key change from hist_map is that **a numbered entry is not a place**. One vi
 | `source_page`, `confidence`, `notes` | |
 
 ### `places`: settlements and territories
-The same columns as hist_map's `places.csv`: `id`, `kind` (`settlement` / `territory`), `name_fr/de/en`, `variants[]` (the book's spellings and the old forms table), `place_type`, `lat`, `lon`, `wikidata_id`, `geonames_id`, `modern_country`, `source_page`, `confidence`, `notes`. Columns added:
+The same columns as hist_map's `places.csv`: `id`, `kind` (`settlement` / `territory`), `name_fr/de/en`, `variants[]` (the book's spellings: the lists' entries), `old_forms[]` (the edition's table of old forms), `place_type`, `lat`, `lon`, `wikidata_id`, `geonames_id`, `modern_country`, `source_page`, `confidence`, `notes`. Columns added:
 - `index_kind`, `index_commune`, `index_canton`, `index_dept`: the index's identification, kept as written in 1870
 - `lost`: the place no longer exists or could not be identified (italics in the index)
 - for territories only:
@@ -123,6 +123,9 @@ There is no `rulers` table: the book names holders, not reigns.
 
 ### `holdings`: tenure per place (generated from `entries`)
 `place_id`, `tenure` (`domain`, `fief`, `clergy`, `safeguard`), `holder_id`, `share`, `share_with[]`, `via_entry[]`, `source_page`. This replaces hist_map's `rights`: a single dimension (tenure) instead of right types, and no periods.
+
+### `index_links`: the index's numbers, resolved
+One row per number the editor's index prints, resolved to the entry it means: `place_id`, `entry_no`, `index_name` (the index line's heading), `printed` (the number as read, when it differs), `status` (`agrees`, `spelling differs`, `corrected`, `manual`), `source_page` (the index page), `confidence`, `notes`. An entry that names several places ("Volfflingen et Weissweiller") has a link to each; the place it is matched to stays `entries.place_id`.
 
 ### `features`: thematic items without a number
 `id`, `theme` (`mine`, `chaume`, `river`, `gem`), `name`, `place_id` (where it is), `attrs` (metals; gîtes; the places along a river), `source_page`.
@@ -568,6 +571,33 @@ Implement the remaining screens from §3 in this order: Territories, Table, Hold
     - Territory links in the place panel now open the Territories view at their hierarchy and level, as list links do.
     - The skip link ("Skip the map: show the entries as a table") was missing.
     - The About page's scroll area takes keyboard focus. This was axe's only finding.
+
+### After Stage 10: the index and the lists, number by number
+Requested after Stage 10: the index's names and the lists' names don't always match; go through both, match the numbers, register the spellings in the app, and check where the places are (the commune the index gives).
+- **Status: done.**
+  - **Both ways** (`curate/reconcile.py`): every number printed on every index line is resolved to the entry it means.
+    - First the entries the line claims, on their own number or on the number they were misread as.
+    - Then an entry whose name or text names the line's place, at the number or a confusable one: one digit away, or digits the scan confuses ("554" for 334).
+    - An abbreviated number ("1357, 95") counts from the entry the number before it means, not from that number as the scan read it.
+    - A line that claims an entry by name alone gives way to a line that prints its number.
+  - **By hand:** about 130 decisions in `data/curated/manual/index_numbers.csv` (page, index line, number as read, entry meant, note).
+    - Each number was read again on the printed page (cropped from the PDF), with the editor's corrections and the table of old forms.
+    - "Flainval, 38": the scan reads 58. "Croismare, 255": Hadonviller, its old name. "Kaisen, 1497" replaces Kassheim (corrections).
+    - Where a clearly printed number leads to an entry that another line names (Fosses, 2154: Drulben is Trulben), the line is left without an entry and says why.
+    - A "not:N" decision removes a claim by name alone.
+  - **Result** (`data/review/index_numbers.csv`, one row per number and per unnamed entry; summary in `report.md`):
+    - numbers: 1,919 agree, 89 spelling differs, 358 corrected automatically, 96 decided by hand, 30 without an entry, 0 unresolved
+    - entries: Dénombrement entries matched to an index line went from 95.0% to 98.3%; 38 entries are named by no line; 39 entries name more than one place
+  - **Spellings** in the app: the place panel lists them by source, each with its entries.
+    - in the lists (the book), in the editor's index (1870), in the table of old forms (323 places)
+    - An entry naming several places lists the others as links; the table shows every place of an entry.
+  - **Locations** (`geo/geocode.py`):
+    - The index's communes and cantons, garbled by the scan now and then ("Bouzonviiie", "Yal-d'Ajol", "Sainl-Dié"), are set to the spelling the index prints most. Only names that show the scan's damage change.
+    - Every located place is checked against its commune or canton. Among namesakes (three Colombeys, two Saint-Nicolas) the one nearest the place's district is meant; a compound name counts ("Thiaucourt" is Thiaucourt-Regniéville).
+    - A match far from it is made again near it: 14 places (Saint-Nicolas-de-Port, Aboncourt near Colombey-les-Belles, Hamonville, Lamorville…); 38 are flagged, and 74 name a commune or canton no database has.
+    - A strong match near the index's commune or canton is no longer moved by the district pass; places set in `rules.yaml` (new `geocode` section) are left alone by the automatic passes.
+    - 1,720 of 1,901 settlements are located, 95.7% of those the index identifies.
+  - Tests: 5 more pytest tests (`tests/test_reconcile.py`), 2 more Playwright tests (spellings by source; an entry naming two places). 75 pytest, 20 vitest and 47 Playwright tests pass.
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.

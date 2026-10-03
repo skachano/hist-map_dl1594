@@ -135,7 +135,8 @@ class Place(Provenance):
     name_fr: str
     name_de: str | None = None
     name_en: str | None = None
-    variants: list[str] = Field(default_factory=list)
+    variants: list[str] = Field(default_factory=list)   # the book's spellings (the lists' entries)
+    old_forms: list[str] = Field(default_factory=list)  # the editor's table of old forms
     place_type: str
     lat: Annotated[float, Field(ge=-90, le=90)] | None = None
     lon: Annotated[float, Field(ge=-180, le=180)] | None = None
@@ -214,4 +215,17 @@ class Feature(Provenance):
     attrs: str | None = None          # "metals=argent|cuivre", "gistes=2", the places along a river
 
 
-TABLES: list[type[CsvRow]] = [Entry, Place, Membership, Entity, Holding, Feature]
+class IndexLink(Provenance):
+    """A number printed in the editor's index, sending a place to an entry: the index's spelling
+    next to the book's. One entry can name several places, and a place many entries."""
+    table: ClassVar[str] = "index_links"
+    vocab_fields: ClassVar[dict[str, str]] = {"confidence": "confidence"}
+
+    place_id: Slug
+    entry_no: EntryNo
+    index_name: str                   # the index line's heading, as printed (OCR cleaned)
+    printed: str | None = None        # the number as the index prints it, when it differs or is missing
+    status: Literal["agrees", "spelling differs", "corrected", "also named", "manual"]
+
+
+TABLES: list[type[CsvRow]] = [Entry, Place, Membership, Entity, Holding, Feature, IndexLink]

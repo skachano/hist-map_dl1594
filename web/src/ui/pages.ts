@@ -66,8 +66,10 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
     .filter((p) => p.kind === "territory" && p.h === h_ && p.id !== DUCHY)
     .map((p) => [p.id, placeName(p.id)] as [string, string]).sort((a, b) => a[1].localeCompare(b[1], lang));
   const rows = filterEntries(data, f);
+  // Every place the entry names: the one it is matched to, then those the index adds.
+  const placesOf = (e: Entry) => [e.place, ...(e.also ?? [])].filter((id): id is string => !!id);
   const cells = (e: Entry) => [
-    String(e.no), e.text, e.place ? placeName(e.place) : "", e.district ? placeName(e.district) : "",
+    String(e.no), e.text, placesOf(e).map(placeName).join(", "), e.district ? placeName(e.district) : "",
     e.realm ? placeName(e.realm) : "",
     e.series ? label(vocab.series[e.series], lang, e.series) : label(vocab.sections[e.section ?? ""], lang, e.section ?? ""),
     entryHolders(e).map(entityName).join(", "), e.page ?? "",
@@ -100,7 +102,7 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
         h("tbody", {}, ...rows.map((e) => h("tr", {},
           h("th", { scope: "row" }, String(e.no)),
           h("td", {}, e.text),
-          h("td", {}, e.place ? link(e.place, () => showOnMap(store, e.place!)) : ""),
+          h("td", {}, ...placesOf(e).flatMap((id, i) => [i ? ", " : "", link(id, () => showOnMap(store, id))])),
           h("td", {}, e.district ? link(e.district, () => openPlace(store, data, e.district!)) : ""),
           h("td", {}, e.realm ? link(e.realm, () => openPlace(store, data, e.realm!)) : ""),
           ...cells(e).slice(5).map((x) => h("td", {}, x))))))),

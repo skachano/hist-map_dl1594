@@ -1,4 +1,5 @@
 id,name_ja,source
+anoux,アヌー,wikidata
 apremont-la-foret,アスプルモン＝ラ＝フォレ,wikidata
 attigny,アティニー,wikidata
 aydoilles,アイドイユ,wikidata
@@ -24,6 +25,7 @@ cornimont,コルニモン,wikidata
 county-blamont,ブラモン伯領,seat + type
 county-vaudemont,ヴォーデモン伯領,seat + type
 crion,クリオン,wikidata
+croismare,クロワマール,wikidata
 custines,キュスティーヌ,wikidata
 darney,ダルネー,wikidata
 derbamont,デルバモン,wikidata
@@ -36,6 +38,7 @@ epinal,エピナル,wikidata
 essey-les-nancy,エッセ＝レ＝ナンシー,wikidata
 euvezin,ウーヴザン,wikidata
 fleville-devant-nancy,フレヴィル＝ドゥヴァン＝ナンシー,wikidata
+fontenoy-la-ville,フォントノワ＝ル＝シャトー,wikidata
 fougerolles,フジュロル,wikidata
 gerardmer,ジェラールメ,wikidata
 germonville,ジェルモンヴィル,wikidata
@@ -63,7 +66,6 @@ malzeville,マルゼヴィル,wikidata
 manoncourt-en-vermois,マノンクール＝アン＝ヴェルモワ,wikidata
 mars-la-tour,マルス・ラ・トゥール村,wikidata
 maxeville,マクセヴィル,wikidata
-merchweiler,メルヒヴァイラー,wikidata
 mirecourt,ミルクール,wikidata
 nancy,ナンシー,wikidata
 neuviller-sur-moselle,ヌヴィレ＝シュル＝モゼル,wikidata

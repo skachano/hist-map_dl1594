@@ -73,10 +73,33 @@ def build() -> dict[str, int]:
     for _, m in sorted(ds.memberships, key=lambda lm: (lm[1].child_id, lm[1].relation, lm[1].parent_id)):
         parents[m.child_id].append(_compact({"id": m.parent_id, "rel": m.relation, "share": m.share}))
 
+    # A place's entries: those matched to it, and those the index sends it to (an entry can name
+    # several places); its spellings by source, each with the entries it stands for.
+    entry_by_no = {e.no: e for _, e in ds.entries}
     entries_of: dict[str, list[int | str]] = defaultdict(list)
+    also: dict[str, list[str]] = defaultdict(list)
     for _, e in ds.entries:
         if e.place_id:
             entries_of[e.place_id].append(entry_number(e.no) or e.no)
+    index_of: dict[str, dict[str, list]] = defaultdict(dict)
+    for _, x in sorted(ds.index_links, key=lambda lx: (lx[1].place_id, entry_number(lx[1].entry_no) or 0)):
+        no = entry_number(x.entry_no) or x.entry_no
+        if no not in entries_of[x.place_id]:
+            entries_of[x.place_id].append(no)
+            also[x.entry_no].append(x.place_id)
+        index_of[x.place_id].setdefault(x.index_name, []).append(no)
+    for nos in entries_of.values():
+        nos.sort(key=lambda n: n if isinstance(n, int) else 0)
+
+    def spellings(p) -> list[dict]:
+        book: dict[str, list] = {}
+        for no in entries_of.get(p.id, []):
+            e = entry_by_no.get(str(no))
+            if e is not None:
+                book.setdefault(e.name, []).append(no)
+        return ([{"s": s, "src": "book", "e": nos} for s, nos in book.items()]
+                + [{"s": s, "src": "index", "e": nos} for s, nos in index_of.get(p.id, {}).items()]
+                + [{"s": s, "src": "old"} for s in p.old_forms])
 
     holdings_of: dict[str, list[dict]] = defaultdict(list)
     holdings_by_holder = Counter()
@@ -99,7 +122,8 @@ def build() -> dict[str, int]:
         places.append(_compact({
             "id": p.id, "kind": p.kind, "type": p.place_type,
             "name": _compact({"fr": p.name_fr, "de": p.name_de, "en": p.name_en, "ja": ja.get(p.id)}),
-            "variants": sorted(v for v in p.variants if v != p.name_fr),
+            "spell": spellings(p) if not territory else None,
+            "variants": sorted(v for v in p.variants if v != p.name_fr) if territory else None,
             "index": _compact({"kind": p.index_kind, "commune": p.index_commune, "canton": p.index_canton,
                                "dept": p.index_dept}),
             "lat": p.lat, "lon": p.lon,
@@ -123,6 +147,7 @@ def build() -> dict[str, int]:
         "district": e.district_id, "realm": e.realm_id, "section": e.section,
         "holders": e.holder_id, "share": e.share, "with": e.share_with,
         "series": None if e.series == "main" else e.series, "order": e.order, "place": e.place_id,
+        "also": also.get(e.no),
         "page": e.source_page, "conf": None if e.confidence == "high" else e.confidence,
     }) for _, e in ds.entries]  # the book's order
 
