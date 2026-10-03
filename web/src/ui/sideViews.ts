@@ -2,8 +2,8 @@
 // holder holds) and Church & resources (a thematic list of the book, or the chaumes).
 import type { Dataset, Entry, Place } from "../data/types";
 import { label, name, type StringKey, t } from "../i18n";
-import { DISTRICT, REALM_COLOURS } from "../model/colors";
-import { currentLevel, levelsOf, realmGroup, shownAreas } from "../model/territories";
+import { GROUP_COLOUR } from "../model/colors";
+import { areas, currentLevel, GROUP_ORDER, KINDS, levelsOf, type RealmGroup, realmGroup, shownAreas } from "../model/territories";
 import { LAYERS, type Layer, type State, type Store } from "../state/store";
 import { fill, h } from "./dom";
 import { openPlace, showOnMap } from "./navigate";
@@ -25,34 +25,55 @@ export function layerEntries(data: Dataset, layer: Layer): Entry[] {
   return data.entries.filter((e) => e.series && series.has(e.series));
 }
 
+const GROUP_LABEL: Record<RealmGroup, StringKey> = {
+  office: "groupOffice", county: "groupCounty", lordship: "groupLordship", other: "groupOther" };
+const KIND_GROUP_LABEL: Record<(typeof KINDS)[number]["group"], StringKey> = {
+  administrative: "kindsAdministrative", feudal: "kindsFeudal" };
+
+/** Territories view, as in hist_map: the hierarchy and level switches, the kind of realm, the colour
+ *  key of the kinds shown, and every realm shown with its number of places. */
 export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: State, store: Store): void {
   const { lang } = state;
   const feudal = !!state.feudal;
   const levels = levelsOf(data, feudal);
   const level = currentLevel(data, feudal, state.level);
-  const shown = shownAreas(data, feudal, level);
+  const shown = shownAreas(data, feudal, level, state.kind);
   const placeName = (id: string) => name(data.places.get(id)?.name, lang, id);
-  const vocab = data.meta.vocab;
-  const sorted = [...shown].sort((a, b) => placeName(a.id).localeCompare(placeName(b.id), lang));
-  const swatch = (type: string) => h("span", { class: "swatch",
-    style: `--c:${feudal ? REALM_COLOURS[realmGroup(type)] : DISTRICT}` });
+  const groups = new Map<RealmGroup, number>();
+  for (const a of shown) groups.set(realmGroup(a.type), (groups.get(realmGroup(a.type)) ?? 0) + 1);
+  const kinds = new Map<string, number>();
+  for (const a of areas(data)) kinds.set(a.type, (kinds.get(a.type) ?? 0) + 1);
+  const vocab = data.meta.vocab.territory_types;
+  const kindLabel = (type: string) => {
+    const l = label(vocab[type], lang, type);
+    return l.charAt(0).toUpperCase() + l.slice(1);
+  };
+  const hierarchyButton = (f: boolean, key: StringKey) => h("button",
+    { "aria-pressed": String(!state.kind && feudal === f), onclick: () => store.set({ feudal: f || undefined,
+      level: undefined, kind: undefined }) }, t(key, lang));
+  const levelButton = (l: number) => h("button", { "aria-pressed": String(!state.kind && l === level),
+    onclick: () => store.set({ level: l, kind: undefined }) }, t(`level${l}${feudal ? "Feudal" : ""}` as StringKey, lang));
+  const kindMenu = h("select", { "aria-label": t("kindOfRealm", lang),
+    onchange: (e: Event) => store.set({ kind: (e.target as HTMLSelectElement).value || undefined }) },
+    h("option", { value: "", selected: !state.kind }, t("allKinds", lang)),
+    ...KINDS.map(({ group, types }) => h("optgroup", { label: t(KIND_GROUP_LABEL[group], lang) },
+      ...types.filter((type) => kinds.has(type)).map((type) => h("option", { value: type, selected: type === state.kind },
+        `${kindLabel(type)} (${kinds.get(type)})`)))));
   fill(root,
-    h("h2", {}, t("view_territories", lang)),
-    h("div", { class: "levels", role: "group", "aria-label": t("hierarchy", lang) },
-      h("button", { "aria-pressed": String(!feudal), onclick: () => store.set({ feudal: undefined, level: undefined }) },
-        t("hierarchyAdmin", lang)),
-      h("button", { "aria-pressed": String(feudal), onclick: () => store.set({ feudal: true, level: undefined }) },
-        t("hierarchyFeudal", lang))),
+    h("h2", {}, `${t("realmsShown", lang)} (${shown.length})`),
+    h("div", { class: "levels hierarchy", role: "group", "aria-label": t("hierarchy", lang) },
+      hierarchyButton(false, "hierarchyAdmin"), hierarchyButton(true, "hierarchyFeudal")),
     levels.length > 1 ? h("div", { class: "levels", role: "group", "aria-label": t("level", lang) },
-      ...[...levels, 0].map((l) => h("button", { "aria-pressed": String(l === level), onclick: () => store.set({ level: l }) },
-        t(`level${l}${feudal ? "Feudal" : ""}` as StringKey, lang)))) : null,
-    h("p", { class: "key" }, feudal ? t("realmsNote", lang) : t("divisionsNote", lang)),
-    h("ul", { class: "realms" }, ...sorted.map((a) => h("li", {},
-      swatch(a.type), " ",
-      h("button", { class: "link", "data-place": a.id, "aria-pressed": String(state.place === a.id),
-        onclick: () => openPlace(store, data, a.id) }, placeName(a.id)),
-      h("span", { class: "muted" }, ` · ${label(vocab.territory_types[a.type], lang, a.type)} · ${a.settlements} ${t("places", lang)}`)))),
-    h("p", { class: "key" }, t("approxAreas", lang)),
+      ...[...levels, 0].map(levelButton)) : null,
+    h("label", { class: "kind" }, `${t("kindOfRealm", lang)} `, kindMenu),
+    h("ul", { class: "groups" }, ...GROUP_ORDER.map((g) => h("li", {},
+      h("span", { class: "swatch", style: `--c:${GROUP_COLOUR[g]}` }), ` ${t(GROUP_LABEL[g], lang)}`,
+      h("span", { class: "count" }, ` ${groups.get(g) ?? 0}`)))),
+    h("ul", { class: "realms" }, ...[...shown].sort((a, b) => placeName(a.id).localeCompare(placeName(b.id), lang))
+      .map((a) => h("li", {},
+        h("button", { class: "link", "data-place": a.id, "aria-pressed": String(state.place === a.id),
+          onclick: () => openPlace(store, data, a.id) }, placeName(a.id)),
+        h("span", { class: "muted" }, a.settlements ? ` · ${a.settlements} ${t("places", lang)}` : ` · ${t("noArea", lang)}`)))),
   );
 }
 

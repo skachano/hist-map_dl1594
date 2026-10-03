@@ -15,6 +15,8 @@ describe("territories", () => {
     expect(shownAreas(data, false, 1).map((a) => a.id)).toEqual(["bailiwick-nancy"]);
     expect(shownAreas(data, false, 0).map((a) => a.id)).toEqual(["bailiwick-nancy", "provostship-nancy", "ban-sept"]);
     expect(shownAreas(data, true, 1).map((a) => a.id)).toEqual(["county-vaudemont"]);
+    // one kind of realm at every level, whatever the hierarchy
+    expect(shownAreas(data, false, 1, "provostship").map((a) => a.id)).toEqual(["provostship-nancy"]);
   });
   it("lists the levels and leaves out the duchy", () => {
     expect(levelsOf(data, false)).toEqual([1, 2, 3]);
@@ -23,6 +25,9 @@ describe("territories", () => {
   it("groups realms by kind", () => {
     expect(realmGroup("county")).toBe("county");
     expect(realmGroup("fief")).toBe("lordship");
-    expect(realmGroup("temporality")).toBe("temporality");
+    expect(realmGroup("temporality")).toBe("other");   // church lands: hist_map has no group for them
+    expect(realmGroup("provostship")).toBe("office");
+    expect(realmGroup("bailiwick")).toBe("office");
+    expect(realmGroup("ban")).toBe("other");
   });
 });

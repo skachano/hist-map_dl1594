@@ -157,3 +157,21 @@ test("about page cites the book and the data sources in every language", async (
     await expect(about.locator("h2").first()).toHaveText(title);
   }
 });
+
+test("territories: one kind of realm at every level, and the colour key of the kinds shown", async ({ page }) => {
+  await open(page, "#/territories?lang=en");
+  const side = page.locator("#side");
+  const groups = side.locator("ul.groups li");
+  await expect(groups.filter({ hasText: "Offices, castellanies, provostships" })).toContainText("20");
+  const menu = side.getByRole("combobox", { name: "Kind of realm" });
+  await menu.selectOption("provostship");
+  await expect(page).toHaveURL(/kind=provostship/);
+  await expect(side.getByRole("button", { name: "Bailliages" })).toHaveAttribute("aria-pressed", "false");
+  for (const text of await side.locator("ul.realms li").allInnerTexts()) expect(text).toMatch(/^Provostship of /);
+  await menu.selectOption("county");
+  await expect(groups.filter({ hasText: "Counties" })).toContainText("3");
+  await expect(side.getByRole("button", { name: "County of Vaudémont" })).toBeVisible();
+  await side.getByRole("button", { name: "Administrative divisions" }).click();   // back to levels
+  await expect(page).not.toHaveURL(/kind=/);
+  await expect(side.getByRole("button", { name: "Bailiwick of Nancy" })).toBeVisible();
+});

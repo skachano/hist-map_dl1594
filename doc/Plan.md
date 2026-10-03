@@ -155,7 +155,8 @@ All screens share the UI language switch (EN/FR/DE/JA, which changes both labels
    Hatching marks shared places ("en partie", "pour la moitié"). Places outside the duchy that the book doesn't list (the Three Bishoprics, the Barrois) are left blank and labelled.
 2. **Territories** (the default view and first tab since after Stage 10): hist_map's Territories view without the year, with a switch between the two hierarchies (`#/territories?h=admin|feudal&lvl=…`):
    - **Administrative divisions:** level 1 = bailliages and the towns outside them; level 2 = prévôtés, châtellenies, offices; level 3 = bans, mairies, vals; 0 = all levels. Areas tile the duchy.
-   - **Feudal realms:** level 1 = realms held directly (counties, terres, lordships, church temporalities); level 2 = realms inside them; 0 = all. Areas cover only the realms' members, so the land between them is blank. Each realm is coloured by kind, and its tooltip gives its holder and the district it answers to.
+   - **Feudal realms:** level 1 = realms held directly (counties, terres, lordships, church temporalities); level 2 = realms inside them; 0 = all. Areas cover only the realms' members, so the land between them is blank.
+   - Both hierarchies are coloured by kind of realm, as in hist_map (see "the Territories screen as in hist_map" below), and a "Kind of realm" menu shows one kind at every level.
 
    The panel lists a territory's members in the book's order with their numbers. It links a territory to its counterpart in the other hierarchy (prévôté of Deneuvre ↔ lordship of Deneuvre), and a feudal realm to its `ressort`.
 3. **Holders:** pick a holder (a fief-holding house, a chapter, an abbey) to see everything it holds on the map and in a list. hist_map's entity view, without rulers or gains and losses.
@@ -634,6 +635,22 @@ Requested: remove the Holder mode from the Map tab, and rename the Map tab to Te
 ### After Stage 10: Territories first
 Requested: make Territories the default view, and put Tenures second.
 - **Status: done.** The tabs are Territories, Tenures, Holders, Table, Church & resources, About & sources. A bare address or an unknown view opens Territories; `#/map` links still open Tenures. A Playwright test checks the default and the order (48 tests pass).
+
+### After Stage 10: the Territories screen as in hist_map
+Requested: make the Territories screen follow the colour scheme and the structure of hist_map's Territories page.
+- **Status: done.**
+  - **Colours** (`model/territories.ts`, `model/colors.ts`), as in hist_map, in both hierarchies:
+    - every realm is coloured by its kind: offices, castellanies and provostships in blue (bailliages, prévôtés, offices, districts, the sous-prévôté, the towns with their districts), lordships and fiefs in orange, counties in green, and the other realms in a dark grey (bans, mairies, vals, the abbey's lands)
+    - opacity 0.45 for the hues and 0.75 for the grey, white borders, the selected realm outlined in black, the duchy outlined in black (hist_map's bailiwick line)
+    - hist_map's principalities (yellow) and marquisates (violet) don't occur in this book. Church lands, green before, are in the grey group: hist_map has no group for them.
+  - **Side list**, as in hist_map:
+    - the title with the number shown ("Realms (21)")
+    - the hierarchy switch, the level switch, and a "Kind of realm" menu: all kinds by level, or one kind at every level (`#/territories?kind=ban`), grouped as administrative districts and feudal titles, with counts
+    - the colour key of the kinds with the number shown of each
+    - the realms by name, each with its number of places
+    - The notes on divisions and realms and the per-realm swatches are gone, as in hist_map.
+  - Not taken from hist_map: the year and the "realms outside the bailiwick" switch, which this book doesn't need.
+  - Tests: vitest for the groups and the kind filter; one more Playwright test (kind menu and key). 19 vitest and 49 Playwright tests pass.
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.

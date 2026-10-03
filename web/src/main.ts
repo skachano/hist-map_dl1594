@@ -82,7 +82,7 @@ async function start(): Promise<void> {
     const none: AreaLayer = { ids: [], feudal: false, interactive: false };
     if (state.view === "territories") {
       const feudal = !!state.feudal;
-      const ids = shownAreas(data, feudal, currentLevel(data, feudal, state.level)).map((a) => a.id);
+      const ids = shownAreas(data, feudal, currentLevel(data, feudal, state.level), state.kind).map((a) => a.id);
       return { styles: new Map(), areas: { ids, feudal, interactive: true } };
     }
     if (state.view === "holders") {

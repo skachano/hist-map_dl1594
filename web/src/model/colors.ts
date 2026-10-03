@@ -4,15 +4,13 @@
 // colours plus a neutral grey; tooltip, legend and panel always name what a colour stands for.
 export const SERIES = ["#2a78d6", "#eb6834", "#1baf7a"];
 export const OTHER = "#c3c2b7";
-/** Area fill for administrative divisions: the palette's darker muted neutral (the grey OTHER vanishes
- *  on the grey basemap at the areas' opacity). */
-export const DISTRICT = "#898781";
+/** Territories only: the other realms (bans, mairies, vals, church lands). The neutral grey OTHER
+ *  vanishes on the grey basemap at the areas' opacity; this is the palette's darker muted neutral. */
+export const REALM_OTHER = "#898781";
 
 /** Tenure: ducal domain, fiefs, church lands; safeguards share the neutral grey. */
 export const TENURE_COLOURS: Record<string, string> = {
   domain: SERIES[0], fief: SERIES[1], clergy: SERIES[2], safeguard: OTHER,
 };
-/** Kinds of realm: church lands, lordships (terres, seigneuries, fiefs), counties. */
-export const REALM_COLOURS: Record<string, string> = {
-  temporality: SERIES[2], lordship: SERIES[1], county: SERIES[0],
-};
+/** Territories: the colour of each kind of realm, as in hist_map (model/territories.ts groups the types). */
+export const GROUP_COLOUR = { office: SERIES[0], lordship: SERIES[1], county: SERIES[2], other: REALM_OTHER } as const;

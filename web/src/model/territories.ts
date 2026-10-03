@@ -26,8 +26,9 @@ export function areas(data: Dataset): Area[] {
   return list;
 }
 
-/** The areas of one hierarchy at a level (0 = all levels). */
-export function shownAreas(data: Dataset, feudal: boolean, level: number): Area[] {
+/** The areas of one hierarchy at a level (0 = all levels), or of one kind at every level. */
+export function shownAreas(data: Dataset, feudal: boolean, level: number, kind?: string): Area[] {
+  if (kind) return areas(data).filter((a) => a.type === kind);
   return areas(data).filter((a) => a.hierarchy === (feudal ? "feudal" : "admin") && (level === 0 || a.level === level));
 }
 
@@ -37,10 +38,33 @@ export function levelsOf(data: Dataset, feudal: boolean): number[] {
     .sort((a, b) => a - b);
 }
 
-/** Group of a realm's type for its colour: county, church lands, else lordship. */
-export function realmGroup(type: string): "county" | "temporality" | "lordship" {
-  return type === "county" || type === "temporality" ? type : "lordship";
+/** Kinds of realm, coloured as in hist_map: offices and their like in blue, lordships and fiefs in
+ *  orange, counties in green, and the rest (bans, mairies, vals, church lands) in a dark grey. The
+ *  book has no principality or marquisate, hist_map's other two groups. */
+const GROUPS: Record<string, Exclude<RealmGroup, "other">> = {
+  bailiwick: "office", provostship: "office", sub_provostship: "office", castellany: "office", office: "office",
+  district: "office", town_district: "office",
+  lordship: "lordship", fief: "lordship",
+  county: "county",
+};
+export type RealmGroup = "office" | "county" | "lordship" | "other";
+export const GROUP_ORDER: RealmGroup[] = ["office", "county", "lordship", "other"];
+
+export function realmGroup(type: string): RealmGroup {
+  return GROUPS[type] ?? "other";
 }
+
+/** The place types of one group, for the map's colours. */
+export function typesIn(group: Exclude<RealmGroup, "other">): string[] {
+  return Object.keys(GROUPS).filter((t) => GROUPS[t] === group);
+}
+
+/** The "kind of realm" menu, as in hist_map: administrative divisions, then feudal titles by rank. */
+export const KINDS: { group: "administrative" | "feudal"; types: string[] }[] = [
+  { group: "administrative", types: ["bailiwick", "provostship", "sub_provostship", "castellany", "office", "district",
+    "town_district", "ban", "mayoralty", "val"] },
+  { group: "feudal", types: ["county", "lordship", "fief", "temporality"] },
+];
 
 /** The level the Territories view shows: the one asked for if the hierarchy has it, else its top level. */
 export function currentLevel(data: Dataset, feudal: boolean, level?: number): number {

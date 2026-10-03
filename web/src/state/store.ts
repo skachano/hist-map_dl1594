@@ -1,6 +1,6 @@
 // Application state, mirrored in the URL hash so any view can be linked:
 //   #/map?lang=fr&place=saint-avold   (the Tenures tab; links with the old colour modes still open it)
-//   #/territories?h=feudal&lvl=1     #/holders?entity=abbey-saint-avold     #/church?layer=abbeys
+//   #/territories?h=feudal&lvl=1   #/territories?kind=provostship     #/holders?entity=abbey-saint-avold     #/church?layer=abbeys
 //   #/table?d=provostship-nancy&t=fief&q=chasteau
 import type { Lang } from "../data/types";
 import { LANGS } from "../i18n";
@@ -29,9 +29,10 @@ export interface State {
   view: View;
   lang: Lang;
   place?: string;
-  /** territories view: which hierarchy, and which level (0 = all) */
+  /** territories view: which hierarchy, and which level (0 = all); or one kind of realm at every level */
   feudal?: boolean;
   level?: number;
+  kind?: string;
   /** holders view */
   entity?: string;
   /** church & resources view */
@@ -59,6 +60,7 @@ export function parseHash(hash: string): State {
     place: q.get("place") ?? undefined,
     feudal: q.get("h") === "feudal" || undefined,
     level: ["0", "1", "2", "3"].includes(q.get("lvl") ?? "") ? Number(q.get("lvl")) : undefined,
+    kind: q.get("kind") || undefined,
     entity: q.get("entity") ?? undefined,
     layer: (LAYERS as readonly string[]).includes(layer) ? layer : undefined,
     filters: Object.keys(filters).length ? filters : undefined,
@@ -70,6 +72,7 @@ export function toHash(s: State): string {
   if (s.place) q.set("place", s.place);
   if (s.feudal) q.set("h", "feudal");
   if (s.level !== undefined) q.set("lvl", String(s.level));
+  if (s.kind) q.set("kind", s.kind);
   if (s.entity) q.set("entity", s.entity);
   if (s.layer) q.set("layer", s.layer);
   for (const [key, short] of FILTER_KEYS) {

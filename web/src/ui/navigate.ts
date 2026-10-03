@@ -24,6 +24,7 @@ export function openPlace(store: Store, data: Dataset, placeId: string, extra: P
   if (place?.kind === "territory" && area) {
     focus.fitArea(placeId);
     store.set({ ...extra, view: "territories", place: placeId, feudal: area.hierarchy === "feudal" || undefined,
+      kind: undefined,
       level: area.level });
   } else {
     store.set({ ...extra, place: placeId });

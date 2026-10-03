@@ -10,7 +10,8 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { MAP_CENTER, MAP_ZOOM, PLACE_ZOOM } from "../config";
 import type { Dataset } from "../data/types";
-import { DISTRICT, REALM_COLOURS } from "../model/colors";
+import { GROUP_COLOUR } from "../model/colors";
+import { typesIn } from "../model/territories";
 import { DUCHY, type PlaceStyle } from "../model/places";
 import { ICON_PIXEL_RATIO, iconName, SHAPES, shapeImage } from "./icons";
 
@@ -152,13 +153,15 @@ export class MapView {
 
     const state = (key: string) => ["feature-state", key] as ["feature-state", string];
     const hidden: FilterSpecification = ["==", ["get", "id"], ""];
-    // Territory areas: divisions grey, realms by kind; white borders between neighbours.
+    // Territory areas, as in hist_map: realms coloured by kind (offices blue, lordships orange, counties
+    // green, the rest dark grey), white borders between neighbours.
+    const coloured = [...typesIn("office"), ...typesIn("lordship"), ...typesIn("county")];
     m.addLayer({ id: "area-fill", type: "fill", source: "territories", filter: hidden,
       paint: {
-        "fill-color": ["case", ["==", ["get", "hierarchy"], "feudal"],
-          ["match", ["get", "place_type"], "county", REALM_COLOURS.county, "temporality", REALM_COLOURS.temporality,
-            REALM_COLOURS.lordship], DISTRICT],
-        "fill-opacity": ["case", ["==", ["get", "hierarchy"], "feudal"], 0.55, 0.35],
+        "fill-color": ["match", ["get", "place_type"], typesIn("office"), GROUP_COLOUR.office,
+          typesIn("lordship"), GROUP_COLOUR.lordship, typesIn("county"), GROUP_COLOUR.county, GROUP_COLOUR.other],
+        // The neutral grey has no hue to stand out on the grey basemap: only darkness can.
+        "fill-opacity": ["match", ["get", "place_type"], coloured, 0.45, 0.75],
       } });
     m.addLayer({
       id: "cells-fill", type: "fill", source: "cells",
@@ -168,9 +171,9 @@ export class MapView {
     m.addLayer({ id: "cells-line", type: "line", source: "cells",
       paint: { "line-color": "#fcfcfb", "line-width": 0.6 } });
     m.addLayer({ id: "area-line", type: "line", source: "territories", filter: hidden,
-      paint: { "line-color": "#fcfcfb", "line-width": 2.5 } });
+      paint: { "line-color": "#fcfcfb", "line-width": 2 } });
     m.addLayer({ id: "duchy", type: "line", source: "territories", filter: ["==", ["get", "id"], DUCHY],
-      paint: { "line-color": "#52514e", "line-width": 0.8 } });
+      paint: { "line-color": "#0b0b0b", "line-width": 1.8 } });
     // Settlements: the shape says what kind of place (map/icons.ts), the fill what the view shows.
     m.addLayer({
       id: "places-icon", type: "symbol", source: "places",
