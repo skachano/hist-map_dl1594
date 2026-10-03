@@ -17,7 +17,7 @@ describe("URL state", () => {
   });
   it("falls back to defaults", () => {
     const s = parseHash("#/nowhere?color=rainbow&lang=xx&lvl=9&layer=x");
-    expect(s.view).toBe("map");
+    expect(s.view).toBe("territories");
     expect(s.level).toBeUndefined();
     expect(s.layer).toBeUndefined();
   });

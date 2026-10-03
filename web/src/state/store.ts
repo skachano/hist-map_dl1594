@@ -5,7 +5,8 @@
 import type { Lang } from "../data/types";
 import { LANGS } from "../i18n";
 
-export const VIEWS = ["map", "territories", "holders", "table", "church", "about"] as const;
+/** In the header's order; Territories is the default. */
+export const VIEWS = ["territories", "map", "holders", "table", "church", "about"] as const;
 export type View = (typeof VIEWS)[number];
 export const LAYERS = ["towns", "churches", "abbeys", "priories", "convents", "commanderies", "chaumes"] as const;
 export type Layer = (typeof LAYERS)[number];
@@ -38,7 +39,7 @@ export interface State {
   filters?: TableFilters;
 }
 
-export const DEFAULT_STATE: State = { view: "map", lang: "en" };
+export const DEFAULT_STATE: State = { view: "territories", lang: "en" };
 const FILTER_KEYS: [keyof TableFilters, string][] = [["district", "d"], ["realm", "r"], ["section", "t"],
   ["holder", "hd"], ["series", "s"], ["q", "q"]];
 

@@ -140,3 +140,13 @@ test("an entry naming two places is listed under both, each linking the other", 
   await expect(row.getByRole("button", { name: /^W(oe|œ)lfling/ })).toBeVisible();
   await expect(row.getByRole("button", { name: "Wiesviller" })).toBeVisible();
 });
+
+test("Territories is the default view, and the first tab; Tenures is second", async ({ page }) => {
+  const errors = await open(page, "");
+  await expect(page).toHaveURL(/#\/territories\?/);
+  const tabs = page.getByRole("navigation", { name: "Views" }).getByRole("button");
+  await expect(tabs.nth(0)).toHaveText("Territories");
+  await expect(tabs.nth(0)).toHaveAttribute("aria-pressed", "true");
+  await expect(tabs.nth(1)).toHaveText("Tenures");
+  expect(errors).toEqual([]);
+});

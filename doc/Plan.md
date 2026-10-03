@@ -146,14 +146,14 @@ Labels in EN/FR/DE/JA for (also `relations`, `counterpart_bases`, `sections`, `s
 ## 3. App screens
 All screens share the UI language switch (EN/FR/DE/JA, which changes both labels and place names) and the place panel. There is no year bar.
 
-1. **Tenures** (default; named Map until after Stage 10): settlement cells and points, coloured by tenure. Originally there were these modes:
+1. **Tenures** (the default and first tab, named Map, until after Stage 10; now second, after Territories): settlement cells and points, coloured by tenure. Originally there were these modes:
    - **tenure**: domain / fief / clergy, with safeguard and other tenures in grey (three validated CVD-safe colours plus grey, as in hist_map)
    - **holder**: the legend picks which holders get the three colours, as in hist_map
 
    The **district** and **realm** modes were dropped after Stage 10: the Territories view shows the same divisions and realms, at every level, with clickable areas. The **holder** mode was dropped after that: the Holders view maps one holder's places. With tenure the only colouring, the tab was renamed Tenures.
 
    Hatching marks shared places ("en partie", "pour la moitié"). Places outside the duchy that the book doesn't list (the Three Bishoprics, the Barrois) are left blank and labelled.
-2. **Territories:** hist_map's Territories view without the year, with a switch between the two hierarchies (`#/territories?h=admin|feudal&lvl=…`):
+2. **Territories** (the default view and first tab since after Stage 10): hist_map's Territories view without the year, with a switch between the two hierarchies (`#/territories?h=admin|feudal&lvl=…`):
    - **Administrative divisions:** level 1 = bailliages and the towns outside them; level 2 = prévôtés, châtellenies, offices; level 3 = bans, mairies, vals; 0 = all levels. Areas tile the duchy.
    - **Feudal realms:** level 1 = realms held directly (counties, terres, lordships, church temporalities); level 2 = realms inside them; 0 = all. Areas cover only the realms' members, so the land between them is blank. Each realm is coloured by kind, and its tooltip gives its holder and the district it answers to.
 
@@ -630,6 +630,10 @@ Requested: remove the Holder mode from the Map tab, and rename the Map tab to Te
   - The map colours by tenure only. The colour-mode tabs, the holder legend (the three coloured holders, the picker, "reset colours") and the `color=` and `c=` URL keys are gone; the Holders view keeps its own map of one holder's places.
   - The tab is called Tenures, Tenures, Besitzarten and 保有形態. Its URL stays `#/map`, and links from the time of the modes still open it.
   - The performance test now times re-renders by switching the language: up to 7 ms.
+
+### After Stage 10: Territories first
+Requested: make Territories the default view, and put Tenures second.
+- **Status: done.** The tabs are Territories, Tenures, Holders, Table, Church & resources, About & sources. A bare address or an unknown view opens Territories; `#/map` links still open Tenures. A Playwright test checks the default and the order (48 tests pass).
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.
