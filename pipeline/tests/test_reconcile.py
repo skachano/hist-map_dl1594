@@ -71,3 +71,11 @@ def test_an_index_line_read_again_on_the_printed_page():
     assert len(rows) == 1
     assert rows[0].entry.canton == "Sarreguemines" and rows[0].entry.numbers == [1580]
     assert not rows[0].entry.commune     # not the next line's "com. de Bischmisheim"
+
+
+def test_merged_index_lines_are_split():
+    """Two printed lines the scan ran together become two index lines, each with its number."""
+    rows = {r.entry.name: r.entry.numbers for r in corrections.load_index() if r.page in ("218", "256")}
+    assert rows.get("Hœlling") == [2166] and rows.get("Hoéville") == [483]
+    assert rows.get("Velle") == [1763] and rows.get("Velle-sur-Moselle") == [202]
+    assert build.slug("Hœlling") == "hoelling"

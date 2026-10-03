@@ -96,6 +96,19 @@ index_lines:
   # The scan ran this line into the next, "[Bliesr]ansbach, vil., com. de Bischmisheim … 1578", which
   # the editor's corrections delete: 1578 is Heckenransbach ("au lieu de Bliesransbach").
   "191|Rlicsguei'sehwiller": "Bliesguerschwiller, canton de Sarreguemines, 1580."
+  # The page's footnote ("1. Ban de Vezin-en-Vaul…") was read into the line, and its number lost.
+  "188|Beaumont": "Beaumont, canton de Domèvre (Meurthe), 2037."
+  # Two lines run together; Hœlling's number was lost.
+  "218|Hoeliing":
+    - "Hœlling, ham., com. de Bettwiller, 2166."
+    - "Hoéville, canton de Lunéville-Nord, 483."
+  # The footnote mark broke the name.
+  "219|Immweiler1. «cetion du vil. d'Oherthu!": "Immweiler, section du vil. d'Oberthal, com. d'Alsweiler, 1508."
+  # Two lines run together, the first letters of both lost in print: Velle (between Velaine-en-Haye and
+  # Velle-sur-Moselle). The scan reads 1765, which is Houdelmont: Velle is entry 1763 ("Vclle").
+  "256|V le":
+    - "Velle, l'un des ham. formant la com. de Laloeuf, canton de Vézelise, 1763."
+    - "Velle-sur-Moselle, canton de Bayon, 202."
 
 # Places for entries the index doesn't identify (a new place with the entry's name).
 entry_places:

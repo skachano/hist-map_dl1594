@@ -25,7 +25,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 24,Remycourt.,Remycourt,,provostship-nancy,,domain,,,,main,,remicourt,36,high,
 25,"Ricbardmesnil, deux chasteaux et village.",Ricbardmesnil,castle|village,provostship-nancy,,domain,,,,main,,richardmenil,36,high,number read from '2a'
 26,Varcngéville.,Varcngéville,,provostship-nancy,,domain,,,,main,,varangeville,36,high,
-27,"Vendeuvre, prieuré dépendant de l'abbaye deSaincl-Epvre.",Vendeuvre,abbey|priory,provostship-nancy,,domain,,,,main,,vandoeuvre,36,high,
+27,"Vendeuvre, prieuré dépendant de l'abbaye deSaincl-Epvre.",Vendeuvre,abbey|priory,provostship-nancy,,domain,,,,main,,vandoeuvre-les-nancy,36,high,
 28,Villc-en-Vcrmois.,Villc-en-Vcrmois,,provostship-nancy,,domain,,,,main,,ville-en-vermois,36,high,
 29,Viller.,Viller,,provostship-nancy,,domain,,,,main,,villers-les-nancy,36,high,
 30,Azelot.,Azelot,,provostship-nancy,,clergy,,,,main,,azelot,37,high,
@@ -199,7 +199,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 199,Sainct-Maurice.,Sainct-Maurice,,provostship-rosieres,,fief,,,,main,,saint-maurice-sur-mortagne,42,high,
 200,Serainvillc.,Serainvillc,,provostship-rosieres,,fief,,,,main,,seranville,42,high,
 201,"Tonnov, chasteau et village.",Tonnov,castle|village,provostship-rosieres,,fief,,,,main,,tonnoy,42,high,
-202,"Vellc. ""","Vellc. """,,provostship-rosieres,,fief,,,,main,,v-le,42,high,
+202,"Vellc. ""","Vellc. """,,provostship-rosieres,,fief,,,,main,,velle-sur-moselle,42,high,
 203,Valois.,Valois,,provostship-rosieres,,fief,,,,main,,vallois,42,high,
 204,Vigneullcs.,Vigneullcs,,provostship-rosieres,,fief,,,,main,,vigneulles,42,high,
 205,Chamagne.,Chamagne,,provostship-rosieres,,fief,,,,main,,chamagne,42,high,
@@ -480,7 +480,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 480,Morville.,Morville,,provostship-amance,,clergy,,,,main,,morville-sur-seille,52,high,
 481,Moyveron.,Moyveron,,provostship-amance,,clergy,,,,main,,moivron,52,high,
 482,Courbessault.,Courbessault,,provostship-amance,,clergy,,,,main,,courbesseaux,52,high,
-483,Ohéville.,Ohéville,,provostship-amance,,clergy,,,,main,,hoeliing,52,medium,index match by number (0.38)
+483,Ohéville.,Ohéville,,provostship-amance,,clergy,,,,main,,hoeville,52,high,
 484,"Going, chasteau et village.",Going,castle|village,provostship-amance,,fief,,,,main,,goin,52,high,
 485,"Dommartin, chasteau et village.",Dommartin,castle|village,provostship-amance,,fief,,,,main,,dommartin-sous-amance,52,high,
 486,"Cercueur, chasteau et village.",Cercueur,castle|village,provostship-amance,,fief,,,,main,,cercueil,52,high,
@@ -1688,7 +1688,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1689,Wistorff.,Wistorff,,district-beaurains,lordship-beaurains,other,,,,main,,gawestroff,93,medium,index match by index number (1.00)
 1690,Oberdorff.,Oberdorff,,district-beaurains,lordship-beaurains,other,,,,main,,oberdorff,93,high,
 1691,Rodendorff.,Rodendorff,,district-beaurains,lordship-beaurains,other,,,,main,,chateau-rouge,93,medium,index match by number (0.27)
-1692,Wolflingen.,Wolflingen,,district-beaurains,lordship-beaurains,other,,,,main,,voelfling,93,high,number read from '1693'
+1692,Wolflingen.,Wolflingen,,district-beaurains,lordship-beaurains,other,,,,main,,voelfling-les-bouzonville,93,high,number read from '1693'
 1693,Kerlingen.,Kerlingen,,district-beaurains,lordship-beaurains,other,,,,main,,kerlingen,93,low,index match by none (0.00)
 1694,Odenhoven.,Odenhoven,,district-beaurains,lordship-beaurains,other,,,,main,,odenhoven,93,high,
 1695,Eidlingcn.,Eidlingcn,,district-beaurains,lordship-beaurains,other,,,,main,,kerlingcn,93,high,
@@ -1759,7 +1759,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1760,Ongnèville.,Ongnèville,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,ogneville,96,high,
 1761,"Parey-Sainet-César, partie.",Parey-Sainet-César,,bailiwick-vaudemont,county-vaudemont,domain,,part,,main,,parey-saint-cesaire,96,high,
 1762,Puis.,Puis,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,puxe,96,high,number read from '1763'
-1763,Vclle.,Vclle,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,vclle,96,low,index match by none (0.00)
+1763,Vclle.,Vclle,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,velle,96,high,
 1764,Souveraincourl.,Souveraincourl,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,souveraincourl,96,high,
 1765,Houdelmont.,Houdelmont,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,houdelmont,96,high,
 1766,Fraisne-la-Pclite.,Fraisne-la-Pclite,,bailiwick-vaudemont,county-vaudemont,clergy,,,,main,,frenelle-la-petite,96,high,
@@ -1846,7 +1846,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1847,Thaon.,Thaon,,bailiwick-epinal,,domain,,,,main,,thaon-les-vosges,99,high,
 1848,Deyviiter.,Deyviiter,,bailiwick-epinal,,domain,,,,main,,deyvillers,99,high,
 1849,Girmont.,Girmont,,bailiwick-epinal,,domain,,,,main,,girmont,99,high,
-1850,Sercueur.,Sercueur,,bailiwick-epinal,,domain,,,,main,,sereoeur,99,high,
+1850,Sercueur.,Sercueur,,bailiwick-epinal,,domain,,,,main,,sercoeur,99,high,
 1851,Villoncourl.,Villoncourl,,bailiwick-epinal,,domain,,,,main,,villoncourt,99,high,
 1852,Pandoux.,Pandoux,,bailiwick-epinal,,domain,,,,main,,padoux,99,high,
 1853,Bandesmcsnil.,Bandesmcsnil,,bailiwick-epinal,,domain,,,,main,,badmenil-aux-bois,99,high,
@@ -2033,7 +2033,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2034,Saincte-Maric.,Saincte-Maric,,bailiwick-apremont,,fief,,,,main,,sainte-marie-aux-chenes,105,high,
 2035,Sainct-Privé.,Sainct-Privé,,bailiwick-apremont,,fief,,,,main,,saint-privat,105,high,
 2036,Sainctc-Raphine.,Sainctc-Raphine,,bailiwick-apremont,,fief,,,,main,,sainte-ruffine,105,high,
-2037,Sanbucfnionl.,Sanbucfnionl,,bailiwick-apremont,,fief,,,,main,,sanbucfnionl,105,low,index match by none (0.00)
+2037,Sanbucfnionl.,Sanbucfnionl,,bailiwick-apremont,,fief,,,,main,,beaumont,105,high,
 2038,Sanzcy.,Sanzcy,,bailiwick-apremont,,fief,,,,main,,sanzey,105,high,
 2039,Séchcprcy.,Séchcprcy,,bailiwick-apremont,,fief,,,,main,,seicheprey,105,high,
 2040,Sivery.,Sivery,,bailiwick-apremont,,fief,,,,main,,xivray-et-marvoisin,105,medium,index match by index number (1.00)
@@ -2162,7 +2162,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2163,Urbach.,Urbach,,provostship-rimling,lordship-bitche,domain,,,,main,,urbach,110,medium,index match by confused number (1.00)
 2164,Eppingen.,Eppingen,,provostship-rimling,lordship-bitche,domain,,,,main,,epping,110,high,
 2165,Bedweiller.,Bedweiller,,provostship-rimling,lordship-bitche,domain,,,,main,,bcuwillcr,110,high,
-2166,Hcllingen.,Hcllingen,,provostship-rimling,lordship-bitche,domain,,,,main,,etting,110,low,index match by name (0.95)
+2166,Hcllingen.,Hcllingen,,provostship-rimling,lordship-bitche,domain,,,,main,,hoelling,110,high,
 2167,Gissingen.,Gissingen,,provostship-rimling,lordship-bitche,domain,,,,main,,guising,110,high,
 2168,Riderchingcn.,Riderchingcn,,provostship-rimling,lordship-bitche,domain,,,,main,,pelil-bcderchimj,110,high,
 2169,lloddweiller.,Hoddweiller,,provostship-rimling,lordship-bitche,domain,,,,main,,hotiwiller,111,high,
@@ -2423,7 +2423,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2424,Sainct-Nicolas.,Sainct-Nicolas,,,,,,,,priories,,saint-nicolas-de-port,132,medium,index match by loose number (1.00); 1 number(s) missing before; number read from '3424'
 2425,Varengeville.,Varengeville,,,,,,,,priories,,varangeville,132,medium,index match by confused number (0.92)
 2426,Sainct-Don.,Sainct-Don,,,,,,,,priories,,saint-don,132,high,number read from '3426'
-2427,Vendeuvre.,Vendeuvre,,,,,,,,priories,,vandoeuvre,132,high,
+2427,Vendeuvre.,Vendeuvre,,,,,,,,priories,,vandoeuvre-les-nancy,132,high,
 2428,Les Neuves-Maisons.,Les Neuves-Maisons,,,,,,,,priories,,neuves-maisons,132,high,number read from '3428'
 2429,Laislre-soub-Amanee.,Laislre-soub-Amanee,,,,,,,,priories,,laitre-sous-amance,132,high,number read from '3429'
 2430,Blanzey.,Blanzey,,,,,,,,priories,,blanzey,132,high,number read from '3430'

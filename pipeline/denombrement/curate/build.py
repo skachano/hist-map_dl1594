@@ -34,7 +34,8 @@ _CONFUSED = [("3", "5"), ("1", "4"), ("1", "7"), ("5", "6"), ("6", "8"), ("3", "
 # --- names ------------------------------------------------------------------------------------
 
 def fold(text: str) -> str:
-    t = unicodedata.normalize("NFKD", text)
+    # œ and æ have no decomposition: "Hœlling" is hoelling, not h-lling
+    t = unicodedata.normalize("NFKD", text.replace("œ", "oe").replace("Œ", "Oe").replace("æ", "ae").replace("Æ", "Ae"))
     return "".join(c for c in t if not unicodedata.combining(c)).lower()
 
 
