@@ -92,7 +92,7 @@ badinenil,,,,,Badinénil,,,,FR,unlocated,low,
 badmenil-aux-bois,48.30222,6.51917,Q633343,,Badménil-aux-Bois,Badménil-aux-Bois,Badménil-aux-Bois,,FR,wikidata,medium,"exact name, no anchor; the index's canton Chute is not found"
 baffe,48.16028,6.57194,Q753273,,La Baffe,La Baffe,La Baffe,,FR,wikidata,high,1.00 near the index's canton (9 km)
 bagneux,48.55833,5.8825,Q1002005,,Bagneux,Bagneux,Bagneux,バニュー,FR,wikidata,medium,"exact name, no anchor"
-bailiwick-allemagne,49.25145,6.71076,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 544 located member(s)
+bailiwick-allemagne,49.2513,6.71106,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 544 located member(s)
 bailiwick-apremont,48.85528,5.63917,,,Bailliage d'Apremont,,,アスプルモン＝ラ＝フォレバイイ管区,,territory,medium,seat: apremonl
 bailiwick-chatel-sur-moselle,48.31417,6.39306,,,Bailliage de Châtel-sur-Moselle,,,,,territory,medium,seat: chatel-sur-mosclle
 bailiwick-epinal,48.17361,6.45167,,,Bailliage d'Épinal,,,エピナルバイイ管区,,territory,medium,seat: epinal
@@ -219,6 +219,7 @@ blemerey-blamont,48.58306,6.73444,Q1065764,,Blémerey,Blémerey,Blémerey,,FR,wi
 blenod-les-pont-a-mousson,48.88333,6.04722,Q227728,,Blénod-lès-Pont-à-Mousson,Blénod-lès-Pont-à-Mousson,Blénod-lès-Pont-à-Mousson,,FR,wikidata,high,1.00 near the index's canton (2 km)
 bliescbersing,49.12355,7.14523,,,Bliesébersing,,,,FR,hist_map,high,1.00 near the index's canton (6 km)
 bliesen,49.4939,7.11389,Q884069,,Bliesen,Bliesen,Bliesen,,FR,hist_map,medium,"exact name, no anchor; the index's commune Aisweilcr is not found"
+bliesguerschwiller,49.15167,7.09444,Q21701,,Blies-Guersviller,Blies-Guersviller,Blies-Guersviller,,FR,rule,high,"Blies-Guersviller, canton de Sarreguemines (the index's Bliesguerschwiller; Gersweiller in the list, entry 1580); not Gersweiler in Saarbrücken"
 bocfjiiegney,48.22028,6.30333,Q753356,,Bocquegney,Bocquegney,Bocquegney,,FR,wikidata,high,0.95 near the index's canton (6 km)
 bockange,49.2422,6.42139,Q16304464,,Bockange,Buchingen,Bockange,,FR,hist_map,high,1.00 near the index's commune (1 km)
 bockweilcr,49.183,7.2911,Q1019612,,Böckweiler,Böckweiler,Böckweiler,,DE,wikidata,medium,"exact name, no anchor; the index's canton Hornbacli is not found"
@@ -498,7 +499,7 @@ dreisbach,49.485,6.565,Q1258065,,Dreisbach,Dreisbach,Dreisbach,,FR,hist_map,high
 drogny,49.2467,6.41639,Q16507718,,Drogny,Drogny,Drogny,,FR,hist_map,high,1.00 near the index's commune (0 km)
 droiteval,48.03278,6.03556,,,Droiteval,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Claudon
 drouville,48.67111,6.40806,Q227707,,Drouville,Drouville,Drouville,,FR,wikidata,high,1.00 near the index's canton (11 km)
-duchy-lorraine,48.69024,6.51572,,,Duché de Lorraine,,,,,territory,medium,centre of 2320 located member(s)
+duchy-lorraine,48.6902,6.51579,,,Duché de Lorraine,,,,,territory,medium,centre of 2320 located member(s)
 duren,49.3036,6.66222,Q1271996,,Düren,Düren,Düren,,DE,wikidata,high,1.00 near the index's commune (1 km)
 eberswillcr,49.27513,6.401,,,Ebersviller,,,,FR,hist_map,medium,0.91 near the index's canton (10 km)
 eblange,49.22333,6.48194,Q21674,,Éblange,Eblingen,Éblange,,FR,hist_map,high,1.00 near the index's canton (5 km)
@@ -1584,7 +1585,6 @@ rinting,48.72249,6.99617,Q107300771,,Renting,,,,FR,hist_map,medium,0.86 near the
 ripplingen,49.45851,6.59743,,,Ripplingen,,,,FR,hist_map,high,1.00 near the index's commune (2 km)
 ritzing,49.43611,6.46111,Q22408,,Ritzing,Ritzing,Ritzing,,FR,hist_map,high,1.00 near the index's canton (7 km)
 rlamont,48.58972,6.84222,Q457569,,Blâmont,Blâmont,Blâmont,ブラモン,FR,wikidata,medium,"exact name, no anchor; the index's canton Rlàmont is not found"
-rlicsguei-sehwiller,49.23583,6.92861,Q386870,,Gersweiler,Gersweiler,Gersweiler,,DE,wikidata,high,0.95 near the index's commune (10 km)
 robache,48.30719,6.95615,Q28040630,,Robache,,,,FR,wikidata,high,1.00 near the index's commune (3 km)
 robecourt,48.14139,5.6975,Q1455159,,Robécourt,Robécourt,Robécourt,,FR,wikidata,medium,"exact name, no anchor"
 rochesson,48.02222,6.78611,Q339751,,Rochesson,Rochesson,Rochesson,,FR,wikidata,medium,"exact name, no anchor; the index's canton Saulxtires is not found"

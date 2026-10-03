@@ -61,7 +61,7 @@ no entry,219,Hymont,1,,,,,1.00,hymont,Chenymont (971) is Chenilmont
 no entry,221,Kassheim,1497,,,,,1.00,,corrections: replaced by Kaisen
 no entry,225,Lixing-lès-Rouhling,2250,,,,,1.00,,"printed 2250: Vor Eberssweiller, which is Farébersviller"
 no entry,231,Monlbronn,2251,,,,,1.00,,printed 2251: Morsbach's entry
-no entry,229,Ménil (le),345,,,,,1.00,menil-de-senones,Pageolle (345) is Pajaille
+no entry,229,Ménil (le),345,,,,,1.00,le-menil,Pageolle (345) is Pajaille
 no entry,239,Ponlpierre,2271,,,,,1.00,pontpierre,"printed 2271: Bausstorff, which is Boustroff (Pontpierre is 2259, Steinbiedersdorf)"
 no entry,251,Saint-Remimont,5b,,,,,1.00,saint-remimont-buigneville,Removille (1165) is Removille
 no entry,255,Vandelainville,525,,,,,1.00,vandelainville,525 is Vandières
@@ -109,7 +109,7 @@ manual,254,Tûnsdorf (Tunstrofï),1518,,1318,Timstorff,81,1.00,tunsdorf,printed 
 manual,189,"Bcrg"" mit Schloss",1521,,1321,Berg,81,1.00,berg,printed 1321
 manual,198,Colmen,1551,,1331,Golman,81,1.00,colmen,printed 1331
 manual,218,Hombourgou Hombourg-sur-Kaner,1352,,1332,Hombourg auiïdcr Kandcl,81,1.00,hombourg-sur-kaner,printed 1332
-manual,255,Valdwisse,1553,,1333,Waldtvtiss,81,1.00,valdwisse,printed 1333
+manual,255,Valdwisse,1553,,1333,Waldtvtiss,81,1.00,waldwisse,printed 1333
 manual,228,Mégange,1549,,1349,Mehingen,82,1.00,megange,printed 1349
 manual,193,Brccklangc,1558,,1358,Brcchlingen,82,1.00,brecklange,printed 1358
 manual,204,Ëlvangc,1574,,1374,Elwingen,83,1.00,elvange,printed 1374
@@ -130,7 +130,6 @@ manual,217,Heiiselhofen (voy. Aschbach),1531,,1534,Hemtzelbovcn,88,1.00,heiiselh
 manual,185,Aschbaeh et Hensclhofcn,1535,,1535,Aspach,88,1.00,aschbach,Aspach: Aschbach
 manual,204,Einu'ciller cl Enweillcr,54,,1554,Einweiller,89,1.00,einu-ciller-cl-enweillcr,printed 54 after 1510
 manual,241,Rantse/iidt (et non Raudtsebidl),1562,,1562,Raudtsehidt,89,1.00,rantse-iidt,"the editor: ""Rontschidt (et non Raudtschidt)"""
-manual,191,Rlicsguei'sehwiller,1578,,1580,Gcrsweiller,90,1.00,gersweiler,printed 1580
 manual,258,Petit-Rohrbacli,1651,,1631,Rorbach,91,1.00,petit-rohrbacli,corrections: Petit-Rohrbach replaces Rorbach (1631)
 manual,252,Tensch,1655,,1635,Teutschen,92,1.00,tensch,printed 1635
 manual,256,Vergaville,I63i,,1638,WargaviUe,92,1.00,vergaville,printed 1638
@@ -196,7 +195,7 @@ corrected,251,Saint-Pierremont,,,191,Sainct-Pierrcmont,42,1.00,saint-pierremont,
 corrected,251,Sainte-Marie,,,198,Saincte-Marie,42,1.00,sainte-marie,number not printed in the index
 corrected,226,Maixe,,,228,Marches,43,0.95,maixe,number not printed in the index
 corrected,210,Gellenoncourt,930,,230,Gellenoncourt,43,1.00,gellenoncourt,
-corrected,229,Ménil,258,,238,Mesnil,43,0.91,menil-sur-belvitte,
+corrected,229,Ménil,258,,238,Mesnil,43,0.91,menil,
 corrected,202,Domèvre-sur Vezouse,245,,243,Domepvre,44,0.93,domevre-sur-vezouze,
 corrected,186,Athienville,2C7,,267,Athienville,44,1.00,athienville,
 corrected,195,Chalgoulte,,,284,Challegoutte,45,0.91,chalgoulte,number not printed in the index
@@ -216,7 +215,7 @@ corrected,253,Thisserandie (fer),335,,337,La Thisserandie,47,0.89,thisserandie,
 corrected,246,Sauceray,539,,339,Saulxeray,47,0.82,sauceray,
 corrected,192,Bourgonce (la),540,,340,La Bourgoncc,47,1.00,la-bourgonce,
 corrected,251,Saint-Remy,542,,342,Sainct-Remy,47,1.00,saint-remy,
-corrected,229,Ménil (le),,,343,Le Mesnil,47,0.91,menil-de-senones,number not printed in the index
+corrected,229,Ménil (le),,,343,Le Mesnil,47,0.91,le-menil,number not printed in the index
 corrected,208,Fosse (la) ham.,544,,344,La Fosse,47,0.77,fosse-la-ham,
 corrected,201,Deyfosse,547,,347,Daycfôssc,47,0.82,deyfosse,
 corrected,237,Paire (le),55f,,351,La Paire,48,1.00,le-paire-moyenmoulier,
@@ -543,13 +542,13 @@ spelling differs,256,Velolie-et-Tatignécourt,9S9,,959,Villotte,68,0.41,velotte-
 spelling differs,259,Void-d'Escles,988,,988,LeVoid,69,0.47,void-d-escles,
 spelling differs,196,Charniois-rOrgueilIcux,996,,996,Charmois,70,0.48,charniois-rorgueilicux,
 spelling differs,197,Chaumouzcy,1004,,1004,Cliamoysy-la-Villc,70,0.38,chaumousey,
-spelling differs,234,NeuveviHc-souis-Montfort (la),1051,,1051,LaNeufville,71,0.42,la-neuvevihc-souis-montfort,
+spelling differs,234,NeuveviHc-souis-Montfort (la),1051,,1051,LaNeufville,71,0.42,la-neuveville-sous-montfort,
 spelling differs,253,Thiétry,1071,,1071,La Grosse verrière Tiédry,72,0.37,thietry,
 spelling differs,217,Hennezel (verrerie),1072,,1072,La verrière Hennez^l,72,0.45,hennezel-darney,
 spelling differs,198,Claudon,1074,,1074,Cbastillon,72,0.47,claudon,
 spelling differs,199,Côte (la),1106,,1106,La Cosle Sainct-Antoine,74,0.38,la-cote-passavant,
 spelling differs,193,Srcul {le)y prévôté de Chûtcnois,1120,,1120,LeBreul,74,0.36,srcul-le-y-prevote-de-chutcnois,
-spelling differs,229,Ménil,1201,,1201,Mesuil-sur-Vcirc,77,0.42,menil-en-xaintois,
+spelling differs,229,Ménil,1201,,1201,Mesuil-sur-Vcirc,77,0.42,menil-balleville,
 spelling differs,243,Relhei,1215,,1215,Battel,78,0.33,relhei,
 spelling differs,227,Marienflosse. moulin (collégiale),1233,,1233,Bruch,78,0.49,marienflosse-moulin,check: the entry no line claims
 spelling differs,235,Ober-Leuken ou Oberlcuken,1255,,1255,Leucken,79,0.41,oberleuken,check: the entry no line claims
@@ -1285,7 +1284,7 @@ agrees,238,Poirie (la),844,,844,La Poitie,65,0.83,la-poirie-dommarlin,
 agrees,187,Bamont,845,,845,Baymont,65,0.95,bamont,
 agrees,239,Pré-Derrière,848,,848,Le Prey,65,0.95,pre-derriere,
 agrees,200,Demrupl,849,,849,Demeruz,65,0.71,demrupl,
-agrees,229,Ménil (le),850,,850,Le Mesnil,65,0.91,le-menil,
+agrees,229,Ménil (le),850,,850,Le Mesnil,65,0.91,le-menil-229,
 agrees,250,Saint-Maurice,851,,851,Sainct-Maurise,65,0.92,saint-maurice-sur-moselle,
 agrees,196,Charniois-rOrgueilIcux,852,,852,Le Charmois-dcvant-Bains,65,0.50,charniois-rorgueilicux,
 agrees,208,Fontenoy-la-Ville,854,,854,Fontenoy-la-Ville,65,1.00,fontenoy-la-ville,
@@ -1315,7 +1314,7 @@ agrees,214,Gugney-aux-Aulx,879,,879,Gugncy-aux-Aulx,66,1.00,gugney-aux-aulx,
 agrees,205,Essegncy,880,,880,Enccgney,66,0.75,essegney,
 agrees,190,Bettegney-Saint-Brice,881,,881,Battigny-Sainct-Briee,66,0.95,bettegney-saint-brice,
 agrees,205,Evaux-ct-Ménil,882,,882,Le Val,66,0.95,evaux-et-menil,
-agrees,229,Ménil,883,,883,Le Mcsnil,66,0.91,menil,
+agrees,229,Ménil,883,,883,Le Mcsnil,66,0.91,menil-evaux-ct-menil,
 agrees,213,Gripport,884,,884,Gripport,66,1.00,gripport,
 agrees,248,Soeourt,885,,885,Socourt,66,1.00,socourt,
 agrees,249,Saint-Firmin,886,,886,Sainct-Finnin,66,0.82,saint-firmin,
@@ -1324,12 +1323,12 @@ agrees,190,Bettegney-Saint-Brice,889,,889,Battigny-Saincl-Brice,66,0.84,bettegne
 agrees,254,Ubexy,890,,890,L'bcxey,66,0.80,ubexy,
 agrees,257,Viéville,891,,891,Viefvilie,66,0.82,vieville,
 agrees,249,Saint-Firmin,892,,892,Sainct-Firmin,66,1.00,saint-firmin,
-agrees,229,Ménil,894,,894,Le Mcsnil,66,0.91,menil,
+agrees,229,Ménil,894,,894,Le Mcsnil,66,0.91,menil-evaux-ct-menil,
 agrees,214,Gugney-aux-Aulx,895,,895,Gugncy-aux-Aulz,66,0.92,gugney-aux-aulx,
 agrees,193,Bralleville,896,,896,Brallevîlle,66,1.00,bralleville,
 agrees,211,Gcrmonville,897,,897,Germonvillc,66,1.00,germonville,
 agrees,220,Jcvoncourt,898,,898,Xironcourt et Juvoncourt,66,0.56,jevoncourt,
-agrees,234,NeuveviHc-souis-Montfort (la),900,,900,La Ncuftïlîe-soubz-Montfort,66,0.73,la-neuvevihc-souis-montfort,
+agrees,234,NeuveviHc-souis-Montfort (la),900,,900,La Ncuftïlîe-soubz-Montfort,66,0.73,la-neuveville-sous-montfort,
 agrees,242,Remoncourt,901,,901,Remoncourt,66,1.00,remoncourt,
 agrees,188,Bazoî!les-et-Ménil,902,,902,Bazailles,66,0.58,bazoilles-et-menil,
 agrees,259,Viviers-lez-Offroicourt,903,,903,Vivier,67,0.92,viviers-les-offroicourt,
@@ -1528,7 +1527,7 @@ agrees,246,Saulxures-lez-Bulgnéville,1147,,1147,Saulxures,75,1.00,saulxures-les
 agrees,253,Tolainviltc,1148,,1148,Toutainville,75,0.96,totainville,
 agrees,231,Moncourt,1149,,1149,Moncourt,75,1.00,maconcourt,
 agrees,214,Hagnéville,1150,,1150,Hignéville,75,0.95,hagneville,
-agrees,229,Ménil-en-Xaînlois,1151,,1151,Le Mesnil-cn-Sainctois,75,0.90,menil-en-xainlois,
+agrees,229,Ménil-en-Xaînlois,1151,,1151,Le Mesnil-cn-Sainctois,75,0.90,menil-en-xaintois,
 agrees,225,Longchamp,1152,,1152,Longchamps,75,0.95,longchamp-sous-chatenois,
 agrees,211,Gerbonvaux,1154,,1154,Gcrbonval,75,0.84,gerbonvaux,
 agrees,251,Saint-Remimont,1155,,1155,Sainct-Remvmonl,76,0.92,saint-remimont-buigneville,
@@ -1615,7 +1614,7 @@ agrees,228,Mcchcrn (Mechcrcn),1253,,1253,Morchern,79,0.52,mechern,
 agrees,209,Fremmesdr'* v:-»m. de Rehlingen,1254,,1254,Frymestroû*,79,0.57,fremmesdr-v-m-de-rehlingen,
 agrees,261,Wochern,125G,,1256,Wuclicni,79,0.53,wochern,
 agrees,212,Gommelangc,1257,,1257,Gclmingcn,79,0.95,gomelange,
-agrees,212,Gongelfang,1258,,1258,Golstingen,79,0.60,gostingen,
+agrees,212,Gongelfang,1258,,1258,Golstingen,79,0.60,gongelfang,
 agrees,191,Bockange,1259,,1259,Buchingen,79,0.95,bockange,
 agrees,217,Hestroff,1260,,1260,Hcrstoriï,79,0.59,hestroff,
 agrees,221,Kédangc,1261,,1261,Kedingcn,79,0.95,kedange,
@@ -1828,6 +1827,7 @@ agrees,212,Giafcnthal,1576,,1576,Gravemhal,90,0.63,giafcnthal,
 agrees,252,Tenteling,1577,,1577,Tentlingen,90,0.84,tenteling,
 agrees,210,Heckcnransbach,1578,,1578,Rausspach,90,0.52,heckenransbach,
 agrees,201,Diebling,1579,,1579,Dublingen,90,0.95,diebling,
+agrees,191,Bliesguerschwiller,1580,,1580,Gcrsweiller,90,0.95,blies-guersviller,
 agrees,246,Sarreinsming,1581,,1581,Sar-Enssingcn,90,0.95,sarreinsming,
 agrees,242,Rémelfing,1584,,1584,Rumelfingen,90,0.95,remelfing,
 agrees,252,Tenteling,85,,1585,Tentlingen,90,0.84,tenteling,

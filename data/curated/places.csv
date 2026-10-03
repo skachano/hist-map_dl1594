@@ -1,5 +1,5 @@
 id,kind,name_fr,name_de,name_en,variants,old_forms,place_type,lat,lon,wikidata_id,geonames_id,modern_country,index_kind,index_commune,index_canton,index_dept,lost,geo_method,geo_confidence,hierarchy,holder_id,counterpart_id,counterpart_basis,source_page,confidence,notes
-bailiwick-allemagne,territory,Bailliage d'Allemagne,Amt (Bailliage) Allemagne,Bailiwick of Allemagne,,,bailiwick,49.25145,6.71076,,,,,,,,,territory,medium,admin,,,,77,high,
+bailiwick-allemagne,territory,Bailliage d'Allemagne,Amt (Bailliage) Allemagne,Bailiwick of Allemagne,,,bailiwick,49.2513,6.71106,,,,,,,,,territory,medium,admin,,,,77,high,
 bailiwick-apremont,territory,Bailliage d'Apremont,Amt (Bailliage) Apremont,Bailiwick of Apremont,Aspremont,,bailiwick,48.85528,5.63917,,,,,,,,,territory,medium,admin,,,,101,high,
 bailiwick-chatel-sur-moselle,territory,Bailliage de Châtel-sur-Moselle,Amt (Bailliage) Châtel-sur-Moselle,Bailiwick of Châtel-sur-Moselle,Chastel~sur-Moze',,bailiwick,48.31417,6.39306,,,,,,,,,territory,medium,admin,,,,97,high,
 bailiwick-epinal,territory,Bailliage d'Épinal,Amt (Bailliage) Épinal,Bailiwick of Épinal,Espinal,,bailiwick,48.17361,6.45167,,,,,,,,,territory,medium,admin,,,,99,high,
@@ -60,7 +60,7 @@ district-sarralbe,territory,Circonscription de Sarralbe,Bezirk Sarralbe,District
 district-sarreck,territory,Circonscription de Sarreck,Bezirk Sarreck,District of Sarreck,Sarech,,district,48.75105,7.04966,,,,,,,,,territory,medium,admin,,lordship-sarreck,slot,108,high,
 district-soultzbach,territory,Circonscription de Soultzbach,Bezirk Soultzbach,District of Soultzbach,,,district,48.05521,7.22067,,,,,,,,,territory,medium,admin,,,,108,high,
 district-spitzemberg,territory,Circonscription de Spitzemberg,Bezirk Spitzemberg,District of Spitzemberg,,,district,48.30756,7.04417,,,,,,,,,territory,medium,admin,,lordship-spitzemberg,slot,109,high,
-duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69024,6.51572,,,,,,,,,territory,medium,admin,,,,34,high,
+duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.6902,6.51579,,,,,,,,,territory,medium,admin,,,,34,high,
 fief-keltern-ostern,territory,Fief de Keltern-Ostern,Lehen Keltern-Ostern,Fief of Keltern-Ostern,,,fief,49.52336,7.1118,,,,,,,,,territory,medium,feudal,house-eberstein|house-oberstein,provostship-keltern-ostern,heading,89,high,
 lordship-beaurains,territory,Terre et seigneurie de Beaurains,Herrschaft Beaurains,Lordship of Beaurains,Bcaurains,,lordship,49.27905,6.60822,,,,,,,,,territory,medium,feudal,,district-beaurains,slot,93,high,
 lordship-bitche,territory,Terre et seigneurie de Bitche,Herrschaft Bitche,Lordship of Bitche,Biche,,lordship,49.10534,7.36535,,,,,,,,,territory,medium,feudal,duchy-lorraine,district-bitche,slot,109,high,
@@ -316,6 +316,7 @@ blanzey,settlement,Blanzey,,,,,hamlet,48.76228,6.24737,,11971498,FR,ham. (prieur
 blemerey,settlement,Blémerey,Blémerey,Blémerey,Blamerey,,village,48.36,6.04806,Q832892,,FR,,,Mireeourt,Vosges,,wikidata,high,,,,,72,high,1.00 near the index's canton (9 km)
 blemerey-blamont,settlement,Blémerey,Blémerey,Blémerey,Blcmerey,,village,48.58306,6.73444,Q1065764,,FR,,,Blàmont,,,wikidata,high,,,,,106,high,1.00 near the index's canton (8 km)
 blenod-les-pont-a-mousson,settlement,Blénod-lès-Pont-à-Mousson,Blénod-lès-Pont-à-Mousson,Blénod-lès-Pont-à-Mousson,Blénod,,village,48.88333,6.04722,Q227728,,FR,,,Pont-à-Mousson,Meurthe,,wikidata,high,,,,,39,high,1.00 near the index's canton (2 km)
+blies-guersviller,settlement,Blies-Guersviller,Blies-Guersviller,Blies-Guersviller,Gcrsweiller|Bliesguerschwiller,Gcrsweiller,village,49.15167,7.09444,Q21701,,FR,,,Sarreguemines,Moselle,,rule,high,,,,,90,high,"Blies-Guersviller, canton de Sarreguemines (the index's Bliesguerschwiller; Gersweiller in the list, entry 1580); not Gersweiler in Saarbrücken"
 bliesebersing,settlement,Bliesébersing,,,Eberssingen|Bliescbersing,Eberssingcn,village,49.12355,7.14523,,,FR,,,Sarregucmincs,Moselle,,hist_map,high,,,,,90,medium,1.00 near the index's canton (6 km)
 bliesen,settlement,Bliesen,Bliesen,Bliesen,Blicssen,,village,49.4939,7.11389,Q884069,,FR,vil.,Aisweilcr,,,,hist_map,medium,,,,,87,high,"exact name, no anchor; the index's commune Aisweilcr is not found"
 bockange,settlement,Bockange,Buchingen,Bockange,Buchingen,Buchingen,village,49.2422,6.42139,Q16304464,,FR,vil.,Piblange,,,,hist_map,high,,,,,79,high,1.00 near the index's commune (1 km)
@@ -730,7 +731,6 @@ gerbonvaux,settlement,Gerbonvaux,,,Gcrbonval|Gerbonvaul,,farmstead,48.44556,5.79
 germonville,settlement,Germonville,Germonville,Germonville,Germonvillc|Gcrmonville,,village,48.40694,6.2125,Q509264,,FR,,,Haroue,,,wikidata,high,,,,,66,high,1.00 near the index's canton (7 km)
 geromenil,settlement,Géroménil,,,Gcromesnil|Giromcsnil,,hamlet,48.0965,6.49465,,12315044,FR,ham.,Hadol,,,,geonames,high,,,,,59,high,1.00 near the index's commune (1 km)
 gersbach,settlement,Gersbach,Gersbach,Gersbach,Gcrsspach,,village,49.201,7.56117,Q1514958,,FR,,,Pirmasens (Bav.)f,,,hist_map,high,,,,,112,high,1.00 near the index's canton (3 km)
-gersweiler,settlement,Gersweiler,Gersweiler,Gersweiler,Gcrsweiller|Rlicsguei'sehwiller,,village,49.23583,6.92861,Q386870,,DE,"1580., ransbach, vil.",Bischmisheim,Saarbrueken,Pr.,,wikidata,high,,,,,90,medium,0.95 near the index's commune (10 km)
 gezoncourt,settlement,Gézoncourt,Gézoncourt,Gézoncourt,Gisoncourl|Gezoneourt,,village,48.8375,5.995,Q681162,,FR,,,Domêvre,Meurthe,,wikidata,medium,,,,,39,high,"exact name, no anchor"
 giafcnthal,settlement,Giafcnthal,,,Gravemhal|Grevenlhal,,hamlet,49.15374,7.11467,,,DE,ham. (prieuré),Bliesholchen,Blieskaslel,Bav.,,approximate,low,,,,,90,high,not in Wikidata/GeoNames; placed at its commune Bliesholchen
 gigney,settlement,Gigney,Gigney,Gigney,,,village,48.23,6.33833,Q189235,,FR,,,Châtel,,,wikidata,high,,,,,70,high,1.00 near the index's canton (10 km)

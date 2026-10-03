@@ -29,9 +29,29 @@ def _letters(text: str) -> str:
     return re.sub(r"[^a-z0-9]", "", "".join(c for c in t if not unicodedata.combining(c)).lower())
 
 
+def _index_lines() -> dict[tuple[str, str], list[str]]:
+    """rules.yaml `index_lines`: index lines the scan misread or merged, as printed. Keyed by
+    "page|name as read"; each value is the printed text of one line or a list of lines."""
+    import yaml
+    path = config.CURATED_DIR / "rules.yaml"
+    rules = (yaml.safe_load(path.read_text()) or {}) if path.exists() else {}
+    out = {}
+    for key, text in (rules.get("index_lines") or {}).items():
+        page, _, name = str(key).partition("|")
+        out[(page, name)] = text if isinstance(text, list) else [text]
+    return out
+
+
 def load_index() -> list[IndexRow]:
     rows = []
+    fixes = _index_lines()
     for r in csv.DictReader((config.RAW_DIR / "index.csv").open()):
+        if (r["page"], r["name"]) in fixes:   # read again on the printed page
+            for text in fixes.pop((r["page"], r["name"])):
+                e = indexes.parse_entry(r["page"], text)
+                e.note = "read again on the printed page (rules.yaml index_lines)"
+                rows.append(IndexRow(r["page"], e))
+            continue
         e = indexes.parse_entry(r["page"], r["text"])
         # Keep Stage 1's second reading of the numbers.
         if r["numbers_source"]:
@@ -39,6 +59,8 @@ def load_index() -> list[IndexRow]:
             e.numbers_ok, e.numbers_source = r["numbers_ok"] == "1", r["numbers_source"]
         e.note = r["note"]
         rows.append(IndexRow(r["page"], e))
+    if fixes:
+        raise ValueError(f"rules.yaml index_lines: no index line {sorted(fixes)}")
     return rows
 
 

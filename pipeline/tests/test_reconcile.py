@@ -63,3 +63,11 @@ def test_index_communes_and_cantons():
     assert build._seat_key("Raon-1'Etape") == "Raon-l'Etape"
     assert build._garbled("Bouzonviiie") and build._garbled("llinckange")
     assert not build._garbled("Saint-Michel") and not build._garbled("Thionville")
+
+
+def test_an_index_line_read_again_on_the_printed_page():
+    """rules.yaml index_lines: the scan ran Bliesguerschwiller's line into the next one."""
+    rows = [r for r in corrections.load_index() if r.page == "191" and r.entry.name.startswith("Bliesguersch")]
+    assert len(rows) == 1
+    assert rows[0].entry.canton == "Sarreguemines" and rows[0].entry.numbers == [1580]
+    assert not rows[0].entry.commune     # not the next line's "com. de Bischmisheim"

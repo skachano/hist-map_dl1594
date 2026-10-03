@@ -90,6 +90,13 @@ entry_index:
   2244: Guemviller      # "Gunweiller" (Guenviller), not Buweiler
   2259: Ponlpierre      # "Steinbiderstorff": Steinbiedersdorf, Pontpierre's German name (no line prints 2259)
 
+# Index lines the scan misread or merged, as printed ("page|name as read": the printed line, or a
+# list of lines when the scan ran two together).
+index_lines:
+  # The scan ran this line into the next, "[Bliesr]ansbach, vil., com. de Bischmisheim … 1578", which
+  # the editor's corrections delete: 1578 is Heckenransbach ("au lieu de Bliesransbach").
+  "191|Rlicsguei'sehwiller": "Bliesguerschwiller, canton de Sarreguemines, 1580."
+
 # Places for entries the index doesn't identify (a new place with the entry's name).
 entry_places:
   1411: nittel          # "Nittel" (office of Siersberg); the index has no line for it
@@ -149,3 +156,4 @@ geocode:
   breehaincouri: {"at": "Gircourt", "note": "a hamlet of Gircourt (the index), the one near its district"}
   les-fouies: {"at": "Granges", "note": "a censé of Granges (the index), the one near its district"}
   menil-balleville: {"at": "Balléville", "name_fr": "Ménil-sur-Vair", "note": "Mesnil-sur-Veire (entry 1201), now Ménil-sur-Vair, a hamlet of Balléville (the index: 'Ménil, ham., com. de Balléville'); not Ménil-en-Xaintois. Placed at Balléville"}
+  bliesguerschwiller: {"wikidata": "Q21701", "note": "Blies-Guersviller, canton de Sarreguemines (the index's Bliesguerschwiller; Gersweiller in the list, entry 1580); not Gersweiler in Saarbrücken"}
