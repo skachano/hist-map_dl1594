@@ -48,3 +48,14 @@ def test_km():
 def test_village_names_keep_b_and_h_apart():
     c = Cand("wikidata", 48.6, 6.6, geocode.label_keys("Bénaménil"), 3, "FR", qid="Q4", raw=geocode.raw_keys(["Bénaménil"]))
     assert Gazetteer.sim(geocode.raw_keys(["Hénaménil"]), c) < 1.0
+
+
+def test_a_rule_places_a_hamlet_at_its_commune():
+    """rules.yaml geocode {at: commune}: an approximate point at that commune, the match dropped."""
+    from denombrement.geo import geocode
+    res = {"hutte": geocode.Result("hutte", lat=48.9, lon=7.2, wikidata_id="Q1", method="geonames", confidence="low")}
+    rules = {"hutte": {"at": "Xamontarupt", "note": "a hamlet of Xamontarupt (the index)"}}
+    geocode._apply_rules(res, rules, {}, lambda name, pid: (48.1, 6.6) if name == "Xamontarupt" else None)
+    r = res["hutte"]
+    assert (r.lat, r.lon, r.method, r.confidence, r.wikidata_id) == (48.1, 6.6, "approximate", "low", None)
+    assert r.fixed and r.note == "a hamlet of Xamontarupt (the index)"

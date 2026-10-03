@@ -103,3 +103,48 @@ geocode:
   valdwisse: {wikidata: Q22157, note: "Waldwisse (the index's Valdwisse, canton de Sierck)"}
   gongelfang: {approximate: valdwisse, name_fr: Gongelfang, note: "Gongelfang (Golstingen, Golsfingen in the table of old forms), a hamlet of Waldwisse; not Gostingen in Luxembourg. Not in Wikidata or GeoNames: placed at Waldwisse"}
   scheuer-hof: {approximate: nohn, note: "Scheuer-Hof, a farm of the village of Nohn (Saarland) that no longer exists (the editor's corrections); not the Scheuer-Hof in Luxembourg. Placed at Nohn"}
+  # hamlets, farms and lost places checked against the index (location audit)
+  aray-le-lan-v-ban-de-moyenmouticr: {"at": "Moyenmoutier", "note": "le ban d'Aray, a ban of Moyenmoutier (the index)"}
+  bary: {"unlocated": true, "note": "Bury, a lost village of the prévôté of Sierck (the index gives no commune); not the Bure matched by name"}
+  aulnes-les-ham: {"at": "Fraize", "note": "a hamlet of Fraize (the index)"}
+  batlielemont: {"at": "Saint-Médard", "note": "Bathelémont, a hamlet and castle of Saint-Médard (the index)"}
+  eich: {"at": "Réding", "note": "a hamlet of Réding (the index)"}
+  faings-polots-les-ham: {"at": "Le Val-d'Ajol", "note": "a hamlet of Le Val-d'Ajol (the index)"}
+  foucrey: {"at": "Serres", "note": "farms of Serres (the index)"}
+  gremifontaine: {"at": "La Chapelle-aux-Bois", "note": "a hamlet of La Chapelle-aux-Bois (the index)"}
+  hutte: {"at": "Xamontarupt", "note": "a hamlet of Xamontarupt (the index)"}
+  klang-vil: {"at": "Klang", "note": "the village of Klang (com. de Kemplich in the index)"}
+  la-nolle: {"at": "Corcieux", "note": "a village of Corcieux (the index)"}
+  la-rue-sous-llarol: {"at": "Harol", "note": "a hamlet of Harol (the index)"}
+  longcroyc: {"at": "Harol", "note": "a hamlet of Harol (the index)"}
+  putlegney: {"at": "Harol", "note": "a hamlet of Harol (the index)"}
+  la-trouchc: {"at": "Laveline", "note": "a hamlet of Laveline (the index)"}
+  vetupaire: {"at": "Laveline", "note": "a hamlet of Laveline (the index), the Laveline near its district"}
+  laitre-dcneuvie: {"at": "Deneuvre", "note": "a hamlet of Deneuvre (the index)"}
+  le-chanois: {"at": "Saint-Amé", "note": "a hamlet of the Syndicat de Saint-Amé (the index)"}
+  le-menil-bellefontainc: {"at": "Bellefontaine", "note": "a hamlet of Bellefontaine (the index)"}
+  maisons-de-raon-ce: {"at": "Bellefontaine", "note": "an écart of Bellefontaine (the index); not Raon-aux-Bois"}
+  le-monccl: {"at": "Saulcy-sur-Meurthe", "note": "a hamlet of Saulcy (the index)"}
+  moniet: {"at": "Deneuvre", "note": "the old priory of le Moniet, near Deneuvre (the index)"}
+  neune: {"at": "Vienville", "note": "a hamlet of Vienville (the index)"}
+  thin-ville: {"at": "Vienville", "note": "a hamlet of Vienville (the index)"}
+  neuvcville: {"at": "Valleroy", "note": "a hamlet of Valleroy (the index)"}
+  portieux: {"at": "Rosières-aux-Salines", "note": "the stud farm (jumenterie) of Portieux at Rosières-aux-Salines (the index); not the village of Portieux"}
+  rembaville: {"at": "Corcieux", "note": "a village of Corcieux (the index)"}
+  ruelle: {"unlocated": true, "note": "la Ruelle, of the mairie of Meurthe, prévôté of Saint-Dié (the index gives no commune)"}
+  saint-epvre: {"at": "Toul", "note": "Saint-Epvre, a suburb of Toul with its abbey (the index)"}
+  viller: {"at": "Lunéville", "note": "Viller, a suburb of Lunéville (the index)"}
+  menil: {"at": "Lunéville", "note": "Ménil, a suburb of Lunéville (the index); not Ménil-sur-Belvitte"}
+  rohr: {"at": "Bitche", "note": "a hamlet absorbed by the town of Bitche (the index)"}
+  la-bassc-mandray: {"at": "Mandray", "note": "a hamlet of Mandray (the index)"}
+  la-haute-mandray: {"at": "Mandray", "note": "a hamlet of Mandray (the index)"}
+  le-menil: {"at": "Étival-Clairefontaine", "note": "le Ménil, a hamlet of Étival (the index); not Ménil-de-Senones"}
+  les-champs-de-laxci: {"at": "Champdray", "note": "a hamlet of Champdray (the index); not Champ-le-Duc"}
+  villing: {"at": "Denting", "note": "a farm of Denting (the index); not the village of Villing"}
+  villers-le-prud-homme: {"at": "Ville-au-Val", "note": "an écart and chapel of Ville-au-Val (the index)"}
+  dittclingen: {"unlocated": true, "note": "a destroyed village of the county of Forbach, 'emplacement inconnu' (the index)"}
+  bouzey: {"at": "Sanchey", "note": "a hamlet of Sanchey (the index)"}
+  villard: {"at": "Circourt", "note": "a hamlet of Circourt (the index), the Circourt near its district"}
+  saint-jean-pierrefort: {"at": "Martincourt", "note": "a hamlet of Martincourt (the index), the one near its district"}
+  breehaincouri: {"at": "Gircourt", "note": "a hamlet of Gircourt (the index), the one near its district"}
+  les-fouies: {"at": "Granges", "note": "a censé of Granges (the index), the one near its district"}

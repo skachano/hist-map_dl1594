@@ -337,11 +337,20 @@ def run() -> dict[str, Result]:
         elif exact:
             take(res, max(exact, key=tiebreak), "low", f"ambiguous without an anchor ({len(spots)} spots)")
 
-    _apply_rules(results, rules, items)   # first, so that the passes below leave these alone
+    def commune_at(name: str, pid: str) -> tuple[float, float] | None:
+        """The commune of that name nearest the place's district (or the only one)."""
+        pts = seats(name)
+        if not pts:
+            print(f"rules.yaml geocode {pid}: commune {name!r} not found")
+            return None
+        context = _district_context(results, places, memberships).get(pid)
+        return min(pts, key=lambda pt: km(pt, context)) if context else pts[0]
+
+    _apply_rules(results, rules, items, commune_at)   # first, so that the passes below leave these alone
     _refine(results, places, memberships, gaz, locate)
     _one_place_per_item(results, places, gaz)
     _check_index(results, places, gaz, seats, rules, memberships)
-    _apply_rules(results, rules, items)
+    _apply_rules(results, rules, items, commune_at)
 
     # Territories: a label point at the seat (a settlement of the seat's name in the territory),
     # else at the centre of their located members; Japanese names from the seat.
@@ -569,8 +578,10 @@ def _one_place_per_item(results: dict[str, Result], places: dict, gaz: Gazetteer
     print(f"one place per item: {moved} place(s) moved off a shared Wikidata item")
 
 
-def _apply_rules(results: dict[str, Result], rules: dict, items: dict) -> None:
-    """rules.yaml `geocode`: {place: {wikidata: Q…}|{lat, lon}|{approximate: other-place}|{unlocated: true}, note}."""
+def _apply_rules(results: dict[str, Result], rules: dict, items: dict, commune_at=None) -> None:
+    """rules.yaml `geocode`: {place: {wikidata: Q…}|{lat, lon}|{approximate: other-place}|{at: commune}|
+    {unlocated: true}, note}. `at` places a hamlet or farm at its commune, the one of that name nearest
+    the place's district (`commune_at(name, place id)`)."""
     for pid, rule in rules.items():
         res = results.get(pid)
         if res is None:
@@ -588,6 +599,10 @@ def _apply_rules(results: dict[str, Result], rules: dict, items: dict) -> None:
             t = results[rule["approximate"]]
             res.lat, res.lon, res.method, res.confidence, res.note = t.lat, t.lon, "approximate", "low", note
             res.country = t.country or res.country   # in the same country as the place it is put at
+        elif "at" in rule and commune_at and (pt := commune_at(rule["at"], pid)):
+            res.lat, res.lon = round(pt[0], 5), round(pt[1], 5)
+            res.wikidata_id = res.geonames_id = None
+            res.method, res.confidence, res.note = "approximate", "low", note
         elif rule.get("unlocated"):
             res.lat = res.lon = None
             res.method, res.confidence, res.note = "unlocated", "low", note

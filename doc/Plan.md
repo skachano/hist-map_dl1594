@@ -653,6 +653,31 @@ Requested: make the Territories screen follow the colour scheme and the structur
   - The Territories tab draws only the territories' borders: the villages' cells are hidden there (they stay on the other tabs).
   - Tests: vitest for the groups and the kind filter; one more Playwright test (kind menu and key). 19 vitest and 49 Playwright tests pass.
 
+### After Stage 10: lost villages, hamlets and farms checked
+Requested after Scheuer-Hof (placed in Luxembourg instead of at Nohn): check the other lost villages, hamlets and farms.
+- **Status: done.** An audit compared every located settlement with what the index says.
+  - **The checks:**
+    - a lost place matched by name
+    - more than 6 km from the commune the index names (the nearest place of that name)
+    - a modern country that contradicts the index's département or state
+    - a hamlet, farm or mill more than 25 km from its district's other places
+  - **The result:** 121 places flagged. Most were false alarms:
+    - towns "lost" through a misparsed index line (Xertigny, Pirmasens, Rugney)
+    - the large Saarland municipalities, whose villages lie 6–10 km from the centre
+    - enclaves far from the rest of their district (Rémelange, Saint-Privat)
+  - **44 fixes in `rules.yaml` (`geocode`):**
+    - 41 hamlets, farms and lost places matched to a namesake 15–160 km away are now placed at the commune the index gives. Examples:
+      - the hamlets of Harol (the scan reads "Haro")
+      - Moniet, the old priory near Deneuvre
+      - the stud farm of Portieux, at Rosières-aux-Salines
+      - Saint-Epvre and Viller, the suburbs of Toul and Lunéville
+      - Rohr, absorbed by Bitche
+      - the Mandrays at Mandray
+      - Maisons-de-Raon at Bellefontaine
+    - 3 are left unlocated: Bury and la Ruelle, for which the index gives no commune, and Dittclingen, "emplacement inconnu".
+  - **The new rule `{at: commune}`:** places a hamlet at its commune, approximate (hollow), choosing among namesakes the one nearest the place's district. A place put at another place now takes that place's country.
+  - A pytest test covers the rule (79 pytest, 49 Playwright tests pass).
+
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.
 

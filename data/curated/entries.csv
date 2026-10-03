@@ -235,7 +235,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 235,Bienville-!a-Petite.,Bienville-!a-Petite,,provostship-einville,,fief,,,,main,,bienville-la-petite,43,high,
 236,"Lunéville, chasteau, ville, abbayede l'ordre régulier de sainct Augustin, commanderie, couvent de soeurs de l'ordre de sainct François.",Lunéville,castle|town|abbey|convent|commandery,provostship-luneville,,domain,,,,main,augustinian,luneville,43,high,
 237,Viller.,Viller,,provostship-luneville,,domain,,,,main,,viller,43,high,
-238,Mesnil.,Mesnil,,provostship-luneville,,domain,,,,main,,menil-sur-belvitte,43,medium,index match by confused number (0.91)
+238,Mesnil.,Mesnil,,provostship-luneville,,domain,,,,main,,menil,43,medium,index match by confused number (0.91)
 239,Rebainviller.,Rebainviller,,provostship-luneville,,domain,,,,main,,rehainviller,43,high,
 240,Moncel.,Moncel,,provostship-luneville,,domain,,,,main,,moncel-les-luneville,43,high,
 241,llarymesnil.,Harymesnil,,provostship-luneville,,domain,,,,main,,herimenil,44,high,
@@ -340,7 +340,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 340,La Bourgoncc.,La Bourgoncc,,ban-etival,,clergy,,,,main,,la-bourgonce,47,medium,index match by confused number (1.00)
 341,La Salle.,La Salle,,ban-etival,,clergy,,,,main,,la-salle,47,high,
 342,Sainct-Remy.,Sainct-Remy,,ban-etival,,clergy,,,,main,,saint-remy,47,medium,index match by confused number (1.00)
-343,Le Mesnil.,Le Mesnil,,ban-etival,,clergy,,,,main,,menil-de-senones,47,medium,index match by confused number (0.91)
+343,Le Mesnil.,Le Mesnil,,ban-etival,,clergy,,,,main,,le-menil,47,medium,index match by confused number (0.91)
 344,La Fosse.,La Fosse,,ban-etival,,clergy,,,,main,,fosse-la-ham,47,medium,index match by confused number (0.77)
 345,Pageolle.,Pageolle,,ban-etival,,clergy,,,,main,,pajaille,47,medium,index match by index number (1.00)
 346,Le Vivier.,Le Vivier,,ban-etival,,clergy,,,,main,,le-vivier,47,high,
@@ -847,7 +847,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 847,Fresse.,Fresse,,mayoralty-longchamp,,fief,,,,main,,fresse-sur-moselle,65,medium,index match by confused number (1.00)
 848,Le Prey.,Le Prey,,mayoralty-longchamp,,fief,,,,main,,pre-derriere,65,high,
 849,Demeruz.,Demeruz,,mayoralty-longchamp,,fief,,,,main,,demrupl,65,high,
-850,Le Mesnil.,Le Mesnil,,mayoralty-longchamp,,fief,,,,main,,le-menil,65,high,
+850,Le Mesnil.,Le Mesnil,,mayoralty-longchamp,,fief,,,,main,,le-menil-229,65,high,
 851,Sainct-Maurise.,Sainct-Maurise,,mayoralty-longchamp,,fief,,,,main,,saint-maurice-sur-moselle,65,high,
 852,Le Charmois-dcvant-Bains.,Le Charmois-dcvant-Bains,,mayoralty-longchamp,,fief,,,,main,,charniois-rorgueilicux,65,high,
 853,"Fonlenoy, baronnic, chasteau et village.",Fonlenoy,castle|village,provostship-arches,lordship-fontenoy-le-chateau,fief,,,,main,,fontenoy-le-chateau,65,medium,index match by index number (1.00)
@@ -880,7 +880,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 880,Enccgney.,Enccgney,,provostship-charmes,,clergy,,,,main,,essegney,66,high,
 881,Battigny-Sainct-Briee.,Battigny-Sainct-Briee,,provostship-charmes,,clergy,,,,main,,bettegney-saint-brice,66,high,
 882,Le Val.,Le Val,,provostship-charmes,,clergy,,,,main,,evaux-et-menil,66,high,
-883,Le Mcsnil.,Le Mcsnil,,provostship-charmes,,clergy,,,,main,,menil,66,high,
+883,Le Mcsnil.,Le Mcsnil,,provostship-charmes,,clergy,,,,main,,menil-evaux-ct-menil,66,high,
 884,Gripport.,Gripport,,provostship-charmes,,clergy,,,,main,,gripport,66,high,
 885,Socourt.,Socourt,,provostship-charmes,,clergy,,,,main,,socourt,66,high,
 886,Sainct-Finnin.,Sainct-Finnin,,provostship-charmes,,clergy,,,,main,,saint-firmin,66,high,
@@ -891,13 +891,13 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 891,Viefvilie.,Viefvilie,,provostship-charmes,,fief,,,,main,,vieville,66,high,
 892,Sainct-Firmin.,Sainct-Firmin,,provostship-charmes,,fief,,,,main,,saint-firmin,66,high,
 893,Le Val.,Le Val,,provostship-charmes,,fief,,,,main,,evaux-et-menil,66,medium,index match by confused number (0.95)
-894,Le Mcsnil.,Le Mcsnil,,provostship-charmes,,fief,,,,main,,menil,66,high,
+894,Le Mcsnil.,Le Mcsnil,,provostship-charmes,,fief,,,,main,,menil-evaux-ct-menil,66,high,
 895,Gugncy-aux-Aulz.,Gugncy-aux-Aulz,,provostship-charmes,,fief,,,,main,,gugney-aux-aulx,66,high,
 896,Brallevîlle.,Brallevîlle,,provostship-charmes,,fief,,,,main,,bralleville,66,high,
 897,Germonvillc.,Germonvillc,,provostship-charmes,,fief,,,,main,,germonville,66,high,
 898,Xironcourt et Juvoncourt (le ban de).,Xironcourt et Juvoncourt,,provostship-charmes,,fief,,,,main,,jevoncourt,66,high,
 899,"Mirccour:, ville.",Mirccour:,town,provostship-mirecourt-et-remoncourt,,domain,,,,main,,mirecourt,66,medium,index match by loose number (0.94)
-900,La Ncuftïlîe-soubz-Montfort.,La Ncuftïlîe-soubz-Montfort,,provostship-mirecourt-et-remoncourt,,domain,,,,main,,la-neuvevihc-souis-montfort,66,high,
+900,La Ncuftïlîe-soubz-Montfort.,La Ncuftïlîe-soubz-Montfort,,provostship-mirecourt-et-remoncourt,,domain,,,,main,,la-neuveville-sous-montfort,66,high,
 901,Remoncourt.,Remoncourt,,provostship-mirecourt-et-remoncourt,,domain,,,,main,,remoncourt,66,high,
 902,Bazailles.,Bazailles,,provostship-mirecourt-et-remoncourt,,domain,,,,main,,bazoilles-et-menil,66,high,
 903,Vivier.,Vivier,,provostship-mirecourt-et-remoncourt,,domain,,,,main,,viviers-les-offroicourt,67,high,
@@ -1048,7 +1048,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1048,Mazelet.,Mazelet,,ban-girancourt,,fief,,,,main,,mazelay,71,high,
 1049,La Rue devant Dompaire.,La Rue devant Dompaire,,ban-girancourt,,fief,,,,main,,itue-devant-dompaire,71,medium,index match by loose number (0.89)
 1050,Adon.,Adon,,ban-girancourt,,fief,,,,main,,adompt,71,high,
-1051,LaNeufville.,LaNeufville,,ban-girancourt,,fief,,,,main,,la-neuvevihc-souis-montfort,71,medium,index match by number (0.42)
+1051,LaNeufville.,LaNeufville,,ban-girancourt,,fief,,,,main,,la-neuveville-sous-montfort,71,medium,index match by number (0.42)
 1052,Bouzemofif.,Bouzemofif,,ban-girancourt,,fief,,,,main,,bouzemont,71,high,
 1053,Basigny.,Basigny,,ban-girancourt,,fief,,,,main,,basigny,72,low,index match by none (0.00)
 1054,"Blamerey, pour la moictié et l'autre moictié au comté de Vaudémont.",Blamerey,,ban-girancourt,,fief,,1/2,,main,,blemerey,72,high,
