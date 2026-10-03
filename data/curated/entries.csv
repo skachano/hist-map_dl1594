@@ -1255,7 +1255,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1255,Leucken.,Leucken,,sub-provostship-sierck,,domain,,,,main,,oberleuken,79,medium,index match by index number (0.41)
 1256,Wuclicni.,Wuclicni,,sub-provostship-sierck,,domain,,,,main,,wochern,79,high,
 1257,Gclmingcn.,Gclmingcn,,sub-provostship-sierck,,domain,,,,main,,gomelange,79,high,
-1258,Golstingen.,Golstingen,,sub-provostship-sierck,,domain,,,,main,,gostingen,79,high,
+1258,Golstingen.,Golstingen,,sub-provostship-sierck,,domain,,,,main,,gongelfang,79,high,
 1259,Buchingen.,Buchingen,,sub-provostship-sierck,,domain,,,,main,,bockange,79,high,
 1260,Hcrstoriï.,Hcrstoriï,,sub-provostship-sierck,,domain,,,,main,,hestroff,79,high,
 1261,Kedingcn.,Kedingcn,,sub-provostship-sierck,,domain,,,,main,,kedange,79,high,
@@ -1330,7 +1330,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1330,Ebcrsweillcr.,Ebcrsweillcr,,district-perl,,fief,,,,main,,ebersviller,81,medium,index match by confused number (0.96)
 1331,Golman.,Golman,,district-perl,,fief,,,,main,,colmen,81,medium,index match by index number (1.00)
 1332,Hombourg auiïdcr Kandcl.,Hombourg auiïdcr Kandcl,,district-perl,,fief,,,,main,,hombourg-sur-kaner,81,medium,index match by index number (1.00)
-1333,Waldtvtiss.,Waldtvtiss,,district-perl,,fief,,,,main,,valdwisse,81,medium,index match by index number (1.00)
+1333,Waldtvtiss.,Waldtvtiss,,district-perl,,fief,,,,main,,waldwisse,81,medium,index match by index number (1.00)
 1334,Bcltsstroff.,Bcltsstroff,,district-perl,,fief,,,,main,,bcltsstroff,81,low,index match by none (0.00)
 1335,Ansclnigen.,Ansclnigen,,district-perl,,fief,,,,main,,ansclnigen,81,low,index match by none (0.00)
 1336,Dudingen.,Dudingen,,district-perl,,fief,,,,main,,diding,82,medium,index match by loose number (0.95)

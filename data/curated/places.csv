@@ -1,5 +1,5 @@
 id,kind,name_fr,name_de,name_en,variants,old_forms,place_type,lat,lon,wikidata_id,geonames_id,modern_country,index_kind,index_commune,index_canton,index_dept,lost,geo_method,geo_confidence,hierarchy,holder_id,counterpart_id,counterpart_basis,source_page,confidence,notes
-bailiwick-allemagne,territory,Bailliage d'Allemagne,Amt (Bailliage) Allemagne,Bailiwick of Allemagne,,,bailiwick,49.25194,6.70954,,,,,,,,,territory,medium,admin,,,,77,high,
+bailiwick-allemagne,territory,Bailliage d'Allemagne,Amt (Bailliage) Allemagne,Bailiwick of Allemagne,,,bailiwick,49.25188,6.70954,,,,,,,,,territory,medium,admin,,,,77,high,
 bailiwick-apremont,territory,Bailliage d'Apremont,Amt (Bailliage) Apremont,Bailiwick of Apremont,Aspremont,,bailiwick,48.85528,5.63917,,,,,,,,,territory,medium,admin,,,,101,high,
 bailiwick-chatel-sur-moselle,territory,Bailliage de Châtel-sur-Moselle,Amt (Bailliage) Châtel-sur-Moselle,Bailiwick of Châtel-sur-Moselle,Chastel~sur-Moze',,bailiwick,48.31417,6.39306,,,,,,,,,territory,medium,admin,,,,97,high,
 bailiwick-epinal,territory,Bailliage d'Épinal,Amt (Bailliage) Épinal,Bailiwick of Épinal,Espinal,,bailiwick,48.17361,6.45167,,,,,,,,,territory,medium,admin,,,,99,high,
@@ -60,7 +60,7 @@ district-sarralbe,territory,Circonscription de Sarralbe,Bezirk Sarralbe,District
 district-sarreck,territory,Circonscription de Sarreck,Bezirk Sarreck,District of Sarreck,Sarech,,district,48.77771,7.03869,,,,,,,,,territory,medium,admin,,lordship-sarreck,slot,108,high,
 district-soultzbach,territory,Circonscription de Soultzbach,Bezirk Soultzbach,District of Soultzbach,,,district,48.05521,7.22067,,,,,,,,,territory,medium,admin,,,,108,high,
 district-spitzemberg,territory,Circonscription de Spitzemberg,Bezirk Spitzemberg,District of Spitzemberg,,,district,48.30756,7.04417,,,,,,,,,territory,medium,admin,,lordship-spitzemberg,slot,109,high,
-duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69187,6.51533,,,,,,,,,territory,medium,admin,,,,34,high,
+duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.6921,6.51542,,,,,,,,,territory,medium,admin,,,,34,high,
 fief-keltern-ostern,territory,Fief de Keltern-Ostern,Lehen Keltern-Ostern,Fief of Keltern-Ostern,,,fief,49.52336,7.1118,,,,,,,,,territory,medium,feudal,house-eberstein|house-oberstein,provostship-keltern-ostern,heading,89,high,
 lordship-beaurains,territory,Terre et seigneurie de Beaurains,Herrschaft Beaurains,Lordship of Beaurains,Bcaurains,,lordship,49.27899,6.6082,,,,,,,,,territory,medium,feudal,,district-beaurains,slot,93,high,
 lordship-bitche,territory,Terre et seigneurie de Bitche,Herrschaft Bitche,Lordship of Bitche,Biche,,lordship,49.10026,7.36709,,,,,,,,,territory,medium,feudal,duchy-lorraine,district-bitche,slot,109,high,
@@ -127,7 +127,7 @@ provostship-saint-die,territory,Prévôté de Saint-Dié,Propstei Saint-Dié,Pro
 provostship-sierck,territory,Prévôté de Sierck,Propstei Sierck,Provostship of Sierck,,,provostship,49.4425,6.36028,,,,,,,,,territory,medium,admin,,,,77,high,
 provostship-sierck-prevote-propre,territory,Prévôté de Sierck (prévôté propre),Propstei Sierck (prévôté propre),Provostship of Sierck (prévôté propre),,,provostship,49.39393,6.44561,,,,,,,,,territory,medium,admin,,,,78,high,
 provostship-tantimont,territory,Prévôté de Tantimont,Propstei Tantimont,Provostship of Tantimont,,,provostship,48.38166,6.19528,,,,,,,,,territory,medium,admin,,,,99,high,
-sub-provostship-sierck,territory,Sous-prévôté de Sierck,Unterpropstei Sierck,Sub-provostship of Sierck,,,sub_provostship,49.39029,6.44163,,,,,,,,,territory,medium,admin,,,,78,high,
+sub-provostship-sierck,territory,Sous-prévôté de Sierck,Unterpropstei Sierck,Sub-provostship of Sierck,,,sub_provostship,49.38593,6.44562,,,,,,,,,territory,medium,admin,,,,78,high,
 temporality-abbey-saint-avold,territory,Temporel de l'abbaye de Saint-Avold,Kirchengut der Abtei Saint-Avold,Lands of the abbey of Saint-Avold,,,temporality,49.12022,6.49128,,,,,,,,,territory,medium,feudal,abbey-saint-avold,,,115,high,
 town-district-marsal,territory,Ville de Marsal,Stadt mit Bann Marsal,Town and its district of Marsal,,,town_district,48.78917,6.60917,,,,,,,,,territory,medium,admin,,,,115,high,
 town-district-sarrebourg,territory,Ville de Sarrebourg,Stadt mit Bann Sarrebourg,Town and its district of Sarrebourg,,,town_district,48.73472,7.05389,,,,,,,,,territory,medium,admin,,,,107,high,
@@ -755,10 +755,10 @@ goldlktch,settlement,GoldlKtch,,,Golbacli,,village,49.44097,6.85759,,,FR,vil.,Bc
 gomelange,settlement,Gomelange,Gelmingen,Gomelange,Gclmingcn|Gommelangc,Gelmingen,village,49.24222,6.47,Q21576,,FR,,,Boulay,,,hist_map,medium,,,,,79,high,0.95 near the index's canton (7 km)
 gondreville,settlement,Gondreville,Gondreville,Gondreville,Gondreville|Gondrcville,,town,48.69306,5.96056,Q1060129,,FR,,,Toul-Nord,,,wikidata,high,,,,,54,high,1.00 near the index's canton (5 km)
 gondrexon,settlement,Gondrexon,Gondrexon,Gondrexon,Gondrexon|Gondrcxon,,village,48.60556,6.76972,Q426059,,FR,,,Blâmont,,,wikidata,high,,,,,106,high,1.00 near the index's canton (6 km)
+gongelfang,settlement,Gongelfang,,,Golstingen,Golsfingen,village,49.41361,6.52972,,,FR,,,Sierck,Moselle,,approximate,low,,,,,79,high,"Gongelfang (Golstingen, Golsfingen in the table of old forms), a hamlet of Waldwisse; not Gostingen in Luxembourg. Not in Wikidata or GeoNames: placed at Waldwisse"
 gonvaux,settlement,Gonvaux,,,Gonbaulx,Gonbaulx,farmstead,48.35611,5.64139,,,FR,ferme,Mont Icz-Neufchàteau,,,,approximate,low,,,,,75,medium,not in Wikidata/GeoNames; placed at its commune Mont Icz-Neufchàteau
 gorhey,settlement,Gorhey,Gorhey,Gorhey,Goherey,,village,48.195,6.28389,Q768075,,FR,,,Dompaire,,,wikidata,high,,,,,69,high,1.00 near the index's canton (5 km)
 gosselming,settlement,Gosselming,Gosselmingen,Gosselming,Goselmingen|Gossclmingen,,village,48.79194,7.00278,Q21696,,FR,,,Fénêtrange,Meurthe,,hist_map,high,,,,,108,high,1.00 near the index's canton (6 km)
-gostingen,settlement,Gostingen,Gostingen,Gostingen,Golstingen|Gongelfang,Golsfingen,village,49.61,6.35,Q3111462,,LU,,,Sierck,Moselle,,wikidata,medium,,,,,79,high,0.90 near the index's canton (19 km)
 gouecourt,settlement,Gouécourt,Gouécourt,Gouécourt,Gohccourt|Gouécoun,,village,48.41696,5.70398,Q3112796,,FR,,,Coussey,,,wikidata,medium,,,,,76,high,0.84 near the index's canton (2 km)
 goviller,settlement,Goviller,Goviller,Goviller,Goviller|Govillcr,,village,48.49722,6.01083,Q732553,,FR,,,Vézelise,,,wikidata,high,,,,,96,high,1.00 near the index's canton (6 km)
 grand-menil,settlement,Grand-Ménil,,,Grandmesnil,,hamlet,48.68045,5.8252,,11971512,FR,ham.,Ecrouves,,,,geonames,high,,,,,103,high,1.00 near the index's commune (1 km)
@@ -1300,7 +1300,7 @@ merchingen,settlement,Merchingen,Merchingen,Merchingen,Morchingcn|Morehingen,Mor
 mercille,settlement,Mercille,,,&.cxille,Mexille,hamlet,47.925,6.48333,,,FR,ham.,Val-d'Ajol,,,,approximate,low,,,,,63,high,not in Wikidata/GeoNames; placed at its commune Val-d'Ajol
 mereville,settlement,Méréville,Méréville,Méréville,Mérévilie|Mérévilîc,,village,48.59222,6.1525,Q217803,,FR,,,Nancy-Ouest,,,wikidata,medium,,,,,38,high,0.89 near the index's canton (11 km)
 merlusses,settlement,Merlusses,,,La Murlusse,,hamlet,48.29222,7.10306,,,FR,ham.,Lusse,,,,approximate,low,,,,,49,medium,not in Wikidata/GeoNames; placed at its commune Lusse
-merschweiller,settlement,Merschweiller,Merschweiller,Merschweiller,Esehweiller|Mersweillcr,,village,49.46222,6.41861,Q21996,,FR,,,Sierck,Moselle,,hist_map,high,,,,,78,low,1.00 near the index's canton (5 km); 46 km from its district
+merschweiller,settlement,Merschweiller,Merschweiller,Merschweiller,Esehweiller|Mersweillcr,,village,49.46222,6.41861,Q21996,,FR,,,Sierck,Moselle,,hist_map,high,,,,,78,low,1.00 near the index's canton (5 km); 47 km from its district
 merten,settlement,Merten,Merten,Merten,Morten|Mcrtcn,Morten,village,49.24889,6.66694,Q21743,,FR,,,Bouzonville,Moselle,,hist_map,high,,,,,94,high,1.00 near the index's canton (11 km)
 merzig,settlement,Merzig,Merzig,Merzig,Mertzig,,village,49.44222,6.6375,Q16130,,DE,,,Merzig,Pr.,,hist_map,high,,,,,86,high,1.00 near the index's canton (0 km)
 messein,settlement,Messein,Messein,Messein,Messien|Messcin,,village,48.61167,6.13861,Q633420,,FR,,,Nancy-Ouest,,,wikidata,high,,,,,38,high,1.00 near the index's canton (10 km)
@@ -1868,7 +1868,6 @@ vahl-les-faulquemont,settlement,Vahl-lès-Faulquemont,Vahl-lès-Faulquemont,Vahl
 val-sainle-marie,settlement,Val-Sainle-Marie,,,Val Saîncte-Marie,,village,,,,,FR,seigneurie a Ville-au-Val,,Pont-à-Mousson,Meurthe,,unlocated,low,,,,,105,high,
 valaincourt,settlement,Valaincourt,,,,,hamlet,48.30278,5.83222,,,FR,ham.,Chàtenois,,,,approximate,low,,,,,74,high,not in Wikidata/GeoNames; placed at its commune Chàtenois
 valdweistroff,settlement,Valdweistroff,,,Wistorff,Wistorff,village,,,,,FR,,,Sierck,Moselle,,unlocated,low,,,,,78,medium,
-valdwisse,settlement,Valdwisse,,,Waldtvtiss,,village,,,,,FR,,,Sierck,Moselle,,unlocated,low,,,,,81,medium,
 valfroicourt,settlement,Valfroicourt,Valfroicourt,Valfroicourt,Valfroicourt|Valfroieourt,,village,48.19778,6.09472,Q225067,,FR,,,Villel,,,wikidata,high,,,,,70,high,1.00 near the index's canton (11 km)
 valhey,settlement,Valhey,Valhey,Valhey,Vaîhey,,village,48.67944,6.49139,Q584329,,FR,,,Lunéville-Nord,,,wikidata,high,,,,,43,high,1.00 near the index's canton (10 km)
 vallerange,settlement,Vallerange,Walleringen,Vallerange,Walleranges,,village,48.95028,6.68556,Q22005,,FR,,,Grostenquin,,,hist_map,high,,,,,91,high,1.00 near the index's canton (5 km)
@@ -1988,6 +1987,7 @@ vvallerfangen,settlement,VVallerfangen,,,La ville de Valderfanges pour tout doma
 wadrill,settlement,Wadrill,Wadrill,Wadrill,,,village,49.5851,6.88717,Q1567115,,DE,vil.,Badern,Merzig,Pr.,,hist_map,high,,,,,89,high,1.00 near the index's canton (24 km); the index's commune Badern is not found
 waldeck,settlement,Waldeck,,,Hilsperg|Waldecli,,hamlet,49.0166,7.5292,Q3565301,,FR,ham.,Eguelshardt,,,,hist_map,high,,,,,112,medium,1.00 near the index's commune (3 km)
 waldhausen,settlement,Waldhausen,,,Wollhaussen,,village,49.14369,7.46559,,2967501,FR,,,Volmunster,,,geonames,high,,,,,110,high,1.00 near the index's canton (8 km)
+waldwisse,settlement,Waldwisse,Waldwisse,Waldwisse,Waldtvtiss|Valdwisse,,village,49.41361,6.52972,Q22157,,FR,,,Sierck,Moselle,,rule,high,,,,,81,medium,"Waldwisse (the index's Valdwisse, canton de Sierck)"
 walschbronn,settlement,Walschbronn,Walschbronn,Walschbronn,Waldsborn,,castle,49.14861,7.48111,Q22198,,FR,,,Volmunster,,,hist_map,high,,,,,110,high,1.00 near the index's canton (10 km)
 walsheim,settlement,Walsheim,Walsheim,Walsheim,"""Walsimcr",Walsimcr,village,49.1539,7.23244,Q1662204,,DE,,,Hornbach,Bav.,,hist_map,high,,,,,111,high,1.00 near the index's canton (11 km)
 wehingen,settlement,Wehingen,Wehingen,Wehingen,Wchingen,,village,49.462,6.50777,Q187455,,DE,vil.,Orscholz,Saarburg,Pr.,,hist_map,high,,,,,86,high,1.00 near the index's commune (5 km)

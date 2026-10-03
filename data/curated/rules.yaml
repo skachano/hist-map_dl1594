@@ -100,3 +100,5 @@ geocode:
   hombourg-ilatit: {wikidata: Q22926, note: "Hombourg-Haut (the scan reads Hombourg-Ilatit)"}
   hombourgou-hombourg-sur-kaner: {wikidata: Q22152, name_fr: Hombourg-sur-Kaner, note: "Hombourg or Hombourg-sur-Kaner, canton de Metzervisse: Hombourg-Budange"}
   chatlemagnc-ou-chatemagnc: {approximate: abaticourt, name_fr: Chattemagne, note: "Chattemagne or Chatemagne (ban de): a part of Abaucourt's territory, where a castle stood (the index)"}
+  valdwisse: {wikidata: Q22157, note: "Waldwisse (the index's Valdwisse, canton de Sierck)"}
+  gongelfang: {approximate: valdwisse, name_fr: Gongelfang, note: "Gongelfang (Golstingen, Golsfingen in the table of old forms), a hamlet of Waldwisse; not Gostingen in Luxembourg. Not in Wikidata or GeoNames: placed at Waldwisse"}
