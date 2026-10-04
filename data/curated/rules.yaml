@@ -105,6 +105,7 @@ index_lines:
   # The page's footnote ("1. Ban de Vezin-en-Vaul…") was read into the line, and its number lost.
   # "36" read as "ôii": 1536, Eiweiller (Exweiller), with 1498 and 1513
   "252|Thalecksweiler": "Thalecksweiler, vil., com. d'Eppelborn, 1498, 1513, 36."
+  "239|Pompierre": "Pompierre, canton de Neufchâteau, 124."   # the scan reads the canton as "Netifehàieau"
   "188|Beaumont": "Beaumont, canton de Domèvre (Meurthe), 2037."
   # Two lines run together; Hœlling's number was lost.
   "218|Hoeliing":
@@ -184,3 +185,4 @@ geocode:
   bliesguerschwiller: {"wikidata": "Q21701", "note": "Blies-Guersviller, canton de Sarreguemines (the index's Bliesguerschwiller; Gersweiller in the list, entry 1580); not Gersweiler in Saarbrücken"}
   ceume: {"wikidata": "Q23001", "note": "Coume, canton de Boulay (the scan reads Ceume; Chonne in the list and the table of old forms)"}
   thalecksweiler: {"wikidata": "Q2408787", "note": "Thalexweiler (Eppelborn, then Lebach): Exweiller and Eiweiller in the list (entries 1498, 1513, 1536), Thalecksweiler in the index; not Eiweiler near Heusweiler"}
+  pompierre: {"wikidata": "Q227626", "note": "Pompierre, canton de Neufchâteau (Vosges), Pontpierre in the list (entry 124); not Pontpierre in the Moselle"}

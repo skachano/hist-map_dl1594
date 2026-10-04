@@ -500,7 +500,7 @@ dreisbach,49.485,6.565,Q1258065,,Dreisbach,Dreisbach,Dreisbach,,FR,hist_map,high
 drogny,49.2467,6.41639,Q16507718,,Drogny,Drogny,Drogny,,FR,hist_map,high,1.00 near the index's commune (0 km)
 droiteval,48.03278,6.03556,,,Droiteval,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Claudon
 drouville,48.67111,6.40806,Q227707,,Drouville,Drouville,Drouville,,FR,wikidata,high,1.00 near the index's canton (11 km)
-duchy-lorraine,48.69095,6.51668,,,Duché de Lorraine,,,,,territory,medium,centre of 2324 located member(s)
+duchy-lorraine,48.69028,6.51585,,,Duché de Lorraine,,,,,territory,medium,centre of 2324 located member(s)
 duren,49.3036,6.66222,Q1271996,,Düren,Düren,Düren,,DE,wikidata,high,1.00 near the index's commune (1 km)
 eberswillcr,49.27513,6.401,,,Ebersviller,,,,FR,hist_map,medium,0.91 near the index's canton (10 km)
 eblange,49.22333,6.48194,Q21674,,Éblange,Eblingen,Éblange,,FR,hist_map,high,1.00 near the index's canton (5 km)
@@ -1446,7 +1446,7 @@ phalstourg-eh-l-de-canton,,,,,Phalstourg. eh.-l. de canton,,,,FR,unlocated,low,
 piblange,49.24667,6.41861,Q22369,,Piblange,Pieblingen,Piblange,,FR,hist_map,high,1.00 near the index's canton (9 km)
 picrrevillc,48.54889,6.12194,Q670472,,Pierreville,Pierreville,Pierreville,,FR,wikidata,high,1.00 near the index's canton (7 km)
 pierreficte,48.16861,6.17611,Q200394,,Pierreficte,Pierrefitte,Pierrefitte,,FR,wikidata,low,0.91 near its district's other members (8 km)
-pierrefort,48.84133,5.9387,,11971119,Pierrefort,,,,FR,geonames,medium,1.00 near its district's other members (26 km); the index's commune Blarli.ncourt is not found
+pierrefort,48.84133,5.9387,,11971119,Pierrefort,,,,FR,geonames,medium,1.00 near its district's other members (27 km); the index's commune Blarli.ncourt is not found
 pierreponl,48.26333,6.64889,Q1166302,,Pierrepont-sur-l'Arentèle,Pierrepont-sur-l’Arentèle,Pierrepont-sur-l'Arentèle,,FR,wikidata,high,1.00 near the index's canton (8 km)
 pirmascns,49.2,7.6,Q14849,,Pirmasens,Pirmasens,Pirmasens,ピルマゼンス,DE,wikidata,medium,"exact name, no anchor"
 pixerecourl,48.7304,6.1804,Q3389470,,Pixerécourt,Pixerécourt,Pixerécourt,,FR,wikidata,high,1.00 near the index's canton (4 km)
@@ -1456,7 +1456,7 @@ platenges,,,,,Platenges,,,,FR,unlocated,low,
 plombieres,47.96639,6.46306,Q84240734,,Plombières-les-Bains,,Plombières-les-Bains,,FR,wikidata,high,1.00 near the index's canton (0 km)
 pomern,,,,,Pomern,,,,FR,unlocated,low,
 pompey,48.76806,6.1275,Q212966,,Pompey,Pompey,Pompey,,FR,wikidata,high,1.00 near the index's canton (9 km)
-pompierre,49.04365,6.64008,,2986129,Pompierre,,,,FR,geonames,medium,"0.95; Q22257 went to ponlpierre, whose name fits it better; the index's canton Netifehàieau is not found"
+pompierre,48.26083,5.67278,Q227626,,Pompierre,Pompierre,Pompierre,,FR,rule,high,"Pompierre, canton de Neufchâteau (Vosges), Pontpierre in the list (entry 124); not Pontpierre in the Moselle"
 ponl-tei-bonfays,48.16889,6.13278,Q1414102,,Pont-lès-Bonfays,Pont-lès-Bonfays,Pont-lès-Bonfays,,FR,wikidata,medium,0.93 near the index's canton (11 km)
 ponlpierre,49.04167,6.64222,Q22257,,Pontpierre,Steinbiedersdorf,Pontpierre,,FR,hist_map,high,1.00 near the index's canton (3 km)
 pont,48.00607,6.62873,Q130613261,,Pont,,Pont,,FR,wikidata,medium,1.00 near its district's other members (3 km); the index's commune Dominartin (ftemiremont is not found

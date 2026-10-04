@@ -60,7 +60,7 @@ district-sarralbe,territory,Circonscription de Sarralbe,Bezirk Sarralbe,District
 district-sarreck,territory,Circonscription de Sarreck,Bezirk Sarreck,District of Sarreck,Sarech,,district,48.75105,7.04966,,,,,,,,,territory,medium,admin,,lordship-sarreck,slot,108,high,
 district-soultzbach,territory,Circonscription de Soultzbach,Bezirk Soultzbach,District of Soultzbach,,,district,48.05521,7.22067,,,,,,,,,territory,medium,admin,,,,108,high,
 district-spitzemberg,territory,Circonscription de Spitzemberg,Bezirk Spitzemberg,District of Spitzemberg,,,district,48.30756,7.04417,,,,,,,,,territory,medium,admin,,lordship-spitzemberg,slot,109,high,
-duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69095,6.51668,,,,,,,,,territory,medium,admin,,,,34,high,
+duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69028,6.51585,,,,,,,,,territory,medium,admin,,,,34,high,
 fief-keltern-ostern,territory,Fief de Keltern-Ostern,Lehen Keltern-Ostern,Fief of Keltern-Ostern,,,fief,49.52336,7.1118,,,,,,,,,territory,medium,feudal,house-eberstein|house-oberstein,provostship-keltern-ostern,heading,89,high,
 lordship-beaurains,territory,Terre et seigneurie de Beaurains,Herrschaft Beaurains,Lordship of Beaurains,Bcaurains,,lordship,49.27906,6.60818,,,,,,,,,territory,medium,feudal,,district-beaurains,slot,93,high,
 lordship-bitche,territory,Terre et seigneurie de Bitche,Herrschaft Bitche,Lordship of Bitche,Biche,,lordship,49.10489,7.36439,,,,,,,,,territory,medium,feudal,duchy-lorraine,district-bitche,slot,109,high,
@@ -1479,7 +1479,7 @@ pevange,settlement,Pévange,Pewingen,Pévange,Pebingen,Pebingen,village,48.9075,
 phalstourg-eh-l-de-canton,settlement,Phalstourg. eh.-l. de canton,,,Pfallzbourg|Pfoltzbourg,,town,,,,,FR,,,,,,unlocated,low,,,,,113,high,
 piblange,settlement,Piblange,Pieblingen,Piblange,Bublingen|Publingcn,Bublingen|Publingen,village,49.24667,6.41861,Q22369,,FR,,,Boulay,,,hist_map,high,,,,,80,high,1.00 near the index's canton (9 km)
 pierreficte,settlement,Pierreficte,Pierrefitte,Pierrefitte,,,village,48.16861,6.17611,Q200394,,FR,,,,,,wikidata,low,,,,,71,low,not found in the index; 0.91 near its district's other members (8 km)
-pierrefort,settlement,Pierrefort,,,,,castle,48.84133,5.9387,,11971119,FR,chat.,Blarli.ncourt,,,,geonames,medium,,,,,39,high,1.00 near its district's other members (26 km); the index's commune Blarli.ncourt is not found
+pierrefort,settlement,Pierrefort,,,,,castle,48.84133,5.9387,,11971119,FR,chat.,Blarli.ncourt,,,,geonames,medium,,,,,39,high,1.00 near its district's other members (27 km); the index's commune Blarli.ncourt is not found
 pierrepont-sur-l-arentele,settlement,Pierrepont-sur-l'Arentèle,Pierrepont-sur-l’Arentèle,Pierrepont-sur-l'Arentèle,Picrrepont|Pierreponl,,village,48.26333,6.64889,Q1166302,,FR,,,Bruyères,,,wikidata,high,,,,,57,high,1.00 near the index's canton (8 km)
 pierreville,settlement,Pierreville,Pierreville,Pierreville,Pierreville|Picrrevillc,,village,48.54889,6.12194,Q670472,,FR,,,Vézclise,,,wikidata,high,,,,,36,high,1.00 near the index's canton (7 km)
 pirmasens,settlement,Pirmasens,Pirmasens,Pirmasens,Pfumersens|Pirmascns,Pfumersens,village,49.2,7.6,Q14849,,DE,"cb.-l. de canton (Bav.ï, 2210",,,,true,wikidata,medium,,,,,112,high,"correction 52: 2210 → 2209; exact name, no anchor"
@@ -1490,7 +1490,7 @@ platenges,settlement,Platenges,,,,,village,,,,,FR,fief du bailliage d*Apromont,,
 plombieres-les-bains,settlement,Plombières-les-Bains,,Plombières-les-Bains,Plombières,,priory,47.96639,6.46306,Q84240734,,FR,,,Plombières,,,wikidata,high,,,,,60,high,1.00 near the index's canton (0 km)
 pomern,settlement,Pomern,,,,,village,,,,,FR,prévôté de Sierek,,,,true,unlocated,low,,,,,82,medium,
 pompey,settlement,Pompey,Pompey,Pompey,Pompé,,village,48.76806,6.1275,Q212966,,FR,,,Nancy-Nord,,,wikidata,high,,,,,38,high,1.00 near the index's canton (9 km)
-pompierre,settlement,Pompierre,,,Pontpicrrc,,village,49.04365,6.64008,,2986129,FR,,,Netifehàieau,,,geonames,medium,,,,,40,high,"0.95; Q22257 went to ponlpierre, whose name fits it better; the index's canton Netifehàieau is not found"
+pompierre,settlement,Pompierre,Pompierre,Pompierre,Pontpicrrc,,village,48.26083,5.67278,Q227626,,FR,,,Neufchâteau,Vosges,,rule,high,,,,,40,high,"Pompierre, canton de Neufchâteau (Vosges), Pontpierre in the list (entry 124); not Pontpierre in the Moselle"
 pont,settlement,Pont,,Pont,,,village,48.00607,6.62873,Q130613261,,FR,bam.,Dominartin (ftemiremont,,,,wikidata,medium,,,,,62,high,1.00 near its district's other members (3 km); the index's commune Dominartin (ftemiremont is not found
 pont-les-bonfays,settlement,Pont-lès-Bonfays,Pont-lès-Bonfays,Pont-lès-Bonfays,Pont-lez-Bonfay|Ponl-tei-Bonfays,,village,48.16889,6.13278,Q1414102,,FR,,,Darney,,,wikidata,medium,,,,,69,high,0.93 near the index's canton (11 km)
 pont-saint-vincent,settlement,Pont-Saint-Vincent,Pont-Saint-Vincent,Pont-Saint-Vincent,Le Pont Sainct-Vincent|\JC Pont-Sainct-Vincent,,small_town,48.605,6.09722,Q1049800,,FR,,,Nancy-Ouest,,,wikidata,high,,,,,40,high,1.00 near the index's canton (12 km)
