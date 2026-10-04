@@ -707,6 +707,20 @@ Requested: the district of Bitche and the other first-level offices showed among
   - Subdivisions of a prévôté stay one level below it (the district of Perl and the sous-prévôté in the prévôté of Sierck, Rimling in the district of Bitche: 3).
   - The bailliages level now shows the eight bailliages only; the lands outside them appear from level 2. Feudal realms keep levels by depth.
 
+### After Stage 10: terminology as in hist_map
+Requested: name bailiwicks, provostships and the other units as hist_map does.
+- **Status: done.**
+  - English uses the English terms, not the French ones: Bailiwicks; Provostships, offices; Bans, mayoralties; valley districts.
+  - German follows hist_map:
+    - bailiwick: Bellistum (Oberamt); territories are named "Bellistum Nancy"
+    - provostship: Schultheißerei; sub-provostship: Unterschultheißerei
+    - the hierarchies: Verwaltungsgliederung and Lehnsherrschaften
+  - French follows hist_map:
+    - lordship: seigneurie ("Seigneurie de Bitche", no longer "Terre et seigneurie de Bitche")
+    - the hierarchies: Circonscriptions administratives and Seigneuries et fiefs
+    - the rural provostship: prévôté rurale
+  - Vocabulary (`vocab.yaml`), the territories' generated names, the interface strings and the About page were changed together; ids are unchanged.
+
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.
 

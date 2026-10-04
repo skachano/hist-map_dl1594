@@ -238,7 +238,8 @@ def _territory_names(ttype: str, seat: str, vocab: dict) -> tuple[str, str, str]
     labels = vocab["territory_types"][ttype]
     fr = labels["fr"][0].upper() + labels["fr"][1:]
     de_ = "d'" if fold(seat)[:1] in "aeiouyh" else "de "
-    return (f"{fr} {de_}{seat}", f"{labels['de']} {seat}", f"{labels['en'][0].upper() + labels['en'][1:]} of {seat}")
+    de = re.sub(r"\s*\(.*\)$", "", labels["de"])   # "Bellistum (Oberamt)" names "Bellistum Nancy", as in hist_map
+    return (f"{fr} {de_}{seat}", f"{de} {seat}", f"{labels['en'][0].upper() + labels['en'][1:]} of {seat}")
 
 
 def build() -> Built:

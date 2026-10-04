@@ -13,17 +13,17 @@ test("territories: the two hierarchies and their levels", async ({ page }) => {
   const side = page.locator("#side");
   const pressed = (name: string) => expect(side.getByRole("button", { name, exact: true })).toHaveAttribute("aria-pressed", "true");
   await pressed("Administrative divisions");
-  await pressed("Bailliages");
+  await pressed("Bailiwicks");
   await expect(side.getByRole("button", { name: "Bailiwick of Nancy" })).toBeVisible();
   await expect(side.getByRole("button", { name: "Provostship of Nancy" })).toHaveCount(0);
   await expect(page.locator(".terr-label").filter({ hasText: "Bailiwick of Nancy" })).toHaveCount(1);
 
-  await side.getByRole("button", { name: "Prévôtés, offices" }).click();
+  await side.getByRole("button", { name: "Provostships, offices" }).click();
   await expect(page).toHaveURL(/lvl=2/);
   await expect(side.getByRole("button", { name: "Provostship of Nancy" })).toBeVisible();
   await expect(side.getByRole("button", { name: "Bailiwick of Nancy" })).toHaveCount(0);
   await expect(side.getByRole("button", { name: "District of Bitche" })).toBeVisible();
-  await side.getByRole("button", { name: "Bans, mairies" }).click();
+  await side.getByRole("button", { name: "Bans, mayoralties" }).click();
   await expect(side.getByRole("button", { name: "Mayoralty of Schorbach" })).toBeVisible();
   await side.getByRole("button", { name: "All levels" }).click();
   await expect(page).toHaveURL(/lvl=0/);
@@ -46,7 +46,7 @@ test("territories: a member link walks down a level, a chain link back up", asyn
   await panel.locator(".members").getByRole("button", { name: "Provostship of Nancy" }).click();
   await expect(page).toHaveURL(/place=provostship-nancy/);
   await expect(page).toHaveURL(/lvl=2/);
-  await expect(side.getByRole("button", { name: "Prévôtés, offices" })).toHaveAttribute("aria-pressed", "true");
+  await expect(side.getByRole("button", { name: "Provostships, offices" })).toHaveAttribute("aria-pressed", "true");
   // the provostship's places, in the book's order: Nancy is entry 1
   await expect(panel.locator("ul.members.cols li").first()).toContainText("1 Nancy");
   await panel.locator(".crumbs").getByRole("button", { name: "Bailiwick of Nancy" }).click();
@@ -166,12 +166,12 @@ test("territories: one kind of realm at every level, and the colour key of the k
   await open(page, "#/territories?lang=en");
   const side = page.locator("#side");
   const groups = side.locator("ul.groups li");
-  await expect(groups.filter({ hasText: "Bailliages" })).toContainText("8");
+  await expect(groups.filter({ hasText: "Bailiwicks" })).toContainText("8");
   await expect(groups.filter({ hasText: "Offices, castellanies, provostships" })).toContainText("0");   // level 1: bailliages only
   const menu = side.getByRole("combobox", { name: "Kind of realm" });
   await menu.selectOption("provostship");
   await expect(page).toHaveURL(/kind=provostship/);
-  await expect(side.getByRole("button", { name: "Bailliages" })).toHaveAttribute("aria-pressed", "false");
+  await expect(side.getByRole("button", { name: "Bailiwicks" })).toHaveAttribute("aria-pressed", "false");
   for (const text of await side.locator("ul.realms li").allInnerTexts()) expect(text).toMatch(/^Provostship of /);
   await menu.selectOption("county");
   await expect(groups.filter({ hasText: "Counties" })).toContainText("3");

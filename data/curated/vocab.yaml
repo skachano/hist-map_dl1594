@@ -33,13 +33,13 @@ place_types:
 # Territories, each in one hierarchy: administrative divisions or feudal realms.
 territory_types:
   duchy:         {hierarchy: admin, en: duchy, fr: duché, de: Herzogtum, ja: 公国}
-  bailiwick:     {hierarchy: admin, en: bailiwick, fr: bailliage, de: Amt (Bailliage), ja: バイイ管区}
-  provostship:   {hierarchy: admin, en: provostship, fr: prévôté, de: Propstei, ja: 代官区}
-  sub_provostship: {hierarchy: admin, en: sub-provostship, fr: sous-prévôté, de: Unterpropstei, ja: 副代官区}
+  bailiwick:     {hierarchy: admin, en: bailiwick, fr: bailliage, de: Bellistum (Oberamt), ja: バイイ管区}
+  provostship:   {hierarchy: admin, en: provostship, fr: prévôté, de: Schultheißerei, ja: 代官区}
+  sub_provostship: {hierarchy: admin, en: sub-provostship, fr: sous-prévôté, de: Unterschultheißerei, ja: 副代官区}
   castellany:    {hierarchy: admin, en: castellany, fr: châtellenie, de: Kellerei, ja: 城代管区}
   office:        {hierarchy: admin, en: office, fr: office, de: Amt, ja: 管区（アムト）}
   receivership:  {hierarchy: admin, en: receivership, fr: recette, de: Rezeptur, ja: 収税区}
-  landschultheisserei: {hierarchy: admin, en: rural provostship, fr: Landschultesserie, de: Landschultheißerei, ja: 農村代官区}
+  landschultheisserei: {hierarchy: admin, en: rural provostship, fr: prévôté rurale, de: Landschultheißerei, ja: 農村代官区}
   ban:           {hierarchy: admin, en: ban, fr: ban, de: Bann, ja: バン（管轄区）}
   mayoralty:     {hierarchy: admin, en: mayoralty, fr: mairie, de: Meierei, ja: 村長区}
   val:           {hierarchy: admin, en: valley district, fr: val, de: Tal, ja: 谷区}
@@ -48,7 +48,7 @@ territory_types:
   county:        {hierarchy: feudal, en: county, fr: comté, de: Grafschaft, ja: 伯領}
   marquisate:    {hierarchy: feudal, en: marquisate, fr: marquisat, de: Markgrafschaft, ja: 侯爵領}
   barony:        {hierarchy: feudal, en: barony, fr: baronnie, de: Freiherrschaft, ja: 男爵領}
-  lordship:      {hierarchy: feudal, en: lordship, fr: terre et seigneurie, de: Herrschaft, ja: 領}
+  lordship:      {hierarchy: feudal, en: lordship, fr: seigneurie, de: Herrschaft, ja: 領}
   fief:          {hierarchy: feudal, en: fief, fr: fief, de: Lehen, ja: 封土}
   allod:         {hierarchy: feudal, en: allod, fr: franc-alleu, de: Allod, ja: 自由地（アロード）}
   temporality:   {hierarchy: feudal, en: church lands, fr: temporel, de: Kirchengut, ja: 教会領}
