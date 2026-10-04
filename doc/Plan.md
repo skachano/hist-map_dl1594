@@ -418,7 +418,7 @@ The Claude API key comes from `ANTHROPIC_API_KEY` in `.env` (git-ignored).
 
 ### Stage 6: Territory geometry
 - Tasks:
-  - Voronoi cells from all located settlements, as in hist_map, plus **neutral seed points** for communes in the bounding box that the book does not list (from Wikidata). Without them, the cells of Lorraine villages would cover the bishoprics' enclaves and the Barrois.
+  - (Changed after Stage 10: neutral points only in the known foreign lands; see below.) Voronoi cells from all located settlements, as in hist_map, plus **neutral seed points** for communes in the bounding box that the book does not list (from Wikidata). Without them, the cells of Lorraine villages would cover the bishoprics' enclaves and the Barrois.
   - Dissolve cells per hierarchy: administrative divisions at each level (they tile the duchy), then feudal realms from their own members only (they leave gaps). There is one version per territory, with no years.
   - Split places (two divisions, "en partie") are in both areas, as in hist_map (changed after Stage 10; it was the first division only).
   - Approximate and far-away places add no land, as in hist_map.
@@ -678,6 +678,21 @@ Requested after Scheuer-Hof (placed in Luxembourg instead of at Nohn): check the
     - 3 are left unlocated: Bury and la Ruelle, for which the index gives no commune, and Dittclingen, "emplacement inconnu".
   - **The new rule `{at: commune}`:** places a hamlet at its commune, approximate (hollow), choosing among namesakes the one nearest the place's district. A place put at another place now takes that place's country.
   - A pytest test covers the rule (79 pytest, 49 Playwright tests pass).
+
+### After Stage 10: blank land only for known foreign lands
+Requested after a question about the holes west of Forbach (the Warndt): how does hist_map treat modern communes the book doesn't list? It ignores them, and only the book's places divide the land. Three ways were tried: neutral points for every unlisted commune (until now), none (hist_map's way), and neutral points only in known foreign lands. The third was chosen.
+- **Status: done.**
+  - **Before:** every Wikidata commune the book doesn't list took land of its own, so modern or unlisted villages cut holes into the duchy (Creutzwald, Carling, Porcelette in the Warndt; Stiring-Wendel).
+  - **hist_map's way alone** closed the holes, but painted the Pays messin as the duchy's.
+  - **Now** (`geo/territories.py`, `data/curated/manual/foreign_lands.csv`): as in hist_map, only the book's places divide the land, except inside the foreign lands listed by hand, each a circle around its town with a note:
+    - Metz and the Pays messin (15 km)
+    - Toul (8 km) and Verdun (12 km)
+    - the bishop of Metz's lands around Vic (7 km), Rambervillers (5 km), Baccarat (4 km)
+    - Liverdun, of the bishops of Toul (4 km)
+    - Nassau-Saarbrücken (8 km; 12 km reached into the Lorraine villages east of Forbach)
+  - Inside them, unlisted communes are neutral points with land of their own. The book's own places always count as Lorraine's, so the duchy's villages in the Pays messin stay islands.
+  - Coume (entry 1360, the scan's "Ceume") and Boucheporn (2273, "Banschborn", which the index prints as 2275) were located on the way.
+  - The circles are a rough stand-in for borders; each is adjusted in the CSV. The About page describes the method in four languages.
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.

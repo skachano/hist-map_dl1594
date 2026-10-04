@@ -2,9 +2,11 @@
 
 1. Each located settlement gets a Voronoi cell (the land nearer to it than to any other
    settlement), clipped to CLIP_KM around the settlements so outlying villages don't claim
-   empty land. Neutral seed points, the Wikidata communes of the region that the book doesn't
-   list, take cells of their own and belong to no territory: without them, Lorraine's villages
-   would cover the bishoprics' enclaves (Metz, Toul, Verdun) and the Barrois.
+   empty land. As in hist_map, only the book's places divide the land, except in the foreign
+   lands of manual/foreign_lands.csv (Metz, Toul and Verdun with their countrysides, the bishops'
+   towns, Nassau-Saarbrücken): there, the Wikidata communes the book doesn't list are neutral
+   seed points, with cells of their own that belong to no territory, so Lorraine's villages
+   don't cover the enclaves. (Unlisted communes elsewhere, like the Warndt's, are not foreign.)
 2. A territory's area is the union of its settlements' cells, following the links of its own
    hierarchy: administrative divisions through `admin` links (village -> ban -> prévôté ->
    bailliage), feudal realms through `feudal` links. Divisions tile the duchy; realms cover only
@@ -38,6 +40,7 @@ from denombrement.geo.geocode import label_keys, name_key
 OUT_DIR = config.DATA_DIR / "geometry"
 CLIP_KM = 6.0           # how far a settlement's cell may reach
 NEUTRAL_MIN_KM = 1.5    # a Wikidata commune this close to a listed settlement is that settlement
+FOREIGN_LANDS = config.CURATED_DIR / "manual" / "foreign_lands.csv"
 SIMPLIFY_M = 80         # geometry simplification tolerance
 PRECISION = 5           # decimal places in output coordinates (~1 m)
 CONFIDENCE_RANK = {"high": 0, "medium": 1, "low": 2}
@@ -56,10 +59,35 @@ def excluded_from_areas(geocoding_rows: list[dict]) -> set[str]:
             or "km from its district" in g["note"]}
 
 
-def neutral_points(listed: list[tuple[float, float]], qids: set[str], names: set[str]) -> list[tuple[float, float]]:
-    """Communes of the region the book doesn't list (metric coordinates). A commune named like
-    one of the book's places (unlocated ones included) or like a commune the index gives for a
-    hamlet is not foreign land, so it is no neutral point either."""
+def foreign_zones() -> list[tuple[float, float, float]]:
+    """manual/foreign_lands.csv: the foreign lands inside or along the duchy (the Three Bishoprics'
+    cities and countrysides, the bishops' towns, Nassau-Saarbrücken), as (x, y, radius) in metres
+    around the commune each is named after."""
+    if not FOREIGN_LANDS.exists():
+        return []
+    by_name = {}
+    for it in wikidata.region().values():
+        if it["types"] & COMMUNE_CLASSES:
+            for label in (it["de"], it["fr"]):   # French last: "Metz", "Sarrebruck" or "Saarbrücken"
+                if label:
+                    by_name[label] = it
+    out = []
+    for r in csv.DictReader(FOREIGN_LANDS.open()):
+        it = by_name.get(r["centre"])
+        if it is None:
+            raise ValueError(f"manual/foreign_lands.csv: no commune {r['centre']!r}")
+        x, y = _to_metric(it["lon"], it["lat"])
+        out.append((x, y, float(r["radius_km"]) * 1000))
+    return out
+
+
+def neutral_points(listed: list[tuple[float, float]], qids: set[str], names: set[str],
+                   zones: list[tuple[float, float, float]] | None = None) -> list[tuple[float, float]]:
+    """Communes the book doesn't list (metric coordinates) inside the foreign lands (`zones`):
+    they keep their land out of the duchy's areas. Everywhere else, as in hist_map, only the
+    book's places divide the land. A commune named like one of the book's places (unlocated ones
+    included) or like a commune the index gives for a hamlet is not foreign land either. Without
+    `zones`, every unlisted commune is neutral."""
     grid: dict[tuple[int, int], list[tuple[float, float]]] = defaultdict(list)
     for x, y in listed:
         grid[(int(x // 2000), int(y // 2000))].append((x, y))
@@ -76,6 +104,8 @@ def neutral_points(listed: list[tuple[float, float]], qids: set[str], names: set
         if any(label_keys(it[lang]) & names for lang in ("fr", "de") if it[lang]):
             continue
         x, y = _to_metric(it["lon"], it["lat"])
+        if zones is not None and not any((x - a) ** 2 + (y - b) ** 2 <= r ** 2 for a, b, r in zones):
+            continue
         if not near_listed(x, y):
             out.append((round(x), round(y)))
     return sorted(set(out))  # two items at one spot (a commune and its former commune) are one point
@@ -116,7 +146,7 @@ def run() -> None:
     qids = {p.wikidata_id for p in located if p.wikidata_id}
     names = {name_key(n) for p in places.values() if p.kind == "settlement"
              for n in [p.name_fr, p.index_commune or "", *p.variants] if n} - {""}
-    neutral = neutral_points(list(by_point), qids, names)
+    neutral = neutral_points(list(by_point), qids, names, foreign_zones())
     print(f"cells: {len(by_point)} listed points, {len(neutral)} neutral communes")
     point_cells = cells_for(by_point, neutral)
     cells = {ids[0]: point_cells[pt] for pt, ids in by_point.items()}
