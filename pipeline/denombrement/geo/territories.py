@@ -55,11 +55,13 @@ _to_lonlat = Transformer.from_crs("EPSG:3035", "EPSG:4326", always_xy=True).tran
 
 def excluded_from_areas(geocoding_rows: list[dict]) -> set[str]:
     """Places whose point must not add land: placed at their commune, matched with low
-    confidence, or far from their district's other members."""
+    confidence, or far from their district's other members without the index's commune or canton
+    to confirm the match (a fief can lie far from the prévôté it is listed under: Harchéchamp,
+    near Neufchâteau, in the prévôté of Nancy)."""
     return {g["place_id"] for g in geocoding_rows
             if g["method"] in ("approximate", "unlocated")
             or g["confidence"] == "low"
-            or "km from its district" in g["note"]}
+            or ("km from its district" in g["note"] and "near the index's" not in g["note"])}
 
 
 def foreign_zones() -> list[tuple[float, float, float]]:
