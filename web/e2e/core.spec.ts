@@ -144,12 +144,12 @@ test("an entry naming two places is listed under both, each linking the other", 
   await expect(row.getByRole("button", { name: "Wiesviller" })).toBeVisible();
 });
 
-test("Settlements is the default view; the tabs are Territories, then Settlements", async ({ page }) => {
+test("Settlements is the default view and the first tab; Territories is second", async ({ page }) => {
   const errors = await open(page, "");
   await expect(page).toHaveURL(/#\/map\?/);
   const tabs = page.getByRole("navigation", { name: "Views" }).getByRole("button");
-  await expect(tabs.nth(0)).toHaveText("Territories");
-  await expect(tabs.nth(1)).toHaveText("Settlements");
-  await expect(tabs.nth(1)).toHaveAttribute("aria-pressed", "true");
+  await expect(tabs.nth(0)).toHaveText("Settlements");
+  await expect(tabs.nth(0)).toHaveAttribute("aria-pressed", "true");
+  await expect(tabs.nth(1)).toHaveText("Territories");
   expect(errors).toEqual([]);
 });

@@ -696,7 +696,7 @@ Requested after a question about the holes west of Forbach (the Warndt): how doe
 
 ### After Stage 10: the Settlements tab, the default view
 Requested: rename Tenures to Settlements and make it the default view.
-- **Status: done.** The tab is Settlements, Localités, Orte, 集落. A bare address or an unknown view opens it, while Territories stays the first tab. Its URL stays `#/map`.
+- **Status: done.** The tab is Settlements, Localités, Orte, 集落. A bare address or an unknown view opens it, and it is the first tab, before Territories. Its URL stays `#/map`.
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.

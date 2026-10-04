@@ -6,7 +6,7 @@ import type { Lang } from "../data/types";
 import { LANGS } from "../i18n";
 
 /** In the header's order; Settlements (the map) is the default. */
-export const VIEWS = ["territories", "map", "holders", "table", "church", "about"] as const;
+export const VIEWS = ["map", "territories", "holders", "table", "church", "about"] as const;
 export type View = (typeof VIEWS)[number];
 export const LAYERS = ["towns", "churches", "abbeys", "priories", "convents", "commanderies", "chaumes"] as const;
 export type Layer = (typeof LAYERS)[number];
