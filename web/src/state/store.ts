@@ -1,11 +1,11 @@
 // Application state, mirrored in the URL hash so any view can be linked:
-//   #/map?lang=fr&place=saint-avold   (the Tenures tab; links with the old colour modes still open it)
+//   #/map?lang=fr&place=saint-avold   (the Settlements tab; links with the old colour modes still open it)
 //   #/territories?h=feudal&lvl=1   #/territories?kind=provostship     #/holders?entity=abbey-saint-avold     #/church?layer=abbeys
 //   #/table?d=provostship-nancy&t=fief&q=chasteau
 import type { Lang } from "../data/types";
 import { LANGS } from "../i18n";
 
-/** In the header's order; Territories is the default. */
+/** In the header's order; Settlements (the map) is the default. */
 export const VIEWS = ["territories", "map", "holders", "table", "church", "about"] as const;
 export type View = (typeof VIEWS)[number];
 export const LAYERS = ["towns", "churches", "abbeys", "priories", "convents", "commanderies", "chaumes"] as const;
@@ -40,7 +40,7 @@ export interface State {
   filters?: TableFilters;
 }
 
-export const DEFAULT_STATE: State = { view: "territories", lang: "en" };
+export const DEFAULT_STATE: State = { view: "map", lang: "en" };
 const FILTER_KEYS: [keyof TableFilters, string][] = [["district", "d"], ["realm", "r"], ["section", "t"],
   ["holder", "hd"], ["series", "s"], ["q", "q"]];
 

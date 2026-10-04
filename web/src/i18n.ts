@@ -8,7 +8,7 @@ const STRINGS = {
     ja: "1594年のロレーヌ公国" },
   language: { en: "Language", fr: "Langue", de: "Sprache", ja: "言語" },
   views: { en: "Views", fr: "Vues", de: "Ansichten", ja: "表示" },
-  view_map: { en: "Tenures", fr: "Tenures", de: "Besitzarten", ja: "保有形態" },
+  view_map: { en: "Settlements", fr: "Localités", de: "Orte", ja: "集落" },
   view_territories: { en: "Territories", fr: "Territoires", de: "Territorien", ja: "領域" },
   view_holders: { en: "Holders", fr: "Détenteurs", de: "Inhaber", ja: "保有者" },
   view_table: { en: "Table", fr: "Tableau", de: "Tabelle", ja: "一覧表" },

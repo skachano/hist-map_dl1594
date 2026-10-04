@@ -1,4 +1,4 @@
-// The map: settlement cells and points styled per place by the view (tenure on the Tenures tab),
+// The map: settlement cells and points styled per place by the view (tenure on the Settlements tab),
 // hatching for places held only in part, the duchy's outline, and the territories' areas, labelled.
 import {
   type FilterSpecification, type GeoJSONSource, Map as MapLibre, type MapGeoJSONFeature, type MapMouseEvent, Marker,

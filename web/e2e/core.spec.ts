@@ -1,10 +1,10 @@
 import { expect, test } from "@playwright/test";
 import { legendTitle, mapSettled, open } from "./helpers";
 
-test("the Tenures tab colours the map by tenure, with no colour modes", async ({ page }) => {
+test("the Settlements tab colours the map by tenure, with no colour modes", async ({ page }) => {
   const errors = await open(page, "#/map?color=holder&lang=en");   // a link from the time of the modes
   const views = page.getByRole("navigation", { name: "Views" });
-  await expect(views.getByRole("button", { name: "Tenures" })).toHaveAttribute("aria-pressed", "true");
+  await expect(views.getByRole("button", { name: "Settlements" })).toHaveAttribute("aria-pressed", "true");
   await expect(views.getByRole("button", { name: "Map" })).toHaveCount(0);
   await expect(page.getByRole("navigation", { name: "Colour by" })).toHaveCount(0);
   await expect(legendTitle(page)).toHaveText("Tenure in 1594");
@@ -18,7 +18,7 @@ test("language switch translates the interface and the names", async ({ page }) 
   await page.getByRole("button", { name: "Deutsch" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "de");
   await expect(page.locator("#header h1")).toHaveText("Das Herzogtum Lothringen 1594");
-  await expect(page.getByRole("button", { name: "Besitzart" })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Ansichten" }).getByRole("button", { name: "Orte", exact: true })).toBeVisible();
   await expect(page.locator("#panel h2")).toHaveText("Sankt Avold");
   await page.getByRole("button", { name: "Français" }).click();
   await expect(page.locator("#header h1")).toHaveText("Le duché de Lorraine en 1594");
@@ -144,12 +144,12 @@ test("an entry naming two places is listed under both, each linking the other", 
   await expect(row.getByRole("button", { name: "Wiesviller" })).toBeVisible();
 });
 
-test("Territories is the default view, and the first tab; Tenures is second", async ({ page }) => {
+test("Settlements is the default view; the tabs are Territories, then Settlements", async ({ page }) => {
   const errors = await open(page, "");
-  await expect(page).toHaveURL(/#\/territories\?/);
+  await expect(page).toHaveURL(/#\/map\?/);
   const tabs = page.getByRole("navigation", { name: "Views" }).getByRole("button");
   await expect(tabs.nth(0)).toHaveText("Territories");
-  await expect(tabs.nth(0)).toHaveAttribute("aria-pressed", "true");
-  await expect(tabs.nth(1)).toHaveText("Tenures");
+  await expect(tabs.nth(1)).toHaveText("Settlements");
+  await expect(tabs.nth(1)).toHaveAttribute("aria-pressed", "true");
   expect(errors).toEqual([]);
 });

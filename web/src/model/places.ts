@@ -52,7 +52,7 @@ export interface PlaceStyle {
   shared?: boolean;
 }
 
-/** How each located settlement is drawn on the Tenures map: the colour of its main tenure. */
+/** How each located settlement is drawn on the Settlements map: the colour of its main tenure. */
 export function placeStyles(data: Dataset): Map<string, PlaceStyle> {
   const styles = new Map<string, PlaceStyle>();
   for (const p of data.places.values()) {

@@ -694,6 +694,10 @@ Requested after a question about the holes west of Forbach (the Warndt): how doe
   - Coume (entry 1360, the scan's "Ceume") and Boucheporn (2273, "Banschborn", which the index prints as 2275) were located on the way.
   - The circles are a rough stand-in for borders; each is adjusted in the CSV. The About page describes the method in four languages.
 
+### After Stage 10: the Settlements tab, the default view
+Requested: rename Tenures to Settlements and make it the default view.
+- **Status: done.** The tab is Settlements, Localités, Orte, 集落. A bare address or an unknown view opens it, while Territories stays the first tab. Its URL stays `#/map`.
+
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.
 

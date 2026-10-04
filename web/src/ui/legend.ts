@@ -1,4 +1,4 @@
-// The Tenures map's legend: what each colour stands for, with place counts, the hatching key and
+// The Settlements map's legend: what each colour stands for, with place counts, the hatching key and
 // the kinds of place.
 import type { Dataset } from "../data/types";
 import { label, t } from "../i18n";
