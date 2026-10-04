@@ -291,6 +291,14 @@ def build() -> Built:
             out.memberships.append({"child_id": key, "parent_id": key_map[t["ressort"]], "relation": "ressort",
                                     "share": "", "source_page": t["page"]})
 
+    # rules.yaml territory_names: names a territory has in use, not "<type> of <seat>" ("Deutsches Bellistum")
+    for key, names in (rules.get("territory_names") or {}).items():
+        if key not in out.places:
+            raise ValueError(f"rules.yaml territory_names: no territory {key}")
+        for lang in ("fr", "de", "en"):
+            if names.get(lang):
+                out.places[key][f"name_{lang}"] = names[lang]
+
     # --- entities and realm holders ---
     out.entities[DUKE] = {"id": DUKE, "name_en": "Duke of Lorraine", "name_fr": "Duc de Lorraine",
                           "name_de": "Herzog von Lothringen", "entity_type": "duchy", "source_page": "35",

@@ -81,6 +81,10 @@ entry_names:
   2176: Lothringen      # "Sur la montagne … les ruines d'un chasteau … appelle Lothringen" (p. 111)
   2177: Altheim         # "Elle consiste en ce seul village d'Altheim" (p. 111)
 
+# Names a territory has in use, instead of "<type> of <seat>" (as in hist_map).
+territory_names:
+  bailiwick-allemagne: {fr: "Bailliage d'Allemagne", de: "Deutsches Bellistum", en: "German Bailiwick"}
+
 # Entries the scan ran together, as printed: {number as read: [{"no", text}, …]} ("no" quoted: YAML reads a bare no as false).
 entry_splits:
   1514:                         # p. 88: "1513. Exweiller." (its number faded) and "1514. Sutzweiller."
