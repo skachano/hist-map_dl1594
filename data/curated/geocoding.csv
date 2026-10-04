@@ -92,7 +92,7 @@ badinenil,,,,,Badinénil,,,,FR,unlocated,low,
 badmenil-aux-bois,48.30222,6.51917,Q633343,,Badménil-aux-Bois,Badménil-aux-Bois,Badménil-aux-Bois,,FR,wikidata,medium,"exact name, no anchor; the index's canton Chute is not found"
 baffe,48.16028,6.57194,Q753273,,La Baffe,La Baffe,La Baffe,,FR,wikidata,high,1.00 near the index's canton (9 km)
 bagneux,48.55833,5.8825,Q1002005,,Bagneux,Bagneux,Bagneux,バニュー,FR,wikidata,medium,"exact name, no anchor"
-bailiwick-allemagne,49.25152,6.71005,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 545 located member(s)
+bailiwick-allemagne,49.25142,6.7098,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 546 located member(s)
 bailiwick-apremont,48.85528,5.63917,,,Bailliage d'Apremont,,,アスプルモン＝ラ＝フォレバイイ管区,,territory,medium,seat: apremonl
 bailiwick-chatel-sur-moselle,48.31417,6.39306,,,Bailliage de Châtel-sur-Moselle,,,,,territory,medium,seat: chatel-sur-mosclle
 bailiwick-epinal,48.17361,6.45167,,,Bailliage d'Épinal,,,エピナルバイイ管区,,territory,medium,seat: epinal
@@ -139,7 +139,6 @@ ban-uxegney,48.19417,6.37028,,,Ban d'Uxegney,,,,,territory,medium,seat: uxegney
 ban-vagney,48.00833,6.71639,,,Ban de Vagney,,,,,territory,medium,seat: vagney
 ban-vaudicourt,48.21333,6.60722,,,Ban de Vaudicourt,,,,,territory,medium,centre of 5 located member(s)
 bannoncourt,48.95917,5.49917,Q430643,,Bannoncourt,Bannoncourt,Bannoncourt,,FR,wikidata,medium,"exact name, no anchor"
-bansch-orn,49.25332,5.47252,,6619421,Bansch))orn,,,,FR,geonames,low,"exact name, no anchor; 93 km from its district"
 bappel,,,,,Bappel,,,,,unlocated,low,
 barbas,48.57306,6.84694,Q858286,,Barbas,Barbas,Barbas,,FR,wikidata,high,1.00 near the index's canton (2 km)
 barbay-scroux,48.14167,6.83944,Q1096472,,Barbey-Seroux,Barbey-Seroux,Barbey-Seroux,,FR,wikidata,medium,0.92 near the index's canton (5 km)
@@ -235,6 +234,7 @@ bonviller,48.63361,6.49722,Q990941,,Bonviller,Bonviller,Bonviller,,FR,wikidata,h
 bonvillet,48.09944,6.05667,Q189824,,Bonvillet,Bonvillet,Bonvillet,,FR,wikidata,high,1.00 near the index's canton (2 km)
 borville,48.44833,6.39306,Q231981,,Borville,Borville,Borville,,FR,wikidata,high,1.00 near the index's canton (6 km)
 bosserville,48.66349,6.24114,Q109573801,,Bosserville,,Bosserville,,FR,wikidata,high,1.00 near the index's commune (2 km)
+boucheporn,49.14083,6.60889,Q21645,,Boucheporn,Buschborn,Boucheporn,,FR,hist_map,high,1.00 near the index's canton (10 km)
 boucliatel,47.925,6.48333,,,Boucliatel,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Val-d'Ajol
 bouillonville,48.94472,5.84222,Q229001,,Bouillonville,Bouillonville,Bouillonville,,FR,wikidata,medium,"exact name, no anchor"
 boulaincourt,48.3725,6.08194,Q834224,,Boulaincourt,Boulaincourt,Boulaincourt,,FR,wikidata,high,1.00 near the index's canton (9 km)
@@ -299,14 +299,14 @@ capucins-de-nancy,,,,,Capucins de Nancy,,,,,unlocated,low,
 caste,49.5657,6.96532,Q20669946,,Kastel-lès-Otzenhausen,Kastel,Kastel,,DE,hist_map,high,0.95 near the index's commune (5 km)
 castellany-conde-et-val-des-faulx,48.80245,6.16329,,,Châtellenie de Condé et Val des Faulx,,,,,territory,medium,centre of 6 located member(s)
 castellany-dieuze,48.81222,6.71972,,,Châtellenie de Dieuze,,,,,territory,medium,seat: dieuze
-castellany-hombourg-et-saint-avold,49.10796,6.6682,,,Châtellenie d'Hombourg et Saint-Avold,,,,,territory,medium,centre of 80 located member(s)
+castellany-hombourg-et-saint-avold,49.10515,6.69661,,,Châtellenie d'Hombourg et Saint-Avold,,,,,territory,medium,centre of 80 located member(s)
 castellany-marimont,48.88917,6.78333,,,Châtellenie de Marimont,,,,,territory,medium,seat: marimont
 ceinlrey,48.525,6.165,Q228782,,Ceintrey,Ceintrey,Ceintrey,,FR,wikidata,high,1.00 near the index's canton (6 km)
 celles,48.45639,6.95,Q210727,,Celles-sur-Plaine,Celles-sur-Plaine,Celles-sur-Plaine,,FR,wikidata,high,1.00 near the index's canton (10 km); 56 km from its district
 cens-la-vhle,48.01972,6.7575,,,Cens-la-VHle,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Sapois
 cercueil,48.69639,6.31236,,3027805,Cercueil,,,,FR,geonames,medium,"exact name, no anchor"
 cerlilleux,48.31111,5.72778,Q1157906,,Certilleux,Certilleux,Certilleux,,FR,wikidata,high,1.00 near the index's canton (5 km)
-ceume,,,,,Ceume,,,,FR,unlocated,low,
+ceume,49.19833,6.57222,Q23001,,Coume,Coume,Coume,,FR,rule,high,"Coume, canton de Boulay (the scan reads Ceume; Chonne in the list and the table of old forms)"
 chaillon,48.94722,5.63972,Q227571,,Chaillon,Chaillon,Chaillon,,FR,wikidata,medium,"exact name, no anchor"
 chaine-goutte,48.10778,6.56639,,,Chaîne-Goutte,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Pouxeux
 chalgoulte,,,,,Chalgoulte,,,,FR,unlocated,low,
@@ -500,7 +500,7 @@ dreisbach,49.485,6.565,Q1258065,,Dreisbach,Dreisbach,Dreisbach,,FR,hist_map,high
 drogny,49.2467,6.41639,Q16507718,,Drogny,Drogny,Drogny,,FR,hist_map,high,1.00 near the index's commune (0 km)
 droiteval,48.03278,6.03556,,,Droiteval,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Claudon
 drouville,48.67111,6.40806,Q227707,,Drouville,Drouville,Drouville,,FR,wikidata,high,1.00 near the index's canton (11 km)
-duchy-lorraine,48.69072,6.51556,,,Duché de Lorraine,,,,,territory,medium,centre of 2324 located member(s)
+duchy-lorraine,48.69084,6.51656,,,Duché de Lorraine,,,,,territory,medium,centre of 2325 located member(s)
 duren,49.3036,6.66222,Q1271996,,Düren,Düren,Düren,,DE,wikidata,high,1.00 near the index's commune (1 km)
 eberswillcr,49.27513,6.401,,,Ebersviller,,,,FR,hist_map,medium,0.91 near the index's canton (10 km)
 eblange,49.22333,6.48194,Q21674,,Éblange,Eblingen,Éblange,,FR,hist_map,high,1.00 near the index's canton (5 km)
@@ -1804,7 +1804,7 @@ tanton-lle,48.46917,6.13889,Q684302,,Tantonville,Tantonville,Tantonville,タン�
 tarquimpol,48.78472,6.75833,Q21823,,Tarquimpol,Tarquimpol,Tarquimpol,,FR,hist_map,high,1.00 near the index's canton (4 km)
 tatignecourl,48.26239,6.1675,Q109574826,,Tatignécourt,,Tatignécourt,,FR,wikidata,high,1.00 near the index's commune (0 km)
 teling,49.05722,6.66361,Q21845,,Téting,Tetingen,Teting-sur-Nied,,FR,hist_map,high,1.00 near the index's canton (5 km)
-temporality-abbey-saint-avold,49.12022,6.49128,,,Temporel de l'abbaye de Saint-Avold,,,,,territory,medium,centre of 11 located member(s)
+temporality-abbey-saint-avold,49.11,6.59458,,,Temporel de l'abbaye de Saint-Avold,,,,,territory,medium,centre of 11 located member(s)
 tendon,48.12167,6.67889,Q2047752,,Tendon,Tendon,Tendon,,FR,wikidata,high,1.00 near the index's canton (13 km)
 tensch,,,,,Tensch,,,,FR,unlocated,low,the index's commune Giostenquin is not found
 tenteling,49.12528,6.93861,Q21853,,Tenteling,Tentelingen,Tenteling,,FR,hist_map,high,1.00 near the index's canton (8 km)

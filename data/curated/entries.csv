@@ -1357,7 +1357,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1357,Wolmcringen.,Wolmcringen,,office-boulay,,domain,,,,main,,volmerange,82,medium,index match by confused number (0.95)
 1358,Brcchlingen.,Brcchlingen,,office-boulay,,domain,,,,main,,brecklange,82,medium,index match by index number (1.00)
 1359,Hargarten.,Hargarten,,office-boulay,,domain,,,,main,,hargarien-aux-mines,82,high,
-1360,Chonne.,Chonne,,office-boulay,,domain,,,,main,,ceume,82,medium,index match by number (0.36)
+1360,Chonne.,Chonne,,office-boulay,,domain,,,,main,,coume,82,medium,index match by number (0.36)
 1361,"Machern, aliàs Maizièrcs.",Machern,,office-boulay,,domain,,,,main,,macker,82,medium,index match by confused number (0.77)
 1362,"Rupplingcn, aliàs Ruppcldanges, tiers.",Rupplingcn,,office-boulay,,domain,,,,main,,roupeldange,82,high,
 1363,"Ottcndorff, aliàs Ottonvillc. partie.",Ottcndorff,,office-boulay,,domain,,part,,main,,ottonville,82,medium,index match by number (0.40)
@@ -2269,7 +2269,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2270,Tettingen.,Tettingen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,teting,115,high,
 2271,Bausstorff.,Bausstorff,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,boustroff,115,high,
 2272,Biestcin.,Biestcin,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,bisten-im-loch,115,high,
-2273,Bansch))orn.,Bansch))orn,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,bansch-orn,115,low,index match by none (0.00)
+2273,Bansch))orn.,Bansch))orn,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,boucheporn,115,medium,index match by index number (1.00)
 2274,Obersweyssen.,Obersweyssen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,obervisse,115,high,
 2275,Niderwevssen.,Niderwevssen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,niedervisse,115,high,
 2276,HaUingen.,HaUingen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,mailing-boulay,115,high,

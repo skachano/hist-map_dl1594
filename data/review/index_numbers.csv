@@ -29,7 +29,6 @@ not in index,,,,,2126,Eschery la Haulte,109,,eschery-la-haulte,
 not in index,,,,,2134,La Fosse,109,,la-fosse,
 not in index,,,,,2229,Contliiîj,113,,contliiij,
 not in index,,,,,2231,Momborn,113,,momborn,
-not in index,,,,,2273,Bansch))orn,115,,bansch-orn,
 not in index,,,,,2283,OberfuUen,115,,oberfuuen,
 no entry,183,Ableuveneltes (les),4îi,,,,,1.00,les-ableuvenettes,Nittel (1411) is Nittel
 no entry,188,Ba/.egncy,1055,,,,,1.00,bazegney,1055 is Damas-devant-Dompaire
@@ -45,7 +44,6 @@ no entry,189,Berus,2356,,,,,1.00,berus,"printed 2356: Harsal, which is Marsal (t
 no entry,190,Bethiiigcn,1358,,,,,1.00,,Brechlingen (1358) is Brecklange
 no entry,190,Bettlainville,1534,,,,,1.00,,printed 1534: Henselhofen (corrections)
 no entry,192,Bonfays,2412,,,,,1.00,bonfays-legeville-et-bonfays,2412 is the Dominican nuns of Nancy
-no entry,192,Boucheporn,2275,,,,,1.00,,"printed 2275: Niderwessen, which is Niedervisse"
 no entry,202,Domjulien,927,,,,,1.00,domjulien,Dombasle (927) is Dombasle-en-Xaintois
 no entry,203,Edling,1519,,,,,1.00,edling,Edlingen (1719) is Adelange
 no entry,208,Fosses (les Hautes et Basses-),2154,,,,,1.00,,"printed 2154: Drulben, which is Trulben"
@@ -149,6 +147,7 @@ manual,205,Eich,2157,,2137,Eychen,109,1.00,eich-sarralbe,"corrections: ""Eich…
 manual,238,Pirmascns,210,,2209,Pfumersens,112,1.00,pirmasens,"printed 2210; Pirmasens is Pfumersens, 2209"
 manual,218,Hombourg-Ilatit,2259,,2239,Hombourg,114,1.00,hombourg-haut,printed 2239
 manual,237,Petil-Ei>ci>willer,2243,,2243,Eberssweiller,114,1.00,petil-ei-ci-willer,printed 2243
+manual,192,Boucheporn,2275,,2273,Bansch))orn,115,1.00,boucheporn,"the scan reads 2275 (Niedervisse's); Boucheporn is Banschborn (table of old forms), entry 2273"
 manual,236,Onnes-ct-Viï!ï'; canton d'Ilaroué,2305,,2305,Ormes,128,1.00,onnes-ct-vii-i-canton-d-ilaroue,Ormes
 manual,210,Frouard,2507,,2307,Frowart,128,1.00,frouard,printed 2307
 manual,208,Fontcnoy-lc-Chàtcau,2520,,2320,Fontcnoy-en-Vosges,128,1.00,fontenoy-le-chateau,printed 2320
@@ -551,7 +550,7 @@ spelling differs,234,NicdaltdoK (Niedaltroff),1290,,1290,AÏlorfi,80,0.36,niedal
 spelling differs,235,Ober-Leuken ou Oberlcuken,1291,,1291,Luckcn,80,0.36,oberleuken,
 spelling differs,231,Monclair ou Monteclair,1347,,1347,Monder,82,0.38,monclair,
 spelling differs,192,Boulay,1348,,1348,Bolchcn,82,0.46,boulay,
-spelling differs,199,Ceume,1360,,1360,Chonne,82,0.36,ceume,
+spelling differs,199,Ceume,1360,,1360,Chonne,82,0.36,coume,
 spelling differs,236,Ottonville,1363,,1363,Ottcndorff,82,0.40,ottonville,
 spelling differs,258,Villing,96,,1396,Wuirfingen,83,0.47,villing,
 spelling differs,209,Fraulaulcrn (Lautern),1401,,1401,Lautherii,84,0.44,fraulautern,
