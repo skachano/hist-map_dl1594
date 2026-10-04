@@ -80,13 +80,13 @@ test("holders: pick a holder, see their realms and places", async ({ page }) => 
 test("table: filter by district, holder and words, export CSV, open a place", async ({ page }) => {
   await open(page, "#/table?lang=en");
   const rows = page.locator("table.matrix tbody tr");
-  await expect(rows).toHaveCount(2485);
+  await expect(rows).toHaveCount(2486);
   const count = page.locator("#page .toolbar .muted");
-  await expect(count).toHaveText("2485 entries");
+  await expect(count).toHaveText("2486 entries");
   // a bailliage includes its prévôtés
   await page.getByRole("combobox", { name: "District" }).selectOption("bailiwick-nancy");
   await expect(page).toHaveURL(/d=bailiwick-nancy/);
-  await expect.poll(() => rows.count()).toBeLessThan(2485);
+  await expect.poll(() => rows.count()).toBeLessThan(2486);
   const inNancy = await rows.count();
   expect(inNancy).toBeGreaterThan(300);
   await expect(rows.first()).toContainText("Provostship of Nancy");

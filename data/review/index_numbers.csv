@@ -135,6 +135,7 @@ manual,210,Frizon (la Haute et la Basse-),1805,,1803,Frizon-la-llaultc,97,1.00,f
 manual,210,Frizon (la Haute et la Basse-),4,,1804,Frizon-la-Basse,97,1.00,frizon,Frizon-la-Basse
 manual,225,Loro-Monlzey,52,,1810,Monzcy,97,1.00,loromontzey,"Montzey (1810); the index prints ""52"""
 manual,225,Loro-Monlzey,1810,,1816,Lorro,98,1.00,loromontzey,printed 1816: Lorro
+manual,223,Lebcuville,36,,1836,Lcbeufville,98,1.00,lebeuville,"printed 1829, 36: Lebeuville is 1829 and 1836 (bailliage of Châtel); 1536 is Thalexweiler's"
 manual,244,Rouvrois-sur-Mcuse,18&4,,1884,Rouveroy,100,1.00,rouvrois-sur-meuse,printed 1884
 manual,184,Aix,1953,,1932,Aix,102,1.00,aix,printed 1933; Aix is 1932 in the list of Apremont
 manual,185,Anoux,1955,,1935,Annoult,102,1.00,anoux,printed 1955; Annoult is 1935 in the list of Apremont
@@ -388,7 +389,6 @@ corrected,195,Caste!,,,1469,Kastel,86,0.95,kastel-les-otzenhausen,number not pri
 corrected,195,Buweiler,,,1490,Budweillcr,87,0.89,buweiler,number not printed in the index
 corrected,186,Aussen,,,1494,Aussen,87,1.00,aussen,number not printed in the index
 corrected,261,Wicsbach,1493,,1495,Wissbach,87,0.88,wiesbach,
-corrected,252,Thalecksweiler,,,1498,Exweiller,87,0.95,thalexweiler,number not printed in the index
 corrected,252,Thelcy,150»,,1504,Theley,87,1.00,theley,
 corrected,225,Lindschcid,1551,,1531,Lindtschidt,88,0.86,lindscheid,
 corrected,228,Marpingen,52,,1532,Merpingen,88,0.95,marpingen,
@@ -424,7 +424,6 @@ corrected,188,Batlexey,1815,,1813,Battcssey,97,0.82,battexey,
 corrected,193,Bouxurulles,27,,1827,Bouxereulles,98,0.87,bouxurulles,
 corrected,223,Lebcuville,ls29,,1829,La Beufvillc,98,0.95,lebeuville,
 corrected,257,Villacourf,,,1835,Velacourt,98,0.95,villacourt,number not printed in the index
-corrected,223,Lebcuville,,,1836,Lcbeufville,98,0.95,lebeuville,number not printed in the index
 corrected,227,Marainville,57,,1837,Marainville,98,1.00,marainville-sur-madon,
 corrected,186,Avrainville,,,1843,Avrainville,99,1.00,avrainville,number not printed in the index
 corrected,250,Saint-Genest,1835,,1855,Sainct-Genois,99,0.82,saint-genest,
@@ -1755,6 +1754,7 @@ agrees,210,Gehweiler,1489,,1489,Gedessweiller,87,0.80,gehweiler,
 agrees,254,Nicder-Sauhach,1491,,1491,Sambach,87,0.50,niedersaubach,
 agrees,190,Bettingen,1493,,1493,Bcttingen,87,1.00,bettingen,
 agrees,189,Secitteldingcn,1496,,1496,Beehteldingen,87,0.81,secitteldingcn,
+agrees,252,Thalecksweiler,1498,,1498,Exweiller,87,0.95,thalexweiler,
 agrees,248,Sotzweiler,1499,,1499,Suhzwciller,87,0.76,sotzweiler,
 agrees,246,Scheuem,1500,,1500,Sclicurcn,87,0.62,scheuem,
 agrees,233,Neipel,1501,,1501,Nippel,87,0.83,neipel,
@@ -1767,7 +1767,8 @@ agrees,219,Immweiler,1508,,1508,Imweillcr,87,0.89,imweiler,
 agrees,213,Gronig,1509,,1509,Gronich,87,0.77,gronig,
 agrees,204,Eisweiler,1510,,1510,Einveiller,88,0.74,eisweiler,
 agrees,246,Schellembach,1512,,1512,Schellembach. î »,88,0.96,schellembach,
-agrees,248,Sotzweiler,1514,,1514,outzweillcr.Kxweiller,88,0.62,sotzweiler,
+agrees,252,Thalecksweiler,1513,,1513,Exweiller,88,0.95,thalexweiler,
+agrees,248,Sotzweiler,1514,,1514,Sutzweiller,88,0.90,sotzweiler,
 agrees,236,Osenbaeh,1515,,1515,Osiembach,88,0.82,osenbaeh,
 agrees,210,Gehweiler,1517,,1517,GodessweiUer,88,0.67,gehweiler,
 agrees,224,Linden,1518,,1518,Zurlinden,88,0.95,linden,
@@ -1783,7 +1784,7 @@ agrees,260,Wchingen,1527,,1527,Wchingen,88,1.00,wehingen,
 agrees,190,Bettingen,1528,,1528,Bettingcn,88,1.00,bettingen,
 agrees,186,Aussen,1529,,1529,Aussen,88,1.00,aussen,
 agrees,225,Limbacb,1530,,1530,l.imbach,88,0.86,limbach,
-agrees,223,Lebcuville,36,,1536,Eiweiller,88,0.56,lebeuville,
+agrees,252,Thalecksweiler,36,,1536,Eiweiller,88,0.64,thalexweiler,
 agrees,249,Steinbacb,1537,,1537,Nidersleimbach,88,0.61,steinbach,
 agrees,249,Steinbacb,38,,1538,Obersleimbach,88,0.64,steinbach,
 agrees,246,Schellembach,39,,1539,Schellembach,88,1.00,schellembach,

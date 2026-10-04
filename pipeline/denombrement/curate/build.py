@@ -258,7 +258,7 @@ def build() -> Built:
     for r in rows:
         if not r.entry.region and r.entry.canton and canton_region.get(name_key(r.entry.canton)):
             r.entry.region = canton_region[name_key(r.entry.canton)].most_common(1)[0][0]
-    entries = read_jsonl(config.EXTRACTED_DIR / "entries.jsonl")
+    entries = split_entries(read_jsonl(config.EXTRACTED_DIR / "entries.jsonl"), rules)
     territories = read_jsonl(config.EXTRACTED_DIR / "territories.jsonl")
 
     # --- territories (renamed by rules where the OCR garbled the seat) ---
@@ -612,6 +612,24 @@ def _canonical_seats(rows) -> list[str]:
         e.commune = fix(e.commune) if e.commune else e.commune
         e.near = fix(e.near) if e.near else e.near
     return sorted(set(log))
+
+
+def split_entries(entries: list[dict], rules: dict) -> list[dict]:
+    """rules.yaml `entry_splits`: entries the scan ran together, as printed
+    ({read no: [{no, text}, …]}): "1514. outzweillcr.Kxweiller." is 1513 Exweiller and 1514 Sutzweiller."""
+    splits = {int(k): v for k, v in (rules.get("entry_splits") or {}).items()}
+    out = []
+    for e in entries:
+        if e["no"] not in splits:
+            out.append(e)
+            continue
+        for part in splits.pop(e["no"]):
+            text = part["text"]
+            out.append({**e, "no": int(part["no"]), "text": text, "name": text.rstrip(" ."),
+                        "descriptors": [], "flags": [*e.get("flags", []), "split by rules.yaml (entry_splits)"]})
+    if splits:
+        raise ValueError(f"rules.yaml entry_splits: no entry {sorted(splits)}")
+    return out
 
 
 def _fix_shares(out: Built) -> None:

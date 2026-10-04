@@ -1495,7 +1495,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1495,Wissbach.,Wissbach,,office-schaumbourg,,domain,,,,main,,wiesbach,87,medium,index match by confused number (0.88)
 1496,Beehteldingen.,Beehteldingen,,office-schaumbourg,,domain,,,,main,,secitteldingcn,87,high,
 1497,Kassheim.,Kassheim,,office-schaumbourg,,domain,,,,main,,kaisen,87,medium,index match by index number (1.00)
-1498,Exweiller.,Exweiller,,office-schaumbourg,,domain,,,,main,,thalexweiler,87,medium,index match by loose number (0.95)
+1498,Exweiller.,Exweiller,,office-schaumbourg,,domain,,,,main,,thalexweiler,87,high,
 1499,Suhzwciller.,Suhzwciller,,office-schaumbourg,,domain,,,,main,,sotzweiler,87,high,
 1500,Sclicurcn.,Sclicurcn,,office-schaumbourg,,domain,,,,main,,scheuem,87,high,
 1501,Nippel.,Nippel,,office-schaumbourg,,domain,,,,main,,neipel,87,high,
@@ -1510,7 +1510,8 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1510,Einveiller.,Einveiller,,office-schaumbourg,,clergy,,,,main,,eisweiler,88,high,
 1511,Kelternostern.,Kelternostern,,office-schaumbourg,,clergy,,,,main,,oberkirchen,88,medium,index match by index number (0.48)
 1512,Schellembach. î ».,Schellembach. î »,,office-schaumbourg,,clergy,,,,main,,schellembach,88,high,number read from '*'il2'
-1514,outzweillcr.Kxweiller.,outzweillcr.Kxweiller,,office-schaumbourg,,clergy,,,,main,,sotzweiler,88,high,
+1513,Exweiller.,Exweiller,,office-schaumbourg,,clergy,,,,main,,thalexweiler,88,high,split by rules.yaml (entry_splits)
+1514,Sutzweiller.,Sutzweiller,,office-schaumbourg,,clergy,,,,main,,sotzweiler,88,high,split by rules.yaml (entry_splits)
 1515,Osiembach.,Osiembach,,office-schaumbourg,,clergy,,,,main,,osenbaeh,88,high,3 number(s) missing before
 1516,"Wach-llaussen, alias Schweich-Haiissen.",Wach-llaussen,,office-schaumbourg,,clergy,,,,main,,wetschhausen,88,medium,index match by index number (1.00)
 1517,GodessweiUer.,GodessweiUer,,office-schaumbourg,,clergy,,,,main,,gehweiler,88,high,
@@ -1532,7 +1533,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1533,BubweiUer.,BubweiUer,,office-schaumbourg,,fief,,,,main,,buweiler,88,medium,index match by confused number (0.82)
 1534,Hemtzelbovcn.,Hemtzelbovcn,,office-schaumbourg,,fief,,,,main,,heiiselhofen,88,medium,index match by index number (1.00)
 1535,Aspach.,Aspach,,office-schaumbourg,,fief,,,,main,,aschbach,88,medium,index match by index number (1.00)
-1536,Eiweiller.,Eiweiller,,office-schaumbourg,,fief,,,,main,,lebeuville,88,high,
+1536,Eiweiller.,Eiweiller,,office-schaumbourg,,fief,,,,main,,thalexweiler,88,high,
 1537,Nidersleimbach.,Nidersleimbach,,office-schaumbourg,,fief,,,,main,,steinbach,88,high,
 1538,Obersleimbach.,Obersleimbach,,office-schaumbourg,,fief,,,,main,,steinbach,88,high,
 1539,Schellembach.,Schellembach,,office-schaumbourg,,fief,,,,main,,schellembach,88,high,
