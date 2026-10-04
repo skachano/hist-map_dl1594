@@ -8,6 +8,7 @@ const mapState = (page: Page) => page.evaluate(() => {
 });
 
 test("territories: the two hierarchies and their levels", async ({ page }) => {
+  // levels by kind: the district of Bitche, under the duchy, is an office; its mairies are mairies
   const errors = await open(page, "#/territories?lang=en");
   const side = page.locator("#side");
   const pressed = (name: string) => expect(side.getByRole("button", { name, exact: true })).toHaveAttribute("aria-pressed", "true");
@@ -21,6 +22,9 @@ test("territories: the two hierarchies and their levels", async ({ page }) => {
   await expect(page).toHaveURL(/lvl=2/);
   await expect(side.getByRole("button", { name: "Provostship of Nancy" })).toBeVisible();
   await expect(side.getByRole("button", { name: "Bailiwick of Nancy" })).toHaveCount(0);
+  await expect(side.getByRole("button", { name: "District of Bitche" })).toBeVisible();
+  await side.getByRole("button", { name: "Bans, mairies" }).click();
+  await expect(side.getByRole("button", { name: "Mayoralty of Schorbach" })).toBeVisible();
   await side.getByRole("button", { name: "All levels" }).click();
   await expect(page).toHaveURL(/lvl=0/);
   await expect(side.getByRole("button", { name: "Bailiwick of Nancy" })).toBeVisible();
@@ -163,7 +167,7 @@ test("territories: one kind of realm at every level, and the colour key of the k
   const side = page.locator("#side");
   const groups = side.locator("ul.groups li");
   await expect(groups.filter({ hasText: "Bailliages" })).toContainText("8");
-  await expect(groups.filter({ hasText: "Offices, castellanies, provostships" })).toContainText("12");
+  await expect(groups.filter({ hasText: "Offices, castellanies, provostships" })).toContainText("0");   // level 1: bailliages only
   const menu = side.getByRole("combobox", { name: "Kind of realm" });
   await menu.selectOption("provostship");
   await expect(page).toHaveURL(/kind=provostship/);

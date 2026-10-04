@@ -698,6 +698,15 @@ Requested after a question about the holes west of Forbach (the Warndt): how doe
 Requested: rename Tenures to Settlements and make it the default view.
 - **Status: done.** The tab is Settlements, Localités, Orte, 集落. A bare address or an unknown view opens it, and it is the first tab, before Territories. Its URL stays `#/map`.
 
+### After Stage 10: administrative levels by kind of division
+Requested: the district of Bitche and the other first-level offices showed among the bailliages, and their mairies among the prévôtés and offices.
+- **Status: done.** Administrative levels came from the depth below the duchy. They now follow the kind of division (`geo/territories.py`, `ADMIN_LEVELS`), never above the parent's level plus one:
+  - 1: bailliages
+  - 2: prévôtés, offices, castellanies, districts, the towns with their districts
+  - 3: bans, mairies, vals
+  - Subdivisions of a prévôté stay one level below it (the district of Perl and the sous-prévôté in the prévôté of Sierck, Rimling in the district of Bitche: 3).
+  - The bailliages level now shows the eight bailliages only; the lands outside them appear from level 2. Feudal realms keep levels by depth.
+
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.
 

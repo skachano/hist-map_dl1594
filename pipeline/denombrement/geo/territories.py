@@ -41,6 +41,9 @@ OUT_DIR = config.DATA_DIR / "geometry"
 CLIP_KM = 6.0           # how far a settlement's cell may reach
 NEUTRAL_MIN_KM = 1.5    # a Wikidata commune this close to a listed settlement is that settlement
 FOREIGN_LANDS = config.CURATED_DIR / "manual" / "foreign_lands.csv"
+# The Territories view's administrative levels, by kind of division.
+ADMIN_LEVELS = {"bailiwick": 1, "provostship": 2, "sub_provostship": 2, "castellany": 2, "office": 2, "district": 2,
+                "town_district": 2, "ban": 3, "mayoralty": 3, "val": 3}
 SIMPLIFY_M = 80         # geometry simplification tolerance
 PRECISION = 5           # decimal places in output coordinates (~1 m)
 CONFIDENCE_RANK = {"high": 0, "medium": 1, "low": 2}
@@ -180,10 +183,15 @@ def run() -> None:
     depth: dict[str, int] = {}
 
     def level(tid: str) -> int:
+        """Administrative divisions by their kind (ADMIN_LEVELS: bailliages 1, prévôtés and offices 2,
+        bans and mairies 3), never above their parent: the district of Bitche, under the duchy, is an
+        office (2), and its mairies are mairies (3). Feudal realms by depth."""
         if tid not in depth:
             parent = next((m.parent_id for _, m in ds.memberships if m.child_id == tid
                            and m.relation in ("admin", "feudal")), None)
-            depth[tid] = 0 if tid == "duchy-lorraine" else (level(parent) + 1 if parent else 1)
+            below = level(parent) + 1 if parent else 1
+            kind = ADMIN_LEVELS.get(places[tid].place_type) if places[tid].hierarchy == "admin" else None
+            depth[tid] = 0 if tid == "duchy-lorraine" else max(below, kind or 0)
         return depth[tid]
 
     features, empty = [], []
