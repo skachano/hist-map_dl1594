@@ -11,8 +11,10 @@ def test_excluded_from_areas():
         {"place_id": "b", "method": "approximate", "confidence": "low", "note": "placed at its commune"},
         {"place_id": "c", "method": "wikidata", "confidence": "medium", "note": "1.00 near the index's canton; 40 km from its district"},
         {"place_id": "d", "method": "geonames", "confidence": "low", "note": "ambiguous"},
+        {"place_id": "e", "method": "wikidata", "confidence": "medium", "note": "exact name, no anchor; 40 km from its district"},
     ]
-    assert t.excluded_from_areas(rows) == {"b", "c", "d"}
+    # c: far from its district, but the index's canton confirms it (a fief listed under a distant prévôté)
+    assert t.excluded_from_areas(rows) == {"b", "d", "e"}
 
 
 def test_a_neutral_seed_makes_a_hole():
