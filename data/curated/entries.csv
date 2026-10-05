@@ -771,9 +771,9 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 771,"Le Sainct--Mont, prieuré de l'ordre de...s",Le Sainct--Mont,priory,ban-ramonchamp,,clergy,,,,main,,le-saint-mont,62,high,
 772,"Hérival, prieuré de l'ordre de premonstré.",Hérival,priory,ban-ramonchamp,,clergy,,,,main,premonstratensian,herival,62,high,
 773,Pont.,Pont,,ban-ramonchamp,,clergy,,,,main,,pont,62,high,
-774,Selle.,Selle,,ban-ramonchamp,,clergy,,,,main,,celles-sur-plaine,62,high,
+774,Selle.,Selle,,ban-ramonchamp,,clergy,,,,main,,celles,62,high,
 775,Quessonville.,Quessonville,,ban-ramonchamp,,clergy,,,,main,,quessonviller,62,medium,index match by confused number (0.96)
-776,Rouveroy.,Rouveroy,,ban-ramonchamp,,clergy,,,,main,,bouvroy,62,high,
+776,Rouveroy.,Rouveroy,,ban-ramonchamp,,clergy,,,,main,,rouveroye,62,high,
 777,Sainct-Eslienne.,Sainct-Eslienne,,ban-ramonchamp,,clergy,,,,main,,saint-etienne-les-remiremont,62,high,
 778,Doinmartiu.,Doinmartiu,,ban-ramonchamp,,clergy,,,,main,,dommartin-les-remiremont,63,high,
 779,Baon-aux-Bois.,Baon-aux-Bois,,ban-ramonchamp,,clergy,,,,main,,raon-aux-bois,63,high,
@@ -1187,7 +1187,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1187,Barvillc.,Barvillc,,provostship-chatenois-et-neufchateau,,fief,,,,main,,barville,76,high,
 1188,Chevau.,Chevau,,provostship-chatenois-et-neufchateau,,fief,,,,main,,chef-haut,76,high,
 1189,Somcréeourt.,Somcréeourt,,provostship-chatenois-et-neufchateau,,fief,,,,main,,sommerecourt,77,high,
-1190,Bouzey.,Bouzey,,provostship-chatenois-et-neufchateau,,fief,,,,main,,bouzey,77,high,
+1190,Bouzey.,Bouzey,,provostship-chatenois-et-neufchateau,,fief,,,,main,,dombrot-sur-vair,77,high,
 1191,Mandres.,Mandres,,provostship-chatenois-et-neufchateau,,fief,,,,main,,mandres-sur-vair,77,high,
 1192,Tilleux.,Tilleux,,provostship-chatenois-et-neufchateau,,fief,,,,main,,tilleux,77,high,
 1193,Sertilleux.,Sertilleux,,provostship-chatenois-et-neufchateau,,fief,,,,main,,certilleux,77,medium,index match by confused number (0.95)
@@ -1885,7 +1885,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1885,Hatonville.,Hatonville,,bailiwick-hattonchatel,,domain,,,,main,,hattonville,100,high,
 1886,Herbevifle.,Herbevifle,,bailiwick-hattonchatel,,domain,,,,main,,herbeuville,100,high,
 1887,Deuxnowes.,Deuxnowes,,bailiwick-hattonchatel,,domain,,,,main,,deuxnouds-aux-bois,100,high,
-1888,Vigneulles.,Vigneulles,,bailiwick-hattonchatel,,domain,,,,main,,vigneulies-les-hatloncliatcl-ch-l-de-canton,100,high,
+1888,Vigneulles.,Vigneulles,,bailiwick-hattonchatel,,domain,,,,main,,vigneulles-les-hattonchatel,100,high,
 1889,Voél.,Voél,,bailiwick-hattonchatel,,domain,,,,main,,woel,100,high,
 1890,Broviile.,Broviile,,bailiwick-hattonchatel,,domain,,,,main,,sntrilte,100,high,
 1891,Sault.,Sault,,bailiwick-hattonchatel,,domain,,,,main,,saulx-en-voevre,100,high,
@@ -2030,7 +2030,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2030,Sainct-Aulbin.,Sainct-Aulbin,,bailiwick-apremont,,fief,,,,main,,saint-aubin-sur-aire,105,medium,index match by confused number (0.95)
 2031,Sainct-Baussonne.,Sainct-Baussonne,,bailiwick-apremont,,fief,,,,main,,saint-baussant,105,high,
 2032,Sainct-Jourc.,Sainct-Jourc,,bailiwick-apremont,,fief,,,,main,,saint-jure,105,high,
-2033,Sainct-Julian.,Sainct-Julian,,bailiwick-apremont,,fief,,,,main,,saint-julien-sous-les-cotes,105,high,
+2033,Sainct-Julian.,Sainct-Julian,,bailiwick-apremont,,fief,,,,main,,saint-julien-les-gorze,105,high,
 2034,Saincte-Maric.,Saincte-Maric,,bailiwick-apremont,,fief,,,,main,,sainte-marie-aux-chenes,105,high,
 2035,Sainct-Privé.,Sainct-Privé,,bailiwick-apremont,,fief,,,,main,,saint-privat,105,high,
 2036,Sainctc-Raphine.,Sainctc-Raphine,,bailiwick-apremont,,fief,,,,main,,sainte-ruffine,105,high,
@@ -2044,7 +2044,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2044,Val Saîncte-Marie.,Val Saîncte-Marie,,bailiwick-apremont,,fief,,,,main,,val-sainle-marie,105,high,
 2045,Vallerov-îez-Briev.,Vallerov-îez-Briev,,bailiwick-apremont,,fief,,,,main,,valleroy,105,high,
 2046,Vaul. ',Vaul. ',,bailiwick-apremont,,fief,,,,main,,vaux,105,high,
-2047,Vigneulles.,Vigneulles,,bailiwick-apremont,,fief,,,,main,,vigneulies-les-hatloncliatcl-ch-l-de-canton,105,high,1 number(s) missing before
+2047,Vigneulles.,Vigneulles,,bailiwick-apremont,,fief,,,,main,,vigneulles-les-hattonchatel,105,high,1 number(s) missing before
 2048,Vertuzey.,Vertuzey,,bailiwick-apremont,,fief,,,,main,,vertuzey,105,high,
 2049,Ville prcz Mousson.,Ville prcz Mousson,,bailiwick-apremont,,fief,,,,main,,ville-au-val,105,medium,index match by loose number (0.95)
 2050,Viller.,Viller,,bailiwick-apremont,,fief,,,,main,,villers-le-prud-homme,105,high,

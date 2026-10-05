@@ -100,6 +100,8 @@ entry_index:
   1891: Saulx-en-Voévre # "Sault" in the bailliage of Hattonchâtel, not Le Sautel
   2244: Guemviller      # "Gunweiller" (Guenviller), not Buweiler
   2259: Ponlpierre      # "Steinbiderstorff": Steinbiedersdorf, Pontpierre's German name (no line prints 2259)
+  776: Rouveroye        # "Rouveroy" (ban de Ramonchamp): the grange of Rouveroye near Remiremont (Rouverois, Alix n° 699, in Marichal); not a grange of Celles
+  1190: Dombrol-sur-Vair  # "Bouzey" (Châtenois), between Sommerécourt and Mandres-sur-Vair: Dombrot-sur-Vair, "ci-devant Bouzey" (Marichal); not the mill of Sanchey near Épinal
 
 # Index lines the scan misread or merged, as printed ("page|name as read": the printed line, or a
 # list of lines when the scan ran two together).
@@ -152,6 +154,12 @@ geocode:
   les-cours: {"at": "Saulcy-sur-Meurthe", "note": "Les Cours, a hamlet of Saulcy-sur-Meurthe (DicoTopo); the index's Saulcy, not Le Saulcy"}
   le-chenois: {"at": "Saulcy-sur-Meurthe", "note": "Le Chénois, a former commune joined to Saulcy-sur-Meurthe (DicoTopo); the index's Saulcy, not Le Saulcy"}
   mardigny: {approximate: vathimont, name_fr: Ban de Redigny, note: "Redigny, entry 503 after Vatimont (502): the ban de Redigny, a franc-alleu near Vatimont, Redigny-lès-Wauthiemont in 1616 (Bouteiller, DicoTopo); not the index's doubtful Mardigny (?), 30 km away. Placed at Vatimont"}
+  # DicoTopo's matches far from the placement (2026-10-05): the index's own identification misread, or DicoTopo citing Alix
+  vigneulies-les-hatloncliatcl-ch-l-de-canton: {wikidata: Q223719, note: "Vigneulles-lès-Hattonchâtel, ch.-l. de canton (the index); not the Vigneulles near Metz"}
+  senonville: {wikidata: Q25398056, note: "Senonville (now in Valbois), canton de Vigneulles (the index); not Sponville"}
+  saint-julien: {wikidata: Q580467, note: "Saint-Julien-lès-Gorze: Bouteiller gives this Saint-Julien (1594) from Alix (DicoTopo); the index's canton de Commercy is Saint-Julien-sous-les-Côtes"}
+  quessonviller: {"at": "Dommartin-lès-Remiremont", "name_fr": "Xonvillers", "note": "Xonvillers, a farm of Dommartin-lès-Remiremont: Quessonville, Alix n° 775 (Marichal, DicoTopo); not a grange of Celles"}
+  celles: {"at": "Saint-Amé", "name_fr": "Celles", "note": "Celles, a hamlet and mairie of Saint-Amé (Selle, 1590; DicoTopo), in the ban de Ramonchamp by Remiremont; not Celles-sur-Plaine"}
   # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
   # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
   liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}
@@ -235,10 +243,9 @@ geocode:
   villing: {"at": "Denting", "note": "a farm of Denting (the index); not the village of Villing"}
   villers-le-prud-homme: {"at": "Ville-au-Val", "note": "an écart and chapel of Ville-au-Val (the index)"}
   dittclingen: {"unlocated": true, "note": "a destroyed village of the county of Forbach, 'emplacement inconnu' (the index)"}
-  bouzey: {"at": "Sanchey", "note": "a hamlet of Sanchey (the index)"}
   villard: {"at": "Circourt", "name_fr": "Villars", "note": "a hamlet of Circourt (the index), the Circourt near its district; Villars (DicoTopo: Villard (1845))"}
   saint-jean-pierrefort: {"at": "Martincourt", "note": "a hamlet of Martincourt (the index), the one near its district"}
-  breehaincouri: {"at": "Gircourt", "note": "a hamlet of Gircourt (the index), the one near its district"}
+  breehaincouri: {"at": "Circourt-sur-Mouzon", "name_fr": "Bréchaincourt", "note": "Bréchaincourt, a hamlet of Circourt-sur-Mouzon (DicoTopo); the index's Gircourt is Circourt, entry 1194 two before it"}
   les-fouies: {"at": "Granges", "note": "a censé of Granges (the index), the one near its district"}
   menil-balleville: {"at": "Balléville", "name_fr": "Ménil-sur-Vair", "note": "Mesnil-sur-Veire (entry 1201), now Ménil-sur-Vair, a hamlet of Balléville (the index: 'Ménil, ham., com. de Balléville'); not Ménil-en-Xaintois. Placed at Balléville"}
   bliesguerschwiller: {"wikidata": "Q21701", "note": "Blies-Guersviller, canton de Sarreguemines (the index's Bliesguerschwiller; Gersweiller in the list, entry 1580); not Gersweiler in Saarbrücken"}

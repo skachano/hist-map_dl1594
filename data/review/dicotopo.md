@@ -90,9 +90,9 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Rammbach [Ferme, Fraquelfing, canton Lorquin, 54] via *Rammbach*, 0.72, 45 km
   3. Robache [Hameau, Saint-Dié-des-Vosges, canton Saint-Dié-des-Vosges (NP), 88] via *Roibach*, 0.69, 21 km
 - andillicr: Andillicr
-  1. Andilly [canton Domèvre-en-Haye, 54] via *Andillier (1602)*, 0.91, 23 km
+  1. Andilly [canton Domèvre-en-Haye, 54] via *Andillier (1602)*, 0.91, 24 km
   2. Amandillier [Pouilly, canton Verny, 57] via *Amandillier*, 0.71, 28 km
-  3. Damvillers [Ville sur la Tinte, canton Damvillers, 55] via *Danvilliers (1661)*, 0.64, 51 km
+  3. Damvillers [Ville sur la Tinte, canton Damvillers, 55] via *Danvilliers (1661)*, 0.64, 50 km
 - ansclnigen: Ansclnigen
   1. Alzing [canton Bouzonville, 57] via *Anselnigen (1594)*, 0.94, 13 km
   2. Anzeling [canton Bouzonville, 57] via *Anseldingen (1594)*, 0.76, 11 km
@@ -122,7 +122,7 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Bassigny (Le) [Ancien pagus des cités de Langres et de Toul, 88] via *Bassigny (Le)*, 0.87, ?
   3. Bassigny (Sur le) [Lieu dit, Saint-Prancher, canton Mirecourt, 88] via *Bassigny (Sur le)*, 0.86, 28 km
 - bassaucourt: Bassaucourt
-  1. Bassaucourt [Saint-Maurice-sous-les-Côtes, canton Vigneulles-lès-Hattonchâtel, 55] via *Bassaucourt*, 0.99, 4 km
+  1. Bassaucourt [Saint-Maurice-sous-les-Côtes, canton Vigneulles-lès-Hattonchâtel, 55] via *Bassaucourt*, 0.99, 5 km
   2. Besoncourt [1299 (cité par Friry), 88] via *Besoncourt*, 0.84, ?
   3. Bannoncourt [canton Pierrefitte-sur-Aire, 55] via *Banancourt (1463)*, 0.84, 11 km
 - bcaurains: Bcaurains
@@ -206,8 +206,8 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Domêvre ou Saint-Epvre [Ancienne église champêtre, Haraucourt, canton Tomblaine, 54] via *Domêvre*, 0.81, 20 km
   3. Haraucourt [canton Tomblaine, 54] via *Domêvre (1712)*, 0.81, 20 km
 - ecrouves-et-grand-menil: Ecrouves-et-Grand-Ménil
-  1. Écrouves-et-Grand-Ménil [Écrouves, canton Toul-Nord, 54] via *Écrouves-et-Grand-Ménil*, 0.93, 33 km
-  2. Ménil-sous-les-Côtes ou Ménil-en-Woëvre [Bonzée, canton Fresnes-en-Woëvre, 55] via *Ménil (1743)*, 0.80, 23 km
+  1. Écrouves-et-Grand-Ménil [Écrouves, canton Toul-Nord, 54] via *Écrouves-et-Grand-Ménil*, 0.93, 34 km
+  2. Ménil-sous-les-Côtes ou Ménil-en-Woëvre [Bonzée, canton Fresnes-en-Woëvre, 55] via *Ménil (1743)*, 0.81, 22 km
   3. Ménil [Fief au bourg de Ménil (Lunéville), 54] via *Ménil*, 0.80, ?
 - edelnigen: Edelnigen
   1. Edling [Hameau, Anzeling, canton Bouzonville, 57] via *Edelnigen (1594)*, 0.98, 11 km
@@ -258,9 +258,9 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Chambéry ou Gand [Ferme ou cense, Hettange-Grande, canton Cattenom, 57] via *Chamborn*, 0.66, 21 km
   3. Hestroff [canton Bouzonville, 57] via *Heistorffz (1553)*, 0.64, 11 km
 - forbeauvoisin: Forbeauvoisin
-  1. Forbeauvoisin [Hameau ruiné, Boncourt-sur-Meuse, canton Commercy, 55] via *Forbeauvoisin*, 0.95, 25 km
+  1. Forbeauvoisin [Hameau ruiné, Boncourt-sur-Meuse, canton Commercy, 55] via *Forbeauvoisin*, 0.95, 26 km
   2. Rambluzin [Rambluzin-et-Benoite-Vaux, canton Souilly, 55] via *Ranbeuvoisin (1549)*, 0.67, 36 km
-  3. Girauvoisin [canton Commercy, 55] via *Girauvoisin*, 0.65, 23 km
+  3. Girauvoisin [canton Commercy, 55] via *Girauvoisin*, 0.64, 24 km
 - foresterie-la-du-ban-de-moulin: Foresterie (la) du ban de Moulin
   1. Foresterie (La) du ban de Moulin [Ancienne communauté dont les sujets étaient dispersés dans les paroisses de Saint-Nabord, Saint-Nabord, canton Remiremont, 88] via *Foresterie (La) du ban de Moulin*, 0.91, 3 km
   2. Moulin [Hameau, Saint-Nabord, canton Remiremont, 88] via *Moulin*, 0.84, 3 km
@@ -272,7 +272,7 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
 - grosrouvre: Grosrouvre
   1. Grosrouvre (mieux Gros-Rouvre) [Grosrouvres, canton Domèvre-en-Haye, 54] via *Grosrouvre (mieux Gros-Rouvre)*, 0.89, 17 km
   2. Courouvre [canton Pierrefitte-sur-Aire, 55] via *Courouvre*, 0.63, 35 km
-  3. Greyères ou Grisières [Ferme, Ville-sur-Yron, canton Conflans-en-Jarnisy, 57] via *Gresière (1369)*, 0.60, 17 km
+  3. Greyères ou Grisières [Ferme, Ville-sur-Yron, canton Conflans-en-Jarnisy, 57] via *Gresière (1369)*, 0.60, 16 km
 - guenestrolt: GuénestrolT
   1. Guénestroff [Val-de-Bride, canton Dieuze, 54] via *Guénestroff*, 0.84, 17 km
   2. Guébestroff [canton Dieuze, 54] via *Guébestroff*, 0.76, 14 km
@@ -330,8 +330,8 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   3. Bonnehousse [Ferme, Faulquemont, canton Faulquemont, 57] via *Bonhausen (1359)*, 0.55, 56 km
 - ihimbery: Ihimbery
   1. Woimbey [canton Pierrefitte-sur-Aire, 55] via *Imberes (1047)*, 0.65, 27 km
-  2. Chambéry ou Gand [Ferme ou cense, Hettange-Grande, canton Cattenom, 57] via *Chambéry*, 0.64, 55 km
-  3. Lixières [Hameau, Fléville-Lixières, canton Conflans-en-Jarnisy, 57] via *Linzeris (1397)*, 0.60, 30 km
+  2. Chambéry ou Gand [Ferme ou cense, Hettange-Grande, canton Cattenom, 57] via *Chambéry*, 0.64, 54 km
+  3. Lixières [Hameau, Fléville-Lixières, canton Conflans-en-Jarnisy, 57] via *Linzeris (1397)*, 0.60, 29 km
 - ilcyligcnner: Ilcyligcnner
   1. Hellimer [canton Grostenquin, 57] via *Heiligmeir (1688)*, 0.62, 6 km
   2. Glatigny [canton Vigy, 57] via *Glaitigney (1404)*, 0.52, 42 km
@@ -410,12 +410,12 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   3. Foresterie (La) du ban de Vagney [Ancienne seigneurie indivise entre le duc de Lorraine et le chapitre de Remiremont, 88] via *Terre (1415)*, 0.72, ?
 - lairey: Lairey
   1. Larry [Ferme, Liéhon, canton Verny, 57] via *Lairey (1404)*, 0.94, 32 km
-  2. Cléry [Commune de Châtel-Saint-Germain, Châtel-Saint-Germain, canton Ars-sur-Moselle, 57] via *Clairey (1612)*, 0.81, 25 km
+  2. Cléry [Commune de Châtel-Saint-Germain, Châtel-Saint-Germain, canton Ars-sur-Moselle, 57] via *Clairey (1612)*, 0.81, 24 km
   3. Fleury [canton Verny, 57] via *Flairey (1521)*, 0.80, 28 km
 - lamarche-en-voevre: Lamarche-en-Voëvre
   1. Lamarche-en-Woëvre [Nonsard-Lamarche, canton Vigneulles-lès-Hattonchâtel, 55] via *Lamarche-en-Woëvre*, 0.92, 7 km
   2. Lamarche (Bailliage de) [Anciennement dit de Saint-Thiébaut, 55] via *Lamarche (Bailliage de)*, 0.72, ?
-  3. Latour-en-Woëvre [canton Fresnes-en-Woëvre, 55] via *La Tour-en-Voivre (1749)*, 0.68, 13 km
+  3. Latour-en-Woëvre [canton Fresnes-en-Woëvre, 55] via *La Tour-en-Voivre (1749)*, 0.68, 12 km
 - laneiivelotie: Laneiivelotie
   1. Laneuvelotte [54] via *Laneuvelotte*, 0.78, ?
   2. Sainte-Valérie ou Sainte-Valérienne [Chapelle au château du Montet, Vandœuvre-lès-Nancy, canton Vandœuvre-lès-Nancy (NP), 54] via *Sainte-Valérie*, 0.62, 23 km
@@ -449,9 +449,9 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Chambéry ou Gand [Ferme ou cense, Hettange-Grande, canton Cattenom, 57] via *Schombourg*, 0.67, 73 km
   3. Hambourg [Ancienne métairie mentionnée, 54] via *Hambourg*, 0.63, ?
 - lion-devani-dun: Lion-devanî-Dun
-  1. Lion-devant-Dun [canton Dun-sur-Meuse, 55] via *Lion-devant-Dun*, 0.79, 64 km
-  2. Liny-devant-Dun [canton Dun-sur-Meuse, 55] via *Liny-devant-Dun*, 0.70, 62 km
-  3. Lion (Tour du) [Verdun, canton Verdun (NP), 55] via *Lion (Tour du)*, 0.69, 39 km
+  1. Lion-devant-Dun [canton Dun-sur-Meuse, 55] via *Lion-devant-Dun*, 0.80, 64 km
+  2. Liny-devant-Dun [canton Dun-sur-Meuse, 55] via *Liny-devant-Dun*, 0.70, 61 km
+  3. Lion (Tour du) [Verdun, canton Verdun (NP), 55] via *Lion (Tour du)*, 0.69, 38 km
 - lixing-lcs-laning: Lixing-lcs-Laning
   1. Lixing-lez-Laning [Lixing-lès-Saint-Avold, canton Grostenquin, 57] via *Lixing-lez-Laning*, 0.90, 7 km
   2. Laning [canton Grostenquin, 57] via *Laning*, 0.83, 8 km
@@ -466,8 +466,8 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   3. Wœlffling [Wœlfling-lès-Sarreguemines, canton Sarreguemines-Campagne, 57] via *Wölflingen*, 0.71, 8 km
 - loucbamp: Loucbamp
   1. Longchamp [Longchamps-sur-Aire, canton Pierrefitte-sur-Aire, 55] via *Lonchamp (1571)*, 0.84, 38 km
-  2. Longchamp-sous-Châtenois [canton Châtenois, 88] via *Lonchamps*, 0.76, 76 km
-  3. Ladonchamps [Hameau, Woippy, canton Woippy, 57] via *La Donchamps (1756)*, 0.72, 32 km
+  2. Longchamp-sous-Châtenois [canton Châtenois, 88] via *Lonchamps*, 0.76, 77 km
+  3. Ladonchamps [Hameau, Woippy, canton Woippy, 57] via *La Donchamps (1756)*, 0.72, 31 km
 - lymingcn: Lymingcn
   1. Lymingen [Localité incertaine de l’office de Boulay, 57] via *Lymingen*, 0.91, ?
   2. Léning [Canton d’Albestroff, canton Albestroff, 54] via *Leyningen (1594)*, 0.82, 33 km
@@ -485,12 +485,12 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Menimis [Ferme, Granges-sur-Vologne, canton Corcieux, 88] via *Les Ménémils (1845)*, 0.91, 18 km
   3. Marie-Meix [Cense, Syndicat, canton Remiremont, 88] via *Marie-Meix*, 0.81, 30 km
 - merancourt-ou-merancourt: Merancourt ou Merancourt
-  1. Méraucourt [Ferme, Bezonvaux, canton Charny-sur-Meuse, 55] via *Méraucourt*, 0.74, 39 km
+  1. Méraucourt [Ferme, Bezonvaux, canton Charny-sur-Meuse, 55] via *Méraucourt*, 0.74, 38 km
   2. Malancourt [Hameau, Montois-la-Montagne, canton Marange-Silvange, 57] via *Malancourt*, 0.67, 31 km
   3. Saint-Jean ou Saint-Jean-Pierrefort [Hameau, Martincourt, canton Domèvre-en-Haye, 54] via *Mertincourt (1421)*, 0.66, 17 km
 - milly: Milly
-  1. Milly-devant-Dun [Milly-sur-Bradon, canton Dun-sur-Meuse, 55] via *Milly (1573)*, 0.87, 65 km
-  2. Milly (Ruisseau de) [Qui prend sa source à la fontaine du Pain-d’Avoine, Murvaux, canton Dun-sur-Meuse, 55] via *Milly (Ruisseau de)*, 0.80, 62 km
+  1. Milly-devant-Dun [Milly-sur-Bradon, canton Dun-sur-Meuse, 55] via *Milly (1573)*, 0.87, 64 km
+  2. Milly (Ruisseau de) [Qui prend sa source à la fontaine du Pain-d’Avoine, Murvaux, canton Dun-sur-Meuse, 55] via *Milly (Ruisseau de)*, 0.80, 61 km
   3. Mailly [Mailly-sur-Seille, canton Nomeny, 54] via *Mailly*, 0.74, 32 km
 - mitiel-bollenbacli: Mitiel-Bollenbacli
   1. Dollembach [Hameau, Nousseviller-lès-Bitche, canton Volmunster, 57] via *Dollenbach (1751)*, 0.64, 49 km
@@ -503,19 +503,19 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
 - moncel-ies-marcheville: Moncel-îès-Marchéville
   1. Moncelle [Moulin, Marchéville-en-Woëvre, canton Fresnes-en-Woëvre, 55] via *Moncel-lez-Marchéville (1500)*, 0.86, 16 km
   2. Marchéville [Marchéville-en-Woëvre, canton Fresnes-en-Woëvre, 55] via *Marchéville*, 0.82, 16 km
-  3. Moncel [Ferme et château, Jarny, canton Conflans-en-Jarnisy, 57] via *Moncel*, 0.81, 20 km
+  3. Moncel [Ferme et château, Jarny, canton Conflans-en-Jarnisy, 57] via *Moncel*, 0.81, 19 km
 - mont-devant-sassey: Mont-devant-Sassey
   1. Mont-devant-Sassey [canton Dun-sur-Meuse, 55] via *Mont-devant-Sassey*, 0.86, 68 km
-  2. Landres [Canton d’Audun-le-Roman, canton Audun-le-Roman, 57] via *Mont (1749)*, 0.77, 38 km
-  3. Mont [Hameau, Mont-Bonvillers, canton Audun-le-Roman, 57] via *Mont*, 0.77, 39 km
+  2. Landres [Canton d’Audun-le-Roman, canton Audun-le-Roman, 57] via *Mont (1749)*, 0.78, 37 km
+  3. Mont [Hameau, Mont-Bonvillers, canton Audun-le-Roman, 57] via *Mont*, 0.77, 38 km
 - mouterhatisen: Mouterhatisen
   1. Mouterhausen [Mouterhouse, canton Bitche, 57] via *Mouterhausen*, 0.83, 7 km
   2. Mouterhausen (Forêt de) [Forêt domaniale d’une surface de 4, 57] via *Mouterhausen (Forêt de)*, 0.72, ?
   3. Montbronn [canton Rohrbach-lès-Bitche, 57] via *Monteberon (1779)*, 0.61, 14 km
 - murvaux: Murvaux
-  1. Murvaux [canton Dun-sur-Meuse, 55] via *Murvaux*, 0.88, 62 km
-  2. Marivaux [Ferme, Hayes, canton Vigy, 57] via *Marvaux (1756)*, 0.85, 46 km
-  3. Mureau [Ferme, Pargny-sous-Mureau, canton Neufchâteau, 88] via *Muruaulx (1384)*, 0.80, 69 km
+  1. Murvaux [canton Dun-sur-Meuse, 55] via *Murvaux*, 0.88, 61 km
+  2. Marivaux [Ferme, Hayes, canton Vigy, 57] via *Marvaux (1756)*, 0.85, 45 km
+  3. Mureau [Ferme, Pargny-sous-Mureau, canton Neufchâteau, 88] via *Muruaulx (1384)*, 0.80, 70 km
 - neuulhann: Neuulhann
   1. Neulan [Ancienne église, Sponville, canton Chambley-Bussières, 57] via *Neulan*, 0.61, 124 km
   2. Neunkirch [Ferme, Hottviller, canton Volmunster, 57] via *Neukirchen (1756)*, 0.60, 16 km
@@ -561,7 +561,7 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Chanteheux [canton Lunéville-Sud, 54] via *Canteu (1195)*, 0.64, 56 km
   3. Canon (Chemin du) [Commune de Héming, Héming, canton Lorquin, 54] via *Canon (Chemin du)*, 0.58, 22 km
 - platenges: Platenges
-  1. Blettange [Hameau, Bousse, canton Metzervisse, 57] via *Bletenge*, 0.74, 43 km
+  1. Blettange [Hameau, Bousse, canton Metzervisse, 57] via *Bletenge*, 0.75, 43 km
   2. Talange [1er canton de Metz, canton Maizières-lès-Metz, 57] via *Tallenges (1599)*, 0.71, 38 km
   3. Pétrange [Château et ferme, Hinckange, canton Boulay-Moselle, 57] via *Pietrenges (1361)*, 0.71, 51 km
 - pomern: Pomern
@@ -577,7 +577,7 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Zellen [Ferme et moulin, Petit-Tenquin, canton Grostenquin, 57] via *Le prieuré de Selle (1635)*, 0.72, 32 km
   3. Prieuré (Le) [Hameau, 54] via *Prieuré (Le)*, 0.72, ?
 - rainbucouri: Rainbucouri
-  1. Rambucourt [canton Saint-Mihiel, 55] via *Rambucourt*, 0.85, 16 km
+  1. Rambucourt [canton Saint-Mihiel, 55] via *Rambucourt*, 0.84, 17 km
   2. Rembercourt ou Rembercourt-sur-Mad [Rembercourt-sur-Mad, canton Thiaucourt-Regniéville, 54] via *Rembuecourt (1152)*, 0.74, 6 km
   3. Rignaucourt [Trois-Domaines, canton Seuil-d'Argonne, 55] via *Renaucourt*, 0.71, 40 km
 - ransctiborn: Ransctiborn
@@ -629,7 +629,7 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Ban-Saint-Pierre [Église, Villers-Stoncourt, canton Pange, 57] via *Saint-Pierremont*, 0.78, ?
   3. Saint-Pierremont [Ferme, Avril, canton Briey, 57] via *Saint-Pierremont*, 0.78, ?
 - saini-maurice-sous-les-cotes: Saini-Maurice-sous-les-Côtes
-  1. Saint-Maurice-sous-les-Côtes [canton Vigneulles-lès-Hattonchâtel, 55] via *Saint-Maurice-sous-les-Côtes*, 0.95, 4 km
+  1. Saint-Maurice-sous-les-Côtes [canton Vigneulles-lès-Hattonchâtel, 55] via *Saint-Maurice-sous-les-Côtes*, 0.95, 5 km
   2. Moncé [Moulin ruiné, Saint-Hilaire-en-Woëvre, canton Fresnes-en-Woëvre, 55] via *Moncé*, 0.74, 11 km
   3. Woëvre (Côtes de la) ou les Côtes [Chaîne de coteaux situés à l’E, Geville, canton Commercy, 55] via *les Côtes*, 0.72, 23 km
 - saint-don: Saint-Don
@@ -649,29 +649,29 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Bambois [Cense, Raon-aux-Bois, canton Remiremont, 88] via *Bambois*, 0.74, 17 km
   3. Ménil-en-Xaintois [canton Mirecourt, 88] via *Saintoix (1380)*, 0.69, 34 km
 - san-bouryon: San Bouryon
-  1. Senorroy [Hameau, Norroy-le-Veneur, canton Marange-Silvange, 57] via *Senouroy (1674)*, 0.67, 31 km
-  2. Beaumont [canton Domèvre-en-Haye, 54] via *Samboldi-Mons (1106)*, 0.67, 14 km
-  3. Ban-Henrion [Ancien nom de la paroisse Saint-Remi de Vittel, Vittel, canton Vittel, 88] via *Ban-Henrion*, 0.62, 86 km
+  1. Senorroy [Hameau, Norroy-le-Veneur, canton Marange-Silvange, 57] via *Senouroy (1674)*, 0.67, 30 km
+  2. Beaumont [canton Domèvre-en-Haye, 54] via *Samboldi-Mons (1106)*, 0.67, 15 km
+  3. Mauboulin [Hameau, Saint-Jean-lès-Buzy, canton Étain, 55] via *Mauboulin*, 0.62, 22 km
 - san-de-chaste: San de Chaste!
-  1. Hattonchâtel [Vigneulles-lès-Hattonchâtel, canton Vigneulles-lès-Hattonchâtel, 55] via *Hardonchastel (1240)*, 0.65, 7 km
+  1. Hattonchâtel [Vigneulles-lès-Hattonchâtel, canton Vigneulles-lès-Hattonchâtel, 55] via *Hardonchastel (1240)*, 0.65, 6 km
   2. Godchure [Ferme, Saint-Hubert, canton Vigy, 57] via *Gaudechure (1641)*, 0.63, 48 km
   3. Dun [Ville sur la rive droite de la Meuse, Dun-sur-Meuse, canton Dun-sur-Meuse, 55] via *Dun-le-Chastel (1641)*, 0.59, 64 km
 - san-de-la-seine: San de la Seine
-  1. Forêt-de-la-Reine [Écart, Royaumeix, canton Domèvre-en-Haye, 54] via *Forêt-de-la-Reine*, 0.62, 21 km
-  2. Sainte-Ruffine [canton Ars-sur-Moselle, 57] via *Sancta Reffina (1544)*, 0.61, 25 km
-  3. Vandelainville [canton Thiaucourt-Regniéville, 54] via *Wandelenville (1477)*, 0.61, 13 km
+  1. Forêt-de-la-Reine [Écart, Royaumeix, canton Domèvre-en-Haye, 54] via *Forêt-de-la-Reine*, 0.62, 22 km
+  2. Sainte-Ruffine [canton Ars-sur-Moselle, 57] via *Sancta Reffina (1544)*, 0.61, 24 km
+  3. Vandelainville [canton Thiaucourt-Regniéville, 54] via *Wandelenville (1477)*, 0.61, 12 km
 - san-de-vezin: San de Vezin
   1. Vexin (Le Ban de) [Vaux, canton Ars-sur-Moselle, 57] via *Le Ban de Vexin (1681)*, 0.68, 22 km
   2. Euvezin [canton Thiaucourt-Regniéville, 54] via *Euvezin*, 0.62, 7 km
   3. Dompcévrin [Dompcevrin, canton Pierrefitte-sur-Aire, 55] via *Donseverin (1700)*, 0.61, 26 km
 - san-saini-symphorien: San Sainî-Symphorien
-  1. Saint-Symphorien [Ancienne abbaye de Bénédictins, Metz, canton Metz (NP), 57] via *Saint-Symphorien*, 0.72, 31 km
+  1. Saint-Symphorien [Ancienne abbaye de Bénédictins, Metz, canton Metz (NP), 57] via *Saint-Symphorien*, 0.72, 30 km
   2. Sommy [Ferme, Féy, canton Verny, 57] via *Sommy*, 0.69, 21 km
   3. Saint-Symphorien (Le Pré) [Commune de Longeville, Longeville-lès-Metz, canton Woippy, 57] via *Saint-Symphorien (Le Pré)*, 0.64, 28 km
 - san-saint-pierre: San Saint-Pierre
-  1. Ban-Saint-Pierre [Ban particulier dans lequel étaient compris, Abaucourt, canton Nomeny, 54] via *Ban-Saint-Pierre*, 0.86, 33 km
+  1. Ban-Saint-Pierre [Ban particulier dans lequel étaient compris, Abaucourt, canton Nomeny, 54] via *Ban-Saint-Pierre*, 0.86, 34 km
   2. Ban-Saint-Pierre [Église, Villers-Stoncourt, canton Pange, 57] via *Ban-Saint-Pierre*, 0.83, 46 km
-  3. Pierre ou Pierre-la-Treiche [Pierre-la-Treiche, canton Toul-Sud, 54] via *Pierre*, 0.77, 38 km
+  3. Pierre ou Pierre-la-Treiche [Pierre-la-Treiche, canton Toul-Sud, 54] via *Pierre*, 0.77, 39 km
 - sarrallk: SarrallK?
   1. Sarreux [Écart, Angomont, canton Badonviller, 54] via *Sarreux*, 0.72, ?
   2. Siraucourt ou Serol [Écart, Leintrey, canton Blâmont, 54] via *Serol*, 0.67, ?
@@ -713,9 +713,9 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Fraquelfing [canton Lorquin, 54] via *Franquelfin (1719)*, 0.49, 70 km
   3. Laning [canton Grostenquin, 57] via *Landingen (1594)*, 0.49, 57 km
 - sun-de-laistrc: Sun de Laistrc
-  1. Jeandelize [canton Conflans-en-Jarnisy, 57] via *Landelise (1642)*, 0.56, 22 km
-  2. Moulin-Lâtre [Moulin, Frizon, canton Châtel-sur-Moselle, 88] via *Moulin de Laistre (1574)*, 0.54, 86 km
-  3. Laître [Nom appliqué à la portion centrale, Grandvillers, canton Bruyères, 88] via *Le Bas-de-l’Aître (1821)*, 0.49, 102 km
+  1. Jeandelize [canton Conflans-en-Jarnisy, 57] via *Landelise (1642)*, 0.57, 21 km
+  2. Moulin-Lâtre [Moulin, Frizon, canton Châtel-sur-Moselle, 88] via *Moulin de Laistre (1574)*, 0.54, 87 km
+  3. Laître [Nom appliqué à la portion centrale, Grandvillers, canton Bruyères, 88] via *Le Bas-de-l’Aître (1821)*, 0.49, 103 km
 - tannoy: Tannoy
   1. Tannois [canton Ligny-en-Barrois, 55] via *Tannois*, 0.89, 53 km
   2. Lannoy [54] via *Lannoy*, 0.88, ?
@@ -730,12 +730,12 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   3. Rozelieures [canton Bayon, 54] via *Rosereulle (1577)*, 0.53, 34 km
 - tigeville: Tigéville
   1. Tigéville ou Thigéville [Ancien village qui a contribué à former celui d’Apremont, Apremont-la-Forêt, canton Saint-Mihiel, 55] via *Tigéville*, 0.96, 21 km
-  2. Thiméville [Maizeray, canton Fresnes-en-Woëvre, 55] via *Tymeville (1564)*, 0.84, 17 km
-  3. Regniéville [Thiaucourt-Regniéville, canton Thiaucourt-Regniéville, 54] via *Rigneville (1283)*, 0.84, 7 km
+  2. Thiméville [Maizeray, canton Fresnes-en-Woëvre, 55] via *Tymeville (1564)*, 0.84, 16 km
+  3. Regniéville [Thiaucourt-Regniéville, canton Thiaucourt-Regniéville, 54] via *Rigneville (1283)*, 0.83, 8 km
 - val-sainle-marie: Val-Sainle-Marie
   1. Val-Sainte-Marie [Seigneurie à Ville-au-Val, Ville-au-Val, canton Pont-à-Mousson, 54] via *Val-Sainte-Marie*, 0.92, 27 km
   2. Sainte-Marie [Ermitage ruiné et côte, Saint-Mihiel, canton Saint-Mihiel, 55] via *Sainte-Marie*, 0.72, 22 km
-  3. Sainte-Marie-aux-Chênes [canton Marange-Silvange, 57] via *Sainte-Marie*, 0.71, 28 km
+  3. Sainte-Marie-aux-Chênes [canton Marange-Silvange, 57] via *Sainte-Marie*, 0.71, 27 km
 - valdweistroff: Valdweistroff
   1. Waldweistroff [canton Sierck-les-Bains, 57] via *Waldweistroff*, 0.90, 7 km
   2. Gaweistroff [Commune de Villing, Villing, canton Bouzonville, 57] via *Gaweistroff*, 0.71, 20 km
@@ -835,31 +835,23 @@ the hamlet's own point where DicoTopo gives one (not its commune's).
 - `ripplingen` Ripplingen → **Réméling** [Rémeling, 57] via 'Ripplingen' ~ *Remlingen* (1691), 0.83
 - `fontenoy-la-ville` Fontenoy-la-Ville → **Fontenoy-la-Côte** [Portion de Fontenoy-le-Château située sur la rive droite du Coney, Fontenoy-le-Château, 88] via 'Fontenoy-la-Ville' ~ *Fontenoy-la-Côte*, 0.81
 
-## Settlements DicoTopo places elsewhere (24)
+## Settlements DicoTopo places elsewhere (16)
 
 A match of 0.85 or better more than 15 km from where the place is, and nearer its district.
 
-- `bure` Bure (wikidata/low), 63 km from its district → **Bure** [Ancien écart de Muzeray, Muzeray, 55] via 'Bure' ~ *Bure*, 0.91, 43 km from its district, 95 km from where it is
-- `quessonviller` Quessonviller (approximate/low), 83 km from its district → **Xonvillers** [Écart, Dommartin-lès-Remiremont, 88] via 'Quessonviller' ~ *Quesonviller* (1525), 1.00, 1 km from its district, 82 km from where it is
-- `bouvroy` Bouvroy (approximate/low), 83 km from its district → **Rouveroye** [Hameau, Saint-Nabord, 88] via 'Rouveroy' ~ *Rouverois* (1594), 0.99, 7 km from its district, 79 km from where it is
-- `remoiville` Remoiville (wikidata/high), 62 km from its district → **Ramonville** [Hameau, Rombas, 57] via 'Remoiville' ~ *Raimoiville* (1450), 0.89, 36 km from its district, 58 km from where it is
-- `celles-sur-plaine` Celles-sur-Plaine (wikidata/high), 55 km from its district → **Celles** [Hameau, Saint-Amé, 88] via 'Selle' ~ *Selle* (1590), 0.99, 3 km from its district, 52 km from where it is
-- `maizery` Maizery (wikidata/high), 40 km from its district → **Maizeray** [55] via 'Maizery' ~ *Maizerry* (1700), 0.97, 17 km from its district, 46 km from where it is
+- `bure` Bure (wikidata/low), 63 km from its district → **Bure** [Ancien écart de Muzeray, Muzeray, 55] via 'Bure' ~ *Bure*, 0.92, 42 km from its district, 95 km from where it is
+- `remoiville` Remoiville (wikidata/high), 61 km from its district → **Ramonville** [Hameau, Rombas, 57] via 'Remoiville' ~ *Raimoiville* (1450), 0.89, 35 km from its district, 58 km from where it is
+- `maizery` Maizery (wikidata/high), 40 km from its district → **Maizeray** [55] via 'Maizery' ~ *Maizerry* (1700), 0.97, 16 km from its district, 46 km from where it is
 - `buding` Buding (hist_map/high), 40 km from its district → **Biding** [57] via 'Buding' ~ *Buding* (1787), 0.99, 6 km from its district, 46 km from where it is
 - `boncourt-sur-meuse` Boncourt-sur-Meuse (wikidata/high), 37 km from its district → **Boncourt** [57] via 'Boncourt' ~ *Boncourt*, 0.96, 20 km from its district, 45 km from where it is
 - `le-chatelet` Le Châtelet (approximate/low), 40 km from its district → **Châtelet (Chemins du)** [Communes de Virecourt et d’Athienville, Virecourt, 54] via 'Le Châtelet' ~ *Châtelet (Chemins du)*, 0.87, 23 km from its district, 40 km from where it is
-- `bouzey` Bouzey (approximate/low), 42 km from its district → **Dombrot-sur-Vair** [88] via 'Bouzey' ~ *Bouzei* (1304), 0.98, 8 km from its district, 37 km from where it is
-- `breehaincouri` Breehaincourî (approximate/low), 27 km from its district → **Bréchaincourt** [Hameau, Circourt-sur-Mouzon, 88] via 'Brechaincourt' ~ *Bréchaincourt*, 0.98, 10 km from its district, 36 km from where it is
 - `villers-le-prud-homme` Ville-au-Val (approximate/low), 26 km from its district → **Paravilliers** [Hameau ruiné, Woël, 55] via 'Viller' ~ *Villers* (1389), 0.98, 9 km from its district, 35 km from where it is
 - `buzy` Buzy (geonames/high), 25 km from its district → **Buzy** [Ferme, Marieulles, 57] via 'Buzy' ~ *Buzy*, 0.98, 11 km from its district, 34 km from where it is
-- `vigneulies-les-hatloncliatcl-ch-l-de-canton` VigneulIes-lès-Hatloncliâtcl. ch.-l. de canton (wikidata/low), 34 km from its district → **Vigneulles-lez-Hattonchâtel** [Bourg sur l’Yron, Vigneulles-lès-Hattonchâtel, 55] via 'Vigneulles' ~ *Vigneullez* (1373), 1.00, 1 km from its district, 32 km from where it is
-- `saint-julien-sous-les-cotes` Saint-Julien-sous-les-Côtes (wikidata/high), 23 km from its district → **Saint-Julien-lez-Gorze** [Saint-Julien-lès-Gorze, 57] via 'Saint-Julien' ~ *Saint-Julien* (1594), 0.98, 8 km from its district, 31 km from where it is
 - `saint-jean-les-buzy` Saint-Jean-lès-Buzy (wikidata/high), 24 km from its district → **Saint-Jean** [Faubourg de Thiaucourt, Thiaucourt-Regniéville, 54] via 'Sainct-Jean' ~ *Saint-Jean*, 0.98, 10 km from its district, 29 km from where it is
 - `kolchen` Kolchen (hist_map/low), 29 km from its district → **Kirschnaumen** [57] via 'Kolchen' ~ *Kaichen* (1680), 0.87, 16 km from its district, 26 km from where it is
 - `aillianville` Aillianville (wikidata/high), 26 km from its district → **Ollainville** [88] via "Allainville. '" ~ *Allainville* (1583), 0.99, 7 km from its district, 26 km from where it is
 - `romont` Romont (wikidata/high), 20 km from its district → **Romont** [Lorey, 54] via 'Romont' ~ *Romont*, 0.99, 6 km from its district, 25 km from where it is
-- `moineville` Moineville (wikidata/high), 27 km from its district → **Moineville** [Seigneurie à Pagny-sous-Prény, Pagny-sur-Moselle, 54] via 'Moineville' ~ *Moineville*, 0.97, 14 km from its district, 25 km from where it is
+- `moineville` Moineville (wikidata/high), 26 km from its district → **Moineville** [Seigneurie à Pagny-sous-Prény, Pagny-sur-Moselle, 54] via 'Moineville' ~ *Moineville*, 0.97, 14 km from its district, 25 km from where it is
 - `rehlingen-nillel` Rehlingen (hist_map/high), 28 km from its district → **Réméling** [Rémeling, 57] via 'Rehlingen' ~ *Remlingen* (1691), 0.86, 12 km from its district, 24 km from where it is
-- `broussey-en-blois` Broussey-en-Blois (wikidata/high), 43 km from its district → **Broussey-en-Woëvre** [Broussey-Raulecourt, 55] via 'Broucey' ~ *Broucey* (1275), 0.96, 19 km from its district, 23 km from where it is
-- `senonville` Sponville (geonames/low), 17 km from its district → **Senonville** [Valbois, 55] via 'Senonville' ~ *Senonville*, 0.99, 6 km from its district, 22 km from where it is
+- `broussey-en-blois` Broussey-en-Blois (wikidata/high), 43 km from its district → **Broussey-en-Woëvre** [Broussey-Raulecourt, 55] via 'Broucey' ~ *Broucey* (1275), 0.96, 20 km from its district, 23 km from where it is
 - `sainte-genevieve` Sainte-Geneviève (wikidata/high), 26 km from its district → **Sainte-Geneviève** [Ferme, Dommartemont, 54] via 'Sainte-Geneviève' ~ *Sainte-Geneviève*, 0.98, 10 km from its district, 19 km from where it is
