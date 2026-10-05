@@ -1409,7 +1409,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1409,Le Val de Nolbach.,Le Val de Nolbach,,office-vaudrevange,,fief,,,,main,,nalbach,84,high,
 1410,Sirsperg.,Sirsperg,,office-siersberg,,domain,,,,main,,siersberg,84,high,
 1411,Nittel.,Nittel,,office-siersberg,,domain,,,,main,,nittel,84,high,number read from 'UII'
-1412,Kolchcn.,Kolchcn,,office-siersberg,,domain,,,,main,,kolchen,84,high,number read from '1M2'
+1412,Kolchcn.,Kolchcn,,office-siersberg,,domain,,,,main,,kollig,84,high,number read from '1M2'
 1413,Rellingen.,Rellingen,,office-siersberg,,domain,,,,main,,rehlingen,84,high,2 number(s) missing before
 1414,Remclfangen.,Remclfangen,,office-siersberg,,domain,,,,main,,rammelfangen,84,high,
 1415,Sirssdorf.,Sirssdorf,,office-siersberg,,domain,,,,main,,siersdorf,84,high,
@@ -1949,7 +1949,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1949,Bonnée.,Bonnée,,bailiwick-apremont,,fief,,,,main,,bovee-sur-barboure,102,high,
 1950,Bonnieulles.,Bonnieulles,,bailiwick-apremont,,fief,,,,main,,boviolles,102,high,
 1951,Brieulles.,Brieulles,,bailiwick-apremont,,fief,,,,main,,brieulles-sur-meusc,102,high,
-1952,Broucey.,Broucey,,bailiwick-apremont,,fief,,,,main,,broussey-en-blois,103,medium,index match by index number (0.80)
+1952,Broucey.,Broucey,,bailiwick-apremont,,fief,,,,main,,broussey-en-blois,103,medium,index match by index number (1.00)
 1953,Brues.,Brues,,bailiwick-apremont,,fief,,,,main,,bure,103,high,
 1954,Ban Sainct-Pierre.,Ban Sainct-Pierre,,bailiwick-apremont,,fief,,,,main,,san-saint-pierre,103,high,
 1955,Ban de Chastel.,Ban de Chastel,,bailiwick-apremont,,fief,,,,main,,san-de-chaste,103,high,

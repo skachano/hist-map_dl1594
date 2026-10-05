@@ -835,23 +835,7 @@ the hamlet's own point where DicoTopo gives one (not its commune's).
 - `ripplingen` Ripplingen → **Réméling** [Rémeling, 57] via 'Ripplingen' ~ *Remlingen* (1691), 0.83
 - `fontenoy-la-ville` Fontenoy-la-Ville → **Fontenoy-la-Côte** [Portion de Fontenoy-le-Château située sur la rive droite du Coney, Fontenoy-le-Château, 88] via 'Fontenoy-la-Ville' ~ *Fontenoy-la-Côte*, 0.81
 
-## Settlements DicoTopo places elsewhere (16)
+## Settlements DicoTopo places elsewhere (0)
 
-A match of 0.85 or better more than 15 km from where the place is, and nearer its district.
+A match of 0.85 or better more than 15 km from where the place is, and nearer its district; 16 more checked by hand (rules.yaml `dicotopo_reviewed`).
 
-- `bure` Bure (wikidata/low), 63 km from its district → **Bure** [Ancien écart de Muzeray, Muzeray, 55] via 'Bure' ~ *Bure*, 0.92, 42 km from its district, 95 km from where it is
-- `remoiville` Remoiville (wikidata/high), 61 km from its district → **Ramonville** [Hameau, Rombas, 57] via 'Remoiville' ~ *Raimoiville* (1450), 0.89, 35 km from its district, 58 km from where it is
-- `maizery` Maizery (wikidata/high), 40 km from its district → **Maizeray** [55] via 'Maizery' ~ *Maizerry* (1700), 0.97, 16 km from its district, 46 km from where it is
-- `buding` Buding (hist_map/high), 40 km from its district → **Biding** [57] via 'Buding' ~ *Buding* (1787), 0.99, 6 km from its district, 46 km from where it is
-- `boncourt-sur-meuse` Boncourt-sur-Meuse (wikidata/high), 37 km from its district → **Boncourt** [57] via 'Boncourt' ~ *Boncourt*, 0.96, 20 km from its district, 45 km from where it is
-- `le-chatelet` Le Châtelet (approximate/low), 40 km from its district → **Châtelet (Chemins du)** [Communes de Virecourt et d’Athienville, Virecourt, 54] via 'Le Châtelet' ~ *Châtelet (Chemins du)*, 0.87, 23 km from its district, 40 km from where it is
-- `villers-le-prud-homme` Ville-au-Val (approximate/low), 26 km from its district → **Paravilliers** [Hameau ruiné, Woël, 55] via 'Viller' ~ *Villers* (1389), 0.98, 9 km from its district, 35 km from where it is
-- `buzy` Buzy (geonames/high), 25 km from its district → **Buzy** [Ferme, Marieulles, 57] via 'Buzy' ~ *Buzy*, 0.98, 11 km from its district, 34 km from where it is
-- `saint-jean-les-buzy` Saint-Jean-lès-Buzy (wikidata/high), 24 km from its district → **Saint-Jean** [Faubourg de Thiaucourt, Thiaucourt-Regniéville, 54] via 'Sainct-Jean' ~ *Saint-Jean*, 0.98, 10 km from its district, 29 km from where it is
-- `kolchen` Kolchen (hist_map/low), 29 km from its district → **Kirschnaumen** [57] via 'Kolchen' ~ *Kaichen* (1680), 0.87, 16 km from its district, 26 km from where it is
-- `aillianville` Aillianville (wikidata/high), 26 km from its district → **Ollainville** [88] via "Allainville. '" ~ *Allainville* (1583), 0.99, 7 km from its district, 26 km from where it is
-- `romont` Romont (wikidata/high), 20 km from its district → **Romont** [Lorey, 54] via 'Romont' ~ *Romont*, 0.99, 6 km from its district, 25 km from where it is
-- `moineville` Moineville (wikidata/high), 26 km from its district → **Moineville** [Seigneurie à Pagny-sous-Prény, Pagny-sur-Moselle, 54] via 'Moineville' ~ *Moineville*, 0.97, 14 km from its district, 25 km from where it is
-- `rehlingen-nillel` Rehlingen (hist_map/high), 28 km from its district → **Réméling** [Rémeling, 57] via 'Rehlingen' ~ *Remlingen* (1691), 0.86, 12 km from its district, 24 km from where it is
-- `broussey-en-blois` Broussey-en-Blois (wikidata/high), 43 km from its district → **Broussey-en-Woëvre** [Broussey-Raulecourt, 55] via 'Broucey' ~ *Broucey* (1275), 0.96, 20 km from its district, 23 km from where it is
-- `sainte-genevieve` Sainte-Geneviève (wikidata/high), 26 km from its district → **Sainte-Geneviève** [Ferme, Dommartemont, 54] via 'Sainte-Geneviève' ~ *Sainte-Geneviève*, 0.98, 10 km from its district, 19 km from where it is

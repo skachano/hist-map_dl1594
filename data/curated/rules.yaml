@@ -160,6 +160,7 @@ geocode:
   saint-julien: {wikidata: Q580467, note: "Saint-Julien-lès-Gorze: Bouteiller gives this Saint-Julien (1594) from Alix (DicoTopo); the index's canton de Commercy is Saint-Julien-sous-les-Côtes"}
   quessonviller: {"at": "Dommartin-lès-Remiremont", "name_fr": "Xonvillers", "note": "Xonvillers, a farm of Dommartin-lès-Remiremont: Quessonville, Alix n° 775 (Marichal, DicoTopo); not a grange of Celles"}
   celles: {"at": "Saint-Amé", "name_fr": "Celles", "note": "Celles, a hamlet and mairie of Saint-Amé (Selle, 1590; DicoTopo), in the ban de Ramonchamp by Remiremont; not Celles-sur-Plaine"}
+  kolchen: {lat: 49.63419, lon: 6.44363, name_fr: "Köllig", name_de: "Köllig", name_en: "Köllig", country: DE, note: "Köllig (Kölchen; GeoNames 2886322, as in hist_map), a village of Nittel on the Moselle, by Nittel (entry 1411) in the office of Siersberg. The editors' note gives Colchen, a fief of the communauté of Guidesweiler (Güdesweiler), after Bugnon and Durival, probably wrongly"}
   # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
   # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
   liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}
@@ -258,3 +259,23 @@ geocode:
   thorey: {"wikidata": "Q688269", "note": "Thorey(-Lyautey), canton de Vézelise (entry 1754, Tourcy); not Lorey"}
   rech-241: {"at": "Sarralbe", "note": "Rech, a hamlet of Sarralbe (the index; Zumrech, entry 2136); not Rech in the Saarland"}
   fontenoy-la-ville: {"at": "Fontenoy-le-Château", "name_fr": "Fontenoy-la-Ville", "note": "Fontenoy-la-Ville, a section of Fontenoy-le-Château (the index)"}
+
+# Places checked by hand against DicoTopo's strong matches far from them (make dicotopo, section 2):
+# the placement stands, and the report no longer lists them ({place id: why}).
+dicotopo_reviewed:
+  kollig: "Köllig by Nittel, the book's Kolchen (rules.yaml geocode); not Kirschnaumen"
+  bure: "Bure, canton de Montiers-sur-Saulx (the index); not the écart of Muzeray"
+  remoiville: "Remoiville, canton de Montmédy (the index); not Ramonville"
+  broussey-en-blois: "Broussey-en-Blois, canton de Void (the index, whose 1953 is a misprint for 1952); not Broussey-en-Woëvre"
+  boncourt-sur-meuse: "Boncourt-sur-Meuse, canton de Commercy (the index), kept: the editors' note on Boncourt of Conflans (entries 1922, 1938) says it is probably not this one; that Boncourt would fit the prévôté of Prény better"
+  maizery: "Maizery, canton de Pange (the index); Maizeray's Maizery (1594) is from a Bar act, not Alix"
+  buding: "Buding, canton de Metzerwisse (the index); not Biding"
+  le-chatelet: "Le Châtelet of Barville (the index); DicoTopo matched a road, the Chemins du Châtelet"
+  villers-le-prud-homme: "Villers-le-Prud'homme, an écart and chapel of Ville-au-Val (the index); not Paravilliers"
+  buzy: "Buzy, chasteau et village, canton d'Étain (the index); not the farm of Marieulles"
+  saint-jean-les-buzy: "Saint-Jean-lès-Buzy, canton d'Étain (the index), by Parfondrupt (entry 541); not the faubourg of Thiaucourt"
+  aillianville: "Aillianville, canton de Saint-Blin (the index); Ollainville's Dollainville (1594) is entry 1131"
+  romont: "Romont, prieuré et village, canton de Rambervillers (the index); not the Romont of Lorey"
+  moineville: "Moineville, canton de Briey (the index); not the seigneurie at Pagny-sur-Moselle"
+  rehlingen-nillel: "Rehlingen, com. de Nittel (the index, by correction 55); not Rémeling"
+  sainte-genevieve: "Sainte-Geneviève, canton de Pont-à-Mousson (the index), by Jezainville (entry 97); not the farm of Dommartemont"

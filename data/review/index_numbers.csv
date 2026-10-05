@@ -141,6 +141,7 @@ manual,223,Lebcuville,36,,1836,Lcbeufville,98,1.00,lebeuville,"printed 1829, 36:
 manual,244,Rouvrois-sur-Mcuse,18&4,,1884,Rouveroy,100,1.00,rouvrois-sur-meuse,printed 1884
 manual,184,Aix,1953,,1932,Aix,102,1.00,aix,printed 1933; Aix is 1932 in the list of Apremont
 manual,185,Anoux,1955,,1935,Annoult,102,1.00,anoux,printed 1955; Annoult is 1935 in the list of Apremont
+manual,193,Broussey-en-Blois,1955,,1952,Broucey,103,1.00,broussey-en-blois,"printed 1953 (the scan reads 1955), the editors' misprint for 1952: Broucey (bailliage d'Apremont), Broussey-en-Blois"
 manual,225,Lion-devanî-Dun,1995,,1993,Lyon,104,1.00,lion-devani-dun,printed 1995; Lyon is 1993
 manual,261,Xivray-et-Marvoisin,2040,,2040,Sivery,105,1.00,xivray-et-marvoisin,Sivery
 manual,210,Gébcourt,9093,,2093,Gellacourt,107,1.00,gelacourt,printed 2093
@@ -442,7 +443,6 @@ corrected,184,Allamont,51,,1931,Allamont,102,1.00,allamont,
 corrected,185,Ancy-sur-Moselle,1953,,1933,Ancy-sur-Mozelle,102,0.93,ancy-sur-moselle,
 corrected,192,Boncourt,58,,1938,Boncourt,102,1.00,boncourt,
 corrected,188,San Sainî-Symphorien,1945,,1943,Ban Sainct-Symphorien,102,0.89,san-saini-symphorien,
-corrected,193,Broussey-en-Blois,1955,,1952,Broucey,103,0.80,broussey-en-blois,
 corrected,202,Dommartin-la-Montagne,1965,,1963,Dommartin,103,1.00,dommartin-la-montagne,
 corrected,212,Gîronville,,,1977,Gironville,103,1.00,gironville-sous-les-cotes,number not printed in the index
 corrected,215,Hamonvillc,,,1979,Hamonville,103,1.00,hamonville,number not printed in the index
@@ -1687,7 +1687,7 @@ agrees,243,Roden,1407,,1407,Roden,84,1.00,roden,
 agrees,206,Felsberg (Felsberg-le-Neuf),1408,,1408,Fressberg,84,0.56,felsberg,
 agrees,233,Nalbach,1409,,1409,Le Val de Nolbach,84,0.63,nalbach,
 agrees,248,Siersberg,1410,,1410,Sirsperg,84,0.82,siersberg,
-agrees,221,Kolchen,1412,,1412,Kolchcn,84,1.00,kolchen,
+agrees,221,Kolchen,1412,,1412,Kolchcn,84,1.00,kollig,
 agrees,242,Rehlingen,1413,,1413,Rellingen,84,0.89,rehlingen,
 agrees,241,Rantmelfangen,1414,,1414,Remclfangen,84,0.83,rammelfangen,
 agrees,248,Siersdorf (Sistroff),1415,,1415,Sirssdorf,84,0.62,siersdorf,
