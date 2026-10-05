@@ -929,6 +929,22 @@ def _report_geocoding(out: Built) -> None:
     lines += [f"- `{p['id']}` {p['name_fr']} — canton {p.get('index_canton') or '–'}, commune "
               f"{p.get('index_commune') or '–'} ({p.get('variants', '')[:40]})"
               for p in identified if not p.get("lat")] or ["- none"]
+    # Every entry whose place has no point, with its district and why (the place's note)
+    unlocated = {p["id"]: p for p in settlements if not p.get("lat")}
+    entries = [e for e in out.entries if e.get("place_id") in unlocated]
+    places = {e["place_id"] for e in entries}
+    lines += ["", f"### Entries without a location ({len(entries)} entries, {len(places)} places)", ""]
+    for e in entries:
+        p = unlocated[e["place_id"]]
+        series = "" if e.get("series") == "main" else f" [{e.get('series')}]"
+        why = f": {p['notes'][:90]}" if p.get("notes") else ""
+        lines.append(f"- {e['no']}{series} ({e.get('district_id') or '–'}) {e['text'][:60]} → "
+                     f"`{p['id']}` {p['name_fr']}{why}")
+    if not entries:
+        lines.append("- none")
+    orphans = sorted(set(unlocated) - places)
+    if orphans:   # from an index line or a correction that no entry names
+        lines.append("- no entry: " + ", ".join(f"`{pid}`" for pid in orphans))
     lines += ["", "### Located with low confidence or far from their district", ""]
     lines += [f"- `{p['id']}` {p['name_fr']} ({p.get('geo_method')}): {p.get('notes', '')[-90:]}"
               for p in settlements if p.get("lat") and p.get("geo_confidence") == "low"
