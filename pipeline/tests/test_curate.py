@@ -85,3 +85,16 @@ def test_index_row_by_name_page_and_number():
     assert build.index_row(rows, "Poirie (la)") is rows[0]               # the first of that name
     assert build.index_row(rows, "238|Poirie (la)|742") is rows[1]       # the one with that number
     assert build.index_row(rows, "237|Poirie (la)") is None
+
+
+def test_unlocated_type():
+    t = build.unlocated_type
+    assert t({"name": "Ban de Vezin", "text": "Ban de Vezin."}, {"index_kind": "fief du bailliage d'Apremont"}) == "Bans"
+    assert t({"name": "Lairey", "text": "Lairey."}, {"index_kind": "fief du bailliage d'Aprcmont"}) == "Fiefs"
+    assert t({"name": "Eych", "text": "Eych."}, {"index_kind": "lîef de la seigneurie de Bitch"}) == "Fiefs"
+    assert t({"name": "Ranschborn", "text": "Ranschborn."}, {"index_kind": "gagnagcde la seigneurie de Bit"}) == "Granges (gagnages)"
+    assert t({"name": "Dutlingen", "text": "Dutlingen.", "series": "main"},
+             {"index_kind": "vil. détruit du comté de Forbach"}) == "Deserted villages"
+    assert t({"name": "Capucins de Nancy", "text": "Capucins de Nancy.", "series": "convents_m"}, {}) == \
+        "Towns and religious houses (the lists)"
+    assert t({"name": "Buz", "text": "Buz.", "series": "main"}, {"place_type": "village"}) == "Villages and others"

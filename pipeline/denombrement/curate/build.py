@@ -911,6 +911,29 @@ def _merge_same_item(out: Built) -> None:
                       + ", ".join(f"`{a}` → `{b}`" for a, b in sorted(into.items())))
 
 
+UNLOCATED_TYPES = ("Bans", "Fiefs", "Granges (gagnages)", "Glassworks", "Deserted villages",
+                   "Towns and religious houses (the lists)", "Villages and others")
+
+
+def unlocated_type(entry: dict, place: dict) -> str:
+    """What an unlocated entry names, for the report: from its name, the index's description of
+    the place ("fief du bailliage d'Apremont", "gagnage de la seigneurie de Bitche") and its type."""
+    kind = fold(place.get("index_kind") or "")
+    if re.match(r"(?:ban|san|sun)\b", fold(entry.get("name") or entry["text"])):   # the scan reads Ban as San
+        return "Bans"
+    if re.search(r"\b[lf]i?[eé]f", kind):          # "fief", "lîef", "fiefde"
+        return "Fiefs"
+    if "gagna" in kind or place.get("place_type") == "grange":   # "gagnagc" in the scan
+        return "Granges (gagnages)"
+    if "verrerie" in kind or place.get("place_type") == "glassworks":
+        return "Glassworks"
+    if "detruit" in kind or place.get("place_type") == "deserted_village":
+        return "Deserted villages"
+    if entry.get("series") != "main":
+        return "Towns and religious houses (the lists)"
+    return "Villages and others"
+
+
 def _report_geocoding(out: Built) -> None:
     settlements = [p for p in out.places.values() if p["kind"] == "settlement"]
     identified = [p for p in settlements if p.get("lost") != "true"
@@ -933,12 +956,18 @@ def _report_geocoding(out: Built) -> None:
     entries = [e for e in out.entries if e.get("place_id") in unlocated]
     places = {e["place_id"] for e in entries}
     lines += ["", f"### Entries without a location ({len(entries)} entries, {len(places)} places)", ""]
+    by_type: dict[str, list[dict]] = defaultdict(list)
     for e in entries:
-        p = unlocated[e["place_id"]]
-        series = "" if e.get("series") == "main" else f" [{e.get('series')}]"
-        why = f": {p['notes'][:90]}" if p.get("notes") else ""
-        lines.append(f"- {e['no']}{series} ({e.get('district_id') or '–'}) {e['text'][:60]} → "
-                     f"`{p['id']}` {p['name_fr']}{why}")
+        by_type[unlocated_type(e, unlocated[e["place_id"]])].append(e)
+    for kind in [k for k in UNLOCATED_TYPES if k in by_type]:
+        lines += [f"#### {kind} ({len(by_type[kind])})", ""]
+        for e in by_type[kind]:
+            p = unlocated[e["place_id"]]
+            series = "" if e.get("series") == "main" else f" [{e.get('series')}]"
+            why = f": {p['notes'][:90]}" if p.get("notes") else ""
+            lines.append(f"- {e['no']}{series} ({e.get('district_id') or '–'}) {e['text'][:60]} → "
+                         f"`{p['id']}` {p['name_fr']}{why}")
+        lines.append("")
     if not entries:
         lines.append("- none")
     orphans = sorted(set(unlocated) - places)
