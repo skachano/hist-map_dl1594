@@ -94,6 +94,7 @@ entry_splits:
 # Index lines for entries whose numbers led to the wrong line (checked by name and district).
 entry_index:
   1003: Chaumouzcy      # "Chamoysy", old form of Chaumousey; the index prints 1005
+  272: Glonvîlle        # "Gloi»ville, partie" (Azerailles): Glonville, whose index line prints only 258
   1672: Berus           # "La ville de Beaurains, Berriss": the index prints "Saarlouis (Pr.) 1672" without its comma
   1836: Lebcuville      # "Lebeufville" (Lebeuville), not Herbeuville
   1891: Saulx-en-Voévre # "Sault" in the bailliage of Hattonchâtel, not Le Sautel
@@ -190,3 +191,9 @@ geocode:
   ceume: {"wikidata": "Q23001", "note": "Coume, canton de Boulay (the scan reads Ceume; Chonne in the list and the table of old forms)"}
   thalecksweiler: {"wikidata": "Q2408787", "note": "Thalexweiler (Eppelborn, then Lebach): Exweiller and Eiweiller in the list (entries 1498, 1513, 1536), Thalecksweiler in the index; not Eiweiler near Heusweiler"}
   pompierre: {"wikidata": "Q227626", "note": "Pompierre, canton de Neufchâteau (Vosges), Pontpierre in the list (entry 124); not Pontpierre in the Moselle"}
+  # places that shared another place's point (duplicate check)
+  paire-le-bam: {"at": "Taintrux", "name_fr": "Le Paire", "note": "le Paire, a hamlet of Taintrux (the index); not le Paire of Anould"}
+  le-souche-clefcy: {"at": "Clefcy", "note": "la Souche, a hamlet of Clefcy (the index); not la Souche of Anould"}
+  thorey: {"wikidata": "Q688269", "note": "Thorey(-Lyautey), canton de Vézelise (entry 1754, Tourcy); not Lorey"}
+  rech-241: {"at": "Sarralbe", "note": "Rech, a hamlet of Sarralbe (the index; Zumrech, entry 2136); not Rech in the Saarland"}
+  fontenoy-la-ville: {"at": "Fontenoy-le-Château", "name_fr": "Fontenoy-la-Ville", "note": "Fontenoy-la-Ville, a section of Fontenoy-le-Château (the index)"}

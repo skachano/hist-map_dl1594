@@ -357,7 +357,14 @@ def build() -> Built:
     # Every number of every index line, resolved to the entry it means (curate/reconcile.py). An
     # entry the matcher left alone takes the line whose number names it.
     resolution = reconcile.resolve(matcher.rows, entries, matches, matcher.sim, similarity)
-    for no, links in resolution.by_entry().items():
+    linked = resolution.by_entry()
+    # An entry whose line gave its number to another entry by decision (Kerlingen's "1695" is 1693)
+    # and that no other line names: no longer that line's.
+    for no, m in list(matches.items()):
+        if m.row is not None and no not in linked and m.how != "rule" and any(
+                x.row is m.row and x.status == "manual" for x in resolution.links):
+            matches[no] = Match(None, "none", 0.0, "low")
+    for no, links in linked.items():
         unmatched = matches[no].row is None and matches[no].how == "none"
         # …and so does one whose line no longer claims it (a correction or a decision by hand)
         dropped = matches[no].row is not None and all(x.row is not matches[no].row for x in links)

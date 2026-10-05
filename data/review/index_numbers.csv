@@ -1,5 +1,4 @@
 status,index_page,index_name,printed,number,entry,entry_name,entry_page,similarity,place_id,note
-not in index,,,,,272,Gloi»ville,45,,gloi-ville,
 not in index,,,,,331,Hallieure,47,,hallieure,
 not in index,,,,,534,Villeeel-sur-Trin,54,,villeeel-sur-trin,
 not in index,,,,,640,Aidolles',58,,aidolles,
@@ -19,7 +18,7 @@ not in index,,,,,1335,Ansclnigen,81,,ansclnigen,
 not in index,,,,,1342,Ryol,82,,ryol,
 not in index,,,,,1646,Ilcyligcnner,92,,ilcyligcnner,
 not in index,,,,,1659,Hyrelbach,92,,hyrelbach,
-not in index,,,,,1693,Kerlingen,93,,kerlingen,
+not in index,,,,,1695,Eidlingcn,93,,eidlingcn,
 not in index,,,,,1832,Lorro,98,,lorro,
 not in index,,,,,1934,Andillicr,102,,andillicr,
 not in index,,,,,2099,La haulte rue de Destort,107,,la-haulte-rue-de-destort,
@@ -128,6 +127,7 @@ manual,258,Petit-Rohrbacli,1651,,1631,Rorbach,91,1.00,petit-rohrbacli,correction
 manual,252,Tensch,1655,,1635,Teutschen,92,1.00,tensch,printed 1635
 manual,256,Vergaville,I63i,,1638,WargaviUe,92,1.00,vergaville,printed 1638
 manual,210,Gawestroff(autrefois Weistroff),1689,,1689,Wistorff,93,1.00,gawestroff,"Wistorff: Weistroff, the old name"
+manual,221,Kerlingcn (Kerling-lès-Sarrelouts),1695,,1693,Kerlingen,93,1.00,kerlingcn,printed 1695 (3/5): Kerlingen is entry 1693; 1695 is Eidlingen
 manual,262,Zinzing,1751,,1731,Zintsingen,95,1.00,zinzing,printed 1731
 manual,194,Itnbiiujen,1736,,1736,Bubingen,95,1.00,itnbiiujen,Bubingen
 manual,252,They,1751,,1751,Thev-soub-Vaudémont,95,1.00,they-sous-vaudemont,They-sous-Vaudémont
@@ -194,6 +194,7 @@ corrected,210,Gellenoncourt,930,,230,Gellenoncourt,43,1.00,gellenoncourt,
 corrected,229,Ménil,258,,238,Mesnil,43,0.91,menil,
 corrected,202,Domèvre-sur Vezouse,245,,243,Domepvre,44,0.93,domevre-sur-vezouze,
 corrected,186,Athienville,2C7,,267,Athienville,44,1.00,athienville,
+corrected,212,Glonvîlle,,,272,Gloi»ville,45,0.89,glonville,number not printed in the index
 corrected,195,Chalgoulte,,,284,Challegoutte,45,0.91,chalgoulte,number not printed in the index
 corrected,200,Croix-aux-Mines (la),295,,293,La Croix,45,1.00,la-croix-aux-mines,
 corrected,184,Algoutle,500,,300,Allegoutte et,46,0.80,algoutle,
@@ -416,7 +417,7 @@ corrected,195,Cadenbronn,,,1735,Kordenburn,95,0.95,cadenbronn,number not printed
 corrected,189,Behren,1757,,1737,Berren,95,0.83,behren,
 corrected,256,Vaudémont,1758,,1738,Vaudémont,95,1.00,vaudemont,
 corrected,257,Vézelise,1759,,1739,Vézelise,95,1.00,vezelise,
-corrected,253,Thorey,1734,,1754,Tourcy,96,0.83,thorey,
+corrected,253,Thorey,1734,,1754,Tourcy,96,0.83,thorey-lyautey,
 corrected,240,Pulney,1784,,1783,Pugney,96,0.95,pulney,
 corrected,197,Châtel-sur-Mosclle,1795,,1793,Chastel,97,0.92,chatel-sur-moselle,
 corrected,193,Bouxurulles,,,1802,Bouxereulles,97,0.87,bouxurulles,number not printed in the index
@@ -1916,7 +1917,6 @@ agrees,258,Villing,1688,,1688,Willingen,93,0.75,villing-bouzonville,
 agrees,235,Oberdorff,1690,,1690,Oberdorff,93,1.00,oberdorff,
 agrees,259,Voelfling,1692,,1692,Wolflingen,93,0.95,voelfling-les-bouzonville,
 agrees,236,Odenhoven,1694,,1694,Odenhoven,93,1.00,odenhoven,
-agrees,221,Kerlingcn (Kerling-lès-Sarrelouts),1695,,1695,Eidlingcn,93,0.56,kerlingcn,
 agrees,230,Mcrtcn,1696,,1696,Morten,94,0.95,merten,
 agrees,190,Bibling,1697,,1697,Bublingen,94,0.95,bibling,
 agrees,252,Téterchen,1698,,1698,Tetterchen,94,0.95,teterchen,

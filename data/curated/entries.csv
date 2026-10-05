@@ -269,7 +269,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 269,Flin.,Flin,,provostship-azerailles,,other,,,,main,,flin,44,high,
 270,"Bandemesnil, partie.",Bandemesnil,,provostship-azerailles,,other,,part,,main,,badinenil,44,high,
 271,Gellaucourt.,Gellaucourt,,provostship-azerailles,,other,,,,main,,gelacourt,45,medium,index match by index number (1.00)
-272,"Gloi»ville, partie.",Gloi»ville,,provostship-azerailles,,other,,part,,main,,gloi-ville,45,low,index match by none (0.00)
+272,"Gloi»ville, partie.",Gloi»ville,,provostship-azerailles,,other,,part,,main,,glonville,45,high,
 273,"Sainct-Diey, ville, chasteau, église collégialtc insigne.",Sainct-Diey,castle|town|collegiate_church,provostship-saint-die,,domain,,,,main,,saint-die-des-vosges,45,high,
 274,Lubine.,Lubine,,provostship-saint-die,,domain,,,,main,,lubine,45,high,
 275,"Wysembaeh,où sont les fonderiespour les myiics de la Croix.",Wysembaeh,,provostship-saint-die,lordship-warde-de-wisembach,domain,,,,main,,wisembach,45,high,
@@ -1690,9 +1690,9 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1690,Oberdorff.,Oberdorff,,district-beaurains,lordship-beaurains,other,,,,main,,oberdorff,93,high,
 1691,Rodendorff.,Rodendorff,,district-beaurains,lordship-beaurains,other,,,,main,,chateau-rouge,93,medium,index match by number (0.27)
 1692,Wolflingen.,Wolflingen,,district-beaurains,lordship-beaurains,other,,,,main,,voelfling-les-bouzonville,93,high,number read from '1693'
-1693,Kerlingen.,Kerlingen,,district-beaurains,lordship-beaurains,other,,,,main,,kerlingen,93,low,index match by none (0.00)
+1693,Kerlingen.,Kerlingen,,district-beaurains,lordship-beaurains,other,,,,main,,kerlingcn,93,medium,index match by index number (1.00)
 1694,Odenhoven.,Odenhoven,,district-beaurains,lordship-beaurains,other,,,,main,,odenhoven,93,high,
-1695,Eidlingcn.,Eidlingcn,,district-beaurains,lordship-beaurains,other,,,,main,,kerlingcn,93,high,
+1695,Eidlingcn.,Eidlingcn,,district-beaurains,lordship-beaurains,other,,,,main,,eidlingcn,93,low,index match by none (0.00)
 1696,Morten.,Morten,,district-beaurains,lordship-beaurains,other,,,,main,,merten,94,high,
 1697,Bublingen.,Bublingen,,district-beaurains,lordship-beaurains,other,,,,main,,bibling,94,high,
 1698,Tetterchen.,Tetterchen,,district-beaurains,lordship-beaurains,other,,,,main,,teterchen,94,high,
@@ -1751,7 +1751,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1751,Thev-soub-Vaudémont.,Thev-soub-Vaudémont,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,they-sous-vaudemont,95,medium,index match by index number (1.00)
 1752,Gugney.,Gugney,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,gugney,95,high,number read from '1753'
 1753,ForccHes-soub-Gugney.,ForccHes-soub-Gugney,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,forcelles-sous-gugney,95,high,
-1754,Tourcy.,Tourcy,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,thorey,96,medium,index match by confused number (0.83)
+1754,Tourcy.,Tourcy,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,thorey-lyautey,96,medium,index match by confused number (0.83)
 1755,Fabvières.,Fabvières,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,favieres,96,high,
 1756,Saulxerotte.,Saulxerotte,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,saulxerotte,96,high,
 1757,Vitrey.,Vitrey,,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,vitrey,96,high,
