@@ -346,8 +346,7 @@ def build() -> Built:
             continue
         if e["no"] in entry_index:
             # The index line named in rules.yaml, for a match the numbers got wrong.
-            want = name_key(entry_index[e["no"]])
-            row = next((r for r in matcher.rows if name_key(r.entry.name) == want), None)
+            row = index_row(matcher.rows, entry_index[e["no"]])
             if row is None:
                 raise ValueError(f"rules.yaml entry_index {e['no']}: no index line '{entry_index[e['no']]}'")
             matches[e["no"]] = Match(row, "rule", 1.0, "high")
@@ -984,6 +983,20 @@ def _rekey(out: Built) -> None:
         f["place_id"] = renames.get(f["place_id"], f["place_id"]) if f.get("place_id") else f.get("place_id")
     # The review report names places by their ids too.
     out.report = [_rename_in(line, renames) for line in out.report]
+
+
+def index_row(rows, spec) -> "corrections.IndexRow | None":
+    """The index line rules.yaml `entry_index` names: its name as printed, or "page|name" or
+    "page|name|number" where several lines share a name ("238|Poirie (la)|742")."""
+    parts = str(spec).split("|")
+    page, name, number = "", parts[0], None
+    if len(parts) >= 2:
+        page, name = parts[0], parts[1]
+    if len(parts) == 3:
+        number = int(parts[2])
+    want = name_key(name)
+    return next((r for r in rows if name_key(r.entry.name) == want and (not page or r.page == page)
+                 and (number is None or number in r.entry.numbers)), None)
 
 
 def _rename_in(line: str, renames: dict[str, str]) -> str:

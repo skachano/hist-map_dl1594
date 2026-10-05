@@ -75,3 +75,13 @@ def test_manual_memberships_are_in_the_curated_table():
             for m in csv.DictReader((config.CURATED_DIR / "memberships.csv").open())}
     for r in csv.DictReader((config.CURATED_DIR / "manual" / "memberships.csv").open()):
         assert (r["child_id"], r["parent_id"], r["relation"]) in have, r["child_id"]
+
+
+def test_index_row_by_name_page_and_number():
+    rows = [_row("238", "Poirie (la), censé, com. de Tendon, 703."),
+            _row("238", "Poirie (la), ham., com.de Saulxures, mêmecanton (Vosges), 742."),
+            _row("235", "Noncourt, canton de Neufchâteau, 1155.")]
+    assert build.index_row(rows, "Noncourt") is rows[2]
+    assert build.index_row(rows, "Poirie (la)") is rows[0]               # the first of that name
+    assert build.index_row(rows, "238|Poirie (la)|742") is rows[1]       # the one with that number
+    assert build.index_row(rows, "237|Poirie (la)") is None
