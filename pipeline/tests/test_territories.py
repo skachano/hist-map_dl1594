@@ -65,3 +65,17 @@ def test_shared_lands_of_a_division_and_its_realm():
     build._shared_lands(out)
     got = {(m["child_id"], m["parent_id"]) for m in out.memberships}
     assert ("a", "lordship-x") in got and ("b", "office-x") in got and ("c", "lordship-x") not in got
+
+
+def test_a_foreign_land_can_stop_at_a_border(monkeypatch):
+    """manual/foreign_lands.csv's country: Nassau-Saarbrücken's circle counts Germany's communes
+    only, so Schœneck and Stiring-Wendel (the county of Forbach's) are not foreign land."""
+    def commune(qid, lon, lat, country):
+        return {"qid": qid, "types": {"Q484170"}, "fr": qid, "de": qid, "lon": lon, "lat": lat, "country": country}
+    items = {"Q1": commune("Q1", 6.98, 49.24, "DE"), "Q2": commune("Q2", 6.93, 49.20, "FR")}
+    monkeypatch.setattr(t.wikidata, "region", lambda: items)
+    x, y = t._to_metric(6.9967, 49.2333)
+    centre = (x, y, 8000)
+    assert len(t.neutral_points([], set(), set(), [centre])) == 2                 # no country: both
+    assert len(t.neutral_points([], set(), set(), [(*centre, "DE")])) == 1        # Germany's only
+    assert len(t.neutral_points([], set(), set(), [(*centre, None)])) == 2

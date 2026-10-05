@@ -64,10 +64,11 @@ def excluded_from_areas(geocoding_rows: list[dict]) -> set[str]:
             or ("km from its district" in g["note"] and "near the index's" not in g["note"])}
 
 
-def foreign_zones() -> list[tuple[float, float, float]]:
+def foreign_zones() -> list[tuple[float, float, float, str | None]]:
     """manual/foreign_lands.csv: the foreign lands inside or along the duchy (the Three Bishoprics'
     cities and countrysides, the bishops' towns, Nassau-Saarbrücken), as (x, y, radius) in metres
-    around the commune each is named after."""
+    around the commune each is named after, and the country its communes must be in today, if any:
+    Nassau-Saarbrücken's circle stops at the border, Schœneck and Stiring were the county of Forbach's."""
     if not FOREIGN_LANDS.exists():
         return []
     by_name = {}
@@ -82,12 +83,12 @@ def foreign_zones() -> list[tuple[float, float, float]]:
         if it is None:
             raise ValueError(f"manual/foreign_lands.csv: no commune {r['centre']!r}")
         x, y = _to_metric(it["lon"], it["lat"])
-        out.append((x, y, float(r["radius_km"]) * 1000))
+        out.append((x, y, float(r["radius_km"]) * 1000, (r.get("country") or "").strip() or None))
     return out
 
 
 def neutral_points(listed: list[tuple[float, float]], qids: set[str], names: set[str],
-                   zones: list[tuple[float, float, float]] | None = None) -> list[tuple[float, float]]:
+                   zones: list[tuple] | None = None) -> list[tuple[float, float]]:
     """Communes the book doesn't list (metric coordinates) inside the foreign lands (`zones`):
     they keep their land out of the duchy's areas. Everywhere else, as in hist_map, only the
     book's places divide the land. A commune named like one of the book's places (unlocated ones
@@ -109,7 +110,8 @@ def neutral_points(listed: list[tuple[float, float]], qids: set[str], names: set
         if any(label_keys(it[lang]) & names for lang in ("fr", "de") if it[lang]):
             continue
         x, y = _to_metric(it["lon"], it["lat"])
-        if zones is not None and not any((x - a) ** 2 + (y - b) ** 2 <= r ** 2 for a, b, r in zones):
+        if zones is not None and not any((x - z[0]) ** 2 + (y - z[1]) ** 2 <= z[2] ** 2
+                                         and (len(z) < 4 or z[3] is None or z[3] == it["country"]) for z in zones):
             continue
         if not near_listed(x, y):
             out.append((round(x), round(y)))

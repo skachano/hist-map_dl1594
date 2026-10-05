@@ -1,9 +1,9 @@
-name,centre,radius_km,note
-Metz and the Pays messin,Metz,15,"the free city and its countryside, an enclave in the duchy (the Three Bishoprics, under French protection since 1552)"
-Toul and the Toulois,Toul,8,"the city of Toul and its countryside (the Three Bishoprics)"
-Verdun and the Verdunois,Verdun,12,"the city of Verdun and its countryside (the Three Bishoprics)"
-The bishop of Metz's lands around Vic,Vic-sur-Seille,7,"Vic, Moyenvic and their villages: the temporal of the bishops of Metz"
-Rambervillers,Rambervillers,5,"a town of the bishops of Metz"
-Baccarat,Baccarat,4,"a town of the bishops of Metz"
-Liverdun,Liverdun,4,"a town of the bishops of Toul"
-Nassau-Saarbrücken,Saarbrücken,8,"the county of Saarbrücken (Nassau-Saarbrücken)"
+name,centre,radius_km,note,country
+Metz and the Pays messin,Metz,15,"the free city and its countryside, an enclave in the duchy (the Three Bishoprics, under French protection since 1552)",
+Toul and the Toulois,Toul,8,"the city of Toul and its countryside (the Three Bishoprics)",
+Verdun and the Verdunois,Verdun,12,"the city of Verdun and its countryside (the Three Bishoprics)",
+The bishop of Metz's lands around Vic,Vic-sur-Seille,7,"Vic, Moyenvic and their villages: the temporal of the bishops of Metz",
+Rambervillers,Rambervillers,5,"a town of the bishops of Metz",
+Baccarat,Baccarat,4,"a town of the bishops of Metz",
+Liverdun,Liverdun,4,"a town of the bishops of Toul",
+Nassau-Saarbrücken,Saarbrücken,8,"the county of Saarbrücken (Nassau-Saarbrücken)",DE
