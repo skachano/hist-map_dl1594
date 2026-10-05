@@ -15,6 +15,7 @@ bains-les-bains,バン＝レ＝バン,wikidata
 baldringen,バルトリンゲン,wikidata
 belmont-sur-buttant,ベルモント・スール・ビュトン,wikidata
 biffontaine,ビフォンテーヌ,wikidata
+bitche,ビッシュ,wikidata
 blamont,ブラモン,wikidata
 bouxieres-aux-dames,ブジエール＝オー＝ダム,wikidata
 bruyeres,ブリュイエール,wikidata
@@ -31,8 +32,10 @@ croismare,クロワマール,wikidata
 custines,キュスティーヌ,wikidata
 darney,ダルネー,wikidata
 derbamont,デルバモン,wikidata
+district-bitche,ビッシュ管区,seat + type
 district-blamont,ブラモン管区,seat + type
 district-perl,ペルル (モーゼル)管区,seat + type
+district-phalsbourg,ファルスブール管区,seat + type
 docelles,ドセル,wikidata
 dombasle,ドンバール＝シュル＝ムルト,wikidata
 donsieders,ドンジーダス,wikidata
@@ -62,7 +65,10 @@ lerouville,レルヴィル,wikidata
 ligneville,リーニュヴィル,wikidata
 longchamp-epinal,ロンシャン,wikidata
 longchamp-sous-chatenois,ロンシャン＝スー＝シャトノワ,wikidata
+longchamps-sur-aire,ロンシャン＝シュル＝エール,wikidata
+lordship-bitche,ビッシュ領,seat + type
 lordship-commercy,コメルシー領,seat + type
+lordship-phalsbourg,ファルスブール領,seat + type
 luneville,リュネヴィル,wikidata
 malzeville,マルゼヴィル,wikidata
 manoncourt-en-vermois,マノンクール＝アン＝ヴェルモワ,wikidata
@@ -73,6 +79,7 @@ nancy,ナンシー,wikidata
 neuviller-sur-moselle,ヌヴィレ＝シュル＝モゼル,wikidata
 pagny-sur-moselle,パニー＝シュル＝モセル,wikidata
 perl,ペルル (モーゼル),wikidata
+phalsbourg,ファルスブール,wikidata
 pirmasens,ピルマゼンス,wikidata
 preny,プレニー,wikidata
 provostship-azerailles,アズレイユ代官区,seat + type

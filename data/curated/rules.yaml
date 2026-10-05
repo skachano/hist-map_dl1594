@@ -101,6 +101,9 @@ entry_index:
   2244: Guemviller      # "Gunweiller" (Guenviller), not Buweiler
   2259: Ponlpierre      # "Steinbiderstorff": Steinbiedersdorf, Pontpierre's German name (no line prints 2259)
   776: Rouveroye        # "Rouveroy" (ban de Ramonchamp): the grange of Rouveroye near Remiremont (Rouverois, Alix n° 699, in Marichal); not a grange of Celles
+  640: Aydoiles         # "Aidolles" (ban de Vaudicourt): Aydoilles, whose line prints 640 as "C40"
+  1335: Alz.ing         # "Ansclnigen" (Perl): Alzing, Anselnigen in 1594 (Bouteiller); its line prints "15551"
+  331: HaMeure          # "Hallieure" (Sainte-Marguerite): the line for 331 and 364, printed "551, 564" (Hellieule)
   1190: Dombrol-sur-Vair  # "Bouzey" (Châtenois), between Sommerécourt and Mandres-sur-Vair: Dombrot-sur-Vair, "ci-devant Bouzey" (Marichal); not the mill of Sanchey near Épinal
 
 # Index lines the scan misread or merged, as printed ("page|name as read": the printed line, or a
@@ -182,6 +185,121 @@ geocode:
   quessonviller: {"at": "Dommartin-lès-Remiremont", "name_fr": "Xonvillers", "note": "Xonvillers, a farm of Dommartin-lès-Remiremont: Quessonville, Alix n° 775 (Marichal, DicoTopo); not a grange of Celles"}
   celles: {"at": "Saint-Amé", "name_fr": "Celles", "note": "Celles, a hamlet and mairie of Saint-Amé (Selle, 1590; DicoTopo), in the ban de Ramonchamp by Remiremont; not Celles-sur-Plaine"}
   kolchen: {lat: 49.63419, lon: 6.44363, name_fr: "Köllig", name_de: "Köllig", name_en: "Köllig", country: DE, note: "Köllig (Kölchen; GeoNames 2886322, as in hist_map), a village of Nittel on the Moselle, by Nittel (entry 1411) in the office of Siersberg. The editors' note gives Colchen, a fief of the communauté of Guidesweiler (Güdesweiler), after Bugnon and Durival, probably wrongly"}
+  # unlocated places found in DicoTopo (make dicotopo, 2026-10-05): the entry cited by Marichal or Bouteiller, or the
+  # index's identification or commune confirmed; a hamlet at its commune, a commune at its item
+  abvefvenet-la-grande: {"at": "Ableuvenettes", "name_fr": "La Grande-Ableuvenette", "note": "La Grande-Ableuvenette, at Ableuvenettes: Abvefvenet la Grande, Alix n° 1045 (Marichal)"}
+  bappel: {wikidata: Q1413993, note: "Rapey: Rappel, Alix n° 888 (Marichal)"}
+  itue-devant-dompaire: {"at": "Dompaire", "name_fr": "La Rue-devant-Dompaire", "note": "La Rue-devant-Dompaire, at Dompaire: La Rue devant Dompaire, Alix n° 1049 (Marichal)"}
+  la-courlille: {"at": "Châtenois", "name_fr": "La Curtille", "note": "La Curtille, at Châtenois: La Courtille, Alix n° 1121 (Marichal)"}
+  la-foresterie-du-ban-de-vagncy: {"at": "Vagney", "name_fr": "La Foresterie du ban de Vagney", "note": "La Foresterie du ban de Vagney, at Vagney: La Forresterie, Alix n° 817 (Marichal)"}
+  la-ncuw-y-ille-ct-gremomenil: {wikidata: Q188893, note: "La Neuveville-devant-Lépanges: La Neufville, Alix n° 585 (Marichal)"}
+  le-val-devant-dompaire: {"at": "Dompaire", "name_fr": "Le Val-d'en-Bas", "note": "Le Val-d'en-Bas, at Dompaire: Le Vaul devant Dompaire, Alix n° 949 (Marichal)"}
+  les-monnclotz: {"at": "Tendon", "name_fr": "Les Nouvelots", "note": "Les Nouvelots, at Tendon: Les Monnelotz pour Nouvelotz, Alix n° 708 (Marichal)"}
+  menemel: {"at": "Fraize", "name_fr": "Demennemey", "note": "Demennemey, at Fraize: Menemel, Alix n° 447 (Marichal)"}
+  norbepaire: {"at": "Wisembach", "name_fr": "Norbépaire", "note": "Norbépaire, at Wisembach: Nonepaire, Alix n° 428 (Marichal)"}
+  pont-sur-hadon: {wikidata: Q1418213, note: "Pont-sur-Madon: Pont sur Mauldon, Alix n° 932 (Marichal)"}
+  raumont: {"at": "Ban-de-Laveline", "name_fr": "Raumont", "note": "Raumont, at Ban-de-Laveline: Ramont, Alix n° 420 (Marichal)"}
+  rualmont: {"at": "Ban-sur-Meurthe-Clefcy", "name_fr": "Rovémont", "note": "Rovémont, at Ban-sur-Meurthe-Clefcy: Rualmont, Alix n° 308 (Marichal)"}
+  sam-bey: {wikidata: Q928879, note: "Sanchey: Seuxey, Alix n° 976 (Marichal)"}
+  thisserandie: {"at": "Étival-Clairefontaine", "name_fr": "La Tisserandie", "note": "La Tisserandie, at Étival-Clairefontaine: La Thisserandie, Alix n° 337 (Marichal)"}
+  wiilervule: {"at": "Nompatelize", "name_fr": "Biarville", "note": "Biarville, at Nompatelize: Willerville, Alix n° 335 (Marichal)"}
+  la-caefiee-sue: {"at": "Saint-Dié-des-Vosges", "name_fr": "La Rue-Cachée", "note": "La Rue-Cachée, at Saint-Dié-des-Vosges: La Cachée Rue, Alix nos 330 et 363 (Marichal)"}
+  hameure: {"at": "Saint-Dié-des-Vosges", "name_fr": "Hellieule", "note": "Hellieule, at Saint-Dié-des-Vosges: Hallieure, Alix nos 331 et 364 (Marichal)"}
+  ahain: {wikidata: Q682655, note: "Allain: Allain-aux-Bœufs, canton de Colombey"}
+  andillicr: {wikidata: Q476999, note: "Andilly: Andillier (1602), DicoTopo"}
+  badinenil: {"at": "Baccarat", "name_fr": "Badménil", "note": "Badménil, at Baccarat: Ban de Mesnil (1594), canton de Baccarat"}
+  ban-de-la-riviere: {"at": "Ogéviller", "name_fr": "Ban-de-la-Rivière", "note": "Ban-de-la-Rivière, at Ogéviller: a ban between Baccarat and Blâmont (the index, DicoTopo)"}
+  bassaucourt: {"at": "Saint-Maurice-sous-les-Côtes", "name_fr": "Bassaucourt", "note": "Bassaucourt, at Saint-Maurice-sous-les-Côtes: canton de Vigneulles (the index, DicoTopo)"}
+  bisten-im-loch: {wikidata: Q21752, note: "Bisten-en-Lorraine: Bisten-im-Loch, canton de Boulay"}
+  bonipaire: {"at": "Bertrimoutier", "name_fr": "Bonipaire", "note": "Bonipaire, at Bertrimoutier: canton de Saint-Dié (the index, DicoTopo)"}
+  brouvelotte: {"at": "Brouville", "name_fr": "Brouvelotte", "note": "Brouvelotte, at Brouville: a lost village of Brouville (the index, DicoTopo)"}
+  chalgoulte: {"at": "Anould", "name_fr": "Chalgoutte", "note": "Chalgoutte, at Anould: Challegoutte (1566), a hamlet of Anould"}
+  dandirant: {"at": "Le Val-d'Ajol", "name_fr": "Dandirand", "note": "Dandirand, at Le Val-d'Ajol: Dandirant (1753), an outlying farm of Le Val-d'Ajol"}
+  dictersba-eh: {"at": "Bitche", "name_fr": "Dietersbach", "note": "Dietersbach, at Bitche: a former gagnage of Bitche (DicoTopo)"}
+  diding: {"at": "Freistroff", "name_fr": "Diding", "note": "Diding, at Freistroff: a hamlet of Freistroff, canton de Bouzonville"}
+  domevre: {"at": "Haraucourt", "name_fr": "Domêvre", "note": "Domêvre, at Haraucourt: Domêvre or Saint-Epvre, a lost village and church at Haraucourt (the index, DicoTopo)"}
+  edelnigen: {"at": "Anzeling", "name_fr": "Edling", "note": "Edling, at Anzeling: Edelnigen (1594), dén. Th. Alix (Bouteiller)"}
+  einarizhauscn: {"at": "Phalsbourg", "name_fr": "Einartzhausen", "note": "Einartzhausen, at Phalsbourg: the bourg and castle by Phalsbourg (the index, DicoTopo)"}
+  einchwiller: {"at": "Eincheville", "name_fr": "Einchwiller", "note": "Einchwiller, at Eincheville: canton de Grostenquin (the index, DicoTopo)"}
+  flaslroii: {wikidata: Q22229, note: "Flastroff: Flachstorff (1594), dén. Th. Alix (Bouteiller)"}
+  foresterie-la-du-ban-de-moulin: {"at": "Saint-Nabord", "name_fr": "La Foresterie du ban de Moulin", "note": "La Foresterie du ban de Moulin, at Saint-Nabord: a former community of Saint-Nabord (DicoTopo)"}
+  hadomey: {"at": "Reherrey", "name_fr": "Hadomey", "note": "Hadomey, at Reherrey: a hamlet of Reherrey (the index, DicoTopo)"}
+  hotiwiller: {wikidata: Q22911, note: "Hottviller: Hoddweiller (1594), dén. Th. Alix (Bouteiller)"}
+  hyrelbach: {"at": "Holving", "name_fr": "Hirbach", "note": "Hirbach, at Holving: Hyrelbach (1594), dén. Th. Alix (Bouteiller)"}
+  ihiitenhauscn: {wikidata: Q22080, note: "Hultehouse: Hiltenhausen, canton de Phalsbourg"}
+  jussampt: {wikidata: Q1637719, note: "Jussarupt: Jussaruz (1580), canton de Corcieux"}
+  kontz-llauic: {wikidata: Q21911, note: "Haute-Kontz: Ober Contz, canton de Cattenom"}
+  la-dcrmanville: {"at": "Rupt-sur-Moselle", "name_fr": "Dermanville", "note": "Dermanville, at Rupt-sur-Moselle: a hamlet of Rupt-sur-Moselle (DicoTopo)"}
+  la-franouze: {"at": "Clerjus", "name_fr": "La Franouse", "note": "La Franouse, at Clerjus: La Franouze (1518), at Clerjus (DicoTopo)"}
+  la-grande-mairie: {"at": "Vagney", "name_fr": "La Grande-Mairie", "note": "La Grande-Mairie, at Vagney: a former seigneurie of Vagney (DicoTopo)"}
+  la-poyrie: {"at": "Vagney", "name_fr": "La Poirie", "note": "La Poirie, at Vagney: an outlying farm of Vagney (DicoTopo)"}
+  lamarche-en-voevre: {"at": "Nonsard-Lamarche", "name_fr": "Lamarche-en-Woëvre", "note": "Lamarche-en-Woëvre, at Nonsard-Lamarche: canton de Vigneulles (the index, DicoTopo)"}
+  launoy-ou-lanoy: {"at": "Herbéviller", "name_fr": "Launoy", "note": "Launoy, at Herbéviller: the village and castle by Herbéviller (the index, DicoTopo)"}
+  le-saint-mont: {"at": "Saint-Amé", "name_fr": "Le Saint-Mont", "note": "Le Saint-Mont, at Saint-Amé: the old priory above Saint-Amé (the index, DicoTopo)"}
+  lixing-lcs-laning: {wikidata: Q22270, note: "Lixing-lès-Saint-Avold: Luxingen (1624), canton de Grostenquin"}
+  lorro: {"at": "Loromontzey", "name_fr": "Loro", "note": "Loro, at Loromontzey: Lorro (1532), Loromontzey (DicoTopo)"}
+  lotthringen: {"at": "Rimling", "name_fr": "Lothringen", "note": "Lothringen, at Rimling: the destroyed castle of Rimling (the index, DicoTopo)"}
+  momborn: {wikidata: Q22232, note: "Montbronn: Momborn (1594), dén. Th. Alix (Bouteiller)"}
+  moncel-ies-marcheville: {"at": "Marchéville-en-Woëvre", "name_fr": "Moncel", "note": "Moncel, at Marchéville-en-Woëvre: Moncel-lès-Marchéville, canton de Fresnes-en-Woëvre (the index)"}
+  onnerswiller: {wikidata: Q22321, note: "Ormersviller: Ormesweiller, canton de Volmunster"}
+  oulrclean: {"at": "Arches", "name_fr": "Outreleau", "note": "Outreleau, at Arches: the ban of Arches (the index, DicoTopo)"}
+  pelil-bcderchimj: {wikidata: Q22144, note: "Petit-Réderching: Riderchingen (1594), dén. Th. Alix (Bouteiller)"}
+  ruchlingen: {"at": "Spicheren", "name_fr": "Ruchlingen", "note": "Ruchlingen, at Spicheren: a lost village of Spicheren (the index, DicoTopo)"}
+  ruelle: {"at": "Saint-Léonard", "name_fr": "La Ruelle", "note": "La Ruelle, at Saint-Léonard: a farm of Saint-Léonard, the mairie of Meurthe (DicoTopo)"}
+  rupt-les-moivron: {"at": "Villers-lès-Moivrons", "name_fr": "Rupt-lès-Moivrons", "note": "Rupt-lès-Moivrons, at Villers-lès-Moivrons: Rupt-lez-Moivron, a hamlet and castle of Villers-lès-Moivrons (DicoTopo)"}
+  saini-maurice-sous-les-cotes: {wikidata: Q193984, note: "Saint-Maurice-sous-les-Côtes: canton de Vigneulles (the index)"}
+  saint-don: {"at": "Dombasle-sur-Meurthe", "name_fr": "Saint-Don", "note": "Saint-Don, at Dombasle-sur-Meurthe: the old priory at Dombasle (the index, DicoTopo)"}
+  sainte-marie: {"at": "Barbonville", "name_fr": "Sainte-Marie", "note": "Sainte-Marie, at Barbonville: a lost village at Barbonville (the index, DicoTopo)"}
+  sainte-marie-au-bois: {"at": "Vilcey-sur-Trey", "name_fr": "Sainte-Marie-au-Bois", "note": "Sainte-Marie-au-Bois, at Vilcey-sur-Trey: the abbey, now a farm of Vilcey-sur-Trey (the index, DicoTopo)"}
+  savonnieres-en-voevre: {"at": "Valbois", "name_fr": "Savonnières-en-Woëvre", "note": "Savonnières-en-Woëvre, at Valbois: canton de Vigneulles (the index), now in Valbois"}
+  sinzey: {"at": "Repaix", "name_fr": "Sinzey", "note": "Sinzey, at Repaix: Arenzey (1594), a lost village at Repaix (DicoTopo)"}
+  sntrilte: {"at": "Woël", "name_fr": "Brauville", "note": "Brauville, at Woël: Broville (1261), a hamlet of Woël (DicoTopo)"}
+  spadangea: {"at": "Anould", "name_fr": "Spadanges", "note": "Spadanges, at Anould: a lost place of Anould (DicoTopo)"}
+  tensch: {"at": "Grostenquin", "name_fr": "Tensch", "note": "Tensch, at Grostenquin: a farm and mill of Grostenquin (the index, DicoTopo)"}
+  tigeville: {"at": "Apremont-la-Forêt", "name_fr": "Thigéville", "note": "Thigéville, at Apremont-la-Forêt: a former village of Apremont-la-Forêt (DicoTopo)"}
+  valdweistroff: {wikidata: Q22217, note: "Waldweistroff: Wistorff (1594), dén. Th. Alix (Bouteiller)"}
+  vandeleville: {wikidata: Q1096665, note: "Vandeléville: canton de Colombey (the index)"}
+  vaucheres: {"at": "Anould", "name_fr": "Venchère", "note": "Venchère, at Anould: Vanchère, a hamlet of Anould (the index, DicoTopo)"}
+  vezeval: {"at": "Raon-l'Étape", "name_fr": "Vézeval", "note": "Vézeval, at Raon-l'Étape: a former hamlet of Raon-l'Étape (the index, DicoTopo)"}
+  vichibure: {"at": "Corcieux", "name_fr": "Vichibure", "note": "Vichibure, at Corcieux: a hamlet of Corcieux (the index, DicoTopo)"}
+  vigneulles-haute: {wikidata: Q21616, note: "Haute-Vigneulles: Vigneulles-Haute, canton de Faulquemont (the index)"}
+  viller-asscnoncourt: {"at": "Assenoncourt", "name_fr": "Viller", "note": "Viller, at Assenoncourt: a farm of Assenoncourt (the index, DicoTopo)"}
+  xouaruz: {"at": "Ferdrupt", "name_fr": "Xoarupt", "note": "Xoarupt, at Ferdrupt: Xouaruz, a hamlet of Ferdrupt (DicoTopo)"}
+  aourys-vil: {"at": "Villers-Stoncourt", "name_fr": "Aoury", "note": "Aoury, at Villers-Stoncourt: Albritch (1594), dén. Th. Alix (Bouteiller)"}
+  brehaviller: {"at": "Le Syndicat", "name_fr": "Bréhavillers", "note": "Bréhavillers, at Le Syndicat: a hamlet of Le Syndicat (the index, DicoTopo)"}
+  brieulles-sur-meusc: {lat: 49.32632, lon: 5.16125, name_fr: "Brieulles-sur-Meuse", country: FR, note: "Brieulles-sur-Meuse: canton de Dun (the index); DicoTopo's point"}
+  clingouite: {"at": "Saulcy-sur-Meurthe", "name_fr": "Claingoutte", "note": "Claingoutte, at Saulcy-sur-Meurthe: Clingoutte (1555), a hamlet of Saulcy (the index, DicoTopo)"}
+  ecrouves-et-grand-menil: {wikidata: Q192947, note: "Écrouves: canton de Toul-Nord (the index)"}
+  essey-la-cotc-anton-de-gerbeviller: {wikidata: Q988282, note: "Essey-la-Côte: canton de Gerbéviller (the index)"}
+  forbeauvoisin: {"at": "Boncourt-sur-Meuse", "name_fr": "Forbeauvoisin", "note": "Forbeauvoisin, at Boncourt-sur-Meuse: a lost hamlet of Boncourt-sur-Meuse (the index, DicoTopo)"}
+  grosrouvre: {wikidata: Q213256, note: "Grosrouvres: canton de Domèvre (the index)"}
+  guenestrolt: {wikidata: Q114064807, note: "Guénestroff: Gunderstorff (1476), canton de Dieuze"}
+  hobc-wcyersberg: {"at": "Éguelshardt", "name_fr": "Hohe-Weyersberg", "note": "Hohe-Weyersberg, at Éguelshardt: Hoch-Weygersburg (1594), dén. Th. Alix (Bouteiller)"}
+  houdricbalel: {"at": "Hennezel", "name_fr": "Houdrichapelle", "note": "Houdrichapelle, at Hennezel: the old glassworks, Haudrichapelle (1779), La Houdrie at Hennezel (DicoTopo)"}
+  la-banvoye: {"at": "Le Val-d'Ajol", "name_fr": "La Banvoie", "note": "La Banvoie, at Le Val-d'Ajol: a hamlet of Le Val-d'Ajol (the index, DicoTopo)"}
+  la-terre-faulquei: {"at": "Sainte-Marguerite", "name_fr": "La Terre-Faulquet", "note": "La Terre-Faulquet, at Sainte-Marguerite: a former part of Sainte-Marguerite (DicoTopo)"}
+  le-hario: {"at": "Le Val-d'Ajol", "name_fr": "Le Hariot", "note": "Le Hariot, at Le Val-d'Ajol: Le Hario (1753), a hamlet of Le Val-d'Ajol (DicoTopo)"}
+  laneiivelotie: {wikidata: Q1101307, note: "Laneuvelotte: canton de Nancy-Est (the index)"}
+  kaltenliausen: {"at": "Bitche", "name_fr": "Kaltenhausen", "note": "Kaltenhausen, at Bitche: a village absorbed by Bitche (the index, DicoTopo)"}
+  bonfays-legeville-et-bonfays: {"at": "Légéville-et-Bonfays", "name_fr": "Bonfays", "note": "Bonfays, at Légéville-et-Bonfays: the abbey and hamlet of Légéville-et-Bonfays (the index, DicoTopo)"}
+  la-haulte-rue-de-destort: {"at": "Destord", "name_fr": "La Haute-Rue de Destord", "note": "La Haute-Rue de Destord, at Destord: La Haulte Rue de Destorb (1468), Destord (DicoTopo)"}
+  lion-devani-dun: {lat: 49.42393, lon: 5.2669, name_fr: "Lion-devant-Dun", country: FR, note: "Lion-devant-Dun: canton de Dun (the index); DicoTopo's point"}
+  milly: {lat: 49.39865, lon: 5.21231, name_fr: "Milly-sur-Bradon", country: FR, note: "Milly-sur-Bradon: Milly(-devant-Dun), canton de Dun (the index); DicoTopo's point"}
+  murvaux: {lat: 49.40178, lon: 5.27998, name_fr: "Murvaux", country: FR, note: "Murvaux: canton de Dun (the index); DicoTopo's point"}
+  mouterhatisen: {wikidata: Q21942, note: "Mouterhouse: canton de Bitche (the index)"}
+  oberstensel: {wikidata: Q22305, note: "Oberstinzel: Obersteinsel (1779), by Sarreck (DicoTopo)"}
+  rainbucouri: {wikidata: Q223716, note: "Rambucourt: canton de Saint-Mihiel (the index)"}
+  relhei: {wikidata: Q22245, note: "Rettel: Rettel-lez-Sierck, canton de Sierck (the index)"}
+  remenauville: {"at": "Limey-Remenauville", "name_fr": "Réménauville", "note": "Réménauville, at Limey-Remenauville: canton de Thiaucourt (the index), now in Limey-Remenauville"}
+  val-sainle-marie: {"at": "Ville-au-Val", "name_fr": "Val-Sainte-Marie", "note": "Val-Sainte-Marie, at Ville-au-Val: a seigneurie at Ville-au-Val (the index, DicoTopo)"}
+  villeeel-sur-trin: {wikidata: Q1339319, note: "Vilcey-sur-Trey: Vilcey-sur-Trey (DicoTopo), by Sainte-Marie-au-Bois (532)"}
+  srcul-le-y-prevote-de-chutcnois: {"at": "Châtenois", "name_fr": "Le Breuil", "note": "Le Breuil, at Châtenois: Le Breul (1594), Alix (Marichal), at Châtenois"}
+  tannoy: {lat: 48.71862, lon: 5.21946, name_fr: "Tannois", country: FR, note: "Tannois: canton de Ligny (the index); DicoTopo's point"}
+  loucbamp: {wikidata: Q196623, note: "Longchamps-sur-Aire: Longchamp, canton de Pierrefitte (the index)"}
+  mont-devant-sassey: {lat: 49.41257, lon: 5.16319, name_fr: "Mont-devant-Sassey", country: FR, note: "Mont-devant-Sassey: canton de Dun (the index); DicoTopo's point"}
+  biuhe: {wikidata: Q22754, note: "Bitche: Biche, chasteau (the index; canton de Bitche)"}
+  phalstourg-eh-l-de-canton: {wikidata: Q22160, note: "Phalsbourg: Pfaltzbourg, chef-lieu de canton (the index)"}
+  sarrallk: {wikidata: Q21979, note: "Sarralbe: Aulbe, chasteau et ville (1594), dén. Th. Alix (Bouteiller)"}
   # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
   # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
   liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}
@@ -253,7 +371,6 @@ geocode:
   neuvcville: {"at": "Valleroy", "note": "a hamlet of Valleroy (the index)"}
   portieux: {"at": "Rosières-aux-Salines", "note": "the stud farm (jumenterie) of Portieux at Rosières-aux-Salines (the index); not the village of Portieux"}
   rembaville: {"at": "Corcieux", "name_fr": "Rambaville", "note": "a village of Corcieux (the index); Rambaville (DicoTopo: Rambaville)"}
-  ruelle: {"unlocated": true, "note": "la Ruelle, of the mairie of Meurthe, prévôté of Saint-Dié (the index gives no commune)"}
   saint-epvre: {"at": "Toul", "note": "Saint-Epvre, a suburb of Toul with its abbey (the index)"}
   viller: {"at": "Lunéville", "note": "Viller, a suburb of Lunéville (the index)"}
   menil: {"at": "Lunéville", "note": "Ménil, a suburb of Lunéville (the index); not Ménil-sur-Belvitte"}
@@ -304,6 +421,19 @@ dicotopo_reviewed:
   la-seie-brabant: "La Scie-Brabant, as the index; DicoTopo's headword Brahaut doubtful"
   la-rue-sous-llarol: "La Rue-sous-Harol, the index's name read right (La Rue sous Hairol, 1601); not the Rue of Dompaire"
   saarec-e: "Sarreck (1525), not DicoTopo's descriptive headword Saarecke (angle ou corne de la Sarre)"
+  # unlocated places located from DicoTopo, where its headword or nearest match is not the one taken
+  ruchlingen: "Ruchlingen, the lost village of Spicheren, as the index spells it; DicoTopo's headword Ruchelingen"
+  lorro: "Loro, the old village in Loromontzey; not the commune Loro-Montzey"
+  edelnigen: "Edling of Anzeling, Edelnigen (1594) from Alix (Bouteiller); not Aidling"
+  moncel-ies-marcheville: "Moncel of Marchéville (the index); DicoTopo's mill there, Moncelle"
+  tigeville: "Thigéville at Apremont-la-Forêt, as the book spells it"
+  rupt-les-moivron: "Rupt-lès-Moivrons, the index's name, more telling than DicoTopo's Rupt"
+  itue-devant-dompaire: "La Rue-devant-Dompaire, Alix n° 1049 (Marichal), more telling than La Rue"
+  la-haulte-rue-de-destort: "La Haute-Rue de Destord, a street of Destord, not the commune"
+  houdricbalel: "Houdrichapelle, the glassworks the index names; DicoTopo's farm there, La Houdrie"
+  milly-sur-bradon: "Milly-sur-Bradon, the commune of Milly(-devant-Dun), canton de Dun (the index)"
+  murvaux: "Murvaux, canton de Dun (the index); not the mill of Morvaux"
+  mont-devant-sassey: "Mont-devant-Sassey, canton de Dun (the index); not Mont-sous-les-Côtes"
   # placements (section 2)
   kollig: "Köllig by Nittel, the book's Kolchen (rules.yaml geocode); not Kirschnaumen"
   bure: "Bure, canton de Montiers-sur-Saulx (the index); not the écart of Muzeray"
