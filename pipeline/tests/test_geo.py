@@ -59,3 +59,18 @@ def test_a_rule_places_a_hamlet_at_its_commune():
     r = res["hutte"]
     assert (r.lat, r.lon, r.method, r.confidence, r.wikidata_id) == (48.1, 6.6, "approximate", "low", None)
     assert r.fixed and r.note == "a hamlet of Xamontarupt (the index)"
+
+
+def test_a_rule_that_only_names_a_place_leaves_it_to_the_passes():
+    """rules.yaml geocode {name_fr, note}: the name and the note, applied twice without repeating it;
+    the place is not fixed, so the district and index passes can still move it."""
+    from denombrement.geo import geocode
+    res = {"mortagnc": geocode.Result("mortagnc", lat=48.5, lon=6.4, method="approximate", confidence="low",
+                                      note="placed at its commune Mont")}
+    rules = {"mortagnc": {"name_fr": "Mortagne", "note": "Mortagne, a hamlet of Mont-sur-Meurthe (DicoTopo)"}}
+    geocode._apply_rules(res, rules, {})
+    geocode._apply_rules(res, rules, {})
+    r = res["mortagnc"]
+    assert (r.name_fr, r.lat, r.lon, r.fixed) == ("Mortagne", 48.5, 6.4, False)
+    assert r.note == "placed at its commune Mont; Mortagne, a hamlet of Mont-sur-Meurthe (DicoTopo)"
+    assert not geocode.places_it(rules["mortagnc"]) and geocode.places_it({"at": "Mont"})

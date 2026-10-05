@@ -502,7 +502,7 @@ def _check_index(results: dict[str, Result], places: dict, gaz: Gazetteer, seats
     moved = flagged = missing = 0
     for pid, res in results.items():
         p = places[pid]
-        if pid in rules or not (p.get("index_commune") or p.get("index_canton")):
+        if places_it(rules.get(pid)) or not (p.get("index_commune") or p.get("index_canton")):
             continue
         kind = "commune" if p.get("index_commune") else "canton"
         where = p.get("index_commune") or p.get("index_canton")
@@ -578,6 +578,11 @@ def _one_place_per_item(results: dict[str, Result], places: dict, gaz: Gazetteer
     print(f"one place per item: {moved} place(s) moved off a shared Wikidata item")
 
 
+def places_it(rule: dict | None) -> bool:
+    """Whether a rules.yaml `geocode` rule says where the place is, not only what it is called."""
+    return bool(rule) and any(k in rule for k in ("wikidata", "lat", "approximate", "at", "unlocated"))
+
+
 def _apply_rules(results: dict[str, Result], rules: dict, items: dict, commune_at=None) -> None:
     """rules.yaml `geocode`: {place: {wikidata: Q…}|{lat, lon}|{approximate: other-place}|{at: commune}|
     {unlocated: true}, note}. `at` places a hamlet or farm at its commune, the one of that name nearest
@@ -587,7 +592,7 @@ def _apply_rules(results: dict[str, Result], rules: dict, items: dict, commune_a
         if res is None:
             continue
         note = rule.get("note", "set in rules.yaml")
-        res.fixed = True
+        res.fixed = places_it(rule)   # a rule that only names the place leaves it to the passes
         if "wikidata" in rule and rule["wikidata"] in items:
             it = items[rule["wikidata"]]
             res.lat, res.lon, res.wikidata_id = round(it["lat"], 5), round(it["lon"], 5), it["qid"]
@@ -608,6 +613,9 @@ def _apply_rules(results: dict[str, Result], rules: dict, items: dict, commune_a
         elif rule.get("unlocated"):
             res.lat = res.lon = None
             res.method, res.confidence, res.note = "unlocated", "low", note
+        elif "note" in rule and note not in (res.note or ""):
+            # a name only: the place stays where the passes put it
+            res.note = "; ".join(x for x in (res.note, note) if x)
         for lang in ("fr", "de", "en"):
             if rule.get(f"name_{lang}"):
                 setattr(res, f"name_{lang}", rule[f"name_{lang}"])
