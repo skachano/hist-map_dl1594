@@ -6,7 +6,7 @@ bailiwick-epinal,territory,Bailliage d'Épinal,Bellistum Épinal,Bailiwick of É
 bailiwick-hattonchatel,territory,Bailliage d'Hattonchâtel,Bellistum Hattonchâtel,Bailiwick of Hattonchâtel,Hatonchastel,,bailiwick,48.9918,5.70113,,,,,,,,,territory,medium,admin,,,,100,high,
 bailiwick-nancy,territory,Bailliage de Nancy,Bellistum Nancy,Bailiwick of Nancy,,,bailiwick,48.69278,6.18361,,,,,,,,,territory,medium,admin,,,,34,high,
 bailiwick-vaudemont,territory,Bailliage de Vaudémont,Bellistum Vaudémont,Bailiwick of Vaudémont,,,bailiwick,48.41694,6.05611,,,,,,,,,territory,medium,admin,,county-vaudemont,heading,95,high,
-bailiwick-vosges,territory,Bailliage de Vosges,Bellistum Vosges,Bailiwick of Vosges,,,bailiwick,48.14823,6.36171,,,,,,,,,territory,medium,admin,,,,56,high,
+bailiwick-vosges,territory,Bailliage de Vosges,Bellistum Vosges,Bailiwick of Vosges,,,bailiwick,48.14746,6.36254,,,,,,,,,territory,medium,admin,,,,56,high,
 ban-anould,territory,Ban d'Anould,Bann Anould,Ban of Anould,Anoul,,ban,48.18556,6.94556,,,,,,,,,territory,medium,admin,,,,45,high,
 ban-arches,territory,Ban d'Arches,Bann Arches,Ban of Arches,,,ban,48.11833,6.5275,,,,,,,,,territory,medium,admin,,,,59,high,
 ban-ban-le-duc,territory,Ban de Ban-le-Duc,Bann Ban-le-Duc,Ban of Ban-le-Duc,duc de Clcuvccy,,ban,48.16512,6.97744,,,,,,,,,territory,medium,admin,,,,46,high,
@@ -28,7 +28,7 @@ ban-molin,territory,Ban de Molin,Bann Molin,Ban of Molin,,,ban,48.02843,6.61978,
 ban-ramonchamp,territory,Ban de Ramonchamp,Bann Ramonchamp,Ban of Ramonchamp,tic Ramonch;tmp=,,ban,47.89167,6.73972,,,,,,,,,territory,medium,admin,,,,62,high,
 ban-sainct-pierre,territory,Ban de Sainct-Pierre,Bann Sainct-Pierre,Ban of Sainct-Pierre,,,ban,48.94613,6.4358,,,,,,,,,territory,medium,admin,,,,53,high,
 ban-saint-die,territory,Ban de Saint-Dié,Bann Saint-Dié,Ban of Saint-Dié,Sainct-Diey,,ban,48.30359,6.94063,,,,,,,,,territory,medium,admin,,,,46,high,
-ban-sardey,territory,Ban de Sardey,Bann Sardey,Ban of Sardey,Sardcy,,ban,48.27776,7.048,,,,,,,,,territory,medium,admin,,,,49,high,
+ban-sardey,territory,Ban de Sardey,Bann Sardey,Ban of Sardey,Sardcy,,ban,48.27538,7.04682,,,,,,,,,territory,medium,admin,,,,49,high,
 ban-sept,territory,Ban de Sept,Bann Sept,Ban of Sept,,,ban,48.31791,7.00711,,,,,,,,,territory,medium,admin,,,,49,high,
 ban-taintrux,territory,Ban de Taintrux,Bann Taintrux,Ban of Taintrux,Tcintruz,,ban,48.24972,6.90222,,,,,,,,,territory,medium,admin,,,,49,high,
 ban-tendon,territory,Ban de Tendon,Bann Tendon,Ban of Tendon,,,ban,48.12167,6.67889,,,,,,,,,territory,medium,admin,,,,60,high,
@@ -60,7 +60,7 @@ district-sarralbe,territory,Circonscription de Sarralbe,Bezirk Sarralbe,District
 district-sarreck,territory,Circonscription de Sarreck,Bezirk Sarreck,District of Sarreck,Sarech,,district,48.79417,7.03417,,,,,,,,,territory,medium,admin,,lordship-sarreck,slot,108,high,
 district-soultzbach,territory,Circonscription de Soultzbach,Bezirk Soultzbach,District of Soultzbach,,,district,48.05521,7.22067,,,,,,,,,territory,medium,admin,,,,108,high,
 district-spitzemberg,territory,Circonscription de Spitzemberg,Bezirk Spitzemberg,District of Spitzemberg,,,district,48.30756,7.04417,,,,,,,,,territory,medium,admin,,lordship-spitzemberg,slot,109,high,
-duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69146,6.52561,,,,,,,,,territory,medium,admin,,,,34,high,
+duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69108,6.52599,,,,,,,,,territory,medium,admin,,,,34,high,
 fief-keltern-ostern,territory,Fief de Keltern-Ostern,Lehen Keltern-Ostern,Fief of Keltern-Ostern,,,fief,49.53406,7.11651,,,,,,,,,territory,medium,feudal,house-eberstein|house-oberstein,provostship-keltern-ostern,heading,89,high,
 lordship-beaurains,territory,Seigneurie de Beaurains,Herrschaft Beaurains,Lordship of Beaurains,Bcaurains,,lordship,49.27765,6.60659,,,,,,,,,territory,medium,feudal,,district-beaurains,slot,93,high,
 lordship-bitche,territory,Seigneurie de Bitche,Herrschaft Bitche,Lordship of Bitche,Biche,,lordship,49.05167,7.42528,,,,,,,,,territory,medium,feudal,duchy-lorraine,district-bitche,slot,109,high,
@@ -90,7 +90,7 @@ mayoralty-bertrimoutier,territory,Mairie de Bertrimoutier,Meierei Bertrimoutier,
 mayoralty-berungen,territory,Mairie de Berùngen,Meierei Berùngen,Mayoralty of Berùngen,,,mayoralty,49.03423,7.26796,,,,,,,,,territory,medium,admin,,,,111,high,
 mayoralty-bousseviller,territory,Mairie de Bousseviller,Meierei Bousseviller,Mayoralty of Bousseviller,Bussweiller,,mayoralty,49.12111,7.46417,,,,,,,,,territory,medium,admin,,,,110,high,
 mayoralty-hilsperg,territory,Mairie d'Hilsperg,Meierei Hilsperg,Mayoralty of Hilsperg,,,mayoralty,49.12896,7.36152,,,,,,,,,territory,medium,admin,,,,112,high,
-mayoralty-longchamp,territory,Mairie de Longchamp,Meierei Longchamp,Mayoralty of Longchamp,,,mayoralty,47.93373,6.69238,,,,,,,,,territory,medium,admin,,,,64,high,
+mayoralty-longchamp,territory,Mairie de Longchamp,Meierei Longchamp,Mayoralty of Longchamp,,,mayoralty,47.92427,6.68399,,,,,,,,,territory,medium,admin,,,,64,high,
 mayoralty-mandray,territory,Mairie de Mandray,Meierei Mandray,Mayoralty of Mandray,,,mayoralty,48.21833,6.99583,,,,,,,,,territory,medium,admin,,,,48,high,
 mayoralty-meurthe,territory,Mairie de Meurthe,Meierei Meurthe,Mayoralty of Meurthe,Meurthc,,mayoralty,48.21564,6.9492,,,,,,,,,territory,medium,admin,,,,48,high,
 mayoralty-rolbing,territory,Mairie de Rolbing,Meierei Rolbing,Mayoralty of Rolbing,Roïlingen,,mayoralty,49.17167,7.43972,,,,,,,,,territory,medium,admin,,,,111,high,
@@ -131,7 +131,7 @@ sub-provostship-sierck,territory,Sous-prévôté de Sierck,Unterschultheißerei 
 temporality-abbey-saint-avold,territory,Temporel de l'abbaye de Saint-Avold,Kirchengut der Abtei Saint-Avold,Lands of the abbey of Saint-Avold,,,temporality,49.11433,6.59487,,,,,,,,,territory,medium,feudal,abbey-saint-avold,,,115,high,
 town-district-marsal,territory,Ville de Marsal,Stadt mit Bann Marsal,Town and its district of Marsal,,,town_district,48.78917,6.60917,,,,,,,,,territory,medium,admin,,,,115,high,
 town-district-sarrebourg,territory,Ville de Sarrebourg,Stadt mit Bann Sarrebourg,Town and its district of Sarrebourg,,,town_district,48.73472,7.05389,,,,,,,,,territory,medium,admin,,,,107,high,
-val-ajol,territory,Val d'Ajol,Tal Ajol,Valley district of Ajol,Val-d'Ajol,,val,47.98025,6.4887,,,,,,,,,territory,medium,admin,,,,63,high,
+val-ajol,territory,Val d'Ajol,Tal Ajol,Valley district of Ajol,Val-d'Ajol,,val,47.98108,6.49092,,,,,,,,,territory,medium,admin,,,,63,high,
 val-harol,territory,Val d'Harol,Tal Harol,Valley district of Harol,Val d'Arol,,val,48.30407,6.08546,,,,,,,,,territory,medium,admin,,,,68,high,
 val-liepvre,territory,Val de Liepvre,Tal Liepvre,Valley district of Liepvre,,,val,48.27222,7.2825,,,,,,,,,territory,medium,admin,,,,108,high,
 abaucourt,settlement,Abaucourt,Abaucourt,Abaucourt,Aboneourt|Abaticourt,,village,48.89694,6.25806,Q269866,,FR,Mi,,Nomeny,Meurthe,,rule,high,,,,,53,medium,"Abaucourt, canton de Nomeny (the scan reads Abaticourt); not Aboncourt-sur-Seille"
@@ -238,7 +238,6 @@ barbey-seroux,settlement,Barbey-Seroux,Barbey-Seroux,Barbey-Seroux,Serou|Barbay-
 barbonvillc,settlement,Barbonville,Barbonville,Barbonville,Barbonvilie|Barbonvillc,,village,48.55417,6.34417,Q1018300,,FR,,,Rayon,,,wikidata,low,,,,,41,high,"exact name, no anchor; 55 km from the index's canton Rayon"
 barville,settlement,Barville,Barville,Barville,Barvillc,,village,48.38389,5.78722,Q216397,,FR,,,Nenfchâieau,,,wikidata,medium,,,,,76,high,"exact name, no anchor; the index's canton Nenfchâieau is not found"
 bary,settlement,Bary,,,Bury,,village,,,,,FR,prévôté de Sicrek3,,,,true,unlocated,low,,,,,81,medium,"Bury, a lost village of the prévôté of Sierck (the index gives no commune); not the Bure matched by name"
-basigny,settlement,Basigny,,,,,village,,,,,,,,,,,unlocated,low,,,,,72,low,not found in the index
 bassaucourt,settlement,Bassaucourt,,,Barsaucourt,Barsaucourt,village,49.01564,5.67803,,,FR,,,Vigneulles,,,approximate,low,,,,,101,high,"Bassaucourt, at Saint-Maurice-sous-les-Côtes: canton de Vigneulles (the index, DicoTopo)"
 bassing,settlement,Bassing,Bessingen,Bassing,Bessingen,Bessingen,village,48.86889,6.80167,Q21630,,FR,,,Dieuze,,,hist_map,high,,,,,90,high,1.00 near the index's canton (9 km)
 bathelemont-les-bauzemont,settlement,Bathelémont-lès-Bauzemont,,,Bathelémont,,village,48.69166,6.52558,,3034613,FR,,,Vie,Meurthe,,geonames,high,,,,,43,high,1.00 near the index's canton (10 km)
@@ -250,7 +249,7 @@ bauzemont,settlement,Bauzemont,Bauzemont,Bauzemont,Bauzemont|Bauzcmont,,village,
 bayecourt,settlement,Bayecourt,Bayecourt,Bayecourt,Bayecourl,,village,48.26639,6.48833,Q1157898,,FR,,,Châtel,,,wikidata,high,,,,,57,high,1.00 near the index's canton (9 km)
 bayon,settlement,Bayon,Bayon,Bayon,Baon,,small_town,48.47472,6.31528,Q1062073,,FR,,,Bayon,,,wikidata,high,,,,,41,medium,1.00 near the index's canton (0 km)
 bayonville-sur-mad,settlement,Bayonville-sur-Mad,Bayonville-sur-Mad,Bayonville-sur-Mad,Bayonville,,village,49.01472,5.99,Q766641,,FR,,,Thiaucourt,Meurthe,,wikidata,medium,,,,,54,high,1.00 near its district's other members (2 km)
-bazegney,settlement,Bazegney,Bazegney,Bazegney,Bazigny|Ba/.egncy,,village,48.26639,6.22639,Q753343,,FR,,,Dompairc,,,wikidata,medium,,,,,68,high,0.93 near the index's canton (5 km)
+bazegney,settlement,Bazegney,Bazegney,Bazegney,Basigny|Bazigny|Ba/.egncy,,village,48.26639,6.22639,Q753343,,FR,,,Dompairc,,,wikidata,medium,,,,,68,high,0.93 near the index's canton (5 km)
 bazoilles-et-menil,settlement,Bazoilles-et-Ménil,Bazoilles-et-Ménil,Bazoilles-et-Ménil,Bazaille|Bazailles|Bazoilles|Bazoî!les-et-Ménil,,village,48.25806,6.10556,Q223686,,FR,,,Ville,Bas-Rhin,,wikidata,medium,,,,,66,high,0.97 near its district's other members (5 km)
 bcaurains,settlement,Bcaurains,,,,,village,,,,,,,,,,,unlocated,low,,,,,129,low,not found in the index
 bcliling,settlement,Bcliling,,,Putlingcn,,deserted_village,48.72444,7.08444,,,FR,écart (vil. détr.),Bùhl,,,,approximate,low,,,,,108,high,not in Wikidata/GeoNames; placed at its commune Bùhl
@@ -414,10 +413,10 @@ charmais,settlement,Charmais,,,Charmois.Soub Dompaire,,glassworks,48.1048,6.2682
 charmes,settlement,Charmes,Charmes,Charmes,Carmes|Charmes|Charmes-sur-Moselle,,town,48.37167,6.2925,Q206523,,FR,,,Charmes-sur-Moselle,,,rule,high,,,,,65,medium,"Charmes, ville et chasteau (entry 869), canton de Charmes-sur-Moselle; not Champey-sur-Moselle"
 charmois,settlement,Charmois,Charmois,Charmois,,,village,48.53972,6.38333,Q209874,,FR,,,Bayon,,,wikidata,high,,,,,41,high,1.00 near the index's canton (9 km)
 charmois-devant-bruyeres,settlement,Charmois-devant-Bruyères,Charmois-devant-Bruyères,Charmois-devant-Bruyères,Charmois|Charmois-dcvant-Bruyéres,,village,48.16833,6.59306,Q188786,,FR,,,Bruyères,,,wikidata,high,,,,,57,high,1.00 near the index's canton (10 km)
-charniois-rorgueilicux,settlement,Charniois-rOrgueilIcux,,,Charmois|Le Charmois-dcvant-Bains,,village,48.1048,6.26828,,3026559,FR,,,Xertigny,,,geonames,high,,,,,65,medium,0.95 near the index's canton (12 km)
+charniois-rorgueilicux,settlement,Charniois-rOrgueilIcux,,,Charmois,,village,48.1048,6.26828,,3026559,FR,,,Xertigny,,,geonames,high,,,,,70,medium,0.95 near the index's canton (12 km)
 chatas,settlement,Châtas,Châtas,Châtas,Cbattay|Chatas,,village,48.36194,7.035,Q1095746,,FR,,,Senones,,,wikidata,high,,,,,49,high,1.00 near the index's canton (5 km)
+chatcau-sur-pcrlc,settlement,Château-sur-Perle,,,Chasteau-sur-Pcrlc|Châtcau-sur-Pcrlc,,village,48.13833,6.60417,,,FR,écart (chat.),Docclles,,,,approximate,low,,,,,59,high,"Château-sur-Perle, ruins at Cheniménil: Chasteau sur Perle, Alix n° 671 (Marichal); the index gives Docelles"
 chateau-de-bourg-esch,settlement,château de Bourg-Esch,Burg Esch,Château de Bourg-Esch,Burg-Esch|Bourgesch,,farmstead,49.38388,6.56334,Q26257847,,FR,"chat, et ferme",Schwerdorff,,,,wikidata,high,,,,,81,medium,0.95 near the index's commune (2 km)
-chateau-de-saint-jean-du-marche,settlement,château de Saint-Jean-du-Marché,,,Chasteau-sur-Pcrlc|Châtcau-sur-Pcrlc,,village,48.1406,6.6814,Q2970530,,FR,écart (chat.),Docclles,,,,wikidata,medium,,,,,59,high,0.90 near the index's commune (5 km)
 chateau-du-spitzemberg,settlement,château du Spitzemberg,Spitzenberg,Spitzenberg,Spitzemberg|Spilzemberg,,deserted_village,48.30756,7.04417,Q2971828,,FR,"chat, détruit, près de",,la Petiie-Fosse,,,wikidata,medium,,,,,109,medium,0.91 near the index's canton (2 km)
 chateau-rouge,settlement,Château-Rouge,Rodendorf,Château-Rouge,Rodendorff,,village,49.28,6.59694,Q21828,,FR,,,Bouzonville,Moselle,,hist_map,high,,,,,93,medium,1.00 near the index's canton (5 km)
 chateau-salins,settlement,Château-Salins,Salzburgen,Château-Salins,Chasteau-Sallin|Chasteau-Sallîn,,small_town,48.82167,6.50833,Q123186767,,FR,,,Château-Salins,Meurthe,,hist_map,high,,,,,51,high,1.00 near the index's canton (0 km)
@@ -453,7 +452,7 @@ clezentaine,settlement,Clézentaine,Clézentaine,Clézentaine,Clezcntaines,,smal
 clingouite,settlement,Claingoutte,,,Clingoulte|Clingouite,,hamlet,48.23758,6.96443,,,FR,ham.,Sauîcy,,,,approximate,low,,,,,50,medium,"Claingoutte, at Saulcy-sur-Meurthe: Clingoutte (1555), a hamlet of Saulcy (the index, DicoTopo)"
 cocheren,settlement,Cocheren,Kochern,Cocheren,Rochern,Rochern (pour Kochern),village,49.14333,6.85639,Q22427,,FR,,,Forbach,,,hist_map,high,,,,,114,high,1.00 near the index's canton (6 km)
 coinches,settlement,Coinches,Coinches,Coinches,Coinehe,,village,48.25222,7.02222,Q980271,,FR,,,Saint-Dié,Vosges,,wikidata,high,,,,,49,high,1.00 near the index's canton (6 km)
-coinchimont,settlement,Coinchimont,,,Coinebymont,,hamlet,48.24315,7.04342,,12314996,FR,ham.,Laveline,,,,geonames,medium,,,,,50,high,1.00 near its district's other members (6 km)
+coinchimont,settlement,Coinchimont,,,Coinebymont,,hamlet,48.24315,7.04342,,12314996,FR,ham.,Laveline,,,,geonames,medium,,,,,50,high,1.00 near its district's other members (5 km)
 colligny,settlement,Colligny,Colligny,Colligny,ColUgny,,village,49.09861,6.32528,Q22943,,FR,,,Pangc,,,wikidata,high,,,,,52,high,1.00 near the index's canton (3 km)
 colmen,settlement,Colmen,Colmen,Colmen,Colman|Golman,,village,49.35556,6.54194,Q21762,,FR,,,Bouzonvillc,Moselle,,hist_map,high,,,,,78,medium,1.00 near the index's canton (7 km)
 colombey-les-belles,settlement,Colombey-les-Belles,Colombey-les-Belles,Colombey-les-Belles,Colombier|Coîombcy-Ics-Belles,,village,48.5275,5.89722,Q388016,,FR,,,Coîombcy-Ics-Belles,,,wikidata,medium,,,,,55,high,0.88 near the index's canton (0 km)
@@ -546,12 +545,12 @@ domfaing,settlement,Domfaing,Domfaing,Domfaing,Donfain,,village,48.235,6.74861,Q
 domjevin,settlement,Domjevin,Domjevin,Domjevin,Dongevin|Doragevin,,village,48.57611,6.69667,Q988239,,FR,,,Blâmont,,,wikidata,high,,,,,44,high,1.00 near the index's canton (11 km)
 domjulien,settlement,Domjulien,,Domjulien,Donjulicn|Donjulien,,small_town,48.2525,5.99694,Q84241068,,FR,,,Viltel,,,wikidata,high,,,,,67,medium,1.00 near the index's canton (7 km)
 dommarie-eulmont,settlement,Dommarie-Eulmont,Dommarie-Eulmont,Dommarie-Eulmont,Dommaric,,village,48.41444,6.03333,Q687192,,FR,,,Vézclise,,,wikidata,high,,,,,95,high,1.00 near the index's canton (9 km)
-dommarlin-lcs-ville,settlement,Dommarlin-lcs-Ville,,,Dommartin,,hamlet,48.18235,6.20822,,12315021,FR,ham.,Ville-sur-Illon,,,,geonames,high,,,,,69,high,1.00 near the index's commune (0 km)
 dommartemont,settlement,Dommartemont,Dommartemont,Dommartemont,Dommarlemonl,,village,48.71306,6.21417,Q1102221,,FR,,,Nancy-Est,,,wikidata,high,,,,,37,medium,1.00 near the index's canton (3 km)
 dommartin-aux-bois,settlement,Dommartin-aux-Bois,Dommartin-aux-Bois,Dommartin-aux-Bois,Dommartin-aux-Bois|Dommarlin-aux-Bois,,village,48.15889,6.27472,Q672173,,FR,,,Epinal,,,wikidata,high,,,,,71,high,1.00 near the index's canton (13 km)
 dommartin-la-montagne,settlement,Dommartin-la-Montagne,Dommartin-la-Montagne,Dommartin-la-Montagne,Dommartin,,village,49.03139,5.60833,Q221898,,FR,,,Fresnes-en-Woëvre,Meuse,,wikidata,high,,,,,103,medium,1.00 near the index's canton (7 km)
 dommartin-les-remiremont,settlement,Dommartin-lès-Remiremont,Dommartin-lès-Remiremont,Dommartin-lès-Remiremont,Doinmartiu|Dommartin,,village,47.99861,6.64306,Q833820,,FR,,,Remiremont,Vosges,,wikidata,high,,,,,63,high,1.00 near the index's canton (4 km)
 dommartin-les-vallois,settlement,Dommartin-lès-Vallois,Dommartin-lès-Vallois,Dommartin-lès-Vallois,Dompmartin enssens Vallois,,village,48.15556,6.08639,Q1158520,,FR,,,Darney,,,wikidata,high,,,,,72,high,1.00 near the index's canton (8 km)
+dommartin-les-ville,settlement,Dommartin-lès-Ville,,,Dommartin|Enssens-la-Ville|Dommarlin-lcs-Ville,,hamlet,48.18235,6.20822,,12315021,FR,ham.,Ville-sur-Illon,,,,geonames,high,,,,,69,high,"1.00 near the index's commune (0 km); Dommartin-lès-Ville, a hamlet of Ville-sur-Illon (the index's Dommarlin-lcs-Ville)"
 dommartin-sous-amance,settlement,Dommartin-sous-Amance,Dommartin-sous-Amance,Dommartin-sous-Amance,Dommartin,,village,48.74083,6.25528,Q1349006,,FR,,,Nancy -Est,,,wikidata,high,,,,,52,high,1.00 near the index's canton (7 km)
 dommartin-sur-vraine,settlement,Dommartin-sur-Vraine,Dommartin-sur-Vraine,Dommartin-sur-Vraine,Dommartin|Dommanin-sur-Vrainc,,village,48.33611,5.90583,Q194729,,FR,,,Châtenois,,,wikidata,high,,,,,76,high,0.95 near the index's canton (7 km)
 domnom-les-dieuze,settlement,Domnom-lès-Dieuze,Domnom-lès-Dieuze,Domnom-lès-Dieuze,Domcnheim|Domnom,Domcnhcim,village,48.86056,6.8225,Q21647,,FR,,,Dicuze,,,wikidata,high,,,,,91,high,1.00 near the index's canton (9 km)
@@ -594,7 +593,6 @@ embermenil,settlement,Emberménil,Emberménil,Emberménil,Embcrmcsnil|Embermcnii
 emmersweiler,settlement,Emmersweiler,Emmersweiler,Emmersweiler,EmerssweiUer|Emmcrsweiler,,village,49.18041,6.8559,Q1338689,,DE,vil.,Lurhveiler,Saarbrûcken,Pr.,,hist_map,high,,,,,114,high,1.00 near the index's canton (12 km); the index's commune Lurhveiler is not found
 enchenberg,settlement,Enchenberg,Enchenberg,Enchenberg,Echembcrg|Enchcnbcrg,,village,49.01361,7.33861,Q22013,,FR,,,Rohrbach,,,hist_map,high,,,,,111,high,1.00 near the index's canton (6 km)
 ensdorf,settlement,Ensdorf,Ensdorf,Ensdorf,EnstorfT,,village,49.3,6.76667,Q375399,,FR,vil.,Lisdorf,,,,hist_map,high,,,,,84,medium,1.00 near the index's commune (1 km)
-enssens-la-ville,settlement,Enssens-la-Ville,,,,,village,,,,,FR,prévôté de Dompaire,,,,true,unlocated,low,,,,,69,high,
 entre-deux-eaux,settlement,Entre-deux-Eaux,Entre-deux-Eaux,Entre-deux-Eaux,Entre deux eaux,,village,48.23139,6.99194,Q1625005,,FR,,,Fraize,,,wikidata,high,,,,,48,medium,1.00 near the index's canton (5 km)
 epange,settlement,Epange,,Epange,Eppingen|Epange [3],Eppingen,farmstead,49.20255,6.41107,Q109573907,,FR,ferme,Charleviile,Vigy,Moselle,,hist_map,high,,,,,81,medium,1.00 near the index's commune (1 km)
 epinal,settlement,Épinal,Épinal,Épinal,Espinal|Epinal,,town,48.17361,6.45167,Q173695,,FR,,,Epinal,,,wikidata,high,,,,,99,medium,1.00 near the index's canton (0 km)
@@ -625,7 +623,7 @@ evaux-et-menil,settlement,Évaux-et-Ménil,Évaux-et-Ménil,Évaux-et-Ménil,Le 
 evendorff,settlement,Evendorff,,,Eftendorff|Efîendorlï,Effendorff,village,49.41381,6.41851,,3019294,FR,,,Sierck,Moselle,,geonames,high,,,,,78,high,1.00 near the index's canton (5 km)
 eymngcn,settlement,Eymngcn,,,Eyningcn,,village,,,,,FR,fief de la seigneurie de Bitchc,,,,true,unlocated,low,,,,,112,high,
 eynothaws,settlement,Eynothaws,,,,,village,,,,,FR,fiefde la seigneurie de Bitehe,,,,true,unlocated,low,,,,,112,high,
-faings-polots-les-ham,settlement,Les Faings-Potot,,,Les Fains-Polalz|Faings-Polots (les)» ham,,village,47.92596,6.48449,,,FR,,Val-d'Ajol,,,,approximate,low,,,,,63,high,a hamlet of Le Val-d'Ajol (the index); Les Faings-Potot (DicoTopo: Les Fains Potalz (1594))
+faings-polots-les-ham,settlement,Les Faings-Potot,,,Les Fains-Polalz|Faings-Polots (les)» ham,,village,47.9542,6.56018,,,FR,,Val-d'Ajol,,,,approximate,low,,,,,63,high,"Les Faings-Potot, a hamlet of Girmont-Val-d'Ajol: Les Fains Potalz, Alix n° 801 (Marichal); the index gives Le Val-d'Ajol"
 falck,settlement,Falck,Falck,Falck,Fait,,village,49.22417,6.63778,Q22346,,FR,,,Bouzonville,Moselle,,hist_map,high,,,,,84,medium,1.00 near the index's canton (11 km)
 falkenstein-les-baerenthal,settlement,Falkenstein-lès-Baerenthal,Falkenstein,Falkenstein,Falkcnsiein|Falkeinstein,,village,49.00486,7.56542,Q671459,,FR,"chat, ruiné",Baerenthal,Bitehe (Th,,,hist_map,high,,,,,113,high,0.96 near the index's commune (5 km)
 farebersviller,settlement,Farébersviller,Pfarrebersweiler,Farébersviller,Vor Eberssweiller|Faréberswiller,Yoi libersveiller,village,49.11472,6.86361,Q22179,,FR,,,Sair.l-Avold,,,hist_map,medium,,,,,114,high,0.93 near the index's canton (11 km)
@@ -757,7 +755,7 @@ gosselming,settlement,Gosselming,Gosselmingen,Gosselming,Goselmingen|Gossclminge
 gouecourt,settlement,Gouécourt,Gouécourt,Gouécourt,Gohccourt|Gouécoun,,village,48.41696,5.70398,Q3112796,,FR,,,Coussey,,,wikidata,medium,,,,,76,high,0.84 near the index's canton (2 km)
 goviller,settlement,Goviller,Goviller,Goviller,Goviller|Govillcr,,village,48.49722,6.01083,Q732553,,FR,,,Vézelise,,,wikidata,high,,,,,96,high,1.00 near the index's canton (6 km)
 grand-menil,settlement,Grand-Ménil,,,Grandmesnil,,hamlet,48.68045,5.8252,,11971512,FR,ham.,Ecrouves,,,,geonames,high,,,,,103,high,1.00 near the index's commune (1 km)
-grandrupt,settlement,Grandrupt,,Grandrupt,Grand-Ruz,,village,48.37212,7.05296,Q109574831,,FR,,,Senones,,,wikidata,high,,,,,51,medium,1.00 near the index's canton (6 km)
+grandrupt,settlement,Grandrupt,,,Grand-Ruz,,village,48.28111,7.01861,,,FR,,,Senones,,,approximate,low,,,,,51,medium,"Grandrupt, a hamlet of Pair-et-Grandrupt, by Le Paire de Grand-Ruz (439): Grand Ruz, Alix n° 438 (Marichal); not Grandrupt by Senones"
 grandvezin,settlement,Grandvezin,,Grandvezin,Grandvezain|Grand-Yezin,,hamlet,48.63516,6.41002,Q86660076,,FR,ham.,Crêvic,,,,wikidata,medium,,,,,37,high,0.90 near the index's commune (1 km)
 grandvillers,settlement,Grandvillers,Grandvillers,Grandvillers,Grandviller|Grandvillcrs,,village,48.23917,6.66056,Q887811,,FR,,,Bruyères,,,wikidata,high,,,,,56,high,1.00 near the index's canton (6 km)
 granges-de-plombieres,settlement,Granges-de-Plombières,,Granges-de-Plombières,Granges|Les Granges-de-Plombières,,village,47.96717,6.44125,Q71808658,,FR,,,Plombières,,,wikidata,high,,,,,65,high,1.00 near the index's canton (2 km)
@@ -909,7 +907,7 @@ hutte,settlement,Hutte,,,La Hutte,,hamlet,48.1325,6.65306,,,FR,ham.,Xamontarupl,
 hymerstroff,settlement,Hymerstroff,,,,,village,,,,,,,,,,,unlocated,low,,,,,79,low,not found in the index
 hymont,settlement,Hymont,Hymont,Hymont,,,village,48.26583,6.14167,Q752827,,FR,,,Mirecourt,Vosges,,wikidata,high,,,,,67,high,1.00 near the index's canton (4 km)
 hyrelbach,settlement,Hirbach,,,Hyrelbach,,village,49.01162,6.96556,,,,,,,,,approximate,low,,,,,92,low,"not found in the index; Hirbach, at Holving: Hyrelbach (1594), dén. Th. Alix (Bouteiller)"
-idontctair,settlement,idontctair,,,Le Moncel.j,,village,,,,,FR,"et reportez l'art, après celui de Montauville",,,,true,unlocated,low,,,,,50,medium,"correction 44: Monelair → idontctair, et reportez l'art, après celui de Montauville"
+idontctair,settlement,Le Moncel,,,Le Moncel.j|idontctair,,village,48.27833,7.0375,,,FR,"et reportez l'art, après celui de Montauville",,,,true,approximate,low,,,,,50,medium,"correction 44: Monelair → idontctair, et reportez l'art, après celui de Montauville; Le Moncel, a farm of Neuvillers-sur-Fave: Le Moncel (1594), Alix n° 407 (Marichal, DicoTopo); the index's line was misread by correction 44"
 igncy,settlement,Igney,Igney,Igney,Igney|Igncy,,village,48.27472,6.39556,Q753302,,FR,,,Châtel,,,wikidata,high,,,,,100,high,1.00 near the index's canton (4 km)
 igney,settlement,Igney,Igney,Igney,,,village,48.63389,6.81389,Q635163,,FR,,,Récbtcotirt-le-Châtcau,Meurthe,,wikidata,high,,,,,106,high,1.00 near the index's canton (4 km)
 ihimbery,settlement,Ihimbery,,,Hamberg,,village,,,,,FR,fief du bailliage d'Aprcmont,,,,true,unlocated,low,,,,,103,high,
@@ -1000,7 +998,7 @@ la-franouze,settlement,La Franouse,,,La Franouzc|La Franouze,,village,47.96213,6
 la-frison,settlement,La Frison,,,,,hamlet,48.05444,6.1175,,,FR,ham. {verrerie),Hennezel,,,,approximate,low,,,,,73,high,not in Wikidata/GeoNames; placed at its commune Hennezel
 la-grande-catherine,settlement,La Grande-Catherine,La Grande Catherine,La Grande Catherine,,,hamlet,48.01944,6.03306,Q131400382,,FR,ham. (verrerie),Claudon,,,,wikidata,high,,,,,73,high,1.00 near the index's commune (1 km)
 la-grande-fosse,settlement,La Grande-Fosse,La Grande-Fosse,La Grande-Fosse,,,village,48.33889,7.06944,Q1410504,,FR,,,Saales,Vosges,,wikidata,high,,,,,47,medium,1.00 near the index's canton (3 km)
-la-grande-mairie,settlement,La Grande-Mairie,,,La Grande Mairie,,village,48.00629,6.7174,,,,,,,,,approximate,low,,,,,61,low,"not found in the index; La Grande-Mairie, at Vagney: a former seigneurie of Vagney (DicoTopo)"
+la-grande-mairie,settlement,La Grande-Mairie,,,La Grande Mairie,,village,47.94944,6.76917,,,,,,,,,approximate,low,,,,,61,low,"not found in the index; La Grande-Mairie, an old grange on the finage of Bamont (Saulxures-sur-Moselotte): Alix n° 725 (Marichal); not the seigneurie of Vagney"
 la-hardalle,settlement,La Hardalle,,La Hardalle,La Bardai|La Hardallc,,hamlet,48.15806,7.02583,Q136673316,,FR,ham.,Anould,,,,wikidata,high,,,,,45,high,1.00 near the index's commune (7 km)
 la-haulte-rue-de-destort,settlement,La Haute-Rue de Destord,,,La haulte rue de Destort,,village,48.27278,6.62139,,,,,,,,,approximate,low,,,,,107,low,"not found in the index; La Haute-Rue de Destord, at Destord: La Haulte Rue de Destorb (1468), Destord (DicoTopo)"
 la-haute-mandray,settlement,La Haute-Mandray,,,La Haulte-Mandray,,hamlet,48.21959,6.99319,,,FR,ham,Mandray,,,,approximate,low,,,,,48,high,a hamlet of Mandray (the index)
@@ -1010,9 +1008,10 @@ la-malgrange,settlement,La Malgrange,,,,,hamlet,48.66944,6.20611,,,FR,ham.,Jarvi
 la-mi-mandray,settlement,Mandray,,,L'Kmmy-Mandray|La Mi-Mandray,Emmy-Mandray,hamlet,48.21959,6.99319,,2996246,FR,ham.,Manuray,,,,geonames,low,,,,,48,medium,"0.88; Q217345 went to mandray, whose name fits it better"
 la-mouline,settlement,La Mouline,,,La Moline,,hamlet,47.89167,6.73972,,,FR,ham.,Ramonchamp,,,,approximate,low,,,,,62,high,not in Wikidata/GeoNames; placed at its commune Ramonchamp
 la-neuveville-devant-lepanges,settlement,La Neuveville-devant-Lépanges,La Neuveville-devant-Lépanges,La Neuveville-devant-Lépanges,La Ncufville|La Ncuw'Y ille-ct-Grémoménil,,village,48.16167,6.66278,Q188893,,FR,,,Bruyères,,,rule,high,,,,,56,medium,"La Neuveville-devant-Lépanges: La Neufville, Alix n° 585 (Marichal)"
+la-neuveville-girancourt,settlement,La Neuveville,,,LaNeufville,,village,48.16361,6.30806,,,,,,,,,approximate,low,,,,,71,medium,"set in rules.yaml (entry_places); La Neuveville, an outlying farm of Girancourt: La Neufville, Alix n° 1051, 'identifié indûment par Lepage' with La Neuveville-sous-Montfort (Marichal)"
 la-neuveville-les-raon,settlement,La Neuveville-lès-Raon,,La Neuveville-lès-Raon,La Neuville|NcuveviMc-lez-Raon,,village,48.40533,6.83901,Q71809139,,FR,,,Raon-l'Etape,,,wikidata,medium,,,,,46,high,0.85 near the index's canton (0 km)
 la-neuveville-sous-chatenois,settlement,La Neuveville-sous-Châtenois,La Neuveville-sous-Châtenois,La Neuveville-sous-Châtenois,La Neuville|La Neuveville-sous-Ch5tenois,,village,48.29278,5.87611,Q219624,,FR,,,Châtenois,,,wikidata,high,,,,,75,high,0.98 near the index's canton (3 km)
-la-neuveville-sous-montfort,settlement,La Neuveville-sous-Montfort,La Neuveville-sous-Montfort,La Neuveville-sous-Montfort,La Ncuftïlîe-soubz-Montfort|LaNeufville|La NeuveviHc-souis-Montfort,,village,48.22444,6.01833,Q192791,,FR,,,Vittel,,,wikidata,medium,,,,,66,medium,0.91 near the index's canton (6 km)
+la-neuveville-sous-montfort,settlement,La Neuveville-sous-Montfort,La Neuveville-sous-Montfort,La Neuveville-sous-Montfort,La Ncuftïlîe-soubz-Montfort|La NeuveviHc-souis-Montfort,,village,48.22444,6.01833,Q192791,,FR,,,Vittel,,,wikidata,medium,,,,,66,high,0.91 near the index's canton (6 km)
 la-nol,settlement,La Nol,,,Nol,,hamlet,48.02388,6.66416,,2981808,FR,ham,Saint-Amé,,,,geonames,high,,,,,61,high,1.00 near the index's commune (0 km)
 la-nolle,settlement,La Nolle,,,La Nol,,village,48.17222,6.87944,,,FR,vil.,Corcicux,,,,approximate,low,,,,,57,medium,a village of Corcieux (the index)
 la-pariee,settlement,La Pariée,,,La Pargée|La Payne,Pargée (la) et Payne (la),hamlet,48.28889,7.11967,,12314968,FR,ham.,Lusse,,,,geonames,high,,,,,49,medium,1.00 near the index's commune (1 km)
@@ -1023,8 +1022,7 @@ la-pille,settlement,La Pille,,,,,village,48.09361,6.18111,,,FR,bam.,Vioménil,,,
 la-poirie,settlement,La Poirie,,,La Poiric,,farmstead,48.13232,6.67579,,12315026,FR,censé,Tendon,,,,geonames,high,,,,,60,medium,1.00 near the index's commune (1 km)
 la-poirie-238,settlement,La Poirie,,,,,village,47.99031,6.63078,,12315081,FR,"ou les Arrentés de la Poirie, au ban de Vagney, nom donné autrefois à des habitations situées « sur les villages » de Tendon et de Longchamp (8.). différentesdes autres localités du même nom",,,,true,geonames,medium,,,,,64,medium,ambiguous without an anchor (2 spots)
 la-poirie-dommarlin,settlement,La Poirie,,,La Poitie|La Poyrie,,hamlet,47.99861,6.64306,,,FR,ham.,Dommarlin,,,,approximate,low,,,,,62,high,not in Wikidata/GeoNames; placed at its commune Dommarlin (near its district)
-la-poirie-saulxures,settlement,La Poirie,,,Poirie de Saulxures,,hamlet,47.94944,6.76917,,,FR,"ham., mêmecanton",Saulxures,,Vosges,,approximate,low,,,,,61,high,not in Wikidata/GeoNames; placed at its commune Saulxures (near its district)
-la-poyrie,settlement,La Poirie,,,La Poyrie,,village,48.00629,6.7174,,,,,,,,,approximate,low,,,,,61,low,"not found in the index; La Poirie, at Vagney: an outlying farm of Vagney (DicoTopo)"
+la-poirie-saulxures,settlement,La Poirie,,,La Poyrie|Poirie de Saulxures,,hamlet,47.94944,6.76917,,,FR,"ham., mêmecanton",Saulxures,,Vosges,,approximate,low,,,,,61,high,not in Wikidata/GeoNames; placed at its commune Saulxures (near its district)
 la-prclle,settlement,Prelle,,,Breirc|Bresle|La Prclle,Brcire,village,48.00833,6.71639,,,FR,bam.,Vagney,,,,approximate,low,,,,,61,high,"not in Wikidata/GeoNames; placed at its commune Vagney; Prelle, a hamlet of Basse-sur-le-Rupt (DicoTopo: Breire (1594)); the index's La Prclle"
 la-roche,settlement,La Roche,,,La Boche,,village,47.92271,6.66291,,,FR,section de la,Rupt,,,,approximate,low,,,,,62,high,not in Wikidata/GeoNames; placed at its commune Rupt (near its district)
 la-rue-sous-llarol,settlement,La Rue-sous-Harol,,,La Rue|La Rue-sous-llarol,,hamlet,48.15236,6.24975,,,FR,ham.,Haro,,,,approximate,low,,,,,70,high,a hamlet of Harol (the index); La Rue-sous-Harol (DicoTopo: La Rue sous Hairol (1601))
@@ -1074,7 +1072,8 @@ launstroff,settlement,Launstroff,Launsdorf,Launstroff,Lonstorfî|LaunstrofT,,vil
 laval,settlement,Laval,,,Le Vaul,Vaul (le),hamlet,48.62444,6.08306,,,FR,ham.,Chaligny,,,,approximate,low,,,,,40,high,not in Wikidata/GeoNames; placed at its commune Chaligny
 laval-sur-vologne,settlement,Laval-sur-Vologne,Laval-sur-Vologne,Laval-sur-Vologne,Laval,Vaul (le),village,48.19472,6.70028,Q836189,,FR,,,Bruyères,,,wikidata,high,,,,,57,high,1.00 near the index's canton (2 km)
 laveline,settlement,Laveline,,,Leaveline|Leuvdine,Leuveline,village,48.24498,7.06593,,3035160,FR,,,Saint-Dié,Vosges,,geonames,high,,,,,46,medium,1.00 near the index's canton (10 km)
-laveline-devant-bruyeres,settlement,Laveline-devant-Bruyères,Laveline-devant-Bruyères,Laveline-devant-Bruyères,Leavelinc de Houx|Leavéline|Lavcline-du-Iloux,,village,48.18389,6.75972,Q200152,,FR,,,Bruyères,,,wikidata,medium,,,,,57,high,0.90 near the index's canton (4 km)
+laveline-devant-bruyeres,settlement,Laveline-devant-Bruyères,Laveline-devant-Bruyères,Laveline-devant-Bruyères,Leavéline,,village,48.18389,6.75972,Q200152,,FR,,,,,,rule,high,,,,,57,medium,"set in rules.yaml (entry_places); Laveline-devant-Bruyères: Leaveline, Alix n° 610 (Marichal)"
+laveline-du-houx,settlement,Laveline-du-Houx,Laveline-du-Houx,Laveline-du-Houx,Leavelinc de Houx|Lavcline-du-Iloux,,village,48.13722,6.7,Q175578,,FR,,,Bruyères,,,rule,high,,,,,60,high,"Laveline-du-Houx, canton de Bruyères (the index): Leaveline de Houx, Alix n° 702 (Marichal)"
 lavieville,settlement,Laviéville,,,La Viefville,,hamlet,48.22754,6.21886,,12315006,FR,ham.,Dompaire,,,,geonames,high,,,,,71,high,1.00 near the index's commune (1 km)
 lavigneville,settlement,Lavignéville,,,Lavigneville,,village,48.95888,5.59174,Q52383007,,FR,,,Vigneulles,,,wikidata,medium,,,,,101,high,"exact name, no anchor"
 laxou,settlement,Laxou,Laxou,Laxou,Laixou,,village,48.68556,6.15222,Q752544,,FR,,,Nancy-Nord,,,wikidata,high,,,,,36,high,1.00 near the index's canton (2 km)
@@ -1083,6 +1082,7 @@ laycgotttlc,settlement,Laycgotttlc,,Layegoute,Layegoutte,,village,48.25619,7.063
 le-beulay,settlement,Le Beulay,Le Beulay,Le Beulay,Boulay.{ La mairie deLeaveline.i|Beulay,,village,48.30111,7.07194,Q1158557,,FR,,,Saint-Dié,Vosges,,wikidata,high,,,,,50,medium,1.00 near the index's canton (9 km)
 le-boulay,settlement,Le Boulay,,Le Boulay,Le Boullay,,village,48.15278,6.65445,Q25397945,,FR,,,Bruyères,,,wikidata,high,,,,,59,high,1.00 near the index's canton (8 km)
 le-chanois,settlement,Le Chanois,,,Le Chesnois,,hamlet,48.02472,6.66972,,,FR,ham.,Syndicat-de-Saint-Amé,Rciniremont,,,approximate,low,,,,,64,high,a hamlet of the Syndicat de Saint-Amé (the index)
+le-charmois-bains,settlement,Le Charmois,,,Le Charmois-dcvant-Bains,,village,48.00113,6.26492,,,,,,,,,approximate,low,,,,,65,medium,"set in rules.yaml (entry_places); Le Charmois, a hamlet of Bains-les-Bains: Le Charmois devant Bains (Marichal cites Alix n° 352, a misprint for 852)"
 le-chatelet,settlement,Le Châtelet,,,Le Chastelet,,village,48.38389,5.78722,,,FR,us.,Barville,,,,approximate,low,,,,,39,high,not in Wikidata/GeoNames; placed at its commune Barville; 41 km from its district
 le-chene,settlement,Le Chêne,,,Le Chesne,,village,47.92667,6.66278,,,FR,section de la,Rupt,,,,approximate,low,,,,,62,high,not in Wikidata/GeoNames; placed at its commune Rupt (near its district)
 le-chenois,settlement,Le Chénois,,,Le Chesnois de Saulcy,,hamlet,48.23639,6.95972,,,FR,ham.,Saulcy,,,,approximate,low,,,,,48,medium,"Le Chénois, a former commune joined to Saulcy-sur-Meurthe (DicoTopo); the index's Saulcy, not Le Saulcy"
@@ -1097,7 +1097,7 @@ le-kouaux,settlement,Le Rouaux,,,Rouau|Le Kouaux,,village,48.34278,7.01389,,,FR,
 le-mazcville,settlement,Mazeville,,,Mauzeville|Le Mazcville,,hamlet,48.18583,7.00139,,,FR,ham.,Fraize,,,,approximate,low,,,,,51,high,"not in Wikidata/GeoNames; placed at its commune Fraize; Mazeville, a hamlet of Fraize (DicoTopo: Mauzeville (1594)); the index's Le Mazcville"
 le-menil,settlement,Ménil-de-Senones,,,Le Mesnil|Le Ménil,,hamlet,48.36389,6.85806,,,FR,ham.,Elival,,,,approximate,low,,,,,47,medium,"le Ménil, a hamlet of Étival (the index); not Ménil-de-Senones"
 le-menil-229,settlement,Le Ménil,,,Le Mesnil,,village,47.90477,6.78209,,3003464,FR,ancienne grange du ban de Longchamp (B.),,,,true,geonames,medium,,,,,65,high,"1.00; Q904120 went to le-menil-ramonchamp, whose name fits it better"
-le-menil-bellefontainc,settlement,Le Ménil,,,Le Mesnil,,hamlet,48.01306,6.44278,,,FR,ham.,Bellefontainc,,,,approximate,low,,,,,65,high,a hamlet of Bellefontaine (the index)
+le-menil-bellefontainc,settlement,Le Ménil,,,Le Mesnil,,hamlet,48.01306,6.44278,,,FR,ham.,Bellefontainc,,,,approximate,low,,,,,65,high,"Le Ménil, a hamlet of Bellefontaine (the index), where a street keeps the name; Marichal's Le Magny (Le Mesnil, Alix n° 855) not followed"
 le-menil-harol,settlement,Le Ménil,,,Le Mcsnil|Le Mesnil,,hamlet,48.13685,6.257,,12315031,FR,ham.,Harol,,,,geonames,high,,,,,70,high,1.00 near the index's commune (2 km)
 le-menil-ramonchamp,settlement,Le Ménil,Le Ménil,Le Ménil,Le Mesnil,,village,47.90722,6.78278,Q904120,,FR,,,Ramonchamp,,,wikidata,high,,,,,60,high,1.00 near the index's canton (4 km)
 le-mesnil,settlement,Le Mesnil,,Le Mesnil,Le Mesnil|Ménil,,hamlet,48.33828,6.18983,Q109575428,,FR,ham.,Girecourt-lez-Viéville,,,,wikidata,high,,,,,67,high,0.95 near the index's commune (0 km)
@@ -1215,7 +1215,6 @@ lutzelbourg,settlement,Lutzelbourg,Lützelburg,Lutzelbourg,Lutzclbourg,,village,
 lymingcn,settlement,Lymingcn,,,,,village,,,,,FR,office de Boulay,,,,true,unlocated,low,,,,,83,medium,
 macheren,settlement,Macheren,Machern,Macheren,Mâchera,,village,49.09972,6.74278,Q22318,,FR,,,Saint-Avold,,,hist_map,high,,,,,114,high,1.00 near the index's canton (3 km)
 macker,settlement,Macker,Macker,Macker,Machern,"Mâchern, alias Maizières",village,49.16144,6.48303,Q15075846,,FR,vil.,Helslroff,,,,hist_map,high,,,,,82,medium,1.00 near the index's commune (1 km)
-maconcourt,settlement,Maconcourt,Maconcourt,Maconcourt,Moncourt,,village,48.36556,5.94056,Q195638,,FR,,,Ncufchâleau,Vosges,,wikidata,medium,,,,,75,high,0.89 near the index's canton (18 km)
 madegney,settlement,Madegney,Madegney,MadegneyDoe,Madigny,,village,48.28833,6.28806,Q1455189,,FR,,,Dompaire,,,wikidata,high,,,,,68,high,1.00 near the index's canton (9 km)
 maf-iy-nton-de-verny,settlement,"Maf""iy.• «nton de Verny",,,M»?ny,,village,,,,,FR,,,,,true,unlocated,low,,,,,104,medium,
 magnieres,settlement,Magnières,Magnières,Magnières,Magnières|Nagniércs|Magnién's,,small_town,48.44556,6.56556,Q1060620,,FR,,,Gcrbévilicr,,,wikidata,high,,,,,42,high,0.95 near the index's canton (7 km)
@@ -1268,7 +1267,7 @@ mattaincourt,settlement,Mattaincourt,Mattaincourt,Mattaincourt,Maltaincourt,,vil
 mattexey,settlement,Mattexey,Mattexey,Mattexey,Maltcxcy,,village,48.44361,6.51611,Q1060423,,FR,,,Gcrbévillcr,,,wikidata,high,,,,,42,high,1.00 near the index's canton (6 km)
 maxeville,settlement,Maxéville,Maxéville,Maxéville,Marchainvillc,Marchainville,village,48.71139,6.16306,Q1159783,,FR,,,Nancy-Nord,,,wikidata,high,,,,,36,high,1.00 near the index's canton (3 km)
 maxey-sur-meuse,settlement,Maxey-sur-Meuse,Maxey-sur-Meuse,Maxey-sur-Meuse,Maxey-soubz-Brexey,,village,48.45083,5.69778,Q211054,,FR,,,Coussey,,,wikidata,high,,,,,76,high,1.00 near the index's canton (5 km)
-maxonchamp,settlement,Maxonchamp,,,Maxonchamps,,village,47.97043,6.79373,,,FR,section de la,Rupt,,,,approximate,low,,,,,64,high,not in Wikidata/GeoNames; placed at its commune Rupt (near its district)
+maxonchamp,settlement,Maxonchamp,,,Maxonchamps,,village,47.92271,6.66291,,,FR,section de la,Rupt,,,,approximate,low,,,,,64,high,"Maxonchamp, a hamlet of Rupt-sur-Moselle: Maxonchamps, Alix n° 837 (Marichal)"
 maxstadt,settlement,Maxstadt,Maxstadt,Maxstadt,Magstatl,,village,49.04444,6.79361,Q21921,,FR,,,Grostenquin,,,hist_map,high,,,,,114,high,1.00 near the index's canton (8 km)
 mazelay,settlement,Mazelay,,,Mazelet,,village,48.24215,6.33892,,2994879,FR,,,Châtel,,,geonames,high,,,,,71,high,1.00 near the index's canton (9 km)
 mazerulles,settlement,Mazerulles,Mazerulles,Mazerulles,Mazereulles|Mazerulcs,,village,48.75917,6.38167,Q1101371,,FR,,,Château-Salins,Meurthe,,wikidata,medium,,,,,52,high,0.95 near the index's canton (12 km)
@@ -1400,7 +1399,7 @@ nohn,settlement,Nohn,Nohn,Nohn,Nonne,,village,49.4847,6.54064,Q543619,,DE,vil.,O
 noiregoutlc,settlement,Noiregoutte,,,Noiregoutte|Noiregoutlc,,hamlet,48.17222,7.01361,,,FR,ham.,Plainfaing,,,,approximate,low,,,,,51,high,"not in Wikidata/GeoNames; placed at its commune Plainfaing; Noiregoutte, a hamlet of Plainfaing (DicoTopo: Noiregoutte); the index's Noiregoutlc"
 nomexy,settlement,Nomexy,Nomexy,Nomexy,Nomcxey|Nommexy,,village,48.30639,6.385,Q753258,,FR,,,Châtel,,,wikidata,high,,,,,97,high,1.00 near the index's canton (1 km)
 nompatelize,settlement,Nompatelize,Nompatelize,Nompatelize,Nonpalelisc|Nompatclize,,village,48.32556,6.85278,Q219673,,FR,,,Raon-l'Etape,,,wikidata,high,,,,,47,medium,1.00 near the index's canton (9 km)
-noncourt,settlement,Noncourt,,Noncourt,,,village,48.34694,5.685,Q71808683,,FR,,,Neufchâteau,Vosges,,wikidata,high,,,,,75,medium,1.00 near the index's canton (1 km)
+noncourt,settlement,Noncourt,,Noncourt,Moncourt,,village,48.34694,5.685,Q71808683,,FR,,,Neufchâteau,Vosges,,wikidata,high,,,,,75,medium,1.00 near the index's canton (1 km)
 nonhigny,settlement,Nonhigny,Nonhigny,Nonhigny,Nonhcgny,,village,48.55056,6.88056,Q1049428,,FR,,,Blâmont,,,wikidata,high,,,,,106,high,1.00 near the index's canton (5 km)
 nonville,settlement,Nonville,Nonville,Nonville,Nonvillc|Nonville|Nonviile,,village,48.08056,5.99,Q126549,,FR,,,Monthureux-sur-Saône,,,wikidata,high,,,,,73,high,0.95 near the index's canton (6 km)
 nonzeville,settlement,Nonzeville,Nonzeville,Nonzeville,Mozeville|Nonzcville|Nonziville,,village,48.265,6.63389,Q1166659,,FR,,,Bruyères,,,wikidata,high,,,,,57,medium,1.00 near the index's canton (9 km)
@@ -1517,7 +1516,7 @@ quessonviller,settlement,Xonvillers,,,Quessonville|Quessonviller,,village,47.999
 quevilloncourt,settlement,Quevilloncourt,Quevilloncourt,Quevilloncourt,Queveiiloncourt,,village,48.4725,6.09944,Q926122,,FR,,,Vézelise,,,wikidata,high,,,,,96,high,1.00 near the index's canton (2 km)
 racecourt,settlement,Racécourt,Racécourt,Racécourt,Baeecourt|Racécourl,,village,48.2575,6.18889,Q902839,,FR,,,Dompaire,,,wikidata,high,,,,,69,high,1.00 near the index's canton (5 km)
 racrange,settlement,Racrange,Rakringen,Racrange,Reckrangcs|Reckranges,Reckranges,village,48.92278,6.67333,Q22407,,FR,,,Grostenquin,,,hist_map,high,,,,,92,medium,1.00 near the index's canton (8 km)
-rainville,settlement,Rainville,Rainville,Rainville,,,village,48.35778,5.88444,Q266513,,FR,,,Chârcnois,,,wikidata,medium,,,,,75,high,1.00 near its district's other members (5 km)
+rainville,settlement,Rainville,Rainville,Rainville,,,village,48.35778,5.88444,Q266513,,FR,,,Chârcnois,,,wikidata,medium,,,,,75,high,1.00 near its district's other members (6 km)
 rambucourt,settlement,Rambucourt,Rambucourt,Rambucourt,Rambuescouri|Rainbucouri,,village,48.84389,5.75861,Q223716,,FR,,,Saint-Mihiel,Meuse,,rule,high,,,,,104,high,Rambucourt: canton de Saint-Mihiel (the index)
 ramecourt,settlement,Ramecourt,Ramecourt,Ramecourt,Bamecourt|Bomecourt|Remecourt,,village,48.31083,6.10028,Q1462324,,FR,,,Mirecourt,Vosges,,wikidata,high,,,,,67,high,1.00 near the index's canton (3 km)
 rammelfangen,settlement,Rammelfangen,Rammelfangen,Rammelfangen,Remclfangen|Rantmelfangen,,village,49.3314,6.63306,Q1542603,,FR,vil.,ibn,,,,hist_map,medium,,,,,84,high,0.88 near the index's commune (2 km)

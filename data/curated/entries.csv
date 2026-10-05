@@ -668,7 +668,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 668,Rexuricux.,Rexuricux,,ban-bayecourt,,fief,,,,main,,ruxurieux,59,medium,index match by loose number (0.89)
 669,Rambcville.,Rambcville,,ban-bayecourt,,fief,,,,main,,rembaville,59,high,
 670,Chenusmesnil.,Chenusmesnil,,ban-bayecourt,,fief,,,,main,,chenimenil,59,high,
-671,Chasteau-sur-Pcrlc.,Chasteau-sur-Pcrlc,,ban-bayecourt,,fief,,,,main,,chateau-de-saint-jean-du-marche,59,high,
+671,Chasteau-sur-Pcrlc.,Chasteau-sur-Pcrlc,,ban-bayecourt,,fief,,,,main,,chatcau-sur-pcrlc,59,high,
 672,Granges.,Granges,,ban-bayecourt,,fief,,,,main,,granges-sur-vologne,59,high,
 673,"Girecourt, chasteau et village.",Girecourt,castle|village,ban-bayecourt,,fief,,,,main,,girecourt-sur-durbion,59,high,
 674,Fremyfontaine.,Fremyfontaine,,ban-bayecourt,,fief,,,,main,,fremifontaine,59,high,
@@ -699,7 +699,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 699,Rouvcrois.,Rouvcrois,,ban-arches,,domain,,,,main,,rouveroye,60,high,
 700,Outreleau.,Outreleau,,ban-arches,,domain,,,,main,,oulrclean,60,high,
 701,Tendon.,Tendon,,ban-tendon,,domain,,,,main,,tendon,60,high,
-702,Leavelinc de Houx.,Leavelinc de Houx,,ban-tendon,,domain,,,,main,,laveline-devant-bruyeres,60,high,
+702,Leavelinc de Houx.,Leavelinc de Houx,,ban-tendon,,domain,,,,main,,laveline-du-houx,60,high,
 703,Chamonlaruz.,Chamonlaruz,,ban-tendon,,domain,,,,main,,xamontarupt,60,high,
 704,La Hutte.,La Hutte,,ban-tendon,,domain,,,,main,,hutte,60,high,
 705,La Poiric.,La Poiric,,ban-tendon,,domain,,,,main,,la-poirie,60,medium,index match by confused number (1.00)
@@ -724,7 +724,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 724,Sainct-Esliennc.,Sainct-Esliennc,,ban-molin,,domain,,,,main,,saint-etienne-les-remiremont,61,high,
 725,La Grande Mairie.,La Grande Mairie,,ban-vagney,,domain,,,,main,,la-grande-mairie,61,low,index match by none (0.00)
 726,Vagny.,Vagny,,ban-vagney,,domain,,,,main,,vagney,61,high,
-727,La Poyrie.,La Poyrie,,ban-vagney,,domain,,,,main,,la-poyrie,61,low,index match by none (0.00)
+727,La Poyrie.,La Poyrie,,ban-vagney,,domain,,,,main,,la-poirie-saulxures,61,high,
 728,Pubas.,Pubas,,ban-vagney,,domain,,,,main,,pubas,61,high,
 729,Contrexart.,Contrexart,,ban-vagney,,domain,,,,main,,conlrexard,61,high,
 730,Gerbaumonl.,Gerbaumonl,,ban-vagney,,domain,,,,main,,gerbamont,61,medium,index match by confused number (0.95)
@@ -849,7 +849,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 849,Demeruz.,Demeruz,,mayoralty-longchamp,,fief,,,,main,,demrupl,65,high,
 850,Le Mesnil.,Le Mesnil,,mayoralty-longchamp,,fief,,,,main,,le-menil-229,65,high,
 851,Sainct-Maurise.,Sainct-Maurise,,mayoralty-longchamp,,fief,,,,main,,saint-maurice-sur-moselle,65,high,
-852,Le Charmois-dcvant-Bains.,Le Charmois-dcvant-Bains,,mayoralty-longchamp,,fief,,,,main,,charniois-rorgueilicux,65,high,
+852,Le Charmois-dcvant-Bains.,Le Charmois-dcvant-Bains,,mayoralty-longchamp,,fief,,,,main,,le-charmois-bains,65,high,
 853,"Fonlenoy, baronnic, chasteau et village.",Fonlenoy,castle|village,provostship-arches,lordship-fontenoy-le-chateau,fief,,,,main,,fontenoy-le-chateau,65,medium,index match by index number (1.00)
 854,Fontenoy-la-Ville.,Fontenoy-la-Ville,,provostship-arches,lordship-fontenoy-le-chateau,fief,,,,main,,fontenoy-la-ville,65,high,
 855,Le Mesnil.,Le Mesnil,,provostship-arches,lordship-fontenoy-le-chateau,fief,,,,main,,le-menil-bellefontainc,65,high,
@@ -964,8 +964,8 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 964,Moyroncourt.,Moyroncourt,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,maroncourt,69,medium,index match by loose number (0.86)
 965,Juxey.,Juxey,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,jorxey,69,high,
 966,Goherey.,Goherey,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,gorhey,69,high,
-967,Dommartin.,Dommartin,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,dommarlin-lcs-ville,69,high,
-968,Enssens-la-Ville.,Enssens-la-Ville,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,enssens-la-ville,69,high,
+967,Dommartin.,Dommartin,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,dommartin-les-ville,69,high,
+968,Enssens-la-Ville.,Enssens-la-Ville,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,dommartin-les-ville,69,high,
 969,Lamerey.,Lamerey,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,lamerey,69,high,
 970,Valleroy.,Valleroy,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,valleroy-le-sec,69,high,
 971,Chcnymont.,Chcnymont,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,chenilmont,69,high,
@@ -1048,9 +1048,9 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1048,Mazelet.,Mazelet,,ban-girancourt,,fief,,,,main,,mazelay,71,high,
 1049,La Rue devant Dompaire.,La Rue devant Dompaire,,ban-girancourt,,fief,,,,main,,itue-devant-dompaire,71,medium,index match by loose number (0.89)
 1050,Adon.,Adon,,ban-girancourt,,fief,,,,main,,adompt,71,high,
-1051,LaNeufville.,LaNeufville,,ban-girancourt,,fief,,,,main,,la-neuveville-sous-montfort,71,medium,index match by number (0.42)
+1051,LaNeufville.,LaNeufville,,ban-girancourt,,fief,,,,main,,la-neuveville-girancourt,71,high,
 1052,Bouzemofif.,Bouzemofif,,ban-girancourt,,fief,,,,main,,bouzemont,71,high,
-1053,Basigny.,Basigny,,ban-girancourt,,fief,,,,main,,basigny,72,low,index match by none (0.00)
+1053,Basigny.,Basigny,,ban-girancourt,,fief,,,,main,,bazegney,72,high,
 1054,"Blamerey, pour la moictié et l'autre moictié au comté de Vaudémont.",Blamerey,,ban-girancourt,,fief,,1/2,,main,,blemerey,72,high,
 1055,Dominait devant Dompaire.,Dominait devant Dompaire,,ban-harol,,fief,,,,main,,damas-et-bettegney,72,medium,index match by index number (1.00)
 1056,Begnauldvoid.,Begnauldvoid,,ban-harol,,fief,,,,main,,renauvoid,72,high,
@@ -1146,7 +1146,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1146,Vouxey.,Vouxey,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,vouxey,75,high,number read from '1143'
 1147,Saulxures.,Saulxures,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,saulxures-les-bulgneville,75,high,
 1148,Toutainville.,Toutainville,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,totainville,75,high,
-1149,Moncourt.,Moncourt,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,maconcourt,75,high,
+1149,Moncourt.,Moncourt,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,noncourt,75,high,
 1150,Hignéville.,Hignéville,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,hagneville,75,high,
 1151,Le Mesnil-cn-Sainctois.,Le Mesnil-cn-Sainctois,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,menil-en-xaintois,75,high,
 1152,Longchamps.,Longchamps,,provostship-chatenois-et-neufchateau,,clergy,,,,main,,longchamp-sous-chatenois,75,high,

@@ -81,10 +81,6 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Ban [57] via *Ban*, 0.86, ?
   2. Buris [57] via *Buris*, 0.86, ?
   3. Bure [Hameau, Tressange, canton Fontoy, 57] via *Buris (1181)*, 0.85, 33 km
-- basigny: Basigny
-  1. Bassigny (Le) [Territoire situé au sud du département, 55] via *Bassigny (Le)*, 0.87, ?
-  2. Bassigny (Le) [Ancien pagus des cités de Langres et de Toul, 88] via *Bassigny (Le)*, 0.87, ?
-  3. Bassigny (Sur le) [Lieu dit, Saint-Prancher, canton Mirecourt, 88] via *Bassigny (Sur le)*, 0.86, 28 km
 - bcaurains: Bcaurains
   1. Belrain [canton Pierrefitte-sur-Aire, 55] via *Beaurain (1756)*, 0.91, ?
   2. Bure [Hameau, Tressange, canton Fontoy, 57] via *Beuren (1626)*, 0.74, ?
@@ -113,10 +109,6 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Edling [Hameau, Anzeling, canton Bouzonville, 57] via *Edlingen*, 0.90, 11 km
   2. Adelange [canton Faulquemont, 57] via *Edlingen (1594)*, 0.86, 30 km
   3. Aidling [Bouzonville, canton Bouzonville, 57] via *Aidelingen (1281)*, 0.82, 5 km
-- enssens-la-ville: Enssens-la-Ville
-  1. Cens-la-Ville [Hameau, Sapois, canton Saulxures-sur-Moselotte, 88] via *Enssens la Ville (1569)*, 0.90, 48 km
-  2. Ville-sur-Illon [canton Dompaire, 88] via *Ville (1228)*, 0.83, 9 km
-  3. Neuviller-sur-Moselle [Bourg, canton Haroué, 54] via *Ville (1286)*, 0.80, 26 km
 - et-ch: Et/ch
   1. Alch [Hameau, Téterchen, canton Boulay-Moselle, 57] via *Alch*, 0.70, 64 km
   2. Alsch ou Alch [Ferme, Téterchen, canton Boulay-Moselle, 57] via *Alch*, 0.70, 64 km
@@ -148,10 +140,6 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Lemestroff [Hameau, Oudrenne, canton Metzervisse, 57] via *Lemerstroff*, 0.85, 7 km
   2. Momerstroff [canton Boulay-Moselle, 57] via *Memerstroff (1563)*, 0.81, 26 km
   3. Hestroff [canton Bouzonville, 57] via *Herstroff (1429)*, 0.77, 13 km
-- idontctair: idontctair
-  1. Villé (Le) [Hameau, Saint-Dié-des-Vosges, canton Saint-Dié-des-Vosges (NP), 88] via *Don Viller (1345)*, 0.53, 9 km
-  2. Donnelay [canton Vic-sur-Seille, 54] via *Donnelay*, 0.51, 58 km
-  3. Lentret (Le) [Ferme, Poulières, canton Brouvelieures, 88] via *Lentret (Le)*, 0.50, 23 km
 - ihimbery: Ihimbery
   1. Woimbey [canton Pierrefitte-sur-Aire, 55] via *Imberes (1047)*, 0.65, 26 km
   2. Chambéry ou Gand [Ferme ou cense, Hettange-Grande, canton Cattenom, 57] via *Chambéry*, 0.64, 55 km
@@ -281,5 +269,5 @@ the hamlet's own point where DicoTopo gives one (not its commune's); 30 more che
 
 ## Settlements DicoTopo places elsewhere (0)
 
-A match of 0.85 or better more than 15 km from where the place is, and nearer its district; 18 more checked by hand (rules.yaml `dicotopo_reviewed`).
+A match of 0.85 or better more than 15 km from where the place is, and nearer its district; 19 more checked by hand (rules.yaml `dicotopo_reviewed`).
 

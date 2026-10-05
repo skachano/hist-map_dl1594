@@ -105,6 +105,10 @@ entry_index:
   1335: Alz.ing         # "Ansclnigen" (Perl): Alzing, Anselnigen in 1594 (Bouteiller); its line prints "15551"
   331: HaMeure          # "Hallieure" (Sainte-Marguerite): the line for 331 and 364, printed "551, 564" (Hellieule)
   2283: Vigneulles-Haute  # "OberfuUen" (Hombourg and Saint-Avold): Oberfüllen, Haute-Vigneulles (Oberfullen, 1681); its line prints 2285
+  968: Dommarlin-lcs-Ville  # "Enssens-la-Ville": with 967, "Dommartin enssens la Ville", Dommartin-lès-Ville (Alix n° 968, Marichal)
+  1053: Ba/.egncy       # "Basigny" (ban of Girancourt): Bazegney, as entry 955 (Bazigny, Basigny: Alix n° 1053, Marichal)
+  727: "238|Poirie (la)|742"  # "La Poyrie" (ban of Vagney): La Poirie of Saulxures, as entry 742 (Alix n° 727, Marichal)
+  1149: Noncourt        # "Moncourt" (Châtenois): Noncourt, as entry 1153 (Moncourt: Alix n° 1149, Marichal)
   1190: Dombrol-sur-Vair  # "Bouzey" (Châtenois), between Sommerécourt and Mandres-sur-Vair: Dombrot-sur-Vair, "ci-devant Bouzey" (Marichal); not the mill of Sanchey near Épinal
 
 # Index lines the scan misread or merged, as printed ("page|name as read": the printed line, or a
@@ -137,6 +141,10 @@ index_spellings:
 # Places for entries the index doesn't identify (a new place with the entry's name).
 entry_places:
   1411: nittel          # "Nittel" (office of Siersberg); the index has no line for it
+  # entries Marichal identifies apart from the index line that names them (Alix n°, DicoTopo)
+  610: laveline-devant-bruyeres-610   # "Leavéline": Laveline-devant-Bruyères; the line for Laveline-du-Houx is 702's
+  852: le-charmois-bains   # "Le Charmois devant Bains": Le Charmois of Bains-les-Bains, not Charmois-l'Orgueilleux (996)
+  1051: la-neuveville-girancourt   # "La Neufville" (ban of Girancourt): La Neuveville of Girancourt, not of Montfort (900)
 
 # Locations: {wikidata: Q…}, {lat, lon}, {approximate: other-place} or {unlocated: true}, with a note.
 geocode:
@@ -232,8 +240,7 @@ geocode:
   kontz-llauic: {wikidata: Q21911, note: "Haute-Kontz: Ober Contz, canton de Cattenom"}
   la-dcrmanville: {"at": "Rupt-sur-Moselle", "name_fr": "Dermanville", "note": "Dermanville, at Rupt-sur-Moselle: a hamlet of Rupt-sur-Moselle (DicoTopo)"}
   la-franouze: {"at": "Clerjus", "name_fr": "La Franouse", "note": "La Franouse, at Clerjus: La Franouze (1518), at Clerjus (DicoTopo)"}
-  la-grande-mairie: {"at": "Vagney", "name_fr": "La Grande-Mairie", "note": "La Grande-Mairie, at Vagney: a former seigneurie of Vagney (DicoTopo)"}
-  la-poyrie: {"at": "Vagney", "name_fr": "La Poirie", "note": "La Poirie, at Vagney: an outlying farm of Vagney (DicoTopo)"}
+  la-grande-mairie: {"at": "Saulxures-sur-Moselotte", "name_fr": "La Grande-Mairie", "note": "La Grande-Mairie, an old grange on the finage of Bamont (Saulxures-sur-Moselotte): Alix n° 725 (Marichal); not the seigneurie of Vagney"}
   lamarche-en-voevre: {"at": "Nonsard-Lamarche", "name_fr": "Lamarche-en-Woëvre", "note": "Lamarche-en-Woëvre, at Nonsard-Lamarche: canton de Vigneulles (the index, DicoTopo)"}
   launoy-ou-lanoy: {"at": "Herbéviller", "name_fr": "Launoy", "note": "Launoy, at Herbéviller: the village and castle by Herbéviller (the index, DicoTopo)"}
   le-saint-mont: {"at": "Saint-Amé", "name_fr": "Le Saint-Mont", "note": "Le Saint-Mont, at Saint-Amé: the old priory above Saint-Amé (the index, DicoTopo)"}
@@ -313,6 +320,16 @@ geocode:
   prieure-de-liesse: {"at": "Hesse", "name_fr": "Prieuré de Hesse", "note": "the priory of Hesse by Sarrebourg (the scan reads liesse)"}
   le-franc-chazcau: {"at": "Vagney", "name_fr": "Les Francs-Chasaux", "note": "Les Francs-Chasaux, a house at Vagney (the index), a former seigneurie (DicoTopo)"}
   la-foresterie: {"at": "Longchamp", "name_fr": "La Foresterie du ban de Longchamp", "note": "the Foresterie of the ban of Longchamp (the index), placed at Longchamp"}
+  idontctair: {"at": "Neuvillers-sur-Fave", "name_fr": "Le Moncel", "note": "Le Moncel, a farm of Neuvillers-sur-Fave: Le Moncel (1594), Alix n° 407 (Marichal, DicoTopo); the index's line was misread by correction 44"}
+  # entries Marichal cites by number (Alix n°) where the placement disagreed with him
+  laveline-devant-bruyeres-610: {wikidata: Q200152, note: "Laveline-devant-Bruyères: Leaveline, Alix n° 610 (Marichal)"}
+  lavcline-du-iloux: {wikidata: Q175578, note: "Laveline-du-Houx, canton de Bruyères (the index): Leaveline de Houx, Alix n° 702 (Marichal)"}
+  le-charmois-bains: {"at": "Bains-les-Bains", "name_fr": "Le Charmois", "note": "Le Charmois, a hamlet of Bains-les-Bains: Le Charmois devant Bains (Marichal cites Alix n° 352, a misprint for 852)"}
+  la-neuveville-girancourt: {"at": "Girancourt", "name_fr": "La Neuveville", "note": "La Neuveville, an outlying farm of Girancourt: La Neufville, Alix n° 1051, 'identifié indûment par Lepage' with La Neuveville-sous-Montfort (Marichal)"}
+  grandrupt: {"at": "Pair-et-Grandrupt", "name_fr": "Grandrupt", "note": "Grandrupt, a hamlet of Pair-et-Grandrupt, by Le Paire de Grand-Ruz (439): Grand Ruz, Alix n° 438 (Marichal); not Grandrupt by Senones"}
+  chatcau-sur-pcrlc: {"at": "Cheniménil", "name_fr": "Château-sur-Perle", "note": "Château-sur-Perle, ruins at Cheniménil: Chasteau sur Perle, Alix n° 671 (Marichal); the index gives Docelles"}
+  maxonchamp: {"at": "Rupt-sur-Moselle", "note": "Maxonchamp, a hamlet of Rupt-sur-Moselle: Maxonchamps, Alix n° 837 (Marichal)"}
+  dommarlin-lcs-ville: {name_fr: "Dommartin-lès-Ville", note: "Dommartin-lès-Ville, a hamlet of Ville-sur-Illon (the index's Dommarlin-lcs-Ville)"}
   # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
   # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
   liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}
@@ -362,7 +379,7 @@ geocode:
   aulnes-les-ham: {"at": "Fraize", "name_fr": "Les Aulnes", "note": "a hamlet of Fraize (the index); Les Aulnes (DicoTopo: Aulnes (Les))"}
   batlielemont: {"at": "Saint-Médard", "name_fr": "Bathelémont", "note": "Bathelémont, a hamlet and castle of Saint-Médard (the index); Bathelémont (DicoTopo: Bathelémont)"}
   eich: {"at": "Réding", "note": "a hamlet of Réding (the index)"}
-  faings-polots-les-ham: {"at": "Le Val-d'Ajol", "name_fr": "Les Faings-Potot", "note": "a hamlet of Le Val-d'Ajol (the index); Les Faings-Potot (DicoTopo: Les Fains Potalz (1594))"}
+  faings-polots-les-ham: {"at": "Girmont-Val-d'Ajol", "name_fr": "Les Faings-Potot", "note": "Les Faings-Potot, a hamlet of Girmont-Val-d'Ajol: Les Fains Potalz, Alix n° 801 (Marichal); the index gives Le Val-d'Ajol"}
   foucrey: {"at": "Serres", "note": "farms of Serres (the index)"}
   gremifontaine: {"at": "La Chapelle-aux-Bois", "note": "a hamlet of La Chapelle-aux-Bois (the index)"}
   hutte: {"at": "Xamontarupt", "note": "a hamlet of Xamontarupt (the index)"}
@@ -375,7 +392,7 @@ geocode:
   vetupaire: {"at": "Laveline", "name_fr": "Velupaire", "note": "a hamlet of Laveline (the index), the Laveline near its district; Velupaire (DicoTopo: Velupaire)"}
   laitre-dcneuvie: {"at": "Deneuvre", "note": "a hamlet of Deneuvre (the index)"}
   le-chanois: {"at": "Saint-Amé", "note": "a hamlet of the Syndicat de Saint-Amé (the index)"}
-  le-menil-bellefontainc: {"at": "Bellefontaine", "note": "a hamlet of Bellefontaine (the index)"}
+  le-menil-bellefontainc: {"at": "Bellefontaine", "note": "Le Ménil, a hamlet of Bellefontaine (the index), where a street keeps the name; Marichal's Le Magny (Le Mesnil, Alix n° 855) not followed"}
   maisons-de-raon-ce: {"at": "Bellefontaine", "note": "an écart of Bellefontaine (the index); not Raon-aux-Bois"}
   le-monccl: {"at": "Saint-Léonard", "name_fr": "Le Moncel", "note": "Le Moncel, a hamlet of Saint-Léonard (DicoTopo: Moncel (Le)); the index gives Saulcy"}
   moniet: {"at": "Deneuvre", "note": "the old priory of le Moniet, near Deneuvre (the index)"}
@@ -449,6 +466,7 @@ dicotopo_reviewed:
   mont-devant-sassey: "Mont-devant-Sassey, canton de Dun (the index); not Mont-sous-les-Côtes"
   prieure-de-liesse: "the priory of Hesse, not the village"
   # placements (section 2)
+  le-charmois-bains: "Le Charmois devant Bains (the entry's own words; Marichal), listed last in the mayoralty of Longchamp before the terre of Fontenoy; not the grange of Charmois at Le Val-d'Ajol"
   kollig: "Köllig by Nittel, the book's Kolchen (rules.yaml geocode); not Kirschnaumen"
   bure: "Bure, canton de Montiers-sur-Saulx (the index); not the écart of Muzeray"
   remoiville: "Remoiville, canton de Montmédy (the index); not Ramonville"

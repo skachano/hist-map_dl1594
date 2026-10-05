@@ -1,14 +1,15 @@
 status,index_page,index_name,printed,number,entry,entry_name,entry_page,similarity,place_id,note
 not in index,,,,,534,Villeeel-sur-Trin,54,,vilcey-sur-trey,
+not in index,,,,,610,Leavéline,57,,laveline-devant-bruyeres,
 not in index,,,,,725,La Grande Mairie,61,,la-grande-mairie,
-not in index,,,,,727,La Poyrie,61,,la-poyrie,
 not in index,,,,,763,Xouaruz,62,,xouaruz,
 not in index,,,,,838,Buz,64,,buz,
+not in index,,,,,852,Le Charmois-dcvant-Bains,65,,le-charmois-bains,
 not in index,,,,,865,C'vrjus,65,,c-vrjus,
 not in index,,,,,888,Bappel,66,,rapey,
 not in index,,,,,1038,Pierreficte,71,,pierreficte,
 not in index,,,,,1045,Abvefvenet-la-Grande,71,,abvefvenet-la-grande,
-not in index,,,,,1053,Basigny,72,,basigny,
+not in index,,,,,1051,LaNeufville,71,,la-neuveville-girancourt,
 not in index,,,,,1238,Hymerstroff,79,,hymerstroff,
 not in index,,,,,1319,Edelnigen,81,,edelnigen,
 not in index,,,,,1334,Bcltsstroff,81,,bcltsstroff,
@@ -41,17 +42,22 @@ no entry,190,Bettlainville,1534,,,,,1.00,,printed 1534: Henselhofen (corrections
 no entry,192,Bonfays,2412,,,,,1.00,bonfays-legeville-et-bonfays,2412 is the Dominican nuns of Nancy
 no entry,192,Bouvroy,776,,,,,1.00,,"776 is Rouveroy, the grange of Rouveroye near Remiremont (Rouveroye's line, rules.yaml entry_index); not a grange of Celles"
 no entry,193,Bouzey,1190,,,,,1.00,,"1190 is Bouzey of Châtenois: Dombrot-sur-Vair, ci-devant Bouzey (Dombrot's line, rules.yaml entry_index); not the mill of Sanchey"
+no entry,196,Charniois-rOrgueilIcux,852,,,,,1.00,charniois-rorgueilicux,"852 is Le Charmois devant Bains, of Bains-les-Bains (Marichal); not Charmois-l'Orgueilleux (rules.yaml entry_places)"
 no entry,202,Domjulien,927,,,,,1.00,domjulien,Dombasle (927) is Dombasle-en-Xaintois
 no entry,203,Edling,1519,,,,,1.00,edling,Edlingen (1719) is Adelange
+no entry,204,Enssens-la-Ville,968,,,,,1.00,,"968 is not a place of its own: ""Dommartin enssens la Ville"" (967-968), Dommartin-lès-Ville (Alix n° 968, Marichal); rules.yaml entry_index"
 no entry,208,Fosses (les Hautes et Basses-),2154,,,,,1.00,,"printed 2154: Drulben, which is Trulben"
 no entry,217,Hestroff,1351,,,,,1.00,hestroff,the editor's corrections: 'ce numéro doit être effacé à l'art. Hestroff' (1351 is Helstroff)
 no entry,217,Hilsprich',2196,,,,,1.00,,"printed 2196: Zell, which is Zellen; no entry fits Hilsprich"
 no entry,218,Honzrath,1653,,,,,1.00,,"printed 1653: Himradt, which is Hellimer; no entry of Merzig fits"
 no entry,219,Hymont,1,,,,,1.00,hymont,Chenymont (971) is Chenilmont
 no entry,221,Kassheim,1497,,,,,1.00,,corrections: replaced by Kaisen
+no entry,223,Lavcline-du-Iloux,610,,,,,1.00,laveline-du-houx,"610 is Leaveline, Laveline-devant-Bruyères (Alix n° 610, Marichal); the line, Laveline-du-Houx, is 702's (rules.yaml entry_places)"
 no entry,225,Lixing-lès-Rouhling,2250,,,,,1.00,,"printed 2250: Vor Eberssweiller, which is Farébersviller"
+no entry,231,Moncourt,1149,,,,,1.00,,"1149 is Noncourt (Moncourt, Alix n° 1149, Marichal), as entry 1153; rules.yaml entry_index"
 no entry,231,Monlbronn,2251,,,,,1.00,,printed 2251: Morsbach's entry
 no entry,229,Ménil (le),345,,,,,1.00,le-menil,Pageolle (345) is Pajaille
+no entry,234,NeuveviHc-souis-Montfort (la),1051,,,,,1.00,la-neuveville-sous-montfort,"1051 is La Neuveville of Girancourt (Alix n° 1051, Marichal: 'identifié indûment par Lepage'); rules.yaml entry_places"
 no entry,239,Ponlpierre,2271,,,,,1.00,pontpierre,"printed 2271: Bausstorff, which is Boustroff (Pontpierre is 2259, Steinbiedersdorf)"
 no entry,251,Saint-Remimont,5b,,,,,1.00,saint-remimont-buigneville,Removille (1165) is Removille
 no entry,255,Vandelainville,525,,,,,1.00,vandelainville,525 is Vandières
@@ -272,6 +278,7 @@ corrected,185,Arches,6S1,,681,Arches,59,1.00,arches,
 corrected,239,Pouxeux,695,,693,Pouxcy,60,0.77,pouxeux,
 corrected,238,Poirie (la),703,,705,La Poiric,60,1.00,la-poirie,
 corrected,254,Vagney,725,,726,Vagny,61,0.91,vagney,
+corrected,238,Poirie (la),,,727,La Poyrie,61,0.83,la-poirie-saulxures,number not printed in the index
 corrected,211,Gerbamonl,750,,730,Gerbaumonl,61,0.95,gerbamont,
 corrected,256,Vecoux,755,,753,Vescoux,62,0.92,vecoux,
 corrected,241,Ramonchamp,761,,764,Ramonchamps,62,0.95,ramonchamp,
@@ -296,6 +303,7 @@ corrected,186,Avillers,,,956,Ahévillc,68,0.75,avillers,number not printed in th
 corrected,244,Rozeroile,938,,958,Rozcrotte,68,0.89,rozerotte,
 corrected,255,Valleroy-le-Sec,,,960,Valleroy,68,1.00,valleroy-le-sec,number not printed in the index
 corrected,228,Maroncourt,,,964,Moyroncourt,69,0.86,maroncourt,number not printed in the index
+corrected,202,Dommarlin-lcs-Ville,,,968,Enssens-la-Ville,69,0.45,dommartin-les-ville,number not printed in the index
 corrected,252,Tatignécourl,975,,973,Tattignécourt,69,0.96,tatignecourt,
 corrected,197,Chaumouzcy,1005,,1003,Chamoysy,70,0.67,chaumousey,
 corrected,192,Bonfays,,,1005,Bonfay,70,0.92,bonfays,number not printed in the index
@@ -306,6 +314,7 @@ corrected,255,Varmonzey,1055,,1035,Varmenzey,71,0.89,varmonzey,
 corrected,256,Vaubexy,1056,,1036,Vaubexey,71,0.93,vaubexy,
 corrected,251,Saint-Vallier,1057,,1037,Sainct-Vallier,71,1.00,saint-vallier,
 corrected,244,Itue-devant-Dompaire(/a),,,1049,La Rue devant Dompaire,71,0.89,itue-devant-dompaire,number not printed in the index
+corrected,188,Ba/.egncy,,,1053,Basigny,72,0.71,bazegney,number not printed in the index
 corrected,183,Adoncourt,G5,,1063,Aboncourt,72,0.89,adoncourt,
 corrected,253,Torchon (le),,,1075,Torchon,72,1.00,le-torchon,number not printed in the index
 corrected,238,Pille (la),,,1084,La Pille,73,1.00,la-pille,number not printed in the index
@@ -317,7 +326,8 @@ corrected,251,Saint-Remimont,,,1133,Sainct-Remymont,75,0.92,saint-remimont-buign
 corrected,184,Aillanvillc,1456,,1136,Alainville,75,0.86,aillianville,
 corrected,212,Gonvaux,1157,,1137,Gonbaulx,75,0.95,gonvaux,
 corrected,259,Viocourt,59,,1139,Vioeourt,75,1.00,viocourt,
-corrected,235,Noncourt,1155,,1153,Noncourt,75,1.00,noncourt,
+corrected,235,Noncourt,1155,,1149,Moncourt,75,0.88,noncourt,
+corrected,235,Noncourt,,,1153,Noncourt,75,1.00,noncourt,number not printed in the index
 corrected,184,Aillanvillc,1466,,1156,Allainville. ',76,0.91,aillianville,
 corrected,222,Landaville,1168,,1169,Landaville,76,1.00,landaville,
 corrected,232,Morclrnaison,75,,1173,Moremaison,76,0.82,morelmaison,
@@ -539,7 +549,6 @@ spelling differs,256,Velolie-et-Tatignécourt,9S9,,959,Villotte,68,0.41,velotte-
 spelling differs,259,Void-d'Escles,988,,988,LeVoid,69,0.47,void-d-escles,
 spelling differs,196,Charniois-rOrgueilIcux,996,,996,Charmois,70,0.48,charniois-rorgueilicux,
 spelling differs,197,Chaumouzcy,1004,,1004,Cliamoysy-la-Villc,70,0.38,chaumousey,
-spelling differs,234,NeuveviHc-souis-Montfort (la),1051,,1051,LaNeufville,71,0.42,la-neuveville-sous-montfort,
 spelling differs,253,Thiétry,1071,,1071,La Grosse verrière Tiédry,72,0.37,thietry,
 spelling differs,217,Hennezel (verrerie),1072,,1072,La verrière Hennez^l,72,0.45,hennezel-darney,
 spelling differs,198,Claudon,1074,,1074,Cbastillon,72,0.47,claudon,
@@ -1074,7 +1083,6 @@ agrees,220,Jussampt,606,,606,Jussaruz,57,0.62,jussarupt,
 agrees,217,Herpctmont,607,,607,Hapelmont,57,0.84,herpelmont,
 agrees,239,Prey,608,,608,Prey,57,1.00,prey,
 agrees,223,Laval,609,,609,Laval,57,1.00,laval-sur-vologne,
-agrees,223,Lavcline-du-Iloux,610,,610,Leavéline,57,0.94,laveline-devant-bruyeres,
 agrees,213,Granges,611,,611,Granges,57,1.00,granges-sur-vologne,
 agrees,196,Champdray,612,,612,Champdray,57,1.00,champdray,
 agrees,257,Vienvilte,614,,614,Vielville,57,0.89,vienville,
@@ -1123,7 +1131,7 @@ agrees,188,Barbay-Scroux,666,,666,Serou,59,0.95,barbey-seroux,
 agrees,257,Vichibure,667,,667,Vichibure,59,1.00,vichibure,
 agrees,242,Rembaville,669,,669,Rambcville,59,0.80,rembaville,
 agrees,197,Cheniménil,670,,670,Chenusmesnil,59,0.82,chenimenil,
-agrees,196,Châtcau-sur-Pcrlc,671,,671,Chasteau-sur-Pcrlc,59,0.97,chateau-de-saint-jean-du-marche,
+agrees,196,Châtcau-sur-Pcrlc,671,,671,Chasteau-sur-Pcrlc,59,0.97,chatcau-sur-pcrlc,
 agrees,213,Granges,672,,672,Granges,59,1.00,granges-sur-vologne,
 agrees,211,Girecourt,673,,673,Girecourt,59,1.00,girecourt-sur-durbion,
 agrees,209,Frémifontaine,674,,674,Fremyfontaine,59,0.92,fremifontaine,
@@ -1152,7 +1160,7 @@ agrees,236,Olichamp,698,,698,Olychamps,60,0.82,olichamp,
 agrees,244,Rouveroye,699,,699,Rouvcrois,60,0.78,rouveroye,
 agrees,236,Oulrclean,700,,700,Outreleau,60,0.89,oulrclean,
 agrees,252,Tendon,70i,,701,Tendon,60,1.00,tendon,
-agrees,223,Lavcline-du-Iloux,702,,702,Leavelinc de Houx,60,0.80,laveline-devant-bruyeres,
+agrees,223,Lavcline-du-Iloux,702,,702,Leavelinc de Houx,60,0.80,laveline-du-houx,
 agrees,261,Xamontarupt,703,,703,Chamonlaruz,60,0.95,xamontarupt,
 agrees,219,Hutte (ta),704,,704,La Hutte,60,0.83,hutte,
 agrees,200,Démange-Champ,706,,706,Demenge-Champs,60,0.88,demange-champ,
@@ -1283,7 +1291,6 @@ agrees,239,Pré-Derrière,848,,848,Le Prey,65,0.95,pre-derriere,
 agrees,200,Demrupl,849,,849,Demeruz,65,0.71,demrupl,
 agrees,229,Ménil (le),850,,850,Le Mesnil,65,0.91,le-menil-229,
 agrees,250,Saint-Maurice,851,,851,Sainct-Maurise,65,0.92,saint-maurice-sur-moselle,
-agrees,196,Charniois-rOrgueilIcux,852,,852,Le Charmois-dcvant-Bains,65,0.50,charniois-rorgueilicux,
 agrees,208,Fontenoy-la-Ville,854,,854,Fontenoy-la-Ville,65,1.00,fontenoy-la-ville,
 agrees,229,Ménil (le),855,,855,Le Mesnil,65,0.91,le-menil-bellefontainc,
 agrees,231,Montmotler,856,,856,Montmonslier,65,0.82,montmotier,
@@ -1379,8 +1386,7 @@ agrees,226,Muiîeeourt,962,,962,Madrecourl,69,0.70,muiieeourt,
 agrees,240,Racécourl,963,,963,Baeecourt,69,0.89,racecourt,
 agrees,220,Joncy,965,,965,Juxey,69,0.60,jorxey,
 agrees,212,Gorhey,966,,966,Goherey,69,0.77,gorhey,
-agrees,202,Dommarlin-lcs-Ville,967,,967,Dommartin,69,0.69,dommarlin-lcs-ville,
-agrees,204,Enssens-la-Ville,968,,968,Enssens-la-Ville,69,1.00,enssens-la-ville,
+agrees,202,Dommarlin-lcs-Ville,967,,967,Dommartin,69,0.69,dommartin-les-ville,
 agrees,222,Lamerey,969,,969,Lamerey,69,1.00,lamerey,
 agrees,255,Valleroy-le-Sec,970,,970,Valleroy,69,1.00,valleroy-le-sec,
 agrees,197,Chenilmont,971,,971,Chcnymont,69,0.84,chenilmont,
@@ -1522,7 +1528,6 @@ agrees,244,Rouvres-cn-Xaintois,1145,,1145,Rouvrc-en-Sainclois,75,0.88,rouvres-en
 agrees,260,Vouxey,1146,,1146,Vouxey,75,1.00,vouxey,
 agrees,246,Saulxures-lez-Bulgnéville,1147,,1147,Saulxures,75,1.00,saulxures-les-bulgneville,
 agrees,253,Tolainviltc,1148,,1148,Toutainville,75,0.96,totainville,
-agrees,231,Moncourt,1149,,1149,Moncourt,75,1.00,maconcourt,
 agrees,214,Hagnéville,1150,,1150,Hignéville,75,0.95,hagneville,
 agrees,229,Ménil-en-Xaînlois,1151,,1151,Le Mesnil-cn-Sainctois,75,0.90,menil-en-xaintois,
 agrees,225,Longchamp,1152,,1152,Longchamps,75,0.95,longchamp-sous-chatenois,
