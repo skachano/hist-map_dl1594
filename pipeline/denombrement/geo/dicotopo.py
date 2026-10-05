@@ -356,7 +356,7 @@ def review_settlements(idx: Index, places: dict, parents: dict, centres: dict, s
             best[pid] = (hits[0], name, near)
 
     reviewed = reviewed or {}
-    named, disagree, silenced = [], [], 0
+    named, disagree, silenced, silenced_named = [], [], 0, 0
     for p in settlements:
         if p["id"] not in best:
             continue
@@ -372,6 +372,9 @@ def review_settlements(idx: Index, places: dict, parents: dict, centres: dict, s
                                       h.place["dpt"]) if x)
         seen = f"*{h.spelling}* ({h.year})" if h.year else f"*{h.spelling}*"
         if not (p["wikidata_id"] or p["geonames_id"]) and h.score >= REVIEW_MIN and moved <= NEAR_KM:
+            if p["id"] in reviewed:   # checked by hand: the name stands
+                silenced_named += 1
+                continue
             if spelling_key(label) != spelling_key(p["name_fr"]) or (own and moved > 0.5):
                 point = f"; its own point {hit[0]:.5f}, {hit[1]:.5f} ({moved:.1f} km)" if own and moved > 0.5 else ""
                 named.append((h.score, f"- `{p['id']}` {p['name_fr']} → **{label}** [{where}] via {name!r} ~ {seen}, "
@@ -386,7 +389,8 @@ def review_settlements(idx: Index, places: dict, parents: dict, centres: dict, s
                                     f"{h.score:.2f}, {h.km:.0f} km from its district, {moved:.0f} km from where it is"))
     return ([f"## Settlements at their commune: DicoTopo's name ({len(named)})", "",
              "Approximate places (no Wikidata or GeoNames item) with a match within 12 km: the modern name, and",
-             "the hamlet's own point where DicoTopo gives one (not its commune's).", ""]
+             "the hamlet's own point where DicoTopo gives one (not its commune's)"
+             + (f"; {silenced_named} more checked by hand (rules.yaml `dicotopo_reviewed`)." if silenced_named else "."), ""]
             + [line for _, line in sorted(named, key=lambda x: -x[0])]
             + ["", f"## Settlements DicoTopo places elsewhere ({len(disagree)})", "",
                f"A match of {DISAGREE_MIN} or better more than {FAR_KM:.0f} km from where the place is, and nearer its district"
