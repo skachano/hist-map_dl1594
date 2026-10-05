@@ -4,6 +4,9 @@ pdf/
 # Page text extracted from the scan (rebuilt by make extract)
 data/raw/
 
+# Hand-written notes of entries to check (read by make dicotopo)
+data/review/manual-check.md
+
 # Secrets
 .env
 
