@@ -69,8 +69,23 @@ def _fix_word(m: re.Match) -> str:
     return fixed[0].upper() + fixed[1:] if word[0].isupper() else fixed
 
 
+# The OCR reads â as à: "Chàtelet", "Blàmont". Inside a word à is always â, except in the Latin
+# "aliàs" and where words run together ("jusquesàunchesne"), which is before a vowel.
+_A_GRAVE = re.compile(r"(?<=[^\W\d_])à(?=[^\W\d_aeouyAEOUY])")
+
+
+def _fix_a_grave(m: re.Match) -> str:
+    return m.group() if m.group().lower() == "aliàs" else _A_GRAVE.sub("â", m.group())
+
+
+def fix_circumflex(text: str) -> str:
+    """"Chàtelet" -> "Châtelet": safe for names too, unlike the word fixes."""
+    return re.sub(r"\w*à\w*", _fix_a_grave, text)
+
+
 def fix_ocr(text: str) -> str:
     """Correct the OCR's usual misreadings of common words in this font."""
+    text = fix_circumflex(text)
     return normalize_spaces(_WORD.sub(_fix_word, text))
 
 

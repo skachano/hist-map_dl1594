@@ -113,7 +113,7 @@ def group_entries(lines, with_lines: bool = False) -> list:
         return rec.page.pdf in _two_columns() and line.x0 > rec.page.width / 2 - 40
 
     for rec, line, _ in lines:
-        text = line.text.strip()
+        text = clean.fix_circumflex(line.text.strip())
         noisy = bool(_RULE_NOISE.match(text))
         text = _RULE_NOISE.sub("", text)
         if _is_heading(text) or not re.search(r"\w", text):

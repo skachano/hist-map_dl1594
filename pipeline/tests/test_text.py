@@ -13,6 +13,13 @@ def test_fix_ocr_common_words():
     assert clean.fix_ocr("Delle, Eltz") == "Delle, Eltz"  # only whole words
 
 
+def test_fix_ocr_a_grave_inside_a_word_is_a_circumflex():
+    assert clean.fix_ocr("Chàtelet (le), canton de Chàtel, Blàmont") == "Châtelet (le), canton de Châtel, Blâmont"
+    assert clean.fix_ocr("Neufchàteau") == "Neufchâteau"
+    assert clean.fix_ocr("Ficherai, aliàs Fischern, à Nancy, là") == "Ficherai, aliàs Fischern, à Nancy, là"
+    assert clean.fix_ocr("jusquesàunchesne") == "jusquesàunchesne"
+
+
 def test_fix_name_first_letter():
     assert clean.fix_name("llagécourt") == "Hagécourt"
     assert clean.fix_name("lmling") == "Imling"
