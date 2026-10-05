@@ -5,7 +5,7 @@ COMPOSE  := docker compose
 PIPELINE := $(COMPOSE) run --rm pipeline
 WEB      := $(COMPOSE) run --rm web
 
-.PHONY: help build install dev test test-py test-web info extract validate schema parse curate geocode geometry build-data data e2e pipeline-shell web-shell clean
+.PHONY: help build install dev test test-py test-web info extract validate schema parse curate geocode dicotopo geometry build-data data e2e pipeline-shell web-shell clean
 
 help:
 	@echo "make build          Build the Docker images"
@@ -18,6 +18,7 @@ help:
 	@echo "make parse          Stage 3: parse the Dénombrement -> data/extracted/ (+ parse_report.md)"
 	@echo "make curate         Stage 4: rebuild data/curated/*.csv + data/review/report.md"
 	@echo "make geocode        Stage 5: coordinates + modern names (Wikidata, GeoNames), then run make curate"
+	@echo "make dicotopo       Prototype: DicoTopo suggestions for garbled and unlocated names -> data/review/dicotopo.md"
 	@echo "make geometry       Stage 6: settlement cells + territory areas -> data/geometry/"
 	@echo "make build-data     Stage 7: compile the dataset into web/public/data/ (make dev builds it when missing)"
 	@echo "make data           parse, curate, geocode, curate, geometry, build-data: the whole chain after a change to rules.yaml or manual/"
@@ -67,6 +68,9 @@ curate:
 
 geocode:
 	$(PIPELINE) python -m denombrement geocode
+
+dicotopo:
+	$(PIPELINE) python -m denombrement dicotopo
 
 geometry:
 	$(PIPELINE) python -m denombrement geometry

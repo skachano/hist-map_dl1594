@@ -16,6 +16,7 @@ def main() -> None:
     sub.add_parser("parse", help="Stage 3: parse the Dénombrement into data/extracted/ (entries, territories, chaumes)")
     sub.add_parser("curate", help="Stage 4: build data/curated/*.csv + data/review/report.md")
     sub.add_parser("geocode", help="Stage 5: coordinates and modern names -> data/curated/geocoding.csv")
+    sub.add_parser("dicotopo", help="prototype: DicoTopo suggestions for garbled and unlocated names -> data/review/dicotopo.md")
     sub.add_parser("geometry", help="Stage 6: settlement cells and territory areas -> data/geometry/")
     sub.add_parser("build-data", help="Stage 7: compile the dataset into web/public/data/")
     args = parser.parse_args()
@@ -73,6 +74,9 @@ def main() -> None:
     elif args.cmd == "geocode":
         from denombrement.geo import geocode
         geocode.run()
+    elif args.cmd == "dicotopo":
+        from denombrement.geo import dicotopo
+        dicotopo.run()
     elif args.cmd == "geometry":
         from denombrement.geo import territories
         territories.run()
