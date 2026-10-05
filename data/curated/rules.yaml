@@ -152,24 +152,66 @@ geocode:
   les-cours: {"at": "Saulcy-sur-Meurthe", "note": "Les Cours, a hamlet of Saulcy-sur-Meurthe (DicoTopo); the index's Saulcy, not Le Saulcy"}
   le-chenois: {"at": "Saulcy-sur-Meurthe", "note": "Le Chénois, a former commune joined to Saulcy-sur-Meurthe (DicoTopo); the index's Saulcy, not Le Saulcy"}
   mardigny: {approximate: vathimont, name_fr: Ban de Redigny, note: "Redigny, entry 503 after Vatimont (502): the ban de Redigny, a franc-alleu near Vatimont, Redigny-lès-Wauthiemont in 1616 (Bouteiller, DicoTopo); not the index's doubtful Mardigny (?), 30 km away. Placed at Vatimont"}
+  # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
+  # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
+  liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}
+  noiregoutlc: {name_fr: "Noiregoutte", note: "Noiregoutte, a hamlet of Plainfaing (DicoTopo: Noiregoutte); the index's Noiregoutlc"}
+  girompairc: {name_fr: "Girompaire", note: "Girompaire, a hamlet of Saint-Léonard (DicoTopo: Girompaire); the index's Girompairc"}
+  gawestroff: {name_fr: "Gaweistroff", note: "Gaweistroff, in Villing (DicoTopo: Wistorf (1594)); the index's Gawestroff"}
+  cens-la-vhle: {name_fr: "Cens-la-Ville", note: "Cens-la-Ville, a hamlet of Sapois (DicoTopo: Enssens la Ville (1569)); the index's Cens-la-VHle"}
+  cheuvry: {name_fr: "Chevry", note: "Chevry, a hamlet of Taintrux (DicoTopo: Cheuvry (1845)); the index's Cheuvry"}
+  chatimont: {name_fr: "Xatimont", note: "Xatimont, a farm of Sanchey (DicoTopo: Chatimont); the index's Chatimont"}
+  clairgoutte: {name_fr: "Clairegoutte", note: "Clairegoutte, a hamlet of Fraize (DicoTopo: Clairgoutte (1711)); the index's Clairgoutte"}
+  le-mazcville: {name_fr: "Mazeville", note: "Mazeville, a hamlet of Fraize (DicoTopo: Mauzeville (1594)); the index's Le Mazcville"}
+  petil-ei-ci-willer: {name_fr: "Petit-Eberswiller", note: "Petit-Eberswiller, in Macheren (DicoTopo: Eberssweiller (1594)); the index's Petil-Ei>ci>willer"}
+  chaine-goutte: {name_fr: "Chênegoutte", note: "Chênegoutte, a farm of Pouxeux (DicoTopo: Chaine-Goutte (1845)); the index's Chaîne-Goutte"}
+  conlrexard: {name_fr: "Contrexard", note: "Contrexard, a hamlet of Basse-sur-le-Rupt (DicoTopo: Contrexart (1569)); the index's Çonlrexard"}
+  chenilmont: {name_fr: "Chenimont", note: "Chenimont, a farm of Dompaire (DicoTopo: Chenilmont (1845)); the index's Chenilmont"}
+  relincourt: {name_fr: "Relaincourt", note: "Relaincourt, in Lamorville (DicoTopo: Relincourt (1325)); the index's Relincourt"}
+  hin-in: {name_fr: "Hinzing", note: "Hinzing, a hamlet of Holving (DicoTopo: Huntzingen (1594)); the index's Hin/in?"}
+  sainl-prayel: {name_fr: "Saint-Prayel", note: "Saint-Prayel, a hamlet of Moyenmoutier (DicoTopo: Sainct Prayer (1594)); the index's Sainl-Prayel"}
+  sterek-hauie: {name_fr: "Sierck-Haute", note: "Sierck-Haute, in Kerling-lès-Sierck (DicoTopo: Udensircq); the index's Sterek-Hauie"}
+  henrieel: {name_fr: "Henricel", note: "Henricel, a hamlet of Claudon (DicoTopo: La verrière Henricé (1549)); the index's Henrieel"}
+  gerarcourt: {name_fr: "Gérardcourt", note: "Gérardcourt, a hamlet (a lordship) of Ville-en-Vermois (DicoTopo: Gérarcourt (1600)); the index's Gérarcourt"}
+  lepangc: {name_fr: "Lépanges", note: "Lépanges, a hamlet of Rupt-sur-Moselle (DicoTopo: L’Espange (1682)); the index's Lépangc"}
+  brisevcrre: {name_fr: "Bisseval", note: "Bisseval, a hamlet of Hennezel (DicoTopo: Brisevère); the index's Brisevcrre"}
+  mortagnc: {name_fr: "Mortagne", note: "Mortagne, a hamlet of Mont-sur-Meurthe (DicoTopo: Mortane (1296)); the index's Mortagnc"}
+  levai: {name_fr: "Leyval", note: "Leyval, a hamlet of Val-d'Ajol (DicoTopo: Leyval); the index's Levai"}
+  rcssoneourt: {name_fr: "Ressoncourt", note: "Ressoncourt, a farm of Rambucourt (DicoTopo: Ressoncourt); the index's Rcssoneourt"}
+  thunimonl-ham: {name_fr: "Thunimont", note: "Thunimont, a hamlet of Harsault (DicoTopo: Tunimont (1779)); the index's Thunimonl. ham"}
+  ncyvillers: {name_fr: "Meyvillers", note: "Meyvillers, a hamlet of Saint-Amé (DicoTopo: Mailleviler (1515)); the index's Ncyvillers"}
+  faycmont: {name_fr: "Fayemont", note: "Fayemont, a hamlet of Ban-de-Sapt (DicoTopo: Fayemont); the index's Faycmont"}
+  zondrangc: {name_fr: "Zondrange", note: "Zondrange, a hamlet of Marange-Zondrange (DicoTopo: Gonderingen (1594)); the index's Zondrangc"}
+  mnilleronfaing: {name_fr: "Mailleronfaing", note: "Mailleronfaing, a hamlet of Bellefontaine (DicoTopo: Milleronfain (1594)); the index's Mnilleronfaing"}
+  dcveline: {name_fr: "Déveline", note: "Déveline, a hamlet of Anould (DicoTopo: Deuveline (1594)); the index's Dcveline"}
+  godchurc: {name_fr: "Godchure", note: "Godchure, a farm of Saint-Hubert (DicoTopo: Gaderscheuren (1594)); the index's Godchurc"}
+  la-prclle: {name_fr: "Prelle", note: "Prelle, a hamlet of Basse-sur-le-Rupt (DicoTopo: Breire (1594)); the index's La Prclle"}
+  le-kouaux: {name_fr: "Le Rouaux", note: "Le Rouaux, a hamlet of Ban-de-Sapt (DicoTopo: Rouau (1594)); the index's Le Kouaux"}
+  le-sautelz: {name_fr: "Le Sauté", note: "Le Sauté, an outlying farm of Hadol (DicoTopo: Le Sautel (1594)); the index's Le Sautelz"}
+  chambrc-de-moulin: {name_fr: "La Chambre-de-Moulin", note: "La Chambre-de-Moulin, in Saint-Nabord (DicoTopo: La Chambre de Molin (1594)); the index's Chambrc-de-Moulin"}
+  zcllen: {name_fr: "Zellen", note: "Zellen, a farm and mill of Petit-Tenquin (DicoTopo: Zell (1594)); the index's Zcllen"}
+  la-louvicrc: {name_fr: "La Louvière", note: "La Louvière, a farm of Hurbache (DicoTopo: La Rouviere (1594)); the index's La Louvicrc"}
+  titling: {name_fr: "Titting", note: "Titting, a hamlet of Holling (DicoTopo: Tutingen (1594)); the index's Titling"}
+  verconroye: {name_fr: "Le Val-Courroye", note: "Le Val-Courroye, an outlying farm of Saint-Nabord (DicoTopo: Le Verd Corrois (1594)); the index's Verconroye"}
+  mexel: {name_fr: "Mexet", note: "Mexet, an outlying farm of Haussonville (DicoTopo: Marxey (1594)); the index's Mexel'"}
   scheuer-hof: {approximate: nohn, note: "Scheuer-Hof, a farm of the village of Nohn (Saarland) that no longer exists (the editor's corrections); not the Scheuer-Hof in Luxembourg. Placed at Nohn"}
   # hamlets, farms and lost places checked against the index (location audit)
   aray-le-lan-v-ban-de-moyenmouticr: {"at": "Moyenmoutier", "note": "le ban d'Aray, a ban of Moyenmoutier (the index)"}
   bary: {"unlocated": true, "note": "Bury, a lost village of the prévôté of Sierck (the index gives no commune); not the Bure matched by name"}
   aulnes-les-ham: {"at": "Fraize", "note": "a hamlet of Fraize (the index)"}
-  batlielemont: {"at": "Saint-Médard", "note": "Bathelémont, a hamlet and castle of Saint-Médard (the index)"}
+  batlielemont: {"at": "Saint-Médard", "name_fr": "Bathelémont", "note": "Bathelémont, a hamlet and castle of Saint-Médard (the index); Bathelémont (DicoTopo: Bathelémont)"}
   eich: {"at": "Réding", "note": "a hamlet of Réding (the index)"}
-  faings-polots-les-ham: {"at": "Le Val-d'Ajol", "note": "a hamlet of Le Val-d'Ajol (the index)"}
+  faings-polots-les-ham: {"at": "Le Val-d'Ajol", "name_fr": "Les Faings-Potot", "note": "a hamlet of Le Val-d'Ajol (the index); Les Faings-Potot (DicoTopo: Les Fains Potalz (1594))"}
   foucrey: {"at": "Serres", "note": "farms of Serres (the index)"}
   gremifontaine: {"at": "La Chapelle-aux-Bois", "note": "a hamlet of La Chapelle-aux-Bois (the index)"}
   hutte: {"at": "Xamontarupt", "note": "a hamlet of Xamontarupt (the index)"}
-  klang-vil: {"at": "Klang", "note": "the village of Klang (com. de Kemplich in the index)"}
+  klang-vil: {"at": "Klang", "name_fr": "Klang", "note": "the village of Klang (com. de Kemplich in the index); Klang (DicoTopo: Klingen (1594))"}
   la-nolle: {"at": "Corcieux", "note": "a village of Corcieux (the index)"}
   la-rue-sous-llarol: {"at": "Harol", "note": "a hamlet of Harol (the index)"}
-  longcroyc: {"at": "Harol", "note": "a hamlet of Harol (the index)"}
+  longcroyc: {"at": "Harol", "name_fr": "Longeroye", "note": "a hamlet of Harol (the index); Longeroye (DicoTopo: Les Longues Royes (1594))"}
   putlegney: {"at": "Harol", "note": "a hamlet of Harol (the index)"}
   la-trouchc: {"at": "Laveline", "note": "a hamlet of Laveline (the index)"}
-  vetupaire: {"at": "Laveline", "note": "a hamlet of Laveline (the index), the Laveline near its district"}
+  vetupaire: {"at": "Laveline", "name_fr": "Velupaire", "note": "a hamlet of Laveline (the index), the Laveline near its district; Velupaire (DicoTopo: Velupaire)"}
   laitre-dcneuvie: {"at": "Deneuvre", "note": "a hamlet of Deneuvre (the index)"}
   le-chanois: {"at": "Saint-Amé", "note": "a hamlet of the Syndicat de Saint-Amé (the index)"}
   le-menil-bellefontainc: {"at": "Bellefontaine", "note": "a hamlet of Bellefontaine (the index)"}
@@ -177,7 +219,7 @@ geocode:
   le-monccl: {"at": "Saulcy-sur-Meurthe", "note": "a hamlet of Saulcy (the index)"}
   moniet: {"at": "Deneuvre", "note": "the old priory of le Moniet, near Deneuvre (the index)"}
   neune: {"at": "Vienville", "note": "a hamlet of Vienville (the index)"}
-  thin-ville: {"at": "Vienville", "note": "a hamlet of Vienville (the index)"}
+  thin-ville: {"at": "Vienville", "name_fr": "Thiriville", "note": "a hamlet of Vienville (the index); Thiriville (DicoTopo: Thiriville)"}
   neuvcville: {"at": "Valleroy", "note": "a hamlet of Valleroy (the index)"}
   portieux: {"at": "Rosières-aux-Salines", "note": "the stud farm (jumenterie) of Portieux at Rosières-aux-Salines (the index); not the village of Portieux"}
   rembaville: {"at": "Corcieux", "note": "a village of Corcieux (the index)"}
@@ -194,7 +236,7 @@ geocode:
   villers-le-prud-homme: {"at": "Ville-au-Val", "note": "an écart and chapel of Ville-au-Val (the index)"}
   dittclingen: {"unlocated": true, "note": "a destroyed village of the county of Forbach, 'emplacement inconnu' (the index)"}
   bouzey: {"at": "Sanchey", "note": "a hamlet of Sanchey (the index)"}
-  villard: {"at": "Circourt", "note": "a hamlet of Circourt (the index), the Circourt near its district"}
+  villard: {"at": "Circourt", "name_fr": "Villars", "note": "a hamlet of Circourt (the index), the Circourt near its district; Villars (DicoTopo: Villard (1845))"}
   saint-jean-pierrefort: {"at": "Martincourt", "note": "a hamlet of Martincourt (the index), the one near its district"}
   breehaincouri: {"at": "Gircourt", "note": "a hamlet of Gircourt (the index), the one near its district"}
   les-fouies: {"at": "Granges", "note": "a censé of Granges (the index), the one near its district"}
