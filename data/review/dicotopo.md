@@ -77,18 +77,10 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Rombach (Le) [Cense, Valtin, canton Fraize, 88] via *Rombach (Le)*, 0.72, 23 km
   2. Rammbach [Ferme, Fraquelfing, canton Lorquin, 54] via *Rammbach*, 0.72, 45 km
   3. Robache [Hameau, Saint-Dié-des-Vosges, canton Saint-Dié-des-Vosges (NP), 88] via *Roibach*, 0.69, 20 km
-- bary: Bary
-  1. Ban [57] via *Ban*, 0.86, ?
-  2. Buris [57] via *Buris*, 0.86, ?
-  3. Bure [Hameau, Tressange, canton Fontoy, 57] via *Buris (1181)*, 0.85, 33 km
 - bcaurains: Bcaurains
   1. Belrain [canton Pierrefitte-sur-Aire, 55] via *Beaurain (1756)*, 0.91, ?
   2. Bure [Hameau, Tressange, canton Fontoy, 57] via *Beuren (1626)*, 0.74, ?
   3. Beyren [Beyren-lès-Sierck, canton Cattenom, 57] via *Beuren (1756)*, 0.74, ?
-- bcltsstroff: Bcltsstroff
-  1. Bettlainville [Bettelainville, canton Metzervisse, 57] via *Bettsstroff (1594)*, 0.82, 16 km
-  2. Halstroff [Grindorff-Bizing, canton Sierck-les-Bains, 57] via *Holstroff (1706)*, 0.80, 6 km
-  3. Helstroff [canton Boulay-Moselle, 57] via *Helstroff*, 0.76, 24 km
 - buz: Buz
   1. Beu (Au) [Écart, Saulxures-sur-Moselotte, canton Saulxures-sur-Moselotte, 88] via *Beu (Au)*, 0.58, 6 km
   2. Bult [canton Rambervillers, 88] via *Bui*, 0.58, 46 km
@@ -168,10 +160,6 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Verny [canton Verny, 57] via *Verny*, 0.79, 29 km
   2. Verny (Ruisseau de) [57] via *Verny (Ruisseau de)*, 0.72, ?
   3. Vrémy [Failly, canton Vigy, 57] via *Vermy*, 0.71, 39 km
-- mailing-boulay: Mailing
-  1. Nelling [canton Sarralbe, 57] via *Nelling*, 0.87, 17 km
-  2. Metring [Hameau, Teting-sur-Nied, canton Faulquemont, 57] via *Maittring (1585)*, 0.82, 7 km
-  3. Metting [canton Phalsbourg, 54] via *Metting*, 0.80, 48 km
 - merancourt-ou-merancourt: Merancourt ou Merancourt
   1. Méraucourt [Ferme, Bezonvaux, canton Charny-sur-Meuse, 55] via *Méraucourt*, 0.75, 37 km
   2. Malancourt [Hameau, Montois-la-Montagne, canton Marange-Silvange, 57] via *Malancourt*, 0.67, 31 km
@@ -232,10 +220,6 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Ban-Saint-Pierre [Ban particulier dans lequel étaient compris, Abaucourt, canton Nomeny, 54] via *Ban-Saint-Pierre*, 0.85, 35 km
   2. Ban-Saint-Pierre [Église, Villers-Stoncourt, canton Pange, 57] via *Ban-Saint-Pierre*, 0.83, 47 km
   3. Pierre ou Pierre-la-Treiche [Pierre-la-Treiche, canton Toul-Sud, 54] via *Pierre*, 0.77, 39 km
-- scharhmorther: Scharhmorther
-  1. Schwartzmœrter [Métairie détruite, Charleville-sous-Bois, canton Vigy, 57] via *Schartzmerther (1608)*, 0.79, 19 km
-  2. Charmotte [Écart, Charmes, canton Charmes, 88] via *Charmotte*, 0.39, 111 km
-  3. Formortier [Écart, Ban-de-Laveline, canton Saint-Dié-des-Vosges-Est, 88] via *Formortier*, 0.37, 133 km
 - secitteldingcn: Secitteldingcn
   1. Dittelingen [57] via *Dittelingen*, 0.62, ?
   2. Helphedange ou Helfedange [Château et ferme, Guinglange, canton Faulquemont, 57] via *Helfedingen (1459)*, 0.57, 57 km

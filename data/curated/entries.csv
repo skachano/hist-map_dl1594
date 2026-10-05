@@ -1307,7 +1307,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1307,Schcuren.,Schcuren,,district-perl,,clergy,,,,main,,scheuer-hof,81,medium,index match by index number (1.00)
 1308,Nodlingen.,Nodlingen,,district-perl,,clergy,,,,main,,neudlangc,81,high,
 1309,Bingen.,Bingen,,district-perl,,clergy,,,,main,,bubingen,81,medium,index match by confused number (0.95)
-1310,Bury.,Bury,,district-perl,,clergy,,,,main,,bary,81,medium,index match by confused number (0.75)
+1310,Bury.,Bury,,district-perl,,clergy,,,,main,,kalembourg,81,high,
 1311,Freistorff.,Freistorff,,district-perl,,clergy,,,,main,,freistroff,81,medium,index match by confused number (0.90)
 1312,"Clemey, aliàs Schombcrg.",Clemey,,district-perl,,clergy,,,,main,,chemery,81,medium,index match by confused number (0.95)
 1313,Freistorff.,Freistorff,,district-perl,,fief,,,,main,,freistroff,81,medium,index match by loose number (0.90)
@@ -1331,7 +1331,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1331,Golman.,Golman,,district-perl,,fief,,,,main,,colmen,81,medium,index match by index number (1.00)
 1332,Hombourg auiïdcr Kandcl.,Hombourg auiïdcr Kandcl,,district-perl,,fief,,,,main,,hombourg-sur-kaner,81,medium,index match by index number (1.00)
 1333,Waldtvtiss.,Waldtvtiss,,district-perl,,fief,,,,main,,waldwisse,81,medium,index match by index number (1.00)
-1334,Bcltsstroff.,Bcltsstroff,,district-perl,,fief,,,,main,,bcltsstroff,81,low,index match by none (0.00)
+1334,Bcltsstroff.,Bcltsstroff,,district-perl,,fief,,,,main,,bettelainville,81,low,index match by none (0.00)
 1335,Ansclnigen.,Ansclnigen,,district-perl,,fief,,,,main,,alzing,81,high,
 1336,Dudingen.,Dudingen,,district-perl,,fief,,,,main,,diding,82,medium,index match by loose number (0.95)
 1337,Kirff.,Kirff,,district-perl,,fief,,,,main,,kirf,82,medium,index match by loose number (0.89)
@@ -2273,7 +2273,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2273,Bansch))orn.,Bansch))orn,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,boucheporn,115,medium,index match by index number (1.00)
 2274,Obersweyssen.,Obersweyssen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,obervisse,115,high,
 2275,Niderwevssen.,Niderwevssen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,niedervisse,115,high,
-2276,HaUingen.,HaUingen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,mailing-boulay,115,high,
+2276,HaUingen.,HaUingen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,halling-les-boulay,115,high,
 2277,Lellingen.,Lellingen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,lelling,115,high,
 2278,Folschweiller.,Folschweiller,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,folschwiller,115,high,
 2279,Hemcuingen.,Hemcuingen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,hinckange,115,high,

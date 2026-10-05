@@ -109,6 +109,7 @@ entry_index:
   1053: Ba/.egncy       # "Basigny" (ban of Girancourt): Bazegney, as entry 955 (Bazigny, Basigny: Alix n° 1053, Marichal)
   727: "238|Poirie (la)|742"  # "La Poyrie" (ban of Vagney): La Poirie of Saulxures, as entry 742 (Alix n° 727, Marichal)
   1149: Noncourt        # "Moncourt" (Châtenois): Noncourt, as entry 1153 (Moncourt: Alix n° 1149, Marichal)
+  1310: Kalembourg      # "Bury" (Perl): Kalembourg, "Kalemburg, Bury" in 1594 and "Callembourg aliàs Bury" in 1571 (Bouteiller), as entry 1274
   1190: Dombrol-sur-Vair  # "Bouzey" (Châtenois), between Sommerécourt and Mandres-sur-Vair: Dombrot-sur-Vair, "ci-devant Bouzey" (Marichal); not the mill of Sanchey near Épinal
 
 # Index lines the scan misread or merged, as printed ("page|name as read": the printed line, or a
@@ -330,6 +331,10 @@ geocode:
   chatcau-sur-pcrlc: {"at": "Cheniménil", "name_fr": "Château-sur-Perle", "note": "Château-sur-Perle, ruins at Cheniménil: Chasteau sur Perle, Alix n° 671 (Marichal); the index gives Docelles"}
   maxonchamp: {"at": "Rupt-sur-Moselle", "note": "Maxonchamp, a hamlet of Rupt-sur-Moselle: Maxonchamps, Alix n° 837 (Marichal)"}
   dommarlin-lcs-ville: {name_fr: "Dommartin-lès-Ville", note: "Dommartin-lès-Ville, a hamlet of Ville-sur-Illon (the index's Dommarlin-lcs-Ville)"}
+  # the Dénombrement's spellings quoted by Bouteiller (dén. Th. Alix)
+  mailing-boulay: {wikidata: Q3126160, note: "Halling(-lès-Boulay), canton de Boulay: Hallingen, 1594 (Bouteiller); the index's line, read Mailing, stands among the H (p. 215)"}
+  bcltsstroff: {wikidata: Q22447, note: "Bettelainville (Bettsdorf): Bettsstroff, 1594 (Bouteiller)"}
+  scharhmorther: {"at": "Charleville-sous-Bois", "name_fr": "Schwartzmœrter", "note": "Schwartzmœrter, a destroyed farm between Charleville, Épange, the mill of Renange and Hinckange: Schartezmorther, 1594 (Bouteiller)"}
   # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
   # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
   liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}
@@ -375,7 +380,6 @@ geocode:
   scheuer-hof: {approximate: nohn, note: "Scheuer-Hof, a farm of the village of Nohn (Saarland) that no longer exists (the editor's corrections); not the Scheuer-Hof in Luxembourg. Placed at Nohn"}
   # hamlets, farms and lost places checked against the index (location audit)
   aray-le-lan-v-ban-de-moyenmouticr: {"at": "Moyenmoutier", "note": "le ban d'Aray, a ban of Moyenmoutier (the index)"}
-  bary: {"unlocated": true, "note": "Bury, a lost village of the prévôté of Sierck (the index gives no commune); not the Bure matched by name"}
   aulnes-les-ham: {"at": "Fraize", "name_fr": "Les Aulnes", "note": "a hamlet of Fraize (the index); Les Aulnes (DicoTopo: Aulnes (Les))"}
   batlielemont: {"at": "Saint-Médard", "name_fr": "Bathelémont", "note": "Bathelémont, a hamlet and castle of Saint-Médard (the index); Bathelémont (DicoTopo: Bathelémont)"}
   eich: {"at": "Réding", "note": "a hamlet of Réding (the index)"}

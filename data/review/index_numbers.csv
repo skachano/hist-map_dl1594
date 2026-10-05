@@ -12,7 +12,7 @@ not in index,,,,,1045,Abvefvenet-la-Grande,71,,abvefvenet-la-grande,
 not in index,,,,,1051,LaNeufville,71,,la-neuveville-girancourt,
 not in index,,,,,1238,Hymerstroff,79,,hymerstroff,
 not in index,,,,,1319,Edelnigen,81,,edelnigen,
-not in index,,,,,1334,Bcltsstroff,81,,bcltsstroff,
+not in index,,,,,1334,Bcltsstroff,81,,bettelainville,
 not in index,,,,,1342,Ryol,82,,ryol,
 not in index,,,,,1646,Ilcyligcnner,92,,ilcyligcnner,
 not in index,,,,,1659,Hyrelbach,92,,hyrelbach,
@@ -28,6 +28,7 @@ not in index,,,,,2229,Contliiîj,113,,contwig,
 not in index,,,,,2231,Momborn,113,,montbronn,
 no entry,183,Ableuveneltes (les),4îi,,,,,1.00,les-ableuvenettes,Nittel (1411) is Nittel
 no entry,188,Ba/.egncy,1055,,,,,1.00,bazegney,1055 is Damas-devant-Dompaire
+no entry,194,Bary,1510,,,,,1.00,,"1310 is Bury, Kalembourg (Kalemburg, Bury: dén. Th. Alix, Bouteiller), as entry 1274; rules.yaml entry_index"
 no entry,189,Bebing,1756,,,,,1.00,,Bubingen (1736) is Bubingen
 no entry,189,Bellefontaine,709,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
 no entry,189,Bellefontaine,710,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
@@ -350,7 +351,7 @@ corrected,201,Diding,1501,,1301,Dudingcn,80,0.95,diding,
 corrected,204,Epange [3] (?),1502,,1302,Eppingen,81,0.95,epange,
 corrected,207,Fliessborn,1504,,1304,Fliessborn,81,1.00,fliessborn,
 corrected,194,Bùbingen,1509,,1309,Bingen,81,0.95,bubingen,
-corrected,194,Bary,1510,,1310,Bury,81,0.75,bary,
+corrected,221,Kalembourg,,,1310,Bury,81,0.43,kalembourg,number not printed in the index
 corrected,209,Freislroff,1511,,1311,Freistorff,81,0.90,freistroff,
 corrected,197,Chémery,1512,,1312,Clemey,81,0.95,chemery,
 corrected,209,Freislroff,15,,1313,Freistorff,81,0.90,freistroff,
@@ -2394,7 +2395,7 @@ agrees,192,Boustroff,2271,,2271,Bausstorff,115,0.95,boustroff,
 agrees,191,Bisten-im-Loch,2272,,2272,Biestcin,115,0.60,bisten-en-lorraine,
 agrees,236,Oberwisse,2274,,2274,Obersweyssen,115,0.76,obervisse,
 agrees,234,Nidcrwisse,2275,,2275,Niderwevssen,115,0.82,niedervisse,
-agrees,215,Mailing,2276,,2276,HaUingen,115,0.53,mailing-boulay,
+agrees,215,Mailing,2276,,2276,HaUingen,115,0.53,halling-les-boulay,
 agrees,224,Lelling,2277,,2277,Lellingen,115,0.88,lelling,
 agrees,207,Folschwiller,2278,,2278,Folschweiller,115,0.92,folschwiller,
 agrees,218,Hinckange,2279,,2279,Hemcuingen,115,0.53,hinckange,
