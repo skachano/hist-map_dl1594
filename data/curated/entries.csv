@@ -42,7 +42,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 41,Hudiviller.,Hudiviller,,provostship-nancy,,clergy,,,,main,,hudiviller,37,high,
 42,"Lay, prieuré et village.",Lay,village|priory,provostship-nancy,,clergy,,,,main,,lay-saint-christophe,37,medium,index match by number (0.30)
 43,Mangonvillc.,Mangonvillc,,provostship-nancy,,clergy,,,,main,,mangonville,37,high,
-44,"Rovillc, prieuré et village.",Rovillc,village|priory,provostship-nancy,,clergy,,,,main,,froville,37,medium,index match by loose number (0.93); number read from '45-'
+44,"Rovillc, prieuré et village.",Rovillc,village|priory,provostship-nancy,,clergy,,,,main,,roville-devant-bayon,37,high,number read from '45-'
 45,Sommerviller.,Sommerviller,,provostship-nancy,,clergy,,,,main,,sommerviller,37,high,
 46,"Warengcville, prieuré.",Warengcville,priory,provostship-nancy,,clergy,,,,main,,varangeville,37,high,
 47,Bcnney.,Bcnney,,provostship-nancy,,fief,,,,main,,benney,37,high,
@@ -509,7 +509,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 509,flamanges.,Hamanges,,ban-sainct-pierre,,fief,,,,main,,hamanges,53,high,
 510,Jallacourt.,Jallacourt,,ban-sainct-pierre,,fief,,,,main,,jallaucourt,53,high,
 511,"Aboneourt, ban de Chattemagne.",Aboneourt,,ban-sainct-pierre,,fief,,,,main,,abaucourt,53,medium,index match by index number (1.00)
-512,"Xousscs, alias Sultzen.",Xousscs,,ban-sainct-pierre,,fief,,,,main,,xousse,53,low,index match by name (0.92)
+512,"Xousscs, alias Sultzen.",Xousscs,,ban-sainct-pierre,,fief,,,,main,,suisse,53,medium,index match by number (0.40)
 513,Brulanges.,Brulanges,,ban-sainct-pierre,,fief,,,,main,,brulange,53,medium,index match by confused number (0.94)
 514,Trouville.,Trouville,,ban-sainct-pierre,,fief,,,,main,,thonville,53,high,
 515,"Condé, chasteau et village.",Condé,castle|village,castellany-conde-et-val-des-faulx,,domain,,,,main,,custines,53,high,
@@ -531,7 +531,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 531,Viller-soubz-Preny.,Viller-soubz-Preny,,provostship-preny,,domain,,,,main,,villers-sous-preny,54,high,
 532,"Saincie-Marie-aux-Bois, abbaye de l'ordre de Prémonstré.",Saincie-Marie-aux-Bois,abbey,provostship-preny,,clergy,,,,main,premonstratensian,sainte-marie-au-bois,54,high,
 533,Viefville.,Viefville,,provostship-preny,,clergy,,,,main,,vieville-en-haye,54,medium,index match by confused number (0.94)
-534,Villeeel-sur-Trin.,Villeeel-sur-Trin,,provostship-preny,,clergy,,,,main,,vilcey-sur-trey,54,low,index match by none (0.00)
+534,Villeeel-sur-Trin.,Villeeel-sur-Trin,,provostship-preny,,clergy,,,,main,,vilcey-sur-trey,54,high,
 535,Nourroy.,Nourroy,,provostship-preny,,clergy,,,,main,,norroy-le-veneur,54,medium,index match by index number (1.00)
 536,"Chamblé, chasteau et village.",Chamblé,castle|village,provostship-preny,,fief,,,,main,,chamblcy,54,medium,index match by confused number (0.93)
 537,"Buzy, chasteau et village.",Buzy,castle|village,provostship-preny,,fief,,,,main,,buzy,54,high,
@@ -760,7 +760,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 760,Saulx.,Saulx,,ban-longchamp,,domain,,,,main,,sauli,62,high,
 761,Lîcbauxart.,Lîcbauxart,,ban-longchamp,,domain,,,,main,,liebauxard,62,high,
 762,Fcrdruz.,Fcrdruz,,ban-longchamp,,domain,,,,main,,ferdrupt,62,high,
-763,Xouaruz.,Xouaruz,,ban-longchamp,,domain,,,,main,,xouaruz,62,low,index match by none (0.00)
+763,Xouaruz.,Xouaruz,,ban-longchamp,,domain,,,,main,,xoarupt,62,high,
 764,Ramonchamps.,Ramonchamps,,ban-ramonchamp,,domain,,,,main,,ramonchamp,62,medium,index match by confused number (0.95)
 765,Lcslraye.,Lcslraye,,ban-ramonchamp,,domain,,,,main,,letrayc,62,high,
 766,La Moline.,La Moline,,ban-ramonchamp,,domain,,,,main,,la-mouline,62,high,
@@ -862,7 +862,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 862,La Franouzc.,La Franouzc,,provostship-arches,lordship-l-alleu,fief,,,,main,,la-franouze,65,high,
 863,Granges.,Granges,,provostship-arches,lordship-l-alleu,fief,,,,main,,granges-de-plombieres,65,high,
 864,Gremefontaine.,Gremefontaine,,provostship-arches,lordship-l-alleu,fief,,,,main,,gremifontaine,65,high,
-865,C'vrjus.,C'vrjus,,provostship-arches,lordship-l-alleu,fief,,,,main,,c-vrjus,65,low,index match by none (0.00)
+865,C'vrjus.,Clerjus,,provostship-arches,lordship-l-alleu,fief,,,,main,,le-clerjus,65,high,
 866,La Chappcllc.,La Chappcllc,,provostship-arches,lordship-l-alleu,fief,,,,main,,la-chapelle-aux-bois,65,high,
 867,Razey.,Razey,,provostship-arches,lordship-l-alleu,fief,,,,main,,razey,65,high,
 868,"Fougerolles, chasteau et village.",Fougerolles,castle|village,provostship-arches,lordship-l-alleu,fief,,,,main,,fougerolles,65,high,
@@ -885,7 +885,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 885,Socourt.,Socourt,,provostship-charmes,,clergy,,,,main,,socourt,66,high,
 886,Sainct-Finnin.,Sainct-Finnin,,provostship-charmes,,clergy,,,,main,,saint-firmin,66,high,
 887,"Savigny, chasteau et village.",Savigny,castle|village,provostship-charmes,,fief,,,,main,,savigny,66,high,
-888,Bappel.,Bappel,,provostship-charmes,,fief,,,,main,,rapey,66,low,index match by none (0.00)
+888,Bappel.,Bappel,,provostship-charmes,,fief,,,,main,,rapey,66,high,
 889,Battigny-Saincl-Brice.,Battigny-Saincl-Brice,,provostship-charmes,,fief,,,,main,,bettegney-saint-brice,66,high,
 890,"L'bcxey, cliasteau et village.",L'bcxey,village,provostship-charmes,,fief,,,,main,,ubexy,66,high,
 891,Viefvilie.,Viefvilie,,provostship-charmes,,fief,,,,main,,vieville,66,high,
@@ -953,7 +953,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 953,Bugny.,Bugny,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,regney,68,high,
 954,Vomécourt.,Vomécourt,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,vomecourl,68,high,
 955,Bazigny.,Bazigny,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,bazegney,68,high,
-956,Ahévillc.,Ahévillc,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,avillers,68,medium,index match by confused number (0.75)
+956,Ahévillc.,Ahévillc,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,aheville,68,high,
 957,"Bouzemont, bourg.",Bouzemont,small_town,provostship-dompaire-et-valfroicourt,,domain,,,,main,,bouzemont,68,high,
 958,Rozcrotte.,Rozcrotte,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,rozerotte,68,medium,index match by confused number (0.89)
 959,Villotte.,Villotte,,provostship-dompaire-et-valfroicourt,,domain,,,,main,,velotte-et-tatignecourt,68,medium,index match by number (0.41)
@@ -1339,7 +1339,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1339,Eymerstorlï.,Eymerstorlï,,district-perl,,fief,,,,main,,eimersdorf,82,high,
 1340,Lugsingen.,Lugsingen,,district-perl,,fief,,,,main,,ising,82,high,
 1341,Pomern.,Pomern,,district-perl,,fief,,,,main,,pomern,82,medium,index match by confused number (1.00)
-1342,Ryol.,Ryol,,district-perl,,fief,,,,main,,ryol,82,low,index match by none (0.00)
+1342,Ryol.,Ryol,,district-perl,,fief,,,,main,,riol,82,high,
 1343,Rodingcn.,Rodingcn,,district-perl,,fief,,,,main,,rudling,82,medium,index match by confused number (0.95)
 1344,Wiss.,Wiss,,district-perl,,fief,,,,main,,wies,82,medium,index match by confused number (0.75)
 1345,Zuzingen.,Zuzingen,,district-perl,,fief,,,,main,,zeurange,82,high,
@@ -1368,7 +1368,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1368,"Longeville, Lungenfeldt.",Longeville,,office-boulay,,clergy,,,,main,,longeville-les-saint-avold,83,high,
 1369,Dùren.,Dùren,,office-boulay,,clergy,,,,main,,duren,83,medium,index match by confused number (1.00)
 1370,Wellingen.,Wellingen,,office-boulay,,clergy,,,,main,,villing,83,high,
-1371,Lymingcn.,Lymingcn,,office-boulay,,clergy,,,,main,,lymingcn,83,medium,index match by confused number (1.00)
+1371,Lymingcn.,Lymingen,,office-boulay,,clergy,,,,main,,lymingen,83,medium,index match by confused number (1.00)
 1372,Durehdalhaim.,Durehdalhaim,,office-boulay,,clergy,,,,main,,dourd-hal,83,medium,index match by confused number (0.95)
 1373,Baumbidersstorfi.,Baumbidersstorfi,,office-boulay,,clergy,,,,main,,bambiderstroff,83,medium,index match by index number (0.80)
 1374,Elwingen.,Elwingen,,office-boulay,,clergy,,,,main,,elvange,83,medium,index match by index number (1.00)
@@ -1493,7 +1493,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1493,Bcttingen.,Bcttingen,,office-schaumbourg,,domain,,,,main,,bettingen,87,high,
 1494,Aussen.,Aussen,,office-schaumbourg,,domain,,,,main,,aussen,87,medium,index match by loose number (1.00)
 1495,Wissbach.,Wissbach,,office-schaumbourg,,domain,,,,main,,wiesbach,87,medium,index match by confused number (0.88)
-1496,Beehteldingen.,Beehteldingen,,office-schaumbourg,,domain,,,,main,,secitteldingcn,87,high,
+1496,Beehteldingen.,Bechteldingen,,office-schaumbourg,,domain,,,,main,,uchtelfangen,87,high,
 1497,Kassheim.,Kassheim,,office-schaumbourg,,domain,,,,main,,kaisen,87,medium,index match by index number (1.00)
 1498,Exweiller.,Exweiller,,office-schaumbourg,,domain,,,,main,,thalexweiler,87,high,
 1499,Suhzwciller.,Suhzwciller,,office-schaumbourg,,domain,,,,main,,sotzweiler,87,high,
@@ -1554,7 +1554,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1554,Einweiller.,Einweiller,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,eisweiler,89,high,
 1555,Rappwciller.,Rappwciller,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,rappweiler,89,high,
 1556,Freysen.,Freysen,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,freisen,89,high,
-1557,Hoffcstetten.,Hoffcstetten,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,hobslelen-ou-gbsteten,89,high,
+1557,Hoffcstetten.,Hoffestetten,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,hoppstadten,89,high,
 1558,Lîessterthal.,Lîessterthal,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,lostertal,89,high,
 1559,GudersweiUcr.,GudersweiUcr,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,gudesweiler,89,high,
 1560,llenweiilcr.,Henweiilcr,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,hahnweiler,89,high,
@@ -1630,7 +1630,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1630,Nollingcn.,Nollingcn,,castellany-marimont,,domain,,,,main,,nelling,91,high,
 1631,"Rorbach, alias Hert-Rorbach.",Rorbach,,castellany-marimont,,domain,,,,main,,petit-rohrbacli,91,medium,index match by index number (1.00)
 1632,Grumingcn.,Grumingcn,,castellany-marimont,,domain,,,,main,,grening,91,medium,index match by confused number (0.95)
-1633,"Heylingenncr,",Heylingenncr,,castellany-marimont,,domain,,,,main,,hellimer,92,medium,index match by confused number (0.95)
+1633,"Heylingenncr,",Heylingenncr,,castellany-marimont,,domain,,,,main,,hellimer,92,high,
 1634,DîelTenbach.,DîelTenbach,,castellany-marimont,,domain,,,,main,,diffembach-les-hellimer,92,high,
 1635,Teutschen.,Teutschen,,castellany-marimont,,domain,,,,main,,tensch,92,medium,index match by index number (1.00)
 1636,Wirmanges.,Wirmanges,,castellany-marimont,,domain,,,,main,,virming,92,high,
@@ -1640,23 +1640,23 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1640,Gunersstorff.,Gunersstorff,,castellany-marimont,,clergy,,,,main,,guenestroff,92,high,
 1641,Luderfingen.,Luderfingen,,castellany-marimont,,fief,,,,main,,loudrefing,92,high,
 1642,Kutlingen.,Kutlingen,,castellany-marimont,,fief,,,,main,,cutting,92,high,number read from '1643'
-1643,Lostroff.,Lostroff,,castellany-marimont,,fief,,,,main,,lostroff,92,medium,index match by confused number (0.94)
+1643,Lostroff.,Lostroff,,castellany-marimont,,fief,,,,main,,lostroff,92,high,
 1644,Leyningcn.,Leyningcn,,castellany-marimont,,fief,,,,main,,lening,92,high,
-1645,Alstorff-lez-Leyningcn.,Alstorff-lez-Leyningcn,,castellany-marimont,,fief,,,,main,,lostroff,92,medium,index match by number (0.41)
-1646,llcyligcnner.,Ilcyligcnner,,castellany-marimont,,fief,,,,main,,ilcyligcnner,92,low,index match by none (0.00)
+1645,Alstorff-lez-Leyningcn.,Alstorff-lez-Leyningcn,,castellany-marimont,,fief,,,,main,,altroff,92,medium,index match by number (0.44)
+1646,llcyligcnner.,Heyligenner,,castellany-marimont,,fief,,,,main,,hellimer,92,high,
 1647,Dieffenbach.,Dieffenbach,,castellany-marimont,,fief,,,,main,,diffembach-les-hellimer,92,high,
 1648,Rode.,Rode,,castellany-marimont,,fief,,,,main,,rode-les-morhange,92,high,
 1649,Reckranges.,Reckranges,,castellany-marimont,,fief,,,,main,,racrange,92,medium,index match by loose number (0.95)
 1650,Nebingen.,Nebingen,,castellany-marimont,,fief,,,,main,,nebing,92,high,
 1651,La ville de Puttelenges.,La ville de Puttelenges,,district-puttelange,lordship-puttelange,other,,,,main,,pultelange-les-sarralbe,92,high,
 1652,DiefTembach.,DiefTembach,,district-puttelange,lordship-puttelange,other,,,,main,,diefenbach-les-puttelange,92,medium,index match by loose number (0.86); number read from '1653'
-1653,Himradt.,Himradt,,district-puttelange,lordship-puttelange,other,,,,main,,hellimer,92,high,
+1653,Himradt.,Himradt,,district-puttelange,lordship-puttelange,other,,,,main,,honzrath,92,high,
 1654,Reicldingen.,Reicldingen,,district-puttelange,lordship-puttelange,other,,,,main,,richeling,92,high,
 1655,Balleringen.,Balleringen,,district-puttelange,lordship-puttelange,other,,,,main,,ballering,92,high,
 1656,Bcrtrîngcn.,Bcrtrîngcn,,district-puttelange,lordship-puttelange,other,,,,main,,bettring,92,high,
 1657,Holbingen.,Holbingen,,district-puttelange,lordship-puttelange,other,,,,main,,holving,92,high,
 1658,Huntzingen.,Huntzingen,,district-puttelange,lordship-puttelange,other,,,,main,,hin-in,92,high,
-1659,Hyrelbach.,Hyrelbach,,district-puttelange,lordship-puttelange,other,,,,main,,hyrelbach,92,low,index match by none (0.00)
+1659,Hyrelbach.,Hyrelbach,,district-puttelange,lordship-puttelange,other,,,,main,,hirbach,92,high,
 1660,Dieicrfingen.,Dieicrfingen,,district-puttelange,lordship-puttelange,other,,,,main,,diederfing,92,high,
 1661,Mutzingcn.,Mutzingcn,,district-puttelange,lordship-puttelange,other,,,,main,,metzing,92,high,
 1662,Nussweiller.,Nussweiller,,district-puttelange,lordship-puttelange,other,,,,main,,noussewiller-les-putlelange,92,high,number read from '1663'
@@ -1692,7 +1692,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1692,Wolflingen.,Wolflingen,,district-beaurains,lordship-beaurains,other,,,,main,,voelfling-les-bouzonville,93,high,number read from '1693'
 1693,Kerlingen.,Kerlingen,,district-beaurains,lordship-beaurains,other,,,,main,,kerlingcn,93,medium,index match by index number (1.00)
 1694,Odenhoven.,Odenhoven,,district-beaurains,lordship-beaurains,other,,,,main,,odenhoven,93,high,
-1695,Eidlingcn.,Eidlingcn,,district-beaurains,lordship-beaurains,other,,,,main,,eidlingcn,93,low,index match by none (0.00)
+1695,Eidlingcn.,Eidlingen,,district-beaurains,lordship-beaurains,other,,,,main,,aidling,93,high,
 1696,Morten.,Morten,,district-beaurains,lordship-beaurains,other,,,,main,,merten,94,high,
 1697,Bublingen.,Bublingen,,district-beaurains,lordship-beaurains,other,,,,main,,bibling,94,high,
 1698,Tetterchen.,Tetterchen,,district-beaurains,lordship-beaurains,other,,,,main,,teterchen,94,high,
@@ -1931,7 +1931,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1931,Allamont.,Allamont,,bailiwick-apremont,,fief,,,,main,,allamont,102,medium,index match by confused number (1.00)
 1932,Aix.,Aix,,bailiwick-apremont,,fief,,,,main,,aix,102,medium,index match by index number (1.00)
 1933,Ancy-sur-Mozelle.,Ancy-sur-Mozelle,,bailiwick-apremont,,fief,,,,main,,ancy-sur-moselle,102,medium,index match by confused number (0.93)
-1934,Andillicr.,Andillicr,,bailiwick-apremont,,fief,,,,main,,andilly,102,low,index match by none (0.00)
+1934,Andillicr.,Andillicr,,bailiwick-apremont,,fief,,,,main,,andilly,102,high,
 1935,Annoult.,Annoult,,bailiwick-apremont,,fief,,,,main,,anoux,102,medium,index match by index number (1.00)
 1936,"Arrce,",Arrce,,bailiwick-apremont,,fief,,,,main,,arry,102,high,
 1937,Aulnoy.,Aulnoy,,bailiwick-apremont,,fief,,,,main,,aulnois-sous-yerluzey,102,high,
@@ -1992,7 +1992,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1992,Lyoville.,Lyoville,,bailiwick-apremont,,fief,,,,main,,liouville,104,high,
 1993,Lyon.,Lyon,,bailiwick-apremont,,fief,,,,main,,lion-devant-dun,104,medium,index match by index number (1.00)
 1994,Mandres-la-Petite.,Mandres-la-Petite,,bailiwick-apremont,,fief,,,,main,,mandre-ia-pclite,104,high,
-1995,M»?ny.,M»?ny,,bailiwick-apremont,,fief,,,,main,,maf-iy-nton-de-verny,104,medium,index match by index number (0.33)
+1995,M»?ny.,Magny,,bailiwick-apremont,,fief,,,,main,,magny,104,high,
 1996,Mailly.,Mailly,,bailiwick-apremont,,fief,,,,main,,mailly-sur-seille,104,high,
 1997,Mahuere.,Mahuere,,bailiwick-apremont,,fief,,,,main,,manheulles,104,high,
 1998,Mare.,Mare,,bailiwick-apremont,,fief,,,,main,,marre,104,high,
@@ -2114,7 +2114,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2114,Dolffuigcn.,Dolffuigcn,,district-sarreck,lordship-sarreck,other,,,,main,,dolving,108,high,
 2115,Buhel.,Buhel,,district-sarreck,lordship-sarreck,other,,,,main,,buhl,108,high,
 2116,"Goselmingen, moictié.",Goselmingen,,district-sarreck,lordship-sarreck,other,,,,main,,gosselming,108,high,
-2117,Oberstensel.,Oberstensel,,district-sarreck,lordship-sarreck,other,,,,main,,oberstinzel,108,low,index match by none (0.00)
+2117,Oberstensel.,Oberstensel,,district-sarreck,lordship-sarreck,other,,,,main,,oberstinzel,108,high,
 2118,Ncdingen.,Ncdingen,,district-sarreck,lordship-sarreck,other,,,,main,,nitting,108,high,
 2119,Eieh.,Eieh,,district-sarreck,lordship-sarreck,other,,,,main,,eich,108,high,
 2120,"Sainct-Ilippolite, chasteau et ville.",Sainct-Ilippolite,castle|town,district-saint-hippolyte,,other,,,,main,,saint-hippolyte,108,high,
@@ -2123,7 +2123,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2123,"Zymerbach, pour la moictié.",Zymerbach,,district-soultzbach,,other,,1/2,,main,,zimmerbach,108,medium,index match by index number (1.00)
 2124,"Liepvre, bourg et prieuré de l'ordre de [Suini-Benoit], despendant de l'abbaye de Saintl-Dcnys en France, annexé à l'église collégiattc Sainct-Gcorgede Nancy.",Liepvre,small_town|abbey|priory|collegiate_church,val-liepvre,,other,,,,main,,liepvre,108,high,
 2125,"Sainctc-Croix et Zuckmantel, vilbge et chasteau.",Sainctc-Croix et Zuckmantel,castle,val-liepvre,,other,,,,main,,sainte-croix-aux-mines,109,high,
-2126,"Eschery la Haulte, chasteau appartenant par moictié à Son Altesse et au sieur de Ribeaupierre.",Eschery la Haulte,castle,val-liepvre,,other,,1/2,,main,,echery,109,low,index match by none (0.00)
+2126,"Eschery la Haulte, chasteau appartenant par moictié à Son Altesse et au sieur de Ribeaupierre.",Eschery la Haulte,castle,val-liepvre,,other,,1/2,,main,,echery,109,high,
 2127,"Saincte-Maric, bourg, minières d'argent,plomb, cuivre.",Saincte-Maric,small_town,val-liepvre,,other,,,,main,,sainte-marie-aux-mines,109,high,
 2128,Le Grand-Rombach.,Le Grand-Rombach,,val-liepvre,,other,,,,main,,le-grand-rombach,109,high,number read from '2138'
 2129,Le Petit-Rombach.,Le Petit-Rombach,,val-liepvre,,other,,,,main,,pciil-kombach,109,high,

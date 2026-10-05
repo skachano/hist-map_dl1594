@@ -80,6 +80,13 @@ realm_holders:
 entry_names:
   2176: Lothringen      # "Sur la montagne … les ruines d'un chasteau … appelle Lothringen" (p. 111)
   2177: Altheim         # "Elle consiste en ce seul village d'Altheim" (p. 111)
+  1995: Magny           # "Magny" (p. 104), read "M»?ny"
+  865: Clerjus          # "Clerjus" (p. 65), read "C'vrjus"
+  1371: Lymingen        # "Lymingen" (p. 83), read "Lymingcn"
+  1496: Bechteldingen   # "Bechteldingen" (p. 87), read "Beehteldingen"
+  1557: Hoffestetten    # "Hoffestetten" (p. 89), read "Hoffcstetten"; for Hofstetten (the index's note)
+  1695: Eidlingen       # "Eidlingen" (p. 93), read "Eidlingcn"
+  1646: Heyligenner     # "Heyligenner" (p. 92), read "llcyligcnner": Hellimer (Heylingenner, Heligenner, 1594: Bouteiller)
 
 # Names a territory has in use, instead of "<type> of <seat>" (as in hist_map).
 territory_names:
@@ -110,6 +117,7 @@ entry_index:
   727: "238|Poirie (la)|742"  # "La Poyrie" (ban of Vagney): La Poirie of Saulxures, as entry 742 (Alix n° 727, Marichal)
   1149: Noncourt        # "Moncourt" (Châtenois): Noncourt, as entry 1153 (Moncourt: Alix n° 1149, Marichal)
   1310: Kalembourg      # "Bury" (Perl): Kalembourg, "Kalemburg, Bury" in 1594 and "Callembourg aliàs Bury" in 1571 (Bouteiller), as entry 1274
+  1342: "245|Hiol"      # "Ryol" (Perl): Riol, com. de Longuich, canton de Trêves, as the editors' correction 59 restores the line (read "lliol"; it drops the number)
   1190: Dombrol-sur-Vair  # "Bouzey" (Châtenois), between Sommerécourt and Mandres-sur-Vair: Dombrot-sur-Vair, "ci-devant Bouzey" (Marichal); not the mill of Sanchey near Épinal
 
 # Index lines the scan misread or merged, as printed ("page|name as read": the printed line, or a
@@ -121,6 +129,26 @@ index_lines:
   # The page's footnote ("1. Ban de Vezin-en-Vaul…") was read into the line, and its number lost.
   # "36" read as "ôii": 1536, Eiweiller (Exweiller), with 1498 and 1513
   "252|Thalecksweiler": "Thalecksweiler, vil., com. d'Eppelborn, 1498, 1513, 36."
+  '226|Maf"iy.• «nton de Verny (Moselle)': "Magny, canton de Verny (Moselle), 1995."   # the scan garbles the whole name
+  "183|Aidling": "Aidling, vil., com. de Bouzonville, 1695."   # number read "IGOîî"; Eidlingen in the table of old forms
+  "183|Ahévillc": "Ahéville, canton de Dompaire, 956."   # number read "9ï>6"; not Avillers (950)
+  "184|Altroff": "Altroff, canton d'Albestroff (Meurthe), 1645."   # number read "164*â"; Alstorff-lez-Leymingen in the table of old forms
+  "225|LostrofJf": "Lostroff, canton d'Albestroff (Meurthe), 1643."   # Lostroff is 1643; 1645 is Altroff
+  "244|RoviSîe": "Roville, canton d'Haroué, 44."   # number read "4£"; the priory and village of entry 44, not Froville
+  "249|Suisse (Haute et Basse)": "Suisse (Haute et Basse), canton de Grostenquin (Moselle), 512."   # number read "* 512" with a lost digit; entry 512 "Xousses, aliàs Sultzen" (Sülzen)
+  # lines whose number the scan could not read (their entries were placed by rules before)
+  "185|Andilly": "Andilly, canton de Domèvre-en-Haye (Meurthe), 1934."
+  "205|Eschcry": "Eschery, ham., com. de Sainte-Marie-aux-Mines, 2126."
+  "218|Hirhai-h": "Hirbach, ham., com. de Holving, 1659."
+  "236|Oberstinzel": "Oberstinzel, canton de Fénétrange (Meurthe), 2117."
+  "241|Rapey": "Rapey, canton de Charmes, 888."
+  "257|Vilcey-sur-Trey": "Vilcey-sur-Trey, canton de Thiaucourt (Meurthe), 534."
+  "261|Xoarupl": "Xoarupt, ham., com. de Ferdrupt, 763."
+  "216|Hellimer": "Hellimer, canton de Grostenquin, 1633, 46."   # the scan reads 1633 as 1653 (Honzrath's, p. 218)
+  "218|Hobslelen ou Gbsteten": "Hobsteten ou Obsteten, vil., mairie, 3 lieues au nord-est de Schambourg; enclavé dans les terres étrangères (D., t. III, p. 512), 1557."
+  "189|Secitteldingcn": "Bechteldingen, de l'office de Schambourg, 1496."   # its footnote call read as "1"
+  "226|Lymingcn": "Lymingen, office de Boulay, 1571."
+  "198|Clerjus (le)": "Clerjus (le), canton de Xertigny, 865."   # the scan reads the number as "8*55"
   "239|Pompierre": "Pompierre, canton de Neufchâteau, 124."   # the scan reads the canton as "Netifehàieau"
   "188|Beaumont": "Beaumont, canton de Domèvre (Meurthe), 2037."
   # Two lines run together; Hœlling's number was lost.
@@ -198,7 +226,6 @@ geocode:
   # unlocated places found in DicoTopo (make dicotopo, 2026-10-05): the entry cited by Marichal or Bouteiller, or the
   # index's identification or commune confirmed; a hamlet at its commune, a commune at its item
   abvefvenet-la-grande: {"at": "Ableuvenettes", "name_fr": "La Grande-Ableuvenette", "note": "La Grande-Ableuvenette, at Ableuvenettes: Abvefvenet la Grande, Alix n° 1045 (Marichal)"}
-  bappel: {wikidata: Q1413993, note: "Rapey: Rappel, Alix n° 888 (Marichal)"}
   itue-devant-dompaire: {"at": "Dompaire", "name_fr": "La Rue-devant-Dompaire", "note": "La Rue-devant-Dompaire, at Dompaire: La Rue devant Dompaire, Alix n° 1049 (Marichal)"}
   la-courlille: {"at": "Châtenois", "name_fr": "La Curtille", "note": "La Curtille, at Châtenois: La Courtille, Alix n° 1121 (Marichal)"}
   la-foresterie-du-ban-de-vagncy: {"at": "Vagney", "name_fr": "La Foresterie du ban de Vagney", "note": "La Foresterie du ban de Vagney, at Vagney: La Forresterie, Alix n° 817 (Marichal)"}
@@ -216,7 +243,6 @@ geocode:
   la-caefiee-sue: {"at": "Saint-Dié-des-Vosges", "name_fr": "La Rue-Cachée", "note": "La Rue-Cachée, at Saint-Dié-des-Vosges: La Cachée Rue, Alix nos 330 et 363 (Marichal)"}
   hameure: {"at": "Saint-Dié-des-Vosges", "name_fr": "Hellieule", "note": "Hellieule, at Saint-Dié-des-Vosges: Hallieure, Alix nos 331 et 364 (Marichal)"}
   ahain: {wikidata: Q682655, note: "Allain: Allain-aux-Bœufs, canton de Colombey"}
-  andillicr: {wikidata: Q476999, note: "Andilly: Andillier (1602), DicoTopo"}
   badinenil: {"at": "Baccarat", "name_fr": "Badménil", "note": "Badménil, at Baccarat: Ban de Mesnil (1594), canton de Baccarat"}
   ban-de-la-riviere: {"at": "Ogéviller", "name_fr": "Ban-de-la-Rivière", "note": "Ban-de-la-Rivière, at Ogéviller: a ban between Baccarat and Blâmont (the index, DicoTopo)"}
   bassaucourt: {"at": "Saint-Maurice-sous-les-Côtes", "name_fr": "Bassaucourt", "note": "Bassaucourt, at Saint-Maurice-sous-les-Côtes: canton de Vigneulles (the index, DicoTopo)"}
@@ -235,7 +261,6 @@ geocode:
   foresterie-la-du-ban-de-moulin: {"at": "Saint-Nabord", "name_fr": "La Foresterie du ban de Moulin", "note": "La Foresterie du ban de Moulin, at Saint-Nabord: a former community of Saint-Nabord (DicoTopo)"}
   hadomey: {"at": "Reherrey", "name_fr": "Hadomey", "note": "Hadomey, at Reherrey: a hamlet of Reherrey (the index, DicoTopo)"}
   hotiwiller: {wikidata: Q22911, note: "Hottviller: Hoddweiller (1594), dén. Th. Alix (Bouteiller)"}
-  hyrelbach: {"at": "Holving", "name_fr": "Hirbach", "note": "Hirbach, at Holving: Hyrelbach (1594), dén. Th. Alix (Bouteiller)"}
   ihiitenhauscn: {wikidata: Q22080, note: "Hultehouse: Hiltenhausen, canton de Phalsbourg"}
   jussampt: {wikidata: Q1637719, note: "Jussarupt: Jussaruz (1580), canton de Corcieux"}
   kontz-llauic: {wikidata: Q21911, note: "Haute-Kontz: Ober Contz, canton de Cattenom"}
@@ -273,7 +298,6 @@ geocode:
   vichibure: {"at": "Corcieux", "name_fr": "Vichibure", "note": "Vichibure, at Corcieux: a hamlet of Corcieux (the index, DicoTopo)"}
   vigneulles-haute: {wikidata: Q21616, note: "Haute-Vigneulles: Vigneulles-Haute, canton de Faulquemont (the index)"}
   viller-asscnoncourt: {"at": "Assenoncourt", "name_fr": "Viller", "note": "Viller, at Assenoncourt: a farm of Assenoncourt (the index, DicoTopo)"}
-  xouaruz: {"at": "Ferdrupt", "name_fr": "Xoarupt", "note": "Xoarupt, at Ferdrupt: Xouaruz, a hamlet of Ferdrupt (DicoTopo)"}
   aourys-vil: {"at": "Villers-Stoncourt", "name_fr": "Aoury", "note": "Aoury, at Villers-Stoncourt: Albritch (1594), dén. Th. Alix (Bouteiller)"}
   brehaviller: {"at": "Le Syndicat", "name_fr": "Bréhavillers", "note": "Bréhavillers, at Le Syndicat: a hamlet of Le Syndicat (the index, DicoTopo)"}
   brieulles-sur-meusc: {lat: 49.32632, lon: 5.16125, name_fr: "Brieulles-sur-Meuse", country: FR, note: "Brieulles-sur-Meuse: canton de Dun (the index); DicoTopo's point"}
@@ -296,12 +320,10 @@ geocode:
   milly: {lat: 49.39865, lon: 5.21231, name_fr: "Milly-sur-Bradon", country: FR, note: "Milly-sur-Bradon: Milly(-devant-Dun), canton de Dun (the index); DicoTopo's point"}
   murvaux: {lat: 49.40178, lon: 5.27998, name_fr: "Murvaux", country: FR, note: "Murvaux: canton de Dun (the index); DicoTopo's point"}
   mouterhatisen: {wikidata: Q21942, note: "Mouterhouse: canton de Bitche (the index)"}
-  oberstensel: {wikidata: Q22305, note: "Oberstinzel: Obersteinsel (1779), by Sarreck (DicoTopo)"}
   rainbucouri: {wikidata: Q223716, note: "Rambucourt: canton de Saint-Mihiel (the index)"}
   relhei: {wikidata: Q22245, note: "Rettel: Rettel-lez-Sierck, canton de Sierck (the index)"}
   remenauville: {"at": "Limey-Remenauville", "name_fr": "Réménauville", "note": "Réménauville, at Limey-Remenauville: canton de Thiaucourt (the index), now in Limey-Remenauville"}
   val-sainle-marie: {"at": "Ville-au-Val", "name_fr": "Val-Sainte-Marie", "note": "Val-Sainte-Marie, at Ville-au-Val: a seigneurie at Ville-au-Val (the index, DicoTopo)"}
-  villeeel-sur-trin: {wikidata: Q1339319, note: "Vilcey-sur-Trey: Vilcey-sur-Trey (DicoTopo), by Sainte-Marie-au-Bois (532)"}
   srcul-le-y-prevote-de-chutcnois: {"at": "Châtenois", "name_fr": "Le Breuil", "note": "Le Breuil, at Châtenois: Le Breul (1594), Alix (Marichal), at Châtenois"}
   tannoy: {lat: 48.71862, lon: 5.21946, name_fr: "Tannois", country: FR, note: "Tannois: canton de Ligny (the index); DicoTopo's point"}
   loucbamp: {wikidata: Q196623, note: "Longchamps-sur-Aire: Longchamp, canton de Pierrefitte (the index)"}
@@ -310,7 +332,6 @@ geocode:
   phalstourg-eh-l-de-canton: {wikidata: Q22160, note: "Phalsbourg: Pfaltzbourg, chef-lieu de canton (the index)"}
   sarrallk: {wikidata: Q21979, note: "Sarralbe: Aulbe, chasteau et ville (1594), dén. Th. Alix (Bouteiller)"}
   # the remaining unlocated places, against DicoTopo, Wikidata and GeoNames (2026-10-05)
-  eschery-la-haulte: {wikidata: Q109572302, name_fr: "Échery", name_de: "Echery", note: "Échery (Eschery la Haulte, chasteau), in the val de Lièpvre by Sainte-Marie-aux-Mines"}
   contliiij: {wikidata: Q567847, note: "Contwig (the scan reads Contliiîj), by the seigneurie of Bitche"}
   fremmesdr-v-m-de-rehlingen: {wikidata: Q1455187, note: "Fremersdorf (Frymestroff), com. de Rehlingen (the index): Rehlingen-Siersburg"}
   mitiel-bollenbacli: {wikidata: Q84707298, name_fr: "Mittelbollenbach", note: "Mittelbollenbach (Mittelwillembach), by Sien (the index)"}
@@ -335,6 +356,11 @@ geocode:
   mailing-boulay: {wikidata: Q3126160, note: "Halling(-lès-Boulay), canton de Boulay: Hallingen, 1594 (Bouteiller); the index's line, read Mailing, stands among the H (p. 215)"}
   bcltsstroff: {wikidata: Q22447, note: "Bettelainville (Bettsdorf): Bettsstroff, 1594 (Bouteiller)"}
   scharhmorther: {"at": "Charleville-sous-Bois", "name_fr": "Schwartzmœrter", "note": "Schwartzmœrter, a destroyed farm between Charleville, Épange, the mill of Renange and Hinckange: Schartezmorther, 1594 (Bouteiller)"}
+  hiol: {wikidata: Q553441, note: "Riol, com. de Longuich, canton de Trêves: the index's line for Ryol (1342), as restored by the editors' correction 59 (the scan reads lliol)"}
+  lymingen: {"unlocated": true, "note": "Lymingen, of the office of Boulay: 'localité incertaine' for Bouteiller too (dén. Th. Alix, 1594)"}
+  bechteldingen: {wikidata: Q1478875, note: "Uchtelfangen (Illingen, Saarland), office of Schaumberg: Bechteldingen, listed with Kassheim (Kaisen) and Wissbach (Wiesbach) in 1594 (Kaisen im Saarland, koenig-inter.net)"}
+  hobsteten-ou-obsteten: {lat: 49.61667, lon: 7.2, name_fr: "Hoppstädten", name_de: "Hoppstädten", country: DE, note: "Hoppstädten (Hoppstädten-Weiersbach; GeoNames 2899139): Hofsteten, Hoppstaten in the editors' corrections to the table of old forms; 'Hoffestetten' for Hofstetten (the index's note); a village 3 lieues north-east of Schaumburg (Durival)"}
+  eschery: {name_fr: "Échery", name_de: "Echery", note: "Échery (Eschery la Haulte, chasteau), in the val de Lièpvre by Sainte-Marie-aux-Mines"}
   # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
   # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
   liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}
