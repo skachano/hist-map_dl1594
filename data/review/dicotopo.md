@@ -3,6 +3,9 @@
 Prototype: OCR-aware matching of names against the old spellings of the Dictionnaire topographique
 (Meurthe, Meuse, Moselle, Vosges). Score: spelling similarity less 0.1 per 50 km from the district.
 
+Source: DicoTopo, Dictionnaire topographique de la France, CTHS, École nationale des chartes and
+Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downloaded on 2026-10-05.
+
 ## Manual-check entries
 
 - 38 Hainvau (provostship-nancy) — by hand: Flainval (written Flainvau); rank 2

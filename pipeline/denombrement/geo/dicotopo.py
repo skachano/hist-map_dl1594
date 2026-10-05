@@ -14,6 +14,7 @@ import os
 import re
 from collections import defaultdict
 from dataclasses import dataclass
+from datetime import date
 
 import requests
 
@@ -48,6 +49,12 @@ def _fetch(dpt: str) -> list[dict]:
                             "description": " ".join(a.get("descriptions") or [])})
             url = d["links"].get("next")
     return out
+
+
+def _downloaded() -> str:
+    """When the cache was filled: the date the Licence Ouverte's attribution asks for."""
+    times = [p.stat().st_mtime for p in CACHE_DIR.glob("*.json")]
+    return date.fromtimestamp(max(times)).isoformat() if times else "?"
 
 
 def region() -> list[dict]:
@@ -287,6 +294,8 @@ def run() -> None:
     lines = ["# DicoTopo suggestions", "",
              "Prototype: OCR-aware matching of names against the old spellings of the Dictionnaire topographique",
              "(Meurthe, Meuse, Moselle, Vosges). Score: spelling similarity less 0.1 per 50 km from the district.", "",
+             "Source: DicoTopo, Dictionnaire topographique de la France, CTHS, École nationale des chartes and",
+             f"Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downloaded on {_downloaded()}.", "",
              "## Manual-check entries", ""]
     found = 0
     checks = [(no, name, entries.get(no, {}).get("district_id") or district, answer)

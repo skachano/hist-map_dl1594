@@ -31,6 +31,12 @@ the GeoNames dumps for FR, DE and LU. It also uses hist_map's checked geocoding 
 d'Allemagne when it is there:
 `cp ../hist_map/data/curated/geocoding.csv data/raw/geo_cache/hist_map_geocoding.csv`.
 
+`make dicotopo` (a prototype) matches garbled and unlocated names against the dated old spellings
+of the [Dictionnaire topographique de la France](https://dicotopo.cths.fr) (Meurthe, Meuse,
+Moselle, Vosges; cached in `data/raw/geo_cache/dicotopo/`) and writes suggestions to
+`data/review/dicotopo.md`. It reads entries checked by hand from `data/review/manual-check.md`
+(git-ignored) when it is there.
+
 ## The source PDF
 
 The scan is not in the repository and must never be committed (`pdf/` is git-ignored). Put the
@@ -43,4 +49,6 @@ OCR text layer) in `pdf/`. The edition is in the public domain.
 (`data/curated/`, `data/geometry/`, `web/public/data/`) and the text are under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see [LICENSE-DATA](LICENSE-DATA)). This
 does not cover Alix's text and its 1870 edition (public domain), the OpenStreetMap base map (ODbL),
-or the Wikidata (CC0) and GeoNames (CC BY 4.0) data, which keep their own terms.
+or the Wikidata (CC0), GeoNames (CC BY 4.0) and DicoTopo (Licence Ouverte 2.0) data, which keep
+their own terms. DicoTopo: *Dictionnaire topographique de la France*, CTHS, École nationale des
+chartes and Archives nationales, <https://dicotopo.cths.fr>, data downloaded on 5 October 2026.
