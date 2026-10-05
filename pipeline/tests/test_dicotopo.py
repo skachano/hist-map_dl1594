@@ -95,3 +95,18 @@ def test_answer_rank():
             Hit(_place("P2", "Flainval"), "Flainval", "", 0.79, None)]
     assert dicotopo._answer_rank(hits, "Flainval (written Flainvau)") == 2
     assert dicotopo._answer_rank(hits, "Anould") is None
+
+
+def test_display_label():
+    assert dicotopo.display_label("Faing-Thierry (Le)") == "Le Faing-Thierry"
+    assert dicotopo.display_label("Orme (L’)") == "L’Orme"
+    assert dicotopo.display_label("Aboncourt ou Aboncourt-sur-Seille") == "Aboncourt"
+    assert dicotopo.display_label("Petit-Eberswiller") == "Petit-Eberswiller"
+
+
+def test_shared_points_tell_a_hamlets_own_point_from_its_communes():
+    places = [_place("P1", "Macheren", lat=49.09, lon=6.76),
+              _place("P2", "Petit-Eberswiller", lat=49.09, lon=6.76, commune="Macheren"),
+              _place("P3", "Mortagne", lat=48.546, lon=6.443, commune="Mont-sur-Meurthe")]
+    # Petit-Eberswiller has its commune's point; Mortagne's is its own
+    assert dicotopo.shared_points(places) == {(49.09, 6.76)}

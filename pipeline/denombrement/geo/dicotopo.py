@@ -12,7 +12,7 @@ import json
 import multiprocessing
 import os
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import date
 
@@ -119,25 +119,30 @@ _MULTI = [("fl", "h"), ("li", "h"), ("rn", "m"), ("ii", "u"), ("cl", "d"), ("in"
 _MULTI += [(b, a) for a, b in _MULTI]
 
 
+_SUB = {(a, b): _CHEAP for pair in _PAIRS for a in pair for b in pair if a != b}
+# the multi-letter rules by their last letters, the only ones that can end at a cell
+_MULTI_AT: dict[tuple[str, str], list[tuple[str, str, int, int]]] = defaultdict(list)
+for _x, _y in _MULTI:
+    _MULTI_AT[(_x[-1], _y[-1])].append((_x, _y, len(_x), len(_y)))
+
+
 def _sub(a: str, b: str) -> float:
-    return 0.0 if a == b else _CHEAP if frozenset((a, b)) in _PAIRS else 1.0
+    return 0.0 if a == b else _SUB.get((a, b), 1.0)
 
 
 def ocr_distance(a: str, b: str) -> float:
     """Weighted Levenshtein between two spelling keys."""
     n, m = len(a), len(b)
-    d = [[0.0] * (m + 1) for _ in range(n + 1)]
+    d = [[float(j) for j in range(m + 1)]] + [[float(i)] + [0.0] * m for i in range(1, n + 1)]
     for i in range(1, n + 1):
-        d[i][0] = float(i)
-    for j in range(1, m + 1):
-        d[0][j] = float(j)
-    for i in range(1, n + 1):
+        ai, row, prev = a[i - 1], d[i], d[i - 1]
         for j in range(1, m + 1):
-            best = min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + _sub(a[i - 1], b[j - 1]))
-            for x, y in _MULTI:
-                if i >= len(x) and j >= len(y) and a[i - len(x):i] == x and b[j - len(y):j] == y:
-                    best = min(best, d[i - len(x)][j - len(y)] + _CHEAP)
-            d[i][j] = best
+            bj = b[j - 1]
+            best = min(prev[j] + 1, row[j - 1] + 1, prev[j - 1] + (0.0 if ai == bj else _SUB.get((ai, bj), 1.0)))
+            for x, y, lx, ly in _MULTI_AT.get((ai, bj), ()):
+                if i >= lx and j >= ly and a[i - lx:i] == x and b[j - ly:j] == y:
+                    best = min(best, d[i - lx][j - ly] + _CHEAP)
+            row[j] = best
     return d[n][m]
 
 
@@ -149,6 +154,10 @@ def coarse(key: str) -> str:
     for x, y in (("fl", "h"), ("li", "h"), ("rn", "m"), ("ii", "u"), ("cl", "d")):
         key = key.replace(x, y)
     return key.translate(_COARSE)
+
+
+def _pairs(key: str) -> set[str]:
+    return {key[i:i + 2] for i in range(len(key) - 1)}
 
 
 def similarity(a: str, b: str) -> float:
@@ -186,6 +195,7 @@ class Index:
     def __init__(self, places: list[dict]):
         self.labels: dict[str, list[tuple[dict, str, str]]] = defaultdict(list)
         self.coarse: dict[str, str] = {}
+        self.postings: dict[str, list[int]] = defaultdict(list)  # letter pair of a coarse key -> keys
         for p in places:
             p["kind"] = kind(p)
             for name, year in [(p["label"], ""), *old_labels(p)]:
@@ -194,12 +204,27 @@ class Index:
                     if len(k) >= 3:
                         self.labels[k].append((p, part, year))
                         self.coarse[k] = coarse(k)
+        self.keys = list(self.labels)
+        for i, k in enumerate(self.keys):
+            for pair in _pairs(self.coarse[k]):
+                self.postings[pair].append(i)
+
+    def candidates(self, qk: str) -> list[str]:
+        """Keys sharing at least 40% of the query's letter pairs: a cheap first cut before the sift."""
+        pairs = _pairs(coarse(qk))
+        counts: dict[int, int] = defaultdict(int)
+        for pair in pairs:
+            for i in self.postings.get(pair, ()):
+                counts[i] += 1
+        need = max(1, int(0.4 * len(pairs)))
+        return [self.keys[i] for i in sorted(i for i, n in counts.items() if n >= need)]
 
     def search(self, name: str, near: tuple[float, float] | None = None, limit: int = 5) -> list[Hit]:
         best: dict[str, Hit] = {}
         for qk, weight in query_keys(name):
             sift = difflib.SequenceMatcher(None, "", coarse(qk))
-            for k, refs in self.labels.items():
+            for k in self.candidates(qk):
+                refs = self.labels[k]
                 sift.set_seq1(self.coarse[k])
                 if sift.real_quick_ratio() < 0.7 or sift.quick_ratio() < 0.7:
                     continue
@@ -224,9 +249,10 @@ def _csv(name: str) -> list[dict]:
 
 
 def district_centres() -> dict[str, tuple[float, float]]:
-    """Median of each district's located members."""
-    located = {r["place_id"]: (float(r["lat"]), float(r["lon"])) for r in _csv("geocoding.csv")
-               if r["lat"] and r["confidence"] != "low"}
+    """Median of each district's located members. From places.csv: geocoding.csv keeps the ids
+    the places had before curate renamed some."""
+    located = {p["id"]: (float(p["lat"]), float(p["lon"])) for p in _csv("places.csv")
+               if p["kind"] == "settlement" and p["lat"] and p["geo_confidence"] != "low"}
     members = defaultdict(list)
     for m in _csv("memberships.csv"):
         if m["relation"] == "admin" and m["child_id"] in located:
@@ -287,8 +313,84 @@ def search_all(idx: Index, queries: list[tuple[str, tuple[float, float] | None, 
         return pool.map(_search, queries, chunksize=1)
 
 
+def display_label(label: str) -> str:
+    """DicoTopo's headword as a name: "Orme (L’)" -> "L’Orme", "Aboncourt ou Aboncourt-sur-Seille" -> Aboncourt."""
+    label = label.split(" ou ")[0].strip()
+    m = re.match(r"^(.*?)\s*\((L[’']|Le|La|Les)\)$", label)
+    if m:
+        art = m.group(2)
+        return f"{art}{m.group(1)}" if art in ("L’", "L'") else f"{art} {m.group(1)}"
+    return label
+
+
+def shared_points(places: list[dict]) -> set[tuple[float, float]]:
+    """Points that several places share: a commune's, given to the hamlets the dictionary has no point
+    for (whatever the commune is called there: Kerling-lez-Sierck). A hamlet's own point is not among them."""
+    seen = Counter((p["lat"], p["lon"]) for p in places if p["lat"] is not None)
+    return {pt for pt, n in seen.items() if n > 1}
+
+
+REVIEW_MIN = 0.8      # a match this good names an approximate place
+DISAGREE_MIN = 0.85   # a match this good, far from the place, is worth a look
+NEAR_KM = 12.0        # the match is the place where it is now
+FAR_KM = 15.0
+
+
+def review_settlements(idx: Index, places: dict, parents: dict, centres: dict, shared: set) -> list[str]:
+    """Every located settlement's names (the index's and the book's) against DicoTopo, scored near its
+    district, not near where it is placed: names for places put at their commune under the index's
+    garbled spelling, and matches that disagree with the placement."""
+    settlements = [p for p in places.values() if p["kind"] == "settlement" and p["lat"]]
+    queries, owners = [], []
+    for p in settlements:
+        near = [centres[t] for t in parents.get(p["id"], []) if t in centres]
+        near = (sum(a for a, _ in near) / len(near), sum(b for _, b in near) / len(near)) if near else None
+        names = {spelling_key(n): n for n in [p["name_fr"], *(p["variants"] or "").split("|")] if n.strip()}
+        for n in names.values():
+            queries.append((n, near, 3))
+            owners.append((p["id"], near, n))
+    best: dict[str, tuple[Hit, str, tuple | None]] = {}
+    for (pid, near, name), hits in zip(owners, search_all(idx, queries)):
+        if hits and (pid not in best or hits[0].score > best[pid][0].score):
+            best[pid] = (hits[0], name, near)
+
+    named, disagree = [], []
+    for p in settlements:
+        if p["id"] not in best:
+            continue
+        h, name, near = best[p["id"]]
+        if h.place["lat"] is None:
+            continue
+        here = (float(p["lat"]), float(p["lon"]))
+        hit = (h.place["lat"], h.place["lon"])
+        moved = km(here, hit)
+        own = hit not in shared
+        label = display_label(h.place["label"])
+        where = ", ".join(x for x in (h.place["kind"], h.place["commune"] if h.place["commune"] != label else "",
+                                      h.place["dpt"]) if x)
+        seen = f"*{h.spelling}* ({h.year})" if h.year else f"*{h.spelling}*"
+        if not (p["wikidata_id"] or p["geonames_id"]) and h.score >= REVIEW_MIN and moved <= NEAR_KM:
+            if spelling_key(label) != spelling_key(p["name_fr"]) or (own and moved > 0.5):
+                point = f"; its own point {hit[0]:.5f}, {hit[1]:.5f} ({moved:.1f} km)" if own and moved > 0.5 else ""
+                named.append((h.score, f"- `{p['id']}` {p['name_fr']} → **{label}** [{where}] via {name!r} ~ {seen}, "
+                                       f"{h.score:.2f}{point}"))
+        elif h.score >= DISAGREE_MIN and moved > FAR_KM and near and h.km is not None \
+                and h.km + 10 < km(here, near):
+            disagree.append((moved, f"- `{p['id']}` {p['name_fr']} ({p['geo_method']}/{p['geo_confidence']}), "
+                                    f"{km(here, near):.0f} km from its district → **{label}** [{where}] via {name!r} ~ {seen}, "
+                                    f"{h.score:.2f}, {h.km:.0f} km from its district, {moved:.0f} km from where it is"))
+    return ([f"## Settlements at their commune: DicoTopo's name ({len(named)})", "",
+             "Approximate places (no Wikidata or GeoNames item) with a match within 12 km: the modern name, and",
+             "the hamlet's own point where DicoTopo gives one (not its commune's).", ""]
+            + [line for _, line in sorted(named, key=lambda x: -x[0])]
+            + ["", f"## Settlements DicoTopo places elsewhere ({len(disagree)})", "",
+               f"A match of {DISAGREE_MIN} or better more than {FAR_KM:.0f} km from where the place is, and nearer its district.", ""]
+            + [line for _, line in sorted(disagree, key=lambda x: -x[0])])
+
+
 def run() -> None:
-    idx = Index(region())
+    dico = region()
+    idx = Index(dico)
     centres = district_centres()
     entries = {e["no"]: e for e in _csv("entries.csv") if e["series"] == "main"}
     lines = ["# DicoTopo suggestions", "",
@@ -306,7 +408,7 @@ def run() -> None:
         if m["relation"] == "admin":
             parents[m["child_id"]].append(m["parent_id"])
     places = {p["id"]: p for p in _csv("places.csv")}
-    unlocated = [r["place_id"] for r in _csv("geocoding.csv") if r["method"] == "unlocated"]
+    unlocated = [pid for pid, p in places.items() if p["kind"] == "settlement" and p["geo_method"] == "unlocated"]
     queries = [(name, centres.get(district), 5) for _, name, district, _ in checks]
     queries += [(places.get(pid, {}).get("name_fr") or pid,
                  next((centres[t] for t in parents.get(pid, []) if t in centres), None), 3) for pid in unlocated]
@@ -325,6 +427,7 @@ def run() -> None:
         hits = next(results)
         lines.append(f"- {pid}: {p.get('name_fr', '')}" + ("" if hits else " — no match"))
         lines.extend(f"  {i}. {_row(h)}" for i, h in enumerate(hits, 1))
+    lines += [""] + review_settlements(idx, places, parents, centres, shared_points(dico))
     REVIEW_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"manual checks: {found} of {len(checks)} answers in the top 5; unlocated places: {len(unlocated)}")
     print(f"-> {REVIEW_FILE.relative_to(config.ROOT)}")
