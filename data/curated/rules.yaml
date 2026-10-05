@@ -140,6 +140,18 @@ geocode:
   chatlemagnc-ou-chatemagnc: {approximate: abaticourt, name_fr: Chattemagne, note: "Chattemagne or Chatemagne (ban de): a part of Abaucourt's territory, where a castle stood (the index)"}
   valdwisse: {wikidata: Q22157, note: "Waldwisse (the index's Valdwisse, canton de Sierck)"}
   gongelfang: {approximate: valdwisse, name_fr: Gongelfang, note: "Gongelfang (Golstingen, Golsfingen in the table of old forms), a hamlet of Waldwisse; not Gostingen in Luxembourg. Not in Wikidata or GeoNames: placed at Waldwisse"}
+  # placed far from the index's commune or canton (audit against DicoTopo, 2026-10-05)
+  charmes-sur-moselle: {wikidata: Q206523, note: "Charmes, ville et chasteau (entry 869), canton de Charmes-sur-Moselle; not Champey-sur-Moselle"}
+  fiircy: {wikidata: Q1002667, note: "Flirey, canton de Thiaucourt (the index's Fiircy); not Fleurey-lès-Saint-Loup in Haute-Saône"}
+  saint-prival-ia-montagne: {wikidata: Q21940, note: "Saint-Privat-la-Montagne, canton de Briey (the index); not a La Montagne in the Vosges"}
+  haraucourt: {wikidata: Q839056, note: "Haraucourt, canton de Saint-Nicolas (the index)"}
+  algoutle: {"at": "Ban-de-Laveline", "note": "Algoutte, a hamlet of Ban-de-Laveline (DicoTopo); the index's Laveline, not Laveline-devant-Bruyères"}
+  la-verpelliere: {"at": "Ban-de-Laveline", "note": "La Verpellière, a hamlet of Ban-de-Laveline (DicoTopo); the index's Laveline, not Laveline-devant-Bruyères"}
+  lapraye: {"at": "Ban-de-Laveline", "note": "La Pré: La Prée (1594), an old name of Algoutte, a hamlet of Ban-de-Laveline (DicoTopo)"}
+  aubripaire: {"at": "Saulcy-sur-Meurthe", "note": "Aubripaire, a hamlet of Saulcy-sur-Meurthe (DicoTopo); the index's Saulcy, not Le Saulcy"}
+  les-cours: {"at": "Saulcy-sur-Meurthe", "note": "Les Cours, a hamlet of Saulcy-sur-Meurthe (DicoTopo); the index's Saulcy, not Le Saulcy"}
+  le-chenois: {"at": "Saulcy-sur-Meurthe", "note": "Le Chénois, a former commune joined to Saulcy-sur-Meurthe (DicoTopo); the index's Saulcy, not Le Saulcy"}
+  mardigny: {approximate: vathimont, name_fr: Ban de Redigny, note: "Redigny, entry 503 after Vatimont (502): the ban de Redigny, a franc-alleu near Vatimont, Redigny-lès-Wauthiemont in 1616 (Bouteiller, DicoTopo); not the index's doubtful Mardigny (?), 30 km away. Placed at Vatimont"}
   scheuer-hof: {approximate: nohn, note: "Scheuer-Hof, a farm of the village of Nohn (Saarland) that no longer exists (the editor's corrections); not the Scheuer-Hof in Luxembourg. Placed at Nohn"}
   # hamlets, farms and lost places checked against the index (location audit)
   aray-le-lan-v-ban-de-moyenmouticr: {"at": "Moyenmoutier", "note": "le ban d'Aray, a ban of Moyenmoutier (the index)"}

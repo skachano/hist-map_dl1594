@@ -106,7 +106,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 106,Regniéville.,Regniéville,,provostship-nancy,lordship-pierrefort,fief,,,,main,,regnieville,39,high,
 107,Rcménoville.,Rcménoville,,provostship-nancy,lordship-pierrefort,fief,,,,main,,remenauville,39,high,
 108,Villcy-en-Hey.,Villcy-en-Hey,,provostship-nancy,lordship-pierrefort,fief,,,,main,,villers-en-haye,39,high,
-109,Fleurey.,Fleurey,,provostship-nancy,lordship-hey,fief,,,,main,,fiircy,39,high,
+109,Fleurey.,Fleurey,,provostship-nancy,lordship-hey,fief,,,,main,,flirey,39,high,
 110,Fay.,Fay,,provostship-nancy,lordship-hey,fief,,,,main,,fey-en-haye,39,high,
 111,Limey.,Limey,,provostship-nancy,lordship-hey,fief,,,,main,,limey,39,high,
 112,Mammey.,Mammey,,provostship-nancy,lordship-hey,fief,,,,main,,mamey,39,high,
@@ -866,7 +866,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 866,La Chappcllc.,La Chappcllc,,provostship-arches,lordship-l-alleu,fief,,,,main,,la-chapelle-aux-bois,65,high,
 867,Razey.,Razey,,provostship-arches,lordship-l-alleu,fief,,,,main,,razey,65,high,
 868,"Fougerolles, chasteau et village.",Fougerolles,castle|village,provostship-arches,lordship-l-alleu,fief,,,,main,,fougerolles,65,high,
-869,"Charmes, ville et chasteau ruiné.",Charmes,castle|town|deserted_village,provostship-charmes,,domain,,,,main,,charmes-sur-moselle,65,high,
+869,"Charmes, ville et chasteau ruiné.",Charmes,castle|town|deserted_village,provostship-charmes,,domain,,,,main,,charmes,65,high,
 870,Rugny.,Rugny,,provostship-charmes,,domain,,,,main,,rugney,65,high,
 871,Florémont.,Florémont,,provostship-charmes,,domain,,,,main,,floremont,65,high,
 872,Bralleviilc.,Bralleviilc,,provostship-charmes,,domain,,,,main,,bralleville,65,high,number read from '87J'
@@ -1986,7 +1986,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1986,Joycy.,Joycy,,bailiwick-apremont,,fief,,,,main,,jouy-sous-les-cotes,103,high,
 1987,Lahéville.,Lahéville,,bailiwick-apremont,,fief,,,,main,,lahayville,103,high,
 1988,Lairey.,Lairey,,bailiwick-apremont,,fief,,,,main,,lairey,104,medium,index match by loose number (1.00)
-1989,La Montagne.,La Montagne,,bailiwick-apremont,,fief,,,,main,,saint-prival-ia-montagne,104,high,
+1989,La Montagne.,La Montagne,,bailiwick-apremont,,fief,,,,main,,saint-privat-la-montagne,104,high,
 1990,Landres.,Landres,,bailiwick-apremont,,fief,,,,main,,landres,104,high,
 1991,Lixières.,Lixières,,bailiwick-apremont,,fief,,,,main,,lixieres,104,high,
 1992,Lyoville.,Lyoville,,bailiwick-apremont,,fief,,,,main,,liouville,104,high,
@@ -2310,7 +2310,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2310,Darnev.,Darnev,,,,,,,,towns,,darney,128,high,
 2311,Arches.,Arches,,,,,,,,towns,,arches,128,high,number read from '23H'
 2312,Bruyères.,Bruyères,,,,,,,,towns,,bruyeres,128,high,
-2313,Charmes.,Charmes,,,,,,,,towns,,charmes-sur-moselle,128,medium,index match by confused number (1.00)
+2313,Charmes.,Charmes,,,,,,,,towns,,charmes,128,medium,index match by confused number (1.00)
 2314,Chastenoy.,Chastenoy,,,,,,,,towns,,chatenois,128,high,
 2315,Neufchasteau.,Neufchasteau,,,,,,,,towns,,neufchateau,128,high,
 2316,"Vilel, marché.",Vilel,market,,,,,,,towns,,vittel,128,medium,index match by confused number (0.91); number read from '231C'
@@ -2471,7 +2471,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2471,Minimes de Nancy.,Minimes de Nancy,,,,,,,,convents_m,minim,nancy,133,high,
 2472,Minimes de Serres.,Minimes de Serres,,,,,,,,convents_m,minim,serres,133,high,
 2473,Capucins de Nancy.,Capucins de Nancy,,,,,,,,convents_m,capuchin,capucins-de-nancy,133,low,index match by none (0.00)
-2474,Carmes.,Carmes,,,,,,,,convents_m,,charmes-sur-moselle,133,medium,index match by same name as entry 869 (1.00)
+2474,Carmes.,Carmes,,,,,,,,convents_m,,charmes,133,medium,index match by same name as entry 869 (1.00)
 2475,"Jésuites de Nancy, novitial.",Jésuites de Nancy,,,,,,,,convents_m,jesuit,nancy,133,high,
 2476,Sainct-Jean-du-Vicl-Aislrede Nancy.,Sainct-Jean-du-Vicl-Aislrede Nancy,,,,,,,,commanderies,,saint-jean,133,medium,index match by number (0.49)
 2477,Sainct-Georges lez Lunéville.,Sainct-Georges lez Lunéville,,,,,,,,commanderies,,luneville,133,medium,index match by number (0.44)
