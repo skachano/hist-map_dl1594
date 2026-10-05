@@ -14,8 +14,8 @@ YEAR = 1594
 
 
 def source_pdf() -> Path:
-    """Return the single source PDF in pdf/."""
-    pdfs = sorted(PDF_DIR.glob("*.pdf"))
+    """Return the scan of the Dénombrement in pdf/, which may hold other PDFs (licences) too."""
+    pdfs = sorted(p for p in PDF_DIR.glob("*.pdf") if "nombrement" in p.name)  # é may be decomposed
     if len(pdfs) != 1:
-        raise FileNotFoundError(f"expected exactly one PDF in {PDF_DIR}, found {len(pdfs)}")
+        raise FileNotFoundError(f"expected exactly one Dénombrement PDF in {PDF_DIR}, found {len(pdfs)}")
     return pdfs[0]
