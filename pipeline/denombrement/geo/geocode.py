@@ -351,6 +351,7 @@ def run() -> dict[str, Result]:
     _one_place_per_item(results, places, gaz)
     _check_index(results, places, gaz, seats, rules, memberships)
     _apply_rules(results, rules, items, commune_at)
+    _country_by_point(results, gaz, rules)
 
     # Territories: a label point at the seat (a settlement of the seat's name in the territory),
     # else at the centre of their located members; Japanese names from the seat.
@@ -576,6 +577,25 @@ def _one_place_per_item(results: dict[str, Result], places: dict, gaz: Gazetteer
                 res.note = f"its match {qid} went to {winner}, whose name fits it better"
             moved += 1
     print(f"one place per item: {moved} place(s) moved off a shared Wikidata item")
+
+
+def _country_by_point(results: dict[str, Result], gaz: Gazetteer, rules: dict, radius_km: float = 15.0) -> None:
+    """A place whose point no Wikidata or GeoNames item gave (hist_map's, a rule's, its commune's)
+    has only the index's country, France by default: it takes the nearest such item's instead
+    (Kaisen, in the Saarland). A rule's own country or Wikidata item stands."""
+    changed = 0
+    for pid, res in results.items():
+        rule = rules.get(pid) or {}
+        if res.lat is None or res.method in ("wikidata", "geonames") or "country" in rule or "wikidata" in rule:
+            continue
+        near = [c for c in gaz.near((res.lat, res.lon), radius_km) if c.source != "hist_map" and c.country and c.rank >= 2.5]
+        if not near:
+            continue
+        country = min(near, key=lambda c: km((res.lat, res.lon), (c.lat, c.lon))).country
+        if country != res.country:
+            res.country = country
+            changed += 1
+    print(f"countries from the nearest item: {changed} changed")
 
 
 def places_it(rule: dict | None) -> bool:

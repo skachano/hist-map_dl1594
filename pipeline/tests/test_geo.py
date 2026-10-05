@@ -86,3 +86,17 @@ def test_a_rule_sets_a_point_names_and_country():
     r = res["kolchen"]
     assert (r.lat, r.lon, r.name_fr, r.name_de, r.country) == (49.63419, 6.44363, "Köllig", "Köllig", "DE")
     assert (r.method, r.confidence, r.fixed) == ("rule", "high", True)
+
+
+def test_a_place_takes_the_country_of_the_nearest_item():
+    """hist_map's points carry no country: the nearest Wikidata or GeoNames item's is taken
+    (Kaisen, in the Saarland); a match's own country and a rule's stand."""
+    from denombrement.geo import geocode
+    illingen = Cand("wikidata", 49.376, 7.052, geocode.label_keys("Illingen"), 3, "DE", qid="Q1")
+    g = _gaz(illingen)
+    res = {"kaisen": geocode.Result("kaisen", lat=49.371, lon=7.017, method="hist_map", country="FR"),
+           "metz": geocode.Result("metz", lat=49.37, lon=7.02, method="wikidata", country="FR"),
+           "ruled": geocode.Result("ruled", lat=49.37, lon=7.02, method="rule", country="FR"),
+           "far": geocode.Result("far", lat=48.0, lon=6.0, method="approximate", country="FR")}
+    geocode._country_by_point(res, g, {"ruled": {"lat": 49.37, "lon": 7.02, "country": "FR"}})
+    assert [res[k].country for k in ("kaisen", "metz", "ruled", "far")] == ["DE", "FR", "FR", "FR"]
