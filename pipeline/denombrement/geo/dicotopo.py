@@ -19,7 +19,7 @@ from datetime import date
 import requests
 
 from denombrement import config
-from denombrement.curate.build import fold
+from denombrement.curate.build import fold, load_rules
 from denombrement.geo.geocode import km
 from denombrement.geo.wikidata import HEADERS
 
@@ -336,7 +336,8 @@ NEAR_KM = 12.0        # the match is the place where it is now
 FAR_KM = 15.0
 
 
-def review_settlements(idx: Index, places: dict, parents: dict, centres: dict, shared: set) -> list[str]:
+def review_settlements(idx: Index, places: dict, parents: dict, centres: dict, shared: set,
+                       reviewed: dict | None = None) -> list[str]:
     """Every located settlement's names (the index's and the book's) against DicoTopo, scored near its
     district, not near where it is placed: names for places put at their commune under the index's
     garbled spelling, and matches that disagree with the placement."""
@@ -354,7 +355,8 @@ def review_settlements(idx: Index, places: dict, parents: dict, centres: dict, s
         if hits and (pid not in best or hits[0].score > best[pid][0].score):
             best[pid] = (hits[0], name, near)
 
-    named, disagree = [], []
+    reviewed = reviewed or {}
+    named, disagree, silenced = [], [], 0
     for p in settlements:
         if p["id"] not in best:
             continue
@@ -376,6 +378,9 @@ def review_settlements(idx: Index, places: dict, parents: dict, centres: dict, s
                                        f"{h.score:.2f}{point}"))
         elif h.score >= DISAGREE_MIN and moved > FAR_KM and near and h.km is not None \
                 and h.km + 10 < km(here, near):
+            if p["id"] in reviewed:   # checked by hand: the placement stands
+                silenced += 1
+                continue
             disagree.append((moved, f"- `{p['id']}` {p['name_fr']} ({p['geo_method']}/{p['geo_confidence']}), "
                                     f"{km(here, near):.0f} km from its district → **{label}** [{where}] via {name!r} ~ {seen}, "
                                     f"{h.score:.2f}, {h.km:.0f} km from its district, {moved:.0f} km from where it is"))
@@ -384,7 +389,8 @@ def review_settlements(idx: Index, places: dict, parents: dict, centres: dict, s
              "the hamlet's own point where DicoTopo gives one (not its commune's).", ""]
             + [line for _, line in sorted(named, key=lambda x: -x[0])]
             + ["", f"## Settlements DicoTopo places elsewhere ({len(disagree)})", "",
-               f"A match of {DISAGREE_MIN} or better more than {FAR_KM:.0f} km from where the place is, and nearer its district.", ""]
+               f"A match of {DISAGREE_MIN} or better more than {FAR_KM:.0f} km from where the place is, and nearer its district"
+               + (f"; {silenced} more checked by hand (rules.yaml `dicotopo_reviewed`)." if silenced else "."), ""]
             + [line for _, line in sorted(disagree, key=lambda x: -x[0])])
 
 
@@ -427,7 +433,10 @@ def run() -> None:
         hits = next(results)
         lines.append(f"- {pid}: {p.get('name_fr', '')}" + ("" if hits else " — no match"))
         lines.extend(f"  {i}. {_row(h)}" for i, h in enumerate(hits, 1))
-    lines += [""] + review_settlements(idx, places, parents, centres, shared_points(dico))
+    reviewed = load_rules().get("dicotopo_reviewed") or {}
+    lines += [""] + review_settlements(idx, places, parents, centres, shared_points(dico), reviewed)
+    for pid in sorted(set(reviewed) - set(places)):
+        print(f"rules.yaml dicotopo_reviewed: no place {pid!r} (renamed?)")
     REVIEW_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"manual checks: {found} of {len(checks)} answers in the top 5; unlocated places: {len(unlocated)}")
     print(f"-> {REVIEW_FILE.relative_to(config.ROOT)}")

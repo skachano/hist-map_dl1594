@@ -110,3 +110,16 @@ def test_shared_points_tell_a_hamlets_own_point_from_its_communes():
               _place("P3", "Mortagne", lat=48.546, lon=6.443, commune="Mont-sur-Meurthe")]
     # Petit-Eberswiller has its commune's point; Mortagne's is its own
     assert dicotopo.shared_points(places) == {(49.09, 6.76)}
+
+
+def test_review_lists_a_far_match_unless_checked_by_hand():
+    idx = Index([_place("P1", "Biding", old=["<dfn>Budingen</dfn> (1606)"], lat=49.06, lon=6.79)])
+    places = {"buding": {"id": "buding", "kind": "settlement", "name_fr": "Buding", "variants": "Budingen",
+                         "lat": "49.33", "lon": "6.32", "wikidata_id": "Q1", "geonames_id": "",
+                         "geo_method": "hist_map", "geo_confidence": "high"}}
+    args = (idx, places, {"buding": ["castellany"]}, {"castellany": (49.07, 6.78)}, set())
+    listed = dicotopo.review_settlements(*args)
+    assert any(line.startswith("- `buding`") for line in listed)
+    silenced = dicotopo.review_settlements(*args, {"buding": "Buding, canton de Metzerwisse (the index)"})
+    assert not any(line.startswith("- `buding`") for line in silenced)
+    assert any("1 more checked by hand" in line for line in silenced)

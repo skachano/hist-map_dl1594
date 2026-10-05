@@ -585,7 +585,7 @@ def places_it(rule: dict | None) -> bool:
 
 def _apply_rules(results: dict[str, Result], rules: dict, items: dict, commune_at=None) -> None:
     """rules.yaml `geocode`: {place: {wikidata: Q…}|{lat, lon}|{approximate: other-place}|{at: commune}|
-    {unlocated: true}, note}. `at` places a hamlet or farm at its commune, the one of that name nearest
+    {unlocated: true}, note}, with name_fr/_de/_en and country where the match gives none. `at` places a hamlet or farm at its commune, the one of that name nearest
     the place's district (`commune_at(name, place id)`)."""
     for pid, rule in rules.items():
         res = results.get(pid)
@@ -619,6 +619,8 @@ def _apply_rules(results: dict[str, Result], rules: dict, items: dict, commune_a
         for lang in ("fr", "de", "en"):
             if rule.get(f"name_{lang}"):
                 setattr(res, f"name_{lang}", rule[f"name_{lang}"])
+        if rule.get("country"):
+            res.country = rule["country"]
 
 
 def _write(results: dict[str, Result]) -> None:

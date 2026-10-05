@@ -74,3 +74,15 @@ def test_a_rule_that_only_names_a_place_leaves_it_to_the_passes():
     assert (r.name_fr, r.lat, r.lon, r.fixed) == ("Mortagne", 48.5, 6.4, False)
     assert r.note == "placed at its commune Mont; Mortagne, a hamlet of Mont-sur-Meurthe (DicoTopo)"
     assert not geocode.places_it(rules["mortagnc"]) and geocode.places_it({"at": "Mont"})
+
+
+def test_a_rule_sets_a_point_names_and_country():
+    """rules.yaml geocode {lat, lon, name_*, country}: a place the gazetteers give no item for (Köllig)."""
+    from denombrement.geo import geocode
+    res = {"kolchen": geocode.Result("kolchen", lat=49.6, lon=6.4, method="hist_map", confidence="low", country="FR")}
+    rules = {"kolchen": {"lat": 49.63419, "lon": 6.44363, "name_fr": "Köllig", "name_de": "Köllig", "country": "DE",
+                         "note": "Köllig, a village of Nittel"}}
+    geocode._apply_rules(res, rules, {})
+    r = res["kolchen"]
+    assert (r.lat, r.lon, r.name_fr, r.name_de, r.country) == (49.63419, 6.44363, "Köllig", "Köllig", "DE")
+    assert (r.method, r.confidence, r.fixed) == ("rule", "high", True)
