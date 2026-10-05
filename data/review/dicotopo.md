@@ -785,55 +785,11 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Gouau [Scierie, Ménil, canton Thillot, 88] via *Gouau*, 0.66, 5 km
   3. Foucharupt [Hameau, Saint-Dié-des-Vosges, canton Saint-Dié-des-Vosges (NP), 88] via *Fouxarru (1502)*, 0.62, 46 km
 
-## Settlements at their commune: DicoTopo's name (44)
+## Settlements at their commune: DicoTopo's name (0)
 
 Approximate places (no Wikidata or GeoNames item) with a match within 12 km: the modern name, and
-the hamlet's own point where DicoTopo gives one (not its commune's).
+the hamlet's own point where DicoTopo gives one (not its commune's); 19 more checked by hand (rules.yaml `dicotopo_reviewed`).
 
-- `les-neuves-granges` Les Neuves-Granges → **Olima** [Hameau, Forges, 88] via 'Les Granges' ~ *Les granges…* (1708), 1.00
-- `le-void-de-girancourl` Le Void-de-Girancourl → **Void** [Scierie, Gorhey, 88] via 'Le Void' ~ *Void*, 1.00
-- `hargarten-les-laumelsfeld` Hargarten-lès-Laumelsfeld → **Hargarten** [Hameau, Laumesfeld, 57] via 'Hargarden' ~ *Hargarden* (1594), 1.00
-- `lapraye` Lapraye → **Algoutte** [Hameau, Ban-de-Laveline, 88] via 'La Pré' ~ *La Prée* (1594), 0.99
-- `paire-le-bam` Le Paire → **Pair-et-Grandrupt** [88] via 'Le Payre' ~ *Le Paire*, 0.98
-- `la-cote-passavant` La Côte → **Fontenoy-la-Côte** [Portion de Fontenoy-le-Château située sur la rive droite du Coney, Fontenoy-le-Château, 88] via 'La Côte' ~ *La Côte* (1873), 0.96
-- `ebersviller` Ebersviller → **Eberswiller** [Ébersviller, 57] via 'Eberswillcr' ~ *Eberswiller*, 0.94
-- `saint-jean-pierrefort` Saint-Jean-Pierrefort → **Saint-Jean** [Hameau, Martincourt, 54] via 'Saint-Jean-Pierrefort' ~ *Saint-Jean-Pierrefort*, 0.94
-- `ingliug` Ingliug → **Ingling** [Ferme, Chémery-les-Deux, 57] via 'Englingcn' ~ *Englingen* (1616), 0.94
-- `rembaville` Rembaville → **Rambaville** [Hameau, Corcieux, 88] via 'Rembaville' ~ *Rambaville*, 0.94
-- `boucliatel` Boucliatel → **Bouchâtel** [Écart, Val-d'Ajol, 88] via 'Boucliatel' ~ *Bouchâtel*, 0.94
-- `herbemoui` Herbemoui → **Herbémont** [Hameau, Saint-Remimont, 54] via 'Herbclmont' ~ *Herbelmont* (1600), 0.93
-- `mercille` Mercille → **Méreille** [Hameau, Girmont-Val-d'Ajol, 88] via 'Mercille' ~ *Méreille*, 0.93
-- `le-faingt` Le Faingt → **Le Faing-Thierry** [Hameau, Remomeix, 88] via 'Le Faingt' ~ *Le Faingt* (1845), 0.92
-- `le-monccl` Le Monccl → **Le Moncel** [Hameau, Saint-Léonard, 88] via 'MonceL' ~ *Moncel (Le)*, 0.92
-- `la-bassc-mandray` La Bassc-Mandray → **La Basse-Mandray** [Hameau, Mandray, 88] via 'La Basse-Mandray' ~ *Basse-Mandray (La)*, 0.92
-- `aulnes-les-ham` Aulnes (les) ham → **Les Aulnes** [Hameau, Fraize, 88] via 'Les Aulnes' ~ *Aulnes (Les)*, 0.92
-- `belrepairc` Belrepairc → **Le Belrepaire** [Hameau, Fraize, 88] via 'Belrepaire' ~ *Belrepaire (Le)*, 0.92
-- `la-coslelle` La Coslelle → **La Costelle** [Hameau, Fraize, 88] via 'La Costelle' ~ *Costelle (La)*, 0.92
-- `la-cote` La Côte → **Côte (A la)** [Écart, Thillot, 88] via 'La Côte' ~ *Côte (A la)*, 0.92
-- `la-rue-sous-llarol` La Rue-sous-llarol → **La Rue** [Ancien hameau, Dompaire, 88] via 'La Rue' ~ *Rue (La)*, 0.91
-- `la-malgrange` La Malgrange → **Malgranges (Les Petites-)** [Maison de santé, Jarville-la-Malgrange, 54] via 'La Malgrange' ~ *Malgranges (Les Petites-)*, 0.91
-- `chambrc-de-moulin` La Chambre-de-Moulin → **Les Arrentés-de-Chaumont** [Ancienne communauté comprenant, Raon-aux-Bois, 88] via 'La Chambre-de-Moulin' ~ *chambre de Moulin*, 0.91
-- `saarec-e` Saarec! e → **Saarecke (angle** [Moulin et château, Oberstinzel, 54] via 'Saarec! e' ~ *Sarecke*, 0.91
-- `les-ainias` Les Ainias → **Les Amias** [Hameau, Saulxures-sur-Moselotte, 88] via 'Les Amyas' ~ *Amias (Les)*, 0.91
-- `reblangollc` Reblangollc → **Reblangotte** [Hameau, Charmois-l'Orgueilleux, 88] via 'Reblangollc' ~ *Reblangotte*, 0.91
-- `mexel` Mexet → **Mexet (pron. Méchet)** [Écart, Haussonville, 54] via 'Mexet' ~ *Mexet (pron. Méchet)*, 0.91
-- `les-cours-corcieux` Les Cours → **Cour (A la)** [Écart, Poulières, 88] via 'Les Cours' ~ *Cour (A la)*, 0.90
-- `libdcau` Libdcau → **Libdeau** [Ferme, Toul, 54] via 'Libdcau' ~ *Libdeau*, 0.90
-- `tholoy` Tholoy → **Le Tolloy** [Hameau, Vioménil, 88] via 'Tholoy' ~ *Le Tholoy* (1821), 0.90
-- `outrcmonl` Outrcmonl → **Outremont** [Hameau, Val-d'Ajol, 88] via 'Outrcmonl' ~ *Outremont*, 0.89
-- `etat` Etat → **L’État** [Hameau, Ramonchamp, 88] via 'Etat' ~ *État (L’)*, 0.89
-- `avant-garde` Avant-garde → **L’Avant-Garde** [Écart, Pompey, 54] via 'Avant-garde' ~ *Avant-Garde (L’)*, 0.89
-- `braconeelle` Braconeelle → **Braconseil** [Hameau, Ban-sur-Meurthe-Clefcy, 88] via 'Braconeelle' ~ *Braconcelle* (1779), 0.89
-- `mandre-ia-pclite` Mandre-Ia-Pclite → **Mandre-la-Petite** [Hameau, Boncourt-sur-Meuse, 55] via 'Mandres-la-Petite' ~ *Mandre-la-Petite*, 0.88
-- `algoutle` Algoutle → **Algoutte** [Hameau, Ban-de-Laveline, 88] via 'Allegoutte et' ~ *Allegoutte* (1711), 0.88
-- `putlegney` Putlegney → **Puttegney** [Hameau, Harol, 88] via 'Putlegney' ~ *Puttegney*, 0.88
-- `la-seie-brabant` La Seie-Brabant → **La Scie-Brahaut** [Moulin, Claudon, 88] via 'La Seie-Brabant' ~ *La Scie Brabant* (1779), 0.88
-- `la-trouchc` La Trouchc → **Fraize** [88] via 'La Treize' ~ *Fraize*, 0.87
-- `le-chipai` Le Chipai → **Le Chipal** [Hameau, Croix-aux-Mines, 88] via 'Le Chipai' ~ *Chipal (Le)*, 0.86
-- `letrayc` Létrayc → **L’Étraye** [Hameau, Ramonchamp, 88] via 'Létrayc' ~ *Letraye* (1696), 0.84
-- `la-combclle` La Combclle → **La Combelle** [Ferme, Val-d'Ajol, 88] via 'La Combclle' ~ *Combelle (La)*, 0.84
-- `ripplingen` Ripplingen → **Réméling** [Rémeling, 57] via 'Ripplingen' ~ *Remlingen* (1691), 0.83
-- `fontenoy-la-ville` Fontenoy-la-Ville → **Fontenoy-la-Côte** [Portion de Fontenoy-le-Château située sur la rive droite du Coney, Fontenoy-le-Château, 88] via 'Fontenoy-la-Ville' ~ *Fontenoy-la-Côte*, 0.81
 
 ## Settlements DicoTopo places elsewhere (0)
 
