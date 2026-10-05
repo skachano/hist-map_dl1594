@@ -1251,7 +1251,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1251,Flachstorff.,Flachstorff,,sub-provostship-sierck,,domain,,,,main,,flastroff,79,high,
 1252,Furweiller.,Furweiller,,sub-provostship-sierck,,domain,,,,main,,furweiler,79,medium,index match by loose number (1.00)
 1253,Morchern.,Morchern,,sub-provostship-sierck,,domain,,,,main,,mechern,79,high,
-1254,Frymestroû*.,Frymestroû*,,sub-provostship-sierck,,domain,,,,main,,fremmesdr-v-m-de-rehlingen,79,high,
+1254,Frymestroû*.,Frymestroû*,,sub-provostship-sierck,,domain,,,,main,,fremersdorf,79,high,
 1255,Leucken.,Leucken,,sub-provostship-sierck,,domain,,,,main,,oberleuken,79,medium,index match by index number (0.41)
 1256,Wuclicni.,Wuclicni,,sub-provostship-sierck,,domain,,,,main,,wochern,79,high,
 1257,Gclmingcn.,Gclmingcn,,sub-provostship-sierck,,domain,,,,main,,gomelange,79,high,
@@ -1555,7 +1555,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1555,Rappwciller.,Rappwciller,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,rappweiler,89,high,
 1556,Freysen.,Freysen,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,freisen,89,high,
 1557,Hoffcstetten.,Hoffcstetten,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,hobslelen-ou-gbsteten,89,high,
-1558,Lîessterthal.,Lîessterthal,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,liesstcrthah-office-de-schambourg,89,high,
+1558,Lîessterthal.,Lîessterthal,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,lostertal,89,high,
 1559,GudersweiUcr.,GudersweiUcr,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,gudesweiler,89,high,
 1560,llenweiilcr.,Henweiilcr,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,hahnweiler,89,high,
 1561,Frudcsswciller.,Frudcsswciller,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,furschweiler-les-namborn,89,high,
@@ -1563,7 +1563,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1563,Wadrill.,Wadrill,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,wadrill,89,high,
 1564,Neunkirchen.,Neunkirchen,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,neunkirchen,89,high,
 1565,Seilbach.,Seilbach,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,seilbach,89,high,
-1566,Mittclwrillembach.,Mittclwrillembach,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,mitiel-bollenbacli,89,high,
+1566,Mittclwrillembach.,Mittclwrillembach,,provostship-keltern-ostern,fief-keltern-ostern,fief,house-eberstein|house-oberstein,,,main,,mittelbollenbach,89,high,
 1567,Guemunde.,Guemunde,,office-sarreguemines,,domain,,,,main,,sarreguemines,89,high,
 1568,Grossblidcrsslorfï.,Grossblidcrsslorfï,,office-sarreguemines,,domain,,,,main,,grosbliederstroff,89,high,
 1569,KleinblidesstorfT.,KleinblidesstorfT,,office-sarreguemines,,domain,,,,main,,kleinblittersdorf,89,high,
@@ -2123,7 +2123,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2123,"Zymerbach, pour la moictié.",Zymerbach,,district-soultzbach,,other,,1/2,,main,,zimmerbach,108,medium,index match by index number (1.00)
 2124,"Liepvre, bourg et prieuré de l'ordre de [Suini-Benoit], despendant de l'abbaye de Saintl-Dcnys en France, annexé à l'église collégiattc Sainct-Gcorgede Nancy.",Liepvre,small_town|abbey|priory|collegiate_church,val-liepvre,,other,,,,main,,liepvre,108,high,
 2125,"Sainctc-Croix et Zuckmantel, vilbge et chasteau.",Sainctc-Croix et Zuckmantel,castle,val-liepvre,,other,,,,main,,sainte-croix-aux-mines,109,high,
-2126,"Eschery la Haulte, chasteau appartenant par moictié à Son Altesse et au sieur de Ribeaupierre.",Eschery la Haulte,castle,val-liepvre,,other,,1/2,,main,,eschery-la-haulte,109,low,index match by none (0.00)
+2126,"Eschery la Haulte, chasteau appartenant par moictié à Son Altesse et au sieur de Ribeaupierre.",Eschery la Haulte,castle,val-liepvre,,other,,1/2,,main,,echery,109,low,index match by none (0.00)
 2127,"Saincte-Maric, bourg, minières d'argent,plomb, cuivre.",Saincte-Maric,small_town,val-liepvre,,other,,,,main,,sainte-marie-aux-mines,109,high,
 2128,Le Grand-Rombach.,Le Grand-Rombach,,val-liepvre,,other,,,,main,,le-grand-rombach,109,high,number read from '2138'
 2129,Le Petit-Rombach.,Le Petit-Rombach,,val-liepvre,,other,,,,main,,pciil-kombach,109,high,
@@ -2146,7 +2146,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2146,Reygcrssweiller.,Reygcrssweiller,,mayoralty-schorbach,lordship-bitche,domain,,,,main,,reyerswiller,110,high,number read from '3146'
 2147,Bussweiller.,Bussweiller,,mayoralty-bousseviller,lordship-bitche,domain,,,,main,,bousseviller,110,high,number read from '3147'
 2148,Breytembach.,Breytembach,,mayoralty-bousseviller,lordship-bitche,domain,,,,main,,breidenbach,110,high,
-2149,11 n'en dépend que le seul village dudict Steimbach.,11 n'en dépend que le seul village dudict Steimbach,,mayoralty-steimbach,lordship-bitche,domain,,,,main,,obeistiinbach,110,medium,index match by number (0.34)
+2149,11 n'en dépend que le seul village dudict Steimbach.,11 n'en dépend que le seul village dudict Steimbach,,mayoralty-steimbach,lordship-bitche,domain,,,,main,,obersteinbach,110,medium,index match by number (0.34)
 2150,"Waldsborn, chasteau ruiné, bains de bitume, aliàs cire de montagne, qu'ils appellent bergwach.",Waldsborn,castle|deserted_village,mayoralty-walschbronn,lordship-bitche,domain,,,,main,,walschbronn,110,high,
 2151,fluspclschîd:.,Huspclschîd:,,mayoralty-walschbronn,lordship-bitche,domain,,,,main,,haspeilseheidt,110,high,number read from '3151'
 2152,Wollhaussen.,Wollhaussen,,mayoralty-walschbronn,lordship-bitche,domain,,,,main,,waldhausen,110,high,number read from '2153'
@@ -2205,7 +2205,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2205,Welzelm.,Welzelm,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,winzeln,112,high,
 2206,Gcrsspach.,Gcrsspach,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,gersbach,112,high,
 2207,Erlemborn.,Erlemborn,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,erlenbrunn,112,high,
-2208,Symptcn.,Symptcn,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,niedersimtenou-obersimlen,112,medium,index match by number (0.32)
+2208,Symptcn.,Symptcn,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,obersimten,112,medium,index match by number (0.32)
 2209,Pfumersens.,Pfumersens,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,pirmasens,112,high,
 2210,Froschcn.,Froschcn,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,thalfroschen,112,high,
 2211,Eych.,Eych,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,et-ch,112,high,number read from '22H'
@@ -2226,7 +2226,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2226,Undtsweiiler.,Undtsweiiler,grange,mayoralty-hilsperg,lordship-bitche,domain,,,,main,,loutzviller,113,high,section domain inferred from the realm's holder
 2227,Esehweiller.,Esehweiller,grange,mayoralty-hilsperg,lordship-bitche,domain,,,,main,,merschweiller,113,low,index match by name (0.91); section domain inferred from the realm's holder
 2228,Schweygen.,Schweygen,grange,mayoralty-hilsperg,lordship-bitche,domain,,,,main,,schweyen,113,medium,index match by loose number (0.82); section domain inferred from the realm's holder
-2229,"Contliiîj, en partie.",Contliiîj,grange,mayoralty-hilsperg,lordship-bitche,domain,,part,,main,,contliiij,113,low,index match by none (0.00); section domain inferred from the realm's holder
+2229,"Contliiîj, en partie.",Contliiîj,grange,mayoralty-hilsperg,lordship-bitche,domain,,part,,main,,contwig,113,low,index match by none (0.00); section domain inferred from the realm's holder
 2230,"Volfflingcn etWeissweiîler, possédez par le comte de Nussaw, lesquels ncanliuoins sont siz soub et en la seigneurie de Bidic.",Volfflingcn etWeissweiîler,grange,mayoralty-hilsperg,lordship-bitche,domain,,,,main,,woelfling,113,medium,index match by index number (0.70); section domain inferred from the realm's holder
 2231,"Momborn, fied du Paiatinal, sis en ladicte seigneurie de Biche.",Momborn,grange,mayoralty-hilsperg,lordship-bitche,domain,,,,main,,montbronn,113,low,index match by none (0.00); section domain inferred from the realm's holder
 2232,"Pfoltzbourg, chasteau, ville et passage.",Pfoltzbourg,castle|town|passage,district-phalsbourg,lordship-phalsbourg,domain,,,,main,,phalsbourg,113,high,section domain inferred from the realm's holder
@@ -2280,7 +2280,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2280,Budingen.,Budingen,,castellany-hombourg-et-saint-avold,temporality-abbey-saint-avold,clergy,abbey-saint-avold,,,main,,buding,115,high,
 2281,Walmen.,Walmen,,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,fief,,,,main,,valmont,115,high,
 2282,Folsschweiller.,Folsschweiller,,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,fief,,,,main,,folschwiller,115,high,
-2283,OberfuUen.,OberfuUen,,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,fief,,,,main,,oberfuuen,115,low,index match by none (0.00)
+2283,OberfuUen.,OberfuUen,,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,fief,,,,main,,haute-vigneulles,115,high,
 2284,Landingen.,Landingen,,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,fief,,,,main,,laning,115,medium,index match by loose number (0.95)
 2285,Fremerstroff.,Fremerstroff,,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,fief,,,,main,,fremestroff,115,high,
 2286,"Marsal, ville, église collégiatte de Sainct-Estienne.",Marsal,town|collegiate_church,town-district-marsal,,other,,,,main,,marsal,115,high,

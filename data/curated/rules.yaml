@@ -104,6 +104,7 @@ entry_index:
   640: Aydoiles         # "Aidolles" (ban de Vaudicourt): Aydoilles, whose line prints 640 as "C40"
   1335: Alz.ing         # "Ansclnigen" (Perl): Alzing, Anselnigen in 1594 (Bouteiller); its line prints "15551"
   331: HaMeure          # "Hallieure" (Sainte-Marguerite): the line for 331 and 364, printed "551, 564" (Hellieule)
+  2283: Vigneulles-Haute  # "OberfuUen" (Hombourg and Saint-Avold): Oberfüllen, Haute-Vigneulles (Oberfullen, 1681); its line prints 2285
   1190: Dombrol-sur-Vair  # "Bouzey" (Châtenois), between Sommerécourt and Mandres-sur-Vair: Dombrot-sur-Vair, "ci-devant Bouzey" (Marichal); not the mill of Sanchey near Épinal
 
 # Index lines the scan misread or merged, as printed ("page|name as read": the printed line, or a
@@ -300,6 +301,18 @@ geocode:
   biuhe: {wikidata: Q22754, note: "Bitche: Biche, chasteau (the index; canton de Bitche)"}
   phalstourg-eh-l-de-canton: {wikidata: Q22160, note: "Phalsbourg: Pfaltzbourg, chef-lieu de canton (the index)"}
   sarrallk: {wikidata: Q21979, note: "Sarralbe: Aulbe, chasteau et ville (1594), dén. Th. Alix (Bouteiller)"}
+  # the remaining unlocated places, against DicoTopo, Wikidata and GeoNames (2026-10-05)
+  eschery-la-haulte: {wikidata: Q109572302, name_fr: "Échery", name_de: "Echery", note: "Échery (Eschery la Haulte, chasteau), in the val de Lièpvre by Sainte-Marie-aux-Mines"}
+  contliiij: {wikidata: Q567847, note: "Contwig (the scan reads Contliiîj), by the seigneurie of Bitche"}
+  fremmesdr-v-m-de-rehlingen: {wikidata: Q1455187, note: "Fremersdorf (Frymestroff), com. de Rehlingen (the index): Rehlingen-Siersburg"}
+  mitiel-bollenbacli: {wikidata: Q84707298, name_fr: "Mittelbollenbach", note: "Mittelbollenbach (Mittelwillembach), by Sien (the index)"}
+  niedersimtenou-obersimlen: {wikidata: Q647195, note: "Obersimten: the index gives Niedersimten or Obersimten, canton de Pirmasens (Bav.)"}
+  obeistiinbach: {wikidata: Q21486, note: "Obersteinbach (Bas-Rhin), the village of the mairie of Steinbach (the index)"}
+  liesstcrthah-office-de-schambourg: {wikidata: Q1262819, note: "Löstertal (Liessterthal), office of Schaumburg"}
+  nidcck: {"at": "Sarralbe", "name_fr": "Nideck", "note": "Nideck, a lost village of the terre of Sarralbe (the index; DicoTopo)"}
+  prieure-de-liesse: {"at": "Hesse", "name_fr": "Prieuré de Hesse", "note": "the priory of Hesse by Sarrebourg (the scan reads liesse)"}
+  le-franc-chazcau: {"at": "Vagney", "name_fr": "Les Francs-Chasaux", "note": "Les Francs-Chasaux, a house at Vagney (the index), a former seigneurie (DicoTopo)"}
+  la-foresterie: {"at": "Longchamp", "name_fr": "La Foresterie du ban de Longchamp", "note": "the Foresterie of the ban of Longchamp (the index), placed at Longchamp"}
   # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
   # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
   liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}
@@ -434,6 +447,7 @@ dicotopo_reviewed:
   milly-sur-bradon: "Milly-sur-Bradon, the commune of Milly(-devant-Dun), canton de Dun (the index)"
   murvaux: "Murvaux, canton de Dun (the index); not the mill of Morvaux"
   mont-devant-sassey: "Mont-devant-Sassey, canton de Dun (the index); not Mont-sous-les-Côtes"
+  prieure-de-liesse: "the priory of Hesse, not the village"
   # placements (section 2)
   kollig: "Köllig by Nittel, the book's Kolchen (rules.yaml geocode); not Kirschnaumen"
   bure: "Bure, canton de Montiers-sur-Saulx (the index); not the écart of Muzeray"
