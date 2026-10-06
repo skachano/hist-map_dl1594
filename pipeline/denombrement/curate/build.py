@@ -343,6 +343,7 @@ def build() -> Built:
     # --- entries and their places ---
     entry_places = {int(k): v for k, v in (rules.get("entry_places") or {}).items()}
     rename_entries(entries, load_manual("entry_names"), rules.get("entry_names") or {})
+    retext_entries(entries, rules.get("entry_texts") or {})
     row_ids: dict[int, str] = {}
     used_ids: set[str] = set(out.places)
     matches: dict[int, Match] = {}
@@ -671,10 +672,22 @@ def rename_entries(entries: list[dict], readings: list[dict], names: dict) -> No
             _rename(by_no[int(no)], name)
 
 
+def retext_entries(entries: list[dict], texts: dict) -> None:
+    """rules.yaml `entry_texts` (no: text as printed), where the scan lost a full stop or ran a
+    heading into the entry ("Charmois.Soub Dompaire, menus verres.")."""
+    by_no = {e["no"]: e for e in entries}
+    for no, text in texts.items():
+        if int(no) not in by_no:
+            raise ValueError(f"rules.yaml entry_texts: no entry {no}")
+        by_no[int(no)]["text"] = text
+
+
 def _rename(e: dict, name: str) -> None:
     read = e["name"]
     if read != name and not read.startswith(name) and read in e["text"]:
-        e["text"] = e["text"].replace(read, name, 1)
+        # an entry that is only its name ends with the full stop the scan read as a letter ("MonceL")
+        whole = e["text"] == read and len(read.split()) == len(name.split())
+        e["text"] = name + "." if whole else e["text"].replace(read, name, 1)
     e["name"] = name
 
 

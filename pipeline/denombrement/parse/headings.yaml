@@ -18,6 +18,7 @@
 "Soubz la recepte de Dompaire": {prose: true}
 "Menus verres":            {prose: true}
 "Gagnages.":                {prose: true, section: other, descriptor: grange}
+"(lagnagcs de":             {prose: true, section: other, descriptor: grange}   # "Gagnages de" (p. 112), the name left blank; read "(lagnagcs de"
 "Droictz et sauvegardes":  {prose: true}
 "Les passages de Lutzelbourg": {prose: true}
 "Ez prévosté et chastellainie de Nancy": {types: [provostship], level: 2, seat: Nancy}

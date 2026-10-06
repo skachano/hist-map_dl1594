@@ -16,6 +16,7 @@ territory_seats:
   ban-grandvillcrs-et-dompierre: Grandvillers et Dompierre
   ban-i-fressv: Fraize                      # "Le ban i'_* Fressv" (p. 51): medium confidence
   ban-maizcy: Maizey
+  mayoralty-deleaveline: Laveline          # "La mairie de Leaveline" (p. 50), read "La mairie deLeaveline.i"
   ban-sardcy: Sardey
   ban-tcintruz: Taintrux
   ban-tic-ramonch-tmp: Ramonchamp           # "La Grande Mairie du ban de Ramonchamp"
@@ -88,6 +89,26 @@ entry_names:
   838: Ruz             # "Ruz" (p. 64), read "Buz": Rupt (the index)
   1695: Eidlingen       # "Eidlingen" (p. 93), read "Eidlingcn"
   1646: Heyligenner     # "Heyligenner" (p. 92), read "llcyligcnner": Hellimer (Heylingenner, Heligenner, 1594: Bouteiller)
+
+# Entry texts as printed, where the scan lost or misread the end of the line, or ran a heading into it.
+entry_texts:
+  75: Sainct-Marc, chasteau et village.  # the stop read as a comma
+  77: Sainct-Remymont.                   # the stop read as a comma
+  183: "Haussonville, chasteau, village et église collégiatte."   # read "…villageel églisecollégiatti"
+  220: Harraucourt, chasteau et ville.   # read "… et vihV"
+  261: Xermamesnil.                      # the stop is faint
+  640: Aidolles.                         # read "Aidolles'"
+  928: Offraucourt, chasteau et village.  # the stop is faint
+  507: Viller et                        # as printed; the name's reading took the "et" with it
+  675: Domepvre-sur-Durbion, chasteau et village.   # the stop read as a comma
+  683: Archette, franc fied.             # the stop read as a comma
+  1093: Charmois.                        # the heading above it, "Soub Dompaire, menus verres.", was read into the line
+  1154: "Gerbonval, prieuré de l'ordre dépendant de....."   # the dots were lost
+  1633: Heylingenner.                    # the stop read as a comma
+  1771: "Boullaincourt, prieuré de l'ordre [de Saint-Augustin], dépendant de Sainct-Léon de Toul."   # read "…Touh"
+  1860: Dongneville.                     # the stop read as a comma
+  1936: Arrée.                           # the stop read as a comma
+  2192: Genterssberg.                    # the stop read as a comma
 
 # Names a territory has in use, instead of "<type> of <seat>" (as in hist_map).
 territory_names:
@@ -170,6 +191,7 @@ territory_names:
   ban-maizey: {variants: []}
   ban-sainct-pierre: {de: "Bann Saint-Pierre", en: "Ban Saint-Pierre", fr: "Ban Saint-Pierre", variants: ["Ban Sainct-Pierre"]}
   ban-saint-die: {variants: ["Ban Sainct-Diey"]}
+  ban-hurbache: {variants: []}
   ban-sardey: {variants: []}
   ban-taintrux: {variants: []}
   ban-vagney: {variants: ["Ban de Vagny"]}
@@ -181,6 +203,7 @@ territory_names:
   mayoralty-meurthe: {variants: []}
   mayoralty-rolbing: {variants: []}
   mayoralty-sainte-marguerite: {variants: ["Mairie Saincte-Marguerite"]}
+  mayoralty-laveline: {variants: ["Mairie de Leaveline"]}
   mayoralty-usuaires: {de: "Meierei der Usuaires", en: "Mayoralty of the Usuaires", fr: "Mairie des Usuaires", variants: []}
   mayoralty-walschbronn: {variants: ["Mairie de Waldsborn"]}
   town-district-marsal: {variants: ["Ville et chastellainie de Marsal"]}

@@ -75,7 +75,7 @@ def blocks(lines: list[tuple[str, str, str]]) -> list[Block]:
         continues = last is not None and (
             text[:1].islower() or text[:1] in "([" or last.text.endswith("-")
             or not last.text.endswith(_TERMINAL))
-        if continues and not _section_of(text):
+        if continues and not _section_of(text) and not (text[:1] == "(" and _override(text)):   # "(lagnagcs de": a heading
             last.lines.append(text)
         else:
             out.append(Block("prose", page, [text], part=part))
@@ -454,6 +454,7 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
     admin: list[Territory] = [duchy]     # stack: duchy, bailiwick, district, sub-district
     realm: Territory | None = None       # the open feudal realm
     section: str | None = None
+    section_before_label: list[str | None] = []   # the section a label ("Gagnages.") set aside
     series = "main"
     descriptor_hint: str | None = None
     listed: set[str] = set()             # the level-2 seats a bailliage's opening sentence names
@@ -528,6 +529,7 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
         info = classify(text, comma_ok=next_is_entry)
         if info and info.prose:
             if info.section:
+                section_before_label = section_before_label or [section]
                 section = info.section
             descriptor_hint = info.descriptor
             out.prose.append({"page": b.page, "text": text, "context": admin[-1].key})
@@ -627,6 +629,8 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
         if d_flag:
             d.flags.append(d_flag)
         admin = [t for t in admin if t.level < level] + [d]
+        if section_before_label:   # a label's section ("Gagnages.") ends with the next division
+            section = section_before_label.pop()
         if info.last:
             ends[d.key] = info.last
             d.notes.append(f"its heading covers entries up to {info.last} (headings.yaml)")

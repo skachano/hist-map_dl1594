@@ -59,7 +59,7 @@ no,read,name,source
 193,Remcnoville,Remenoville,tesseract
 194,Rozcreulles,Rozereulles,scan
 200,Serainvillc,Serainville,tesseract
-202,"Vellc. """,Velle,tesseract
+202,Vellc,Velle,tesseract
 204,Vigneullcs,Vigneulles,DicoTopo
 206,Einvillc,Einville,scan
 219,Lczey,Lezey,scan
@@ -112,16 +112,12 @@ no,read,name,source
 398,FrayemonU,Frayemont,DicoTopo
 399,La Fonteneïle,La Fontenelle,tesseract
 406,Saiiïct-Lconard.;,Sainct-Léonard,DicoTopo
-407,Le Moncel.j,Le Moncel,DicoTopo
 408,Anouzcl,Anouzel,DicoTopo
-409,Aubripaire.!,Aubripaire,scan
 411,Provenctuï'rcs,Provenchières,DicoTopo
 421,HonviUe,Honville,scan
 423,Coinebymont,Coinchymont,DicoTopo
-426,Verpillière.\,Verpillière,scan
 427,Wysembaeh,Wysembach,tesseract
 429,Hurbaclic,Hurbache,scan
-430,Sainct-Jean d'Ormont.j,Sainct-Jean d'Ormont,scan
 436,Combriniom,Combrimont,scan
 440,Nabuentonl,Nahuemont,scan
 445,Clairegoultc,Clairegoutte,tesseract
@@ -620,7 +616,6 @@ no,read,name,source
 2043,Vacheronvillc,Vacheronville,tesseract
 2044,Val Saîncte-Marie,Val Saincte-Marie,scan
 2045,Vallerov-îez-Briev,Valleroy-lez-Briey,DicoTopo
-2046,Vaul. ',Vaul,DicoTopo
 2049,Ville prcz Mousson,Ville prez Mousson,old forms
 2051,Euvczin,Euvezin,DicoTopo
 2052,Xcsmes,Xesmes,tesseract

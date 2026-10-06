@@ -155,6 +155,28 @@ def test_a_heading_can_end_before_the_next(monkeypatch):
     assert r.territories["court-perl"].parent == "provostship-sierck"
 
 
+def test_a_garbled_label_starts_its_own_block_and_its_section_ends_with_the_next_division():
+    """"(lagnagcs de" (p. 112, "Gagnages de") is no continuation of the entry above it; the farms
+    under it are gagnages, and the next mairie's villages are domain again."""
+    g = structure.Gazetteer(Path("/nonexistent"))
+    lines = _lines(
+        "Bailliage d'Allemagne.",
+        "Mairie de Rolbing.",
+        "Domaine.",
+        "1. Hochweygerssburg, maison de chasse et plaisir",
+        "durant le rut, à demy ruiné.",
+        "(lagnagcs de",
+        "2. Genterssberg.",
+        "Mairie de Hilsperg.",
+        "3. Hilsperg.",
+    )
+    r = structure.parse(lines, g)
+    e = {x.no: x for x in r.entries}
+    assert e[1].text.endswith("à demy ruiné.")
+    assert e[2].section == "other" and e[2].descriptors == ["grange"]
+    assert e[3].section == "domain"
+
+
 def test_chaumes():
     rows = features.parse_chaumes([
         ("118", "Soub la prévosté d'Arches"),

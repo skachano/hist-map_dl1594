@@ -111,11 +111,13 @@ def test_unlocated_type():
 def test_rename_entries():
     entries = [{"no": 7, "name": "Dombaslc", "text": "Dombaslc."},
                {"no": 518, "name": "Malleloy et", "text": "Malleloy et Mallenoy."},
-               {"no": 1995, "name": "M»?ny", "text": "M»?ny."}]
+               {"no": 1995, "name": "M»?ny", "text": "M»?ny."},
+               {"no": 369, "name": "MonceL", "text": "MonceL"}]
     build.rename_entries(entries, [{"no": "7", "read": "Dombaslc", "name": "Dombasle"},
-                                   {"no": "518", "read": "Malleloy et", "name": "Malleloy"}], {1995: "Magny"})
+                                   {"no": "518", "read": "Malleloy et", "name": "Malleloy"},
+                                   {"no": "369", "read": "MonceL", "name": "Moncel"}], {1995: "Magny"})
     assert [(e["name"], e["text"]) for e in entries] == [
-        ("Dombasle", "Dombasle."), ("Malleloy", "Malleloy et Mallenoy."), ("Magny", "Magny.")]
+        ("Dombasle", "Dombasle."), ("Malleloy", "Malleloy et Mallenoy."), ("Magny", "Magny."), ("Moncel", "Moncel.")]
     with pytest.raises(ValueError, match="not 'Dombaslc'"):   # the table no longer fits the extraction
         build.rename_entries(entries, [{"no": "7", "read": "Dombaslc", "name": "Dombasle"}], {})
 
@@ -125,3 +127,11 @@ def test_entry_name_readings_fit_the_entries():
     for r in build.load_manual("entry_names"):
         assert entries[int(r["no"])] == r["read"], r["no"]
         assert r["source"] in {"DicoTopo", "old forms", "tesseract", "scan"}
+
+
+def test_retext_entries():
+    entries = [{"no": 1093, "name": "Charmois", "text": "Charmois.Soub Dompaire, menus verres."}]
+    build.retext_entries(entries, {1093: "Charmois."})
+    assert entries[0]["text"] == "Charmois."
+    with pytest.raises(ValueError):
+        build.retext_entries(entries, {9999: "Nowhere."})

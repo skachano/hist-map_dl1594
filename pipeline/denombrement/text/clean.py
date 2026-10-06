@@ -83,9 +83,21 @@ def fix_circumflex(text: str) -> str:
     return re.sub(r"\w*à\w*", _fix_a_grave, text)
 
 
+# What the OCR picks up after a line's last full stop: specks and rules at the page's edge
+# ("Le Moncel.j", "Boulay.{", "Le ban de Hurbache.!"), a brace ("Finckenstreich. |"), stray
+# quotes ("Vaul. '"), and a misread note call ("de l'ordre de...s" for "de…²").
+_TRAILING_SPECK = re.compile(r"(?<=[\w)\]])(\.(?:\s?\.)*)(?:[jiIl1!{}\\|'\"*s]{1,2}|\s[jiIl1!{}\\|'\"*]|\s?\[\*\])$")
+
+
+def strip_trailing_specks(text: str) -> str:
+    """"Le Moncel.j" -> "Le Moncel."; after a space only a lone character goes, so a word
+    that starts the next sentence ("… village. Il") is kept."""
+    return _TRAILING_SPECK.sub(r"\1", text)
+
+
 def fix_ocr(text: str) -> str:
     """Correct the OCR's usual misreadings of common words in this font."""
-    text = fix_circumflex(text)
+    text = strip_trailing_specks(fix_circumflex(text))
     return normalize_spaces(_WORD.sub(_fix_word, text))
 
 

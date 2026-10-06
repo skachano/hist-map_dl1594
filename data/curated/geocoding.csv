@@ -125,6 +125,7 @@ ban-fraize,48.17746,7.0049,,,Ban de Fraize,,,,,territory,medium,centre of 12 loc
 ban-girancourt,48.16361,6.30806,,,Ban de Girancourt,,,,,territory,medium,seat: girancourt
 ban-grandvillers-et-dompierre,48.21917,6.60118,,,Ban de Grandvillers et Dompierre,,,,,territory,medium,centre of 4 located member(s)
 ban-harol,48.15194,6.24722,,,Ban de Harol,,,,,territory,medium,seat: harol
+ban-hurbache,48.34972,6.93444,,,Ban de Hurbache,,,,,territory,medium,seat: hurbache
 ban-longchamp,47.93802,6.66992,,,Grande Mairie du ban de Longchamp,,,,,territory,medium,centre of 15 located member(s)
 ban-madonne,48.20412,6.28075,,,Ban de Madonne,,,,,territory,medium,centre of 13 located member(s)
 ban-maizey,48.92472,5.51167,,,Ban de Maizey,,,,,territory,medium,seat: maizcy
@@ -132,7 +133,7 @@ ban-molin,48.02843,6.61978,,,Ban de Molin,,,,,territory,medium,centre of 9 locat
 ban-ramonchamp,47.97269,6.6699,,,Grande Mairie du ban de Ramonchamp,,,,,territory,medium,centre of 18 located member(s)
 ban-sainct-pierre,48.97702,6.42277,,,Ban Saint-Pierre,,,,,territory,medium,centre of 10 located member(s)
 ban-saint-die,48.30359,6.94063,,,Ban de Saint-Dié,,,,,territory,medium,centre of 4 located member(s)
-ban-sardey,48.27538,7.04682,,,Ban de Sardey,,,,,territory,medium,centre of 38 located member(s)
+ban-sardey,48.26985,7.05998,,,Ban de Sardey,,,,,territory,medium,centre of 15 located member(s)
 ban-sept,48.31791,7.00711,,,Ban de Sept,,,,,territory,medium,centre of 14 located member(s)
 ban-taintrux,48.24972,6.90222,,,Ban de Taintrux,,,,,territory,medium,seat: taintrux
 ban-tendon,48.12167,6.67889,,,Ban de Tendon,,,,,territory,medium,seat: tendon
@@ -358,7 +359,7 @@ clezentaine,48.40861,6.53889,Q1417856,,Clézentaine,Clézentaine,Clézentaine,,F
 clingouite,48.23758,6.96443,,,Claingoutte,,,,FR,approximate,low,"Claingoutte, at Saulcy-sur-Meurthe: Clingoutte (1555), a hamlet of Saulcy (the index, DicoTopo)"
 cocheren,49.14333,6.85639,Q22427,,Cocheren,Kochern,Cocheren,,FR,hist_map,high,1.00 near the index's canton (6 km)
 coinches,48.25222,7.02222,Q980271,,Coinches,Coinches,Coinches,,FR,wikidata,high,1.00 near the index's canton (6 km)
-coinchimont,48.24315,7.04342,,12314996,Coinchimont,,,,FR,geonames,medium,1.00 near its district's other members (5 km)
+coinchimont,48.24315,7.04342,,12314996,Coinchimont,,,,FR,geonames,high,1.00 near the index's commune (2 km); was 24 km away
 coiombcy-ics-belles,48.5275,5.89722,Q388016,,Colombey-les-Belles,Colombey-les-Belles,Colombey-les-Belles,,FR,wikidata,medium,0.88 near the index's canton (0 km)
 coiviller,48.58694,6.28222,Q1026437,,Coyviller,Coyviller,Coyviller,,FR,wikidata,medium,"exact name, no anchor"
 colligny,49.09861,6.32528,Q22943,,Colligny,Colligny,Colligny,,FR,wikidata,high,1.00 near the index's canton (3 km)
@@ -683,7 +684,7 @@ gouecoun,48.41696,5.70398,Q3112796,,Gouécourt,Gouécourt,Gouécourt,,FR,wikidat
 govillcr,48.49722,6.01083,Q732553,,Goviller,Goviller,Goviller,,FR,wikidata,high,1.00 near the index's canton (6 km)
 grand-menil,48.68045,5.8252,,11971512,Grand-Ménil,,,,FR,geonames,high,1.00 near the index's commune (1 km)
 grand-yezin,48.63516,6.41002,Q86660076,,Grandvezin,,Grandvezin,,FR,wikidata,medium,0.90 near the index's commune (1 km)
-grandrupt,48.28111,7.01861,,,Grandrupt,,,,FR,approximate,low,"Grandrupt, a hamlet of Pair-et-Grandrupt, by Le Paire de Grand-Ruz (439): Grand Ruz, Alix n° 438 (Marichal); not Grandrupt by Senones"
+grandrupt,48.28157,7.01554,,,Grandrupt,,,,FR,approximate,low,"Grandrupt, a hamlet of Pair-et-Grandrupt, by Le Paire de Grand-Ruz (439): Grand Ruz, Alix n° 438 (Marichal); not Grandrupt by Senones"
 grandvillcrs,48.23917,6.66056,Q887811,,Grandvillers,Grandvillers,Grandvillers,,FR,wikidata,high,1.00 near the index's canton (6 km)
 granges,48.14556,6.78861,Q1624699,,Granges-sur-Vologne,Granges-sur-Vologne,Granges-sur-Vologne,,FR,wikidata,high,1.00 near the index's canton (7 km)
 gremifontaine,48.03677,6.33362,,,Grémifontaine,,,,FR,approximate,low,a hamlet of La Chapelle-aux-Bois (the index)
@@ -817,7 +818,7 @@ holzweiler,49.3204,6.81787,Q1652297,,Hülzweiler,Hülzweiler,Hülzweiler,,DE,wik
 hombourg-bas,49.12931,6.78814,Q21634406,,Hombourg-Bas,Niederhomburg,Hombourg-Bas,,FR,hist_map,high,1.00 near the index's canton (6 km)
 hombourg-ilatit,49.12583,6.77806,Q22926,,Hombourg-Haut,Hombourg-Haut,Hombourg-Haut,,FR,rule,high,Hombourg-Haut (the scan reads Hombourg-Ilatit)
 hombourgou-hombourg-sur-kaner,49.29611,6.34556,Q22152,,Hombourg-sur-Kaner,Hombourg-Budange,Hombourg-Budange,,FR,rule,high,"Hombourg or Hombourg-sur-Kaner, canton de Metzervisse: Hombourg-Budange"
-honvillc,48.24085,7.07748,,12314994,Honvillc,,,,FR,geonames,medium,1.00 near its district's other members (6 km)
+honvillc,48.24085,7.07748,,12314994,Honvillc,,,,FR,geonames,high,1.00 near the index's commune (1 km); was 24 km away
 honzrath,49.4272,6.7306,Q1627335,,Honzrath,Honzrath,Honzrath,,DE,hist_map,high,1.00 near the index's commune (2 km); 45 km from its district
 host,49.06889,6.88389,Q22163,,Hoste,Hoste,Hoste,,FR,hist_map,medium,0.89 near the index's canton (13 km)
 hotiwiller,49.07778,7.36333,Q22911,,Hottviller,Hottviller,Hottviller,,FR,rule,high,"Hottviller: Hoddweiller (1594), dén. Th. Alix (Bouteiller)"
@@ -1219,6 +1220,7 @@ mayoralty-bertrimoutier,48.27167,7.05417,,,Mairie de Bertrimoutier,,,,,territory
 mayoralty-berungen,49.03423,7.26796,,,Mairie de Bining,,,,,territory,medium,centre of 10 located member(s)
 mayoralty-bousseviller,49.12111,7.46417,,,Mairie de Bousseviller,,,,,territory,medium,seat: bousseviller
 mayoralty-hilsperg,49.12444,7.41343,,,Mairie de Hilsperg,,,,,territory,medium,centre of 34 located member(s)
+mayoralty-laveline,48.24498,7.06593,,,Mairie de Laveline,,,,,territory,medium,seat: laveline
 mayoralty-longchamp,47.92441,6.68274,,,Mairie de Longchamp,,,,,territory,medium,centre of 17 located member(s)
 mayoralty-mandray,48.21833,6.99583,,,Mairie de Mandray,,,,,territory,medium,seat: mandray
 mayoralty-meurthe,48.21564,6.9492,,,Mairie de Meurthe,,,,,territory,medium,centre of 9 located member(s)
@@ -1498,7 +1500,7 @@ pultelange-les-sarralbe,49.05252,6.92791,,2985028,Pultelange-lès-Sarralbe,,,,FR
 putlegney,48.15236,6.24975,,,Puttegney,,,,FR,approximate,low,a hamlet of Harol (the index); Puttegney (DicoTopo: Puttegney)
 puxe,48.46357,6.01165,,11971559,Puxe,,,,FR,geonames,high,1.00 near the index's commune (1 km)
 puzieux,48.33278,6.0975,Q839934,,Puzieux,Puzieux,Puzieux,,FR,wikidata,medium,1.00 near its district's other members (6 km); the index's canton Blirecourt is not found
-quebrux,48.24074,7.08823,,12314995,Québrux,,,,FR,geonames,medium,1.00 near its district's other members (3 km)
+quebrux,48.24074,7.08823,,12314995,Québrux,,,,FR,geonames,medium,1.00 near its district's other members (6 km)
 quessonviller,47.99902,6.64048,,,Xonvillers,,,,FR,approximate,low,"Xonvillers, a farm of Dommartin-lès-Remiremont: Quessonville, Alix n° 775 (Marichal, DicoTopo); not a grange of Celles"
 quevilloncourt,48.4725,6.09944,Q926122,,Quevilloncourt,Quevilloncourt,Quevilloncourt,,FR,wikidata,high,1.00 near the index's canton (2 km)
 r-benville,48.33417,5.70361,Q1097035,,Rebeuville,Rebeuville,Rebeuville,,FR,wikidata,medium,0.90 near the index's canton (2 km)

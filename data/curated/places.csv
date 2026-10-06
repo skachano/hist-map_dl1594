@@ -21,6 +21,7 @@ ban-fraize,territory,Ban de Fraize,Bann Fraize,Ban of Fraize,,,ban,48.17746,7.00
 ban-girancourt,territory,Ban de Girancourt,Bann Girancourt,Ban of Girancourt,,,ban,48.16361,6.30806,,,,,,,,,territory,medium,admin,,,,71,high,
 ban-grandvillers-et-dompierre,territory,Ban de Grandvillers et Dompierre,Bann Grandvillers und Dompierre,Ban of Grandvillers and Dompierre,Bans de Grandviller et Dompierre,,ban,48.21917,6.60118,,,,,,,,,territory,medium,admin,,,,58,high,
 ban-harol,territory,Ban de Harol,Bann Harol,Ban of Harol,,,ban,48.15194,6.24722,,,,,,,,,territory,medium,admin,,,,69,high,
+ban-hurbache,territory,Ban de Hurbache,Bann Hurbache,Ban of Hurbache,,,ban,48.34972,6.93444,,,,,,,,,territory,medium,admin,,,,50,high,
 ban-longchamp,territory,Grande Mairie du ban de Longchamp,Große Meierei des Banns Longchamp,Great Mayoralty of the Ban of Longchamp,La Grande Mairie du ban de Lonchamp,,ban,47.93802,6.66992,,,,,,,,,territory,medium,admin,,,,61,high,
 ban-madonne,territory,Ban de Madonne,Bann Madonne,Ban of Madonne,,,ban,48.20412,6.28075,,,,,,,,,territory,medium,admin,,,,70,high,
 ban-maizey,territory,Ban de Maizey,Bann Maizey,Ban of Maizey,,,ban,48.92472,5.51167,,,,,,,,,territory,medium,admin,,,,101,high,
@@ -28,7 +29,7 @@ ban-molin,territory,Ban de Molin,Bann Molin,Ban of Molin,,,ban,48.02843,6.61978,
 ban-ramonchamp,territory,Grande Mairie du ban de Ramonchamp,Große Meierei des Banns Ramonchamp,Great Mayoralty of the Ban of Ramonchamp,,,ban,47.97269,6.6699,,,,,,,,,territory,medium,admin,,,,62,high,
 ban-sainct-pierre,territory,Ban Saint-Pierre,Bann Saint-Pierre,Ban Saint-Pierre,Ban Sainct-Pierre,,ban,48.97702,6.42277,,,,,,,,,territory,medium,admin,,,,53,high,
 ban-saint-die,territory,Ban de Saint-Dié,Bann Saint-Dié,Ban of Saint-Dié,Ban Sainct-Diey,,ban,48.30359,6.94063,,,,,,,,,territory,medium,admin,,,,46,high,
-ban-sardey,territory,Ban de Sardey,Bann Sardey,Ban of Sardey,,,ban,48.27538,7.04682,,,,,,,,,territory,medium,admin,,,,49,high,
+ban-sardey,territory,Ban de Sardey,Bann Sardey,Ban of Sardey,,,ban,48.26985,7.05998,,,,,,,,,territory,medium,admin,,,,49,high,
 ban-sept,territory,Ban de Sept,Bann Sept,Ban of Sept,,,ban,48.31791,7.00711,,,,,,,,,territory,medium,admin,,,,49,high,
 ban-taintrux,territory,Ban de Taintrux,Bann Taintrux,Ban of Taintrux,,,ban,48.24972,6.90222,,,,,,,,,territory,medium,admin,,,,49,high,
 ban-tendon,territory,Ban de Tendon,Bann Tendon,Ban of Tendon,,,ban,48.12167,6.67889,,,,,,,,,territory,medium,admin,,,,60,high,
@@ -90,6 +91,7 @@ mayoralty-bertrimoutier,territory,Mairie de Bertrimoutier,Meierei Bertrimoutier,
 mayoralty-berungen,territory,Mairie de Bining,Meierei Bining,Mayoralty of Bining,,,mayoralty,49.03423,7.26796,,,,,,,,,territory,medium,admin,,,,111,high,
 mayoralty-bousseviller,territory,Mairie de Bousseviller,Meierei Bußweiler,Mayoralty of Bousseviller,Mairie de Bussweiller,,mayoralty,49.12111,7.46417,,,,,,,,,territory,medium,admin,,,,110,high,
 mayoralty-hilsperg,territory,Mairie de Hilsperg,Meierei Hilsperg,Mayoralty of Hilsperg,,,mayoralty,49.12444,7.41343,,,,,,,,,territory,medium,admin,,,,112,high,
+mayoralty-laveline,territory,Mairie de Laveline,Meierei Laveline,Mayoralty of Laveline,Mairie de Leaveline,,mayoralty,48.24498,7.06593,,,,,,,,,territory,medium,admin,,,,50,high,
 mayoralty-longchamp,territory,Mairie de Longchamp,Meierei Longchamp,Mayoralty of Longchamp,,,mayoralty,47.92441,6.68274,,,,,,,,,territory,medium,admin,,,,64,high,
 mayoralty-mandray,territory,Mairie de Mandray,Meierei Mandray,Mayoralty of Mandray,,,mayoralty,48.21833,6.99583,,,,,,,,,territory,medium,admin,,,,48,high,
 mayoralty-meurthe,territory,Mairie de Meurthe,Meierei Meurthe,Mayoralty of Meurthe,,,mayoralty,48.21564,6.9492,,,,,,,,,territory,medium,admin,,,,48,high,
@@ -152,7 +154,7 @@ agneumenil,settlement,Agneuménil,,,Anneufmesnil,,hamlet,48.10042,6.53428,,12315
 aheville,settlement,Ahéville,Ahéville,Ahéville,,,village,48.28528,6.1925,Q301534,,FR,,,Dompaire,,,wikidata,high,,,,,68,high,1.00 near the index's canton (7 km)
 aidling,settlement,Aidling,Eidlingen,Aidling,Eidlingen,Eidlingen,village,49.30075,6.5583,Q2827829,,FR,vil.,Bouzonville,,,,hist_map,high,,,,,93,high,1.00 near the index's commune (2 km)
 ailcmand-rombach,settlement,Ailcmand-Rombach,,,L'Allemand-Rombach,,village,,,,,FR,,,Sainte-Marie-aux-Mines,Haut-Rhin,,unlocated,low,,,,,109,medium,
-aillianville,settlement,Aillianville,Aillianville,Aillianville,Alainville|Allainville. '|Aillanvillc,,village,48.34222,5.47806,Q1102388,,FR,"113C, îitj",,Saint-Blin,Haute-Marne,,wikidata,high,,,,,75,medium,0.96 near the index's canton (9 km)
+aillianville,settlement,Aillianville,Aillianville,Aillianville,Alainville|Allainville|Aillanvillc,,village,48.34222,5.47806,Q1102388,,FR,"113C, îitj",,Saint-Blin,Haute-Marne,,wikidata,high,,,,,75,medium,0.96 near the index's canton (9 km)
 aingeray,settlement,Aingeray,Aingeray,Aingeray,Angery,,village,48.73889,6.00167,Q1087177,,FR,liCa,,Toul-Nord,,,wikidata,high,,,,,55,high,1.00 near the index's canton (11 km)
 aix,settlement,Aix,,Aix,,,village,49.25348,5.75965,Q109573772,,FR,,,Conflans,Moselle,,wikidata,high,,,,,102,medium,1.00 near the index's canton (12 km)
 ajoncourt,settlement,Ajoncourt,Ajoncourt,Ajoncourt,Ajoncourt|Ajoneourf,,village,48.845,6.28944,Q21650,,FR,,,Delme,Meurthe,,wikidata,high,,,,,52,high,0.95 near the index's canton (9 km)
@@ -451,7 +453,7 @@ clezentaine,settlement,Clézentaine,Clézentaine,Clézentaine,Clezentaines,,smal
 clingouite,settlement,Claingoutte,,,Clingoulte|Clingouite,,hamlet,48.23758,6.96443,,,FR,ham.,Sauîcy,,,,approximate,low,,,,,50,medium,"Claingoutte, at Saulcy-sur-Meurthe: Clingoutte (1555), a hamlet of Saulcy (the index, DicoTopo)"
 cocheren,settlement,Cocheren,Kochern,Cocheren,Rochern,Rochern (pour Kochern),village,49.14333,6.85639,Q22427,,FR,,,Forbach,,,hist_map,high,,,,,114,high,1.00 near the index's canton (6 km)
 coinches,settlement,Coinches,Coinches,Coinches,Coinehe,,village,48.25222,7.02222,Q980271,,FR,,,Saint-Dié,Vosges,,wikidata,high,,,,,49,high,1.00 near the index's canton (6 km)
-coinchimont,settlement,Coinchimont,,,Coinchymont,,hamlet,48.24315,7.04342,,12314996,FR,ham.,Laveline,,,,geonames,medium,,,,,50,high,1.00 near its district's other members (5 km)
+coinchimont,settlement,Coinchimont,,,Coinchymont,,hamlet,48.24315,7.04342,,12314996,FR,ham.,Laveline,,,,geonames,high,,,,,50,high,1.00 near the index's commune (2 km); was 24 km away
 colligny,settlement,Colligny,Colligny,Colligny,,,village,49.09861,6.32528,Q22943,,FR,,,Pangc,,,wikidata,high,,,,,52,high,1.00 near the index's canton (3 km)
 colmen,settlement,Colmen,Colmen,Colmen,Colman,,village,49.35556,6.54194,Q21762,,FR,,,Bouzonvillc,Moselle,,hist_map,high,,,,,78,medium,1.00 near the index's canton (7 km)
 colombey-les-belles,settlement,Colombey-les-Belles,Colombey-les-Belles,Colombey-les-Belles,Colombier|Coîombcy-Ics-Belles,,village,48.5275,5.89722,Q388016,,FR,,,Coîombcy-Ics-Belles,,,wikidata,medium,,,,,55,high,0.88 near the index's canton (0 km)
@@ -752,7 +754,7 @@ gosselming,settlement,Gosselming,Gosselmingen,Gosselming,Goselmingen|Gosselminge
 gouecourt,settlement,Gouécourt,Gouécourt,Gouécourt,Gohecourt|Gouécoun,,village,48.41696,5.70398,Q3112796,,FR,,,Coussey,,,wikidata,medium,,,,,76,high,0.84 near the index's canton (2 km)
 goviller,settlement,Goviller,Goviller,Goviller,Goviller|Govillcr,,village,48.49722,6.01083,Q732553,,FR,,,Vézelise,,,wikidata,high,,,,,96,high,1.00 near the index's canton (6 km)
 grand-menil,settlement,Grand-Ménil,,,Grandmesnil,,hamlet,48.68045,5.8252,,11971512,FR,ham.,Ecrouves,,,,geonames,high,,,,,103,high,1.00 near the index's commune (1 km)
-grandrupt,settlement,Grandrupt,,,Grand-Ruz,,village,48.28111,7.01861,,,FR,,,Senones,,,approximate,low,,,,,51,medium,"Grandrupt, a hamlet of Pair-et-Grandrupt, by Le Paire de Grand-Ruz (439): Grand Ruz, Alix n° 438 (Marichal); not Grandrupt by Senones"
+grandrupt,settlement,Grandrupt,,,Grand-Ruz,,village,48.28157,7.01554,,,FR,,,Senones,,,approximate,low,,,,,51,medium,"Grandrupt, a hamlet of Pair-et-Grandrupt, by Le Paire de Grand-Ruz (439): Grand Ruz, Alix n° 438 (Marichal); not Grandrupt by Senones"
 grandvezin,settlement,Grandvezin,,Grandvezin,Grandvezain|Grand-Yezin,,hamlet,48.63516,6.41002,Q86660076,,FR,ham.,Crêvic,,,,wikidata,medium,,,,,37,high,0.90 near the index's commune (1 km)
 grandvillers,settlement,Grandvillers,Grandvillers,Grandvillers,Grandviller|Grandvillcrs,,village,48.23917,6.66056,Q887811,,FR,,,Bruyères,,,wikidata,high,,,,,56,high,1.00 near the index's canton (6 km)
 granges-de-plombieres,settlement,Granges-de-Plombières,,Granges-de-Plombières,Granges|Les Granges-de-Plombières,,village,47.96717,6.44125,Q71808658,,FR,,,Plombières,,,wikidata,high,,,,,65,high,1.00 near the index's canton (2 km)
@@ -886,7 +888,7 @@ hombourg-bas,settlement,Hombourg-Bas,Niederhomburg,Hombourg-Bas,Hombourg,,villag
 hombourg-haut,settlement,Hombourg-Haut,Hombourg-Haut,Hombourg-Haut,Hombourg|Hombourg-Ilatit,,town,49.12583,6.77806,Q22926,,FR,,,Saint-Avold,,,rule,high,,,,,114,medium,Hombourg-Haut (the scan reads Hombourg-Ilatit)
 hombourg-sur-kaner,settlement,Hombourg-sur-Kaner,Hombourg-Budange,Hombourg-Budange,Hombourg auff der Kandel|Hombourgou Hombourg-sur-Kaner,,village,49.29611,6.34556,Q22152,,FR,,,Metzerwisse,,,rule,high,,,,,81,medium,"Hombourg or Hombourg-sur-Kaner, canton de Metzervisse: Hombourg-Budange"
 hommarting,settlement,Hommarting,Hommartingen,Hommarting,Hommertingen|Hoimnarting,,village,48.73861,7.14528,Q22053,,FR,,,Sarrebourg,,,hist_map,medium,,,,,108,high,0.86 near the index's canton (7 km)
-honvillc,settlement,Honvillc,,,Honville,,hamlet,48.24085,7.07748,,12314994,FR,ham.,Lavelinc,,,,geonames,medium,,,,,50,high,1.00 near its district's other members (6 km)
+honvillc,settlement,Honvillc,,,Honville,,hamlet,48.24085,7.07748,,12314994,FR,ham.,Lavelinc,,,,geonames,high,,,,,50,high,1.00 near the index's commune (1 km); was 24 km away
 honzrath,settlement,Honzrath,Honzrath,Honzrath,Himradt,,village,49.4272,6.7306,Q1627335,,DE,vil.,Haustadt,Merzig,Pr.,,hist_map,high,,,,,92,high,1.00 near the index's commune (2 km); 45 km from its district
 hoppstadten,settlement,Hoppstädten,Hoppstädten,,Hoffestetten|Hobsteten ou Obsteten,,village,49.61667,7.2,,,DE,"vil., mairie, 3 lieues au nord-est de Schambourg; enclavé dans les terres étrangères (D., t. III, p, 512)",,,,true,rule,high,,,,,89,high,"Hoppstädten (Hoppstädten-Weiersbach; GeoNames 2899139): Hofsteten, Hoppstaten in the editors' corrections to the table of old forms; 'Hoffestetten' for Hofstetten (the index's note); a village 3 lieues north-east of Schaumburg (Durival)"
 hoste,settlement,Hoste,Hoste,Hoste,Hoost|Host,,village,49.06889,6.88389,Q22163,,FR,,,Saint-Avold,,,hist_map,medium,,,,,114,high,0.89 near the index's canton (13 km)
@@ -1076,7 +1078,7 @@ lavigneville,settlement,Lavignéville,,,Lavigneville,,village,48.95888,5.59174,Q
 laxou,settlement,Laxou,Laxou,Laxou,Laixou,,village,48.68556,6.15222,Q752544,,FR,,,Nancy-Nord,,,wikidata,high,,,,,36,high,1.00 near the index's canton (2 km)
 lay-saint-christophe,settlement,Lay-Saint-Christophe,Lay-Saint-Christophe,Lay-Saint-Christophe,Lay|Lay-Saint-Cristophe,,village,48.74806,6.20056,Q785359,,FR,,,Nancy-Est,,,wikidata,high,,,,,37,medium,0.97 near the index's canton (6 km)
 laycgotttlc,settlement,Laycgotttlc,,Layegoute,Layegoutte,,village,48.25619,7.0631,Q109574833,,FR,liant.,Bonipaire,,,,wikidata,low,,,,,45,medium,0.90 near its district's other members (4 km)
-le-beulay,settlement,Le Beulay,Le Beulay,Le Beulay,Boulay.{ La mairie deLeaveline.i|Beulay,,village,48.30111,7.07194,Q1158557,,FR,,,Saint-Dié,Vosges,,wikidata,high,,,,,50,medium,1.00 near the index's canton (9 km)
+le-beulay,settlement,Le Beulay,Le Beulay,Le Beulay,Boulay|Beulay,,village,48.30111,7.07194,Q1158557,,FR,,,Saint-Dié,Vosges,,wikidata,high,,,,,50,high,1.00 near the index's canton (9 km)
 le-boulay,settlement,Le Boulay,,Le Boulay,Le Boullay,,village,48.15278,6.65445,Q25397945,,FR,,,Bruyères,,,wikidata,high,,,,,59,high,1.00 near the index's canton (8 km)
 le-chanois,settlement,Le Chanois,,,Le Chesnois,,hamlet,48.02472,6.66972,,,FR,ham.,Syndicat-de-Saint-Amé,Rciniremont,,,approximate,low,,,,,64,high,a hamlet of the Syndicat de Saint-Amé (the index)
 le-charmois-bains,settlement,Le Charmois,,,Le Charmois-devant-Bains,,village,48.00113,6.26492,,,FR,,,,,,approximate,low,,,,,65,medium,"set in rules.yaml (entry_places); Le Charmois, a hamlet of Bains-les-Bains: Le Charmois devant Bains (Marichal cites Alix n° 352, a misprint for 852)"
@@ -1400,7 +1402,7 @@ noncourt,settlement,Noncourt,,Noncourt,Moncourt,,village,48.34694,5.685,Q7180868
 nonhigny,settlement,Nonhigny,Nonhigny,Nonhigny,Nonhegny,,village,48.55056,6.88056,Q1049428,,FR,,,Blâmont,,,wikidata,high,,,,,106,high,1.00 near the index's canton (5 km)
 nonville,settlement,Nonville,Nonville,Nonville,Nonville|Nonviile,,village,48.08056,5.99,Q126549,,FR,,,Monthureux-sur-Saône,,,wikidata,high,,,,,73,high,0.95 near the index's canton (6 km)
 nonzeville,settlement,Nonzeville,Nonzeville,Nonzeville,Mozeville|Nonziville,,village,48.265,6.63389,Q1166659,,FR,,,Bruyères,,,wikidata,high,,,,,57,medium,1.00 near the index's canton (9 km)
-norbepaire,settlement,Norbépaire,,,Noncpaire.I Le ban de llurbache.!,Nonepaire,deserted_village,48.25722,7.10611,,,FR,"vil. détruit, près de",,Wisembach,,,approximate,low,,,,,50,medium,"Norbépaire, at Wisembach: Nonepaire, Alix n° 428 (Marichal)"
+norbepaire,settlement,Norbépaire,,,Noncpaire,Nonepaire,deserted_village,48.25722,7.10611,,,FR,"vil. détruit, près de",,Wisembach,,,approximate,low,,,,,50,high,"Norbépaire, at Wisembach: Nonepaire, Alix n° 428 (Marichal)"
 norroy-le-veneur,settlement,Norroy-le-Veneur,Norroy-le-Veneur,Norroy-le-Veneur,Nourroy|Norroy-Ie-Veneur,,village,49.18222,6.10333,Q22273,,FR,,,Metz,,,wikidata,medium,,,,,54,medium,0.93 near the index's canton (9 km)
 norroy-sur-vair,settlement,Norroy-sur-Vair,,,Nourroy,,village,48.21518,5.91955,,2990092,FR,,,Bulgnévillc,,,geonames,high,,,,,75,high,1.00 near the index's canton (6 km)
 northen,settlement,Northen,,Northen,Morthen|Northen|Norihen,,hamlet,49.16252,6.42935,Q21634399,,FR,ham.,Condé,,,,wikidata,high,,,,,80,high,0.95 near the index's commune (1 km)
@@ -1508,7 +1510,7 @@ putlegney,settlement,Puttegney,,,Puttigny|Putlegney,,village,48.15236,6.24975,,,
 puttigny,settlement,Puttigny,Püttingen,Puttigny,Puttigny|Pulligny,,village,48.8525,6.55139,Q21717,,FR,,,Château-Salins,Meurthe,,hist_map,high,,,,,52,high,1.00 near the index's canton (5 km)
 puxe,settlement,Puxe,,,Puis,,village,48.46357,6.01165,,11971559,FR,l'un des bam. formant la,Laloeuf,Vézelise,,,geonames,high,,,,,96,high,1.00 near the index's commune (1 km)
 puzieux,settlement,Puzieux,Puzieux,Puzieux,Puzieu,,village,48.33278,6.0975,Q839934,,FR,,,Blirecourt,,,wikidata,medium,,,,,67,high,1.00 near its district's other members (6 km); the index's canton Blirecourt is not found
-quebrux,settlement,Québrux,,,Quebruz,,village,48.24074,7.08823,,12314995,FR,bain.,Laveline,,,,geonames,medium,,,,,46,high,1.00 near its district's other members (3 km)
+quebrux,settlement,Québrux,,,Quebruz,,village,48.24074,7.08823,,12314995,FR,bain.,Laveline,,,,geonames,medium,,,,,46,high,1.00 near its district's other members (6 km)
 quessonviller,settlement,Xonvillers,,,Quessonville|Quessonviller,,village,47.99902,6.64048,,,FR,anciennes granges,Celles,,,,approximate,low,,,,,62,medium,"Xonvillers, a farm of Dommartin-lès-Remiremont: Quessonville, Alix n° 775 (Marichal, DicoTopo); not a grange of Celles"
 quevilloncourt,settlement,Quevilloncourt,Quevilloncourt,Quevilloncourt,Queveilloncourt,,village,48.4725,6.09944,Q926122,,FR,,,Vézelise,,,wikidata,high,,,,,96,high,1.00 near the index's canton (2 km)
 racecourt,settlement,Racécourt,Racécourt,Racécourt,Racecourt|Racécourl,,village,48.2575,6.18889,Q902839,,FR,,,Dompaire,,,wikidata,high,,,,,69,high,1.00 near the index's canton (5 km)

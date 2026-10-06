@@ -116,3 +116,12 @@ def test_corrections_classified():
     assert (c.action, c.article, c.auto) == ("delete", "Rolling", True)
     c = _corr("Titling, mis à la p. 252, doit venir à la p. suivante, après Tilleux.")
     assert (c.action, c.article, c.new) == ("move", "Titling", "après Tilleux")
+
+
+def test_fix_ocr_drops_specks_after_the_last_full_stop():
+    assert clean.fix_ocr("407. Le Moncel.j") == "407. Le Moncel."
+    assert clean.fix_ocr("Le ban de llurbache.!") == "Le ban de llurbache."
+    assert clean.fix_ocr("2046. Vaul. '") == "2046. Vaul."
+    assert clean.fix_ocr("1003. Chamoysy, abbaye de l'ordre de.. .*") == "1003. Chamoysy, abbaye de l'ordre de..."
+    assert clean.fix_ocr("village. Il") == "village. Il"            # a word that starts the next sentence
+    assert clean.fix_ocr("Kaltenhausen. Is") == "Kaltenhausen. Is"
