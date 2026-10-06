@@ -22,7 +22,6 @@ no entry,189,Bellefontaine,712,,,,,1.00,,"709-715: the ban of Bellefontaine, who
 no entry,189,Bellefontaine,713,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
 no entry,189,Bellefontaine,714,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
 no entry,189,Bellefontaine,715,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
-no entry,190,Bethiiigcn,1358,,,,,1.00,,Brechlingen (1358) is Brecklange
 no entry,190,Bettlainville,1534,,,,,1.00,,printed 1534: Henselhofen (corrections)
 no entry,192,Bonfays,2412,,,,,1.00,bonfays-legeville-et-bonfays,2412 is the Dominican nuns of Nancy
 no entry,192,Bouvroy,776,,,,,1.00,,"776 is Rouveroy, the grange of Rouveroye near Remiremont (Rouveroye's line, rules.yaml entry_index); not a grange of Celles"
@@ -98,7 +97,7 @@ manual,206,Falck,1599,,1399,Falt,84,1.00,falck,printed 1399
 manual,203,Eimersdorf,1422*,,1422,Hymerrstorff,84,1.00,eimersdorf,printed 1422
 manual,221,Kerperieh-ilemmersdorf,59,,1439,Krispeig,85,1.00,kerprich-hemmersdorf,"corrections: ""1421, 22, 39, 40"""
 manual,221,Kerperieh-ilemmersdorf,40,,1440,Hymesstorff,85,1.00,kerprich-hemmersdorf,"corrections: ""1421, 22, 39, 40"""
-manual,190,Sctthujen ou Bctting',1457,,1457,Bettingen,86,1.00,betting,printed 1457
+manual,190,Sctthujen ou Bctting',1457,,1457,Bettingen,86,1.00,bethingen,printed 1457
 manual,185,Aschbaeh et Hensclhofcn,1479,,1479,Aspach,87,1.00,aschbach,Aspach: Aschbach
 manual,221,Kaisen,1497,,1497,Kassheim,87,1.00,kaisen,corrections: Kaisen replaces the line Kassheim
 manual,261,Wetschhausen,1510,,1516,Wach-Haussen,88,1.00,wetschhausen,"Wach-Haussen, aliàs Schweich-Haussen (table of old forms)"
@@ -312,7 +311,7 @@ corrected,190,Beurcn,1522,,1322,Beuren,81,1.00,beuren,
 corrected,203,Eberswillcr,1530,,1330,Ebersweiller,81,0.91,ebersviller,
 corrected,201,Diding,56,,1336,Dudingen,82,0.95,diding,
 corrected,221,Kirf,1557,,1337,Kirff,82,0.89,kirf,
-corrected,190,Bettingen,,,1338,Brettingen,82,0.95,bettingen,number not printed in the index
+corrected,190,Bethingen,,,1338,Brettingen,82,0.95,bethingen,number not printed in the index
 corrected,239,Pomern,1311,,1341,Pomern,82,1.00,pommern,
 corrected,245,Hiol,,,1342,Ryol,82,0.50,riol,number not printed in the index
 corrected,244,Rudling,1543,,1343,Rodingen,82,0.95,rudling,
@@ -1679,7 +1678,7 @@ agrees,195,Bûschdorf,1453,,1453,Bisserstorff,86,0.95,buschdorf,
 agrees,194,Budingen,1454,,1454,Budingen,86,1.00,budingen,
 agrees,260,Wciler,1455,,1455,Weiller,86,1.00,weiler,
 agrees,261,Wellingen,1456,,1456,Weillingen,86,0.95,wellingen,
-agrees,190,Bettingen,1457,,1457,Bettingen,86,1.00,bettingen,
+agrees,190,Bethingen,1558,,1457,Bettingen,86,0.89,bethingen,
 agrees,260,Wchingen,1458,,1458,Wchingen,86,1.00,wehingen,
 agrees,187,Baldringen,1459,,1459,Balderingen,86,0.95,baldringen,
 agrees,231,Mondorf,1460,,1460,Mondorff,86,0.93,mondorf,

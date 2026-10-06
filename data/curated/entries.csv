@@ -1335,7 +1335,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1335,Anselnigen.,Anselnigen,,provostship-sierck,,fief,,,,main,,alzing,81,high,
 1336,Dudingen.,Dudingen,,provostship-sierck,,fief,,,,main,,diding,82,medium,index match by loose number (0.95)
 1337,Kirff.,Kirff,,provostship-sierck,,fief,,,,main,,kirf,82,medium,index match by loose number (0.89)
-1338,Brettingen.,Brettingen,,provostship-sierck,,fief,,,,main,,bettingen,82,low,index match by name (0.95)
+1338,Brettingen.,Brettingen,,provostship-sierck,,fief,,,,main,,bethingen,82,low,index match by name (0.95)
 1339,Eymerstorff.,Eymerstorff,,provostship-sierck,,fief,,,,main,,eimersdorf,82,high,
 1340,Lugsingen.,Lugsingen,,provostship-sierck,,fief,,,,main,,ising,82,high,
 1341,Pomern.,Pomern,,provostship-sierck,,fief,,,,main,,pommern,82,medium,index match by confused number (1.00)
@@ -1355,7 +1355,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1355,Tedingen.,Tedingen,,office-boulay,,domain,,,,main,,theding,82,high,
 1356,Rossbrucken.,Rossbrucken,,office-boulay,,domain,,,,main,,rosbruck,82,high,
 1357,Wolmeringen.,Wolmeringen,,office-boulay,,domain,,,,main,,volmerange,82,medium,index match by confused number (0.95)
-1358,Brechlingen.,Brechlingen,,office-boulay,,domain,,,,main,,brecklange,82,medium,index match by index number (1.00)
+1358,Brechlingen.,Brechlingen,,office-boulay,,domain,,,,main,,brecklange,82,medium,index match by confused number (0.76)
 1359,Hargarten.,Hargarten,,office-boulay,,domain,,,,main,,hargarien-aux-mines,82,high,
 1360,Chonne.,Chonne,,office-boulay,,domain,,,,main,,coume,82,medium,index match by number (0.36)
 1361,"Machern, aliàs Maizières.",Machern,,office-boulay,,domain,,,,main,,macker,82,medium,index match by confused number (0.77)
@@ -1454,7 +1454,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1454,Budingen.,Budingen,,district-saargau,,other,,,,main,,budingen,86,high,
 1455,Weiller.,Weiller,,district-saargau,,other,,,,main,,weiler,86,high,
 1456,Weillingen.,Weillingen,,district-saargau,,other,,,,main,,wellingen,86,high,
-1457,Bettingen.,Bettingen,,district-saargau,,other,,,,main,,bettingen,86,high,
+1457,Bettingen.,Bettingen,,district-saargau,,other,,,,main,,bethingen,86,high,
 1458,Wchingen.,Wchingen,,district-saargau,,other,,,,main,,wehingen,86,high,
 1459,Balderingen.,Balderingen,,district-saargau,,other,,,,main,,baldringen,86,high,number read from '14511'
 1460,"Mondorff, partie dudict Sargaw et partie de l'office de Sirques.",Mondorff,,district-saargau,,other,,part,,main,,mondorf,86,high,1 number(s) missing before

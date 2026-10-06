@@ -93,7 +93,7 @@ badinenil,48.44984,6.73946,,,Badménil,,,,FR,approximate,low,"Badménil, at Bacc
 badmenil-aux-bois,48.30222,6.51917,Q633343,,Badménil-aux-Bois,Badménil-aux-Bois,Badménil-aux-Bois,,FR,wikidata,medium,"exact name, no anchor; the index's canton Chute is not found"
 baffe,48.16028,6.57194,Q753273,,La Baffe,La Baffe,La Baffe,,FR,wikidata,high,1.00 near the index's canton (9 km)
 bagneux,48.55833,5.8825,Q1002005,,Bagneux,Bagneux,Bagneux,バニュー,FR,wikidata,medium,"exact name, no anchor"
-bailiwick-allemagne,49.25717,6.7123,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 580 located member(s)
+bailiwick-allemagne,49.25731,6.71122,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 580 located member(s)
 bailiwick-apremont,48.85528,5.63917,,,Bailliage d'Apremont,,,アスプルモン＝ラ＝フォレバイイ管区,,territory,medium,seat: apremonl
 bailiwick-chatel-sur-moselle,48.31417,6.39306,,,Bailliage de Châtel-sur-Moselle,,,,,territory,medium,seat: chatel-sur-mosclle
 bailiwick-epinal,48.17361,6.45167,,,Bailliage d'Épinal,,,エピナルバイイ管区,,territory,medium,seat: epinal
@@ -187,6 +187,7 @@ bertrimoutier,48.27167,7.05417,Q228274,,Bertrimoutier,Bertrimoutier,Bertrimoutie
 berus,49.2639,6.69417,Q829198,,Berus,Berus,Berus,,DE,hist_map,high,1.00 near the index's canton (7 km)
 berweiuer,49.27149,6.64563,,3033137,Berweiler,,,,FR,geonames,high,"0.95 near the index's canton (8 km); the index's heading, read on the scan"
 besseringen,49.4733,6.60861,Q830159,,Besseringen,Besseringen,Besseringen,,DE,hist_map,high,1.00 near the index's canton (4 km)
+bethingen,49.4603,6.53222,Q831306,,Bethingen,Bethingen,Bethingen,,DE,rule,high,"Bethingen, com. d'Orscholz (the index), the Betting of the mairie of Schwemlingen: 1457 by the editor's correction 10 (hist_map)"
 betlange,49.23667,6.48167,Q21862,,Bettange,Bettingen,Bettange,,FR,hist_map,high,1.00 near the index's canton (6 km)
 bettegney-saint-brice,48.29917,6.30694,Q1159210,,Bettegney-Saint-Brice,Bettegney-Saint-Brice,Bettegney-Saint-Brice,,FR,wikidata,high,1.00 near the index's canton (11 km)
 bettingen,49.44097,6.85759,,,Bettingen,,,,DE,hist_map,high,1.00 near the index's canton (16 km)
@@ -448,7 +449,7 @@ district-morhange,48.92361,6.63583,,,Circonscription de Morhange,,,,,territory,m
 district-phalsbourg,48.76778,7.25833,,,Circonscription de Phalsbourg,,,ファルスブール管区,,territory,medium,seat: phalstourg-eh-l-de-canton
 district-puttelange,49.07455,6.93258,,,Circonscription de Puttelange,,,,,territory,medium,centre of 42 located member(s)
 district-raon-l-etape,48.4068,6.8438,,,Circonscription de Raon-l'Étape,,,,,territory,medium,seat: raon-l-eiape
-district-saargau,49.4567,6.59053,,,Circonscription de Saargau,,,,,territory,medium,centre of 16 located member(s)
+district-saargau,49.46067,6.57176,,,Circonscription de Saargau,,,,,territory,medium,centre of 16 located member(s)
 district-saint-hippolyte,48.23194,7.37167,,,Circonscription de Saint-Hippolyte,,,,,territory,medium,seat: saint-hippolyte
 district-sarralbe,48.99611,7.02778,,,Circonscription de Sarralbe,,,,,territory,medium,seat: sarrallk
 district-sarreck,48.79417,7.03417,,,Circonscription de Sarreck,,,,,territory,medium,seat: saarec-e
@@ -495,7 +496,7 @@ dreisbach,49.485,6.565,Q1258065,,Dreisbach,Dreisbach,Dreisbach,,DE,hist_map,high
 drogny,49.2467,6.41639,Q16507718,,Drogny,Drogny,Drogny,,FR,hist_map,high,1.00 near the index's commune (0 km)
 droiteval,48.03278,6.03556,,,Droiteval,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Claudon
 drouville,48.67111,6.40806,Q227707,,Drouville,Drouville,Drouville,,FR,wikidata,high,1.00 near the index's canton (11 km)
-duchy-lorraine,48.69627,6.53054,,,Duché de Lorraine,,,,,territory,medium,centre of 2522 located member(s)
+duchy-lorraine,48.69631,6.53029,,,Duché de Lorraine,,,,,territory,medium,centre of 2522 located member(s)
 duren,49.3036,6.66222,Q1271996,,Düren,Düren,Düren,,DE,wikidata,high,1.00 near the index's commune (1 km)
 eberswillcr,49.27513,6.401,,,Ebersviller,,,,FR,hist_map,medium,0.91 near the index's canton (10 km)
 eblange,49.22333,6.48194,Q21674,,Éblange,Eblingen,Éblange,,FR,hist_map,high,1.00 near the index's canton (5 km)
@@ -1736,7 +1737,7 @@ schmalenthal,48.989,7.4921,Q3475438,,Schmalenthal-lès-Baerenthal,,,,FR,hist_map
 schweii,49.12639,7.51194,Q646606,,Schweix,Schweix,Schweix,,DE,hist_map,medium,0.86 near the index's canton (10 km)
 schwemmlingen,49.469,6.58977,Q2256833,,Schwemlingen,Schwemlingen,Schwemlingen,,DE,hist_map,high,0.96 near the index's commune (4 km)
 schwerdorff,49.36667,6.57528,Q21957,,Schwerdorff,Schwerdorff,Schwerdorff,,FR,wikidata,high,1.00 near the index's canton (9 km)
-sctthujen-ou-bctting,49.41626,6.50713,,,Betting,Bettingen,,,FR,hist_map,medium,1.00 near its district's other members (7 km)
+sctthujen-ou-bctting,49.4603,6.53222,Q831306,,Bethingen,Bethingen,Bethingen,,DE,rule,high,"Bettingen ou Betting, of the mairie of Schumelingen (Schwemlingen): the editor's footnote has a village of Betting south-west of Schwemmlingen on the 1790 map, Bethingen; Bethingen's own line is 1457 by correction 10"
 searapt,48.18667,7.025,Q116278112,,Scarupt,,Scarupt,,FR,wikidata,medium,0.86 near the index's commune (2 km)
 sechamps,48.71583,6.26611,Q818892,,Seichamps,Seichamps,Seichamps,,FR,wikidata,medium,0.94 near the index's canton (7 km)
 sehndorf,49.4806,6.38917,Q2266381,,Sehndorf,Sehndorf,Sehndorf,,DE,hist_map,high,1.00 near the index's commune (1 km)

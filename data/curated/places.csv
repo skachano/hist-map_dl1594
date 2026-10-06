@@ -1,5 +1,5 @@
 id,kind,name_fr,name_de,name_en,variants,old_forms,place_type,lat,lon,wikidata_id,geonames_id,modern_country,index_kind,index_commune,index_canton,index_dept,lost,geo_method,geo_confidence,hierarchy,holder_id,counterpart_id,counterpart_basis,source_page,confidence,notes
-bailiwick-allemagne,territory,Bailliage d'Allemagne,Deutsches Bellistum,German Bailiwick,,,bailiwick,49.25717,6.7123,,,,,,,,,territory,medium,admin,,,,77,high,
+bailiwick-allemagne,territory,Bailliage d'Allemagne,Deutsches Bellistum,German Bailiwick,,,bailiwick,49.25731,6.71122,,,,,,,,,territory,medium,admin,,,,77,high,
 bailiwick-apremont,territory,Bailliage d'Apremont,Bellistum Apremont,Bailiwick of Apremont,Bailliage d'Aspremont,,bailiwick,48.85528,5.63917,,,,,,,,,territory,medium,admin,,,,101,high,
 bailiwick-chatel-sur-moselle,territory,Bailliage de Châtel-sur-Moselle,Bellistum Châtel-sur-Moselle,Bailiwick of Châtel-sur-Moselle,Bailliage de Chastel-sur-Moselle,,bailiwick,48.31417,6.39306,,,,,,,,,territory,medium,admin,,,,97,high,
 bailiwick-epinal,territory,Bailliage d'Épinal,Bellistum Épinal,Bailiwick of Épinal,Bailliage d'Espinal,,bailiwick,48.17361,6.45167,,,,,,,,,territory,medium,admin,,,,99,high,
@@ -55,13 +55,13 @@ district-morhange,territory,Circonscription de Morhange,Bezirk Mörchingen,Distr
 district-phalsbourg,territory,Circonscription de Phalsbourg,Bezirk Pfalzburg,District of Phalsbourg,Terre et seigneurie de Pfaltzbourg,,district,48.76778,7.25833,,,,,,,,,territory,medium,admin,,lordship-phalsbourg,slot,113,high,
 district-puttelange,territory,Circonscription de Puttelange,Bezirk Püttlingen,District of Puttelange,Seigneurie de Puttelenges,,district,49.07455,6.93258,,,,,,,,,territory,medium,admin,,lordship-puttelange,slot,92,high,
 district-raon-l-etape,territory,Circonscription de Raon-l'Étape,Bezirk Raon-l'Étape,District of Raon-l'Étape,Raon,,district,48.4068,6.8438,,,,,,,,,territory,medium,admin,,,,46,high,
-district-saargau,territory,Circonscription de Saargau,Bezirk Saargau,District of Saargau,Le Sargaw,,district,49.4567,6.59053,,,,,,,,,territory,medium,admin,,,,85,high,
+district-saargau,territory,Circonscription de Saargau,Bezirk Saargau,District of Saargau,Le Sargaw,,district,49.46067,6.57176,,,,,,,,,territory,medium,admin,,,,85,high,
 district-saint-hippolyte,territory,Circonscription de Saint-Hippolyte,Bezirk Sankt Pilt,District of Saint-Hippolyte,Sainct-Hippolite,,district,48.23194,7.37167,,,,,,,,,territory,medium,admin,,,,108,high,
 district-sarralbe,territory,Circonscription de Sarralbe,Bezirk Saaralben,District of Sarralbe,Terre et seigneurie d'Aulbe,,district,48.99611,7.02778,,,,,,,,,territory,medium,admin,,lordship-sarralbe,slot,109,high,
 district-sarreck,territory,Circonscription de Sarreck,Bezirk Saareck,District of Sarreck,Terre de Sarech,,district,48.79417,7.03417,,,,,,,,,territory,medium,admin,,lordship-sarreck,slot,108,high,
 district-soultzbach,territory,Circonscription de Soultzbach,Bezirk Sulzbach,District of Soultzbach,Sultzbach,,district,48.05521,7.22067,,,,,,,,,territory,medium,admin,,,,108,high,
 district-spitzemberg,territory,Circonscription de Spitzemberg,Bezirk Spitzemberg,District of Spitzemberg,Terre de Spitzemberg,,district,48.30756,7.04417,,,,,,,,,territory,medium,admin,,lordship-spitzemberg,slot,109,high,
-duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69627,6.53054,,,,,,,,,territory,medium,admin,,,,34,high,
+duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69631,6.53029,,,,,,,,,territory,medium,admin,,,,34,high,
 fief-keltern-ostern,territory,Fief de Keltern-Ostern,Lehen Keltern-Ostern,Fief of Keltern-Ostern,,,fief,49.53657,7.13209,,,,,,,,,territory,medium,feudal,house-eberstein|house-oberstein,provostship-keltern-ostern,heading,89,high,
 lordship-beaurains,territory,Seigneurie de Berus,Herrschaft Berus,Lordship of Berus,Terre et seigneurie de Beaurains,,lordship,49.2639,6.69417,,,,,,,,,territory,medium,feudal,,district-beaurains,slot,93,high,
 lordship-bitche,territory,Seigneurie de Bitche,Herrschaft Bitsch,Lordship of Bitche,Terre et seigneurie de Biche,,lordship,49.05167,7.42528,,,,,,,,,territory,medium,feudal,duchy-lorraine,district-bitche,slot,109,high,
@@ -283,11 +283,11 @@ bertrimoutier,settlement,Bertrimoutier,Bertrimoutier,Bertrimoutier,Bertrimonstie
 berus,settlement,Berus,Berus,Berus,Beaurains|La ville de Beaurains,,village,49.2639,6.69417,Q829198,,DE,,,Saarlouis,Pr.,,hist_map,high,,,,,93,high,1.00 near the index's canton (7 km)
 berweiler,settlement,Berweiler,,,Berweiller|BerweiUer,,village,49.27149,6.64563,,3033137,FR,,,Bouzonville,Moselle,,geonames,high,,,,,93,high,"0.95 near the index's canton (8 km); the index's heading, read on the scan"
 besseringen,settlement,Besseringen,Besseringen,Besseringen,,,village,49.4733,6.60861,Q830159,,DE,,,Merzig,Pr.,,hist_map,high,,,,,85,high,1.00 near the index's canton (4 km)
+bethingen,settlement,Bethingen,Bethingen,Bethingen,Bettingen|Brettingen|Sctthujen ou Bctting',Brettingcn,village,49.4603,6.53222,Q831306,,DE,vil.,Orscholz,Saarburg,Pr.,,rule,high,,,,,82,low,"correction 10: 1558 → 1457; Bethingen, com. d'Orscholz (the index), the Betting of the mairie of Schwemlingen: 1457 by the editor's correction 10 (hist_map); merged with sctthujen-ou-bctting (same Wikidata item and canton)"
 bettange,settlement,Bettange,Bettingen,Bettange,Bettingen|Betlange,Bettingen,village,49.23667,6.48167,Q21862,,FR,,,Boulay,,,hist_map,high,,,,,93,high,1.00 near the index's canton (6 km)
 bettegney-saint-brice,settlement,Bettegney-Saint-Brice,Bettegney-Saint-Brice,Bettegney-Saint-Brice,Battigny-Sainct-Brice,Battigny-Saint-Bricc,village,48.29917,6.30694,Q1159210,,FR,,,Dompaire,,,wikidata,high,,,,,66,high,1.00 near the index's canton (11 km)
 bettelainville,settlement,Bettelainville,Bettelainville,Bettelainville,Bettsstroff,,village,49.23722,6.30056,Q22447,,FR,,,,,,rule,high,,,,,81,low,"not found in the index; Bettelainville (Bettsdorf): Bettsstroff, 1594 (Bouteiller)"
-betting,settlement,Betting,Bettingen,,Bettingen|Sctthujen ou Bctting',,village,49.41626,6.50713,,,FR,de la mairie de Schutnelingen [2] (B.),,,,true,hist_map,medium,,,,,86,high,1.00 near its district's other members (7 km)
-bettingen,settlement,Bettingen,,,Brettingen,,village,49.44097,6.85759,,,DE,,,Saarlouis,Pr.,,hist_map,high,,,,,82,low,correction 10: 1558 → 1457; 1.00 near the index's canton (16 km)
+bettingen,settlement,Bettingen,,,,,village,49.44097,6.85759,,,DE,,,Saarlouis,Pr.,,hist_map,high,,,,,87,high,1.00 near the index's canton (16 km)
 bettoncourt,settlement,Bettoncourt,Bettoncourt,Bettoncourt,Bethoncourt|Betoncourt,,village,48.34889,6.16139,Q200627,,FR,,,Charmes,,,wikidata,medium,,,,,67,medium,1.00 near its district's other members (10 km)
 bettring,settlement,Bettring,,,Bertringen|Bcttring,Bertingen,hamlet,49.01766,6.97138,,,FR,ham.,Holving,,,,hist_map,high,,,,,92,high,1.00 near the index's commune (1 km)
 beuren,settlement,Beuren,,,Beuren|Beurcn,,village,49.55687,6.44743,,,DE,vil.,Sinz,Saarburg,Pr.,,hist_map,high,,,,,81,medium,1.00 near the index's commune (3 km)

@@ -397,6 +397,7 @@ index_lines:
   "257|Vilcey-sur-Trey": "Vilcey-sur-Trey, canton de Thiaucourt (Meurthe), 534."
   "261|Xoarupl": "Xoarupt, ham., com. de Ferdrupt, 763."
   "245|Rupt": "Rupt, canton de Ramonchamp, 751, 838."   # 838 read "ë3S"
+  "190|Bethiiigcn": "Bethingen, vil., com. d'Orscholz, canton de Saarburg (Pr.), 1558."   # 1558 read 1358; the editor's correction 10 makes it 1457
   "189|Berus": "Berus, canton de Saarlouis (Pr.), 1672, 2336."   # 2336 (the list of towns, "Bcaurains") read 2356, which is Marsal
   "216|Hellimer": "Hellimer, canton de Grostenquin, 1633, 46."   # the scan reads 1633 as 1653 (Honzrath's, p. 218)
   "218|Hobslelen ou Gbsteten": "Hobsteten ou Obsteten, vil., mairie, 3 lieues au nord-est de Schambourg; enclavé dans les terres étrangères (D., t. III, p. 512), 1557."
@@ -671,6 +672,8 @@ geocode:
   kerperieh-ilemmersdorf: {lat: 49.35349, lon: 6.62768, name_fr: "Kerprich-Hemmersdorf", country: DE, note: "Kerprich-Hemmersdorf, right of the Nied, office of Siersberg (hist_map); the item Q1604852 both share is not taken by Großhemmersdorf"}
   fliessborn: {"at": "Vry", "land": true, "note": "Fliessborn, of the prévôté of Sierck: placed at Vry, the commune H. Hiegel's index gives (Fliessborn (M., Vry), p. 13; in hist_map)"}
   # H. Hiegel's identifications, as hist_map has them (the bailliage d'Allemagne)
+  bethingen: {wikidata: Q831306, note: "Bethingen, com. d'Orscholz (the index), the Betting of the mairie of Schwemlingen: 1457 by the editor's correction 10 (hist_map)"}
+  sctthujen-ou-bctting: {wikidata: Q831306, name_fr: "Bethingen", note: "Bettingen ou Betting, of the mairie of Schumelingen (Schwemlingen): the editor's footnote has a village of Betting south-west of Schwemmlingen on the 1790 map, Bethingen; Bethingen's own line is 1457 by correction 10"}
   dittclingen: {"at": "Bousbach", "name_fr": "Dittelingen", "note": "Dittelingen, a lost village of the county of Forbach: Hiegel's index puts it at Bousbach (Dittelingen (M., Bousbach), p. 17; hist_map)"}
   et-ch: {lat: 49.2633, lon: 7.58306, name_fr: "Eich", country: DE, note: "Eich, of the lordship of Lemberg: Thaleischweiler and Höheischweiler in Hiegel's index (p. 18); placed at Thaleischweiler, as in hist_map"}
   eymngcn: {wikidata: Q568205, note: "Vinningen: Eyningen in Hiegel (lordship of Lemberg; hist_map)"}
