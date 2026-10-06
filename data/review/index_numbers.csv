@@ -29,7 +29,7 @@ no entry,190,Bettlainville,1534,,,,,1.00,,printed 1534: Henselhofen (corrections
 no entry,192,Bonfays,2412,,,,,1.00,bonfays-legeville-et-bonfays,2412 is the Dominican nuns of Nancy
 no entry,192,Bouvroy,776,,,,,1.00,,"776 is Rouveroy, the grange of Rouveroye near Remiremont (Rouveroye's line, rules.yaml entry_index); not a grange of Celles"
 no entry,193,Bouzey,1190,,,,,1.00,,"1190 is Bouzey of Châtenois: Dombrot-sur-Vair, ci-devant Bouzey (Dombrot's line, rules.yaml entry_index); not the mill of Sanchey"
-no entry,196,Charniois-rOrgueilIcux,852,,,,,1.00,charniois-rorgueilicux,"852 is Le Charmois devant Bains, of Bains-les-Bains (Marichal); not Charmois-l'Orgueilleux (rules.yaml entry_places)"
+no entry,196,Charniois-rOrgueilIcux,852,,,,,1.00,charmois-l-orgueilleux,"852 is Le Charmois devant Bains, of Bains-les-Bains (Marichal); not Charmois-l'Orgueilleux (rules.yaml entry_places)"
 no entry,202,Domjulien,927,,,,,1.00,domjulien,Dombasle (927) is Dombasle-en-Xaintois
 no entry,203,Edling,1519,,,,,1.00,edling,Edlingen (1719) is Adelange
 no entry,204,Enssens-la-Ville,968,,,,,1.00,,"968 is not a place of its own: ""Dommartin enssens la Ville"" (967-968), Dommartin-lès-Ville (Alix n° 968, Marichal); rules.yaml entry_index"
@@ -115,7 +115,7 @@ manual,258,Petit-Rohrbacli,1651,,1631,Rorbach,91,1.00,petit-rohrbacli,correction
 manual,252,Tensch,1655,,1635,Teutschen,92,1.00,tensch,printed 1635
 manual,256,Vergaville,I63i,,1638,Wargaville,92,1.00,vergaville,printed 1638
 manual,210,Gawestroff(autrefois Weistroff),1689,,1689,Wistorff,93,1.00,gawestroff,"Wistorff: Weistroff, the old name"
-manual,221,Kerlingcn (Kerling-lès-Sarrelouts),1695,,1693,Kerlingen,93,1.00,kerlingcn,printed 1695 (3/5): Kerlingen is entry 1693; 1695 is Eidlingen
+manual,221,Kerlingcn (Kerling-lès-Sarrelouts),1695,,1693,Kerlingen,93,1.00,kerlingen,printed 1695 (3/5): Kerlingen is entry 1693; 1695 is Eidlingen
 manual,262,Zinzing,1751,,1731,Zintsingen,95,1.00,zinzing,printed 1731
 manual,194,Itnbiiujen,1736,,1736,Bubingen,95,1.00,itnbiiujen,Bubingen
 manual,252,They,1751,,1751,They-soub-Vaudémont,95,1.00,they-sous-vaudemont,They-sous-Vaudémont
@@ -138,13 +138,13 @@ manual,238,Pirmascns,210,,2209,Pfumersens,112,1.00,pirmasens,"printed 2210; Pirm
 manual,218,Hombourg-Ilatit,2259,,2239,Hombourg,114,1.00,hombourg-haut,printed 2239
 manual,237,Petil-Ei>ci>willer,2243,,2243,Eberssweiller,114,1.00,petil-ei-ci-willer,printed 2243
 manual,192,Boucheporn,2275,,2273,Banschborn,115,1.00,boucheporn,"the scan reads 2275 (Niedervisse's); Boucheporn is Banschborn (table of old forms), entry 2273"
-manual,236,Onnes-ct-Viï!ï'; canton d'Ilaroué,2305,,2305,Ormes,128,1.00,onnes-ct-vii-i-canton-d-ilaroue,Ormes
+manual,236,Onnes-ct-Viï!ï'; canton d'Ilaroué,2305,,2305,Ormes,128,1.00,ormes-et-ville,Ormes
 manual,210,Frouard,2507,,2307,Frowart,128,1.00,frouard,printed 2307
 manual,208,Fontcnoy-lc-Châtcau,2520,,2320,Fontenoy-en-Vosges,128,1.00,fontenoy-le-chateau,printed 2320
 manual,260,VVallerfangen (Vaudrevange),2335,,2333,Valderfanges,129,1.00,vvallerfangen,printed 2333
 manual,227,Marienflosse. moulin (collégiale),2576,,2376,Marienfloss,130,1.00,marienflosse-moulin,printed 2376
 manual,198,Clairlicu,2579,,2379,Glerlieu,130,1.00,clairlieu,printed 2379
-manual,236,Onnes-ct-Viï!ï'; canton d'Ilaroué,2418,,2418,Ormes,131,1.00,onnes-ct-vii-i-canton-d-ilaroue,Ormes
+manual,236,Onnes-ct-Viï!ï'; canton d'Ilaroué,2418,,2418,Ormes,131,1.00,ormes-et-ville,Ormes
 manual,197,Châtenois,53,,2453,Chastenoy,132,1.00,chatenois,"printed 53 after 2314: the priory of Chastenoy, 2453"
 manual,224,Libdcau,2386,,2486,Libdos,133,1.00,libdcau,printed 2386; the commandery of Libdos is 2486
 corrected,227,Malgrange (la),5,,3,La Malgrange,36,1.00,la-malgrange,
@@ -509,7 +509,7 @@ corrected,196,Charmes-sur-Moselle,,,2474,Carmes,133,0.92,charmes,number not prin
 corrected,246,Sarrebourg,,,2483,Sarbourg,133,0.89,sarrebourg,number not printed in the index
 corrected,210,Gelucourt,9484,,2484,Gelloucourt,133,0.90,gelucourt,
 spelling differs,223,Lay-Saint-Cristophe,42,,42,Lay,37,0.30,lay-saint-christophe,
-spelling differs,236,Onnes-ct-Viï!ï'; canton d'Ilaroué,70,,70,Ormes,38,0.45,onnes-ct-vii-i-canton-d-ilaroue,check: the entry no line claims
+spelling differs,236,Onnes-ct-Viï!ï'; canton d'Ilaroué,70,,70,Ormes,38,0.45,ormes-et-ville,check: the entry no line claims
 spelling differs,200,Damas-aux-Bois,146,,146,Dommart-aux-Bois pour le tiers et les deux tiers à Chastel,40,0.34,damas-aux-bois,
 spelling differs,222,Lamath,185,,185,La May,42,0.44,lamath,
 spelling differs,222,Lamath,265,,265,La May,44,0.44,lamath,
@@ -522,7 +522,7 @@ spelling differs,184,AHain,560,,560,Allain-aux-Boeufz,55,0.40,allain,check: the 
 spelling differs,245,Rupt,751,,751,Buz,61,0.29,rupt-sur-moselle,
 spelling differs,259,Vincey,877,,877,Vincey au ban des Chesnes,66,0.44,vincey,
 spelling differs,256,Velolie-et-Tatignécourt,9S9,,959,Villotte,68,0.41,velotte-et-tatignecourt,
-spelling differs,196,Charniois-rOrgueilIcux,996,,996,Charmois,70,0.48,charniois-rorgueilicux,
+spelling differs,196,Charniois-rOrgueilIcux,996,,996,Charmois,70,0.48,charmois-l-orgueilleux,
 spelling differs,197,Chaumouzcy,1004,,1004,Chamoysy-la-Ville,70,0.48,chaumousey,
 spelling differs,253,Thiétry,1071,,1071,La Grosse verrière Tiédry,72,0.37,thietry,
 spelling differs,198,Claudon,1074,,1074,Chastillon,72,0.47,claudon,
@@ -556,13 +556,11 @@ spelling differs,213,"(jranduoyain*, bailliage d'Apremont, 1970",1976,,1976,Gran
 spelling differs,231,Moncel-îès-Marchéville,2007,,2007,Moncel,104,0.46,moncel-ies-marcheville,
 spelling differs,231,Moniet,2100,,2100,Le prieuré du Moynier,107,0.45,moniet,
 spelling differs,243,Rinting,2102,,2102,Couvent des soeurs de Rentingen,107,0.35,renting,
-spelling differs,258,Villette au val Sainei-Grégoire,2121,,2121,Villetlc au val Sainct-Grégoire. que souloient tenir en fieù du duché de Lorraine les seigneur de Hasstatt,108,0.44,villette-au-val-sainei-gregoire,
 spelling differs,246,SarrallK?,2135,,2135,Aulbe,109,0.31,sarralbe,
 spelling differs,236,Obeistiinbach,2149,,2149,11 n'en dépend que le seul village dudict Steimbach,110,0.34,obersteinbach,
 spelling differs,260,Waldeck,2195,,2195,Hilsperg,112,0.27,waldeck,
 spelling differs,238,Petil-Tenquin,2197,,2197,Teutschen-la-Petite,112,0.41,petit-tenquin,
 spelling differs,234,Niedersimtenou Obersimlen,2208,,2208,Sympten,112,0.32,obersimten,
-spelling differs,203,Donsicders,2215,,2215,DhOiïsiUfïS,113,0.48,donsieders,
 spelling differs,219,Imshuchc?rtof,2220,,2220,Inssbach,113,0.40,imshuchc-rtof,
 spelling differs,261,Woelfling,2230,,2230,Volfflingen et Weissweiller,113,0.70,woelfling,check: the entry no line claims
 spelling differs,249,Saint-Avold,2240,,2240,La ville de Sainct-Avol ou Sainct-Nabor,114,0.47,saint-avold,
@@ -695,7 +693,7 @@ agrees,231,Montzey,147,,147,Monzey,40,0.92,montzey,
 agrees,239,Portieux,148,,148,Portessieux,40,0.84,portieux,
 agrees,251,Saint-Remy-aux-Bois,149,,149,Sainct-Remy-aux-Bois pour la moitié,41,0.73,saint-remy-aux-bois,
 agrees,256,Vennezey,150,,150,Venaisey,41,0.62,vennezey,
-agrees,191,Blainville-sur-rEau,151,,151,Blainville,41,1.00,blainville-sur-reau,
+agrees,191,Blainville-sur-rEau,151,,151,Blainville,41,1.00,blainville-sur-l-eau,
 agrees,192,Borville,152,,152,Borville,41,1.00,borville,
 agrees,205,Essey-la-CôtC; <„anton de Gerbéviller,153,,153,Essey,41,1.00,essey-la-cote,
 agrees,210,Froville,154,,154,Froville,41,1.00,froville,
@@ -710,12 +708,12 @@ agrees,234,Nctivillcr-sur-Mosdlc,162,,162,Prieuré de Neufviller,41,0.55,neuvill
 agrees,222,Landécourt,163,,163,Prieuré de Landécourt,41,0.69,landecourt,
 agrees,211,Gerbéviller,164,,164,Prieuré de Gerbéviller,41,0.71,gerbeviller,
 agrees,188,Bayon,165,,165,Bayon,41,1.00,bayon,
-agrees,188,Barbonvillc,166,,166,Barbonville,41,1.00,barbonvillc,
+agrees,188,Barbonvillc,166,,166,Barbonville,41,1.00,barbonville,
 agrees,196,Charmois,167,,167,Charmois,41,1.00,charmois,
 agrees,198,Coiviller,168,,168,Coyviller,41,0.89,coyviller,
 agrees,198,Clayeurcs,169,,169,Clayeures,41,1.00,clayeures,
 agrees,200,Damelcvières,170,,170,Damelevières,41,1.00,damelevieres,
-agrees,191,Blainville-sur-rEau,171,,171,Blainville,41,1.00,blainville-sur-reau,
+agrees,191,Blainville-sur-rEau,171,,171,Blainville,41,1.00,blainville-sur-l-eau,
 agrees,203,Domptail-en-1'Air,172,,172,Domtaille,41,0.82,domptail-en-l-air,
 agrees,200,Deinvillers,173,,173,Dynviller,41,0.95,deinvillers,
 agrees,202,Domèvre,174,,174,Domepvre,41,0.93,domevre,
@@ -792,7 +790,7 @@ agrees,253,Thiébauménil,254,,254,Thiébaumesnil,44,0.96,thiebaumenil,
 agrees,220,Joiivct,256,,256,Vihuviller,44,0.95,jolivet,
 agrees,247,Serres,257,,257,Serres,44,1.00,serres,
 agrees,212,Glonvîlle,258,,258,Glonville,44,1.00,glonville,
-agrees,191,Blainville-sur-rEau,259,,259,Blainville,44,1.00,blainville-sur-reau,
+agrees,191,Blainville-sur-rEau,259,,259,Blainville,44,1.00,blainville-sur-l-eau,
 agrees,202,Domjevin,260,,260,Doragevin,44,0.71,domjevin,
 agrees,261,Xermaménil,2G1,,261,Xermamesnil,44,0.95,xermamenil,
 agrees,217,Hériménil,262,,262,Harymesnil,44,0.74,herimenil,
@@ -1635,7 +1633,7 @@ agrees,214,Guerlefang,1300,,1300,Gerolfingen,80,0.67,guerlefang,
 agrees,246,Scharhmorther,1303,,1303,Schartzmorther,81,0.89,scharhmorther,
 agrees,216,Hasenholh,1305,,1305,Hasenholb,81,0.89,hasenholh,
 agrees,212,Godchurc (ou Godtcheurcn),1306,,1306,Gaderscheuren,81,0.65,godchurc,
-agrees,233,Neudlangc,1308,,1308,Nodlingen,81,0.95,neudlangc,
+agrees,233,Neudlangc,1308,,1308,Nodlingen,81,0.95,neudlange,
 agrees,247,Schwerdorff,1324,,1324,Schwerdorff,81,1.00,schwerdorff,
 agrees,214,Guerstling,1325,,1325,Gursingen,81,0.74,guerstling,
 agrees,221,Kilzing,1326,,1326,Kutssingen,81,0.95,kitzing,
@@ -1735,7 +1733,7 @@ agrees,234,Niederhofen,1483,,1483,Niderhoven,87,0.86,niederhofen,
 agrees,191,Bliesen,1484,,1484,Bliessen,87,0.93,bliesen,
 agrees,204,Eisweiler,1485,,1485,Enweiller,87,0.82,eisweiler,
 agrees,224,Linden,1486,,1486,Zurlinden,87,0.95,linden,
-agrees,236,Osenbaeh,1487,,1487,Ostembach,87,0.82,osenbaeh,
+agrees,236,Osenbaeh,1487,,1487,Ostembach,87,0.82,osenbach,
 agrees,213,Gronig,1488,,1488,Gronich,87,0.77,gronig,
 agrees,210,Gehweiler,1489,,1489,Gedessweiller,87,0.80,gehweiler,
 agrees,254,Nicder-Sauhach,1491,,1491,Sambach,87,0.50,niedersaubach,
@@ -1757,7 +1755,7 @@ agrees,204,Eisweiler,1510,,1510,Einveiller,88,0.74,eisweiler,
 agrees,246,Schellembach,1512,,1512,Schellembach,88,1.00,schellembach,
 agrees,252,Thalecksweiler,1513,,1513,Exweiller,88,0.95,thalexweiler,
 agrees,248,Sotzweiler,1514,,1514,Sutzweiller,88,0.90,sotzweiler,
-agrees,236,Osenbaeh,1515,,1515,Osiembach,88,0.82,osenbaeh,
+agrees,236,Osenbaeh,1515,,1515,Osiembach,88,0.82,osenbach,
 agrees,210,Gehweiler,1517,,1517,Godessweiller,88,0.80,gehweiler,
 agrees,224,Linden,1518,,1518,Zurlinden,88,0.95,linden,
 agrees,234,Niederhofen,1519,,1519,Niderhoven,88,0.86,niederhofen,
@@ -1771,7 +1769,7 @@ agrees,195,Caste!,1526,,1526,Kastel,88,0.95,kastel-les-otzenhausen,
 agrees,260,Wchingen,1527,,1527,Wehingen,88,1.00,wehingen,
 agrees,190,Bettingen,1528,,1528,Bettingen,88,1.00,bettingen,
 agrees,186,Aussen,1529,,1529,Aussen,88,1.00,aussen,
-agrees,225,Limbacb,1530,,1530,l.imbach,88,0.86,limbach,
+agrees,225,Limbacb,1530,,1530,Limbach,88,0.86,limbach,
 agrees,252,Thalecksweiler,36,,1536,Exweiller,88,0.95,thalexweiler,
 agrees,249,Steinbacb,1537,,1537,Nidersteimbach,88,0.61,steinbach,
 agrees,249,Steinbacb,38,,1538,Obersteimbach,88,0.64,steinbach,
@@ -1892,7 +1890,7 @@ agrees,219,Hundling,1670,,1670,Hundlingen,93,0.89,hundling,
 agrees,201,Diebling,1671,,1671,Dublingen,93,0.95,diebling,
 agrees,242,Rémering,1673,,1673,Rimeringen,93,0.78,remering-les-bouzonville,
 agrees,253,Tromborn,1674,,1674,Dreyborn,93,0.95,tromborn,
-agrees,190,BerweiUer,1675,,1675,Berweiller,93,0.89,berweiuer,
+agrees,190,BerweiUer,1675,,1675,Berweiller,93,0.89,berweiler,
 agrees,218,Holling,1676,,1676,Hollingen,93,0.88,holling,
 agrees,190,Betlange,1677,,1677,Bettingen,93,0.95,bettange,
 agrees,203,Edling,1678,,1678,Edelingen,93,0.80,edling,
@@ -1938,7 +1936,7 @@ agrees,232,Morlangc,1723,,1723,Morlangen,94,0.94,morlange,
 agrees,208,Forbach,1724,,1724,La ville de Forbach,95,0.67,forbach,
 agrees,237,Pelite-Rosselle,1725,,1725,Klain-Rosseln,95,0.95,petite-rosselle,
 agrees,236,OEting,1726,,1726,Oltingen,95,0.71,oeting,
-agrees,248,Spickeren ou Speichercn,1727,,1727,Speicher,95,0.55,spickeren-ou-speichercn,
+agrees,248,Spickeren ou Speichercn,1727,,1727,Speicher,95,0.55,spicheren,
 agrees,244,Ruchlingen,1728,,1728,Rochlingen,95,0.95,ruchlingen,
 agrees,184,Alsting,1729,,1729,Alstingen,95,0.88,alsting,
 agrees,217,Hesseling,1730,,1730,Hesslingen,95,0.84,hesseling,
@@ -2249,7 +2247,7 @@ agrees,193,Brouvelotte,2095,,2095,Brouvelotte,107,1.00,brouvelotte,
 agrees,242,Réhéray,2097,,2097,Reherey,107,0.86,reheray,
 agrees,187,Ban de la Rivière,2098,,2098,Le ban de la Rivière,107,1.00,ban-de-la-riviere,
 agrees,212,Gosselming,2104,,2104,Gosselmingen,108,0.91,gosselming,
-agrees,219,Imling,2105,,2105,Immelingen. chasteau et village,108,0.75,imling,
+agrees,219,Imling,2105,,2105,Immelingen,108,0.75,imling,
 agrees,234,Nitling,2106,,2106,Nottingen,108,0.95,nitting,
 agrees,190,Bcliling,2108,,2108,Putlingen,108,0.95,bcliling,
 agrees,216,Héming,2109,,2109,Hermingen,108,0.95,heming,
@@ -2263,6 +2261,7 @@ agrees,236,Oberstinzel,2117,,2117,Oberstensel,108,0.82,oberstinzel,
 agrees,234,Nitling,2118,,2118,Nedingen,108,0.53,nitting,
 agrees,203,Eich,2119,,2119,Eich,108,1.00,eich,
 agrees,250,Saint-Hippolyte,2120,,2120,Sainct-Hippolite,108,0.93,saint-hippolyte,
+agrees,258,Villette au val Sainei-Grégoire,2121,,2121,Villette au val Sainct-Grégoire,108,0.94,villette-au-val-sainei-gregoire,
 agrees,248,Soulzbach,2122,,2122,Sultzbach,108,0.89,soulzbach,
 agrees,225,Lièpvrc,2124,,2124,Liepvre,108,1.00,liepvre,
 agrees,251,Sainte-Croix-aux-Mines,2125,,2125,Saincte-Croix et Zuckmantel,109,0.65,sainte-croix-aux-mines,
@@ -2274,7 +2273,7 @@ agrees,238,Pciil-Kombach,2129,,2129,Le Petit-Rombach,109,0.83,pciil-kombach,
 agrees,260,Vraie-Côte (la),2131,,2131,Ranaycoste,109,0.95,la-vraie-cote,
 agrees,233,Nayemont-lez-Fosses,2133,,2133,Naymont,109,0.93,nayemont-lez-fosses,
 agrees,241,Rech,2136,,2136,Zumrech,109,0.95,rech-241,
-agrees,245,Saltzbronn,2138,,2138,Saltzborn. saline et village,109,0.53,saltzbronn,
+agrees,245,Saltzbronn,2138,,2138,Saltzborn,109,0.84,saltzbronn,
 agrees,234,Nîdcck,2139,,2139,Nideckh,109,0.92,nidcck,
 agrees,191,Biuhe,2140,,2140,Biche,109,0.80,bitche,
 agrees,221,Kaltenliausen,2141,,2141,Kaltenhaussen,109,0.85,kaltenliausen,
@@ -2343,6 +2342,7 @@ agrees,206,Et/ch,2211,,2211,Eych,112,0.75,et-ch,
 agrees,260,WeUftrhaus,2212,,2212,Weyllerhaws,112,0.67,weuftrhaus,
 agrees,206,Eynothaws,2213,,2213,Eynothaws,112,1.00,eynothaws,
 agrees,194,Burgalben,2214,,2214,Burg-Alben,112,1.00,burgalben,
+agrees,203,Donsicders,2215,,2215,Dhonsitters,113,0.76,donsieders,
 agrees,232,Mùnchweilcr,2216,,2216,Mundweiller,113,0.86,munchweilcr,
 agrees,201,Dictersba.eh,2217,,2217,Dieterssbach,113,0.96,dictersba-eh,
 agrees,241,Ransctiborn,2218,,2218,Ranschborn,113,0.86,ransctiborn,

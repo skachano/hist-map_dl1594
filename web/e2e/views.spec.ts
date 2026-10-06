@@ -99,7 +99,7 @@ test("table: filter by district, holder and words, export CSV, open a place", as
   await page.getByRole("searchbox", { name: "Words" }).fill("chasteau");
   await page.getByRole("searchbox", { name: "Words" }).press("Enter");
   await expect(page).toHaveURL(/q=chasteau/);
-  for (const text of await rows.locator("td:nth-child(2)").allInnerTexts()) expect(text.toLowerCase()).toContain("chasteau");
+  for (const text of await rows.locator("td:nth-child(6)").allInnerTexts()) expect(text.toLowerCase()).toContain("chasteau");
   // scrolling the table keeps the toolbar in view and the column headers stuck to its top
   await page.getByRole("searchbox", { name: "Words" }).fill("");
   await page.getByRole("searchbox", { name: "Words" }).press("Enter");
@@ -120,8 +120,8 @@ test("table: filter by district, holder and words, export CSV, open a place", as
     let s = ""; stream.on("data", (c) => (s += c)); stream.on("end", () => resolve(s));
   });
   const lines = text.trim().split("\n");
-  expect(lines[0]).toBe("No.,Entry,Place,District,Realm,Section or list,Holders,p.");
-  expect(lines[1]).toMatch(/^1,"Nancy, palais/);
+  expect(lines[0]).toBe("Type,No.,Place,District,Tenure,Thierry Alix's entry,Editors' index");
+  expect(lines[1]).toMatch(/^Town,1,Nancy,Provostship of Nancy,domain,"Nancy, palais .*\(p\. 35\)","Nancy, canton of Nancy \(p\. 233\)"$/);
   expect(lines.length).toBeGreaterThanOrEqual(shown + 1); // a header, then a line or more per row
 
   await rows.first().getByRole("button", { name: "Nancy", exact: true }).click(); // a place opens on the map…
@@ -179,4 +179,22 @@ test("territories: one kind of realm at every level, and the colour key of the k
   await side.getByRole("button", { name: "Administrative divisions" }).click();   // back to levels
   await expect(page).not.toHaveURL(/kind=/);
   await expect(side.getByRole("button", { name: "Bailiwick of Nancy" })).toBeVisible();
+});
+
+test("table: each row starts with its place's icon, and gives the pages of the entry and of the index", async ({ page }) => {
+  await open(page, "#/table?lang=en&q=Frouart");
+  const row = page.locator("table.matrix tbody tr").first();
+  await expect(row.locator("td.type-cell svg.shape")).toHaveCount(1);
+  await expect(row.locator("td.type-cell .type-icon")).toHaveAttribute("title", "Small town");
+  await expect(row.locator("td").nth(4)).toHaveText("Frouart, bourg et chasteau. (p. 36)");
+  await expect(row.locator("td").nth(5)).toHaveText(/^Frouard, canton of Nancy-Nord \(p\. 210\)$/);
+  // the index's headings and cantons as printed, not as the scan misread them
+  await open(page, "#/table?lang=en&q=Houdelmont");
+  await expect(page.locator("table.matrix tbody tr").first().locator("td").nth(5))
+    .toHaveText("Houdelmont, canton of Vézelise (p. 219)");
+  await open(page, "#/table?lang=en&q=Arth-sur-Meurthe");
+  await expect(page.locator("table.matrix tbody tr").first().locator("td").nth(5))
+    .toHaveText("Art-sur-Meurthe, canton of Saint-Nicolas (p. 185)");
+  await expect(page.locator("table.matrix thead th")).toHaveText(
+    ["Type", "No.", "Place", "District", "Tenure", "Thierry Alix's entry", "Editors' index"]);
 });

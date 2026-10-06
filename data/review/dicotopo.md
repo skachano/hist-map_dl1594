@@ -93,10 +93,10 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Woimbey [canton Pierrefitte-sur-Aire, 55] via *Imberes (1047)*, 0.65, 26 km
   2. Chambéry ou Gand [Ferme ou cense, Hettange-Grande, canton Cattenom, 57] via *Chambéry*, 0.64, 55 km
   3. Lixières [Hameau, Fléville-Lixières, canton Conflans-en-Jarnisy, 57] via *Linzeris (1397)*, 0.60, 29 km
-- jranduoyain-bailliage-d-apremont: (jranduoyain*, bailliage d'Apremont
-  1. Bailliage (Le) [Nom désignant la sect, 88] via *Bailliage (Le)*, 0.72, ?
-  2. Apremont [Commune de la Meuse, Apremont-la-Forêt, canton Saint-Mihiel, 54] via *Apremont*, 0.71, 21 km
-  3. Apremont [Apremont-la-Forêt, canton Saint-Mihiel, 55] via *Apremont*, 0.71, 21 km
+- jranduoyain-bailliage-d-apremont: Grandvoysin
+  1. Girauvoisin [canton Commercy, 55] via *Gerard-Voisin (1711)*, 0.79, 23 km
+  2. Jeandelize [canton Conflans-en-Jarnisy, 57] via *Grandilisia (1756)*, 0.69, 21 km
+  3. Grand’Maison (La) [Fief à Pagny-sur-Moselle, Pagny-sur-Moselle, canton Dieulouard, 54] via *Grand’Maison (La)*, 0.68, 15 km
 - la-fosse: La Fosse
   1. Nayemont-les-Fosses [canton Saint-Dié-des-Vosges-Est, 88] via *les Fosses (1633)*, 0.95, ?
   2. Fosse [Cense, Escles, canton Darney, 88] via *Fosse*, 0.95, ?
@@ -108,7 +108,7 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
 - lymingen: Lymingen
   1. Lymingen [Localité incertaine de l’office de Boulay, 57] via *Lymingen*, 0.95, ?
   2. Zimming [canton Boulay-Moselle, 57] via *Zimmingen (1644)*, 0.86, 7 km
-  3. Léning [Canton d’Albestroff, canton Albestroff, 54] via *Leyningen (1594)*, 0.86, 33 km
+  3. Léning [Canton d’Albestroff, canton Albestroff, 54] via *Leyningen (1594)*, 0.86, 32 km
 - merancourt-ou-merancourt: Merancourt ou Merancourt
   1. Méraucourt [Ferme, Bezonvaux, canton Charny-sur-Meuse, 55] via *Méraucourt*, 0.75, 37 km
   2. Malancourt [Hameau, Montois-la-Montagne, canton Marange-Silvange, 57] via *Malancourt*, 0.67, 31 km
@@ -121,10 +121,10 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Blettange [Hameau, Bousse, canton Metzervisse, 57] via *Bletenge*, 0.74, 43 km
   2. Talange [1er canton de Metz, canton Maizières-lès-Metz, 57] via *Tallenges (1599)*, 0.71, 38 km
   3. Pétrange [Château et ferme, Hinckange, canton Boulay-Moselle, 57] via *Pietrenges (1361)*, 0.71, 52 km
-- rantse-iidt: Rantse/iidt
-  1. Renessel [Moulin, Hennemont, canton Fresnes-en-Woëvre, 55] via *Renessel*, 0.43, 116 km
-  2. Mentseille [Écart, Fléville-Lixières, canton Conflans-en-Jarnisy, 54] via *Mentseille*, 0.42, 102 km
-  3. Rouceux [Neufchâteau, canton Neufchâteau, 88] via *Ronsseut*, 0.40, 168 km
+- rantse-iidt: Rantschidt
+  1. Liederscheidt [Liederschiedt, canton Bitche, 57] via *Liderschidt*, 0.50, 51 km
+  2. Tensch [Ferme et moulin, Grostenquin, canton Grostenquin, 57] via *Tentschenmül (1461)*, 0.50, 67 km
+  3. Haspelscheidt [Haspelschiedt, canton Bitche, 57] via *Huspelschidt (1594)*, 0.50, 55 km
 - ronchiere-liai: Ronchiere liai
   1. Rancière [Cense, Tranqueville-Graux, canton Coussey, 88] via *Roncières (1847)*, 0.68, 40 km
   2. Provenchères-lès-Darney [canton Darney, 88] via *Provenchiere (1424)*, 0.62, 7 km
@@ -137,10 +137,10 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Senorroy [Hameau, Norroy-le-Veneur, canton Marange-Silvange, 57] via *Senouroy (1674)*, 0.67, 31 km
   2. Beaumont [canton Domèvre-en-Haye, 54] via *Samboldi-Mons (1106)*, 0.67, 15 km
   3. Mauboulin [Hameau, Saint-Jean-lès-Buzy, canton Étain, 55] via *Mauboulin*, 0.62, 22 km
-- san-de-chaste: San de Chaste!
-  1. Hattonchâtel [Vigneulles-lès-Hattonchâtel, canton Vigneulles-lès-Hattonchâtel, 55] via *Hardonchastel (1240)*, 0.65, 5 km
-  2. Godchure [Ferme, Saint-Hubert, canton Vigy, 57] via *Gaudechure (1641)*, 0.63, 49 km
-  3. Dun [Ville sur la rive droite de la Meuse, Dun-sur-Meuse, canton Dun-sur-Meuse, 55] via *Dun-le-Chastel (1641)*, 0.59, 63 km
+- san-de-chaste: Ban de Chastel
+  1. Hattonchâtel [Vigneulles-lès-Hattonchâtel, canton Vigneulles-lès-Hattonchâtel, 55] via *Hardonchastel (1240)*, 0.78, 5 km
+  2. Achâtel [Sailly-Achâtel, canton Verny, 57] via *Hautchastel (1756)*, 0.70, 36 km
+  3. Dun [Ville sur la rive droite de la Meuse, Dun-sur-Meuse, canton Dun-sur-Meuse, 55] via *Dun-le-Chastel (1641)*, 0.68, 63 km
 - san-de-la-seine: San de la Seine
   1. Forêt-de-la-Reine [Écart, Royaumeix, canton Domèvre-en-Haye, 54] via *Forêt-de-la-Reine*, 0.62, 22 km
   2. Sainte-Ruffine [canton Ars-sur-Moselle, 57] via *Sancta Reffina (1544)*, 0.61, 25 km
@@ -149,31 +149,31 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Vexin (Le Ban de) [Vaux, canton Ars-sur-Moselle, 57] via *Le Ban de Vexin (1681)*, 0.67, 23 km
   2. Dompcévrin [Dompcevrin, canton Pierrefitte-sur-Aire, 55] via *Donseverin (1700)*, 0.62, 25 km
   3. Euvezin [canton Thiaucourt-Regniéville, 54] via *Euvezin*, 0.61, 8 km
-- san-saini-symphorien: San Sainî-Symphorien
-  1. Saint-Symphorien [Ancienne abbaye de Bénédictins, Metz, canton Metz (NP), 57] via *Saint-Symphorien*, 0.72, 31 km
-  2. Sommy [Ferme, Féy, canton Verny, 57] via *Sommy*, 0.69, 22 km
-  3. Saint-Symphorien (Le Pré) [Commune de Longeville, Longeville-lès-Metz, canton Woippy, 57] via *Saint-Symphorien (Le Pré)*, 0.64, 28 km
+- san-saini-symphorien: Ban Saint-Symphorien
+  1. Saint-Symphorien [Ancienne abbaye de Bénédictins, Metz, canton Metz (NP), 57] via *Saint-Symphorien*, 0.77, 31 km
+  2. Saint-Symphorien (Le Pré) [Commune de Longeville, Longeville-lès-Metz, canton Woippy, 57] via *Saint-Symphorien (Le Pré)*, 0.70, 28 km
+  3. Saint-Symphorien [Bois et fontaine, Haudainville, canton Verdun-Est, 55] via *Saint-Symphorien*, 0.69, 33 km
 - san-saint-pierre: San Saint-Pierre
   1. Ban-Saint-Pierre [Ban particulier dans lequel étaient compris, Abaucourt, canton Nomeny, 54] via *Ban-Saint-Pierre*, 0.85, 35 km
   2. Ban-Saint-Pierre [Église, Villers-Stoncourt, canton Pange, 57] via *Ban-Saint-Pierre*, 0.83, 47 km
   3. Pierre ou Pierre-la-Treiche [Pierre-la-Treiche, canton Toul-Sud, 54] via *Pierre*, 0.77, 39 km
-- sun-de-laistrc: Sun de Laistrc
-  1. Jeandelize [canton Conflans-en-Jarnisy, 57] via *Landelise (1642)*, 0.57, 21 km
-  2. Moulin-Lâtre [Moulin, Frizon, canton Châtel-sur-Moselle, 88] via *Moulin de Laistre (1574)*, 0.54, 87 km
-  3. Laître [Nom appliqué à la portion centrale, Grandvillers, canton Bruyères, 88] via *Le Bas-de-l’Aître (1821)*, 0.48, 103 km
+- sun-de-laistrc: Ban de Laistre
+  1. Laître [Nom appliqué à la portion centrale, Grandvillers, canton Bruyères, 88] via *Le Bas-de-l’Aître (1821)*, 0.63, 103 km
+  2. Jeandelize [canton Conflans-en-Jarnisy, 57] via *Landelise (1642)*, 0.62, 21 km
+  3. Ban de la Rotte (Le) [Ancienne communauté du duché de Lorraine, 57] via *Ban de la Rotte (Le)*, 0.62, ?
 - villette-au-val-sainei-gregoire: Villette au val Sainei-Grégoire
   1. Villotte-devant-Louppy [canton Vaubecourt, 55] via *Vilette (1246)*, 0.80, ?
   2. Villette [canton Longuyon, 57] via *Villette*, 0.80, ?
   3. Villotte [canton Lamarche, 88] via *Villete (1317)*, 0.80, ?
-- weuftrhaus: WeUftrhaus
-  1. Boustroff [canton Grostenquin, 57] via *Boustro*, 0.53, 68 km
-  2. Vitrey [canton Vézelise, 54] via *Weutrei (1408)*, 0.37, 131 km
-  3. Sous-le-Lieu [Écart, Cornimont, canton Saulxures-sur-Moselotte, 88] via *Sous-le-Lieu*, 0.34, 142 km
+- weuftrhaus: Weillerhaws
+  1. Willerhoff [Ferme, Lachambre, canton Saint-Avold  2e  Canton, 57] via *Willerhoff*, 0.63, 57 km
+  2. Weyer [Rahling, canton Rohrbach-lès-Bitche, 57] via *Weiller (1594)*, 0.61, 27 km
+  3. Folperswiller [Sarreguemines, canton Sarreguemines, 57] via *Weiller*, 0.60, 34 km
 
 ## Settlements at their commune: DicoTopo's name (0)
 
 Approximate places (no Wikidata or GeoNames item) with a match within 12 km: the modern name, and
-the hamlet's own point where DicoTopo gives one (not its commune's); 32 more checked by hand (rules.yaml `dicotopo_reviewed`).
+the hamlet's own point where DicoTopo gives one (not its commune's); 31 more checked by hand (rules.yaml `dicotopo_reviewed`).
 
 
 ## Settlements DicoTopo places elsewhere (0)

@@ -25,6 +25,7 @@ from collections import Counter, defaultdict
 from denombrement import config
 from denombrement.data import store, validate
 from denombrement.data.models import entry_number
+from denombrement.text import book
 
 OUT_DIR = config.WEB_DATA_DIR
 SIZE_BUDGET = 3_000_000
@@ -93,6 +94,12 @@ def build() -> dict[str, int]:
             nos.append(no)
     for nos in entries_of.values():
         nos.sort(key=lambda n: n if isinstance(n, int) else 0)
+    # an entry's lines in the editor's index (pp. 183-262) that print its number, with their page
+    index_lines: dict[str, list[dict]] = defaultdict(list)
+    for _, x in ds.index_links:
+        if "number not printed" not in (x.notes or ""):
+            page = x.source_page if str(x.source_page or "").isdigit() and int(x.source_page) >= book.INDEX_PRINTED[0] else None
+            index_lines[x.entry_no].append(_compact({"s": x.index_name, "p": page, "place": x.place_id}))
 
     def spellings(p) -> list[dict]:
         book: dict[str, list] = {}
@@ -150,7 +157,7 @@ def build() -> dict[str, int]:
         "district": e.district_id, "realm": e.realm_id, "section": e.section,
         "holders": e.holder_id, "share": e.share, "with": e.share_with,
         "series": None if e.series == "main" else e.series, "order": e.order, "place": e.place_id,
-        "also": also.get(e.no),
+        "also": also.get(e.no), "ix": index_lines.get(e.no),
         "page": e.source_page, "conf": None if e.confidence == "high" else e.confidence,
     }) for _, e in ds.entries]  # the book's order
 

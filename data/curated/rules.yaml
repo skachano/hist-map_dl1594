@@ -221,6 +221,9 @@ entry_texts:
   2374: "Espinal, Sainct-Goërick."
   2378: "Sainct-Martin, de Nancy."
   2413: "Saincte-Claire, de Neufchasteau."
+  2105: "Immelingen, chasteau et village."   # the comma read as a full stop
+  2121: "Villette au val Sainct-Grégoire, que souloient tenir en fied du duché de Lorraine les seigneurs de Hasstatt."   # the comma read as a full stop
+  2138: "Saltzborn, saline et village."   # the comma read as a full stop
 
 # Names a territory has in use, instead of "<type> of <seat>" (as in hist_map).
 territory_names:
@@ -685,7 +688,7 @@ geocode:
   la-rue-sous-llarol: {"at": "Harol", "name_fr": "La Rue-sous-Harol", "note": "a hamlet of Harol (the index); La Rue-sous-Harol (DicoTopo: La Rue sous Hairol (1601))"}
   longcroyc: {"at": "Harol", "name_fr": "Longeroye", "note": "a hamlet of Harol (the index); Longeroye (DicoTopo: Les Longues Royes (1594))"}
   putlegney: {"at": "Harol", "name_fr": "Puttegney", "note": "a hamlet of Harol (the index); Puttegney (DicoTopo: Puttegney)"}
-  la-trouchc: {"at": "Laveline", "note": "a hamlet of Laveline (the index)"}
+  la-trouchc: {"at": "Laveline", "name_fr": "La Trouche", "note": "a hamlet of Laveline (the index)"}
   vetupaire: {"at": "Laveline", "name_fr": "Velupaire", "note": "a hamlet of Laveline (the index), the Laveline near its district; Velupaire (DicoTopo: Velupaire)"}
   laitre-dcneuvie: {"at": "Deneuvre", "note": "a hamlet of Deneuvre (the index)"}
   le-chanois: {"at": "Saint-Amé", "note": "a hamlet of the Syndicat de Saint-Amé (the index)"}
@@ -723,6 +726,34 @@ geocode:
   thorey: {"wikidata": "Q688269", "note": "Thorey(-Lyautey), canton de Vézelise (entry 1754, Tourcy); not Lorey"}
   rech-241: {"at": "Sarralbe", "note": "Rech, a hamlet of Sarralbe (the index; Zumrech, entry 2136); not Rech in the Saarland"}
   fontenoy-la-ville: {"at": "Fontenoy-le-Château", "name_fr": "Fontenoy-la-Ville", "note": "Fontenoy-la-Ville, a section of Fontenoy-le-Château (the index)"}
+
+  # names as the index prints them, where the scan misread the heading (read on the scan)
+  iiachem: {name_fr: "Bachem", note: "the index's heading, read on the scan"}
+  san-de-chaste: {name_fr: "Ban de Chastel", note: "the index's heading, read on the scan"}
+  sun-de-laistrc: {name_fr: "Ban de Laistre", note: "the index's heading, read on the scan"}
+  san-saini-symphorien: {name_fr: "Ban Saint-Symphorien", note: "the index's heading, read on the scan"}
+  benifosse: {name_fr: "Bénifosse", note: "the index's heading, read on the scan"}
+  berweiuer: {name_fr: "Berweiler", note: "the index's heading, read on the scan"}
+  charniois-rorgueilicux: {name_fr: "Charmois-l'Orgueilleux", note: "the index's heading, read on the scan"}
+  fouchifol: {name_fr: "Fouchifol", note: "the index's heading, read on the scan"}
+  jranduoyain-bailliage-d-apremont: {name_fr: "Grandvoysin", note: "the index's heading, read on the scan"}
+  imshuchc-rtof: {name_fr: "Imsbacherhof", note: "the index's heading, read on the scan"}
+  kerlingcn: {name_fr: "Kerlingen", note: "the index's heading, read on the scan"}
+  laycgotttlc: {name_fr: "Layegoutte", note: "the index's heading, read on the scan"}
+  lupcouri: {name_fr: "Lupcourt", note: "the index's heading, read on the scan"}
+  muiieeourt: {name_fr: "Madecourt", note: "the index's heading, read on the scan"}
+  manoncourt-en-voivrc: {name_fr: "Manoncourt-en-Woëvre", note: "the index's heading, read on the scan"}
+  marienflosse-moulin: {name_fr: "Marienflosse", note: "the index's heading, read on the scan"}
+  neudlangc: {name_fr: "Neudlange", note: "the index's heading, read on the scan"}
+  onnes-ct-vii-i-canton-d-ilaroue: {name_fr: "Ormes-et-Ville", note: "the index's heading, read on the scan"}
+  rantse-iidt: {name_fr: "Rantschidt", note: "the index's heading, read on the scan"}
+  rosiere-i-la-ou-larosiere: {name_fr: "La Rosière", note: "the index's heading, read on the scan"}
+  rougeville: {name_fr: "Rougeville", note: "the index's heading, read on the scan"}
+  spickeren-ou-speichercn: {name_fr: "Spicheren", note: "the index's heading, read on the scan"}
+  la-voivrelle: {name_fr: "La Voivrelle", note: "the index's heading, read on the scan"}
+  weuftrhaus: {name_fr: "Weillerhaws", note: "the index's heading, read on the scan"}
+  xennois: {name_fr: "Xennois", note: "the index's heading, read on the scan"}
+
 
 # Places checked by hand against DicoTopo's matches (make dicotopo): the name or placement stands, and
 # the report no longer lists them ({place id: why}).

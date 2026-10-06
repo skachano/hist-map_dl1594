@@ -479,6 +479,13 @@ def build() -> Built:
             out.index_links.append({"place_id": e["place_id"], "entry_no": str(no), "index_name": name, "printed": "",
                                     "status": "manual", "source_page": e["page"], "confidence": "medium",
                                     "notes": "rules.yaml index_spellings", "_row": None})
+    read_index_headings(out.index_links, load_manual("index_headings"))
+    # manual/index_seats.csv: the index's communes and cantons as printed, where the scan misread them
+    seats = {r["read"]: r["name"] for r in load_manual("index_seats")}
+    for p in out.places.values():
+        for k in ("index_commune", "index_canton"):
+            if p.get(k) in seats:
+                p[k] = seats[p[k]]
     # The editor's table of old forms: an old spelling next to the 1870 name of an index line.
     by_index_name: dict[str, set[str]] = defaultdict(set)
     for x in out.index_links:
@@ -676,6 +683,18 @@ def rename_entries(entries: list[dict], readings: list[dict], names: dict) -> No
     for no, name in names.items():
         if int(no) in by_no:
             _rename(by_no[int(no)], name)
+
+
+def read_index_headings(links: list[dict], readings: list[dict]) -> None:
+    """manual/index_headings.csv: the index's headings as printed where the scan misread them
+    (page, read, name, entry when two lines of a page share the reading, source). Only the
+    heading shown changes: the places keep the ids their first reading gave them."""
+    todo = [(r["page"], r["read"], r.get("entry") or "", r["name"]) for r in readings]
+    for x in links:
+        x["index_name"] = re.sub(r"(?<=\w)'$", "", x["index_name"])   # a note call: "Niderviller'"
+        for page, read, entry, name in todo:   # in the table's order, so one reading can follow another
+            if str(x["source_page"]) == page and entry in ("", x["entry_no"]) and read in x["index_name"]:
+                x["index_name"] = x["index_name"].replace(read, name, 1)
 
 
 def retext_entries(entries: list[dict], texts: dict) -> None:

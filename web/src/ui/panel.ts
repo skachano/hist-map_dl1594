@@ -2,7 +2,7 @@
 // the chains up both hierarchies (district and realm), tenure and holders, and every entry of the
 // Dénombrement that names the place, with its number, text and page. A territory also shows its
 // holder, the division it answers to, its counterpart on the same land, and its members.
-import type { Dataset, Entry, Place } from "../data/types";
+import type { Dataset, Entry, Lang, Place } from "../data/types";
 import { label, LANGS, name, type StringKey, t } from "../i18n";
 import { chains, ressortOf } from "../model/places";
 import type { State, Store } from "../state/store";
@@ -10,6 +10,17 @@ import { fill, h } from "./dom";
 import { openPlace } from "./navigate";
 
 const childrenCache = new WeakMap<Dataset, Map<string, { id: string; rel: string }[]>>();
+
+/** The editor's identification of a place in the index (1870): kind, commune, canton, département. */
+export function indexIdentification(place: Place, lang: Lang): string {
+  const index = place.index ?? {};
+  return [
+    index.kind,
+    index.commune ? `${t("commune", lang)} ${index.commune}` : "",
+    index.canton ? `${t("canton", lang)} ${index.canton}` : "",
+    index.dept ?? "",
+  ].filter(Boolean).join(", ");
+}
 
 /** Direct members of each territory (settlements and territories), through admin or feudal links. */
 export function childrenOf(data: Dataset): Map<string, { id: string; rel: string }[]> {
@@ -58,13 +69,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, state: State, stor
   const feudal = chains(place.id, "feudal", data.places);
   const isTerritory = place.kind === "territory";
   const ressort = isTerritory ? ressortOf(place.id, data.places) : undefined;
-  const index = place.index ?? {};
-  const where = [
-    index.kind,
-    index.commune ? `${t("commune", lang)} ${index.commune}` : "",
-    index.canton ? `${t("canton", lang)} ${index.canton}` : "",
-    index.dept ?? "",
-  ].filter(Boolean).join(", ");
+  const where = indexIdentification(place, lang);
   const location = place.kind === "settlement"
     ? place.lat === undefined ? t("unlocated", lang)
       : place.approx ? t("approximate", lang) : place.geo === "low" ? t("lowConfidence", lang) : ""

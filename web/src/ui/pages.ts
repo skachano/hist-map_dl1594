@@ -2,11 +2,13 @@
 // CSV export. This is where the book is read in order, and the keyboard's way to every fact.
 import type { Dataset, Entry } from "../data/types";
 import { label, name, t } from "../i18n";
+import { shapeSvg } from "../map/icons";
+import { OTHER, TENURE_COLOURS } from "../model/colors";
 import { DUCHY } from "../model/places";
 import type { State, Store, TableFilters } from "../state/store";
 import { fill, h } from "./dom";
 import { openPlace, showOnMap } from "./navigate";
-import { childrenOf } from "./panel";
+import { childrenOf, indexIdentification } from "./panel";
 
 /** Who holds what an entry lists: the named holders, else the duke for domain and safeguards. */
 export function entryHolders(e: Entry): string[] {
@@ -51,7 +53,6 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
   const f = state.filters ?? {};
   const vocab = data.meta.vocab;
   const placeName = (id: string) => name(data.places.get(id)?.name, lang, id);
-  const entityName = (id: string) => name(data.entities.get(id)?.name, lang, id);
   const setFilter = (key: keyof TableFilters, value: string) => {
     const next = { ...f, [key]: value || undefined };
     for (const k of Object.keys(next) as (keyof TableFilters)[]) if (!next[k]) delete next[k];
@@ -68,14 +69,37 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
   const rows = filterEntries(data, f);
   // Every place the entry names: the one it is matched to, then those the index adds.
   const placesOf = (e: Entry) => [e.place, ...(e.also ?? [])].filter((id): id is string => !!id);
+  const settlement = (e: Entry) => {
+    const p = e.place ? data.places.get(e.place) : undefined;
+    return p?.kind === "settlement" ? p : undefined;
+  };
+  const typeLabel = (e: Entry) => {
+    const p = settlement(e);
+    const text = p ? label(vocab.place_types[p.type], lang, p.type) : "";
+    return text.charAt(0).toUpperCase() + text.slice(1);   // as in the legend
+  };
+  const tenure = (e: Entry) => e.series
+    ? label(vocab.series[e.series], lang, e.series) : label(vocab.sections[e.section ?? ""], lang, e.section ?? "");
+  const onPage = (page?: string) => page ? ` (${t("pages", lang)} ${page})` : "";
+  // Thierry Alix's entry, and the editor's index lines for it, each with its page.
+  const alix = (e: Entry) => `${e.text}${onPage(e.page)}`;
+  const index = (e: Entry) => (e.ix ?? []).map((x) => {
+    const p = x.place ? data.places.get(x.place) : undefined;
+    const where = p ? indexIdentification(p, lang) : "";
+    return `${x.s}${where ? `, ${where}` : ""}${onPage(x.p)}`;
+  }).join("; ");
   const cells = (e: Entry) => [
-    String(e.no), e.text, placesOf(e).map(placeName).join(", "), e.district ? placeName(e.district) : "",
-    e.realm ? placeName(e.realm) : "",
-    e.series ? label(vocab.series[e.series], lang, e.series) : label(vocab.sections[e.section ?? ""], lang, e.section ?? ""),
-    entryHolders(e).map(entityName).join(", "), e.page ?? "",
+    typeLabel(e), String(e.no), placesOf(e).map(placeName).join(", "), e.district ? placeName(e.district) : "",
+    tenure(e), alix(e), index(e),
   ];
-  const head = [t("entry", lang), t("entryText", lang), t("place", lang), t("district", lang), t("realm", lang),
-    t("section", lang), t("holderLegend", lang), t("pages", lang)];
+  const head = [t("type", lang), t("entry", lang), t("place", lang), t("district", lang), t("tenure", lang),
+    t("alixEntry", lang), t("editorsIndex", lang)];
+  const icon = (e: Entry) => {
+    const p = settlement(e);
+    if (!p) return "";
+    return h("span", { class: "type-icon", title: typeLabel(e) },
+      shapeSvg(p.type, p.tenure ? TENURE_COLOURS[p.tenure] ?? OTHER : "#ffffff"), h("span", { class: "visually-hidden" }, typeLabel(e)));
+  };
   const exportCsv = () => {
     const blob = new Blob([csv([head, ...rows.map(cells)])], { type: "text/csv;charset=utf-8" });
     const a = h("a", { href: URL.createObjectURL(blob), download: "denombrement-1594.csv" });
@@ -98,13 +122,15 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
       h("button", { onclick: exportCsv }, t("exportCsv", lang))),
     h("div", { class: "table-wrap" },
       h("table", { class: "matrix" },
-        h("thead", {}, h("tr", {}, ...head.map((x) => h("th", { scope: "col" }, x)))),
+        h("thead", {}, h("tr", {}, h("th", { scope: "col" }, h("span", { class: "visually-hidden" }, head[0])),
+          ...head.slice(1).map((x) => h("th", { scope: "col" }, x)))),
         h("tbody", {}, ...rows.map((e) => h("tr", {},
+          h("td", { class: "type-cell" }, icon(e)),
           h("th", { scope: "row" }, String(e.no)),
-          h("td", {}, e.text),
           h("td", {}, ...placesOf(e).flatMap((id, i) => [i ? ", " : "", link(id, () => showOnMap(store, id))])),
           h("td", {}, e.district ? link(e.district, () => openPlace(store, data, e.district!)) : ""),
-          h("td", {}, e.realm ? link(e.realm, () => openPlace(store, data, e.realm!)) : ""),
-          ...cells(e).slice(5).map((x) => h("td", {}, x))))))),
+          h("td", {}, tenure(e)),
+          h("td", {}, alix(e)),
+          h("td", {}, index(e))))))),
   );
 }

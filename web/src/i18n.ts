@@ -62,6 +62,8 @@ const STRINGS = {
   gistes: { en: "gîtes", fr: "gistes", de: "gîtes", ja: "ジット" },
   all: { en: "All", fr: "Tous", de: "Alle", ja: "すべて" },
   entryText: { en: "Entry", fr: "Article", de: "Eintrag", ja: "記載" },
+  alixEntry: { en: "Thierry Alix's entry", fr: "Article de Thierry Alix", de: "Eintrag von Thierry Alix", ja: "ティエリー・アリクスの記載" },
+  editorsIndex: { en: "Editors' index", fr: "Index des éditeurs", de: "Register der Herausgeber", ja: "編者の索引" },
   place: { en: "Place", fr: "Lieu", de: "Ort", ja: "地点" },
   section: { en: "Section or list", fr: "Section ou liste", de: "Abschnitt oder Liste", ja: "区分・一覧" },
   list: { en: "List", fr: "Liste", de: "Liste", ja: "一覧" },

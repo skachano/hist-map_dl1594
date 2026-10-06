@@ -483,6 +483,7 @@ no,read,name,source
 1526,Kastcl,Kastel,tesseract
 1527,Wchingen,Wehingen,tesseract
 1528,Bettingcn,Bettingen,scan
+1530,l.imbach,Limbach,scan
 1533,BubweiUer,Bubweiller,scan
 1534,Hemtzelbovcn,Hemtzelhoven,tesseract
 1536,Eiweiller,Exweiller,old forms
@@ -644,7 +645,7 @@ no,read,name,source
 2089,Laislre,Laistre,tesseract
 2103,Prieuré de liesse,Prieuré de Hesse,tesseract
 2104,Gossclmingen,Gosselmingen,tesseract
-2105,Immclingen. chasteau et village,Immelingen. chasteau et village,scan
+2105,Immclingen. chasteau et village,Immelingen,scan
 2106,Nottiugen,Nottingen,DicoTopo
 2107,Niderwciller,Niderweiller,DicoTopo
 2108,Putlingcn,Putlingen,tesseract
@@ -654,9 +655,11 @@ no,read,name,source
 2118,Ncdingen,Nedingen,DicoTopo
 2119,Eieh,Eich,tesseract
 2120,Sainct-Ilippolite,Sainct-Hippolite,tesseract
+2121,Villetlc au val Sainct-Grégoire. que souloient tenir en fieù du duché de Lorraine les seigneur de Hasstatt,Villette au val Sainct-Grégoire,scan
 2125,Sainctc-Croix et Zuckmantel,Saincte-Croix et Zuckmantel,scan
 2127,Saincte-Maric,Saincte-Marie,tesseract
 2136,Zumrcch,Zumrech,DicoTopo
+2138,Saltzborn. saline et village,Saltzborn,scan
 2144,Lcngissheim,Lengissheim,DicoTopo
 2145,Hauweillcr,Hauweiller,old forms
 2146,Reygcrssweiller,Reygerssweiller,DicoTopo
@@ -690,6 +693,7 @@ no,read,name,source
 2206,Gcrsspach,Gersspach,tesseract
 2208,Symptcn,Sympten,scan
 2210,Froschcn,Froschen,old forms
+2215,DhOiïsiUfïS,Dhonsitters,scan
 2216,Muridweiller,Mundweiller,tesseract
 2217,Dieterssbaeh,Dieterssbach,tesseract
 2220,Imssbacli,Inssbach,scan

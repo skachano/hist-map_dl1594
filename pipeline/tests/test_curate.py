@@ -148,3 +148,26 @@ def test_the_text_takes_the_names_first_letter_and_a_space_after_commas():
     e = [{"no": 2354, "name": "Hombourg", "text": "llombourg,chasteau."}]
     build.rename_entries(e, [], {})
     assert e[0]["text"] == "Hombourg, chasteau."
+
+
+def test_index_headings_as_printed():
+    links = [{"source_page": "185", "entry_no": "5", "index_name": "Art-sur-Meurlhe"},
+             {"source_page": "240", "entry_no": "72", "index_name": "Pulligny"},
+             {"source_page": "240", "entry_no": "479", "index_name": "Pulligny"},
+             {"source_page": "253", "entry_no": "2107", "index_name": "Niderviller'"}]
+    build.read_index_headings(links, [
+        {"page": "185", "read": "Art-sur-Meurlhe", "name": "Art-sur-Meurthe", "entry": ""},
+        {"page": "240", "read": "Pulligny", "name": "Puttigny", "entry": "479"}])   # two lines read alike
+    assert [x["index_name"] for x in links] == ["Art-sur-Meurthe", "Pulligny", "Puttigny", "Niderviller"]
+    # one reading can follow another: "Chatlemagnc ou Chatemagnc" in two steps
+    links = [{"source_page": "197", "entry_no": "511", "index_name": "Chatlemagnc ou Chatemagnc"}]
+    build.read_index_headings(links, [
+        {"page": "197", "read": "Chatlemagnc", "name": "Chattemagne", "entry": ""},
+        {"page": "197", "read": "Chattemagne ou Chatemagnc", "name": "Chattemagne ou Chatemagne", "entry": ""}])
+    assert links[0]["index_name"] == "Chattemagne ou Chatemagne"
+
+
+def test_index_readings_fit_the_index():
+    assert all(r["read"] != r["name"] for r in build.load_manual("index_seats"))
+    for r in build.load_manual("index_headings"):
+        assert r["read"] != r["name"] and r["source"] in {"scan", "modern name"}, r

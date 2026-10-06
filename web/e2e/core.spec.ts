@@ -34,7 +34,7 @@ test("place panel lists every entry naming the place, with numbers, sections and
   const entries = panel.locator("ul.entries > li");
   await expect(entries).toHaveCount(4);
   await expect(entries.nth(0)).toContainText("No. 2240");
-  await expect(entries.nth(0)).toContainText("La ville de Sainct-Avol ou Sataet-Nabor");
+  await expect(entries.nth(0)).toContainText("La ville de Sainct-Avol ou Sainct-Nabor");
   await expect(entries.nth(0)).toContainText("p. 114");
   await expect(entries.nth(1)).toContainText("No. 2267");
   await expect(entries.nth(1)).toContainText("p. 115");
@@ -122,7 +122,7 @@ test("settlements are drawn with one shape per kind of place, keyed in the legen
 test("spellings by source: the lists, the editor's index and the table of old forms", async ({ page }) => {
   await open(page, "#/map?lang=en&place=croismare");
   const spell = page.locator("#panel dd.spell");
-  await expect(spell.filter({ hasText: "In the lists" })).toContainText("Haùonvitter");
+  await expect(spell.filter({ hasText: "In the lists" })).toContainText("Hadonviller");
   await expect(spell.filter({ hasText: "In the editor's index" })).toHaveText("In the editor's index: Croismare");
   await expect(spell.filter({ hasText: "(" })).toHaveCount(0);   // no numbers among the spellings
   // the index's numbers, in a section of their own
@@ -138,7 +138,7 @@ test("an entry naming two places is listed under both, each linking the other", 
   await expect(page.locator("#panel h2")).toHaveText("Wiesviller");
   await expect(page.locator("#panel ul.entries > li").filter({ hasText: "No. 2230" })
     .getByRole("button", { name: /^W(oe|œ)lfling/ })).toBeVisible();
-  await open(page, "#/table?lang=en&q=Volfflingcn");
+  await open(page, "#/table?lang=en&q=Volfflingen");
   const row = page.locator("table.matrix tbody tr").first();
   await expect(row.getByRole("button", { name: /^W(oe|œ)lfling/ })).toBeVisible();
   await expect(row.getByRole("button", { name: "Wiesviller" })).toBeVisible();
