@@ -179,3 +179,22 @@ def test_read_chaume():
     out = build.read_chaume(row, {"Grouiin": "Groulin", "Grand": "Grawel"}, {"Arches": "provostship-arches"})
     assert out["id"] == "chaume-groulin" and out["name"] == "Groulin"
     assert out["attrs"] == "gistes=3; provostship=provostship-arches; also=Grawel"
+
+
+def test_plain_label():
+    assert build.plain_label("ビュール （ムーズ県）") == "ビュール"
+    assert build.plain_label("ペルル (モーゼル)") == "ペルル"
+    assert build.plain_label("ディリンゲン/ザール") == "ディリンゲン"
+    assert build.plain_label("マルス・ラ・トゥール村") == "マルス・ラ・トゥール"
+    assert build.plain_label("ナンシー") == "ナンシー"
+
+
+def test_every_settlement_has_a_japanese_name():
+    places = {r["id"]: r for r in csv.DictReader((config.CURATED_DIR / "places.csv").open())}
+    ja = {r["id"]: r["name_ja"] for r in csv.DictReader((config.CURATED_DIR / "names_ja.csv").open())}
+    missing = [pid for pid, p in places.items() if p["kind"] == "settlement" and not ja.get(pid)]
+    assert missing == []
+    # katakana, not a Wikidata label with its disambiguator
+    assert not [n for n in ja.values() if "(" in n or "（" in n and "ファルスブール" not in n]
+    for r in build.load_manual("names_ja"):
+        assert r["source"] in {"written", "hist_map"}, r

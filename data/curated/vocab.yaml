@@ -14,7 +14,7 @@ place_types:
   palace:        {en: palace, fr: palais, de: Palast, ja: 宮殿}
   abbey:         {en: abbey, fr: abbaye, de: Abtei, ja: 修道院}
   priory:        {en: priory, fr: prieuré, de: Priorat, ja: 小修道院}
-  convent:       {en: convent, fr: couvent, de: Kloster, ja: 女子修道院・会院}
+  convent:       {en: convent, fr: couvent, de: Kloster, ja: 修道会院}
   collegiate_church: {en: collegiate church, fr: église collégiale, de: Stiftskirche, ja: 参事会教会}
   cathedral:     {en: cathedral, fr: cathédrale, de: Dom, ja: 司教座聖堂}
   commandery:    {en: commandery, fr: commanderie, de: Kommende, ja: 騎士団管区}
@@ -71,7 +71,7 @@ counterpart_bases:
 sections:
   domain:    {en: domain, fr: domaine, de: Domäne, ja: 直轄領}
   fief:      {en: fiefs, fr: fiedvez, de: Lehen, ja: 封土}
-  clergy:    {en: clergy, fr: clergé, de: Geistlichkeit, ja: 聖職者領}
+  clergy:    {en: clergy, fr: clergé, de: Geistlichkeit, ja: 教会領}
   safeguard: {en: safeguards, fr: sauvegardes, de: Schirm, ja: 保護下の村}
   other:     {en: other, fr: autres, de: Sonstiges, ja: その他}
 

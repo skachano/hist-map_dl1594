@@ -721,6 +721,12 @@ def _rename(e: dict, name: str) -> None:
     e["name"] = name
 
 
+def plain_label(label: str) -> str:
+    """Wikidata's Japanese labels carry disambiguators, as in hist_map: 'ビュール （ムーズ県）' -> 'ビュール',
+    'ディリンゲン/ザール' -> 'ディリンゲン'; and a trailing 村 ('マルス・ラ・トゥール村')."""
+    return re.sub(r"(?<=.)村$", "", re.split(r"\s*[（(/]", label)[0].strip())
+
+
 def read_chaume(row: dict, spellings: dict, provostships: dict) -> dict:
     """rules.yaml `chaumes`: the names as printed where the scan misread them ({read: printed}),
     and the division each "prévosté de …" heading names ({as printed: territory id})."""
@@ -865,7 +871,7 @@ def merge_geocoding(out: Built) -> int:
         n += 1
         p["geo_method"], p["geo_confidence"] = g["method"], g["confidence"]
         if g.get("name_ja"):
-            p["_name_ja"] = (g["name_ja"], "wikidata" if g["method"] != "territory" else "seat + type")
+            p["_name_ja"] = (plain_label(g["name_ja"]), "wikidata" if g["method"] != "territory" else "seat + type")
         if g["lat"]:
             p["lat"], p["lon"] = g["lat"], g["lon"]
         p["wikidata_id"], p["geonames_id"] = g["wikidata_id"], g["geonames_id"]
