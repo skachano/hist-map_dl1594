@@ -3,7 +3,8 @@
 {"id": "chaume-fonyer", "theme": "chaume", "name": "Fonyer", "place_id": null, "attrs": "gistes=1; provostship=Bruyères; also=Schinnbsberg", "source_page": "118", "text": "Fonyer, en allemand Schinnbsberg, une giste."}
 {"id": "chaume-bellcfirst", "theme": "chaume", "name": "Bellcfirst", "place_id": null, "attrs": "gistes=2; provostship=Bruyères", "source_page": "118", "text": "Bellcfirst, deux gistes."}
 {"id": "chaume-bcbeuriedi", "theme": "chaume", "name": "Bcbeuriedi", "place_id": null, "attrs": "gistes=1; provostship=Bruyères", "source_page": "118", "text": "Bcbeuriedi, une giste."}
-{"id": "chaume-schliechlh", "theme": "chaume", "name": "Schliechlh", "place_id": null, "attrs": "gistes=4; provostship=Arches; also=La plaine du Uault-dc-Chaulmc|Hobeneck", "source_page": "118", "text": "La plaine du Uault-dc-Chaulmc, en allemand Hobeneck, Schliechlh, quatre gistes."}
+{"id": "chaume-la-plaine-du-uault-dc-chaulmc", "theme": "chaume", "name": "La plaine du Uault-dc-Chaulmc", "place_id": null, "attrs": "provostship=Arches; also=Hobeneck", "source_page": "118", "text": "La plaine du Uault-dc-Chaulmc, en allemand Hobeneck,"}
+{"id": "chaume-schliechlh", "theme": "chaume", "name": "Schliechlh", "place_id": null, "attrs": "gistes=4; provostship=Arches", "source_page": "118", "text": "Schliechlh, quatre gistes."}
 {"id": "chaume-vespremont", "theme": "chaume", "name": "Vespremont", "place_id": null, "attrs": "gistes=1; provostship=Arches", "source_page": "118", "text": "Vespremont,une giste."}
 {"id": "chaume-schmalgurtcl", "theme": "chaume", "name": "Schmalgurtcl", "place_id": null, "attrs": "gistes=4; provostship=Arches", "source_page": "118", "text": "Schmalgurtcl, quatre gistes."}
 {"id": "chaume-sainct-jacques", "theme": "chaume", "name": "Sainct-Jacques", "place_id": null, "attrs": "gistes=1; provostship=Arches; also=Jorbsperg", "source_page": "118", "text": "Sainct-Jacques, alias Jorbsperg, une giste."}

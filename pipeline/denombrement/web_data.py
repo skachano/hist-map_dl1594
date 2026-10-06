@@ -182,7 +182,7 @@ def build() -> dict[str, int]:
 
     features = [_compact({
         "id": f.id, "theme": f.theme, "name": f.name, "place": f.place_id, "attrs": _attrs(f.attrs),
-        "page": f.source_page}) for _, f in sorted(ds.features, key=lambda lf: lf[1].id)]
+        "page": f.source_page}) for _, f in ds.features]   # the book's order
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     sizes = {

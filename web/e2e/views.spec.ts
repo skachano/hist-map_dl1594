@@ -133,19 +133,37 @@ test("table: filter by district, holder and words, export CSV, open a place", as
   expect(Math.abs(c.lat - 48.6928)).toBeLessThan(0.02);
 });
 
-test("church & resources: thematic lists on the map, chaumes listed", async ({ page }) => {
-  const errors = await open(page, "#/church?lang=en");
-  const side = page.locator("#side");
-  await expect(side.getByRole("button", { name: "Abbeys" })).toHaveAttribute("aria-pressed", "true");
+test("settlements: the tenures or a thematic list on the map, chaumes listed", async ({ page }) => {
+  const errors = await open(page, "#/map?lang=en");
+  await expect(page.getByRole("navigation").getByRole("button")).toHaveText(
+    ["Settlements", "Territories", "Holders", "Table", "About & sources"]);   // no Church & resources tab
+  const legend = page.locator("#legend"), side = page.locator("#side");
+  const modes = page.locator("header .modes");   // the switch sits in the header's toolbar
+  await expect(modes.getByRole("button", { name: "Tenures" })).toHaveAttribute("aria-pressed", "true");
+  await expect(side).toBeHidden();
+  await modes.getByRole("button", { name: "Abbeys" }).click();
+  await expect(page).toHaveURL(/#\/map\?.*layer=abbeys/);
+  await expect(legend).toBeHidden();
+  await expect(modes.getByRole("button", { name: "Abbeys" })).toHaveAttribute("aria-pressed", "true");
   await expect(side.locator("ul.entries li").first()).toContainText("2378");
-  await side.getByRole("button", { name: "Towns" }).click();
+  await modes.getByRole("button", { name: "Towns" }).click();
   await expect(page).toHaveURL(/layer=towns/);
-  await side.getByRole("button", { name: "Chaumes" }).click();
+  await modes.getByRole("button", { name: "Chaumes" }).click();
   await expect(side).toContainText("gîtes");
-  await side.getByRole("button", { name: "Abbeys" }).click();
+  await modes.getByRole("button", { name: "Abbeys" }).click();
   await side.locator("ul.entries li button").first().click();
   await expect(page).toHaveURL(/#\/map\?.*place=/);
   await expect(page.locator("#panel h2")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await modes.getByRole("button", { name: "Tenures" }).click();
+  await expect(page).not.toHaveURL(/layer=/);
+  await expect(legend).toBeVisible();
+  await page.getByRole("navigation").getByRole("button", { name: "Table" }).click();
+  await expect(modes).toHaveCount(0);   // only in Settlements
+  // old links to the Church & resources tab open the layer in Settlements
+  await open(page, "#/church?lang=en&layer=priories");
+  await expect(page).toHaveURL(/#\/map\?.*layer=priories/);
+  await expect(modes.getByRole("button", { name: "Priories" })).toHaveAttribute("aria-pressed", "true");
   expect(errors).toEqual([]);
 });
 

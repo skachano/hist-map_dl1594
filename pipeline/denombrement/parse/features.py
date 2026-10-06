@@ -39,18 +39,19 @@ def parse_chaumes(lines: list[tuple[str, str]]) -> list[dict]:
         joined = re.sub(r"^(?:Est la montagne ou chaulme appe\S+ communément|Sont les chaulmes de)\s+", "",
                         clean.dehyphenate(pending))
         m = _GISTES.search(joined)
-        if not m:
+        # "La plaine du Hault-de-Chaulme, en allemand Hobeneck," stands on its own line, with no count
+        plain = not m and fold(joined).startswith("la plaine") and joined.rstrip().endswith(",")
+        if not m and not plain:
             continue
-        body = joined[: m.start()]
+        body = joined[: m.start()] if m else joined
         names = [re.sub(r"^(?:et\s+)?(?:en allemand|ali[aà]s)\s+", "", n.strip(" ,."))
                  for n in re.split(r",\s*|\s+et\s+(?=en allemand|ali[aà]s)", body) if n.strip(" ,.")]
-        # "La plaine du Hault-de-Chaulme, en allemand Hobeneck, Schliechlh, quatre gistes": the plain
-        # heads the chaumes listed under it; the count belongs to the last one.
-        name = clean.fix_name(names[-1] if fold(names[0]).startswith("la plaine") else names[0])
-        others = [clean.fix_name(n) for n in names if clean.fix_name(n) != name]
+        name = clean.fix_name(names[0])
+        others = [clean.fix_name(n) for n in names[1:]]
         out.append({
             "id": f"chaume-{slug(name)}", "theme": "chaume", "name": name, "place_id": None,
-            "attrs": f"gistes={_COUNT[m.group('n').lower()]}; provostship={provostship}"
+            "attrs": "; ".join([f"gistes={_COUNT[m.group('n').lower()]}"] if m else [])
+                     + ("; " if m else "") + f"provostship={provostship}"
                      + (f"; also={'|'.join(others)}" if others else ""),
             "source_page": page_of_pending, "text": joined,
         })

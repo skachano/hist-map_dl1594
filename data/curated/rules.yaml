@@ -804,6 +804,34 @@ geocode:
   xennois: {name_fr: "Xennois", note: "the index's heading, read on the scan"}
 
 
+
+# The chaumes (pp. 118-119): names as printed where the scan misread them (read on the scan), and
+# the division of each "prévosté de …" heading.
+chaumes:
+  spellings:
+    Sourgcltamps: Sourgchamps
+    Gaurili: Gauritz
+    Schinnbsberg: Schirmbsberg
+    Bellcfirst: Bellefirst
+    Bcbeuriedi: Bebeuriedi
+    La plaine du Uault-dc-Chaulmc: La plaine du Hault-de-Chaulme
+    Schliechlh: Schliechtli
+    Schmalgurtcl: Schmalgurtel
+    Grouiin: Groulin
+    Grand: Grawel
+    Ficherai: Ficheral
+    Fischcrn et Champy: Fischern et Champy
+    le llault-Rouan: le Hault-Rouan
+    Peuershultiy: Pettershuttly
+    Ycntron: Ventron
+    Vintbersée: Vinthersée
+    Druniout: Drumont
+    Newtlikn: Newelden
+  provostships:
+    Sainct-Diey: provostship-saint-die
+    Bruyères: provostship-bruyeres
+    Arches: provostship-arches
+
 # Places checked by hand against DicoTopo's matches (make dicotopo): the name or placement stands, and
 # the report no longer lists them ({place id: why}).
 dicotopo_reviewed:

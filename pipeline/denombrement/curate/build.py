@@ -567,8 +567,12 @@ def build() -> Built:
             seen.add(k)
             uniq.append(mrow)
     out.memberships = uniq
+    chaumes = rules.get("chaumes") or {}
     for f in read_jsonl(config.EXTRACTED_DIR / "features.jsonl"):
-        out.features.append({k: f.get(k, "") for k in ("id", "theme", "name", "place_id", "attrs", "source_page")})
+        row = {k: f.get(k, "") for k in ("id", "theme", "name", "place_id", "attrs", "source_page")}
+        if row["theme"] == "chaume":
+            row = read_chaume(row, chaumes.get("spellings") or {}, chaumes.get("provostships") or {})
+        out.features.append(row)
 
     out.report = _report(out, entries, matches, unmatched, district_seen, territories, key_map, corr_log,
                          unresolved_holders, rows)
@@ -715,6 +719,21 @@ def _rename(e: dict, name: str) -> None:
         whole = e["text"] == read and len(read.split()) == len(name.split())
         e["text"] = name + "." if whole else e["text"].replace(read, name, 1)
     e["name"] = name
+
+
+def read_chaume(row: dict, spellings: dict, provostships: dict) -> dict:
+    """rules.yaml `chaumes`: the names as printed where the scan misread them ({read: printed}),
+    and the division each "prévosté de …" heading names ({as printed: territory id})."""
+    attrs = []
+    for part in (row["attrs"] or "").split("; "):
+        key, _, value = part.partition("=")
+        if key == "also":
+            value = "|".join(spellings.get(v, v) for v in value.split("|"))
+        elif key == "provostship":
+            value = provostships.get(value, value)
+        attrs.append(f"{key}={value}")
+    name = spellings.get(row["name"], row["name"])
+    return {**row, "id": f"chaume-{slug(name)}", "name": name, "attrs": "; ".join(attrs)}
 
 
 def _fix_shares(out: Built) -> None:

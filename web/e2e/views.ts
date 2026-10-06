@@ -7,7 +7,7 @@ export const VIEWS = [
   "#/territories?lang=de&h=feudal&lvl=0",
   "#/holders?lang=en&entity=duchy-lorraine",
   "#/table?lang=fr&d=bailiwick-nancy",
-  "#/church?lang=de&layer=abbeys",
-  "#/church?lang=en&layer=chaumes",
+  "#/map?lang=de&layer=abbeys",
+  "#/map?lang=en&layer=chaumes",
   "#/about?lang=ja",
 ];

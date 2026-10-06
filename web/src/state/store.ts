@@ -1,12 +1,13 @@
 // Application state, mirrored in the URL hash so any view can be linked:
 //   #/map?lang=fr&place=saint-avold   (the Settlements tab; links with the old colour modes still open it)
-//   #/territories?h=feudal&lvl=1   #/territories?kind=provostship     #/holders?entity=abbey-saint-avold     #/church?layer=abbeys
+//   #/map?layer=abbeys (the Settlements tab showing a thematic list instead of the tenures; old #/church links open it)
+//   #/territories?h=feudal&lvl=1   #/territories?kind=provostship     #/holders?entity=abbey-saint-avold
 //   #/table?d=provostship-nancy&t=fief&q=chasteau
 import type { Lang } from "../data/types";
 import { LANGS } from "../i18n";
 
 /** In the header's order; Settlements (the map) is the default. */
-export const VIEWS = ["map", "territories", "holders", "table", "church", "about"] as const;
+export const VIEWS = ["map", "territories", "holders", "table", "about"] as const;
 export type View = (typeof VIEWS)[number];
 export const LAYERS = ["towns", "churches", "abbeys", "priories", "convents", "commanderies", "chaumes"] as const;
 export type Layer = (typeof LAYERS)[number];
@@ -35,7 +36,7 @@ export interface State {
   kind?: string;
   /** holders view */
   entity?: string;
-  /** church & resources view */
+  /** Settlements tab: a thematic list (towns, abbeys, chaumes…) instead of the tenures */
   layer?: Layer;
   filters?: TableFilters;
 }
@@ -54,6 +55,7 @@ export function parseHash(hash: string): State {
     const v = q.get(short);
     if (v) filters[key] = v;
   }
+  const church = path === "church";   // the former Church & resources tab, now in Settlements
   return {
     view: (VIEWS as readonly string[]).includes(path) ? (path as View) : DEFAULT_STATE.view,
     lang: LANGS.includes(lang) ? lang : browserLang(),
@@ -62,7 +64,7 @@ export function parseHash(hash: string): State {
     level: ["0", "1", "2", "3"].includes(q.get("lvl") ?? "") ? Number(q.get("lvl")) : undefined,
     kind: q.get("kind") || undefined,
     entity: q.get("entity") ?? undefined,
-    layer: (LAYERS as readonly string[]).includes(layer) ? layer : undefined,
+    layer: (LAYERS as readonly string[]).includes(layer) ? layer : church ? "abbeys" : undefined,
     filters: Object.keys(filters).length ? filters : undefined,
   };
 }
@@ -74,7 +76,7 @@ export function toHash(s: State): string {
   if (s.level !== undefined) q.set("lvl", String(s.level));
   if (s.kind) q.set("kind", s.kind);
   if (s.entity) q.set("entity", s.entity);
-  if (s.layer) q.set("layer", s.layer);
+  if (s.layer && s.view === "map") q.set("layer", s.layer);
   for (const [key, short] of FILTER_KEYS) {
     const v = s.filters?.[key];
     if (v) q.set(short, v);

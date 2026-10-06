@@ -13,7 +13,7 @@ import { renderLegend } from "./ui/legend";
 import { setMapFocus } from "./ui/navigate";
 import { renderTable } from "./ui/pages";
 import { childrenOf, renderPanel, shareLabel } from "./ui/panel";
-import { layerEntries, renderChurchView, renderHoldersView, renderTerritoriesView } from "./ui/sideViews";
+import { layerEntries, renderHoldersView, renderLayerView, renderTerritoriesView } from "./ui/sideViews";
 import { tooltipPosition } from "./ui/tooltip";
 
 const $ = (id: string) => document.getElementById(id)!;
@@ -98,10 +98,10 @@ async function start(): Promise<void> {
       const realms = [...data.places.values()].filter((p) => p.kind === "territory" && entity && p.holder?.includes(entity));
       return { styles, areas: { ids: realms.map((p) => p.id), feudal: true, interactive: false } };
     }
-    if (state.view === "church") {
+    if (state.view === "map" && state.layer) {
       const styles = new Map<string, PlaceStyle>();
       const colour = state.layer === "towns" ? SERIES[0] : SERIES[2];
-      for (const e of layerEntries(data, state.layer ?? "abbeys")) if (e.place) styles.set(e.place, { fill: colour });
+      for (const e of layerEntries(data, state.layer)) if (e.place) styles.set(e.place, { fill: colour });
       return { styles, areas: none };
     }
     return { styles: placeStyles(data), areas: none };
@@ -118,12 +118,15 @@ async function start(): Promise<void> {
     const { styles, areas } = mapLayers(state);
     const onMap = state.view !== "table" && state.view !== "about";
     const side = $("side"), page = $("page"), legend = $("legend");
-    legend.hidden = state.view !== "map";
-    if (state.view === "map") renderLegend(legend, data, state);
-    side.hidden = !["territories", "holders", "church"].includes(state.view);
+    // Settlements: the tenures with their legend, or one thematic layer with its list
+    const layer = state.view === "map" ? state.layer : undefined;
+    legend.hidden = state.view !== "map" || !!layer;
+    if (state.view === "map" && !layer) renderLegend(legend, data, state);
+    else fill(legend);
+    side.hidden = !(["territories", "holders"].includes(state.view) || layer);
     if (state.view === "territories") renderTerritoriesView(side, data, state, store);
     else if (state.view === "holders") renderHoldersView(side, data, state, store);
-    else if (state.view === "church") renderChurchView(side, data, state, store);
+    else if (layer) renderLayerView(side, data, state, store);
     else fill(side);
     page.hidden = onMap;
     if (state.view === "table") renderTable(page, data, state, store);

@@ -1,14 +1,14 @@
 // The side lists beside the map: Territories (one hierarchy, one level), Holders (everything one
-// holder holds) and Church & resources (a thematic list of the book, or the chaumes).
+// holder holds) and, in Settlements, a thematic list of the book or the chaumes.
 import type { Dataset, Entry, Place } from "../data/types";
 import { label, name, type StringKey, t } from "../i18n";
 import { GROUP_COLOUR } from "../model/colors";
 import { areas, currentLevel, GROUP_ORDER, KINDS, levelsOf, type RealmGroup, realmGroup, shownAreas } from "../model/territories";
-import { LAYERS, type Layer, type State, type Store } from "../state/store";
+import { type Layer, type State, type Store } from "../state/store";
 import { fill, h } from "./dom";
 import { openPlace, showOnMap } from "./navigate";
 
-/** The thematic lists each Church & resources layer shows. */
+/** The thematic lists each layer of the Settlements tab shows. */
 export const LAYER_SERIES: Record<Exclude<Layer, "chaumes">, string[]> = {
   towns: ["towns"],
   churches: ["cathedrals", "collegiates"],
@@ -110,7 +110,7 @@ export function renderHoldersView(root: HTMLElement, data: Dataset, state: State
   );
 }
 
-export function renderChurchView(root: HTMLElement, data: Dataset, state: State, store: Store): void {
+export function renderLayerView(root: HTMLElement, data: Dataset, state: State, store: Store): void {
   const { lang } = state;
   const layer = state.layer ?? "abbeys";
   const vocab = data.meta.vocab;
@@ -129,12 +129,16 @@ export function renderChurchView(root: HTMLElement, data: Dataset, state: State,
       const g = String(f.attrs?.provostship ?? "");
       groups.set(g, [...(groups.get(g) ?? []), f]);
     }
+    // other names ("en allemand Mensberg", "aliàs le Hault-Rouan"), one or several
+    const also = (f: (typeof data.features)[number]) => [f.attrs?.also ?? []].flat().map(String);
+    const gistes = (n: unknown) => n === undefined ? "" : ` · ${n} ${t(n === 1 ? "giste" : "gistes", lang)}`;
     body = [h("p", { class: "key" }, t("chaumesNote", lang)),
       ...[...groups].flatMap(([g, items]) => [
-        h("h3", {}, `${t("provostshipOf", lang)} ${g}`),
+        // the division the heading names ("Sous la prévosté de Sainct-Diey"), in the reader's language
+        h("h3", {}, data.places.has(g) ? placeName(g) : `${t("provostshipOf", lang)} ${g}`),
         h("ul", {}, ...items.map((f) => h("li", {}, h("strong", {}, f.name),
-          ` · ${f.attrs?.gistes} ${t("gistes", lang)}`,
-          Array.isArray(f.attrs?.also) ? h("span", { class: "muted" }, ` · ${(f.attrs!.also as string[]).join(", ")}`) : "",
+          also(f).length ? h("span", {}, ` (${also(f).join(", ")})`) : "",
+          gistes(f.attrs?.gistes),
           h("span", { class: "muted" }, ` · ${t("pages", lang)} ${f.page}`)))),
       ])];
   } else {
@@ -148,10 +152,7 @@ export function renderChurchView(root: HTMLElement, data: Dataset, state: State,
       h("ul", { class: "entries" }, ...items.map(entryRow))]);
   }
   fill(root,
-    h("h2", {}, t("view_church", lang)),
-    h("div", { class: "levels", role: "group", "aria-label": t("view_church", lang) },
-      ...LAYERS.map((l) => h("button", { "aria-pressed": String(l === layer), onclick: () => store.set({ layer: l }) },
-        t(`layer_${l}` as StringKey, lang)))),
+    h("h2", {}, t(`layer_${layer}` as StringKey, lang)),
     ...body,
   );
 }

@@ -50,6 +50,7 @@ header {
 header h1 { font-size: 16px; margin: 0; flex: 1 1 auto; }
 .views { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
 .langs { display: flex; gap: 2px; }
+.modes { display: flex; flex-wrap: wrap; gap: 4px; padding-top: 6px; border-top: 1px solid var(--hairline); }
 /* map stage */
 #stage { position: relative; min-height: 0; }
 #map { position: absolute; inset: 0; }
@@ -182,6 +183,8 @@ ol.changes li li { margin-bottom: 6px; }
   .views { flex: 1 1 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
   .views { flex-basis: 100%; flex-wrap: wrap; } /* six views: two rows, none hidden off screen */
   .views > * { flex: none; }
+  .modes { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }   /* one row that scrolls sideways */
+  .modes > * { flex: none; }
   #legend .note { display: none; }
   /* Nothing scrolls over the map on phones (an overlaying scroller left the WebGL map
      unpainted): the screen splits, map above, legend / list / place panel below. */

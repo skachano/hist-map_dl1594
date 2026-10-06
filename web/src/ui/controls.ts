@@ -1,7 +1,7 @@
-// Header: title, views, colour modes and language. There is no year bar: the book describes 1594.
+// Header: title, views, language, and on the Settlements tab what its map shows. There is no year bar: the book describes 1594.
 import type { Dataset, Lang } from "../data/types";
 import { LANGS, type StringKey, t } from "../i18n";
-import { type Store, VIEWS } from "../state/store";
+import { LAYERS, type Layer, type Store, VIEWS } from "../state/store";
 import { fill, h } from "./dom";
 
 /** Each language's name in itself, for the switch's accessible labels. */
@@ -21,5 +21,10 @@ export function renderHeader(root: HTMLElement, _data: Dataset, store: Store): v
         ...LANGS.map((l: Lang) => h("button", { "aria-pressed": String(l === lang), lang: l,
           "aria-label": LANG_NAMES[l], title: LANG_NAMES[l], onclick: () => store.set({ lang: l }) },
         l.toUpperCase())))),
+    // Settlements: the tenures (with the legend) or one thematic layer (with its list)
+    view === "map" ? h("div", { class: "modes", role: "group", "aria-label": t("settlementsShow", lang) },
+      ...([undefined, ...LAYERS] as (Layer | undefined)[]).map((l) => h("button", {
+        "aria-pressed": String(l === store.state.layer), onclick: () => store.set({ layer: l }) },
+      t(`layer_${l ?? "tenures"}` as StringKey, lang)))) : null,
   );
 }

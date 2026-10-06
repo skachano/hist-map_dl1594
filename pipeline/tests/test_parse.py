@@ -186,3 +186,12 @@ def test_chaumes():
     assert [r["name"] for r in rows] == ["Fonyer", "Ficherai"]
     assert rows[0]["attrs"] == "gistes=1; provostship=Arches; also=Schinnbsberg"
     assert "gistes=2" in rows[1]["attrs"] and "Champy" in rows[1]["attrs"]
+    # "La plaine du Hault-de-Chaulme, en allemand Hobeneck," has no count of its own
+    rows = features.parse_chaumes([
+        ("118", "Soub la prévosté d'Arches"),
+        ("118", "La plaine du Hault-de-Chaulme, en allemand Ho-"), ("118", "beneck,"),
+        ("118", "Schliechtli, quatre gistes."),
+    ])
+    assert [(r["name"], r["attrs"]) for r in rows] == [
+        ("La plaine du Hault-de-Chaulme", "provostship=Arches; also=Hobeneck"),
+        ("Schliechtli", "gistes=4; provostship=Arches")]

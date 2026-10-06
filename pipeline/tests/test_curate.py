@@ -171,3 +171,11 @@ def test_index_readings_fit_the_index():
     assert all(r["read"] != r["name"] for r in build.load_manual("index_seats"))
     for r in build.load_manual("index_headings"):
         assert r["read"] != r["name"] and r["source"] in {"scan", "modern name"}, r
+
+
+def test_read_chaume():
+    row = {"id": "chaume-grouiin", "theme": "chaume", "name": "Grouiin", "place_id": None,
+           "attrs": "gistes=3; provostship=Arches; also=Grand", "source_page": "118"}
+    out = build.read_chaume(row, {"Grouiin": "Groulin", "Grand": "Grawel"}, {"Arches": "provostship-arches"})
+    assert out["id"] == "chaume-groulin" and out["name"] == "Groulin"
+    assert out["attrs"] == "gistes=3; provostship=provostship-arches; also=Grawel"
