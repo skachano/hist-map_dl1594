@@ -44,6 +44,7 @@ territory_types:
   mayoralty:     {hierarchy: admin, en: mayoralty, fr: mairie, de: Meierei, ja: 村長区}
   val:           {hierarchy: admin, en: valley district, fr: val, de: Tal, ja: 谷区}
   town_district: {hierarchy: admin, en: town and its district, fr: ville, de: Stadt mit Bann, ja: 都市管区}
+  court:         {hierarchy: admin, en: court district, fr: cour, de: Hof (Hofgericht), ja: 裁判区}
   district:      {hierarchy: admin, en: district, fr: circonscription, de: Bezirk, ja: 管区}
   county:        {hierarchy: feudal, en: county, fr: comté, de: Grafschaft, ja: 伯領}
   marquisate:    {hierarchy: feudal, en: marquisate, fr: marquisat, de: Markgrafschaft, ja: 侯爵領}

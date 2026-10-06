@@ -33,6 +33,7 @@ from shapely.geometry import MultiPoint, Point, mapping, shape
 from shapely.ops import transform, unary_union
 
 from denombrement import config
+from denombrement.curate.build import load_rules
 from denombrement.data import store
 from denombrement.geo import wikidata
 from denombrement.geo.geocode import label_keys, name_key
@@ -43,7 +44,7 @@ NEUTRAL_MIN_KM = 1.5    # a Wikidata commune this close to a listed settlement i
 FOREIGN_LANDS = config.CURATED_DIR / "manual" / "foreign_lands.csv"
 # The Territories view's administrative levels, by kind of division.
 ADMIN_LEVELS = {"bailiwick": 1, "provostship": 2, "sub_provostship": 2, "castellany": 2, "office": 2, "district": 2,
-                "town_district": 2, "ban": 3, "mayoralty": 3, "val": 3}
+                "town_district": 2, "court": 3, "ban": 3, "mayoralty": 3, "val": 3}
 SIMPLIFY_M = 80         # geometry simplification tolerance
 PRECISION = 5           # decimal places in output coordinates (~1 m)
 CONFIDENCE_RANK = {"high": 0, "medium": 1, "low": 2}
@@ -53,15 +54,17 @@ _to_metric = Transformer.from_crs("EPSG:4326", "EPSG:3035", always_xy=True).tran
 _to_lonlat = Transformer.from_crs("EPSG:3035", "EPSG:4326", always_xy=True).transform
 
 
-def excluded_from_areas(geocoding_rows: list[dict]) -> set[str]:
+def excluded_from_areas(geocoding_rows: list[dict], keep: set[str] = frozenset()) -> set[str]:
     """Places whose point must not add land: placed at their commune, matched with low
     confidence, or far from their district's other members without the index's commune or canton
     to confirm the match (a fief can lie far from the prévôté it is listed under: Harchéchamp,
-    near Neufchâteau, in the prévôté of Nancy)."""
+    near Neufchâteau, in the prévôté of Nancy). `keep`: places a rules.yaml geocode rule gives land
+    all the same (`land: true`), alone at a commune the book doesn't name (Fliessborn at Vry)."""
     return {g["place_id"] for g in geocoding_rows
-            if g["method"] in ("approximate", "unlocated")
-            or g["confidence"] == "low"
-            or ("km from its district" in g["note"] and "near the index's" not in g["note"])}
+            if g["place_id"] not in keep and (
+                g["method"] in ("approximate", "unlocated")
+                or g["confidence"] == "low"
+                or ("km from its district" in g["note"] and "near the index's" not in g["note"]))}
 
 
 def foreign_zones() -> list[tuple[float, float, float, str | None]]:
@@ -139,7 +142,8 @@ def run() -> None:
     with (config.CURATED_DIR / "geocoding.csv").open(newline="") as f:
         rows = list(csv.DictReader(f))
     geocoding = {g["place_id"]: g for g in rows}
-    no_land = excluded_from_areas(rows)
+    rules = (load_rules().get("geocode") or {})
+    no_land = excluded_from_areas(rows, {pid for pid, r in rules.items() if r.get("land")})
     located = [p for p in places.values() if p.kind == "settlement" and p.lat is not None]
 
     # One cell per point; places at the same point (a hamlet placed at its commune) share it,

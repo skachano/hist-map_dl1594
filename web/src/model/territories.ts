@@ -63,7 +63,7 @@ export function typesIn(group: Exclude<RealmGroup, "other">): string[] {
 /** The "kind of realm" menu, as in hist_map: administrative divisions, then feudal titles by rank. */
 export const KINDS: { group: "administrative" | "feudal"; types: string[] }[] = [
   { group: "administrative", types: ["bailiwick", "provostship", "sub_provostship", "castellany", "office", "district",
-    "town_district", "ban", "mayoralty", "val"] },
+    "town_district", "court", "ban", "mayoralty", "val"] },
   { group: "feudal", types: ["county", "lordship", "fief", "temporality"] },
 ];
 

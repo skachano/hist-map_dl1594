@@ -4,7 +4,8 @@
 # (territory type keys), level (1 = bailliage, 2 = prévôté, 3 = ban/mairie), seat (when the heading
 # names none or the OCR garbles it), prose (a label, not a territory), section and descriptor (for
 # the entries that follow), pair (also record the other hierarchy, with `basis`), outside (the
-# lands outside the bailliages start here).
+# lands outside the bailliages start here), last (the last entry the heading covers: the entries
+# after it go back to the parent division).
 
 "Raon.":                    {types: [district], level: 3, seat: Raon-l'Étape}   # part of the prévôté of Saint-Dié et Raon
 "Bassigny.":                {prose: true}     # a group label inside the fiefs of Châtenois
@@ -27,7 +28,7 @@
 "Soub-piévoàlé":           {types: [sub_provostship], level: 3, seat: Sierck}
 "Landt-Schult":            {types: [landschultheisserei], level: 3, seat: Sierck}
 "Prévosté de Conchen":     {types: [provostship], level: 3, seat: Condé (Sierck)}
-"La Court de Perle":       {types: [district], level: 3, seat: Perl}
+"La Court de Perle":       {types: [court], level: 3, seat: Perl, last: 1289}   # "Oberperl, Niderperl et Syndorff" only (H. Hiegel); 1290 on are the prévôté of Sierck's
 "Prévosté du ban de Tantymont": {types: [provostship], level: 3, seat: Tantimont}
 "Prévosté de Keuern":      {types: [provostship, fief], level: 3, seat: Keltern-Ostern, pair: true, basis: heading}
 "Prévosté et sergenterie de Rum": {types: [provostship], level: 3, seat: Rimling}

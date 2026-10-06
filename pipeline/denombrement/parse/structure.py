@@ -170,14 +170,14 @@ _WORDS = [
     (r"\bsergenterie\b", "district", "admin", 3),
     (r"(^|\s)(le |les )?bans?\b", "ban", "admin", 3),
     (r"\bmairies?\b", "mayoralty", "admin", 3),
-    (r"^(la )?court de\b", "district", "admin", 3),
+    (r"^(la )?court de\b", "court", "admin", 3),
     (r"^(le )?val\b", "val", "admin", 3),
     (r"\bcomt[eé]\b", "county", "feudal", 2),
     (r"\bbaronn?ie\b", "barony", "feudal", 2),
     (r"\bseigneur[i1]es?\b|^(la |les )?terres?\b|\bterres? et\b", "lordship", "feudal", 2),
 ]
 _ADMIN_RANK = ["bailiwick", "provostship", "office", "castellany", "town_district", "receivership", "val",
-               "district", "ban", "mayoralty", "sub_provostship", "landschultheisserei"]
+               "district", "court", "ban", "mayoralty", "sub_provostship", "landschultheisserei"]
 _FEUDAL_RANK = ["county", "barony", "lordship", "fief", "temporality"]
 
 
@@ -193,6 +193,7 @@ class HeadingInfo:
     section: str | None = None
     descriptor: str | None = None
     override: bool = False
+    last: int | None = None      # the last entry the heading covers; the next go back to its parent
 
 
 def _letters(text: str) -> str:
@@ -227,7 +228,7 @@ def classify(text: str, comma_ok: bool = False) -> HeadingInfo | None:
         return HeadingInfo(types=ov.get("types", []), level=ov.get("level", 2), seat=ov.get("seat", _seat(text, 0)),
                            pair=ov.get("pair", False), basis=ov.get("basis", ""), prose=ov.get("prose", False),
                            outside=ov.get("outside", False), section=ov.get("section"),
-                           descriptor=ov.get("descriptor"), override=True)
+                           descriptor=ov.get("descriptor"), override=True, last=ov.get("last"))
     f = fold(_GLUED.sub(r"\1 \2", text))
     # A heading ends with a full stop or colon and has no verb; list items end with commas.
     if len(f) > 160 or (text.rstrip().endswith(",") and not comma_ok) or re.search(
@@ -460,6 +461,7 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
     collecting: str | None = None        # "listed" or a division key, while a list sentence goes on
     outside = False
     realm_before: Territory | None = None  # the realm an abbey's lands interrupt
+    ends: dict[str, int] = {}            # division key -> the last entry its heading covers (headings.yaml `last`)
 
     def add(t: Territory) -> Territory:
         if t.key in out.territories:      # "Ban d'Uxegney, comme dessus": the same territory again
@@ -497,6 +499,10 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
             if b.cost >= 1.0:
                 e.flags.append(f"number read from '{b.token}'")
             out.entries.append(e)
+            if admin[-1].key in ends and b.number == ends[admin[-1].key]:
+                # "La Court de Perle, sçavoir : Oberperl, Niderperl et Syndorff": the list that follows
+                # is the prévôté's again.
+                admin = admin[:-1]
             m = re.search(r"abba\S*\s+(?:dudict |de |d')\s*(?P<x>[^,]+),.*de laquelle d[eé]pendent les villages", text)
             if series == "main" and m:
                 # "L'abbaye dudict Sainct-Avol, …, de laquelle dépendent les villages cy-après":
@@ -621,6 +627,9 @@ def parse(lines: list[tuple[str, str, str]], gazetteer: Gazetteer | None = None)
         if d_flag:
             d.flags.append(d_flag)
         admin = [t for t in admin if t.level < level] + [d]
+        if info.last:
+            ends[d.key] = info.last
+            d.notes.append(f"its heading covers entries up to {info.last} (headings.yaml)")
         if level <= 2:
             section = None
             realm = None

@@ -15,6 +15,7 @@ def test_excluded_from_areas():
     ]
     # c: far from its district, but the index's canton confirms it (a fief listed under a distant prévôté)
     assert t.excluded_from_areas(rows) == {"b", "d", "e"}
+    assert t.excluded_from_areas(rows, keep={"b"}) == {"d", "e"}     # a rule's land: true
 
 
 def test_a_neutral_seed_makes_a_hole():

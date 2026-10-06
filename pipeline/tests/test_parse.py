@@ -130,6 +130,31 @@ def test_parse_a_passage():
     assert t["district-forbach"].parent == "bailiwick-nancy"
 
 
+def test_a_heading_can_end_before_the_next(monkeypatch):
+    """headings.yaml `last`: "La Court de Perle, sçavoir : Oberperl, Niderperl et Syndorff" covers
+    three entries (1287-1289); the ones after belong to the prévôté of Sierck again (H. Hiegel)."""
+    monkeypatch.setitem(structure.OVERRIDES, "La Court de Perle",
+                        {"types": ["court"], "level": 3, "seat": "Perl", "last": 3})
+    g = structure.Gazetteer(Path("/nonexistent"))
+    lines = _lines(
+        "Bailliage d'Allemagne.",
+        "Pour la prévosté et soub-prévosté de Sierck.",
+        "Clergé.",
+        "La Court de Perle, sçavoir :",
+        "1. Oberperl.",
+        "2. Niderperl et",
+        "3. Syndorff.",
+        "4. Altorff.",
+        "Fiedvez.",
+        "5. Freistorff.",
+    )
+    r = structure.parse(lines, g)
+    e = {x.no: x for x in r.entries}
+    assert [e[n].district for n in (1, 2, 3)] == ["court-perl"] * 3
+    assert [e[n].district for n in (4, 5)] == ["provostship-sierck"] * 2
+    assert r.territories["court-perl"].parent == "provostship-sierck"
+
+
 def test_chaumes():
     rows = features.parse_chaumes([
         ("118", "Soub la prévosté d'Arches"),
