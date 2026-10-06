@@ -1338,7 +1338,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1338,Brcttingen.,Brcttingen,,provostship-sierck,,fief,,,,main,,bettingen,82,low,index match by name (0.95)
 1339,Eymerstorlï.,Eymerstorlï,,provostship-sierck,,fief,,,,main,,eimersdorf,82,high,
 1340,Lugsingen.,Lugsingen,,provostship-sierck,,fief,,,,main,,ising,82,high,
-1341,Pomern.,Pomern,,provostship-sierck,,fief,,,,main,,pomern,82,medium,index match by confused number (1.00)
+1341,Pomern.,Pomern,,provostship-sierck,,fief,,,,main,,pommern,82,medium,index match by confused number (1.00)
 1342,Ryol.,Ryol,,provostship-sierck,,fief,,,,main,,riol,82,high,
 1343,Rodingcn.,Rodingcn,,provostship-sierck,,fief,,,,main,,rudling,82,medium,index match by confused number (0.95)
 1344,Wiss.,Wiss,,provostship-sierck,,fief,,,,main,,wies,82,medium,index match by confused number (0.75)
@@ -2200,7 +2200,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2200,Ntdergailbach.,Ntdergailbach,,mayoralty-hilsperg,lordship-bitche,domain,,,,main,,niedergailbach,112,high,
 2201,"Siurzelborn, abbaye de l'ordre de Cisteaux, fondationet donation de Messeijrneurs les ducs de Lorraine, seigneurs de Biche.",Siurzelborn,abbey,mayoralty-hilsperg,lordship-bitche,clergy,,,,main,cistercian,sturzelbronn,112,high,
 2202,"Lcmberg, chasteau, pour la moiclic fied de Lorraine et de Trêves, pour l'autre moietié tenu par le comte de Hanaw,duquelchasteau despendent les villages cy-après, qui néantmoins ne meuvent en fied du duché de Lorraine :",Lcmberg,castle|village,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,lemberg-pirmasens,112,high,
-2203,Eyningcn.,Eyningcn,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,eymngcn,112,high,
+2203,Eyningcn.,Eyningcn,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,vinningen,112,high,
 2204,Ridelburg.,Ridelburg,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,riedelberg,112,high,
 2205,Welzelm.,Welzelm,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,winzeln,112,high,
 2206,Gcrsspach.,Gcrsspach,,mayoralty-hilsperg,lordship-bitche,fief,,,,main,,gersbach,112,high,
@@ -2333,7 +2333,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2333,Valdcrfanges.,Valdcrfanges,,,,,,,,towns,,vvallerfangen,129,medium,index match by index number (1.00)
 2334,"Mertzig, marché.",Mertzig,market,,,,,,,towns,,merzig,129,high,
 2335,"Bouzonvillc, foires.",Bouzonvillc,,,,,,,,towns,,bouzonville,129,medium,index match by name (1.00)
-2336,Bcaurains.,Bcaurains,,,,,,,,towns,,bcaurains,129,low,index match by none (0.00)
+2336,Bcaurains.,Bcaurains,,,,,,,,towns,,berus,129,high,
 2337,Guemunde.,Guemunde,,,,,,,,towns,,sarreguemines,129,high,
 2338,Dicuie.,Dicuie,,,,,,,,towns,,dieuze,129,medium,index match by confused number (0.83)
 2339,"Vargaville, foire».",Vargaville,,,,,,,,towns,,vergaville,129,high,

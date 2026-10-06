@@ -77,50 +77,18 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Rombach (Le) [Cense, Valtin, canton Fraize, 88] via *Rombach (Le)*, 0.72, 23 km
   2. Rammbach [Ferme, Fraquelfing, canton Lorquin, 54] via *Rammbach*, 0.72, 45 km
   3. Robache [Hameau, Saint-Dié-des-Vosges, canton Saint-Dié-des-Vosges (NP), 88] via *Roibach*, 0.69, 20 km
-- bcaurains: Bcaurains
-  1. Belrain [canton Pierrefitte-sur-Aire, 55] via *Beaurain (1756)*, 0.91, ?
-  2. Bure [Hameau, Tressange, canton Fontoy, 57] via *Beuren (1626)*, 0.74, ?
-  3. Beyren [Beyren-lès-Sierck, canton Cattenom, 57] via *Beuren (1756)*, 0.74, ?
-- buz: Buz
-  1. Beu (Au) [Écart, Saulxures-sur-Moselotte, canton Saulxures-sur-Moselotte, 88] via *Beu (Au)*, 0.58, 6 km
-  2. Bult [canton Rambervillers, 88] via *Bui*, 0.58, 46 km
-  3. Beau (Au) [Écart, Tholy, canton Remiremont, 88] via *Bau (1887)*, 0.55, 21 km
 - capucins-de-nancy: Capucins de Nancy
   1. Nancy [Ville, canton Nancy (NP), 54] via *Nancy*, 0.80, ?
   2. Mancy [Hameau, Bettelainville, canton Metzervisse, 57] via *Mancy*, 0.74, ?
   3. Capucins (Les) [Ancienne chapelle, Dieuze, canton Dieuze, 54] via *Capucins (Les)*, 0.72, ?
-- dittclingen: Dittclingen
-  1. Dittelingen [57] via *Dittelingen*, 0.91, ?
-  2. Dieding [Zetting, canton Sarreguemines-Campagne, 57] via *Didingen (1393)*, 0.83, 17 km
-  3. Hœlling [Hameau, Bettviller, canton Rohrbach-lès-Bitche, 57] via *Hildingen (1280)*, 0.78, 26 km
-- et-ch: Et/ch
-  1. Alch [Hameau, Téterchen, canton Boulay-Moselle, 57] via *Alch*, 0.70, 64 km
-  2. Alsch ou Alch [Ferme, Téterchen, canton Boulay-Moselle, 57] via *Alch*, 0.70, 64 km
-  3. Eich [Hameau, Sarralbe, canton Sarralbe, 57] via *Eich*, 0.68, 36 km
-- eymngcn: Eymngcn
-  1. Bining-lez-Rohrbach [Bining, canton Rohrbach-lès-Bitche, 57] via *Binningen (1681)*, 0.75, 21 km
-  2. Léning [Canton d’Albestroff, canton Albestroff, 54] via *Leyningen (1594)*, 0.71, 51 km
-  3. Lymingen [Localité incertaine de l’office de Boulay, 57] via *Lymingen*, 0.66, ?
 - eynothaws: Eynothaws
-  1. Erlenhoff [Ferme, Grostenquin, canton Grostenquin, 57] via *Ellnerhoff*, 0.59, 55 km
-  2. Endenthal [Hameau, Dabo, canton Phalsbourg, 54] via *Enthal (1790)*, 0.59, 59 km
+  1. Endenthal [Hameau, Dabo, canton Phalsbourg, 54] via *Enthal (1790)*, 0.58, 61 km
+  2. Erlenhoff [Ferme, Grostenquin, canton Grostenquin, 57] via *Ellnerhoff*, 0.58, 61 km
   3. Moder (Ruisseau de) [57] via *Mother*, 0.53, ?
-- fliessborn: Fliessborn
-  1. Tromborn [canton Bouzonville, 57] via *Truisborn*, 0.67, 17 km
-  2. Chambéry ou Gand [Ferme ou cense, Hettange-Grande, canton Cattenom, 57] via *Chamborn*, 0.66, 21 km
-  3. Hestroff [canton Bouzonville, 57] via *Heistorffz (1553)*, 0.64, 12 km
 - hamanges: Hamanges
   1. Hémilly [canton Faulquemont, 57] via *Homlange (1756)*, 0.81, 9 km
   2. Insming [Canton d’Albestroff, canton Albestroff, 54] via *Amange (1525)*, 0.79, 34 km
   3. Hinckange [canton Boulay-Moselle, 57] via *Hancange (1307)*, 0.79, 23 km
-- hasenholh: Hasenholh
-  1. Hackenberg ou Hackemberg [Église et presbytère, Budling, canton Metzervisse, 57] via *Hackenberich (1735)*, 0.62, 7 km
-  2. Host-Haut [Hoste, canton Freyming-Merlebach, 57] via *Host-Haut*, 0.60, 47 km
-  3. Wosenhoff [Ferme, Thionville, canton Thionville (NP), 57] via *Wosenhoff*, 0.59, 21 km
-- hymerstroff: Hymerstroff
-  1. Lemestroff [Hameau, Oudrenne, canton Metzervisse, 57] via *Lemerstroff*, 0.85, 7 km
-  2. Momerstroff [canton Boulay-Moselle, 57] via *Memerstroff (1563)*, 0.81, 26 km
-  3. Hestroff [canton Bouzonville, 57] via *Herstroff (1429)*, 0.77, 13 km
 - ihimbery: Ihimbery
   1. Woimbey [canton Pierrefitte-sur-Aire, 55] via *Imberes (1047)*, 0.65, 26 km
   2. Chambéry ou Gand [Ferme ou cense, Hettange-Grande, canton Cattenom, 57] via *Chambéry*, 0.64, 55 km
@@ -146,21 +114,13 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Malancourt [Hameau, Montois-la-Montagne, canton Marange-Silvange, 57] via *Malancourt*, 0.67, 31 km
   3. Nettancourt [canton Revigny-sur-Ornain, 55] via *Nettancourt*, 0.66, 65 km
 - neuulhann: Neuulhann
-  1. Neulan [Ancienne église, Sponville, canton Chambley-Bussières, 57] via *Neulan*, 0.62, 118 km
-  2. Neunkirch [Ferme, Hottviller, canton Volmunster, 57] via *Neukirchen (1756)*, 0.61, 12 km
-  3. Neufgrange [canton Sarreguemines-Campagne, 57] via *Neucher (1750)*, 0.61, 29 km
+  1. Neulan [Ancienne église, Sponville, canton Chambley-Bussières, 57] via *Neulan*, 0.61, 124 km
+  2. Neunkirch [Ferme, Hottviller, canton Volmunster, 57] via *Neukirchen (1756)*, 0.60, 16 km
+  3. Neufgrange [canton Sarreguemines-Campagne, 57] via *Neucher (1750)*, 0.59, 35 km
 - platenges: Platenges
   1. Blettange [Hameau, Bousse, canton Metzervisse, 57] via *Bletenge*, 0.74, 43 km
   2. Talange [1er canton de Metz, canton Maizières-lès-Metz, 57] via *Tallenges (1599)*, 0.71, 38 km
   3. Pétrange [Château et ferme, Hinckange, canton Boulay-Moselle, 57] via *Pietrenges (1361)*, 0.71, 52 km
-- pomern: Pomern
-  1. Pommérieux [canton Verny, 57] via *Pomerue*, 0.72, 45 km
-  2. Montbronn [canton Rohrbach-lès-Bitche, 57] via *Momern*, 0.68, 76 km
-  3. Manom [canton Yutz, 57] via *Monem (1681)*, 0.68, 19 km
-- ransctiborn: Ransctiborn
-  1. Boucheporn [canton Boulay-Moselle, 57] via *Banschborn (1594)*, 0.61, 60 km
-  2. Neufgrange [canton Sarreguemines-Campagne, 57] via *Neu-Scheuern (1600)*, 0.54, 29 km
-  3. Roussy-le-Bourg [Roussy-le-Village, canton Cattenom, 57] via *Roussy-le-Bourg*, 0.49, 98 km
 - rantse-iidt: Rantse/iidt
   1. Renessel [Moulin, Hennemont, canton Fresnes-en-Woëvre, 55] via *Renessel*, 0.43, 116 km
   2. Mentseille [Écart, Fléville-Lixières, canton Conflans-en-Jarnisy, 54] via *Mentseille*, 0.42, 102 km
@@ -197,14 +157,6 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   1. Ban-Saint-Pierre [Ban particulier dans lequel étaient compris, Abaucourt, canton Nomeny, 54] via *Ban-Saint-Pierre*, 0.85, 35 km
   2. Ban-Saint-Pierre [Église, Villers-Stoncourt, canton Pange, 57] via *Ban-Saint-Pierre*, 0.83, 47 km
   3. Pierre ou Pierre-la-Treiche [Pierre-la-Treiche, canton Toul-Sud, 54] via *Pierre*, 0.77, 39 km
-- sleysspaeh: Sleysspaeh
-  1. Labsbach ou Laspach [Hameau, Dabo, canton Phalsbourg, 54] via *Laspach*, 0.51, 97 km
-  2. Aspach [canton Lorquin, 54] via *Aispach (1586)*, 0.50, 98 km
-  3. Klein-Laspach [Ferme, Dabo, canton Phalsbourg, 54] via *Klein-Laspach*, 0.47, 97 km
-- stanuemiein: Stanuemiein
-  1. Petit-Tenquin [canton Grostenquin, 57] via *Tanneyum (1544)*, 0.51, 46 km
-  2. Fraquelfing [canton Lorquin, 54] via *Franquelfin (1719)*, 0.50, 67 km
-  3. Laning [canton Grostenquin, 57] via *Landingen (1594)*, 0.50, 51 km
 - sun-de-laistrc: Sun de Laistrc
   1. Jeandelize [canton Conflans-en-Jarnisy, 57] via *Landelise (1642)*, 0.57, 21 km
   2. Moulin-Lâtre [Moulin, Frizon, canton Châtel-sur-Moselle, 88] via *Moulin de Laistre (1574)*, 0.54, 87 km
@@ -214,9 +166,9 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Villette [canton Longuyon, 57] via *Villette*, 0.80, ?
   3. Villotte [canton Lamarche, 88] via *Villete (1317)*, 0.80, ?
 - weuftrhaus: WeUftrhaus
-  1. Boustroff [canton Grostenquin, 57] via *Boustro*, 0.54, 62 km
-  2. Vitrey [canton Vézelise, 54] via *Weutrei (1408)*, 0.37, 127 km
-  3. Sous-le-Lieu [Écart, Cornimont, canton Saulxures-sur-Moselotte, 88] via *Sous-le-Lieu*, 0.34, 140 km
+  1. Boustroff [canton Grostenquin, 57] via *Boustro*, 0.53, 68 km
+  2. Vitrey [canton Vézelise, 54] via *Weutrei (1408)*, 0.36, 132 km
+  3. Sous-le-Lieu [Écart, Cornimont, canton Saulxures-sur-Moselotte, 88] via *Sous-le-Lieu*, 0.34, 142 km
 
 ## Settlements at their commune: DicoTopo's name (0)
 

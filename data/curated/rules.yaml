@@ -147,6 +147,7 @@ index_lines:
   "257|Vilcey-sur-Trey": "Vilcey-sur-Trey, canton de Thiaucourt (Meurthe), 534."
   "261|Xoarupl": "Xoarupt, ham., com. de Ferdrupt, 763."
   "245|Rupt": "Rupt, canton de Ramonchamp, 751, 838."   # 838 read "ë3S"
+  "189|Berus": "Berus, canton de Saarlouis (Pr.), 1672, 2336."   # 2336 (the list of towns, "Bcaurains") read 2356, which is Marsal
   "216|Hellimer": "Hellimer, canton de Grostenquin, 1633, 46."   # the scan reads 1633 as 1653 (Honzrath's, p. 218)
   "218|Hobslelen ou Gbsteten": "Hobsteten ou Obsteten, vil., mairie, 3 lieues au nord-est de Schambourg; enclavé dans les terres étrangères (D., t. III, p. 512), 1557."
   "189|Secitteldingcn": "Bechteldingen, de l'office de Schambourg, 1496."   # its footnote call read as "1"
@@ -367,6 +368,15 @@ geocode:
   gross-hemmersdorf: {lat: 49.35502, lon: 6.61399, name_fr: "Grosshemmersdorf", name_de: "Großhemmersdorf", country: DE, note: "Großhemmersdorf (GeoNames 2906537), left of the Nied: Hymestroff, offices of Sierck and Boulay (H. Hiegel, in hist_map)"}
   kerperieh-ilemmersdorf: {lat: 49.35349, lon: 6.62768, name_fr: "Kerprich-Hemmersdorf", country: DE, note: "Kerprich-Hemmersdorf, right of the Nied, office of Siersberg (hist_map); the item Q1604852 both share is not taken by Großhemmersdorf"}
   fliessborn: {"at": "Vry", "land": true, "note": "Fliessborn, of the prévôté of Sierck: placed at Vry, the commune H. Hiegel's index gives (Fliessborn (M., Vry), p. 13; in hist_map)"}
+  # H. Hiegel's identifications, as hist_map has them (the bailliage d'Allemagne)
+  dittclingen: {"at": "Bousbach", "name_fr": "Dittelingen", "note": "Dittelingen, a lost village of the county of Forbach: Hiegel's index puts it at Bousbach (Dittelingen (M., Bousbach), p. 17; hist_map)"}
+  et-ch: {lat: 49.2633, lon: 7.58306, name_fr: "Eich", country: DE, note: "Eich, of the lordship of Lemberg: Thaleischweiler and Höheischweiler in Hiegel's index (p. 18); placed at Thaleischweiler, as in hist_map"}
+  eymngcn: {wikidata: Q568205, note: "Vinningen: Eyningen in Hiegel (lordship of Lemberg; hist_map)"}
+  ransctiborn: {"at": "Eppenbrunn", "name_fr": "Ranschborn", "note": "Ranschborn, a gagnage: Hiegel's index puts it at Eppenbrunn (Ranschborn (R., Eppenbrunn), pp. 18, 104; hist_map)"}
+  stanuemiein: {"at": "Vinningen", "name_fr": "Stanwenstein", "note": "Stanwenstein (Staustein), a gagnage: Hiegel's index puts it at Vinningen (pp. 18, 104, 106; hist_map)"}
+  hasenholh: {"at": "Bettelainville", "name_fr": "Hasenholtz", "note": "Hasenholtz, of the office of Sierck: Hiegel's index puts it at Bettelainville (Hasenholtz (M., Bettelainville), pp. 13, 270; hist_map)"}
+  sleysspaeh: {"at": "Oberkirchen", "name_fr": "Bliesbach", "note": "Bliesbach (Blieshach), of the prévôté of Keltern-Ostern: Hiegel's index puts it at Oberkirchen (pp. 15, 57; hist_map)"}
+  pomern: {lat: 50.17111, lon: 7.27389, name_fr: "Pommern", name_de: "Pommern", country: DE, note: "Pommern on the Moselle, by Cochem: Pommern (R., Kochem) in Hiegel's index (p. 50; hist_map, Q665867)"}
   # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
   # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
   liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}
@@ -447,7 +457,6 @@ geocode:
   les-champs-de-laxci: {"at": "Champdray", "note": "a hamlet of Champdray (the index); not Champ-le-Duc"}
   villing: {"at": "Denting", "note": "a farm of Denting (the index); not the village of Villing"}
   villers-le-prud-homme: {"at": "Ville-au-Val", "note": "an écart and chapel of Ville-au-Val (the index)"}
-  dittclingen: {"unlocated": true, "note": "a destroyed village of the county of Forbach, 'emplacement inconnu' (the index)"}
   villard: {"at": "Circourt", "name_fr": "Villars", "note": "a hamlet of Circourt (the index), the Circourt near its district; Villars (DicoTopo: Villard (1845))"}
   saint-jean-pierrefort: {"at": "Martincourt", "note": "a hamlet of Martincourt (the index), the one near its district"}
   breehaincouri: {"at": "Circourt-sur-Mouzon", "name_fr": "Bréchaincourt", "note": "Bréchaincourt, a hamlet of Circourt-sur-Mouzon (DicoTopo); the index's Gircourt is Circourt, entry 1194 two before it"}

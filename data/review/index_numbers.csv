@@ -25,7 +25,6 @@ no entry,189,Bellefontaine,712,,,,,1.00,,"709-715: the ban of Bellefontaine, who
 no entry,189,Bellefontaine,713,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
 no entry,189,Bellefontaine,714,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
 no entry,189,Bellefontaine,715,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
-no entry,189,Berus,2356,,,,,1.00,berus,"printed 2356: Harsal, which is Marsal (towns)"
 no entry,190,Bethiiigcn,1358,,,,,1.00,,Brechlingen (1358) is Brecklange
 no entry,190,Bettlainville,1534,,,,,1.00,,printed 1534: Henselhofen (corrections)
 no entry,192,Bonfays,2412,,,,,1.00,bonfays-legeville-et-bonfays,2412 is the Dominican nuns of Nancy
@@ -351,7 +350,7 @@ corrected,184,Alz.ing,,,1335,Ansclnigen,81,0.38,alzing,number not printed in the
 corrected,201,Diding,56,,1336,Dudingen,82,0.95,diding,
 corrected,221,Kirf,1557,,1337,Kirff,82,0.89,kirf,
 corrected,190,Bettingen,,,1338,Brcttingen,82,0.95,bettingen,number not printed in the index
-corrected,239,Pomern,1311,,1341,Pomern,82,1.00,pomern,
+corrected,239,Pomern,1311,,1341,Pomern,82,1.00,pommern,
 corrected,245,Hiol,,,1342,Ryol,82,0.50,riol,number not printed in the index
 corrected,244,Rudling,1543,,1343,Rodingcn,82,0.95,rudling,
 corrected,261,Wies,1544,,1344,Wiss,82,0.75,wies,
@@ -407,7 +406,6 @@ corrected,184,Altrippc,1659,,1639,Altrippen,92,0.94,altrippe,
 corrected,240,Racrange,,,1649,Reckranges,92,0.95,racrange,number not printed in the index
 corrected,201,Diffembach-lès-Puttclange,,,1652,DiefTembach,92,0.86,diefenbach-les-puttelange,number not printed in the index
 corrected,213,Guebcnbausen,1665,,1663,Gebenhausscn,93,0.83,guebcnbausen,
-corrected,189,Berus,,,1672,La ville de Bcaurains,93,0.38,berus,number not printed in the index
 corrected,183,Achain,,,1705,Eschen,94,0.95,achain,number not printed in the index
 corrected,205,Etzcling,1752,,1732,Etzlingen,95,0.82,etzling,
 corrected,201,Dittclingen,1753,,1733,Dutlingen,95,0.95,dittclingen,
@@ -562,6 +560,7 @@ spelling differs,235,Oberkirchen* (anciennement Catharin-Ostern),1511,,1511,Kelt
 spelling differs,235,Oberkirchen* (anciennement Catharin-Ostern),46,,1546,Kctternostern,89,0.48,oberkirchen,
 spelling differs,190,Bideslroft,1621,,1621,BuderetortT,91,0.48,bidestroff,
 spelling differs,184,Altroff,1645,,1645,Alstorff-lez-Leyningcn,92,0.44,altroff,
+spelling differs,189,Berus,1672,,1672,La ville de Bcaurains,93,0.38,berus,
 spelling differs,219,Ihn (Lognon),1679,,1679,Inné,93,0.46,ihn,
 spelling differs,196,Château-Rouge,1691,,1691,Rodendorff,93,0.27,chateau-rouge,
 spelling differs,254,Vahl-lès-Faulquemont,1718,,1718,Wallen,94,0.42,vahl-les-faulquemont,
@@ -2342,7 +2341,7 @@ agrees,235,Obergailbach,2199,,2199,Obergailbach,112,1.00,obergailbach,
 agrees,234,Nicdcrgailbach,2200,,2200,Ntdergailbach,112,0.89,niedergailbach,
 agrees,249,Sturzelbronn,2201,,2201,Siurzelborn,112,0.78,sturzelbronn,
 agrees,224,Lemberg,2202,,2202,Lcmberg,112,1.00,lemberg-pirmasens,
-agrees,206,Eymngcn,2203,,2203,Eyningcn,112,0.80,eymngcn,
+agrees,206,Eymngcn,2203,,2203,Eyningcn,112,0.80,vinningen,
 agrees,243,Riedelberg,2204,,2204,Ridelburg,112,0.84,riedelberg,
 agrees,261,Winzeln,2205,,2205,Welzelm,112,0.95,winzeln,
 agrees,211,Gersbach,2206,,2206,Gcrsspach,112,0.82,gersbach,
@@ -2437,6 +2436,7 @@ agrees,216,Hattonchâtcl,2329,,2329,Hatonchastcl,128,0.92,hattonchatel,
 agrees,244,Rouvrois-sur-Mcuse,2330,,2330,Rouveroy,128,0.75,rouvrois-sur-meuse,
 agrees,247,Sierck,2331,,2331,Sirques,129,0.62,sierck,
 agrees,230,Merzig,2334,,2334,Mertzig,129,0.92,merzig,
+agrees,189,Berus,2336,,2336,Bcaurains,129,0.57,berus,
 agrees,246,Sarreguemines,2337,,2337,Guemunde,129,0.95,sarreguemines,
 agrees,256,Vergaville,2339,,2339,Vargaville,129,0.90,vergaville,
 agrees,240,Pultelange-lès-Sarralbe,2341,,2341,Puttelanges,129,0.95,pultelange-les-sarralbe,
