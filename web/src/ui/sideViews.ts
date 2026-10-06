@@ -152,7 +152,10 @@ export function renderLayerView(root: HTMLElement, data: Dataset, state: State, 
         // with its total and the shade it has on the map
         h("h3", { class: "total" },
           h("span", { class: "swatch", style: `--c:${totals.get(g)?.colour}`, "aria-hidden": "true" }),
-          data.places.has(g) ? placeName(g) : `${t("provostshipOf", lang)} ${g}`,
+          // a link to the provostship, as elsewhere: the Territories view, fitted to its area
+          data.places.has(g)
+            ? h("button", { class: "link", "data-place": g, onclick: () => openPlace(store, data, g) }, placeName(g))
+            : `${t("provostshipOf", lang)} ${g}`,
           h("span", { class: "muted" }, ` · ${t("totalGistes", lang)} ${totals.get(g)?.gistes ?? 0}`)),
         h("ul", {}, ...items.map((f) => h("li", {}, h("strong", {}, f.name),
           also(f).length ? h("span", {}, ` (${also(f).join(", ")})`) : "",

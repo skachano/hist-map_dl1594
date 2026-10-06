@@ -153,6 +153,11 @@ test("settlements: the tenures or a thematic list on the map, chaumes listed", a
   // each provostship with its total, the shade the map gives it
   await expect(side.locator("h3.total").filter({ hasText: "Arches" })).toContainText("gîtes in all: 32");
   await expect(page.locator(".terr-label")).toHaveText(["1 gîte", "5 gîtes", "32 gîtes"], { useInnerText: true });
+  // the provostship heading is a link: the Territories view, with its panel
+  await side.locator("h3.total").filter({ hasText: "Arches" }).getByRole("button", { name: "Provostship of Arches" }).click();
+  await expect(page).toHaveURL(/#\/territories\?.*place=provostship-arches/);
+  await expect(page.locator("#panel h2")).toHaveText("Provostship of Arches");
+  await open(page, "#/map?lang=en&layer=chaumes");
   await modes.getByRole("button", { name: "Abbeys" }).click();
   await side.locator("ul.entries li button").first().click();
   await expect(page).toHaveURL(/#\/map\?.*place=/);
