@@ -90,10 +90,18 @@ def _find(rows: list[IndexRow], article: str, page: str) -> IndexRow | None:
     if not article:
         return None
     key = _letters(article)
-    live = [r for r in rows if not r.deleted and r.page in pages_near(page)]
-    names = {_bare(r.entry.name): r for r in live}
-    hit = difflib.get_close_matches(key, list(names), n=1, cutoff=0.7)
-    return names[hit[0]] if hit else None
+    # the cited page before its neighbours, and each name of a line that has two ("Einweiller et
+    # Enweiller"): correction 25's Eimceillcr is p. 204's Einu'ciller, not p. 205's Eschwillcr
+    for pages in ({page}, pages_near(page)):
+        names = {}
+        for r in rows:
+            if not r.deleted and r.page in pages:
+                for part in [r.entry.name, *re.split(r"\s+(?:et|cl)\s+", r.entry.name)]:
+                    names.setdefault(_bare(part), r)
+        hit = difflib.get_close_matches(key, list(names), n=1, cutoff=0.7)
+        if hit:
+            return names[hit[0]]
+    return None
 
 
 def apply(rows: list[IndexRow], old_forms: list[dict]) -> list[str]:

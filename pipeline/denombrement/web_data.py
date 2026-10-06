@@ -27,7 +27,7 @@ from denombrement.data import store, validate
 from denombrement.data.models import entry_number
 
 OUT_DIR = config.WEB_DATA_DIR
-SIZE_BUDGET = 2_000_000
+SIZE_BUDGET = 3_000_000
 TENURE_ORDER = ["domain", "fief", "clergy", "safeguard"]
 SOURCE = ("Thierry Alix, Dénombrement du duché de Lorraine (1594), éd. H. L. et A. de B., "
           "Recueil de documents sur l'histoire de Lorraine, Nancy, 1870")
@@ -202,7 +202,7 @@ def build() -> dict[str, int]:
     total = sum(sizes.values())
     for name, size in sorted(sizes.items()):
         print(f"  {name:22} {size / 1000:7.1f} kB")
-    print(f"  total {total / 1e6:.2f} MB (budget {SIZE_BUDGET / 1e6:.1f} MB) -> {OUT_DIR.relative_to(config.ROOT)}/")
+    print(f"  total {total / 1e6:.2f} MB (budget {SIZE_BUDGET / 1e6:.2f} MB) -> {OUT_DIR.relative_to(config.ROOT)}/")
     if total > SIZE_BUDGET:
         print("  WARNING: over the size budget")
     return sizes

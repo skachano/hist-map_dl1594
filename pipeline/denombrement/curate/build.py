@@ -236,7 +236,7 @@ def _territory_names(ttype: str, seat: str, vocab: dict) -> tuple[str, str, str]
         return (f"Temporel de l'abbaye de {seat}", f"Kirchengut der Abtei {seat}", f"Lands of the abbey of {seat}")
     labels = vocab["territory_types"][ttype]
     fr = labels["fr"][0].upper() + labels["fr"][1:]
-    de_ = "d'" if fold(seat)[:1] in "aeiouyh" else "de "
+    de_ = "d'" if fold(seat)[:1] in "aeiouy" else "de "   # "de Hombourg", "de Harol": the book doesn't elide before an H
     de = re.sub(r"\s*\(.*\)$", "", labels["de"])   # "Bellistum (Oberamt)" names "Bellistum Nancy", as in hist_map
     return (f"{fr} {de_}{seat}", f"{de} {seat}", f"{labels['en'][0].upper() + labels['en'][1:]} of {seat}")
 
@@ -281,6 +281,7 @@ def build() -> Built:
             "counterpart_basis": t.get("basis", "") if t.get("counterpart") else "",
             "source_page": t["page"], "confidence": "high" if not t["flags"] else "medium",
             "notes": "; ".join(t["flags"]),
+            "_seat": t["seat"],
         }
         if t.get("parent"):
             rel = "feudal" if t["hierarchy"] == "feudal" else "admin"
@@ -290,13 +291,23 @@ def build() -> Built:
             out.memberships.append({"child_id": key, "parent_id": key_map[t["ressort"]], "relation": "ressort",
                                     "share": "", "source_page": t["page"]})
 
-    # rules.yaml territory_names: names a territory has in use, not "<type> of <seat>" ("Deutsches Bellistum")
+    # rules.yaml territory_names: names a territory has in use, not "<type> of <seat>" ("Deutsches Bellistum"),
+    # and the book's own names for it, which replace the seat as the scan read it ("Prévosté et
+    # chastellainie de Nancy", "Chastellainie de Morsperg"; not "Bellefbntaiiic")
     for key, names in (rules.get("territory_names") or {}).items():
         if key not in out.places:
             raise ValueError(f"rules.yaml territory_names: no territory {key}")
         for lang in ("fr", "de", "en"):
             if names.get(lang):
                 out.places[key][f"name_{lang}"] = names[lang]
+        if names.get("ja"):
+            out.places[key]["_name_ja"] = (names["ja"], "manual")
+        # the languages named here stand; `seat` is the place to take the others' names from
+        out.places[key]["_names_set"] = {lang for lang in ("de", "en", "ja") if names.get(lang)}
+        if names.get("seat"):
+            out.places[key]["_seat"] = names["seat"]
+        if "variants" in names:
+            out.places[key]["variants"] = "|".join(v for v in names["variants"] if v != out.places[key]["name_fr"])
 
     # --- entities and realm holders ---
     out.entities[DUKE] = {"id": DUKE, "name_en": "Duke of Lorraine", "name_fr": "Duc de Lorraine",
@@ -331,10 +342,7 @@ def build() -> Built:
 
     # --- entries and their places ---
     entry_places = {int(k): v for k, v in (rules.get("entry_places") or {}).items()}
-    for no, name in (rules.get("entry_names") or {}).items():
-        for e in entries:
-            if e["no"] == int(no):
-                e["name"] = name
+    rename_entries(entries, load_manual("entry_names"), rules.get("entry_names") or {})
     row_ids: dict[int, str] = {}
     used_ids: set[str] = set(out.places)
     matches: dict[int, Match] = {}
@@ -646,6 +654,30 @@ def split_entries(entries: list[dict], rules: dict) -> list[dict]:
     return out
 
 
+def rename_entries(entries: list[dict], readings: list[dict], names: dict) -> None:
+    """Entry names as printed, where the scan misread them: manual/entry_names.csv (each read on
+    the scan: no, read, name, source) and rules.yaml `entry_names` (no: name). The text that
+    begins with the name takes the reading too, unless the name only drops words the
+    scan ran into it ("Malleloy et" is Malleloy)."""
+    by_no = {e["no"]: e for e in entries}
+    for r in readings:
+        e = by_no.get(int(r["no"]))
+        if e is None or e["name"] != r["read"]:
+            raise ValueError(f"manual/entry_names.csv {r['no']}: the entry's name is "
+                             f"{e and e['name']!r}, not {r['read']!r}")
+        _rename(e, r["name"])
+    for no, name in names.items():
+        if int(no) in by_no:
+            _rename(by_no[int(no)], name)
+
+
+def _rename(e: dict, name: str) -> None:
+    read = e["name"]
+    if read != name and not read.startswith(name) and read in e["text"]:
+        e["text"] = e["text"].replace(read, name, 1)
+    e["name"] = name
+
+
 def _fix_shares(out: Built) -> None:
     """Fractions held by different holders at one place may not exceed the whole: when the
     book gives "pour la moitié" under two headings, both halves are the same holder's."""
@@ -796,6 +828,7 @@ def merge_geocoding(out: Built) -> int:
     _rekey(out)
     _manual_memberships(out)
     _shared_lands(out)
+    _translate_territories(out)
     return n
 
 
@@ -812,6 +845,58 @@ def _manual_memberships(out: Built) -> None:
             added.append(f"`{r['child_id']}` → `{r['parent_id']}` ({r['notes']})")
     out.report += ["", "## Memberships added by hand (manual/memberships.csv)", "",
                    *(f"- {a}" for a in added)] if added else []
+
+
+def _translate_territories(out: Built) -> None:
+    """A territory's German, English and Japanese names from its seat's ("Herrschaft Bitsch",
+    "Kellerei Hombourg und Saint-Avold", "ビッシュ領"), not the French seat with "et"; the names a
+    rules.yaml territory_names entry gives stand. Seats are matched to the settlements of the
+    territory first, then to the one settlement of that name."""
+    vocab = load_vocab(config.CURATED_DIR / "vocab.yaml")["territory_types"]
+    members: dict[str, set[str]] = defaultdict(set)
+    for m in out.memberships:
+        members[m["parent_id"]].add(m["child_id"])
+    by_name: dict[str, list[dict]] = defaultdict(list)
+    for p in out.places.values():
+        if p["kind"] == "settlement" and p.get("lat"):
+            by_name[fold(p["name_fr"])].append(p)
+
+    def seat_place(name: str, territory: str) -> dict | None:
+        cands = by_name.get(fold(name), [])
+        inside = [c for c in cands if c["id"] in members[territory]]
+        return inside[0] if inside else cands[0] if len(cands) == 1 else None
+
+    def strip(label: str) -> str:
+        return re.sub(r"\s*[(（].*[)）]$", "", label)
+
+    for key, t in out.places.items():
+        if t["kind"] != "territory" or key == DUKE or "_seat" not in t:
+            continue
+        fixed = t.get("_names_set", set())
+        parts = [x.strip() for x in re.split(r"\s+et\s+", re.sub(r"\s*\(.*\)$", "", t["_seat"]))]
+        seats = [seat_place(x, key) for x in parts]
+        de = [s["name_de"] if s and s.get("name_de") else x for s, x in zip(seats, parts)]
+        # English keeps the book's seat ("Office of Boulay", not Boulay-Moselle), but a place in Germany
+        # has its German name in English too ("Office of Siersburg")
+        en = [s["name_en"] if s and s.get("name_en") and s.get("modern_country") == "DE" else x
+              for s, x in zip(seats, parts)]
+        ja = [s["_name_ja"][0] if s and s.get("_name_ja") else None for s in seats]
+        labels = vocab[t["place_type"]]
+        type_de, type_en, type_ja = strip(labels["de"]), strip(labels["en"]), strip(labels.get("ja", ""))
+        if t["place_type"] == "temporality":
+            names = (f"Kirchengut der Abtei {' und '.join(de)}", f"Lands of the abbey of {' and '.join(en)}",
+                     f"{'・'.join(ja)}修道院領" if all(ja) else None)
+        elif t["place_type"] == "town_district":
+            names = (f"Stadt {' und '.join(de)}", f"Town of {' and '.join(en)}", f"{'・'.join(ja)}都市管区" if all(ja) else None)
+        else:
+            names = (f"{type_de} {' und '.join(de)}", f"{type_en[0].upper()}{type_en[1:]} of {' and '.join(en)}",
+                     (f"{'・'.join(ja)}のバン" if t["place_type"] == "ban" else f"{'・'.join(ja)}{type_ja}") if all(ja) else None)
+        if "de" not in fixed:
+            t["name_de"] = names[0]
+        if "en" not in fixed:
+            t["name_en"] = names[1]
+        if "ja" not in fixed and names[2]:
+            t["_name_ja"] = (names[2], "seat + type")
 
 
 def _shared_lands(out: Built) -> None:

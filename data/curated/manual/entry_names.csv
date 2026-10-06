@@ -1,0 +1,761 @@
+no,read,name,source
+5,Arth-sur-Meurlhe,Arth-sur-Meurthe,DicoTopo
+6,Gbampîgneulles,Champigneulles,scan
+7,Dombaslc,Dombasle,tesseract
+8,Frouarl,Frouart,tesseract
+18,Maïzévilïe,Malzéville,tesseract
+19,Marchainvillc,Marchainville,old forms
+25,Ricbardmesnil,Richardmesnil,tesseract
+26,Varcngéville,Varengéville,tesseract
+28,Villc-en-Vcrmois,Ville-en-Vermois,tesseract
+31,Anlbelu,Anthelu,tesseract
+43,Mangonvillc,Mangonville,tesseract
+44,Rovillc,Roville,tesseract
+46,Warengcville,Warengeville,tesseract
+47,Bcnney,Benney,tesseract
+49,Grevecbamps,Crevechamps,scan
+51,Ccinlrey,Ceintrey,tesseract
+53,Dommarlemonl,Dommartemont,tesseract
+57,Haroucl,Harouel,scan
+60,Jcvoncourt,Jevoncourt,old forms
+61,Jarvillc,Jarville,tesseract
+63,Lcmainville,Lemainville,tesseract
+64,La Neufviile-lès-Bayon,La Neufville-lès-Bayon,tesseract
+65,Mérévilie,Méréville,tesseract
+71,Offracourl,Offracourt,DicoTopo
+72,Puîligny,Pulligny,tesseract
+77,Sainct-Rcmymonl,Sainct-Remymont,tesseract
+80,Tomblainc,Tomblaine,scan
+89,Marbacbc,Marbache,tesseract
+90,Saizerey-Sainet-Gcorge,Saizerey-Sainct-George,scan
+91,Saizcrcy-Saincl-Amaml,Saizerey-Sainct-Amand,scan
+98,Gisoncourl,Gisoncourt,tesseract
+101,Mammcy,Mammey,scan
+103,Monlauville,Montauville,tesseract
+105,Rosières-cn-Ilcy,Rosières-en-Hey,scan
+107,Rcménoville,Reménoville,tesseract
+108,Villcy-en-Hey,Villey-en-Hey,tesseract
+113,Monlauville,Montauville,tesseract
+115,Rcménoville,Reménoville,tesseract
+119,Attignévillc,Attignéville,tesseract
+124,Pontpicrrc,Pontpierre,tesseract
+125,Rouve-la-Clicslifve,Rouve-la-Chestifve,DicoTopo
+132,Lorey-lcz-Bayon,Lorey-lez-Bayon,DicoTopo
+137,Melligny-le-Pelit,Melligny-le-Petit,tesseract
+139,Vaulx-la-Petile,Vaulx-la-Petite,tesseract
+140,Chonvillc,Chonville,tesseract
+143,Rcloville,Reloville,old forms
+146,Dommart-aux-Boispour le tiers et les deux tiers à Chaslcl,Dommart-aux-Bois pour le tiers et les deux tiers à Chastel,scan
+148,Poriepsicux,Portessieux,DicoTopo
+159,Prieuré de Gcrbéviller,Prieuré de Gerbéviller,scan
+166,Barbonvilie,Barbonville,tesseract
+169,Clayeurcs,Clayeures,scan
+170,Damelevièrcs,Damelevières,tesseract
+181,Gcrbéviller,Gerbéviller,tesseract
+182,GirivilLr,Giriviller,scan
+188,Marxcy,Marxey,DicoTopo
+189,Maltcxcy,Mattexey,tesseract
+191,Sainct-Pierrcmont,Sainct-Pierremont,DicoTopo
+193,Remcnoville,Remenoville,tesseract
+194,Rozcreulles,Rozereulles,scan
+200,Serainvillc,Serainville,tesseract
+202,"Vellc. """,Velle,tesseract
+204,Vigneullcs,Vigneulles,DicoTopo
+206,Einvillc,Einville,scan
+219,Lczey,Lezey,scan
+221,Hautourl,Haucourt,old forms
+224,Parroyc,Parroye,tesseract
+226,Vaîhey,Valhey,tesseract
+235,Bienville-!a-Petite,Bienville-la-Petite,DicoTopo
+239,Rebainviller,Rehainviller,tesseract
+250,Prieuré de Beaulicu,Prieuré de Beaulieu,scan
+251,Bénasmesnîl,Bénasmesnil,scan
+255,Haùonvitter,Hadonviller,old forms
+262,Haryroesnil,Harymesnil,scan
+272,Gloi»ville,Glonville,scan
+275,Wysembaeh,Wysembach,scan
+282,Saincte-Margueréc,Saincte-Marguerée,tesseract
+283,Dcuveline,Deuveline,DicoTopo
+290,Breeoneel,Breconcel,DicoTopo
+292,La Bardai,La Hardal,tesseract
+294,Le Chipai,Le Chipal,DicoTopo
+297,La Pré,La Prée,DicoTopo
+298,Quebrui,Quebruz,DicoTopo
+301,Leuvdine,Leuveline,DicoTopo
+303,Gleuvccy,Cleuvecy,scan
+304,Hcrwanfrain,Herwanfrain,DicoTopo
+305,Scichemonf,Seichemont,scan
+307,Brecoocel,Breconcel,DicoTopo
+308,ftaalmont,Rualmont,DicoTopo
+312,La Trouehe,La Trouche,DicoTopo
+316,Mazcllav,Mazellay,scan
+317,LaPoucherée,La Poucherée,scan
+318,Robaehc,Robache,tesseract
+319,Cleuveey,Cleuvecy,tesseract
+322,Les Piiiiers,Les Pilliers,DicoTopo
+327,La Voyvressc,La Voyvresse,DicoTopo
+334,Nonpalelisc,Nonpatelise,DicoTopo
+336,fircebymont,Brechymont,DicoTopo
+340,La Bourgoncc,La Bourgonce,DicoTopo
+347,Daycfôssc,Dayefosse,DicoTopo
+348,Moycnmonstler,Moyenmonstier,scan
+357,L'Kmmy-Mandray,L'Emmy-Mandray,DicoTopo
+364,Halbeure,Hallieure,DicoTopo
+366,Vannemom,Vannemont,tesseract
+369,MonceL,Moncel,DicoTopo
+374,Bertrîmonstier,Bertrimonstier,scan
+381,Herbeaupairc,Herbeaupaire,DicoTopo
+387,RougiviUe,Rougiville,scan
+391,Les Fouis,Les Foulz,DicoTopo
+392,Cbattay,Chattay,tesseract
+393,Nahuemonl,Nahuemont,tesseract
+398,FrayemonU,Frayemont,DicoTopo
+399,La Fonteneïle,La Fontenelle,tesseract
+406,Saiiïct-Lconard.;,Sainct-Léonard,DicoTopo
+407,Le Moncel.j,Le Moncel,DicoTopo
+408,Anouzcl,Anouzel,DicoTopo
+409,Aubripaire.!,Aubripaire,scan
+411,Provenctuï'rcs,Provenchières,DicoTopo
+421,HonviUe,Honville,scan
+423,Coinebymont,Coinchymont,DicoTopo
+426,Verpillière.\,Verpillière,scan
+427,Wysembaeh,Wysembach,tesseract
+429,Hurbaclic,Hurbache,scan
+430,Sainct-Jean d'Ormont.j,Sainct-Jean d'Ormont,scan
+436,Combriniom,Combrimont,scan
+440,Nabuentonl,Nahuemont,scan
+445,Clairegoultc,Clairegoutte,tesseract
+447,Menemcl,Menemel,DicoTopo
+452,Le Vcltin,Le Veltin,tesseract
+460,Villicr-lez-Mouveron,Villier-lez-Mouveron,scan
+466,Oultrcmont,Oultremont,tesseract
+469,Vanneeourt,Vannecourt,tesseract
+471,Cham|>enoult,Champenoult,scan
+473,Aboncourl,Aboncourt,tesseract
+479,Putligny,Puttigny,tesseract
+490,Ajoneourt,Ajoncourt,scan
+495,ColUgny,Colligny,scan
+498,Lanfroieourt,Lanfroicourt,DicoTopo
+501,Tbimonville,Thimonville,scan
+502,Vaultbimont,Vaulthimont,tesseract
+507,ViUer et,Viller,scan
+511,Aboneourt,Aboncourt,tesseract
+512,Xousscs,Xousses,old forms
+518,Malleloy et,Malleloy,DicoTopo
+519,Montcnoy,Montenoy,tesseract
+525,VetidiiTCs,Vendières,scan
+526,ChanuR'l,Champel,DicoTopo
+534,Villeeel-sur-Trin,Villecel-sur-Trin,tesseract
+539,Mars-la-Tonr,Mars-la-Tour,tesseract
+551,Sanzcv,Sanzey,scan
+555,Mallonvtlle,Mallonville,old forms
+557,Viller-ie-See,Viller-le-Sec,DicoTopo
+559,Selaineourt,Selaincourt,tesseract
+562,Manoneourt,Manoncourt,tesseract
+569,Viller-Sainct-Esticnne,Viller-Sainct-Estienne,DicoTopo
+577,Mont-le-Vincux,Mont-le-Vineux,tesseract
+583,Le Champ-Ie-Duc,Le Champ-le-Duc,DicoTopo
+585,La Ncufville,La Neufville,DicoTopo
+586,Decvmont,Decymont,scan
+589,Fonlenay,Fontenay,tesseract
+594,Rcnnegoutte,Rennegoutte,scan
+598,Vraicbamps,Vraichamps,DicoTopo
+599,Picrrepont,Pierrepont,scan
+603,La Cbappelle,La Chappelle,DicoTopo
+614,Vielville,Viefville,DicoTopo
+628,Bayecourl,Bayecourt,tesseract
+630,Villoneourt,Villoncourt,tesseract
+633,Fremyfontainc,Fremyfontaine,scan
+634,Dccymont,Decymont,scan
+640,Aidolles',Aidolles,scan
+650,Nonzcville,Nonzeville,tesseract
+652,Lcspouillière,Lespouillière,DicoTopo
+655,ViUoncourt,Villoncourt,scan
+658,La Koussière,La Houssière,tesseract
+660,Gerbepauli,Gerbepault,DicoTopo
+663,Morlane,Mortane,DicoTopo
+665,Le Void de Bclmont,Le Void de Belmont,DicoTopo
+668,Rexuricux,Rexurieux,scan
+669,Rambcville,Rambeville,tesseract
+671,Chasteau-sur-Pcrlc,Chasteau-sur-Perle,DicoTopo
+676,La Vervezellc,La Vervezelle,DicoTopo
+677,Faulcompicrrc,Faulcompierre,scan
+683,Arebelle,Archette,tesseract
+684,Giromcsnil,Giromesnil,scan
+686,Allaniesnil,Allamesnil,old forms
+687,Anneufmcsnii,Anneufmesnil,DicoTopo
+690,Scnavdes,Senaydes,DicoTopo
+692,Le Roullicr de Dounoux,Le Roullier de Dounoux,tesseract
+693,Pouxcy,Pouxey,DicoTopo
+694,Clairegoulte,Clairegoutte,old forms
+697,Le Vcrd-Corrois,Le Verd-Corrois,DicoTopo
+699,Rouvcrois,Rouverois,DicoTopo
+702,Leavelinc de Houx,Leaveline de Houx,DicoTopo
+703,Chamonlaruz,Chamontaruz,old forms
+705,La Poiric,La Poirie,tesseract
+708,Les Monnclolz,Les Monnelotz,DicoTopo
+714,LeJallercl,Le Jallerel,tesseract
+717,La Forrestcrie,La Forresterie,DicoTopo
+720,Aulerive,Auterive,tesseract
+723,Sainct-Avei,Sainct-Avet,DicoTopo
+724,Sainct-Esliennc,Sainct-Estienne,tesseract
+730,Gerbaumonl,Gerbaumont,DicoTopo
+731,Cremonvillcr,Cremonviller,DicoTopo
+736,Breirc,Breire,tesseract
+743,Gerbaumonl,Gerbaumont,DicoTopo
+744,Peecaviller,Peccaviller,tesseract
+747,Giradraer,Giradmer,DicoTopo
+756,La Dcrmanvillc,La Dermanville,DicoTopo
+761,Lîcbauxart,Liebauxart,DicoTopo
+762,Fcrdruz,Ferdruz,DicoTopo
+765,Lcslraye,Lestraye,tesseract
+768,Sainct-Mauiïcc,Sainct-Maurice,scan
+770,Remyrcmont,Remyremont,tesseract
+777,Sainct-Eslienne,Sainct-Estienne,tesseract
+778,Doinmartiu,Dommartin,tesseract
+779,Baon-aux-Bois,Raon-aux-Bois,tesseract
+781,Sainct-Amct,Sainct-Amet,scan
+783,La Costc,La Coste,tesseract
+784,Le Monccl,Le Moncel,tesseract
+786,La Banvoyc,La Banvoye,tesseract
+790,Les Chcsncs,Les Chesnes,DicoTopo
+792,Oullrcmont,Oultremont,tesseract
+794,Laislre,Laistre,tesseract
+796,Dandiranti,Dandirand,DicoTopo
+797,CombclgouUe,Combelgoutte,old forms
+799,Olycliamps,Olychamps,DicoTopo
+800,&.cxille,Mexille,old forms
+801,Les Fains-Polalz,Les Fains-Potalz,DicoTopo
+802,Boncbastcl,Bonchastel,DicoTopo
+804,Jeharmcsnii,Jeharmesnil,DicoTopo
+806,Donnon,Dounou,DicoTopo
+807,CJrymcsnil,Urymesnil,scan
+808,Gcromesnil,Geromesnil,tesseract
+813,Les Francs-Cbasaulx,Les Francs-Chasaulx,DicoTopo
+817,La Forrcsleric,La Forresterie,DicoTopo
+820,Lcssol,Lessol,DicoTopo
+830,Brcbanviller,Brehanviller,tesseract
+835,Vcntron,Ventron,scan
+836,Lespahge,Lespainge,scan
+840,La Boche,La Roche,tesseract
+841,Fcrdruz,Ferdruz,DicoTopo
+842,Franoull,Franoult,tesseract
+844,La Poitie,La Poirie,tesseract
+846,Forrcsteric du ban de Longchamps,Forresterie du ban de Longchamps,DicoTopo
+852,Le Charmois-dcvant-Bains,Le Charmois-devant-Bains,tesseract
+853,Fonlenoy,Fontenoy,scan
+856,Montmonslier,Montmonstier,tesseract
+859,Amcrey,Amerey,tesseract
+861,LaForrcst,La Forrest,DicoTopo
+862,La Franouzc,La Franouze,tesseract
+866,La Chappcllc,La Chappelle,tesseract
+872,Bralleviilc,Bralleville,tesseract
+873,Germonvillc,Germonville,scan
+876,Branligny,Brantigny,tesseract
+877,Vinccy au ban des Chesnes,Vincey au ban des Chesnes,DicoTopo
+879,Gugncy-aux-Aulx,Gugney-aux-Aulx,tesseract
+880,Enccgney,Encegney,DicoTopo
+881,Battigny-Sainct-Briee,Battigny-Sainct-Brice,DicoTopo
+883,Le Mcsnil,Le Mesnil,tesseract
+888,Bappel,Rappel,tesseract
+889,Battigny-Saincl-Brice,Battigny-Sainct-Brice,DicoTopo
+890,L'bcxey,Ubexey,scan
+891,Viefvilie,Viefville,DicoTopo
+894,Le Mcsnil,Le Mesnil,tesseract
+895,Gugncy-aux-Aulz,Gugney-aux-Aulx,DicoTopo
+896,Brallevîlle,Bralleville,scan
+897,Germonvillc,Germonville,tesseract
+899,Mirccour:,Mirecourt,scan
+900,La Ncuftïlîe-soubz-Montfort,La Neufville-soubz-Montfort,scan
+905,Maltaincourt,Mattaincourt,DicoTopo
+908,Bomecourt,Romecourt,DicoTopo
+910,Bethoncourl,Bethoncourt,tesseract
+915,Eslrenncs,Estrennes,tesseract
+922,Parey-soubz-Monlfort,Parey-soubz-Montfort,tesseract
+923,Rcmoncourt-,Remoncourt,tesseract
+925,Vilcl,Vitel,tesseract
+926,Donjulicn,Donjulien,tesseract
+931,Harévillc,Haréville,scan
+932,Pont-sur-Mauldoi:,Pont-sur-Mauldon,DicoTopo
+934,Bctoncourl,Betoncourt,tesseract
+936,Bamecourt,Ramecourt,tesseract
+939,Romccourt,Romecourt,tesseract
+947,Tliiroeourt,Thirocourt,tesseract
+953,Bugny,Rugny,DicoTopo
+956,Ahévillc,Ahéville,tesseract
+962,Madrecourl,Madrecourt,tesseract
+963,Baeecourt,Racecourt,tesseract
+971,Chcnymont,Chenymont,DicoTopo
+975,Uxegoey,Uxegney,scan
+980,Saiïremesnil,Saffremesnil,scan
+988,LeVoid,Le Void,scan
+994,Putligny,Puttigny,DicoTopo
+997,Reblangotle,Reblangotte,DicoTopo
+998,Nobclmont,Nobelmont,DicoTopo
+1004,Cliamoysy-la-Villc,Chamoysy-la-Ville,tesseract
+1006,Le Mcsnil,Le Mesnil,DicoTopo
+1014,Abvcfvenet-la-Pelite,Abvefvenet-la-Petite,DicoTopo
+1019,Fomcrey,Fomerey,scan
+1026,Uzeiïiain,Uzemain,scan
+1032,Ville-sur-Hlon,Ville-sur-Illon,tesseract
+1034,Darnîeulles,Darnieulles,scan
+1051,LaNeufville,La Neufville,DicoTopo
+1052,Bouzemofif,Bouzemont,scan
+1055,Dominait devant Dompaire,Dommart devant Dompaire,old forms
+1056,Begnauldvoid,Regnauldvoid,DicoTopo
+1058,Fomercy,Fomerey,tesseract
+1059,Henneeourt,Hennecourt,tesseract
+1067,VaUois,Vallois,scan
+1072,La verrière Hennez^l,La verrière Hennezel,scan
+1074,Cbastillon,Chastillon,old forms
+1087,La verrièreHenricé,La verrière Henricé,scan
+1091,De Lespcnoux,De Lespenoux,tesseract
+1093,Charmois.Soub Dompaire,Charmois,scan
+1100,Nonvillc,Nonville,tesseract
+1101,Vivier-lc-Gras,Vivier-le-Gras,DicoTopo
+1103,Chasteaù de Passavant,Chasteau de Passavant,scan
+1104,Rcgniévclle,Regniévelle,tesseract
+1106,La Cosle Sainct-Antoine,La Coste Sainct-Antoine,tesseract
+1107,Monstcreul-sur-Saône,Monstereul-sur-Saône,DicoTopo
+1117,Chaslenois,Chastenois,tesseract
+1118,Neufchasleau,Neufchasteau,tesseract
+1119,Baimois,Raimois,DicoTopo
+1120,LeBreul,Le Breul,scan
+1121,La Courtillc,La Courtille,DicoTopo
+1123,Manneeourt,Mannecourt,DicoTopo
+1127,Rcceu,Receu,old forms
+1139,Vioeourt,Viocourt,tesseract
+1141,RollainvUle,Rollainville,DicoTopo
+1143,Geincnaincourt,Gemenaincourt,tesseract
+1144,Mandrcs-sur-Veire,Mandres-sur-Veire,DicoTopo
+1145,Rouvrc-en-Sainclois,Rouvre-en-Sainctois,tesseract
+1151,Le Mesnil-cn-Sainctois,Le Mesnil-en-Sainctois,tesseract
+1154,Gcrbonval,Gerbonval,DicoTopo
+1170,Sandaucburt,Sandaucourt,scan
+1172,Bullegnévîlle,Bullegnéville,scan
+1175,Vyocourl,Vyocourt,tesseract
+1185,Gohccourt,Gohecourt,tesseract
+1187,Barvillc,Barville,tesseract
+1189,Somcréeourt,Somerécourt,tesseract
+1195,Villars-aux-Cloycs,Villars-aux-Cloyes,DicoTopo
+1197,Darney-aux-Chcsnes,Darney-aux-Chesnes,DicoTopo
+1199,Auzainvillcr,Auzainviller,tesseract
+1201,Mesuil-sur-Vcirc,Mesnil-sur-Veire,tesseract
+1205,Kirchnomcn,Kirchnomen,DicoTopo
+1206,Obrcnomen,Obrenomen,DicoTopo
+1208,Monlenach,Montenach,DicoTopo
+1210,Eftendorff,Effendorff,DicoTopo
+1213,Bumelingcu,Rumelingen,DicoTopo
+1218,Habtorff,Halstorff,DicoTopo
+1220,Mondlcr,Mondler,DicoTopo
+1221,Biringcn,Biringen,tesseract
+1223,Kerlingcn,Kerlingen,DicoTopo
+1225,Wcrbcringen,Werberingen,old forms
+1226,Lemerstroiï,Lemerstroff,scan
+1231,Mersweillcr,Mersweiller,DicoTopo
+1237,Lonstorfî,Lonstorff,scan
+1241,Lumersfeldl,Lumersfeldt,DicoTopo
+1248,fiiringen,Biringen,scan
+1250,Kerlingcn,Kerlingen,DicoTopo
+1254,Frymestroû*,Frymestroff,scan
+1256,Wuclicni,Wuchern,old forms
+1257,Gclmingcn,Gelmingen,old forms
+1260,Hcrstoriï,Herstorff,tesseract
+1261,Kedingcn,Kedingen,old forms
+1263,Hempuchcl,Hempuchel,scan
+1266,Schombcrg,Schomberg,scan
+1267,Englingcn,Englingen,DicoTopo
+1269,Ausclingcn,Auselingen,tesseract
+1271,Bincrssheim,Binerssheim,DicoTopo
+1272,Lemcrslroff,Lemerstroff,tesseract
+1273,Limersfcldl,Limersfeldt,DicoTopo
+1275,Efîendorlï,Effendorff,DicoTopo
+1281,Gcrlingen,Gerlingen,DicoTopo
+1283,Drachcnach,Drachenach,old forms
+1285,Viller-Bctnach,Viller-Betnach,tesseract
+1287,Obcrperl,Oberperl,tesseract
+1289,Syndorfi,Syndorff,old forms
+1290,AÏlorfi,Altorff,scan
+1291,Luckcn,Lucken,tesseract
+1296,Gerlingcn,Gerlingen,DicoTopo
+1297,Publingcn,Publingen,old forms
+1299,Felstrofî,Felstroff,scan
+1301,Dudingcn,Dudingen,DicoTopo
+1306,Gadcrscheuren,Gaderscheuren,DicoTopo
+1307,Schcuren,Scheuren,tesseract
+1317,Neunieh,Neunich,tesseract
+1324,Schwcrdorfr,Schwerdorff,DicoTopo
+1326,Kutssingcn,Kutssingen,DicoTopo
+1330,Ebcrsweillcr,Ebersweiller,DicoTopo
+1331,Golman,Colman,scan
+1332,Hombourg auiïdcr Kandcl,Hombourg auff der Kandel,DicoTopo
+1333,Waldtvtiss,Waldtwiss,DicoTopo
+1334,Bcltsstroff,Bettsstroff,DicoTopo
+1335,Ansclnigen,Anselnigen,tesseract
+1338,Brcttingen,Brettingen,tesseract
+1339,Eymerstorlï,Eymerstorff,old forms
+1343,Rodingcn,Rodingen,DicoTopo
+1348,Bolchcn,Bolchen,DicoTopo
+1356,Bossbruckcn,Rossbrucken,DicoTopo
+1357,Wolmcringen,Wolmeringen,old forms
+1358,Brcchlingen,Brechlingen,DicoTopo
+1362,Rupplingcn,Rupplingen,tesseract
+1363,Ottcndorff,Ottendorff,scan
+1364,Hollingcn,Hollingen,DicoTopo
+1365,Dieffcrlcn,Diefferten,tesseract
+1367,Tctterchen,Tetterchen,DicoTopo
+1369,Dùren,Düren,scan
+1372,Durehdalhaim,Durchdalhaim,old forms
+1373,Baumbidersstorfi,Baumbidersstorff,DicoTopo
+1375,Gondcringen,Gonderingen,DicoTopo
+1379,Laudcrfingen,Lauderfingen,DicoTopo
+1380,Niderhcim,Niderheim,tesseract
+1385,Oblingcn,Oblingen,old forms
+1386,Tultingen,Tuttingen,old forms
+1388,Bumelfingen,Rumelfingen,DicoTopo
+1393,Lanlhrum,Lanthrum,tesseract
+1394,Wciblingen,Weiblingen,DicoTopo
+1395,Wclmeringen,Welmeringen,old forms
+1396,Wuirfingen,Wulffingen,old forms
+1399,Fait,Falt,DicoTopo
+1401,Lautherii,Lauthern,old forms
+1402,Licsstorff,Liesstorff,scan
+1403,EnstorfT,Enstorff,scan
+1404,Hultzvcillcr,Hultzveiller,scan
+1412,Kolchcn,Kolchen,tesseract
+1414,Remclfangen,Remelfangen,tesseract
+1422,Hvmerrslorlï,Hymerrstorff,scan
+1423,Morehingen,Morchingen,old forms
+1424,Drcyssbaeh,Dreyssbach,tesseract
+1426,Besseringcn,Besseringen,tesseract
+1427,Suinct-Gangolphe,Sainct-Gangolphe,scan
+1431,Pachtcn,Pachten,tesseract
+1433,Rcmsbach,Remsbach,tesseract
+1434,Bulzen,Butzen,old forms
+1437,Morehingen,Morchingen,old forms
+1438,Beurcn,Beuren,tesseract
+1440,Hynicsstorff,Hymesstorff,tesseract
+1442,Rellingcn,Rellingen,tesseract
+1444,Erbringcn,Erbringen,tesseract
+1445,Nittc),Nittel,scan
+1449,Kupplingen,Rupplingen,old forms
+1451,Sylmingou,Sylmingen,old forms
+1452,Sehcinliiigen,Schemlingen,tesseract
+1453,Bisscrstorff,Bisserstorff,old forms
+1454,Budingcn,Budingen,tesseract
+1456,Wcillingcn,Weillingen,DicoTopo
+1457,Beliingcn,Bettingen,scan
+1462,Bulzen,Butzen,old forms
+1463,Memmingcn,Memmingen,old forms
+1465,Morchingcn,Morchingen,old forms
+1466,Bachcn,Bachen,tesseract
+1467,Scliawembourg,Schawembourg,tesseract
+1471,Zuracliten,Zurachten,tesseract
+1473,Lindtschidi,Lindtschidt,scan
+1476,Ders&toiff,Dersstorff,tesseract
+1478,Haînuclhoven,Haintzelhoven,scan
+1481,Wittcrbach,Witterbach,tesseract
+1483,Nidcrhoveii,Niderhoven,tesseract
+1484,Blicssen,Bliessen,scan
+1485,Enweillcr,Enweiller,tesseract
+1487,Ostcmbach,Ostembach,tesseract
+1490,Budweillcr,Budweiller,tesseract
+1492,Golbacli,Golbach,tesseract
+1493,Bcttingen,Bettingen,tesseract
+1499,Suhzwciller,Sultzweiller,old forms
+1500,Sclicurcn,Scheuren,tesseract
+1502,Grifïhambach,Griffhambach,old forms
+1505,Mondoriï,Mondorff,old forms
+1506,Harlingcn,Harlingen,tesseract
+1508,Imweillcr,Imweiller,tesseract
+1511,Kelternostern,Ketternostern,old forms
+1512,Schellembach. î »,Schellembach,scan
+1516,Wach-llaussen,Wach-Haussen,tesseract
+1517,GodessweiUer,Godessweiller,scan
+1520,Wirtcrbach,Wirterbach,tesseract
+1521,Blicssen,Bliessen,tesseract
+1525,Zurachtcn,Zurachten,tesseract
+1526,Kastcl,Kastel,tesseract
+1527,Wchingen,Wehingen,tesseract
+1528,Bettingcn,Bettingen,scan
+1533,BubweiUer,Bubweiller,scan
+1534,Hemtzelbovcn,Hemtzelhoven,tesseract
+1536,Eiweiller,Exweiller,old forms
+1537,Nidersleimbach,Nidersteimbach,tesseract
+1538,Obersleimbach,Obersteimbach,tesseract
+1546,Kctternostern,Ketternostern,old forms
+1548,Sutzwciller,Sutzweiller,old forms
+1555,Rappwciller,Rappweiller,tesseract
+1558,Lîessterthal,Liessterthal,scan
+1559,GudersweiUcr,Gudersweiller,scan
+1560,Henweiilcr,Henweiller,old forms
+1561,Frudcsswciller,Frudessweiller,tesseract
+1562,Raudtsehidt,Raudtschidt,old forms
+1566,Mittclwrillembach,Mittelwrillembach,tesseract
+1568,Grossblidcrsslorfï,Grossblidersstorff,tesseract
+1569,KleinblidesstorfT,Kleinblidesstorff,tesseract
+1570,Awerssmachci-,Awerssmacher,scan
+1572,FolpersMciller,Folpersweiller,scan
+1576,Gravemhal,Graventhal,scan
+1580,Gcrsweiller,Gersweiller,tesseract
+1581,Sar-Enssingcn,Sar-Enssingen,DicoTopo
+1582,Witlringcn,Wittringen,DicoTopo
+1583,Neuscheurcn,Neuscheuren,tesseract
+1589,HauUc-Lîndrc,Haulte-Lindre,scan
+1590,Semangcs,Semanges,tesseract
+1591,Basse-Lindrc,Basse-Lindre,tesseract
+1593,Asscnoncourt,Assenoncourt,tesseract
+1601,Kutlingen,Kuttingen,tesseract
+1603,Barlhelémont,Barthelémont,DicoTopo
+1614,WUler,Willer,old forms
+1621,BuderetortT,Buderstorff,scan
+1625,Domcnheim,Domenheim,old forms
+1630,Nollingcn,Nollingen,old forms
+1632,Grumingcn,Grumingen,tesseract
+1633,Heylingenncr,Heylingenner,scan
+1634,DîelTenbach,Dieffenbach,tesseract
+1638,WargaviUe,Wargaville,old forms
+1642,Kutlingen,Kuttingen,tesseract
+1644,Leyningcn,Leyningen,DicoTopo
+1645,Alstorff-lez-Leyningcn,Alstorff-lez-Leyningen,old forms
+1652,DiefTembach,Dieffembach,tesseract
+1654,Reicldingen,Reichlingen,DicoTopo
+1656,Bcrtrîngcn,Bertringen,DicoTopo
+1660,Dieicrfingen,Dieterfingen,DicoTopo
+1661,Mutzingcn,Mutzingen,DicoTopo
+1663,Gebenhausscn,Gebenhaussen,DicoTopo
+1664,Luppertzhausscn,Luppertzhaussen,DicoTopo
+1665,Grundiweiller,Grundtweiller,DicoTopo
+1671,Dublingcn,Dublingen,tesseract
+1672,La ville de Bcaurains,La ville de Beaurains,tesseract
+1678,Edelingcn,Edelingen,tesseract
+1687,WiderstorlT,Widerstorff,scan
+1703,La ville de Morhangcs,La ville de Morhanges,tesseract
+1704,Reckrangcs,Reckranges,old forms
+1710,Sollzlingen,Soltzlingen,DicoTopo
+1720,Enssweillcr,Enssweiller,DicoTopo
+1723,Norlangen,Morlangen,tesseract
+1727,Speieher,Speicher,DicoTopo
+1728,Roehlingen,Rochlingen,DicoTopo
+1749,Hamcvillc,Hameville,tesseract
+1750,Clercy,Clerey,tesseract
+1751,Thev-soub-Vaudémont,They-soub-Vaudémont,scan
+1753,ForccHes-soub-Gugney,Forcelles-soub-Gugney,tesseract
+1754,Tourcy,Tourey,tesseract
+1759,Dollecourl,Dollecourt,tesseract
+1761,Parey-Sainet-César,Parey-Sainct-César,DicoTopo
+1763,Vclle,Velle,DicoTopo
+1764,Souveraincourl,Souveraincourt,scan
+1766,Fraisne-la-Pclite,Fraisne-la-Petite,DicoTopo
+1768,Bouzainvîlle,Bouzainville,scan
+1772,Vandelainvillc,Vandelainville,old forms
+1773,Thclod,Thelod,tesseract
+1774,Aultrcy,Aultrey,tesseract
+1775,Tantonvillc,Tantonville,tesseract
+1778,Veroncourl,Veroncourt,scan
+1779,Queveiiloncourt,Queveilloncourt,tesseract
+1781,Courceilcs,Courcelles,tesseract
+1782,Boulaineouri,Boulaincourt,scan
+1796,Hatllainville,Haillainville,scan
+1798,Clezcntaines,Clezentaines,DicoTopo
+1801,Ortoncourl,Ortoncourt,tesseract
+1803,Frizon-la-llaultc,Frizon-la-Haulte,DicoTopo
+1806,Saiiicl-Remy-aux-Bois,Sainct-Remy-aux-Bois,scan
+1810,Monzcy,Monzey,scan
+1812,Vclacourt,Velacourt,tesseract
+1813,Battcssey,Battessey,scan
+1814,Sainct-Gcraiain,Sainct-Germain,scan
+1817,Rnzelcures,Rozeleures,tesseract
+1822,Nomcxey,Nomexey,DicoTopo
+1829,La Beufvillc,La Beufville,old forms
+1831,Frizon-la-Bassc,Frizon-la-Basse,DicoTopo
+1836,Lcbeufville,Lebeufville,old forms
+1848,Deyviiter,Deyviller,scan
+1851,Villoncourl,Villoncourt,tesseract
+1853,Bandesmcsnil,Bandesmesnil,DicoTopo
+1856,Sainctc-Hélène,Saincte-Hélène,tesseract
+1859,Sainct-Gcrgonnc,Sainct-Gergonne,scan
+1864,Archetlc,Archette,tesseract
+1867,Domepvrc-sur-Aviôre,Domepvre-sur-Avière,DicoTopo
+1870,Zineourt,Zincourt,tesseract
+1875,Deyvillcr,Deyviller,tesseract
+1880,Zineourt,Zincourt,tesseract
+1886,Herbevifle,Herbeville,tesseract
+1890,Broviile,Broville,scan
+1898,Cliaîllon,Chaillon,tesseract
+1905,Maizcy,Maizey,tesseract
+1914,Maizcy,Maizey,tesseract
+1921,LyoviHe,Lyoville,tesseract
+1923,Mandres-la-Pclite,Mandres-la-Petite,tesseract
+1929,Marbottc,Marbotte,tesseract
+1934,Andillicr,Andillier,tesseract
+1936,Arrce,Arrée,DicoTopo
+1946,Bertrandmcy,Bertrandmey,DicoTopo
+1956,Chonvillc,Chonville,tesseract
+1957,Charrcy,Charrey,tesseract
+1958,Chazcllcs,Chazelles,tesseract
+1959,Cornienvillc,Cornienville,tesseract
+1961,Danvilou,Danvitou,DicoTopo
+1966,Einvillc,Einville,old forms
+1968,Esscy-en-Voivre,Essey-en-Voivre,tesseract
+1971,Frémcrévillc,Frémeréville,tesseract
+1984,Jaircy,Jairey,old forms
+1986,Joycy,Joyey,scan
+2002,Mcraucourt,Meraucourt,tesseract
+2005,Mcsnil-Iez-Toul,Mesnil-lez-Toul,DicoTopo
+2007,Monceï,Moncel,tesseract
+2011,Moynevillc,Moyneville,DicoTopo
+2012,Murvîlle,Murville,scan
+2014,Neufvîlle-lez-Grand-Fontaine,Neufville-lez-Grand-Fontaine,scan
+2020,Ponl-lez-Mescrignes,Pont-lez-Mescrignes,scan
+2022,Rambuescouri,Rambuescourt,scan
+2027,Rigccoiirt,Rigecourt,tesseract
+2028,Renonamcy,Renonamey,tesseract
+2032,Sainct-Jourc,Sainct-Joure,old forms
+2034,Saincte-Maric,Saincte-Marie,DicoTopo
+2036,Sainctc-Raphine,Saincte-Raphine,old forms
+2037,Sanbucfnionl,Sanbuefmont,old forms
+2038,Sanzcy,Sanzey,tesseract
+2039,Séchcprcy,Sécheprey,scan
+2043,Vacheronvillc,Vacheronville,tesseract
+2044,Val Saîncte-Marie,Val Saincte-Marie,scan
+2045,Vallerov-îez-Briev,Valleroy-lez-Briey,DicoTopo
+2046,Vaul. ',Vaul,DicoTopo
+2049,Ville prcz Mousson,Ville prez Mousson,old forms
+2051,Euvczin,Euvezin,DicoTopo
+2052,Xcsmes,Xesmes,tesseract
+2065,Blcmerey,Blemerey,tesseract
+2069,Lcntrey,Lentrey,tesseract
+2073,ReelonviHc,Reclonville,tesseract
+2074,Embcrmcsnil,Embermesnil,tesseract
+2079,Herbiviller,Herbeviller,tesseract
+2082,Nonhcgny,Nonhegny,tesseract
+2086,Averoneourt,Averoncourt,old forms
+2087,Frizonvillcr,Frizonviller,tesseract
+2088,Dcneuvre,Deneuvre,tesseract
+2089,Laislre,Laistre,tesseract
+2103,Prieuré de liesse,Prieuré de Hesse,tesseract
+2104,Gossclmingen,Gosselmingen,tesseract
+2105,Immclingen. chasteau et village,Immelingen. chasteau et village,scan
+2106,Nottiugen,Nottingen,DicoTopo
+2107,Niderwciller,Niderweiller,DicoTopo
+2108,Putlingcn,Putlingen,tesseract
+2109,Ilcrmingen,Hermingen,old forms
+2111,Allroff,Altroff,old forms
+2114,Dolffuigcn,Dolffingen,old forms
+2118,Ncdingen,Nedingen,DicoTopo
+2119,Eieh,Eich,tesseract
+2120,Sainct-Ilippolite,Sainct-Hippolite,tesseract
+2125,Sainctc-Croix et Zuckmantel,Saincte-Croix et Zuckmantel,scan
+2127,Saincte-Maric,Saincte-Marie,tesseract
+2136,Zumrcch,Zumrech,DicoTopo
+2144,Lcngissheim,Lengissheim,DicoTopo
+2145,Hauweillcr,Hauweiller,old forms
+2146,Reygcrssweiller,Reygerssweiller,DicoTopo
+2151,Huspclschîd:,Huspelschidt,DicoTopo
+2152,Wollhaussen,Wolthaussen,tesseract
+2160,Bumelingen,Rumelingen,DicoTopo
+2162,Wolmunsler,Wolmunster,tesseract
+2166,Hcllingen,Hellingen,DicoTopo
+2168,Riderchingcn,Riderchingen,DicoTopo
+2170,Orcînngen,Orchingen,DicoTopo
+2172,Abbcrlingen,Abbertingen,DicoTopo
+2173,Ornesweiller,Omesweiller,DicoTopo
+2174,Boweillcr,Boweiller,tesseract
+2175,"""Walsimcr",Walsimer,old forms
+2178,Bc<;ingen,Beningen,old forms
+2179,Sigersslall,Sigersstall,DicoTopo
+2182,Echembcrg,Echemberg,DicoTopo
+2184,Rîderchingcn,Riderchingen,DicoTopo
+2185,Kallcnhaussen,Kallenhaussen,DicoTopo
+2188,Roïlingen,Rollingen,tesseract
+2189,Schraalemhal,Schmalenthal,scan
+2190,PJolerhausen,Moterhausen,DicoTopo
+2191,Hochwcygerssburg,Hochweygerssburg,DicoTopo
+2192,Gcfilcrssberg,Genterssberg,scan
+2193,Waldecli,Waldech,scan
+2194,Kgclsshardl,Egelsshardt,scan
+2200,Ntdergailbach,Nidergailbach,scan
+2201,Siurzelborn,Sturzelborn,DicoTopo
+2202,Lcmberg,Lemberg,old forms
+2203,Eyningcn,Eyningen,tesseract
+2206,Gcrsspach,Gersspach,tesseract
+2208,Symptcn,Sympten,scan
+2210,Froschcn,Froschen,old forms
+2216,Muridweiller,Mundweiller,tesseract
+2217,Dieterssbaeh,Dieterssbach,tesseract
+2222,Wedcsht?iro,Wedesheim,scan
+2223,Falkcnsiein,Falkenstein,scan
+2224,Altltaun,Altthann,DicoTopo
+2226,Undtsweiiler,Landtsweiller,DicoTopo
+2227,Esehweiller,Eschweiller,tesseract
+2229,Contliiîj,Conthil,scan
+2230,Volfflingcn etWeissweiîler,Volfflingen et Weissweiller,scan
+2232,Pfoltzbourg,Pfaltzbourg,scan
+2233,Einartzhauscn,Einartzhausen,scan
+2234,Lutzclbourg,Lutzelbourg,scan
+2237,Mitteîborn,Mittelborn,tesseract
+2242,Mâchera,Machern,DicoTopo
+2246,EmerssweiUer,Emerssweiller,scan
+2248,Eberiingea,Ebersingen,DicoTopo
+2249,Luxingeo,Luxingen,DicoTopo
+2251,Mor*Uch,Morsbach,scan
+2254,Senghiuss,Senghauss,DicoTopo
+2255,Magstatl,Magstatt,scan
+2257,Tetliogeo,Tettingen,scan
+2260,OberfûUeo,Oberfüllen,old forms
+2261,Zumspiul,Zumspital,DicoTopo
+2262,Dnrehdalheun,Durchdalheim,old forms
+2264,Tetlerchen,Tetterchen,DicoTopo
+2265,Allwciller,Altweiller,scan
+2269,Hemeringcn,Hemeringen,tesseract
+2272,Biestcin,Biestein,DicoTopo
+2273,Bansch))orn,Banschborn,DicoTopo
+2276,HaUingen,Hallingen,scan
+2279,Hemcuingen,Hemchingen,DicoTopo
+2283,OberfuUen,Oberfullen,old forms
+2292,Sainot-Nieolys,Sainct-Nicolas,scan
+2294,Einvillc,Einville,scan
+2301,Chasteau-Sallîn,Chasteau-Sallin,scan
+2306,Nagniércs,Magniéres,tesseract
+2310,Darnev,Darney,scan
+2319,Villc-sur-lllon,Ville-sur-Illon,scan
+2320,Fontcnoy-en-Vosges,Fontenoy-en-Vosges,tesseract
+2327,Clezcntaines,Clezentaines,tesseract
+2329,Hatonchastcl,Hatonchastel,tesseract
+2333,Valdcrfanges,Valderfanges,tesseract
+2335,Bouzonvillc,Bouzonville,tesseract
+2336,Bcaurains,Beaurains,tesseract
+2338,Dicuie,Dieuze,scan
+2340,Faulqucmonl,Faulquemont,tesseract
+2345,Vignol,Vignot,tesseract
+2348,\JC Pont-Sainct-Vincent,Le Pont-Sainct-Vincent,scan
+2353,Pfallzbourg,Pfaltzbourg,scan
+2367,Dcneuvre,Deneuvre,tesseract
+2369,Hatonchastcl,Hatonchastel,tesseract
+2381,Bclpré,Belpré,tesseract
+2382,Sainct-Sauvcur,Sainct-Sauveur,scan
+2384,Haullc-Scille,Haulte-Scille,tesseract
+2387,Moycnmouslier,Moyenmoustier,tesseract
+2389,Aullrey-en-Vosges,Aultrey-en-Vosges,tesseract
+2390,Chanioysy,Chamoysy,old forms
+2392,Salivai,Salival,tesseract
+2393,Sainct-Epvrc,Sainct-Epvre,tesseract
+2394,Sainclc-Maric-aux-Bois,Saincte-Marie-aux-Bois,tesseract
+2395,Sainci-Benoisten Woyvre,Sainct-Benoist en Woyvre,scan
+2398,Tboley,Tholey,scan
+2401,Frayslroff,Fraystroff,DicoTopo
+2407,Bouxières',Bouxières,scan
+2411,Saincte-Maric es Metz,Saincte-Marie ès Metz,tesseract
+2414,Frauw-Laulhern,Frauw-Lauthern,tesseract
+2429,Laislre-soub-Amanee,Laistre-soub-Amance,tesseract
+2433,Gcrbéviller,Gerbéviller,tesseract
+2435,Landécouri,Landécourt,DicoTopo
+2436,Le Moynicr soub Deneuvre,Le Moynier soub Deneuvre,tesseract
+2437,Léomonl,Léomont,tesseract
+2441,Dérivai,Hérival,scan
+2459,Thieeourt,Thiecourt,DicoTopo
+2465,Grevenlhal,Greventhal,tesseract
+2468,Baon,Raon,tesseract
+2480,Marbotie,Marbotte,scan
+2484,Gclloucourl,Gelloucourt,tesseract

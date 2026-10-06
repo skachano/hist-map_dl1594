@@ -56,6 +56,14 @@ def test_correction_pages():
     assert corrections._bare("Sanbach* (et non Sambach)") == "sanbach"
 
 
+def test_a_correction_finds_its_line_on_the_page_it_cites():
+    rows = [_row("204", "Einu'ciller cl Enweillcr, vil., com. d'Oberkirchen, 1485, 1510, 1554."),
+            _row("205", "Eschwillcr, ham., com. de Volmunster, 2227.")]
+    # correction 25: "L'art. Eimceillcr, même page, doit être remplacé…" (p. 204)
+    assert corrections._find(rows, "Eimceillcr", "204") is rows[0]
+    assert corrections._find(rows, "Eschwillcr", "206") is rows[1]   # a neighbouring page still counts
+
+
 @pytest.mark.skipif(not (config.CURATED_DIR / "entries.csv").exists(), reason="run make curate first")
 def test_curated_data_agrees_with_the_sample():
     """The hand-checked sample (Stage 2) and the generated tables: same section, same district
@@ -98,3 +106,22 @@ def test_unlocated_type():
     assert t({"name": "Capucins de Nancy", "text": "Capucins de Nancy.", "series": "convents_m"}, {}) == \
         "Towns and religious houses (the lists)"
     assert t({"name": "Buz", "text": "Buz.", "series": "main"}, {"place_type": "village"}) == "Villages and others"
+
+
+def test_rename_entries():
+    entries = [{"no": 7, "name": "Dombaslc", "text": "Dombaslc."},
+               {"no": 518, "name": "Malleloy et", "text": "Malleloy et Mallenoy."},
+               {"no": 1995, "name": "M»?ny", "text": "M»?ny."}]
+    build.rename_entries(entries, [{"no": "7", "read": "Dombaslc", "name": "Dombasle"},
+                                   {"no": "518", "read": "Malleloy et", "name": "Malleloy"}], {1995: "Magny"})
+    assert [(e["name"], e["text"]) for e in entries] == [
+        ("Dombasle", "Dombasle."), ("Malleloy", "Malleloy et Mallenoy."), ("Magny", "Magny.")]
+    with pytest.raises(ValueError, match="not 'Dombaslc'"):   # the table no longer fits the extraction
+        build.rename_entries(entries, [{"no": "7", "read": "Dombaslc", "name": "Dombasle"}], {})
+
+
+def test_entry_name_readings_fit_the_entries():
+    entries = {e["no"]: e["name"] for e in build.read_jsonl(config.EXTRACTED_DIR / "entries.jsonl")}
+    for r in build.load_manual("entry_names"):
+        assert entries[int(r["no"])] == r["read"], r["no"]
+        assert r["source"] in {"DicoTopo", "old forms", "tesseract", "scan"}

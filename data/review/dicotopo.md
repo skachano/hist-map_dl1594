@@ -21,11 +21,11 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   4. Orme (L’) [Fontaine, Méligny-le-Grand, canton Void-Vacon, 55] via *Orme (L’)*, 0.82, 49 km
   5. Orme (L’) [Hameau, Mortagne, canton Brouvelieures, 88] via *Orme (L’)*, 0.80, 60 km
 - 233 Foucquerey (provostship-einville) — by hand: Foulcrey; rank 2
-  1. Foucrey (La Haute et la Basse) [Fermes, Serres, canton Lunéville-Nord, 54] via *Foucquerey (1524)*, 0.91, 5 km
-  2. Foulcrey [canton Réchicourt-le-Château, 54] via *Foucrey (1782)*, 0.76, 27 km
+  1. Foucrey (La Haute et la Basse) [Fermes, Serres, canton Lunéville-Nord, 54] via *Foucquerey (1524)*, 0.91, 6 km
+  2. Foulcrey [canton Réchicourt-le-Château, 54] via *Foucrey (1782)*, 0.76, 26 km
   3. Sauceray [Hameau, Saint-Michel-sur-Meurthe, canton Saint-Dié-des-Vosges-Ouest, 88] via *Sauceray*, 0.68, 47 km
-  4. Fomerey [Canton d’Épinal, canton Épinal-Ouest, 88] via *Fourmerey (1381)*, 0.68, 51 km
-  5. Fouchères [Fouchères-aux-Bois, canton Montiers-sur-Saulx, 55] via *Fouchères*, 0.66, 93 km
+  4. Fomerey [Canton d’Épinal, canton Épinal-Ouest, 88] via *Fourmerey (1381)*, 0.67, 52 km
+  5. Fouchères [Fouchères-aux-Bois, canton Montiers-sur-Saulx, 55] via *Fouchères*, 0.66, 94 km
 - 272 Gloi»ville (provostship-azerailles) — by hand: Glonville; rank 1
   1. Glonville [canton Baccarat, 54] via *Glonville*, 0.95, 3 km
   2. Giroville ou Gironville [Blâmont, canton Blâmont, 54] via *Gironville*, 0.78, 15 km
@@ -33,10 +33,10 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   4. Loyville [Hameau, Sillegny, canton Verny, 57] via *Loyville*, 0.74, 68 km
   5. Oëlleville [canton Mirecourt, 88] via *Oleiville*, 0.73, 53 km
 - 301 Leuvdine (ban-anould) — by hand: Ban-de-Laveline; rank 1
-  1. Ban-de-Laveline [canton Saint-Dié-des-Vosges-Est, 88] via *Leuveline (1656)*, 0.77, 4 km
-  2. Lubine [canton Provenchères-sur-Fave, 88] via *Leubines (1334)*, 0.72, 14 km
+  1. Ban-de-Laveline [canton Saint-Dié-des-Vosges-Est, 88] via *Leuveline (1656)*, 0.77, 3 km
+  2. Lubine [canton Provenchères-sur-Fave, 88] via *Leubines (1334)*, 0.72, 13 km
   3. Lauvrimeix [Écart, Saulxures-sur-Moselotte, canton Saulxures-sur-Moselotte, 88] via *Lauvrimeix*, 0.70, 36 km
-  4. Laveline-devant-Bruyères [canton Bruyères, 88] via *Leaveline (1584)*, 0.70, 20 km
+  4. Laveline-devant-Bruyères [canton Bruyères, 88] via *Leaveline (1584)*, 0.70, 21 km
   5. Gaudine [Écart, Bertrimoutier, canton Saint-Dié-des-Vosges-Est, 88] via *Gaudine*, 0.69, 6 km
 - 307 Brecoocel (ban-ban-le-duc) — by hand: Anould (written Breconcel, also Braconcelle); not in the top 5
   1. Braconseil [Hameau, Ban-sur-Meurthe-Clefcy, canton Fraize, 88] via *Breconcel (1594)*, 0.84, ?
@@ -82,7 +82,7 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Mancy [Hameau, Bettelainville, canton Metzervisse, 57] via *Mancy*, 0.74, ?
   3. Capucins (Les) [Ancienne chapelle, Dieuze, canton Dieuze, 54] via *Capucins (Les)*, 0.72, ?
 - eynothaws: Eynothaws
-  1. Endenthal [Hameau, Dabo, canton Phalsbourg, 54] via *Enthal (1790)*, 0.58, 61 km
+  1. Endenthal [Hameau, Dabo, canton Phalsbourg, 54] via *Enthal (1790)*, 0.59, 61 km
   2. Erlenhoff [Ferme, Grostenquin, canton Grostenquin, 57] via *Ellnerhoff*, 0.58, 61 km
   3. Moder (Ruisseau de) [57] via *Mother*, 0.53, ?
 - hamanges: Hamanges
@@ -126,9 +126,9 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Mentseille [Écart, Fléville-Lixières, canton Conflans-en-Jarnisy, 54] via *Mentseille*, 0.42, 102 km
   3. Rouceux [Neufchâteau, canton Neufchâteau, 88] via *Ronsseut*, 0.40, 168 km
 - ronchiere-liai: Ronchiere liai
-  1. Rancière [Cense, Tranqueville-Graux, canton Coussey, 88] via *Roncières (1847)*, 0.67, 41 km
+  1. Rancière [Cense, Tranqueville-Graux, canton Coussey, 88] via *Roncières (1847)*, 0.68, 40 km
   2. Provenchères-lès-Darney [canton Darney, 88] via *Provenchiere (1424)*, 0.62, 7 km
-  3. Sèche-Oreille [Hameau, Plombières-les-Bains, canton Plombières-les-Bains, 88] via *Seicheoreille (1711)*, 0.62, 35 km
+  3. Sèche-Oreille [Hameau, Plombières-les-Bains, canton Plombières-les-Bains, 88] via *Seicheoreille (1711)*, 0.61, 35 km
 - sainct-pierre-es-metz: Sainct-Pierre es Metz
   1. Pierre ou Pierre-la-Treiche [Pierre-la-Treiche, canton Toul-Sud, 54] via *Pierre*, 0.80, ?
   2. Ban-Saint-Pierre [Église, Villers-Stoncourt, canton Pange, 57] via *Saint-Pierremont*, 0.78, ?
@@ -167,16 +167,16 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   3. Villotte [canton Lamarche, 88] via *Villete (1317)*, 0.80, ?
 - weuftrhaus: WeUftrhaus
   1. Boustroff [canton Grostenquin, 57] via *Boustro*, 0.53, 68 km
-  2. Vitrey [canton Vézelise, 54] via *Weutrei (1408)*, 0.36, 132 km
+  2. Vitrey [canton Vézelise, 54] via *Weutrei (1408)*, 0.37, 131 km
   3. Sous-le-Lieu [Écart, Cornimont, canton Saulxures-sur-Moselotte, 88] via *Sous-le-Lieu*, 0.34, 142 km
 
 ## Settlements at their commune: DicoTopo's name (0)
 
 Approximate places (no Wikidata or GeoNames item) with a match within 12 km: the modern name, and
-the hamlet's own point where DicoTopo gives one (not its commune's); 30 more checked by hand (rules.yaml `dicotopo_reviewed`).
+the hamlet's own point where DicoTopo gives one (not its commune's); 32 more checked by hand (rules.yaml `dicotopo_reviewed`).
 
 
 ## Settlements DicoTopo places elsewhere (0)
 
-A match of 0.85 or better more than 15 km from where the place is, and nearer its district; 19 more checked by hand (rules.yaml `dicotopo_reviewed`).
+A match of 0.85 or better more than 15 km from where the place is, and nearer its district; 18 more checked by hand (rules.yaml `dicotopo_reviewed`).
 

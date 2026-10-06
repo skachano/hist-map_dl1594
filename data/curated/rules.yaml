@@ -92,6 +92,115 @@ entry_names:
 # Names a territory has in use, instead of "<type> of <seat>" (as in hist_map).
 territory_names:
   bailiwick-allemagne: {fr: "Bailliage d'Allemagne", de: "Deutsches Bellistum", en: "German Bailiwick"}
+  # the book's own names for the territories, OCR corrected; they replace the seat as the scan read it
+  bailiwick-apremont: {variants: ["Bailliage d'Aspremont"]}
+  bailiwick-chatel-sur-moselle: {variants: ["Bailliage de Chastel-sur-Moselle"]}
+  bailiwick-epinal: {variants: ["Bailliage d'Espinal"]}
+  bailiwick-hattonchatel: {variants: ["Bailliage de Hatonchastel"]}
+  bailiwick-vaudemont: {variants: ["Bailliage du comté de Vaudémont"]}
+  county-vaudemont: {variants: ["Bailliage du comté de Vaudémont"]}
+  provostship-nancy: {variants: ["Prévosté et chastellainie de Nancy"]}
+  provostship-rosieres: {variants: ["Prévosté et chastellainie de Rosières"]}
+  provostship-einville: {variants: ["Prévosté et chastellainie d'Einville"]}
+  provostship-luneville: {variants: ["Prévosté et chastellainie de Lunéville"]}
+  provostship-saint-die: {variants: ["Prévosté et chastellainie de Sainct-Diey"]}
+  provostship-amance: {variants: ["Prévosté et chastellainie d'Amance"]}
+  provostship-preny: {variants: ["Prévosté et chastellainie de Preny"]}
+  provostship-gondreville: {variants: ["Prévosté et chastellainie de Gondreville"]}
+  provostship-bruyeres: {variants: ["Prévosté et chastellainie de Bruyères"]}
+  provostship-arches: {variants: ["Prévosté et chastellainie d'Arches"]}
+  provostship-charmes: {variants: ["Prévosté et chastellainie de Charmes"]}
+  provostship-mirecourt-et-remoncourt: {variants: ["Prévosté et chastellainie de Mirecourt et Remoncourt"]}
+  provostship-dompaire-et-valfroicourt: {variants: ["Prévosté et chastellainie de Dompaire et Valfroicourt"]}
+  provostship-darney: {variants: ["Prévosté et chastellainie de Darney"]}
+  provostship-chatenois-et-neufchateau: {variants: ["Prévosté et chastellainie de Chastenois et Neufchasteau"]}
+  provostship-deneuvre: {variants: ["Prévosté et chastellainie de Deneuvre"]}
+  lordship-deneuvre: {variants: ["Prévosté et chastellainie de Deneuvre"]}
+  provostship-rimling: {variants: ["Prévosté et sergenterie de Rumelingen"]}
+  provostship-tantimont: {variants: ["Prévosté du ban de Tantymont"]}
+  provostship-sierck: {variants: ["Prévosté et soub-prévosté de la Landt-Schultesserie de Sierck"]}
+  provostship-conde-sierck: {fr: "Prévôté de Condé", variants: ["Prévosté de Conchen, aliàs Condé"]}
+  castellany-conde-et-val-des-faulx: {variants: ["Chastellainie et mairie de Condé et Val des Faulx"]}
+  castellany-dieuze: {variants: ["Chastellainie de Dieuze"]}
+  castellany-hombourg-et-saint-avold: {de: "Kellerei Homburg und Sankt Avold", variants: ["Les chastellainies, terres et seigneuries de Hombourg et Sainct-Avol"]}
+  lordship-hombourg-et-saint-avold: {de: "Herrschaft Homburg und Sankt Avold", variants: ["Les chastellainies, terres et seigneuries de Hombourg et Sainct-Avol"]}
+  castellany-marimont: {variants: ["Chastellainie de Morsperg"]}
+  office-boulay: {variants: ["Office et chastellainie de Boullay"]}
+  office-sarreguemines: {variants: ["Office et chastellainie de Guemunde"]}
+  office-schaumbourg: {de: "Amt Schaumburg", en: "Office of Schaumburg", variants: ["Office et chastellainie de Schawembourg"]}
+  office-siersberg: {variants: ["Office et chastellainie de Sirsperg"]}
+  office-vaudrevange: {de: "Amt Wallerfangen", en: "Office of Wallerfangen", variants: ["Office et recepte de Valderfanges"]}
+  district-beaurains: {de: "Bezirk Berus", en: "District of Berus", fr: "Circonscription de Berus", variants: ["Terre et seigneurie de Beaurains"]}
+  lordship-beaurains: {de: "Herrschaft Berus", en: "Lordship of Berus", fr: "Seigneurie de Berus", variants: ["Terre et seigneurie de Beaurains"]}
+  district-bitche: {variants: ["Terre et seigneurie de Biche"]}
+  lordship-bitche: {variants: ["Terre et seigneurie de Biche"]}
+  district-blamont: {variants: ["Comté de Blamont"]}
+  district-faulquemont: {variants: ["Terre et seigneurie de Faulquemont"]}
+  lordship-faulquemont: {variants: ["Terre et seigneurie de Faulquemont"]}
+  district-forbach: {variants: ["Terre et seigneurie de Forbach"]}
+  lordship-forbach: {variants: ["Terre et seigneurie de Forbach"]}
+  district-merzig: {variants: ["Mertzig"]}
+  district-morhange: {variants: ["Terre et seigneurie de Morhanges"]}
+  lordship-morhange: {variants: ["Terre et seigneurie de Morhanges"]}
+  district-phalsbourg: {de: "Bezirk Pfalzburg", variants: ["Terre et seigneurie de Pfaltzbourg"]}
+  lordship-phalsbourg: {de: "Herrschaft Pfalzburg", variants: ["Terre et seigneurie de Pfaltzbourg"]}
+  district-puttelange: {de: "Bezirk Püttlingen", variants: ["Seigneurie de Puttelenges"]}
+  lordship-puttelange: {de: "Herrschaft Püttlingen", variants: ["Seigneurie de Puttelenges"]}
+  district-raon-l-etape: {de: "Bezirk Raon-l'Étape", variants: ["Raon"]}
+  district-saargau: {variants: ["Le Sargaw"]}
+  district-saint-hippolyte: {variants: ["Sainct-Hippolite"]}
+  district-sarralbe: {de: "Bezirk Saaralben", variants: ["Terre et seigneurie d'Aulbe"]}
+  lordship-sarralbe: {de: "Herrschaft Saaralben", variants: ["Terre et seigneurie d'Aulbe"]}
+  district-sarreck: {de: "Bezirk Saareck", variants: ["Terre de Sarech"]}
+  lordship-sarreck: {de: "Herrschaft Saareck", variants: ["Terre de Sarech"]}
+  district-soultzbach: {de: "Bezirk Sulzbach", variants: ["Sultzbach"]}
+  district-spitzemberg: {variants: ["Terre de Spitzemberg"]}
+  lordship-spitzemberg: {variants: ["Terre de Spitzemberg"]}
+  district-bainville-aux-miroirs: {variants: ["Bainville-aux-Mirouers"]}
+  ban-anould: {variants: ["Ban d'Anoul"]}
+  ban-ban-le-duc: {de: "Herzogsbann Clefcy", en: "Duke's Ban of Clefcy", fr: "Ban le Duc de Clefcy", variants: ["Ban le duc de Cleuvecy"]}
+  ban-bellefontaine: {variants: []}
+  ban-belmont: {variants: []}
+  ban-clefcy: {variants: ["Ban de Cleuvecy"]}
+  ban-etival: {variants: ["Ban d'Estival"]}
+  ban-fraize: {variants: []}
+  ban-grandvillers-et-dompierre: {variants: ["Bans de Grandviller et Dompierre"]}
+  ban-longchamp: {de: "Große Meierei des Banns Longchamp", en: "Great Mayoralty of the Ban of Longchamp", fr: "Grande Mairie du ban de Longchamp", variants: ["La Grande Mairie du ban de Lonchamp"]}
+  ban-ramonchamp: {de: "Große Meierei des Banns Ramonchamp", en: "Great Mayoralty of the Ban of Ramonchamp", fr: "Grande Mairie du ban de Ramonchamp", variants: []}
+  ban-maizey: {variants: []}
+  ban-sainct-pierre: {de: "Bann Saint-Pierre", en: "Ban Saint-Pierre", fr: "Ban Saint-Pierre", variants: ["Ban Sainct-Pierre"]}
+  ban-saint-die: {variants: ["Ban Sainct-Diey"]}
+  ban-sardey: {variants: []}
+  ban-taintrux: {variants: []}
+  ban-vagney: {variants: ["Ban de Vagny"]}
+  ban-vaudicourt: {variants: []}
+  mayoralty-altheim: {variants: ["Mairie et doyenné d'Altheim"]}
+  mayoralty-bertrimoutier: {variants: ["Mairie de Bertrimonstier"]}
+  mayoralty-berungen: {de: "Meierei Bining", en: "Mayoralty of Bining", fr: "Mairie de Bining", variants: []}
+  mayoralty-bousseviller: {variants: ["Mairie de Bussweiller"]}
+  mayoralty-meurthe: {variants: []}
+  mayoralty-rolbing: {variants: []}
+  mayoralty-sainte-marguerite: {variants: ["Mairie Saincte-Marguerite"]}
+  mayoralty-usuaires: {de: "Meierei der Usuaires", en: "Mayoralty of the Usuaires", fr: "Mairie des Usuaires", variants: []}
+  mayoralty-walschbronn: {variants: ["Mairie de Waldsborn"]}
+  town-district-marsal: {variants: ["Ville et chastellainie de Marsal"]}
+  val-harol: {de: "Val de Harol", en: "Val de Harol", variants: ["Val d'Arol"]}
+  county-chaligny: {variants: ["Comté de Challigny"]}
+  lordship-commercy: {variants: ["Terre de Commercy"]}
+  lordship-faucompierre: {variants: ["Seigneurie de Faulcompierre"]}
+  lordship-fontenoy-le-chateau: {variants: ["Terre de Fontenoy"]}
+  lordship-hey: {variants: ["Terre de Hey"]}
+  lordship-l-alleu: {variants: ["Terre de l'Alloeud"]}
+  lordship-l-avant-garde: {fr: "Seigneurie de l'Avant-Garde", variants: ["Terre de l'Avantgarde"]}
+  lordship-le-chatelet: {fr: "Seigneurie du Châtelet", variants: ["Terre du Chastelet"]}
+  lordship-pierrefort: {variants: ["Terre de Pierrefort"]}
+  lordship-varsberg: {variants: ["Terre de Warssberg"]}
+  lordship-warde-de-wisembach: {de: "Herrschaft Warde von Wisembach", en: "Lordship of the Warde of Wisembach", fr: "Seigneurie de la Warde de Wisembach", variants: ["Terre de la Warde de Wysembach"]}
+  lordship-warde-du-saulcy: {de: "Herrschaft Warde von Saulcy", en: "Lordship of the Warde of Saulcy", fr: "Seigneurie de la Warde du Saulcy", variants: ["Terre de la Warde du Saulcy"]}
+  bailiwick-vosges: {de: "Bellistum Vogesen", en: "Bailiwick of the Vosges"}
+  provostship-sierck-prevote-propre: {de: "Eigentliche Schultheißerei Sierck", en: "Provostship of Sierck proper"}
+  val-ajol: {de: "Val d'Ajol", en: "Val d'Ajol"}
+  val-liepvre: {de: "Lebertal", en: "Val de Lièpvre"}
 
 # Entries the scan ran together, as printed: {number as read: [{"no", text}, …]} ("no" quoted: YAML reads a bare no as false).
 entry_splits:
@@ -101,6 +210,8 @@ entry_splits:
 
 # Index lines for entries whose numbers led to the wrong line (checked by name and district).
 entry_index:
+  1254: "Fremmesdr'* v:-»m. de Rehlingen"   # "Frymestroff" (sub-provostship of Sierck): Fremersdorf, the line that prints 1254; not Rustroff
+  1652: "Diffembach-lès-Puttclange"   # "Dieffembach" (Puttelange): the line that prints 16»2; not Diffembach-lès-Hellimer
   1003: Chaumouzcy      # "Chamoysy", old form of Chaumousey; the index prints 1005
   272: Glonvîlle        # "Gloi»ville, partie" (Azerailles): Glonville, whose index line prints only 258
   1672: Berus           # "La ville de Beaurains, Berriss": the index prints "Saarlouis (Pr.) 1672" without its comma
@@ -174,6 +285,8 @@ index_spellings:
 # Places for entries the index doesn't identify (a new place with the entry's name).
 entry_places:
   1411: nittel          # "Nittel" (office of Siersberg); the index has no line for it
+  2103: prieure-de-hesse   # "Prieuré de Hesse": the priory, apart from the village of Hesse
+  2229: contwig         # "Conthil, en partie" (mayoralty of Hilsperg, seigneurie of Bitche): Contwig, not the index's Conthil near Château-Salins
   # entries Marichal identifies apart from the index line that names them (Alix n°, DicoTopo)
   610: laveline-devant-bruyeres-610   # "Leavéline": Laveline-devant-Bruyères; the line for Laveline-du-Houx is 702's
   852: le-charmois-bains   # "Le Charmois devant Bains": Le Charmois of Bains-les-Bains, not Charmois-l'Orgueilleux (996)
@@ -336,15 +449,17 @@ geocode:
   phalstourg-eh-l-de-canton: {wikidata: Q22160, note: "Phalsbourg: Pfaltzbourg, chef-lieu de canton (the index)"}
   sarrallk: {wikidata: Q21979, note: "Sarralbe: Aulbe, chasteau et ville (1594), dén. Th. Alix (Bouteiller)"}
   # the remaining unlocated places, against DicoTopo, Wikidata and GeoNames (2026-10-05)
-  contliiij: {wikidata: Q567847, note: "Contwig (the scan reads Contliiîj), by the seigneurie of Bitche"}
+  contwig: {wikidata: Q567847, note: "Contwig (the book's Conthil; the scan read Contliiîj), by the seigneurie of Bitche; not Conthil near Château-Salins"}
   fremmesdr-v-m-de-rehlingen: {wikidata: Q1455187, note: "Fremersdorf (Frymestroff), com. de Rehlingen (the index): Rehlingen-Siersburg"}
   mitiel-bollenbacli: {wikidata: Q84707298, name_fr: "Mittelbollenbach", note: "Mittelbollenbach (Mittelwillembach), by Sien (the index)"}
   niedersimtenou-obersimlen: {wikidata: Q647195, note: "Obersimten: the index gives Niedersimten or Obersimten, canton de Pirmasens (Bav.)"}
   obeistiinbach: {wikidata: Q21486, note: "Obersteinbach (Bas-Rhin), the village of the mairie of Steinbach (the index)"}
   liesstcrthah-office-de-schambourg: {wikidata: Q1262819, note: "Löstertal (Liessterthal), office of Schaumburg"}
   nidcck: {"at": "Sarralbe", "name_fr": "Nideck", "note": "Nideck, a lost village of the terre of Sarralbe (the index; DicoTopo)"}
-  prieure-de-liesse: {"at": "Hesse", "name_fr": "Prieuré de Hesse", "note": "the priory of Hesse by Sarrebourg (the scan reads liesse)"}
+  prieure-de-hesse: {"at": "Hesse", "name_fr": "Prieuré de Hesse", "note": "the priory of Hesse by Sarrebourg (the scan read liesse)"}
   le-franc-chazcau: {"at": "Vagney", "name_fr": "Les Francs-Chasaux", "note": "Les Francs-Chasaux, a house at Vagney (the index), a former seigneurie (DicoTopo)"}
+  la-forei: {name_fr: "La Forêt", note: "La Forêt, a hamlet of La Chapelle-aux-Bois: La Forrest, 1594 (DicoTopo, Marichal)"}
+  jaileray: {name_fr: "Le Jalleray", note: "Le Jalleray, a hamlet of Bellefontaine: Jallerel, 1593 (DicoTopo, Marichal)"}
   la-foresterie: {"at": "Longchamp", "name_fr": "La Foresterie du ban de Longchamp", "note": "the Foresterie of the ban of Longchamp (the index), placed at Longchamp"}
   idontctair: {"at": "Neuvillers-sur-Fave", "name_fr": "Le Moncel", "note": "Le Moncel, a farm of Neuvillers-sur-Fave: Le Moncel (1594), Alix n° 407 (Marichal, DicoTopo); the index's line was misread by correction 44"}
   # entries Marichal cites by number (Alix n°) where the placement disagreed with him
@@ -358,7 +473,7 @@ geocode:
   dommarlin-lcs-ville: {name_fr: "Dommartin-lès-Ville", note: "Dommartin-lès-Ville, a hamlet of Ville-sur-Illon (the index's Dommarlin-lcs-Ville)"}
   # the Dénombrement's spellings quoted by Bouteiller (dén. Th. Alix)
   mailing-boulay: {wikidata: Q3126160, note: "Halling(-lès-Boulay), canton de Boulay: Hallingen, 1594 (Bouteiller); the index's line, read Mailing, stands among the H (p. 215)"}
-  bcltsstroff: {wikidata: Q22447, note: "Bettelainville (Bettsdorf): Bettsstroff, 1594 (Bouteiller)"}
+  bettsstroff: {wikidata: Q22447, note: "Bettelainville (Bettsdorf): Bettsstroff, 1594 (Bouteiller)"}
   scharhmorther: {"at": "Charleville-sous-Bois", "name_fr": "Schwartzmœrter", "note": "Schwartzmœrter, a destroyed farm between Charleville, Épange, the mill of Renange and Hinckange: Schartezmorther, 1594 (Bouteiller)"}
   hiol: {wikidata: Q553441, note: "Riol, com. de Longuich, canton de Trêves: the index's line for Ryol (1342), as restored by the editors' correction 59 (the scan reads lliol)"}
   lymingen: {"unlocated": true, "note": "Lymingen, of the office of Boulay: 'localité incertaine' for Bouteiller too (dén. Th. Alix, 1594)"}
@@ -419,6 +534,7 @@ geocode:
   titling: {name_fr: "Titting", note: "Titting, a hamlet of Holling (DicoTopo: Tutingen (1594)); the index's Titling"}
   verconroye: {name_fr: "Le Val-Courroye", note: "Le Val-Courroye, an outlying farm of Saint-Nabord (DicoTopo: Le Verd Corrois (1594)); the index's Verconroye"}
   mexel: {name_fr: "Mexet", note: "Mexet, an outlying farm of Haussonville (DicoTopo: Marxey (1594)); the index's Mexel'"}
+  scheuem: {wikidata: Q23561085, note: "Scheuern, a part of Tholey (the index's Scheuem); not Schüren"}
   scheuer-hof: {approximate: nohn, note: "Scheuer-Hof, a farm of the village of Nohn (Saarland) that no longer exists (the editor's corrections); not the Scheuer-Hof in Luxembourg. Placed at Nohn"}
   # hamlets, farms and lost places checked against the index (location audit)
   aray-le-lan-v-ban-de-moyenmouticr: {"at": "Moyenmoutier", "note": "le ban d'Aray, a ban of Moyenmoutier (the index)"}
@@ -477,6 +593,9 @@ geocode:
 # the report no longer lists them ({place id: why}).
 dicotopo_reviewed:
   # names (section 1)
+  grosrederching: "Gros-Réderching (the index, 2184); DicoTopo gives the same Riderchingen (1594) to Petit-Réderching (2168)"
+  la-foresterie-du-ban-de-vagncy: "the Foresterie of the ban of Vagney, Alix n° 817 (Marichal); not that of the ban of Moulin"
+  kerprich-hemmersdorf: "Kerprich-Hemmersdorf, by hand (Hymerrstorff); not Halstroff"
   les-neuves-granges: "Les Neuves-Granges, as the index; DicoTopo matched only a fragment, Les granges…"
   le-void-de-girancourl: "Le Void-de-Girancourt, as the index; not the sawmill of Gorhey"
   hargarten-les-laumelsfeld: "Hargarten-lès-Laumelsfeld, hist_map's name, which tells it from the other Hargartens"
@@ -509,7 +628,7 @@ dicotopo_reviewed:
   milly-sur-bradon: "Milly-sur-Bradon, the commune of Milly(-devant-Dun), canton de Dun (the index)"
   murvaux: "Murvaux, canton de Dun (the index); not the mill of Morvaux"
   mont-devant-sassey: "Mont-devant-Sassey, canton de Dun (the index); not Mont-sous-les-Côtes"
-  prieure-de-liesse: "the priory of Hesse, not the village"
+  prieure-de-hesse: "the priory of Hesse, not the village"
   # placements (section 2)
   le-charmois-bains: "Le Charmois devant Bains (the entry's own words; Marichal), listed last in the mayoralty of Longchamp before the terre of Fontenoy; not the grange of Charmois at Le Val-d'Ajol"
   kollig: "Köllig by Nittel, the book's Kolchen (rules.yaml geocode); not Kirschnaumen"

@@ -7,12 +7,43 @@ azelot,アズロ,wikidata
 azerailles,アズレイユ,wikidata
 bagneux,バニュー,wikidata
 bailiwick-allemagne,ドイツ・バイイ管区,manual
-bailiwick-apremont,アスプルモン＝ラ＝フォレバイイ管区,seat + type
-bailiwick-epinal,エピナルバイイ管区,seat + type
-bailiwick-nancy,ナンシーバイイ管区,seat + type
-bailiwick-vaudemont,ヴォーデモンバイイ管区,seat + type
+bailiwick-apremont,アプルモン・バイイ管区,manual
+bailiwick-chatel-sur-moselle,シャテル＝シュル＝モゼル・バイイ管区,manual
+bailiwick-epinal,エピナル・バイイ管区,manual
+bailiwick-hattonchatel,アットンシャテル・バイイ管区,manual
+bailiwick-nancy,ナンシー・バイイ管区,manual
+bailiwick-vaudemont,ヴォーデモン・バイイ管区,manual
+bailiwick-vosges,ヴォージュ・バイイ管区,manual
 bains-les-bains,バン＝レ＝バン,wikidata
 baldringen,バルトリンゲン,wikidata
+ban-anould,アヌーのバン,manual
+ban-arches,アルシュのバン,manual
+ban-ban-le-duc,クレフシーの公爵のバン,manual
+ban-bayecourt,バイユクールのバン,manual
+ban-bellefontaine,ベルフォンテーヌのバン,manual
+ban-belmont,ベルモンのバン,manual
+ban-bouxieres,ブクシエールのバン,manual
+ban-clefcy,クレフシーのバン,manual
+ban-escles,エクルのバン,manual
+ban-etival,エティヴァルのバン,manual
+ban-fraize,フレーズのバン,manual
+ban-girancourt,ジランクールのバン,manual
+ban-grandvillers-et-dompierre,グランヴィレール・ドンピエールのバン,manual
+ban-harol,アロルのバン,manual
+ban-longchamp,ロンシャンのバン大村長区,manual
+ban-madonne,マドンヌのバン,manual
+ban-maizey,メゼーのバン,manual
+ban-molin,モランのバン,manual
+ban-ramonchamp,ラモンシャンのバン大村長区,manual
+ban-sainct-pierre,サン＝ピエールのバン,manual
+ban-saint-die,サン＝ディエのバン,manual
+ban-sardey,サルデーのバン,manual
+ban-sept,セのバン,manual
+ban-taintrux,タントリュのバン,manual
+ban-tendon,タンドンのバン,manual
+ban-uxegney,ユクスニーのバン,manual
+ban-vagney,ヴァニーのバン,manual
+ban-vaudicourt,ヴォーディクールのバン,manual
 belmont-sur-buttant,ベルモント・スール・ビュトン,wikidata
 biffontaine,ビフォンテーヌ,wikidata
 bitche,ビッシュ,wikidata
@@ -21,28 +52,49 @@ bouxieres-aux-dames,ブジエール＝オー＝ダム,wikidata
 bruyeres,ブリュイエール,wikidata
 bure,ビュール （ムーズ県）,wikidata
 bussang,ビュッサン,wikidata
+castellany-conde-et-val-des-faulx,コンデ・ヴァル・デ・フォー城代管区,manual
+castellany-dieuze,ディウーズ城代管区,manual
+castellany-hombourg-et-saint-avold,オンブール・サン＝タヴォルド城代管区,manual
+castellany-marimont,マリモン城代管区,manual
 chamagne,シャマーニュ,wikidata
 charmes,シャルム,wikidata
 commcrcy,コメルシー,wikidata
 contwig,コントヴィヒ,wikidata
 cornimont,コルニモン,wikidata
-county-blamont,ブラモン伯領,seat + type
-county-vaudemont,ヴォーデモン伯領,seat + type
+county-blamont,ブラモン伯領,manual
+county-chaligny,シャリニー伯領,manual
+county-vaudemont,ヴォーデモン伯領,manual
 court-perl,ペルル裁判区,manual
 crion,クリオン,wikidata
 croismare,クロワマール,wikidata
 custines,キュスティーヌ,wikidata
 darney,ダルネー,wikidata
 derbamont,デルバモン,wikidata
-district-bitche,ビッシュ管区,seat + type
-district-blamont,ブラモン管区,seat + type
-district-phalsbourg,ファルスブール管区,seat + type
+district-bainville-aux-miroirs,バンヴィル＝オー＝ミロワール管区,manual
+district-beaurains,ベールス管区,manual
+district-bitche,ビッシュ管区,manual
+district-blamont,ブラモン管区,manual
+district-faulquemont,フォルクモン管区,manual
+district-forbach,フォルバック管区,manual
+district-merzig,メルツィヒ管区,manual
+district-morhange,モランジュ管区,manual
+district-phalsbourg,ファルスブール管区,manual
+district-puttelange,ピュトランジュ管区,manual
+district-raon-l-etape,ラオン＝レタップ管区,manual
+district-saargau,ザールガウ管区,manual
+district-saint-hippolyte,サン＝ティポリット管区,manual
+district-sarralbe,サラルブ管区,manual
+district-sarreck,サレック管区,manual
+district-soultzbach,スルツバック管区,manual
+district-spitzemberg,スピッツァンベール管区,manual
 docelles,ドセル,wikidata
 dombasle,ドンバール＝シュル＝ムルト,wikidata
 donsieders,ドンジーダス,wikidata
+duchy-lorraine,ロレーヌ公国,manual
 epinal,エピナル,wikidata
 essey-les-nancy,エッセ＝レ＝ナンシー,wikidata
 euvezin,ウーヴザン,wikidata
+fief-keltern-ostern,ケルテルン＝オステルン封土,manual
 fleville-devant-nancy,フレヴィル＝ドゥヴァン＝ナンシー,wikidata
 flirey,フリレ,wikidata
 fougerolles,フジュロル,wikidata
@@ -67,33 +119,86 @@ ligneville,リーニュヴィル,wikidata
 longchamp-epinal,ロンシャン,wikidata
 longchamp-sous-chatenois,ロンシャン＝スー＝シャトノワ,wikidata
 longchamps-sur-aire,ロンシャン＝シュル＝エール,wikidata
-lordship-bitche,ビッシュ領,seat + type
-lordship-commercy,コメルシー領,seat + type
-lordship-phalsbourg,ファルスブール領,seat + type
+lordship-beaurains,ベールス領,manual
+lordship-bitche,ビッシュ領,manual
+lordship-commercy,コメルシー領,manual
+lordship-deneuvre,ドゥヌーヴル領,manual
+lordship-faucompierre,フォコンピエール領,manual
+lordship-faulquemont,フォルクモン領,manual
+lordship-fontenoy-le-chateau,フォントノワ＝ル＝シャトー領,manual
+lordship-forbach,フォルバック領,manual
+lordship-hey,エ領,manual
+lordship-hombourg-et-saint-avold,オンブール・サン＝タヴォルド領,manual
+lordship-l-alleu,ラルー領,manual
+lordship-l-avant-garde,ラヴァン＝ギャルド領,manual
+lordship-le-chatelet,ル・シャトレ領,manual
+lordship-morhange,モランジュ領,manual
+lordship-phalsbourg,ファルスブール領,manual
+lordship-pierrefort,ピエールフォール領,manual
+lordship-puttelange,ピュトランジュ領,manual
+lordship-sarralbe,サラルブ領,manual
+lordship-sarreck,サレック領,manual
+lordship-spitzemberg,スピッツァンベール領,manual
+lordship-varsberg,ヴァルスベルグ領,manual
+lordship-warde-de-wisembach,ヴィザンバックのワルド領,manual
+lordship-warde-du-saulcy,ソシーのワルド領,manual
 lostertal,レスタータール,wikidata
 luneville,リュネヴィル,wikidata
 malzeville,マルゼヴィル,wikidata
 manoncourt-en-vermois,マノンクール＝アン＝ヴェルモワ,wikidata
 mars-la-tour,マルス・ラ・トゥール村,wikidata
 maxeville,マクセヴィル,wikidata
+mayoralty-altheim,アルタイム村長区,manual
+mayoralty-bertrimoutier,ベルトリムティエ村長区,manual
+mayoralty-berungen,ビナン村長区,manual
+mayoralty-bousseviller,ブスヴィレール村長区,manual
+mayoralty-hilsperg,ヒルスペルグ村長区,manual
+mayoralty-longchamp,ロンシャン村長区,manual
+mayoralty-mandray,マンドレ村長区,manual
+mayoralty-meurthe,ムルト村長区,manual
+mayoralty-rolbing,ロルバン村長区,manual
+mayoralty-sainte-marguerite,サント＝マルグリット村長区,manual
+mayoralty-schorbach,ショルバック村長区,manual
+mayoralty-steimbach,シュタンバック村長区,manual
+mayoralty-usuaires,ユズエール村長区,manual
+mayoralty-walschbronn,ヴァルシュブロン村長区,manual
 mirecourt,ミルクール,wikidata
 nancy,ナンシー,wikidata
 neuviller-sur-moselle,ヌヴィレ＝シュル＝モゼル,wikidata
 obersimten,オーバーシムテン,wikidata
+office-boulay,ブーレ管区,manual
+office-sarreguemines,サルグミーヌ管区,manual
+office-schaumbourg,シャウムブルク管区,manual
+office-siersberg,ジールスブルク管区,manual
+office-vaudrevange,ヴァラーファンゲン管区,manual
 pagny-sur-moselle,パニー＝シュル＝モセル,wikidata
 perl,ペルル (モーゼル),wikidata
 phalsbourg,ファルスブール,wikidata
 pirmasens,ピルマゼンス,wikidata
 preny,プレニー,wikidata
-provostship-azerailles,アズレイユ代官区,seat + type
-provostship-bruyeres,ブリュイエール代官区,seat + type
-provostship-charmes,シャルム代官区,seat + type
-provostship-darney,ダルネー代官区,seat + type
-provostship-luneville,リュネヴィル代官区,seat + type
-provostship-mirecourt-et-remoncourt,ミルクール代官区,seat + type
-provostship-nancy,ナンシー代官区,seat + type
-provostship-preny,プレニー代官区,seat + type
-provostship-saint-die,サン＝ディエ＝デ＝ヴォージュ代官区,seat + type
+provostship-amance,アマンス代官区,manual
+provostship-arches,アルシュ代官区,manual
+provostship-azerailles,アズライユ代官区,manual
+provostship-bruyeres,ブリュイエール代官区,manual
+provostship-charmes,シャルム代官区,manual
+provostship-chatenois-et-neufchateau,シャトノワ・ヌフシャトー代官区,manual
+provostship-conde-sierck,コンデ代官区,manual
+provostship-darney,ダルネ代官区,manual
+provostship-deneuvre,ドゥヌーヴル代官区,manual
+provostship-dompaire-et-valfroicourt,ドンペール・ヴァルフロワクール代官区,manual
+provostship-einville,アンヴィル代官区,manual
+provostship-gondreville,ゴンドルヴィル代官区,manual
+provostship-keltern-ostern,ケルテルン＝オステルン代官区,manual
+provostship-luneville,リュネヴィル代官区,manual
+provostship-mirecourt-et-remoncourt,ミルクール・ルモンクール代官区,manual
+provostship-nancy,ナンシー代官区,manual
+provostship-preny,プレニー代官区,manual
+provostship-rimling,リムラン代官区,manual
+provostship-rosieres,ロジエール代官区,manual
+provostship-saint-die,サン＝ディエ代官区,manual
+provostship-sierck,シールク代官区,manual
+provostship-sierck-prevote-propre,シールク本代官区,manual
+provostship-tantimont,タンティモン代官区,manual
 remiremont,ルミルモン,wikidata
 riol,リオル (ドイツ),wikidata
 rupt-sur-moselle,リュ,wikidata
@@ -107,10 +212,17 @@ saint-privat-la-montagne,サン＝プリヴァ＝ラ＝モンターニュ,wikida
 saint-remy-la-calonne,サン＝レミ＝ラ＝キャロンヌ,wikidata
 senones,スノーヌ,wikidata
 spada,スパーダ,wikidata
+sub-provostship-sierck,シールク副代官区,manual
 tantonville,タントンヴィル,wikidata
+temporality-abbey-saint-avold,サン＝タヴォルド修道院領,manual
 thaon-les-vosges,タオン＝レ＝ヴォージュ,wikidata
 tomblaine,トンブレーヌ,wikidata
 toul,トゥール,wikidata
+town-district-marsal,マルサル都市管区,manual
+town-district-sarrebourg,サールブール都市管区,manual
+val-ajol,アジョル谷区,manual
+val-harol,アロル谷区,manual
+val-liepvre,リエップヴル谷区,manual
 vandoeuvre-les-nancy,ヴァンドゥーヴル＝レ＝ナンシー,wikidata
 vaudemont,ヴォーデモン,wikidata
 vaudeville,ヴォードヴィル (ムルト＝エ＝モゼル県),wikidata
