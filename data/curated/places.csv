@@ -1,5 +1,5 @@
 id,kind,name_fr,name_de,name_en,variants,old_forms,place_type,lat,lon,wikidata_id,geonames_id,modern_country,index_kind,index_commune,index_canton,index_dept,lost,geo_method,geo_confidence,hierarchy,holder_id,counterpart_id,counterpart_basis,source_page,confidence,notes
-bailiwick-allemagne,territory,Bailliage d'Allemagne,Deutsches Bellistum,German Bailiwick,,,bailiwick,49.25731,6.71122,,,,,,,,,territory,medium,admin,,,,77,high,
+bailiwick-allemagne,territory,Bailliage d'Allemagne,Deutsches Bellistum,German Bailiwick,,,bailiwick,49.25663,6.71167,,,,,,,,,territory,medium,admin,,,,77,high,
 bailiwick-apremont,territory,Bailliage d'Apremont,Bellistum Apremont,Bailiwick of Apremont,Bailliage d'Aspremont,,bailiwick,48.85528,5.63917,,,,,,,,,territory,medium,admin,,,,101,high,
 bailiwick-chatel-sur-moselle,territory,Bailliage de Châtel-sur-Moselle,Bellistum Châtel-sur-Moselle,Bailiwick of Châtel-sur-Moselle,Bailliage de Chastel-sur-Moselle,,bailiwick,48.31417,6.39306,,,,,,,,,territory,medium,admin,,,,97,high,
 bailiwick-epinal,territory,Bailliage d'Épinal,Bellistum Épinal,Bailiwick of Épinal,Bailliage d'Espinal,,bailiwick,48.17361,6.45167,,,,,,,,,territory,medium,admin,,,,99,high,
@@ -61,7 +61,7 @@ district-sarralbe,territory,Circonscription de Sarralbe,Bezirk Saaralben,Distric
 district-sarreck,territory,Circonscription de Sarreck,Bezirk Saareck,District of Sarreck,Terre de Sarech,,district,48.79417,7.03417,,,,,,,,,territory,medium,admin,,lordship-sarreck,slot,108,high,
 district-soultzbach,territory,Circonscription de Soultzbach,Bezirk Sulzbach,District of Soultzbach,Sultzbach,,district,48.05521,7.22067,,,,,,,,,territory,medium,admin,,,,108,high,
 district-spitzemberg,territory,Circonscription de Spitzemberg,Bezirk Spitzemberg,District of Spitzemberg,Terre de Spitzemberg,,district,48.30756,7.04417,,,,,,,,,territory,medium,admin,,lordship-spitzemberg,slot,109,high,
-duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69631,6.53029,,,,,,,,,territory,medium,admin,,,,34,high,
+duchy-lorraine,territory,Duché de Lorraine,Herzogtum Lothringen,Duchy of Lorraine,,,duchy,48.69593,6.53032,,,,,,,,,territory,medium,admin,,,,34,high,
 fief-keltern-ostern,territory,Fief de Keltern-Ostern,Lehen Keltern-Ostern,Fief of Keltern-Ostern,,,fief,49.53657,7.13209,,,,,,,,,territory,medium,feudal,house-eberstein|house-oberstein,provostship-keltern-ostern,heading,89,high,
 lordship-beaurains,territory,Seigneurie de Berus,Herrschaft Berus,Lordship of Berus,Terre et seigneurie de Beaurains,,lordship,49.2639,6.69417,,,,,,,,,territory,medium,feudal,,district-beaurains,slot,93,high,
 lordship-bitche,territory,Seigneurie de Bitche,Herrschaft Bitsch,Lordship of Bitche,Terre et seigneurie de Biche,,lordship,49.05167,7.42528,,,,,,,,,territory,medium,feudal,duchy-lorraine,district-bitche,slot,109,high,
@@ -1390,8 +1390,7 @@ niedergailbach,settlement,Niedergailbach,Niedergailbach,Niedergailbach,Nidergail
 niederhofen,settlement,Niederhofen,,,Niderhoven,,village,49.5,6.93333,,,DE,vil.,Tholey,,,,hist_map,high,,,,,87,high,1.00 near the index's commune (7 km)
 niedersaubach,settlement,Niedersaubach,Niedersaubach,Niedersaubach,Sambach|Nicder-Sauhach,,village,49.421,6.9203,Q39975552,,DE,vil.,Lcbaeh,Saarlouis,Pr.,,hist_map,medium,,,,,87,high,added by correction 47; 0.92 near the index's commune (1 km)
 niedervisse,settlement,Niedervisse,Niederwiese,Niedervisse,Niderwevssen|Nidcrwisse,,village,49.16722,6.56861,Q22428,,FR,,,Boulay,,,hist_map,medium,,,,,115,high,0.86 near the index's canton (6 km)
-nillel,settlement,Nittel,Nittel,Nittel,Nittel|Nillel,,village,49.6525,6.44528,Q594609,,DE,,,Saarburg,Pr.,,hist_map,high,,,,,85,high,1.00 near the index's canton (9 km)
-nittel,settlement,Nittel,,,,,village,49.65,6.45,,2862351,DE,,,,,,geonames,medium,,,,,84,medium,"set in rules.yaml (entry_places); 1.00; Q594609 went to nillel, whose name fits it better"
+nittel,settlement,Nittel,Nittel,Nittel,Nittel|Nillel,,village,49.6525,6.44528,Q594609,,DE,,,Saarburg,Pr.,,hist_map,high,,,,,84,medium,1.00 near the index's canton (9 km)
 nitting,settlement,Nitting,Nitting,Nitting,Nedingen|Nottingen|Nitling,,village,48.67083,7.02972,Q22178,,FR,,,Lorquin,Meurthe,,hist_map,high,,,,,108,high,1.00 near the index's canton (2 km)
 nobaimont,settlement,Nobaimont,,,Nobelmont,,hamlet,48.10333,6.27056,,,FR,ham.,Charmois-l'Orgueilleux,,,,approximate,low,,,,,70,high,not in Wikidata/GeoNames; placed at its commune Charmois-l'Orgueilleux
 nohn,settlement,Nohn,Nohn,Nohn,Nonne,,village,49.4847,6.54064,Q543619,,DE,vil.,Orscholz,Saarburg,Pr.,,hist_map,high,,,,,85,high,1.00 near the index's commune (3 km)

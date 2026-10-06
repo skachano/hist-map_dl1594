@@ -1408,7 +1408,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1408,Fressberg.,Fressberg,,office-vaudrevange,,fief,,,,main,,felsberg,84,high,
 1409,Le Val de Nolbach.,Le Val de Nolbach,,office-vaudrevange,,fief,,,,main,,nalbach,84,high,
 1410,Sirsperg.,Sirsperg,,office-siersberg,,domain,,,,main,,siersberg,84,high,
-1411,Nittel.,Nittel,,office-siersberg,,domain,,,,main,,nittel,84,high,number read from 'UII'
+1411,Nittel.,Nittel,,office-siersberg,,domain,,,,main,,nittel,84,medium,index match by index number (1.00); number read from 'UII'
 1412,Kolchen.,Kolchen,,office-siersberg,,domain,,,,main,,kollig,84,high,number read from '1M2'
 1413,Rellingen.,Rellingen,,office-siersberg,,domain,,,,main,,rehlingen,84,high,2 number(s) missing before
 1414,Remelfangen.,Remelfangen,,office-siersberg,,domain,,,,main,,rammelfangen,84,high,
@@ -1442,7 +1442,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1442,Rellingen.,Rellingen,,office-siersberg,,fief,,,,main,,rehlingen,85,high,
 1443,Fuckingen.,Fuckingen,,office-siersberg,,fief,,,,main,,fickingen,85,high,
 1444,Erbringen.,Erbringen,,office-siersberg,,fief,,,,main,,erbringen,85,high,
-1445,"Nittel, partie.",Nittel,,office-siersberg,,fief,,part,,main,,nillel,85,high,
+1445,"Nittel, partie.",Nittel,,office-siersberg,,fief,,part,,main,,nittel,85,high,
 1446,Hilbringen.,Hilbringen,,district-saargau,,other,,,,main,,hilbringen,85,high,
 1447,Fuchten.,Fuchten,,district-saargau,,other,,,,main,,fitten,85,high,
 1448,Baldern.,Baldern,,district-saargau,,other,,,,main,,ballern,85,high,
