@@ -1,5 +1,5 @@
-// The Settlements map's legend: what each colour stands for, with place counts, the hatching key and
-// the kinds of place.
+// The Settlements map's legend: what each colour stands for, with place counts, the hatching and
+// stripes keys and the kinds of place.
 import type { Dataset } from "../data/types";
 import { label, t } from "../i18n";
 import { SHAPE_ORDER, shapeOf, shapeSvg } from "../map/icons";
@@ -14,6 +14,10 @@ export function renderLegend(root: HTMLElement, data: Dataset, state: State): vo
   const vocab = data.meta.vocab;
   const cap = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
   const swatch = (colour: string, extra = "") => h("span", { class: `swatch ${extra}`, style: `--c:${colour}` });
+  // as on the map: a band of each tenure's colour, the other way from the hatching
+  const [a, b, g] = ["domain", "fief", "clergy"].map((k) => TENURE_COLOURS[k]);
+  const stripes = h("span", { class: "swatch striped",
+    style: `background: repeating-linear-gradient(45deg, ${a} 0 3px, ${b} 3px 6px, ${g} 6px 9px)` });
   const row = (mark: HTMLElement, text: Node | string, count?: number) =>
     h("li", {}, mark, h("span", { class: "label" }, text),
       count !== undefined ? h("span", { class: "count" }, String(count)) : null);
@@ -27,7 +31,8 @@ export function renderLegend(root: HTMLElement, data: Dataset, state: State): vo
   fill(root,
     h("h2", {}, t("tenureLegend", lang)),
     h("ul", {}, ...rows),
-    h("ul", { class: "keys" }, row(swatch("#ffffff", "hatched"), t("shared", lang), c.shared)),
+    h("ul", { class: "keys" }, row(swatch("#ffffff", "hatched"), t("shared", lang), c.shared),
+      row(stripes, t("severalTenures", lang), c.mixed)),
     h("h3", {}, t("settlementTypes", lang)),
     h("ul", { class: "shapes" }, ...SHAPE_ORDER.filter((type) => settlementShapes.has(type)).map((type) =>
       h("li", {}, shapeSvg(type), h("span", { class: "label" }, cap(label(vocab.place_types[type], lang, type)))))),

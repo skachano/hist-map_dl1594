@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Dataset, Place } from "../data/types";
-import { chains, isShared, mainHolding, placeStyles, ressortOf } from "./places";
+import { chains, counts, isShared, mainHolding, placeStyles, ressortOf } from "./places";
 import { TENURE_COLOURS } from "./colors";
 
 const P = (p: Partial<Place> & { id: string }): Place => ({ kind: "territory", type: "village", name: { fr: p.id }, ...p });
@@ -37,8 +37,10 @@ describe("places", () => {
     expect(isShared(places.get("einvaux")!)).toBe(true);
     expect(isShared(places.get("pierrefort")!)).toBe(false);
   });
-  it("colours places by their main tenure", () => {
-    expect(placeStyles(data).get("pierrefort")?.fill).toBe(TENURE_COLOURS.fief);
-    expect(placeStyles(data).get("einvaux")).toEqual({ fill: TENURE_COLOURS.domain, shared: true });
+  it("colours places by their main tenure, striped in each when they have several", () => {
+    expect(placeStyles(data).get("pierrefort")).toEqual({ fill: TENURE_COLOURS.fief, shared: false });
+    expect(placeStyles(data).get("einvaux"))
+      .toEqual({ fill: TENURE_COLOURS.domain, shared: true, tenures: ["domain", "clergy"] });
+    expect(counts(data).mixed).toBe(1);
   });
 });

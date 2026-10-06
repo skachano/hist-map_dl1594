@@ -10,7 +10,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { MAP_CENTER, MAP_ZOOM, PLACE_ZOOM } from "../config";
 import type { Dataset } from "../data/types";
-import { GROUP_COLOUR } from "../model/colors";
+import { GROUP_COLOUR, TENURE_COLOURS } from "../model/colors";
 import { typesIn } from "../model/territories";
 import { DUCHY, type PlaceStyle } from "../model/places";
 import { ICON_PIXEL_RATIO, iconName, SHAPES, shapeImage } from "./icons";
@@ -70,6 +70,22 @@ function hatch(size = 8): { width: number; height: number; data: Uint8Array } {
   }
   return { width: size, height: size, data };
 }
+
+/** Diagonal stripes of the given colours, one band each, the other way from the hatching: a
+ *  settlement held under several tenures. Wide bands, so a village's cell shows each colour. */
+function stripes(colours: string[], band = 12): { width: number; height: number; data: Uint8Array } {
+  const size = band * colours.length;
+  const rgb = colours.map((c) => [1, 3, 5].map((i) => parseInt(c.slice(i, i + 2), 16)));
+  const data = new Uint8Array(size * size * 4);
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      data.set([...rgb[Math.floor(((x - y + size) % size) / band)], 255], (y * size + x) * 4);
+    }
+  }
+  return { width: size, height: size, data };
+}
+/** Every mix of two or three tenures, in the legend's order. */
+const MIXES = [["domain", "fief"], ["domain", "clergy"], ["fief", "clergy"], ["domain", "fief", "clergy"]];
 
 export class MapView {
   readonly map: MapLibre;
@@ -148,11 +164,13 @@ export class MapView {
   private addLayers(): void {
     const m = this.map;
     m.addImage("hatch", hatch());
+    for (const mix of MIXES) m.addImage(`stripes-${mix.join("-")}`, stripes(mix.map((t) => TENURE_COLOURS[t])));
     for (const type of Object.keys(SHAPES)) {
       m.addImage(iconName(type), shapeImage(type), { sdf: true, pixelRatio: ICON_PIXEL_RATIO });
     }
     m.addSource("cells", { type: "geojson", data: this.data.cells, promoteId: "id" });
     m.addSource("shared-cells", { type: "geojson", data: EMPTY });
+    m.addSource("mixed-cells", { type: "geojson", data: EMPTY });
     m.addSource("territories", { type: "geojson", data: this.data.territories });
     m.addSource("places", { type: "geojson", data: placePoints(this.data), promoteId: "id" });
 
@@ -172,6 +190,8 @@ export class MapView {
       id: "cells-fill", type: "fill", source: "cells",
       paint: { "fill-color": ["coalesce", state("fill"), "rgba(0,0,0,0)"], "fill-opacity": 0.75 },
     });
+    m.addLayer({ id: "cells-mixed", type: "fill", source: "mixed-cells",
+      paint: { "fill-pattern": ["get", "pattern"], "fill-opacity": 0.75 } });
     m.addLayer({ id: "cells-shared", type: "fill", source: "shared-cells", paint: { "fill-pattern": "hatch" } });
     m.addLayer({ id: "cells-line", type: "line", source: "cells",
       paint: { "line-color": "#fcfcfb", "line-width": 0.6 } });
@@ -298,12 +318,17 @@ export class MapView {
     }
 
     const shared: GeoJSON.Feature[] = [];
+    const mixed: GeoJSON.Feature[] = [];
     for (const [id, s] of styles) {
       const st = { fill: s.fill ?? null };
       m.setFeatureState({ source: "places", id }, st);
       const cell = this.cellOf.get(id);
       if (cell === id) m.setFeatureState({ source: "cells", id: cell }, st);
       if (cell === id && s.shared) shared.push(this.cellsById.get(cell)!);
+      if (cell === id && s.tenures) {
+        const f = this.cellsById.get(cell)!;
+        mixed.push({ ...f, properties: { ...f.properties, pattern: `stripes-${s.tenures.join("-")}` } });
+      }
     }
     for (const id of this.styled) {
       if (!styles.has(id)) {
@@ -313,5 +338,6 @@ export class MapView {
     }
     this.styled = new Set(styles.keys());
     (m.getSource("shared-cells") as GeoJSONSource).setData({ type: "FeatureCollection", features: shared });
+    (m.getSource("mixed-cells") as GeoJSONSource).setData({ type: "FeatureCollection", features: mixed });
   }
 }

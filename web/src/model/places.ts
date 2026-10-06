@@ -46,34 +46,45 @@ export function isShared(place: Place): boolean {
     || (place.parents ?? []).some((p) => p.share === "part");
 }
 
+/** The tenures a place is held under, in the legend's order (safeguards aside). */
+export function tenuresOf(place: Place): string[] {
+  return TENURE_ORDER.filter((t) => t !== "safeguard" && place.hold?.some((h) => h.t === t));
+}
+
 export interface PlaceStyle {
   fill?: string;
   /** held only in part, or by several holders: hatched */
   shared?: boolean;
+  /** more than one tenure (domain, fief, clergy): striped in their colours */
+  tenures?: string[];
 }
 
-/** How each located settlement is drawn on the Settlements map: the colour of its main tenure. */
+/** How each located settlement is drawn on the Settlements map: the colour of its main tenure, or
+ *  stripes of each when it has several. */
 export function placeStyles(data: Dataset): Map<string, PlaceStyle> {
   const styles = new Map<string, PlaceStyle>();
   for (const p of data.places.values()) {
     if (p.kind !== "settlement" || p.lat === undefined) continue;
     const t = mainHolding(p)?.t;
     const fill = t ? TENURE_COLOURS[t] : undefined;
-    if (fill) styles.set(p.id, { fill, shared: isShared(p) });
+    const tenures = tenuresOf(p);
+    if (fill) styles.set(p.id, { fill, shared: isShared(p), tenures: tenures.length > 1 ? tenures : undefined });
   }
   return styles;
 }
 
-/** Counts behind the legend: places per tenure, and those held in part. */
-export function counts(data: Dataset): { tenure: Map<string, number>; shared: number } {
+/** Counts behind the legend: places per main tenure, those held in part, those with several tenures. */
+export function counts(data: Dataset): { tenure: Map<string, number>; shared: number; mixed: number } {
   const tenure = new Map<string, number>();
   let shared = 0;
+  let mixed = 0;
   const bump = <K>(m: Map<K, number>, k: K) => m.set(k, (m.get(k) ?? 0) + 1);
   for (const p of data.places.values()) {
     if (p.kind !== "settlement" || p.lat === undefined) continue;
     const h = mainHolding(p);
     bump(tenure, h?.t ?? "");
     if (h && isShared(p)) shared++;
+    if (tenuresOf(p).length > 1) mixed++;
   }
-  return { tenure, shared };
+  return { tenure, shared, mixed };
 }

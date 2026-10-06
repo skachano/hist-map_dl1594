@@ -89,6 +89,8 @@ const STRINGS = {
   holderNotNamed: { en: "Holder not named", fr: "Détenteur non nommé", de: "Inhaber nicht genannt", ja: "保有者の記載なし" },
   shared: { en: "Partly (\"en partie\", \"pour la moitié\")", fr: "En partie, pour la moitié",
     de: "Teilweise („en partie“, „pour la moitié“)", ja: "一部（「en partie」「pour la moitié」）" },
+  severalTenures: { en: "Several tenures, in their colours", fr: "Plusieurs tenures, à leurs couleurs",
+    de: "Mehrere Besitzarten, in ihren Farben", ja: "複数の保有形態（各色の縞）" },
   settlementTypes: { en: "Kinds of place", fr: "Types de lieux", de: "Arten von Orten", ja: "地点の種別" },
   places: { en: "places", fr: "lieux", de: "Orte", ja: "地点" },
   approxAreas: { en: "Areas are approximate: the book lists places, not boundaries.",
