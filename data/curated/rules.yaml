@@ -81,6 +81,7 @@ realm_holders:
 entry_names:
   2176: Lothringen      # "Sur la montagne … les ruines d'un chasteau … appelle Lothringen" (p. 111)
   2177: Altheim         # "Elle consiste en ce seul village d'Altheim" (p. 111)
+  2149: Steimbach       # "Il n'en dépend que le seul village dudict Steimbach" (p. 110)
   1995: Magny           # "Magny" (p. 104), read "M»?ny"
   865: Clerjus          # "Clerjus" (p. 65), read "C'vrjus"
   1371: Lymingen        # "Lymingen" (p. 83), read "Lymingcn"
@@ -98,6 +99,7 @@ entry_texts:
   220: Harraucourt, chasteau et ville.   # read "… et vihV"
   261: Xermamesnil.                      # the stop is faint
   640: Aidolles.                         # read "Aidolles'"
+  2149: Il n'en dépend que le seul village dudict Steimbach.   # "Il" read "11"
   928: Offraucourt, chasteau et village.  # the stop is faint
   507: Viller et                        # as printed; the name's reading took the "et" with it
   675: Domepvre-sur-Durbion, chasteau et village.   # the stop read as a comma

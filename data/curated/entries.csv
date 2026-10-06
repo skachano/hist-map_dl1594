@@ -2146,7 +2146,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2146,Reygerssweiller.,Reygerssweiller,,mayoralty-schorbach,lordship-bitche,domain,,,,main,,reyerswiller,110,high,number read from '3146'
 2147,Bussweiller.,Bussweiller,,mayoralty-bousseviller,lordship-bitche,domain,,,,main,,bousseviller,110,high,number read from '3147'
 2148,Breytembach.,Breytembach,,mayoralty-bousseviller,lordship-bitche,domain,,,,main,,breidenbach,110,high,
-2149,11 n'en dépend que le seul village dudict Steimbach.,11 n'en dépend que le seul village dudict Steimbach,,mayoralty-steimbach,lordship-bitche,domain,,,,main,,obersteinbach,110,medium,index match by number (0.34)
+2149,Il n'en dépend que le seul village dudict Steimbach.,Steimbach,,mayoralty-steimbach,lordship-bitche,domain,,,,main,,obersteinbach,110,high,
 2150,"Waldsborn, chasteau ruiné, bains de bitume, aliàs cire de montagne, qu'ils appellent bergwach.",Waldsborn,castle|deserted_village,mayoralty-walschbronn,lordship-bitche,domain,,,,main,,walschbronn,110,high,
 2151,Huspelschidt.,Huspelschidt,,mayoralty-walschbronn,lordship-bitche,domain,,,,main,,haspeilseheidt,110,high,number read from '3151'
 2152,Wolthaussen.,Wolthaussen,,mayoralty-walschbronn,lordship-bitche,domain,,,,main,,waldhausen,110,high,number read from '2153'
