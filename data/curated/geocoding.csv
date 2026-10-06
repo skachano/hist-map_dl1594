@@ -93,7 +93,7 @@ badinenil,48.44984,6.73946,,,Badménil,,,,FR,approximate,low,"Badménil, at Bacc
 badmenil-aux-bois,48.30222,6.51917,Q633343,,Badménil-aux-Bois,Badménil-aux-Bois,Badménil-aux-Bois,,FR,wikidata,medium,"exact name, no anchor; the index's canton Chute is not found"
 baffe,48.16028,6.57194,Q753273,,La Baffe,La Baffe,La Baffe,,FR,wikidata,high,1.00 near the index's canton (9 km)
 bagneux,48.55833,5.8825,Q1002005,,Bagneux,Bagneux,Bagneux,バニュー,FR,wikidata,medium,"exact name, no anchor"
-bailiwick-allemagne,49.25663,6.71167,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 579 located member(s)
+bailiwick-allemagne,49.25663,6.71169,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 579 located member(s)
 bailiwick-apremont,48.85528,5.63917,,,Bailliage d'Apremont,,,アスプルモン＝ラ＝フォレバイイ管区,,territory,medium,seat: apremonl
 bailiwick-chatel-sur-moselle,48.31417,6.39306,,,Bailliage de Châtel-sur-Moselle,,,,,territory,medium,seat: chatel-sur-mosclle
 bailiwick-epinal,48.17361,6.45167,,,Bailliage d'Épinal,,,エピナルバイイ管区,,territory,medium,seat: epinal
@@ -1389,7 +1389,7 @@ office-boulay,49.18333,6.49361,,,Office de Boulay,,,,,territory,medium,seat: bou
 office-sarreguemines,49.11056,7.06722,,,Office de Sarreguemines,,,,,territory,medium,seat: sarreguemines
 office-schaumbourg,49.5069,7.05775,,,Office de Schaumbourg,,,,,territory,medium,centre of 87 located member(s)
 office-siersberg,49.3686,6.67861,,,Office de Siersberg,,,,,territory,medium,seat: siersberg
-office-vaudrevange,49.32287,6.76822,,,Office de Vaudrevange,,,,,territory,medium,centre of 10 located member(s)
+office-vaudrevange,49.32781,6.72081,,,Office de Vaudrevange,,,ヴァラーファンゲン管区（アムト）,,territory,medium,seat: vvallerfangen
 offroieourl,48.27833,6.04028,Q216892,,Offroicourt,Offroicourt,Offroicourt,,FR,wikidata,high,1.00 near the index's canton (11 km)
 ogeviller,48.54694,6.72556,Q1060586,,Ogéviller,Ogéviller,Ogéviller,,FR,wikidata,high,1.00 near the index's canton (10 km)
 ognevillc,48.475,6.06611,Q220731,,Ognéville,Ognéville,Ognéville,,FR,wikidata,high,1.00 near the index's canton (2 km)
@@ -1980,7 +1980,7 @@ vraichamp,48.14556,6.61778,,,Vraichamp,,,,FR,approximate,low,not in Wikidata/Geo
 vroncourl,48.465,6.08028,Q1159877,,Vroncourt,Vroncourt,Vroncourt,,FR,wikidata,high,1.00 near the index's canton (3 km)
 vroville,48.28667,6.17222,Q751791,,Vroville,Vroville,Vroville,,FR,wikidata,high,1.00 near the index's canton (3 km)
 vuisse,48.85123,6.65041,,2967285,Vuisse,,,,FR,geonames,medium,0.84 near the index's canton (11 km)
-vvallerfangen,49.32749,6.71102,,2814613,VVallerfangen,,,,DE,geonames,high,0.96 near the index's canton (3 km)
+vvallerfangen,49.32781,6.72081,Q665005,,Vaudrevange,Wallerfangen,Wallerfangen,ヴァラーファンゲン,DE,rule,high,"Wallerfangen (Vaudrevange), the town of the office of Valderfanges (entry 1400), as in hist_map; the scan reads VVallerfangen"
 wadrill,49.5851,6.88717,Q1567115,,Wadrill,Wadrill,Wadrill,,DE,hist_map,high,1.00 near the index's canton (24 km); the index's commune Badern is not found
 waldeck,49.0166,7.5292,Q3565301,,Waldeck,,,,FR,hist_map,high,1.00 near the index's commune (3 km)
 waldhausen,49.14369,7.46559,,2967501,Waldhausen,,,,FR,geonames,high,1.00 near the index's canton (8 km)

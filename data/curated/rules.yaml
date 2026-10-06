@@ -82,6 +82,7 @@ entry_names:
   2176: Lothringen      # "Sur la montagne … les ruines d'un chasteau … appelle Lothringen" (p. 111)
   2177: Altheim         # "Elle consiste en ce seul village d'Altheim" (p. 111)
   2149: Steimbach       # "Il n'en dépend que le seul village dudict Steimbach" (p. 110)
+  1400: Valderfanges    # "La ville de Valderfanges pour tout domaine" (p. 84): Wallerfangen
   1995: Magny           # "Magny" (p. 104), read "M»?ny"
   865: Clerjus          # "Clerjus" (p. 65), read "C'vrjus"
   1371: Lymingen        # "Lymingen" (p. 83), read "Lymingcn"
@@ -672,6 +673,7 @@ geocode:
   gross-hemmersdorf: {lat: 49.35502, lon: 6.61399, name_fr: "Grosshemmersdorf", name_de: "Großhemmersdorf", country: DE, note: "Großhemmersdorf (GeoNames 2906537), left of the Nied: Hymestroff, offices of Sierck and Boulay (H. Hiegel, in hist_map)"}
   kerperieh-ilemmersdorf: {lat: 49.35349, lon: 6.62768, name_fr: "Kerprich-Hemmersdorf", country: DE, note: "Kerprich-Hemmersdorf, right of the Nied, office of Siersberg (hist_map); the item Q1604852 both share is not taken by Großhemmersdorf"}
   fliessborn: {"at": "Vry", "land": true, "note": "Fliessborn, of the prévôté of Sierck: placed at Vry, the commune H. Hiegel's index gives (Fliessborn (M., Vry), p. 13; in hist_map)"}
+  vvallerfangen: {wikidata: Q665005, note: "Wallerfangen (Vaudrevange), the town of the office of Valderfanges (entry 1400), as in hist_map; the scan reads VVallerfangen"}
   # H. Hiegel's identifications, as hist_map has them (the bailliage d'Allemagne)
   bethingen: {wikidata: Q831306, note: "Bethingen, com. d'Orscholz (the index), the Betting of the mairie of Schwemlingen: 1457 by the editor's correction 10 (hist_map)"}
   sctthujen-ou-bctting: {wikidata: Q831306, name_fr: "Bethingen", note: "Bettingen ou Betting, of the mairie of Schumelingen (Schwemlingen): the editor's footnote has a village of Betting south-west of Schwemmlingen on the 1790 map, Bethingen; Bethingen's own line is 1457 by correction 10"}

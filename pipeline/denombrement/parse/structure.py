@@ -408,7 +408,11 @@ def entry_name(text: str) -> str:
 
 def descriptors(text: str) -> list[str]:
     rest = fold(text.split(",", 1)[1]) if "," in text else ""
-    return [key for key, pattern in _DESCRIPTORS if re.search(pattern, rest)]
+    out = [key for key, pattern in _DESCRIPTORS if re.search(pattern, rest)]
+    # "La ville de Forbach", "La ville dudict Sainct Diey": the entry names the town itself.
+    if re.match(r"la ville d", fold(text)) and "town" not in out:
+        out.insert(0, "town")
+    return out
 
 
 def order_of(text: str) -> str | None:

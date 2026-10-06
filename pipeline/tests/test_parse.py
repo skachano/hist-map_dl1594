@@ -80,6 +80,9 @@ def test_entry_details():
     assert structure.entry_name(text) == "Lunéville"
     assert {"castle", "town", "abbey", "commandery"} <= set(structure.descriptors(text))
     assert structure.order_of(text) == "augustinian"
+    # "La ville de …" names the town itself; "ville" elsewhere followed by "de" doesn't
+    assert "town" in structure.descriptors("La ville de Valderfanges pour tout domaine.")
+    assert "town" in structure.descriptors("La ville dudict Sainct Diey, partie au chapitre.")
     assert structure.share_of("Einvau, partie.") == ("part", "partie")
     assert structure.share_of("Commercy, pour la moitié contre les sieurs comtes de la Roche.")[0] == "1/2"
 

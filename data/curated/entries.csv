@@ -310,8 +310,8 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 310,La Neuville.,La Neuville,,district-raon-l-etape,,domain,,,,main,,la-neuveville-les-raon,46,high,
 311,Vezeval.,Vezeval,,district-raon-l-etape,,domain,,,,main,,vezeval,46,medium,index match by confused number (1.00); number read from '3H'
 312,La Trouche.,La Trouche,,district-raon-l-etape,,domain,,,,main,,la-trouche,46,high,
-313,"La ville dudict Sainct Diey, partie au chapitre.",La ville dudict Sainct Diey,,provostship-saint-die,,clergy,,part,,main,,saint-die-des-vosges,46,medium,index match by index number (0.94)
-314,"La ville de Raon, partie à l'abbé de Moyenmonstier.",La ville de Raon,,provostship-saint-die,,clergy,,part,,main,,raon-l-etape,46,medium,index match by index number (1.00)
+313,"La ville dudict Sainct Diey, partie au chapitre.",La ville dudict Sainct Diey,town,provostship-saint-die,,clergy,,part,,main,,saint-die-des-vosges,46,medium,index match by index number (0.94)
+314,"La ville de Raon, partie à l'abbé de Moyenmonstier.",La ville de Raon,town,provostship-saint-die,,clergy,,part,,main,,raon-l-etape,46,medium,index match by index number (1.00)
 315,Le Viller.,Le Viller,,ban-saint-die,,clergy,,,,main,,le-viller,46,medium,index match by confused number (1.00)
 316,Mazellay.,Mazellay,,ban-saint-die,,clergy,,,,main,,marzelay,46,high,
 317,La Poucherée.,La Poucherée,,ban-saint-die,,clergy,,,,main,,la-pecherie,47,high,
@@ -1397,7 +1397,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1397,Gertingen.,Gertingen,,office-boulay,lordship-varsberg,fief,,,,main,,guerting,84,medium,index match by confused number (0.95)
 1398,Hamen.,Hamen,,office-boulay,lordship-varsberg,fief,,,,main,,ham-sous-varsberg,84,medium,index match by confused number (0.95)
 1399,Falt.,Falt,,office-boulay,lordship-varsberg,fief,,,,main,,falck,84,medium,index match by index number (1.00)
-1400,La ville de Valderfanges pour tout domaine.,La ville de Valderfanges pour tout domaine,,office-vaudrevange,,domain,,,,main,,vvallerfangen,84,high,
+1400,La ville de Valderfanges pour tout domaine.,Valderfanges,town,office-vaudrevange,,domain,,,,main,,vaudrevange,84,high,
 1401,"Lauthern, aliàs Fraulauthern.",Lauthern,,office-vaudrevange,,clergy,,,,main,,fraulautern,84,high,
 1402,Liesstorff.,Liesstorff,,office-vaudrevange,,clergy,,,,main,,lisdorf,84,medium,index match by number (0.48)
 1403,Enstorff.,Enstorff,,office-vaudrevange,,clergy,,,,main,,ensdorf,84,medium,index match by confused number (0.80)
@@ -1648,7 +1648,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1648,Rode.,Rode,,castellany-marimont,,fief,,,,main,,rode-les-morhange,92,high,
 1649,Reckranges.,Reckranges,,castellany-marimont,,fief,,,,main,,racrange,92,high,
 1650,Nebingen.,Nebingen,,castellany-marimont,,fief,,,,main,,nebing,92,high,
-1651,La ville de Puttelenges.,La ville de Puttelenges,,district-puttelange,lordship-puttelange,other,,,,main,,pultelange-les-sarralbe,92,high,
+1651,La ville de Puttelenges.,La ville de Puttelenges,town,district-puttelange,lordship-puttelange,other,,,,main,,pultelange-les-sarralbe,92,high,
 1652,Dieffembach.,Dieffembach,,district-puttelange,lordship-puttelange,other,,,,main,,diefenbach-les-puttelange,92,high,number read from '1653'
 1653,Himradt.,Himradt,,district-puttelange,lordship-puttelange,other,,,,main,,honzrath,92,high,
 1654,Reichlingen.,Reichlingen,,district-puttelange,lordship-puttelange,other,,,,main,,richeling,92,high,
@@ -1669,7 +1669,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1669,Kappeln.,Kappeln,,district-puttelange,lordship-puttelange,other,,,,main,,cappel,93,high,
 1670,Hundlingen.,Hundlingen,,district-puttelange,lordship-puttelange,other,,,,main,,hundling,93,high,
 1671,Dublingen.,Dublingen,,district-puttelange,lordship-puttelange,other,,,,main,,diebling,93,high,
-1672,"La ville de Beaurains, Berriss.",La ville de Beaurains,,district-beaurains,lordship-beaurains,other,,,,main,,berus,93,high,
+1672,"La ville de Beaurains, Berriss.",La ville de Beaurains,town,district-beaurains,lordship-beaurains,other,,,,main,,berus,93,high,
 1673,Rimeringen.,Rimeringen,,district-beaurains,lordship-beaurains,other,,,,main,,remering-les-bouzonville,93,high,
 1674,Dreyborn.,Dreyborn,,district-beaurains,lordship-beaurains,other,,,,main,,tromborn,93,high,
 1675,Berweiller.,Berweiller,,district-beaurains,lordship-beaurains,other,,,,main,,berweiler,93,high,
@@ -1700,7 +1700,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1700,Leidingen.,Leidingen,,district-beaurains,lordship-beaurains,clergy,,,,main,,leiding,94,high,
 1701,Morten.,Morten,,district-beaurains,lordship-beaurains,clergy,,,,main,,merten,94,high,
 1702,Bublingen.,Bublingen,,district-beaurains,lordship-beaurains,clergy,,,,main,,bibling,94,high,
-1703,"La ville de Morhanges, aliàs Morchingen.",La ville de Morhanges,,district-morhange,lordship-morhange,other,,,,main,,morhange,94,high,
+1703,"La ville de Morhanges, aliàs Morchingen.",La ville de Morhanges,town,district-morhange,lordship-morhange,other,,,,main,,morhange,94,high,
 1704,Reckranges.,Reckranges,,district-morhange,lordship-morhange,other,,,,main,,racrange,94,high,
 1705,Eschen.,Eschen,,district-morhange,lordship-morhange,other,,,,main,,achain,94,high,
 1706,Pebingen.,Pebingen,,district-morhange,lordship-morhange,other,,,,main,,pevange,94,high,
@@ -1714,14 +1714,14 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1714,Lendorff.,Lendorff,,district-morhange,lordship-morhange,other,,,,main,,landroff,94,high,
 1715,Weiller.,Weiller,,district-morhange,lordship-morhange,other,,,,main,,viller-grostenquin,94,high,
 1716,Herbrich.,Herbrich,,district-morhange,lordship-morhange,other,,,,main,,harprich,94,high,
-1717,"La ville de Faulquemont, aliàs Falkemburg.",La ville de Faulquemont,,district-faulquemont,lordship-faulquemont,other,,,,main,,faulquemont,94,high,
+1717,"La ville de Faulquemont, aliàs Falkemburg.",La ville de Faulquemont,town,district-faulquemont,lordship-faulquemont,other,,,,main,,faulquemont,94,high,
 1718,Wallen.,Wallen,,district-faulquemont,lordship-faulquemont,other,,,,main,,vahl-les-faulquemont,94,medium,index match by number (0.42)
 1719,Edlingen.,Edlingen,,district-faulquemont,lordship-faulquemont,other,,,,main,,adelange,94,high,
 1720,Enssweiller.,Enssweiller,,district-faulquemont,lordship-faulquemont,other,,,,main,,einchwiller,94,high,number read from '1730'
 1721,Druttlingen.,Druttlingen,,district-faulquemont,lordship-faulquemont,other,,,,main,,tritteling,94,high,
 1722,Gengweiller.,Gengweiller,,district-faulquemont,lordship-faulquemont,other,,,,main,,guenviller,94,high,
 1723,Morlangen.,Morlangen,,district-faulquemont,lordship-faulquemont,other,,,,main,,morlange,94,high,
-1724,La ville de Forbach.,La ville de Forbach,,district-forbach,lordship-forbach,other,,,,main,,forbach,95,high,
+1724,La ville de Forbach.,La ville de Forbach,town,district-forbach,lordship-forbach,other,,,,main,,forbach,95,high,
 1725,Klain-Rosseln.,Klain-Rosseln,,district-forbach,lordship-forbach,other,,,,main,,petite-rosselle,95,high,
 1726,Oltingen.,Oltingen,,district-forbach,lordship-forbach,other,,,,main,,oeting,95,high,
 1727,Speicher.,Speicher,,district-forbach,lordship-forbach,other,,,,main,,spicheren,95,high,
@@ -2237,7 +2237,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2237,Mittelborn.,Mittelborn,,district-phalsbourg,lordship-phalsbourg,domain,,,,main,,mittelbronn,114,high,section domain inferred from the realm's holder
 2238,Wilssberg.,Wilssberg,,district-phalsbourg,lordship-phalsbourg,domain,,,,main,,vilsberg,114,medium,index match by confused number (0.82); section domain inferred from the realm's holder; number read from '2:158'
 2239,"Hombourg, chasteau, ville et église collégiatte Sainct-Estienne.",Hombourg,castle|town,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,domain,,,,main,,hombourg-haut,114,medium,index match by index number (1.00); section domain inferred from the realm's holder
-2240,"La ville de Sainct-Avol ou Sainct-Nabor, abbaye de l'ordre de sainct Benoist.",La ville de Sainct-Avol ou Sainct-Nabor,abbey,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,domain,,,,main,,saint-avold,114,medium,index match by number (0.47); section domain inferred from the realm's holder
+2240,"La ville de Sainct-Avol ou Sainct-Nabor, abbaye de l'ordre de sainct Benoist.",La ville de Sainct-Avol ou Sainct-Nabor,town|abbey,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,domain,,,,main,,saint-avold,114,medium,index match by number (0.47); section domain inferred from the realm's holder
 2241,"Hombourg, village.",Hombourg,village,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,domain,,,,main,,hombourg-bas,114,high,section domain inferred from the realm's holder
 2242,Machern.,Machern,,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,domain,,,,main,,macheren,114,high,section domain inferred from the realm's holder
 2243,Eberssweiller.,Eberssweiller,,castellany-hombourg-et-saint-avold,lordship-hombourg-et-saint-avold,domain,,,,main,,petil-ei-ci-willer,114,medium,index match by index number (1.00); section domain inferred from the realm's holder
@@ -2330,7 +2330,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 2330,"Rouveroy,",Rouveroy,,,,,,,,towns,,rouvrois-sur-meuse,128,high,
 2331,Sirques.,Sirques,,,,,,,,towns,,sierck,129,high,
 2332,Boullay.,Boullay,,,,,,,,towns,,boulay,129,medium,index match by loose number (0.92)
-2333,Valderfanges.,Valderfanges,,,,,,,,towns,,vvallerfangen,129,medium,index match by index number (1.00)
+2333,Valderfanges.,Valderfanges,,,,,,,,towns,,vaudrevange,129,medium,index match by index number (1.00)
 2334,"Mertzig, marché.",Mertzig,market,,,,,,,towns,,merzig,129,high,
 2335,"Bouzonville, foires.",Bouzonville,,,,,,,,towns,,bouzonville,129,medium,index match by same name as entry 1699 (1.00)
 2336,Beaurains.,Beaurains,,,,,,,,towns,,berus,129,high,
