@@ -2,7 +2,7 @@
 //   #/map?lang=fr&place=saint-avold   (the Settlements tab; links with the old colour modes still open it)
 //   #/map?layer=abbeys (the Settlements tab showing a thematic list instead of the tenures; old #/church links open it)
 //   #/territories?h=feudal&lvl=1   #/territories?kind=provostship     #/holders?entity=abbey-saint-avold
-//   #/table?d=provostship-nancy&t=fief&q=chasteau
+//   #/table?d=provostship-nancy&t=fief&q=chasteau      #/table?o=-place (sorted by place, descending)
 import type { Lang } from "../data/types";
 import { LANGS } from "../i18n";
 
@@ -11,6 +11,10 @@ export const VIEWS = ["map", "territories", "holders", "table", "about"] as cons
 export type View = (typeof VIEWS)[number];
 export const LAYERS = ["towns", "churches", "abbeys", "priories", "convents", "commanderies", "chaumes"] as const;
 export type Layer = (typeof LAYERS)[number];
+
+/** The Table's columns it sorts by; the entry number is the default order. */
+export const SORT_COLUMNS = ["type", "no", "place", "district", "tenure", "alix", "index"] as const;
+export type SortColumn = (typeof SORT_COLUMNS)[number];
 
 export interface TableFilters {
   /** a division (with its sub-divisions) */
@@ -39,6 +43,8 @@ export interface State {
   /** Settlements tab: a thematic list (towns, abbeys, chaumes…) instead of the tenures */
   layer?: Layer;
   filters?: TableFilters;
+  /** Table: the column it is sorted by, "-" before it for descending; none is by entry number */
+  sort?: string;
 }
 
 export const DEFAULT_STATE: State = { view: "map", lang: "en" };
@@ -66,6 +72,7 @@ export function parseHash(hash: string): State {
     entity: q.get("entity") ?? undefined,
     layer: (LAYERS as readonly string[]).includes(layer) ? layer : church ? "abbeys" : undefined,
     filters: Object.keys(filters).length ? filters : undefined,
+    sort: parseSort(q.get("o")),
   };
 }
 
@@ -81,7 +88,12 @@ export function toHash(s: State): string {
     const v = s.filters?.[key];
     if (v) q.set(short, v);
   }
+  if (s.sort && s.view === "table") q.set("o", s.sort);
   return `#/${s.view}?${q}`;
+}
+
+function parseSort(v: string | null): string | undefined {
+  return v && v !== "no" && (SORT_COLUMNS as readonly string[]).includes(v.replace(/^-/, "")) ? v : undefined;
 }
 
 function browserLang(): Lang {

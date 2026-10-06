@@ -122,6 +122,16 @@ body[data-view="changes"] #page .scroll { flex: 1; min-height: 0; overflow: auto
 table.matrix { border-collapse: collapse; width: 100%; font-size: 13px; }
 .matrix th, .matrix td { padding: 4px 8px; border-bottom: 1px solid var(--hairline); text-align: left; vertical-align: top; }
 .matrix thead th { position: sticky; top: 0; background: var(--surface); z-index: 1; }
+.matrix th.sortable { padding: 0; }
+.matrix button.sort { display: flex; align-items: baseline; gap: 4px; width: 100%; padding: 4px 8px; border: none;
+  border-radius: 0; background: none; font-weight: inherit; text-align: left; cursor: pointer; }
+/* the sort arrow, drawn from aria-sort; a faint one on hover where a click would sort */
+.matrix .arrow { font-size: 9px; color: var(--muted); }
+.matrix .arrow::after { content: "▲"; visibility: hidden; }
+.matrix button.sort:hover .arrow::after { visibility: visible; }
+.matrix th[aria-sort] .arrow { color: var(--ink); }
+.matrix th[aria-sort] .arrow::after { visibility: visible; }
+.matrix th[aria-sort="descending"] .arrow::after { content: "▼"; }
 .matrix td.inherited { color: var(--ink-2); font-style: italic; }
 .matrix td.empty { color: var(--muted); }
 .matrix .swatch { display: inline-block; width: 10px; height: 10px; vertical-align: -1px; }

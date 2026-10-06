@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Dataset, Entry, Place } from "../data/types";
-import { entryHolders, filterEntries } from "./pages";
+import { entryHolders, filterEntries, sortEntries } from "./pages";
 
 const place = (id: string, kind: Place["kind"], parent?: string) =>
   [id, { id, kind, type: kind === "settlement" ? "village" : "provostship", name: { fr: id },
@@ -33,5 +33,13 @@ describe("table", () => {
     expect(filterEntries(data, { series: "abbeys_m" }).map((e) => e.no)).toEqual([2378]);
     expect(filterEntries(data, { series: "main" }).map((e) => e.no)).toEqual([1, 2, 3]);
     expect(filterEntries(data, { q: "nancy VILLE" }).map((e) => e.no)).toEqual([1]);
+  });
+  it("sorts by a column, the book's order breaking ties and empty values last", () => {
+    const value = (e: Entry) => e.district ?? "";
+    const rows = [...entries.slice(0, 3), { no: 4, text: "Toul.", name: "Toul" }, entries[3]];
+    expect(sortEntries(rows, undefined, value, "en").map((e) => e.no)).toEqual([1, 2, 3, 4, 2378]);
+    expect(sortEntries(rows, "-no", value, "en").map((e) => e.no)).toEqual([2378, 4, 3, 2, 1]);
+    expect(sortEntries(rows, "district", value, "en").map((e) => e.no)).toEqual([3, 1, 2, 4, 2378]);
+    expect(sortEntries(rows, "-district", value, "en").map((e) => e.no)).toEqual([1, 2, 3, 4, 2378]);
   });
 });

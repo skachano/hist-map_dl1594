@@ -11,7 +11,8 @@ describe("URL state", () => {
   });
   it("round-trips the other views", () => {
     for (const hash of ["#/territories?lang=de&h=feudal&lvl=0", "#/holders?lang=en&entity=x",
-      "#/map?lang=ja&layer=abbeys", "#/table?lang=fr&d=provostship-nancy&t=fief&q=chasteau"]) {
+      "#/map?lang=ja&layer=abbeys", "#/table?lang=fr&d=provostship-nancy&t=fief&q=chasteau",
+      "#/table?lang=en&o=-place"]) {
       expect(toHash(parseHash(hash))).toBe(hash);
     }
   });
@@ -20,6 +21,11 @@ describe("URL state", () => {
     expect(toHash(parseHash("#/church?lang=en"))).toBe("#/map?lang=en&layer=abbeys");
     // a layer belongs to Settlements: other views don't carry it in their link
     expect(toHash({ ...parseHash("#/map?lang=en&layer=towns"), view: "table" })).toBe("#/table?lang=en");
+  });
+  it("keeps the Table's sort to the Table, and only by a known column", () => {
+    expect(toHash({ ...parseHash("#/table?lang=en&o=district"), view: "map" })).toBe("#/map?lang=en");
+    expect(parseHash("#/table?lang=en&o=nowhere").sort).toBeUndefined();
+    expect(parseHash("#/table?lang=en&o=no").sort).toBeUndefined();
   });
   it("falls back to defaults", () => {
     const s = parseHash("#/nowhere?color=rainbow&lang=xx&lvl=9&layer=x");

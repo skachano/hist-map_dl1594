@@ -1,11 +1,11 @@
-// Full pages: the Table of the Dénombrement's entries, in the book's order, with filters and a
-// CSV export. This is where the book is read in order, and the keyboard's way to every fact.
+// Full pages: the Table of the Dénombrement's entries, in the book's order or sorted by a column,
+// with filters and a CSV export. This is where the book is read in order, and the keyboard's way to every fact.
 import type { Dataset, Entry } from "../data/types";
 import { label, name, t } from "../i18n";
 import { shapeSvg } from "../map/icons";
 import { OTHER, TENURE_COLOURS } from "../model/colors";
 import { DUCHY } from "../model/places";
-import type { State, Store, TableFilters } from "../state/store";
+import { SORT_COLUMNS, type SortColumn, type State, type Store, type TableFilters } from "../state/store";
 import { fill, h } from "./dom";
 import { openPlace, showOnMap } from "./navigate";
 import { childrenOf, indexIdentification } from "./panel";
@@ -44,6 +44,20 @@ export function filterEntries(data: Dataset, f: TableFilters = {}): Entry[] {
     && words.every((w) => `${e.text} ${e.name}`.toLowerCase().includes(w)));
 }
 
+/** `sort` as in the URL ("place", "-place"); by entry number, the book's order, when none. Empty
+ * values go last either way, and ties keep the book's order. */
+export function sortEntries(rows: Entry[], sort: string | undefined, value: (e: Entry, col: SortColumn) => string,
+  lang: string): Entry[] {
+  const desc = !!sort?.startsWith("-");
+  const col = (sort?.replace(/^-/, "") || "no") as SortColumn;
+  if (col === "no") return desc ? [...rows].reverse() : rows;
+  const collator = new Intl.Collator(lang, { numeric: true, sensitivity: "base" });
+  const keyed = rows.map((e, i) => [e, value(e, col), i] as const);
+  keyed.sort(([, x, i], [, y, j]) =>
+    (!x || !y ? Number(!x) - Number(!y) : (desc ? -1 : 1) * collator.compare(x, y)) || i - j);
+  return keyed.map(([e]) => e);
+}
+
 function csv(rows: string[][]): string {
   return rows.map((r) => r.map((v) => /[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v).join(",")).join("\n");
 }
@@ -66,7 +80,6 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
   const territories = (h_: "admin" | "feudal") => [...data.places.values()]
     .filter((p) => p.kind === "territory" && p.h === h_ && p.id !== DUCHY)
     .map((p) => [p.id, placeName(p.id)] as [string, string]).sort((a, b) => a[1].localeCompare(b[1], lang));
-  const rows = filterEntries(data, f);
   // Every place the entry names: the one it is matched to, then those the index adds.
   const placesOf = (e: Entry) => [e.place, ...(e.also ?? [])].filter((id): id is string => !!id);
   const settlement = (e: Entry) => {
@@ -88,6 +101,11 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
     const where = p ? indexIdentification(p, lang) : "";
     return `${x.s}${where ? `, ${where}` : ""}${onPage(x.p)}${x.np ? ` [${t("numberNotPrinted", lang)}]` : ""}`;
   }).join("; ");
+  const sortValue = (e: Entry, col: SortColumn) => ({
+    type: typeLabel, no: (x: Entry) => String(x.no), place: (x: Entry) => placesOf(x).map(placeName).join(", "),
+    district: (x: Entry) => x.district ? placeName(x.district) : "", tenure, alix: (x: Entry) => x.text, index,
+  })[col](e);
+  const rows = sortEntries(filterEntries(data, f), state.sort, sortValue, lang);
   const cells = (e: Entry) => [
     typeLabel(e), String(e.no), placesOf(e).map(placeName).join(", "), e.district ? placeName(e.district) : "",
     tenure(e), alix(e), index(e),
@@ -106,6 +124,16 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
     a.click();
     URL.revokeObjectURL(a.href);
   };
+  // Each column header sorts by it; again, the other way. The entry number is the default order.
+  const [sortCol, sortDesc] = [(state.sort?.replace(/^-/, "") || "no") as SortColumn, !!state.sort?.startsWith("-")];
+  const sortHeader = (col: SortColumn, i: number) => {
+    const active = col === sortCol;
+    const next = active && !sortDesc ? `-${col}` : col;
+    return h("th", { scope: "col", class: "sortable", "aria-sort": active ? (sortDesc ? "descending" : "ascending") : undefined },
+      h("button", { class: "sort", onclick: () => store.set({ sort: next === "no" ? undefined : next }) },
+        i ? head[i] : h("span", { class: "visually-hidden" }, head[i]),
+        h("span", { class: "arrow", "aria-hidden": "true" })));
+  };
   const link = (id: string, onclick: () => void) => h("button", { class: "link", "data-place": id, onclick }, placeName(id));
   fill(root,
     h("div", { class: "toolbar" },
@@ -122,8 +150,7 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
       h("button", { onclick: exportCsv }, t("exportCsv", lang))),
     h("div", { class: "table-wrap" },
       h("table", { class: "matrix" },
-        h("thead", {}, h("tr", {}, h("th", { scope: "col" }, h("span", { class: "visually-hidden" }, head[0])),
-          ...head.slice(1).map((x) => h("th", { scope: "col" }, x)))),
+        h("thead", {}, h("tr", {}, ...SORT_COLUMNS.map(sortHeader))),
         h("tbody", {}, ...rows.map((e) => h("tr", {},
           h("td", { class: "type-cell" }, icon(e)),
           h("th", { scope: "row" }, String(e.no)),

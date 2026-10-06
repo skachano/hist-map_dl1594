@@ -228,3 +228,23 @@ test("table: each row starts with its place's icon, and gives the pages of the e
   await expect(page.locator("table.matrix thead th")).toHaveText(
     ["Type", "No.", "Place", "District", "Tenure", "Thierry Alix's entry", "Editors' index"]);
 });
+
+test("table: sorted by number, or by a column header, either way", async ({ page }) => {
+  await open(page, "#/table?lang=en&q=Bettingen");
+  const numbers = page.locator("table.matrix tbody th");
+  const header = (name: string) => page.locator("table.matrix thead th").filter({ hasText: name });
+  await expect(numbers).toHaveText(["1457", "1493", "1528", "1677"]);
+  await expect(header("No.")).toHaveAttribute("aria-sort", "ascending");
+  await header("No.").getByRole("button").click();
+  await expect(numbers).toHaveText(["1677", "1528", "1493", "1457"]);
+  await expect(page).toHaveURL(/o=-no/);
+  // by place: Bethingen, Bettange, Bettingen; again, the other way, ties in the book's order
+  await header("Place").getByRole("button").click();
+  await expect(header("Place")).toHaveAttribute("aria-sort", "ascending");
+  await expect(numbers).toHaveText(["1457", "1677", "1493", "1528"]);
+  await expect(header("No.")).not.toHaveAttribute("aria-sort");
+  await header("Place").getByRole("button").click();
+  await expect(header("Place")).toHaveAttribute("aria-sort", "descending");
+  await expect(numbers).toHaveText(["1493", "1528", "1677", "1457"]);
+  await expect(page).toHaveURL(/o=-place/);
+});
