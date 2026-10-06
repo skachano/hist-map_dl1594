@@ -2,7 +2,7 @@
 // with filters and a CSV export. This is where the book is read in order, and the keyboard's way to every fact.
 import type { Dataset, Entry } from "../data/types";
 import { label, name, t } from "../i18n";
-import { shapeSvg } from "../map/icons";
+import { shapeSvg, typeRank } from "../map/icons";
 import { OTHER, TENURE_COLOURS } from "../model/colors";
 import { DUCHY } from "../model/places";
 import { SORT_COLUMNS, type SortColumn, type State, type Store, type TableFilters } from "../state/store";
@@ -101,8 +101,13 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
     const where = p ? indexIdentification(p, lang) : "";
     return `${x.s}${where ? `, ${where}` : ""}${onPage(x.p)}${x.np ? ` [${t("numberNotPrinted", lang)}]` : ""}`;
   }).join("; ");
+  // The Type column in the legend's order (towns first), the others by their text.
+  const typeOrder = (e: Entry) => {
+    const p = settlement(e);
+    return p ? String(typeRank(p.type)) : "";
+  };
   const sortValue = (e: Entry, col: SortColumn) => ({
-    type: typeLabel, no: (x: Entry) => String(x.no), place: (x: Entry) => placesOf(x).map(placeName).join(", "),
+    type: typeOrder, no: (x: Entry) => String(x.no), place: (x: Entry) => placesOf(x).map(placeName).join(", "),
     district: (x: Entry) => x.district ? placeName(x.district) : "", tenure, alix: (x: Entry) => x.text, index,
   })[col](e);
   const rows = sortEntries(filterEntries(data, f), state.sort, sortValue, lang);

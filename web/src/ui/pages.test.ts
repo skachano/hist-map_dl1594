@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Dataset, Entry, Place } from "../data/types";
+import { typeRank } from "../map/icons";
 import { entryHolders, filterEntries, sortEntries } from "./pages";
 
 const place = (id: string, kind: Place["kind"], parent?: string) =>
@@ -41,5 +42,10 @@ describe("table", () => {
     expect(sortEntries(rows, "-no", value, "en").map((e) => e.no)).toEqual([2378, 4, 3, 2, 1]);
     expect(sortEntries(rows, "district", value, "en").map((e) => e.no)).toEqual([3, 1, 2, 4, 2378]);
     expect(sortEntries(rows, "-district", value, "en").map((e) => e.no)).toEqual([1, 2, 3, 4, 2378]);
+  });
+  it("sorts the kinds of place in the legend's order, towns first", () => {
+    const types = ["village", "mill", "town", "grange", "abbey", "farmstead", "small_town", "deserted_village"];
+    expect([...types].sort((a, b) => typeRank(a) - typeRank(b)))
+      .toEqual(["town", "small_town", "village", "farmstead", "grange", "mill", "abbey", "deserted_village"]);
   });
 });

@@ -24,6 +24,13 @@ export const SHAPE_ORDER = ["town", "small_town", "village", "hamlet", "farmstea
 
 /** The shape a type is drawn with. */
 export const shapeOf = (type: string) => (SHAPES[type] ? type : ALIASES[type] ?? "village");
+/** A type's place in the legend's order, those drawn with another type's shape just after it
+ * (grange and mill after farmstead): the Table sorts its Type column by it. */
+export function typeRank(type: string): number {
+  const shape = shapeOf(type);
+  const i = SHAPE_ORDER.indexOf(shape);
+  return (i < 0 ? SHAPE_ORDER.length : i) * 10 + (shape === type ? 0 : 1 + Object.keys(ALIASES).indexOf(type));
+}
 export const iconName = (type: string) => `place-${shapeOf(type)}`;
 
 /** Inline SVG of a type's shape, for legends. */
