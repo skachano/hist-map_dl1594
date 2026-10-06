@@ -658,9 +658,15 @@ def split_entries(entries: list[dict], rules: dict) -> list[dict]:
 def rename_entries(entries: list[dict], readings: list[dict], names: dict) -> None:
     """Entry names as printed, where the scan misread them: manual/entry_names.csv (each read on
     the scan: no, read, name, source) and rules.yaml `entry_names` (no: name). The text that
-    begins with the name takes the reading too, unless the name only drops words the
+    begins with the name takes the reading too (and first the parse's mending of its first
+    letter, "llombourg" -> "Hombourg"), unless the name only drops words the
     scan ran into it ("Malleloy et" is Malleloy)."""
     by_no = {e["no"]: e for e in entries}
+    for e in entries:   # "Beauchamps,abbaye": the OCR lost the space after a comma
+        e["text"] = re.sub(r",(?=[^\W\d_])", ", ", e["text"])
+    for e in entries:   # the text begins with the name, whose first letter the parse already mended
+        if not e["text"].startswith(e["name"]) and clean.fix_name(e["text"]).startswith(e["name"]):
+            e["text"] = clean.fix_name(e["text"])
     for r in readings:
         e = by_no.get(int(r["no"]))
         if e is None or e["name"] != r["read"]:
@@ -684,7 +690,8 @@ def retext_entries(entries: list[dict], texts: dict) -> None:
 
 def _rename(e: dict, name: str) -> None:
     read = e["name"]
-    if read != name and not read.startswith(name) and read in e["text"]:
+    same_word = len(read.split()) <= len(name.split()) + 1   # not "Elle consiste en ce seul village …" -> Altheim
+    if read != name and not read.startswith(name) and read in e["text"] and same_word:
         # an entry that is only its name ends with the full stop the scan read as a letter ("MonceL")
         whole = e["text"] == read and len(read.split()) == len(name.split())
         e["text"] = name + "." if whole else e["text"].replace(read, name, 1)

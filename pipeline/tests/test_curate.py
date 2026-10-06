@@ -135,3 +135,16 @@ def test_retext_entries():
     assert entries[0]["text"] == "Charmois."
     with pytest.raises(ValueError):
         build.retext_entries(entries, {9999: "Nowhere."})
+
+
+def test_a_sentence_keeps_its_text_when_the_entry_gets_a_name():
+    e = [{"no": 2177, "name": "Elle consiste en ce seul village d'Alihcim",
+          "text": "Elle consiste en ce seul village d'Alihcim."}]
+    build.rename_entries(e, [], {2177: "Altheim"})
+    assert e[0] == {"no": 2177, "name": "Altheim", "text": "Elle consiste en ce seul village d'Alihcim."}
+
+
+def test_the_text_takes_the_names_first_letter_and_a_space_after_commas():
+    e = [{"no": 2354, "name": "Hombourg", "text": "llombourg,chasteau."}]
+    build.rename_entries(e, [], {})
+    assert e[0]["text"] == "Hombourg, chasteau."

@@ -1,4 +1,5 @@
 no,read,name,source
+2,Sainct-iNicolas,Sainct-Nicolas,scan
 5,Arth-sur-Meurlhe,Arth-sur-Meurthe,DicoTopo
 6,Gbampîgneulles,Champigneulles,scan
 7,Dombaslc,Dombasle,tesseract
@@ -17,6 +18,7 @@ no,read,name,source
 51,Ccinlrey,Ceintrey,tesseract
 53,Dommarlemonl,Dommartemont,tesseract
 57,Haroucl,Harouel,scan
+58,Herbclmont,Herbelmont,scan
 60,Jcvoncourt,Jevoncourt,old forms
 61,Jarvillc,Jarville,tesseract
 63,Lcmainville,Lemainville,tesseract
@@ -59,6 +61,7 @@ no,read,name,source
 193,Remcnoville,Remenoville,tesseract
 194,Rozcreulles,Rozereulles,scan
 200,Serainvillc,Serainville,tesseract
+201,Tonnov,Tonnoy,scan
 202,Vellc,Velle,tesseract
 204,Vigneullcs,Vigneulles,DicoTopo
 206,Einvillc,Einville,scan
@@ -88,6 +91,7 @@ no,read,name,source
 307,Brecoocel,Breconcel,DicoTopo
 308,ftaalmont,Rualmont,DicoTopo
 312,La Trouehe,La Trouche,DicoTopo
+313,La ville dudict Sainct Dicy,La ville dudict Sainct Diey,scan
 316,Mazcllav,Mazellay,scan
 317,LaPoucherée,La Poucherée,scan
 318,Robaehc,Robache,tesseract
@@ -129,6 +133,7 @@ no,read,name,source
 471,Cham|>enoult,Champenoult,scan
 473,Aboncourl,Aboncourt,tesseract
 479,Putligny,Puttigny,tesseract
+487,Neufloue,Neuflotte,scan
 490,Ajoneourt,Ajoncourt,scan
 495,ColUgny,Colligny,scan
 498,Lanfroieourt,Lanfroicourt,DicoTopo
@@ -141,6 +146,7 @@ no,read,name,source
 519,Montcnoy,Montenoy,tesseract
 525,VetidiiTCs,Vendières,scan
 526,ChanuR'l,Champel,DicoTopo
+532,Saincie-Marie-aux-Bois,Saincte-Marie-aux-Bois,scan
 534,Villeeel-sur-Trin,Villecel-sur-Trin,tesseract
 539,Mars-la-Tonr,Mars-la-Tour,tesseract
 551,Sanzcv,Sanzey,scan
@@ -313,6 +319,7 @@ no,read,name,source
 1104,Rcgniévclle,Regniévelle,tesseract
 1106,La Cosle Sainct-Antoine,La Coste Sainct-Antoine,tesseract
 1107,Monstcreul-sur-Saône,Monstereul-sur-Saône,DicoTopo
+1110,Dombroi,Dombrot,scan
 1117,Chaslenois,Chastenois,tesseract
 1118,Neufchasleau,Neufchasteau,tesseract
 1119,Baimois,Raimois,DicoTopo
@@ -413,6 +420,7 @@ no,read,name,source
 1394,Wciblingen,Weiblingen,DicoTopo
 1395,Wclmeringen,Welmeringen,old forms
 1396,Wuirfingen,Wulffingen,old forms
+1398,Hamcn,Hamen,scan
 1399,Fait,Falt,DicoTopo
 1401,Lautherii,Lauthern,old forms
 1402,Licsstorff,Liesstorff,scan
@@ -441,6 +449,7 @@ no,read,name,source
 1454,Budingcn,Budingen,tesseract
 1456,Wcillingcn,Weillingen,DicoTopo
 1457,Beliingcn,Bettingen,scan
+1459,Haltlcringen,Balderingen,scan
 1462,Bulzen,Butzen,old forms
 1463,Memmingcn,Memmingen,old forms
 1465,Morchingcn,Morchingen,old forms
@@ -480,6 +489,7 @@ no,read,name,source
 1537,Nidersleimbach,Nidersteimbach,tesseract
 1538,Obersleimbach,Obersteimbach,tesseract
 1546,Kctternostern,Ketternostern,old forms
+1547,Huprcchtzweiller,Huprechtzweiller,scan
 1548,Sutzwciller,Sutzweiller,old forms
 1555,Rappwciller,Rappweiller,tesseract
 1558,Lîessterthal,Liessterthal,scan
@@ -504,6 +514,7 @@ no,read,name,source
 1601,Kutlingen,Kuttingen,tesseract
 1603,Barlhelémont,Barthelémont,DicoTopo
 1614,WUler,Willer,old forms
+1620,Hampopr,Hampont,scan
 1621,BuderetortT,Buderstorff,scan
 1625,Domcnheim,Domenheim,old forms
 1630,Nollingcn,Nollingen,old forms
@@ -526,6 +537,7 @@ no,read,name,source
 1672,La ville de Bcaurains,La ville de Beaurains,tesseract
 1678,Edelingcn,Edelingen,tesseract
 1687,WiderstorlT,Widerstorff,scan
+1699,Houionville,Bouzonville,scan
 1703,La ville de Morhangcs,La ville de Morhanges,tesseract
 1704,Reckrangcs,Reckranges,old forms
 1710,Sollzlingen,Soltzlingen,DicoTopo
@@ -533,6 +545,7 @@ no,read,name,source
 1723,Norlangen,Morlangen,tesseract
 1727,Speieher,Speicher,DicoTopo
 1728,Roehlingen,Rochlingen,DicoTopo
+1748,Hôudreville,Houdreville,scan
 1749,Hamcvillc,Hameville,tesseract
 1750,Clercy,Clerey,tesseract
 1751,Thev-soub-Vaudémont,They-soub-Vaudémont,scan
@@ -679,6 +692,7 @@ no,read,name,source
 2210,Froschcn,Froschen,old forms
 2216,Muridweiller,Mundweiller,tesseract
 2217,Dieterssbaeh,Dieterssbach,tesseract
+2220,Imssbacli,Inssbach,scan
 2222,Wedcsht?iro,Wedesheim,scan
 2223,Falkcnsiein,Falkenstein,scan
 2224,Altltaun,Altthann,DicoTopo
@@ -690,6 +704,7 @@ no,read,name,source
 2233,Einartzhauscn,Einartzhausen,scan
 2234,Lutzclbourg,Lutzelbourg,scan
 2237,Mitteîborn,Mittelborn,tesseract
+2240,La ville de Sainct-Avol ou Sataet-Nabor,La ville de Sainct-Avol ou Sainct-Nabor,scan
 2242,Mâchera,Machern,DicoTopo
 2246,EmerssweiUer,Emerssweiller,scan
 2248,Eberiingea,Ebersingen,DicoTopo
@@ -726,8 +741,11 @@ no,read,name,source
 2345,Vignol,Vignot,tesseract
 2348,\JC Pont-Sainct-Vincent,Le Pont-Sainct-Vincent,scan
 2353,Pfallzbourg,Pfaltzbourg,scan
+2356,Harsal,Marsal,scan
 2367,Dcneuvre,Deneuvre,tesseract
+2368,Hatissonvillc,Haussonville,scan
 2369,Hatonchastcl,Hatonchastel,tesseract
+2378,Sainct-iMartin',Sainct-Martin,scan
 2381,Bclpré,Belpré,tesseract
 2382,Sainct-Sauvcur,Sainct-Sauveur,scan
 2384,Haullc-Scille,Haulte-Scille,tesseract
