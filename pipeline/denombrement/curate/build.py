@@ -913,7 +913,7 @@ def _manual_memberships(out: Built) -> None:
 
 def _translate_territories(out: Built) -> None:
     """A territory's German, English and Japanese names from its seat's ("Herrschaft Bitsch",
-    "Kellerei Hombourg und Saint-Avold", "ビッシュ領"), not the French seat with "et"; the names a
+    "Kellerei Hombourg und Saint-Avold", "ビッチュ領"), not the French seat with "et"; the names a
     rules.yaml territory_names entry gives stand. Seats are matched to the settlements of the
     territory first, then to the one settlement of that name."""
     vocab = load_vocab(config.CURATED_DIR / "vocab.yaml")["territory_types"]
