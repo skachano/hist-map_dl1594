@@ -106,6 +106,24 @@ test("the hover tooltip stays inside the map near the edges (no scrollbar)", asy
   expect(scroll).toEqual({ x: 0, y: 0 });
 });
 
+test("the hover tooltip goes when the cursor leaves a place that lies outside every cell", async ({ page }) => {
+  // Marre (by Verdun) is drawn outside the duchy's cells: leaving its icon crossed no layer's edge,
+  // and the tooltip stayed where it was
+  await open(page, "#/map?lang=en");
+  await mapSettled(page);
+  const box = (await page.locator("#map").boundingBox())!;
+  const at = await page.evaluate(() => {
+    const m = (window as unknown as { __map: { project(c: [number, number]): { x: number; y: number } } }).__map;
+    return m.project([5.30194, 49.21111]);
+  });
+  const tooltip = page.locator("#tooltip");
+  await page.mouse.move(box.x + at.x, box.y + at.y);
+  await expect(tooltip).toBeVisible();
+  await expect(tooltip).toContainText("Marre");
+  await page.mouse.move(box.x + at.x + 40, box.y + at.y - 40);   // nothing there
+  await expect(tooltip).toBeHidden();
+});
+
 test("settlements are drawn with one shape per kind of place, keyed in the legend", async ({ page }) => {
   await open(page, "#/map?lang=en");
   const key = page.locator("#legend ul.shapes");

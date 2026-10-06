@@ -18,3 +18,14 @@ export const TENURE_COLOURS: Record<string, string> = {
 export const BAILIWICK = "#4a3aa7";
 export const GROUP_COLOUR = { bailiwick: BAILIWICK, office: SERIES[0], lordship: SERIES[1], county: SERIES[2],
   other: REALM_OTHER } as const;
+
+/** Chaumes: a single-hue ramp, light to dark green (the summer pastures), for a provostship's
+ *  total gîtes. Sequential, so it reads as "more" without a second hue next to the categorical ones. */
+const PASTURE_LIGHT = [0xdc, 0xf2, 0xe7];
+const PASTURE_DARK = [0x0b, 0x5e, 0x3f];
+/** The ramp's colour at `t` in 0..1 (a square-root scale is applied by the caller where counts are skewed). */
+export function pastureShade(t: number): string {
+  const k = Math.min(1, Math.max(0, t));
+  const c = PASTURE_LIGHT.map((a, i) => Math.round(a + (PASTURE_DARK[i] - a) * k));
+  return `#${c.map((x) => x.toString(16).padStart(2, "0")).join("")}`;
+}

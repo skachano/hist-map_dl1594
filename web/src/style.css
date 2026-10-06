@@ -81,6 +81,8 @@ button.link[aria-pressed="true"] { background: none; color: var(--ink); font-wei
 #side { left: 16px; top: 16px; bottom: 16px; width: min(360px, calc(100% - 32px)); overflow: auto; padding: 12px 14px; }
 #side h2 { font-size: 17px; margin: 8px 0 4px; }
 #side h3 { font-size: 14px; margin: 14px 0 4px; }
+#side h3.total .swatch { display: inline-block; width: 12px; height: 12px; margin-right: 6px; vertical-align: -1px;
+  background: var(--c); border: 1px solid var(--border); border-radius: 2px; }
 #side select { width: 100%; }
 #side ul { margin: 4px 0; padding-left: 18px; }
 #side .disputes > li { margin-bottom: 8px; }

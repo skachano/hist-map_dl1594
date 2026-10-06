@@ -58,11 +58,12 @@ const STRINGS = {
   // The book's own definition: Alix ends his list of chaumes (p. 119) with "Fault à noter que chacune
   // giste est de quarante bestes rouges". Written in today's spelling.
   chaumesNote: {
-    en: "The summer pastures on the crests of the high Vosges, which Duke Charles III had let to the people of Gérardmer, La Bresse and other subjects since 1571. Thierry Alix counts their grazing in gîtes and ends his list by defining the unit: each gîte is forty head of cattle (\"bêtes rouges\"). Not located on the map.",
-    fr: "Les pâturages d'été des crêtes des hautes Vosges, laissés depuis 1571 aux habitants de Gérardmer, de La Bresse et à d'autres sujets du duc Charles III. Thierry Alix compte leur pâture en gîtes et termine sa liste en définissant cette unité : « chaque gîte est de quarante bêtes rouges ». Non localisés sur la carte.",
-    de: "Die Sommerweiden auf den Kämmen der Hochvogesen, seit 1571 an die Bewohner von Gérardmer, La Bresse und andere Untertanen Herzog Karls III. verpachtet. Thierry Alix zählt ihre Weide in gîtes und beschließt seine Liste mit der Bestimmung dieser Einheit: Ein gîte sind vierzig Rinder („bêtes rouges“). Auf der Karte nicht verortet.",
-    ja: "高地ヴォージュの稜線にある夏季放牧地。1571年以来、ジェラルメ、ラ・ブレスなどシャルル3世の臣民に貸し出されていた。ティエリー・アリクスは放牧量をジット（gîte）で数え、一覧の末尾でこの単位を定義している。1ジットは牛（「赤い家畜」）40頭。地図上の位置は未確定。" },
+    en: "The summer pastures on the crests of the high Vosges, which Duke Charles III had let to the people of Gérardmer, La Bresse and other subjects since 1571. Thierry Alix counts their grazing in gîtes and ends his list by defining the unit: each gîte is forty head of cattle (\"bêtes rouges\"). The chaumes themselves are not located: the map shades each provostship by its total of gîtes.",
+    fr: "Les pâturages d'été des crêtes des hautes Vosges, laissés depuis 1571 aux habitants de Gérardmer, de La Bresse et à d'autres sujets du duc Charles III. Thierry Alix compte leur pâture en gîtes et termine sa liste en définissant cette unité : « chaque gîte est de quarante bêtes rouges ». Les chaumes elles-mêmes ne sont pas localisées : la carte teinte chaque prévôté selon son total de gîtes.",
+    de: "Die Sommerweiden auf den Kämmen der Hochvogesen, seit 1571 an die Bewohner von Gérardmer, La Bresse und andere Untertanen Herzog Karls III. verpachtet. Thierry Alix zählt ihre Weide in gîtes und beschließt seine Liste mit der Bestimmung dieser Einheit: Ein gîte sind vierzig Rinder („bêtes rouges“). Die Weiden selbst sind nicht verortet: Die Karte tönt jede Schultheißerei nach ihrer Gesamtzahl an gîtes.",
+    ja: "高地ヴォージュの稜線にある夏季放牧地。1571年以来、ジェラルメ、ラ・ブレスなどシャルル3世の臣民に貸し出されていた。ティエリー・アリクスは放牧量をジット（gîte）で数え、一覧の末尾でこの単位を定義している。1ジットは牛（「赤い家畜」）40頭。各放牧地の位置は未確定のため、地図では代官区ごとのジット合計を濃淡で示す。" },
   provostshipOf: { en: "Provostship of", fr: "Prévôté de", de: "Schultheißerei", ja: "代官区：" },
+  totalGistes: { en: "gîtes in all:", fr: "gîtes en tout :", de: "gîtes insgesamt:", ja: "ジット合計" },
   giste: { en: "gîte", fr: "gîte", de: "gîte", ja: "ジット" },
   gistes: { en: "gîtes", fr: "gîtes", de: "gîtes", ja: "ジット" },
   all: { en: "All", fr: "Tous", de: "Alle", ja: "すべて" },

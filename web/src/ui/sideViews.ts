@@ -2,7 +2,7 @@
 // holder holds) and, in Settlements, a thematic list of the book or the chaumes.
 import type { Dataset, Entry, Place } from "../data/types";
 import { label, name, type StringKey, t } from "../i18n";
-import { GROUP_COLOUR } from "../model/colors";
+import { GROUP_COLOUR, pastureShade } from "../model/colors";
 import { areas, currentLevel, GROUP_ORDER, KINDS, levelsOf, type RealmGroup, realmGroup, shownAreas } from "../model/territories";
 import { type Layer, type State, type Store } from "../state/store";
 import { fill, h } from "./dom";
@@ -17,6 +17,19 @@ export const LAYER_SERIES: Record<Exclude<Layer, "chaumes">, string[]> = {
   convents: ["friaries", "convents_m", "grey_sisters", "other_sisters"],
   commanderies: ["commanderies"],
 };
+
+/** Each provostship's total gîtes of chaumes, and the shade the map gives it (square-root scale,
+ *  so a provostship with a few gîtes still shows beside Arches' thirty-two). */
+export function chaumeTotals(data: Dataset): Map<string, { gistes: number; colour: string }> {
+  const totals = new Map<string, number>();
+  for (const f of data.features) {
+    if (f.theme !== "chaume") continue;
+    const g = String(f.attrs?.provostship ?? "");
+    totals.set(g, (totals.get(g) ?? 0) + Number(f.attrs?.gistes ?? 0));
+  }
+  const max = Math.max(1, ...totals.values());
+  return new Map([...totals].map(([g, n]) => [g, { gistes: n, colour: pastureShade(Math.sqrt(n / max)) }]));
+}
 
 /** The entries of a layer, in the book's order. */
 export function layerEntries(data: Dataset, layer: Layer): Entry[] {
@@ -132,10 +145,15 @@ export function renderLayerView(root: HTMLElement, data: Dataset, state: State, 
     // other names ("en allemand Mensberg", "aliàs le Hault-Rouan"), one or several
     const also = (f: (typeof data.features)[number]) => [f.attrs?.also ?? []].flat().map(String);
     const gistes = (n: unknown) => n === undefined ? "" : ` · ${n} ${t(n === 1 ? "giste" : "gistes", lang)}`;
+    const totals = chaumeTotals(data);
     body = [h("p", { class: "key" }, t("chaumesNote", lang)),
       ...[...groups].flatMap(([g, items]) => [
-        // the division the heading names ("Sous la prévosté de Sainct-Diey"), in the reader's language
-        h("h3", {}, data.places.has(g) ? placeName(g) : `${t("provostshipOf", lang)} ${g}`),
+        // the division the heading names ("Sous la prévosté de Sainct-Diey"), in the reader's language,
+        // with its total and the shade it has on the map
+        h("h3", { class: "total" },
+          h("span", { class: "swatch", style: `--c:${totals.get(g)?.colour}`, "aria-hidden": "true" }),
+          data.places.has(g) ? placeName(g) : `${t("provostshipOf", lang)} ${g}`,
+          h("span", { class: "muted" }, ` · ${t("totalGistes", lang)} ${totals.get(g)?.gistes ?? 0}`)),
         h("ul", {}, ...items.map((f) => h("li", {}, h("strong", {}, f.name),
           also(f).length ? h("span", {}, ` (${also(f).join(", ")})`) : "",
           gistes(f.attrs?.gistes),

@@ -13,7 +13,7 @@ import { renderLegend } from "./ui/legend";
 import { setMapFocus } from "./ui/navigate";
 import { renderTable } from "./ui/pages";
 import { childrenOf, renderPanel, shareLabel } from "./ui/panel";
-import { layerEntries, renderHoldersView, renderLayerView, renderTerritoriesView } from "./ui/sideViews";
+import { chaumeTotals, layerEntries, renderHoldersView, renderLayerView, renderTerritoriesView } from "./ui/sideViews";
 import { tooltipPosition } from "./ui/tooltip";
 
 const $ = (id: string) => document.getElementById(id)!;
@@ -98,6 +98,12 @@ async function start(): Promise<void> {
       const realms = [...data.places.values()].filter((p) => p.kind === "territory" && entity && p.holder?.includes(entity));
       return { styles, areas: { ids: realms.map((p) => p.id), feudal: true, interactive: false } };
     }
+    if (state.view === "map" && state.layer === "chaumes") {
+      // the chaumes aren't located: each provostship is shaded by its total gîtes
+      const totals = chaumeTotals(data);
+      const fills = new Map([...totals].map(([id, x]) => [id, x.colour]));
+      return { styles: new Map(), areas: { ids: [...totals.keys()], feudal: false, interactive: false, fills } };
+    }
     if (state.view === "map" && state.layer) {
       const styles = new Map<string, PlaceStyle>();
       const colour = state.layer === "towns" ? SERIES[0] : SERIES[2];
@@ -147,6 +153,9 @@ async function start(): Promise<void> {
       }
     }
     const names = new Map(areas.ids.map((id) => [id, name(data.places.get(id)?.name, state.lang, id)]));
+    if (areas.fills) {   // the chaumes: the provostships lie side by side, so each label is its total (named in the list)
+      for (const [id, x] of chaumeTotals(data)) names.set(id, `${x.gistes} ${t(x.gistes === 1 ? "giste" : "gistes", state.lang)}`);
+    }
     if (onMap) void map.render(styles, areas, names, state.place);
     history.replaceState(null, "", toHash(state));
     performance.measure(`render:${state.view}`, { start: started }); // read by end-to-end performance tests

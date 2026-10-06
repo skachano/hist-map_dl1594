@@ -150,6 +150,9 @@ test("settlements: the tenures or a thematic list on the map, chaumes listed", a
   await expect(page).toHaveURL(/layer=towns/);
   await modes.getByRole("button", { name: "Chaumes" }).click();
   await expect(side).toContainText("gîtes");
+  // each provostship with its total, the shade the map gives it
+  await expect(side.locator("h3.total").filter({ hasText: "Arches" })).toContainText("gîtes in all: 32");
+  await expect(page.locator(".terr-label")).toHaveText(["1 gîte", "5 gîtes", "32 gîtes"], { useInnerText: true });
   await modes.getByRole("button", { name: "Abbeys" }).click();
   await side.locator("ul.entries li button").first().click();
   await expect(page).toHaveURL(/#\/map\?.*place=/);

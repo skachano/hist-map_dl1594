@@ -1,7 +1,7 @@
 // The map: settlement cells and points styled per place by the view (tenure on the Settlements tab),
 // hatching for places held only in part, the duchy's outline, and the territories' areas, labelled.
 import {
-  type FilterSpecification, type GeoJSONSource, Map as MapLibre, type MapGeoJSONFeature, type MapMouseEvent, Marker,
+  type FilterSpecification, type GeoJSONSource, Map as MapLibre, type MapGeoJSONFeature, Marker,
   setWorkerUrl,
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -14,6 +14,7 @@ import { GROUP_COLOUR } from "../model/colors";
 import { typesIn } from "../model/territories";
 import { DUCHY, type PlaceStyle } from "../model/places";
 import { ICON_PIXEL_RATIO, iconName, SHAPES, shapeImage } from "./icons";
+import { labelPoint } from "./labelPoint";
 
 const BASEMAP_STYLE = "https://tiles.openfreemap.org/styles/positron";
 const BASEMAP_DROP = /^(building|aeroway|airport|road_area_pier|road_pier|highway_path|highway_minor|highway-name|highway-shield|road_shield|railway|tunnel|label_village|label_other)/;
@@ -26,6 +27,8 @@ export interface AreaLayer {
   ids: string[];
   feudal: boolean;
   interactive: boolean;
+  /** a colour per area instead of the colour of its kind (the Chaumes layer's totals) */
+  fills?: Map<string, string>;
 }
 
 export interface MapCallbacks {
@@ -79,6 +82,9 @@ export class MapView {
   private cellOf = new Map<string, string>();
   private labels: Marker[] = [];
   private areasInteractive = false;
+  // the areas' paint by kind of realm, restored when a view has drawn its own colours
+  private areaColour: unknown;
+  private areaOpacity: unknown;
 
   constructor(container: HTMLElement, private data: Dataset, callbacks: MapCallbacks) {
     for (const f of data.cells.features) {
@@ -107,21 +113,20 @@ export class MapView {
     // The container changes size when the phone layout opens the panel below the map.
     new ResizeObserver(() => this.map.resize()).observe(container);
 
-    const hover = (e: MapMouseEvent & { features?: MapGeoJSONFeature[] }) => {
-      const id = e.features?.[0]?.properties?.id as string | undefined;
-      this.map.getCanvas().style.cursor = id ? "pointer" : "";
-      callbacks.onHover(id, e.point);
-    };
-    this.map.on("mousemove", "cells-fill", hover);
-    this.map.on("mousemove", "places-icon", hover);
-    this.map.on("mouseleave", "cells-fill", (e) => callbacks.onHover(undefined, e.point));
-    this.map.on("mousemove", "area-fill", (e) => {
-      if (!this.areasInteractive) return;
-      const id = this.smallestArea(e.features ?? []);
+    // One hover handler for the whole map: per-layer mouseleave events miss the move from a place's
+    // icon to a spot with no cell under it (outside the duchy, or where cells are hidden), which left
+    // the tooltip stuck. Every move asks what lies under the cursor, and nothing hides the tooltip.
+    this.map.on("mousemove", (e) => {
+      const id = this.areasInteractive
+        ? this.smallestArea(this.map.queryRenderedFeatures(e.point, { layers: ["area-fill"] }))
+        : this.map.queryRenderedFeatures(e.point, { layers: ["places-icon", "cells-fill"] })[0]?.properties?.id as string | undefined;
       this.map.getCanvas().style.cursor = id ? "pointer" : "";
       callbacks.onHover(id, e.point);
     });
-    this.map.on("mouseleave", "area-fill", (e) => { if (this.areasInteractive) callbacks.onHover(undefined, e.point); });
+    this.map.on("mouseout", (e) => {
+      this.map.getCanvas().style.cursor = "";
+      callbacks.onHover(undefined, e.point);
+    });
     this.map.on("click", (e) => {
       if (this.areasInteractive) {
         callbacks.onSelect(this.smallestArea(this.map.queryRenderedFeatures(e.point, { layers: ["area-fill"] })));
@@ -156,14 +161,13 @@ export class MapView {
     // Territory areas, as in hist_map: realms coloured by kind (offices blue, lordships orange, counties
     // green, the rest dark grey), white borders between neighbours.
     const coloured = [...typesIn("bailiwick"), ...typesIn("office"), ...typesIn("lordship"), ...typesIn("county")];
+    this.areaColour = ["match", ["get", "place_type"], typesIn("bailiwick"), GROUP_COLOUR.bailiwick,
+      typesIn("office"), GROUP_COLOUR.office,
+      typesIn("lordship"), GROUP_COLOUR.lordship, typesIn("county"), GROUP_COLOUR.county, GROUP_COLOUR.other];
+    // The neutral grey has no hue to stand out on the grey basemap: only darkness can.
+    this.areaOpacity = ["match", ["get", "place_type"], coloured, 0.45, 0.75];
     m.addLayer({ id: "area-fill", type: "fill", source: "territories", filter: hidden,
-      paint: {
-        "fill-color": ["match", ["get", "place_type"], typesIn("bailiwick"), GROUP_COLOUR.bailiwick,
-          typesIn("office"), GROUP_COLOUR.office,
-          typesIn("lordship"), GROUP_COLOUR.lordship, typesIn("county"), GROUP_COLOUR.county, GROUP_COLOUR.other],
-        // The neutral grey has no hue to stand out on the grey basemap: only darkness can.
-        "fill-opacity": ["match", ["get", "place_type"], coloured, 0.45, 0.75],
-      } });
+      paint: { "fill-color": this.areaColour, "fill-opacity": this.areaOpacity } as never });
     m.addLayer({
       id: "cells-fill", type: "fill", source: "cells",
       paint: { "fill-color": ["coalesce", state("fill"), "rgba(0,0,0,0)"], "fill-opacity": 0.75 },
@@ -240,6 +244,17 @@ export class MapView {
       ...(zoom ? { zoom: Math.max(this.map.getZoom(), PLACE_ZOOM) } : {}) });
   }
 
+  private middles = new Map<string, [number, number] | undefined>();
+
+  /** The middle of a territory's area (computed once). */
+  private areaMiddle(id: string): [number, number] | undefined {
+    if (!this.middles.has(id)) {
+      const f = this.data.territories.features.find((x) => x.properties?.id === id);
+      this.middles.set(id, f ? labelPoint(f.geometry) : undefined);
+    }
+    return this.middles.get(id);
+  }
+
   /** Draw the places' styles and the territory areas, labelled. */
   async render(styles: Map<string, PlaceStyle>, areas: AreaLayer, names: Map<string, string>,
     selected?: string): Promise<void> {
@@ -255,20 +270,31 @@ export class MapView {
 
     const shown: FilterSpecification = ["in", ["get", "id"], ["literal", districts]];
     m.setFilter("area-fill", shown);
+    if (areas.fills?.size) {
+      m.setPaintProperty("area-fill", "fill-color",
+        ["match", ["get", "id"], ...[...areas.fills].flat(), "rgba(0,0,0,0)"] as never);
+      m.setPaintProperty("area-fill", "fill-opacity", 0.8);
+    } else {
+      m.setPaintProperty("area-fill", "fill-color", this.areaColour as never);
+      m.setPaintProperty("area-fill", "fill-opacity", this.areaOpacity as never);
+    }
     m.setFilter("area-line", shown);
-    // The Territories tab draws only the territories' borders, not each village's cell.
+    // The Territories tab and the Chaumes shading draw only the territories, not each village's cell.
     for (const layer of ["cells-fill", "cells-line"]) {
-      m.setLayoutProperty(layer, "visibility", areas.interactive ? "none" : "visible");
+      m.setLayoutProperty(layer, "visibility", areas.interactive || areas.fills?.size ? "none" : "visible");
     }
     for (const label of this.labels) label.remove();
     this.labels = [];
     for (const id of districts) {
       const p = this.data.places.get(id);
-      if (p?.lat === undefined || p.lon === undefined) continue;
+      // a shaded area (the Chaumes totals) is labelled at its middle, the others at their seat
+      const middle = areas.fills?.size ? this.areaMiddle(id) : undefined;
+      const at = middle ?? (p?.lat !== undefined && p.lon !== undefined ? [p.lon, p.lat] as [number, number] : undefined);
+      if (!at) continue;
       const el = document.createElement("div");
       el.className = "terr-label";
       el.textContent = names.get(id) ?? id;
-      this.labels.push(new Marker({ element: el }).setLngLat([p.lon, p.lat]).addTo(m));
+      this.labels.push(new Marker({ element: el }).setLngLat(at).addTo(m));
     }
 
     const shared: GeoJSON.Feature[] = [];
