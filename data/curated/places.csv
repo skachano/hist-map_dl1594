@@ -139,7 +139,6 @@ val-liepvre,territory,Val de Liepvre,Lebertal,Val de Lièpvre,,,val,48.27222,7.2
 abaucourt,settlement,Abaucourt,Abaucourt,Abaucourt,Aboncourt|Abaticourt,Aboncourt,village,48.89694,6.25806,Q269866,,FR,Mi,,Nomeny,Meurthe,,rule,high,,,,,53,medium,"Abaucourt, canton de Nomeny (the scan reads Abaticourt); not Aboncourt-sur-Seille"
 aboncourt,settlement,Aboncourt,Aboncourt,Aboncourt,,,village,48.35806,5.96694,Q668451,,FR,,,Colombey,,,wikidata,high,,,,,97,high,1.00 near the index's canton (20 km); was 60 km away
 aboncourt-sur-seille,settlement,Aboncourt-sur-Seille,Aboncourt-sur-Seille,Aboncourt-sur-Seille,Aboncourt|Aboncourt-sur-SeHîe,,village,48.81639,6.33944,Q21615,,FR,,,Château-Salins,Meurthe,,wikidata,medium,,,,,52,medium,0.91 near the index's canton (12 km)
-abvefvenet-la-grande,settlement,La Grande-Ableuvenette,,,Abvefvenet-la-Grande,,village,48.19028,6.18611,,,FR,,,,,,approximate,low,,,,,71,low,"not found in the index; La Grande-Ableuvenette, at Ableuvenettes: Abvefvenet la Grande, Alix n° 1045 (Marichal)"
 achain,settlement,Achain,Achain,Achain,Eschen,Eschen,village,48.91361,6.59222,Q21626,,FR,,,Château-Salins,Meurthe,,hist_map,high,,,,,94,high,1.00 near the index's canton (12 km)
 achen,settlement,Achen,Achen,Achen,,,village,49.04333,7.18278,Q22094,,FR,,,Rohrbach,,,hist_map,high,,,,,111,high,1.00 near the index's canton (6 km)
 adelange,settlement,Adelange,Edelingen,Adelange,Edlingen|Adelangc,Edlingen,village,49.00528,6.61194,Q21644,,FR,,,Faulquemont,,,hist_map,high,,,,,94,high,1.00 near the index's canton (4 km)
@@ -1139,7 +1138,7 @@ lepanges-sur-vologne,settlement,Lépanges-sur-Vologne,Lépanges-sur-Vologne,Lép
 leppenoux,settlement,Leppenoux,,,De Lespenoux,,hamlet,48.03278,6.03556,,,FR,ham. (verrerie),Claudon,,,,approximate,low,,,,,73,high,not in Wikidata/GeoNames; placed at its commune Claudon
 lerouville,settlement,Lérouville,Lérouville,Lérouville,Reloville|Lcrouville,Reloville,village,48.79167,5.54417,Q1159564,,FR,,,Commercy,,,wikidata,high,,,,,40,high,1.00 near the index's canton (5 km); 48 km from its district
 lerrain,settlement,Lerrain,Lerrain,Lerrain,Larrin,,village,48.14333,6.14778,Q732126,,FR,,,Darney,,,wikidata,high,,,,,69,high,1.00 near the index's canton (10 km)
-les-ableuvenettes,settlement,Les Ableuvenettes,Les Ableuvenettes,Les Ableuvenettes,Abvefvenet-la-Petite|Les Ableuveneltes,,village,48.19028,6.18611,Q196504,,FR,"t, km de Dompaire",,,,true,wikidata,medium,,,,,70,high,"exact name, no anchor"
+les-ableuvenettes,settlement,Les Ableuvenettes,Les Ableuvenettes,Les Ableuvenettes,Abvefvenet-la-Grande|Abvefvenet-la-Petite,,village,48.19028,6.18611,Q196504,,FR,,,Dompaire,,,wikidata,high,,,,,70,high,1.00 near the index's canton (4 km)
 les-ainias,settlement,Les Amias,,,Les Amyas|Les Ainias,,hamlet,47.94944,6.76917,,,FR,ham.,Saulxures,,,,approximate,low,,,,,61,medium,"not in Wikidata/GeoNames; placed at its commune Saulxures (near its district); Les Amias, a hamlet of Saulxures-sur-Moselotte (DicoTopo: Amias (Les))"
 les-champs,settlement,Les Champs,,,,,hamlet,47.925,6.48333,,,FR,ham,Val-d'Ajol,,,,approximate,low,,,,,63,high,not in Wikidata/GeoNames; placed at its commune Val-d'Ajol
 les-champs-de-laxci,settlement,Champ-le-Duc,,,Champ de Laxey|Les Champs-de-Laxci,,hamlet,48.13528,6.75278,,,FR,ham.,Champdray,,,,approximate,low,,,,,57,high,a hamlet of Champdray (the index); not Champ-le-Duc

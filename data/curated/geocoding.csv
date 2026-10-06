@@ -2,7 +2,6 @@ place_id,lat,lon,wikidata_id,geonames_id,name_fr,name_de,name_en,name_ja,country
 abaticourt,48.89694,6.25806,Q269866,,Abaucourt,Abaucourt,Abaucourt,,FR,rule,high,"Abaucourt, canton de Nomeny (the scan reads Abaticourt); not Aboncourt-sur-Seille"
 aboncourt,48.35806,5.96694,Q668451,,Aboncourt,Aboncourt,Aboncourt,,FR,wikidata,high,1.00 near the index's canton (20 km); was 60 km away
 aboncourt-sur-sehie,48.81639,6.33944,Q21615,,Aboncourt-sur-Seille,Aboncourt-sur-Seille,Aboncourt-sur-Seille,,FR,wikidata,medium,0.91 near the index's canton (12 km)
-abvefvenet-la-grande,48.19028,6.18611,,,La Grande-Ableuvenette,,,,FR,approximate,low,"La Grande-Ableuvenette, at Ableuvenettes: Abvefvenet la Grande, Alix n° 1045 (Marichal)"
 achain,48.91361,6.59222,Q21626,,Achain,Achain,Achain,,FR,hist_map,high,1.00 near the index's canton (12 km)
 achen,49.04333,7.18278,Q22094,,Achen,Achen,Achen,,FR,hist_map,high,1.00 near the index's canton (6 km)
 adelangc,49.00528,6.61194,Q21644,,Adelange,Edelingen,Adelange,,FR,hist_map,high,1.00 near the index's canton (4 km)
@@ -1062,7 +1061,7 @@ lepangc,47.92271,6.66291,,,Lépanges,,,,FR,approximate,low,"not in Wikidata/GeoN
 lepangcs,48.17222,6.67111,Q581305,,Lépanges-sur-Vologne,Lépanges-sur-Vologne,Lépanges-sur-Vologne,,FR,wikidata,high,1.00 near the index's canton (5 km)
 leppenoux,48.03278,6.03556,,,Leppenoux,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Claudon
 lerrain,48.14333,6.14778,Q732126,,Lerrain,Lerrain,Lerrain,,FR,wikidata,high,1.00 near the index's canton (10 km)
-les-ableuveneltes,48.19028,6.18611,Q196504,,Les Ableuvenettes,Les Ableuvenettes,Les Ableuvenettes,,FR,wikidata,medium,"exact name, no anchor"
+les-ableuvenettes,48.19028,6.18611,Q196504,,Les Ableuvenettes,Les Ableuvenettes,Les Ableuvenettes,,FR,wikidata,high,1.00 near the index's canton (4 km)
 les-ainias,47.94944,6.76917,,,Les Amias,,,,FR,approximate,low,"not in Wikidata/GeoNames; placed at its commune Saulxures (near its district); Les Amias, a hamlet of Saulxures-sur-Moselotte (DicoTopo: Amias (Les))"
 les-champs,47.925,6.48333,,,Les Champs,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Val-d'Ajol
 les-champs-de-laxci,48.13528,6.75278,,,Champ-le-Duc,,,,FR,approximate,low,a hamlet of Champdray (the index); not Champ-le-Duc

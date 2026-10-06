@@ -1042,7 +1042,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1042,Valleroy-aux-Saulxes.,Valleroy-aux-Saulxes,,ban-girancourt,,fief,,,,main,,valleroy-aux-saules,71,high,
 1043,Gellenecourt.,Gellenecourt,,ban-girancourt,,fief,,,,main,,gelvecourt-et-adompt,71,high,
 1044,Hagiecourt.,Hagiecourt,,ban-girancourt,,fief,,,,main,,hagecourt,71,high,
-1045,Abvefvenet-la-Grande.,Abvefvenet-la-Grande,,ban-girancourt,,fief,,,,main,,abvefvenet-la-grande,71,low,index match by none (0.00)
+1045,Abvefvenet-la-Grande.,Abvefvenet-la-Grande,,ban-girancourt,,fief,,,,main,,les-ableuvenettes,71,high,
 1046,Bignécourt.,Bignécourt,,ban-girancourt,,fief,,,,main,,begnecourt,71,high,
 1047,Ligeville.,Ligeville,,ban-girancourt,,fief,,,,main,,legeville-et-bonfays,71,high,
 1048,Mazelet.,Mazelet,,ban-girancourt,,fief,,,,main,,mazelay,71,high,
@@ -1408,7 +1408,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1408,Fressberg.,Fressberg,,office-vaudrevange,,fief,,,,main,,felsberg,84,high,
 1409,Le Val de Nolbach.,Le Val de Nolbach,,office-vaudrevange,,fief,,,,main,,nalbach,84,high,
 1410,Sirsperg.,Sirsperg,,office-siersberg,,domain,,,,main,,siersberg,84,high,
-1411,Nittel.,Nittel,,office-siersberg,,domain,,,,main,,nittel,84,medium,index match by index number (1.00); number read from 'UII'
+1411,Nittel.,Nittel,,office-siersberg,,domain,,,,main,,nittel,84,medium,index match by loose number (1.00); number read from 'UII'
 1412,Kolchen.,Kolchen,,office-siersberg,,domain,,,,main,,kollig,84,high,number read from '1M2'
 1413,Rellingen.,Rellingen,,office-siersberg,,domain,,,,main,,rehlingen,84,high,2 number(s) missing before
 1414,Remelfangen.,Remelfangen,,office-siersberg,,domain,,,,main,,rammelfangen,84,high,

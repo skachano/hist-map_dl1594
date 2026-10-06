@@ -400,6 +400,7 @@ index_lines:
   "257|Vilcey-sur-Trey": "Vilcey-sur-Trey, canton de Thiaucourt (Meurthe), 534."
   "261|Xoarupl": "Xoarupt, ham., com. de Ferdrupt, 763."
   "245|Rupt": "Rupt, canton de Ramonchamp, 751, 838."   # 838 read "ë3S"
+  "183|Ableuveneltes (les)": "Ableuvenettes (les), canton de Dompaire, 1014, 45."   # "45" (1045) read "4îi", the canton "t, km de Dompaire"
   "190|Bethiiigcn": "Bethingen, vil., com. d'Orscholz, canton de Saarburg (Pr.), 1558."   # 1558 read 1358; the editor's correction 10 makes it 1457
   "189|Berus": "Berus, canton de Saarlouis (Pr.), 1672, 2336."   # 2336 (the list of towns, "Bcaurains") read 2356, which is Marsal
   "216|Hellimer": "Hellimer, canton de Grostenquin, 1633, 46."   # the scan reads 1633 as 1653 (Honzrath's, p. 218)
@@ -532,7 +533,6 @@ geocode:
   kolchen: {lat: 49.63419, lon: 6.44363, name_fr: "Köllig", name_de: "Köllig", name_en: "Köllig", country: DE, note: "Köllig (Kölchen; GeoNames 2886322, as in hist_map), a village of Nittel on the Moselle, by Nittel (entry 1411) in the office of Siersberg. The editors' note gives Colchen, a fief of the communauté of Guidesweiler (Güdesweiler), after Bugnon and Durival, probably wrongly"}
   # unlocated places found in DicoTopo (make dicotopo, 2026-10-05): the entry cited by Marichal or Bouteiller, or the
   # index's identification or commune confirmed; a hamlet at its commune, a commune at its item
-  abvefvenet-la-grande: {"at": "Ableuvenettes", "name_fr": "La Grande-Ableuvenette", "note": "La Grande-Ableuvenette, at Ableuvenettes: Abvefvenet la Grande, Alix n° 1045 (Marichal)"}
   itue-devant-dompaire: {"at": "Dompaire", "name_fr": "La Rue-devant-Dompaire", "note": "La Rue-devant-Dompaire, at Dompaire: La Rue devant Dompaire, Alix n° 1049 (Marichal)"}
   la-courlille: {"at": "Châtenois", "name_fr": "La Curtille", "note": "La Curtille, at Châtenois: La Courtille, Alix n° 1121 (Marichal)"}
   la-foresterie-du-ban-de-vagncy: {"at": "Vagney", "name_fr": "La Foresterie du ban de Vagney", "note": "La Foresterie du ban de Vagney, at Vagney: La Forresterie, Alix n° 817 (Marichal)"}
