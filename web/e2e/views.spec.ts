@@ -195,6 +195,10 @@ test("table: each row starts with its place's icon, and gives the pages of the e
   await open(page, "#/table?lang=en&q=Arth-sur-Meurthe");
   await expect(page.locator("table.matrix tbody tr").first().locator("td").nth(5))
     .toHaveText("Art-sur-Meurthe, canton of Saint-Nicolas (p. 185)");
+  // an entry whose number the index doesn't print shows its place's line, marked
+  await open(page, "#/table?lang=en&q=Gerbéviller, chasteau, ville et prieuré");
+  await expect(page.locator("table.matrix tbody tr").first().locator("td").nth(5))
+    .toHaveText("Gerbéviller, canton of Gerbéviller (p. 211) [number not printed]");
   await expect(page.locator("table.matrix thead th")).toHaveText(
     ["Type", "No.", "Place", "District", "Tenure", "Thierry Alix's entry", "Editors' index"]);
 });

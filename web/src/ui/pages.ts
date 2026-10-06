@@ -86,7 +86,7 @@ export function renderTable(root: HTMLElement, data: Dataset, state: State, stor
   const index = (e: Entry) => (e.ix ?? []).map((x) => {
     const p = x.place ? data.places.get(x.place) : undefined;
     const where = p ? indexIdentification(p, lang) : "";
-    return `${x.s}${where ? `, ${where}` : ""}${onPage(x.p)}`;
+    return `${x.s}${where ? `, ${where}` : ""}${onPage(x.p)}${x.np ? ` [${t("numberNotPrinted", lang)}]` : ""}`;
   }).join("; ");
   const cells = (e: Entry) => [
     typeLabel(e), String(e.no), placesOf(e).map(placeName).join(", "), e.district ? placeName(e.district) : "",

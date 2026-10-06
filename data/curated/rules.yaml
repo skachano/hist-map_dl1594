@@ -348,6 +348,7 @@ entry_splits:
 
 # Index lines for entries whose numbers led to the wrong line (checked by name and district).
 entry_index:
+  2101: "246|Sarrebourg"   # "Sarbourg, ville …": the town, which the line of Sarrebourg doesn't number (it prints the lists' 2352, 2371, 2470, 2483)
   1254: "Fremmesdr'* v:-»m. de Rehlingen"   # "Frymestroff" (sub-provostship of Sierck): Fremersdorf, the line that prints 1254; not Rustroff
   1652: "Diffembach-lès-Puttclange"   # "Dieffembach" (Puttelange): the line that prints 16»2; not Diffembach-lès-Hellimer
   1003: Chaumouzcy      # "Chamoysy", old form of Chaumousey; the index prints 1005
@@ -417,6 +418,54 @@ index_lines:
     - "Velle-sur-Moselle, canton de Bayon, 202."
 
 # The index's spellings of an entry that no surviving index line carries ({entry: [spelling, …]}).
+  # lines whose number the scan misread (read on the scan): their entries had no line that prints them
+  "183|Achain": "Achain, canton de Château-Salins, 1705."
+  "184|Alz.ing": "Alz.ing, canton de Bouzonvillc, 1269, 1335."
+  "184|Amance": "Amance, canton de Nancy-Est, 454, 2298."
+  "185|Amenoncourt": "Amenoncourt, canton de Blâmont, 2060, 80."
+  "185|Anzeling": "Anzeling, canton de Bouzonville, 1315."
+  "186|Aussen": "Aussen, vil., coin, de Beltingen, canton de Saarlouis (Pr.), 1494, 1529."
+  "186|Aydoiles": "Aydoiles, canton de Bruyères, 590, 636, 640."
+  "188|Ba/.egncy": "Ba/.egncy, canton de Dompairc, 955, 1053."
+  "192|Bonfays": "Bonfays, ham. (abbaye), com. de Legéville-et-Bonfays, 1005."
+  "193|Bouxurulles": "Bouxurulles, canton de Charmes, 1802, 27."
+  "195|Buweiler": "Buweiler, vil., com. d'Otzenhausen, canton de Trêves landfr. (Pr.), 1490, 1533."
+  "195|Cadenbronn": "Cadenbronn, vil., com. de Noussewiller-lès-Pulteîange, 1735."
+  "195|Chalgoulte": "Chalgoulte, haïr., com. dV.nould, 284."
+  "200|Dalstein": "Dalstein, canton de Bouzonville, 1265."
+  "201|Destord": "Destord, canton de Bruyères, 632, 649, 2099."
+  "201|Diffembach-lès-Puttclange": "Diffembach-lès-Puttclange, ham., com. de Puttelange, 1652."
+  "202|Dommartemont": "Dommartemont, canton de Nancy-Est, 53."
+  "209|Frapelle": "Frapelle, canton de Saint-Dié, 375."
+  "212|Gîronville": "Gîronville, canton de Commercy, 1973, 77."
+  "215|Hamonvillc": "flamonvillc, canton de Domèvre (Meurthe), 1926, 79."
+  "257|Vigneulles-Haute": "Vigneulles-Haute1. canton de Faulquemont, 2260, 83."
+  "244|Itue-devant-Dompaire(/a)": "Itue-devant-Dompaire(/a), prévôtédeDompaire, 1049."
+  "220|Jcvoncourt": "Jcvoncourt, canton d'Haroué, 60, 85, 898."
+  "238|Pille (la)": "Pille (la), ham., com. de Vioménil, 1084."
+  "223|Laycgotttlc": "Laycgotttlc, liant., coin, de Bonipaire, 277, 378."
+  "229|Ménil (le)": "Ménil (le), ham., com. d'Elival, 343."
+  "253|Torchon (le)": "Torchon (le), ham. (verrerie), com. d'Hennezel, 1075."
+  "226|Maidiures": "Maidiures, canlon de Pont-à-Mousson (Meurthe), 114."
+  "226|Maixe": "Maixe, canton dcLunéville-Nonl, 228."
+  "228|Maroncourt": "Maroncourt, canton de Dompaire, 964."
+  "235|Noncourt": "Noncourt, canton de Neufchâteau, 1153."
+  "237|Pagny-sur-Moselle": "Pagny-sur-Moselle, canton de Pont-à-Mousson (Meurthe), 529."
+  "213|Gross-Hemmersdorf": "Gross-Hemmersdorf, vil., com. d'Oberesch*, 1353."
+  "214|Guemviller": "Guemviller, canton de Saint-Avold, 1722, 2244."
+  "240|Racrange": "Racrange, canton de Grostenquin, 1649, 1704."
+  "245|Ruxurieux": "Ruxurieux, vil., com. de Corcieux, 668."
+  "251|Saint-Pierremont": "Saint-Pierremont, canton de Rambervillers (Vosges), 191."
+  "251|Sainte-Marie": "Sainte-Marie, vil. détruit, près de Barbonville', 198."
+  "246|Saulx-en-Voévre": "Saulx-en-Voèvre, canton de Fresnes-en-Voèvre (Meuse), 1891."
+  "186|Avrainville": "Avrainville, canton de Charmes, 1843."   # number read "J8'*3"
+  "246|Sarrebourg": "Sarrebourg, ch.-l. d'arr. (Meurthe), 2352, 2371, 2470, 2483."   # printed "352, 371, 470, 483" without their thousands: the lists' Sarbourg (2101, the town, is not printed)
+  "255|Vandelainville": "Vandelainville, canton de Thiaucourt (Meurthc), 523."
+  "257|Ville-au-Val": "Ville-au-Val, canton de Pont-à-Mousson(Meurlhe), 2049."
+  "260|Waldeck": "Waldeck, ham., com. d'Eguelshardt, 2193."
+  "261|Xirocourt": "Xirocourt, canton d'Haroué, 84, 898."
+  "261|Xonville": "Xonville, canton de Gorze (Mo;elle), 2053."
+
 index_spellings:
   1491: [Sanbach, Saubach]   # the index's line, which the editor's corrections replace by Nieder-Saubach, and its footnote
 

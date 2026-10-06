@@ -83,8 +83,9 @@ export interface Entry {
   /** the place the entry is matched to; `also`: the other places the index sends to it */
   place?: string;
   also?: string[];
-  /** its lines in the editor's index: the heading as printed, its page, the place it identifies */
-  ix?: { s: string; p?: string; place?: string }[];
+  /** its lines in the editor's index: the heading as printed, its page, the place it identifies;
+   *  `np`: the line of its place, which doesn't print the entry's number */
+  ix?: { s: string; p?: string; place?: string; np?: boolean }[];
   page?: string;
   conf?: string;
 }

@@ -82,8 +82,8 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Mancy [Hameau, Bettelainville, canton Metzervisse, 57] via *Mancy*, 0.74, ?
   3. Capucins (Les) [Ancienne chapelle, Dieuze, canton Dieuze, 54] via *Capucins (Les)*, 0.72, ?
 - eynothaws: Eynothaws
-  1. Endenthal [Hameau, Dabo, canton Phalsbourg, 54] via *Enthal (1790)*, 0.59, 61 km
-  2. Erlenhoff [Ferme, Grostenquin, canton Grostenquin, 57] via *Ellnerhoff*, 0.58, 61 km
+  1. Erlenhoff [Ferme, Grostenquin, canton Grostenquin, 57] via *Ellnerhoff*, 0.59, 55 km
+  2. Endenthal [Hameau, Dabo, canton Phalsbourg, 54] via *Enthal (1790)*, 0.59, 59 km
   3. Moder (Ruisseau de) [57] via *Mother*, 0.53, ?
 - hamanges: Hamanges
   1. Hémilly [canton Faulquemont, 57] via *Homlange (1756)*, 0.81, 9 km
@@ -114,9 +114,9 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Malancourt [Hameau, Montois-la-Montagne, canton Marange-Silvange, 57] via *Malancourt*, 0.67, 31 km
   3. Nettancourt [canton Revigny-sur-Ornain, 55] via *Nettancourt*, 0.66, 65 km
 - neuulhann: Neuulhann
-  1. Neulan [Ancienne église, Sponville, canton Chambley-Bussières, 57] via *Neulan*, 0.61, 124 km
-  2. Neunkirch [Ferme, Hottviller, canton Volmunster, 57] via *Neukirchen (1756)*, 0.60, 16 km
-  3. Neufgrange [canton Sarreguemines-Campagne, 57] via *Neucher (1750)*, 0.59, 35 km
+  1. Neulan [Ancienne église, Sponville, canton Chambley-Bussières, 57] via *Neulan*, 0.62, 118 km
+  2. Neunkirch [Ferme, Hottviller, canton Volmunster, 57] via *Neukirchen (1756)*, 0.61, 11 km
+  3. Neufgrange [canton Sarreguemines-Campagne, 57] via *Neucher (1750)*, 0.61, 29 km
 - platenges: Platenges
   1. Blettange [Hameau, Bousse, canton Metzervisse, 57] via *Bletenge*, 0.74, 43 km
   2. Talange [1er canton de Metz, canton Maizières-lès-Metz, 57] via *Tallenges (1599)*, 0.71, 38 km
@@ -166,14 +166,14 @@ Archives nationales, <https://dicotopo.cths.fr>, Licence Ouverte 2.0; data downl
   2. Villette [canton Longuyon, 57] via *Villette*, 0.80, ?
   3. Villotte [canton Lamarche, 88] via *Villete (1317)*, 0.80, ?
 - weuftrhaus: Weillerhaws
-  1. Willerhoff [Ferme, Lachambre, canton Saint-Avold  2e  Canton, 57] via *Willerhoff*, 0.63, 57 km
-  2. Weyer [Rahling, canton Rohrbach-lès-Bitche, 57] via *Weiller (1594)*, 0.61, 27 km
-  3. Folperswiller [Sarreguemines, canton Sarreguemines, 57] via *Weiller*, 0.60, 34 km
+  1. Willerhoff [Ferme, Lachambre, canton Saint-Avold  2e  Canton, 57] via *Willerhoff*, 0.64, 51 km
+  2. Weyer [Rahling, canton Rohrbach-lès-Bitche, 57] via *Weiller (1594)*, 0.62, 23 km
+  3. Folperswiller [Sarreguemines, canton Sarreguemines, 57] via *Weiller*, 0.61, 28 km
 
 ## Settlements at their commune: DicoTopo's name (0)
 
 Approximate places (no Wikidata or GeoNames item) with a match within 12 km: the modern name, and
-the hamlet's own point where DicoTopo gives one (not its commune's); 31 more checked by hand (rules.yaml `dicotopo_reviewed`).
+the hamlet's own point where DicoTopo gives one (not its commune's); 30 more checked by hand (rules.yaml `dicotopo_reviewed`).
 
 
 ## Settlements DicoTopo places elsewhere (0)

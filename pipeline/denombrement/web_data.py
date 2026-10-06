@@ -95,11 +95,22 @@ def build() -> dict[str, int]:
     for nos in entries_of.values():
         nos.sort(key=lambda n: n if isinstance(n, int) else 0)
     # an entry's lines in the editor's index (pp. 183-262) that print its number, with their page
+    # An entry no line prints still shows the line of its place, marked "np" (number not printed).
     index_lines: dict[str, list[dict]] = defaultdict(list)
+    unprinted: dict[str, list[dict]] = defaultdict(list)
+    of_place: dict[str, list[dict]] = defaultdict(list)
     for _, x in ds.index_links:
-        if "number not printed" not in (x.notes or ""):
-            page = x.source_page if str(x.source_page or "").isdigit() and int(x.source_page) >= book.INDEX_PRINTED[0] else None
-            index_lines[x.entry_no].append(_compact({"s": x.index_name, "p": page, "place": x.place_id}))
+        page = x.source_page if str(x.source_page or "").isdigit() and int(x.source_page) >= book.INDEX_PRINTED[0] else None
+        line = _compact({"s": x.index_name, "p": page, "place": x.place_id})
+        if "number not printed" in (x.notes or ""):
+            unprinted[x.entry_no].append({**line, "np": True})
+        else:
+            index_lines[x.entry_no].append(line)
+        if page and line not in of_place[x.place_id]:
+            of_place[x.place_id].append(line)
+    for _, e in ds.entries:
+        if e.series == "main" and not index_lines.get(e.no):
+            index_lines[e.no] = unprinted.get(e.no) or [{**x, "np": True} for x in of_place.get(e.place_id or "", [])[:1]]
 
     def spellings(p) -> list[dict]:
         book: dict[str, list] = {}

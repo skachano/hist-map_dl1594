@@ -100,7 +100,7 @@ bailiwick-epinal,48.17361,6.45167,,,Bailliage d'Épinal,,,エピナルバイイ�
 bailiwick-hattonchatel,48.9918,5.70113,,,Bailliage de Hattonchâtel,,,,,territory,medium,seat: hattonchatcl
 bailiwick-nancy,48.69278,6.18361,,,Bailliage de Nancy,,,ナンシーバイイ管区,,territory,medium,seat: nancy
 bailiwick-vaudemont,48.41694,6.05611,,,Bailliage de Vaudémont,,,ヴォーデモンバイイ管区,,territory,medium,seat: vaudemont
-bailiwick-vosges,48.14663,6.36262,,,Bailliage de Vosges,,,,,territory,medium,centre of 585 located member(s)
+bailiwick-vosges,48.14712,6.3623,,,Bailliage de Vosges,,,,,territory,medium,centre of 586 located member(s)
 bains,48.0025,6.26361,Q768030,,Bains-les-Bains,Bains-les-Bains,Bains-les-Bains,バン＝レ＝バン,FR,wikidata,high,1.00 near the index's canton (0 km)
 bainviile,48.20639,6.1375,Q1159484,,Bainville-aux-Saules,Bainville-aux-Saules,Bainville-aux-Saules,,FR,wikidata,high,0.95 near the index's canton (7 km)
 bainville-aux-miroirs,48.43861,6.27667,Q1018407,,Bainville-aux-Miroirs,Bainville-aux-Miroirs,Bainville-aux-Miroirs,,FR,wikidata,high,1.00 near the index's canton (8 km)
@@ -268,7 +268,7 @@ brisevcrre,48.05444,6.1175,,,Bisseval,,,,FR,approximate,low,"not in Wikidata/Geo
 brouaumont,48.19528,6.85389,,,Brouaumont,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune la Houssière
 broussey-en-blois,48.63833,5.54889,Q685882,,Broussey-en-Blois,Broussey-en-Blois,Broussey-en-Blois,,FR,wikidata,high,1.00 near the index's canton (8 km)
 brouvelicures-ch-l-de-canton,48.23722,6.73222,Q584107,,Brouvelieures,Brouvelieures,Brouvelieures,,FR,wikidata,medium,"exact name, no anchor"
-brouvelotte,48.49806,6.75028,,,Brouvelotte,,,,FR,approximate,low,"Brouvelotte, at Brouville: a lost village of Brouville (the index, DicoTopo)"
+brouvelotte,48.49757,6.75033,,,Brouvelotte,,,,FR,approximate,low,"Brouvelotte, at Brouville: a lost village of Brouville (the index, DicoTopo)"
 brouvilie,48.49806,6.75028,Q988245,,Brouville,Brouville,Brouville,,FR,wikidata,high,0.95 near the index's canton (6 km)
 brulangc,48.97028,6.54972,Q22445,,Brulange,Brülingen,Brulange,,FR,hist_map,high,1.00 near the index's canton (14 km)
 bruyeres,48.20833,6.71861,Q200575,,Bruyères,Bruyères,Bruyères,ブリュイエール,FR,wikidata,high,1.00 near the index's canton (0 km)
@@ -495,7 +495,7 @@ dreisbach,49.485,6.565,Q1258065,,Dreisbach,Dreisbach,Dreisbach,,DE,hist_map,high
 drogny,49.2467,6.41639,Q16507718,,Drogny,Drogny,Drogny,,FR,hist_map,high,1.00 near the index's commune (0 km)
 droiteval,48.03278,6.03556,,,Droiteval,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Claudon
 drouville,48.67111,6.40806,Q227707,,Drouville,Drouville,Drouville,,FR,wikidata,high,1.00 near the index's canton (11 km)
-duchy-lorraine,48.69626,6.53077,,,Duché de Lorraine,,,,,territory,medium,centre of 2520 located member(s)
+duchy-lorraine,48.69627,6.53054,,,Duché de Lorraine,,,,,territory,medium,centre of 2522 located member(s)
 duren,49.3036,6.66222,Q1271996,,Düren,Düren,Düren,,DE,wikidata,high,1.00 near the index's commune (1 km)
 eberswillcr,49.27513,6.401,,,Ebersviller,,,,FR,hist_map,medium,0.91 near the index's canton (10 km)
 eblange,49.22333,6.48194,Q21674,,Éblange,Eblingen,Éblange,,FR,hist_map,high,1.00 near the index's canton (5 km)
@@ -799,6 +799,7 @@ hesse,48.6956,7.0478,Q14637686,,Hesse,,Hesse,,FR,hist_map,high,1.00 near the ind
 hesseling,49.17826,6.9999,,3013356,Hesseling,,,,FR,geonames,high,1.00 near the index's commune (0 km)
 hestroff,49.26222,6.43472,Q22015,,Hestroff,Hestroff,Hestroff,,FR,hist_map,high,1.00 near the index's canton (8 km)
 hilbringen,49.44116,6.617,Q16831830,,Hilbringen,Hilbringen,Hilbringen,,DE,hist_map,high,1.00 near the index's canton (1 km)
+hilsprich,49.01306,6.91278,Q22320,,Hilsprich,Hilsprich,Hilsprich,,FR,hist_map,high,1.00 near the index's canton (9 km); 49 km from its district
 hilst,49.12333,7.52889,Q565251,,Hilst,Hilst,Hilst,,DE,hist_map,high,1.00 near the index's canton (10 km)
 hin-in,49.01083,6.965,,,Hinzing,,,,FR,approximate,low,"not in Wikidata/GeoNames; placed at its commune Holving; Hinzing, a hamlet of Holving (DicoTopo: Huntzingen (1594)); the index's Hin/in?"
 hinckange,49.19,6.44611,Q22003,,Hinckange,Hinckange,Hinckange,,FR,hist_map,high,1.00 near the index's canton (4 km)
@@ -923,7 +924,6 @@ la-grande-catherine,48.01944,6.03306,Q131400382,,La Grande-Catherine,La Grande C
 la-grande-fosse,48.33889,7.06944,Q1410504,,La Grande-Fosse,La Grande-Fosse,La Grande-Fosse,,FR,wikidata,high,1.00 near the index's canton (3 km)
 la-grande-mairie,47.94944,6.76917,,,La Grande-Mairie,,,,FR,approximate,low,"La Grande-Mairie, an old grange on the finage of Bamont (Saulxures-sur-Moselotte): Alix n° 725 (Marichal); not the seigneurie of Vagney"
 la-hardallc,48.15806,7.02583,Q136673316,,La Hardalle,,La Hardalle,,FR,wikidata,high,1.00 near the index's commune (7 km)
-la-haulte-rue-de-destort,48.27278,6.62139,,,La Haute-Rue de Destord,,,,FR,approximate,low,"La Haute-Rue de Destord, at Destord: La Haulte Rue de Destorb (1468), Destord (DicoTopo)"
 la-haute-mandray,48.21959,6.99319,,,La Haute-Mandray,,,,FR,approximate,low,a hamlet of Mandray (the index)
 la-houssiere,48.19528,6.85389,Q223505,,La Houssière,La Houssière,La Houssière,,FR,wikidata,medium,"exact name, no anchor; the index's canton Coreiettx is not found"
 la-louvicrc,48.34972,6.93444,,,La Louvière,,,,FR,approximate,low,"not in Wikidata/GeoNames; placed at its commune Hurbache; La Louvière, a farm of Hurbache (DicoTopo: La Rouviere (1594)); the index's La Louvicrc"
@@ -1219,7 +1219,7 @@ mayoralty-altheim,49.1723,7.31217,,,Mairie d'Altheim,,,,,territory,medium,seat: 
 mayoralty-bertrimoutier,48.27167,7.05417,,,Mairie de Bertrimoutier,,,,,territory,medium,seat: bertrimoutier
 mayoralty-berungen,49.03423,7.26796,,,Mairie de Bining,,,,,territory,medium,centre of 10 located member(s)
 mayoralty-bousseviller,49.12111,7.46417,,,Mairie de Bousseviller,,,,,territory,medium,seat: bousseviller
-mayoralty-hilsperg,49.12444,7.41343,,,Mairie de Hilsperg,,,,,territory,medium,centre of 34 located member(s)
+mayoralty-hilsperg,49.12434,7.3953,,,Mairie de Hilsperg,,,,,territory,medium,centre of 34 located member(s)
 mayoralty-laveline,48.24498,7.06593,,,Mairie de Laveline,,,,,territory,medium,seat: laveline
 mayoralty-longchamp,47.92441,6.68274,,,Mairie de Longchamp,,,,,territory,medium,centre of 17 located member(s)
 mayoralty-mandray,48.21833,6.99583,,,Mairie de Mandray,,,,,territory,medium,seat: mandray
@@ -1625,7 +1625,7 @@ rupt,47.92667,6.66278,Q190567,,Rupt-sur-Moselle,Rupt-sur-Moselle,Rupt-sur-Mosell
 rupt-les-moivron,48.81458,6.25148,,,Rupt-lès-Moivrons,,,,FR,approximate,low,"Rupt-lès-Moivrons, at Villers-lès-Moivrons: Rupt-lez-Moivron, a hamlet and castle of Villers-lès-Moivrons (DicoTopo)"
 rusieres-aux-saiines,48.59222,6.33333,Q223185,,Rosières-aux-Salines,Rosières-aux-Salines,Rosières-aux-Salines,,FR,wikidata,medium,0.95 near its district's other members (14 km)
 rustroff,49.44333,6.37222,Q22164,,Rustroff,Rüsdorf,Rustroff,,FR,hist_map,high,1.00 near the index's canton (1 km)
-ruxurieux,48.17535,6.89651,,12315010,Ruxurieux,,,,FR,geonames,medium,"exact name, no anchor; the index's commune Cûrcieux is not found"
+ruxurieux,48.17535,6.89651,,12315010,Ruxurieux,,,,FR,geonames,high,1.00 near the index's commune (1 km)
 saarec-e,48.79417,7.03417,,,Sarreck,,,,FR,approximate,low,"not in Wikidata/GeoNames; placed at its commune Oberstinzel; Sarreck, a mill and castle of Oberstinzel (DicoTopo: Saarecke, Sarreck (1525))"
 saarwellingen,49.35417,6.805,Q32273663,,Saarwellingen,Saarwellingen,Saarwellingen,,DE,hist_map,high,1.00 near the index's canton (6 km)
 sachemont,48.13896,6.96802,,2982050,Sachemont,,,,FR,geonames,high,1.00 near the index's commune (4 km)
@@ -1718,7 +1718,7 @@ sartes,48.24528,5.67639,Q223564,,Sartes,Sartes,Sartes,,FR,wikidata,high,1.00 nea
 sauceray,48.32219,6.89024,,,Sauceray,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Sain'-Mtchel (near its district)
 sauley,48.23639,6.95972,Q1410001,,Saulcy-sur-Meurthe,Saulcy-sur-Meurthe,Saulcy-sur-Meurthe,,FR,wikidata,high,1.00 near the index's canton (5 km)
 sauli,47.90744,6.69033,,12315100,Sauli,,,,FR,geonames,high,0.95 near the index's commune (3 km); was 147 km away
-saulx-en-voevre,49.06667,5.65,,2975789,Saulx-en-Voévre,,,,FR,geonames,medium,0.92 near the index's canton (4 km)
+saulx-en-voevre,49.06667,5.65,,2975789,Saulx-en-Voèvre,,,,FR,geonames,medium,0.92 near the index's canton (4 km)
 saulxerotte,48.46972,5.94444,Q221261,,Saulxerotte,Saulxerotte,Saulxerotte,,FR,wikidata,medium,"exact name, no anchor"
 saulxures-les-nancy,48.68889,6.24694,Q194407,,Saulxures-lès-Nancy,Saulxures-lès-Nancy,Saulxures-lès-Nancy,,FR,wikidata,high,1.00 near the index's canton (5 km)
 saulxures-les-vannes,48.52639,5.80722,Q230251,,Saulxures-lès-Vannes,Saulxures-lès-Vannes,Saulxures-lès-Vannes,,FR,wikidata,medium,1.00 near its district's other members (13 km)
@@ -2012,7 +2012,7 @@ xaronval,48.37528,6.18778,Q836101,,Xaronval,Xaronval,Xaronval,,FR,wikidata,mediu
 xennois,48.02361,6.60444,,,Xennois,,,,FR,approximate,low,"not in Wikidata/GeoNames; placed at its commune Saint-Etienne; the index's heading, read on the scan"
 xermamenil,48.53222,6.46278,Q668721,,Xermaménil,Xermaménil,Xermaménil,,FR,wikidata,high,1.00 near the index's canton (5 km)
 xertigny,48.04556,6.40611,Q474291,,Xertigny,Xertigny,Xertigny,,FR,wikidata,medium,"exact name, no anchor"
-xirocourt,48.43056,6.1725,Q684866,,Xirocourt,Xirocourt,Xirocourt,,FR,wikidata,medium,"exact name, no anchor; the index's canton d""Iïaroué is not found"
+xirocourt,48.43056,6.1725,Q684866,,Xirocourt,Xirocourt,Xirocourt,,FR,wikidata,high,1.00 near the index's canton (4 km)
 xivray-et-marvoisin,48.86472,5.74361,Q59457,,Xivray-et-Marvoisin,Xivray-et-Marvoisin,Xivray-et-Marvoisin,,FR,wikidata,high,1.00 near the index's canton (15 km)
 xoarupt,47.89703,6.71229,,12315111,Xoarupt,,,,FR,geonames,high,1.00 near the index's commune (1 km)
 xonville,49.05528,5.84861,Q1097013,,Xonville,Xonville,Xonville,,FR,wikidata,high,1.00 near the index's canton (11 km)
@@ -2022,7 +2022,7 @@ xugney,48.34722,6.25472,,,Xugney,,,,FR,approximate,low,not in Wikidata/GeoNames;
 yvoux,48.18077,6.80837,,12315009,Yvoux,,,,FR,geonames,high,1.00 near the index's commune (2 km)
 zainvillcr,47.99237,6.72002,Q28040916,,Zainvillers,,,,FR,wikidata,high,0.95 near the index's commune (2 km)
 zarbeling,48.89083,6.68778,Q21747,,Zarbeling,Zarbeling,Zarbeling,,FR,hist_map,high,1.00 near the index's canton (9 km)
-zcllen,48.98861,6.86139,,,Zellen,,,,FR,approximate,low,"not in Wikidata/GeoNames; placed at its commune Petit-Tenquin; Zellen, a farm and mill of Petit-Tenquin (DicoTopo: Zell (1594)); the index's Zcllen; 52 km from its district"
+zcllen,48.98861,6.86139,,,Zellen,,,,FR,approximate,low,"not in Wikidata/GeoNames; placed at its commune Petit-Tenquin; Zellen, a farm and mill of Petit-Tenquin (DicoTopo: Zell (1594)); the index's Zcllen; 47 km from its district"
 zeurange,49.37992,6.53784,Q15078591,,Zeurange,Zeurange,Zeurange,,FR,hist_map,high,1.00 near the index's commune (2 km)
 zimmerbacb,48.07278,7.23694,Q203600,,Zimmerbach,Zimmerbach,Zimmerbach,,FR,wikidata,medium,0.90 near the index's canton (4 km)
 zincourt,48.30806,6.43972,Q204341,,Zincourt,Zincourt,Zincourt,,FR,wikidata,high,1.00 near the index's canton (4 km)
