@@ -1,6 +1,12 @@
 """The index and the lists, number by number (curate/reconcile.py), and the index's communes."""
+import pytest
+
+from denombrement import config
 from denombrement.curate import build, corrections, reconcile
 from denombrement.text import indexes
+
+# the index as Stage 1 read it from the scan, which is not in the repository (nor in CI)
+needs_index = pytest.mark.skipif(not (config.RAW_DIR / "index.csv").exists(), reason="run make extract first")
 
 
 def _row(page: str, text: str) -> corrections.IndexRow:
@@ -65,6 +71,7 @@ def test_index_communes_and_cantons():
     assert not build._garbled("Saint-Michel") and not build._garbled("Thionville")
 
 
+@needs_index
 def test_an_index_line_read_again_on_the_printed_page():
     """rules.yaml index_lines: the scan ran Bliesguerschwiller's line into the next one."""
     rows = [r for r in corrections.load_index() if r.page == "191" and r.entry.name.startswith("Bliesguersch")]
@@ -73,6 +80,7 @@ def test_an_index_line_read_again_on_the_printed_page():
     assert not rows[0].entry.commune     # not the next line's "com. de Bischmisheim"
 
 
+@needs_index
 def test_merged_index_lines_are_split():
     """Two printed lines the scan ran together become two index lines, each with its number."""
     rows = {r.entry.name: r.entry.numbers for r in corrections.load_index() if r.page in ("218", "256")}

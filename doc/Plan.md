@@ -723,6 +723,7 @@ Requested: name bailiwicks, provostships and the other units as hist_map does.
 
 ### Stage 11: Deployment
 - Tasks: the GitHub Pages workflow from hist_map: tests, `build-data` from the committed `data/curated/` and `data/geometry/`, then the Vite build under `/<repository name>/`.
+- **Status: done.** `.github/workflows/pages.yml` is hist_map's workflow with this pipeline (`python -m denombrement build-data`). Checked on a clean checkout of the committed tree, without `pdf/` or `data/raw/`: the pipeline tests pass (the two that read the scan's index skip), `build-data` compiles the web data (2.2 MB), the web tests pass, and the build served under `/hist-map_dl1594/` loads its data and draws the map. One-time setup on GitHub: Settings → Pages → Source: GitHub Actions.
 
 ## 6. Risks & open points
 - **OCR numbers:** a misread number attaches an entry to the wrong place. The sequence check and the index's numbers catch most of them; the rest show up as places in implausible districts.

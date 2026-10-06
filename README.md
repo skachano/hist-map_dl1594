@@ -37,6 +37,14 @@ Moselle, Vosges; cached in `data/raw/geo_cache/dicotopo/`) and writes suggestion
 `data/review/dicotopo.md`. It reads entries checked by hand from `data/review/manual-check.md`
 (git-ignored) when it is there.
 
+## Deployment
+
+`.github/workflows/pages.yml` publishes the atlas on GitHub Pages on every push to `main`: it runs
+the pipeline tests, compiles `web/public/data/` from the committed `data/curated/` and
+`data/geometry/` (the scan and `data/raw/` are not needed), runs the web tests, builds the app under
+`/<repository name>/` and deploys `web/dist/`. One-time setup: Settings → Pages → Source:
+GitHub Actions.
+
 ## The source PDF
 
 The scan is not in the repository and must never be committed (`pdf/` is git-ignored). Put the

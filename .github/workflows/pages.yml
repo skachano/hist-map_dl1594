@@ -1,6 +1,6 @@
 # Stage 11: build the atlas from the committed curated data and publish it on GitHub Pages.
-# Runs on every push to main (and by hand). The scan is not in the repository: the site is
-# compiled from data/curated/ and data/geometry/ only.
+# Runs on every push to main (and by hand). The scan, its OCR text (data/raw/) and the caches are
+# not in the repository: the site is compiled from data/curated/ and data/geometry/ only.
 name: Deploy to GitHub Pages
 
 on:
