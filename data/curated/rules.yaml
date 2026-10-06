@@ -85,6 +85,7 @@ entry_names:
   1371: Lymingen        # "Lymingen" (p. 83), read "Lymingcn"
   1496: Bechteldingen   # "Bechteldingen" (p. 87), read "Beehteldingen"
   1557: Hoffestetten    # "Hoffestetten" (p. 89), read "Hoffcstetten"; for Hofstetten (the index's note)
+  838: Ruz             # "Ruz" (p. 64), read "Buz": Rupt (the index)
   1695: Eidlingen       # "Eidlingen" (p. 93), read "Eidlingcn"
   1646: Heyligenner     # "Heyligenner" (p. 92), read "llcyligcnner": Hellimer (Heylingenner, Heligenner, 1594: Bouteiller)
 
@@ -118,6 +119,7 @@ entry_index:
   1149: Noncourt        # "Moncourt" (Châtenois): Noncourt, as entry 1153 (Moncourt: Alix n° 1149, Marichal)
   1310: Kalembourg      # "Bury" (Perl): Kalembourg, "Kalemburg, Bury" in 1594 and "Callembourg aliàs Bury" in 1571 (Bouteiller), as entry 1274
   1342: "245|Hiol"      # "Ryol" (Perl): Riol, com. de Longuich, canton de Trêves, as the editors' correction 59 restores the line (read "lliol"; it drops the number)
+  1238: Gross-Hemmersdorf   # "Hymerstroff" (sub-provostship of Sierck): Großhemmersdorf (Hymestroff), as entry 1353; the only like name of the sub-provostship in H. Hiegel (hist_map)
   1190: Dombrol-sur-Vair  # "Bouzey" (Châtenois), between Sommerécourt and Mandres-sur-Vair: Dombrot-sur-Vair, "ci-devant Bouzey" (Marichal); not the mill of Sanchey near Épinal
 
 # Index lines the scan misread or merged, as printed ("page|name as read": the printed line, or a
@@ -144,6 +146,7 @@ index_lines:
   "241|Rapey": "Rapey, canton de Charmes, 888."
   "257|Vilcey-sur-Trey": "Vilcey-sur-Trey, canton de Thiaucourt (Meurthe), 534."
   "261|Xoarupl": "Xoarupt, ham., com. de Ferdrupt, 763."
+  "245|Rupt": "Rupt, canton de Ramonchamp, 751, 838."   # 838 read "ë3S"
   "216|Hellimer": "Hellimer, canton de Grostenquin, 1633, 46."   # the scan reads 1633 as 1653 (Honzrath's, p. 218)
   "218|Hobslelen ou Gbsteten": "Hobsteten ou Obsteten, vil., mairie, 3 lieues au nord-est de Schambourg; enclavé dans les terres étrangères (D., t. III, p. 512), 1557."
   "189|Secitteldingcn": "Bechteldingen, de l'office de Schambourg, 1496."   # its footnote call read as "1"
@@ -361,6 +364,9 @@ geocode:
   bechteldingen: {wikidata: Q1478875, note: "Uchtelfangen (Illingen, Saarland), office of Schaumberg: Bechteldingen, listed with Kassheim (Kaisen) and Wissbach (Wiesbach) in 1594 (Kaisen im Saarland, koenig-inter.net)"}
   hobsteten-ou-obsteten: {lat: 49.61667, lon: 7.2, name_fr: "Hoppstädten", name_de: "Hoppstädten", country: DE, note: "Hoppstädten (Hoppstädten-Weiersbach; GeoNames 2899139): Hofsteten, Hoppstaten in the editors' corrections to the table of old forms; 'Hoffestetten' for Hofstetten (the index's note); a village 3 lieues north-east of Schaumburg (Durival)"}
   eschery: {name_fr: "Échery", name_de: "Echery", note: "Échery (Eschery la Haulte, chasteau), in the val de Lièpvre by Sainte-Marie-aux-Mines"}
+  gross-hemmersdorf: {lat: 49.35502, lon: 6.61399, name_fr: "Grosshemmersdorf", name_de: "Großhemmersdorf", country: DE, note: "Großhemmersdorf (GeoNames 2906537), left of the Nied: Hymestroff, offices of Sierck and Boulay (H. Hiegel, in hist_map)"}
+  kerperieh-ilemmersdorf: {lat: 49.35349, lon: 6.62768, name_fr: "Kerprich-Hemmersdorf", country: DE, note: "Kerprich-Hemmersdorf, right of the Nied, office of Siersberg (hist_map); the item Q1604852 both share is not taken by Großhemmersdorf"}
+  fliessborn: {"at": "Vry", "land": true, "note": "Fliessborn, of the prévôté of Sierck: placed at Vry, the commune H. Hiegel's index gives (Fliessborn (M., Vry), p. 13; in hist_map)"}
   # named after DicoTopo (Lepage, Liénard, Bouteiller, Marichal): what the index's garbled spellings stand for, matched
   # at 0.95 or better or through the Dénombrement's own 1594 spelling (make dicotopo, 2026-10-05); still at their commune
   liebauxard: {name_fr: "Libauxaire", note: "Libauxaire, a hamlet of Ferdrupt (DicoTopo: Liébauxard (1753)); the index's Liébauxard"}

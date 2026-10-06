@@ -28,6 +28,7 @@ contwig,コントヴィヒ,wikidata
 cornimont,コルニモン,wikidata
 county-blamont,ブラモン伯領,seat + type
 county-vaudemont,ヴォーデモン伯領,seat + type
+court-perl,ペルル裁判区,manual
 crion,クリオン,wikidata
 croismare,クロワマール,wikidata
 custines,キュスティーヌ,wikidata
@@ -35,7 +36,6 @@ darney,ダルネー,wikidata
 derbamont,デルバモン,wikidata
 district-bitche,ビッシュ管区,seat + type
 district-blamont,ブラモン管区,seat + type
-district-perl,ペルル (モーゼル)管区,seat + type
 district-phalsbourg,ファルスブール管区,seat + type
 docelles,ドセル,wikidata
 dombasle,ドンバール＝シュル＝ムルト,wikidata

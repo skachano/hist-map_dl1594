@@ -93,14 +93,14 @@ badinenil,48.44984,6.73946,,,Badménil,,,,FR,approximate,low,"Badménil, at Bacc
 badmenil-aux-bois,48.30222,6.51917,Q633343,,Badménil-aux-Bois,Badménil-aux-Bois,Badménil-aux-Bois,,FR,wikidata,medium,"exact name, no anchor; the index's canton Chute is not found"
 baffe,48.16028,6.57194,Q753273,,La Baffe,La Baffe,La Baffe,,FR,wikidata,high,1.00 near the index's canton (9 km)
 bagneux,48.55833,5.8825,Q1002005,,Bagneux,Bagneux,Bagneux,バニュー,FR,wikidata,medium,"exact name, no anchor"
-bailiwick-allemagne,49.25654,6.71188,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 575 located member(s)
+bailiwick-allemagne,49.2566,6.71105,,,Bailliage d'Allemagne,,,,,territory,medium,centre of 577 located member(s)
 bailiwick-apremont,48.85528,5.63917,,,Bailliage d'Apremont,,,アスプルモン＝ラ＝フォレバイイ管区,,territory,medium,seat: apremonl
 bailiwick-chatel-sur-moselle,48.31417,6.39306,,,Bailliage de Châtel-sur-Moselle,,,,,territory,medium,seat: chatel-sur-mosclle
 bailiwick-epinal,48.17361,6.45167,,,Bailliage d'Épinal,,,エピナルバイイ管区,,territory,medium,seat: epinal
 bailiwick-hattonchatel,48.9918,5.70113,,,Bailliage d'Hattonchâtel,,,,,territory,medium,seat: hattonchatcl
 bailiwick-nancy,48.69278,6.18361,,,Bailliage de Nancy,,,ナンシーバイイ管区,,territory,medium,seat: nancy
 bailiwick-vaudemont,48.41694,6.05611,,,Bailliage de Vaudémont,,,ヴォーデモンバイイ管区,,territory,medium,seat: vaudemont
-bailiwick-vosges,48.14701,6.36211,,,Bailliage de Vosges,,,,,territory,medium,centre of 584 located member(s)
+bailiwick-vosges,48.14664,6.36263,,,Bailliage de Vosges,,,,,territory,medium,centre of 585 located member(s)
 bains,48.0025,6.26361,Q768030,,Bains-les-Bains,Bains-les-Bains,Bains-les-Bains,バン＝レ＝バン,FR,wikidata,high,1.00 near the index's canton (0 km)
 bainviile,48.20639,6.1375,Q1159484,,Bainville-aux-Saules,Bainville-aux-Saules,Bainville-aux-Saules,,FR,wikidata,high,0.95 near the index's canton (7 km)
 bainville-aux-miroirs,48.43861,6.27667,Q1018407,,Bainville-aux-Miroirs,Bainville-aux-Miroirs,Bainville-aux-Miroirs,,FR,wikidata,high,1.00 near the index's canton (8 km)
@@ -287,7 +287,6 @@ burthecourt-aux-chenes,48.585,6.24944,Q232013,,Burthecourt-aux-Chênes,Burthecou
 buschdorf,49.4719,6.47417,Q1021751,,Büschdorf,Büschdorf,Büschdorf,,DE,wikidata,high,1.00 near the index's commune (5 km)
 bussang,47.88556,6.85361,Q819331,,Bussang,Bussang,Bussang,ビュッサン,FR,wikidata,high,1.00 near the index's canton (9 km)
 buweiler,49.56667,6.93333,,,Buweiler,,,,DE,hist_map,high,1.00 near the index's commune (6 km)
-buz,,,,,Buz,,,,,unlocated,low,
 buzy,49.16884,5.70931,,12557038,Buzy,,,,FR,geonames,high,1.00 near the index's canton (7 km)
 cadenbronn,49.12949,6.96496,Q2932650,,Cadenbronn,Kadenbronn,Cadenbronn,,FR,hist_map,high,1.00 near the index's commune (1 km)
 cappel,49.07222,6.85,Q22124,,Cappel,Cappel,Cappel,,FR,hist_map,high,1.00 near the index's canton (11 km)
@@ -386,6 +385,7 @@ courbcssaux,48.68944,6.39611,Q772153,,Courbesseaux,Courbesseaux,Courbesseaux,,FR
 courcelles,48.37333,6.03778,Q182825,,Courcelles,Courcelles,Courcelles,,FR,wikidata,high,1.00 near the index's canton (20 km); was 75 km away
 courcelles-sous-chatenois,48.32722,5.81583,Q219369,,Courcelles-sous-Châtenois,Courcelles-sous-Châtenois,Courcelles-sous-Châtenois,,FR,wikidata,high,1.00 near the index's canton (3 km)
 courrupt,47.925,6.48333,,,Courrupt,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Val-d'Ajol
+court-perl,49.47361,6.385,,,Cour de Perl,,,ペルル (モーゼル)裁判区,,territory,medium,seat: perl-ou-niederperl
 coussey,48.40833,5.6825,Q1096338,,Coussey,Coussey,Coussey,,FR,wikidata,high,1.00 near the index's canton (0 km); 45 km from its district
 crantenoy,48.46722,6.22694,Q988189,,Crantenoy,Crantenoy,Crantenoy,,FR,wikidata,high,1.00 near the index's canton (4 km)
 crcue,48.965,5.67,Q16305735,,Creuë,Creuë,Creuë,,FR,wikidata,medium,"exact name, no anchor"
@@ -445,7 +445,6 @@ district-faulquemont,49.04111,6.59917,,,Circonscription de Faulquemont,,,,,terri
 district-forbach,49.18806,6.9,,,Circonscription de Forbach,,,,,territory,medium,seat: forbach
 district-merzig,49.44222,6.6375,,,Circonscription de Merzig,,,,,territory,medium,seat: merzig
 district-morhange,48.92361,6.63583,,,Circonscription de Morhange,,,,,territory,medium,seat: morhangc
-district-perl,49.47361,6.385,,,Circonscription de Perl,,,ペルル (モーゼル)管区,,territory,medium,seat: perl-ou-niederperl
 district-phalsbourg,48.76778,7.25833,,,Circonscription de Phalsbourg,,,ファルスブール管区,,territory,medium,seat: phalstourg-eh-l-de-canton
 district-puttelange,49.07455,6.93258,,,Circonscription de Puttelange,,,,,territory,medium,centre of 42 located member(s)
 district-raon-l-etape,48.4068,6.8438,,,Circonscription de Raon-l'Étape,,,,,territory,medium,seat: raon-l-eiape
@@ -496,7 +495,7 @@ dreisbach,49.485,6.565,Q1258065,,Dreisbach,Dreisbach,Dreisbach,,DE,hist_map,high
 drogny,49.2467,6.41639,Q16507718,,Drogny,Drogny,Drogny,,FR,hist_map,high,1.00 near the index's commune (0 km)
 droiteval,48.03278,6.03556,,,Droiteval,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Claudon
 drouville,48.67111,6.40806,Q227707,,Drouville,Drouville,Drouville,,FR,wikidata,high,1.00 near the index's canton (11 km)
-duchy-lorraine,48.69404,6.52619,,,Duché de Lorraine,,,,,territory,medium,centre of 2506 located member(s)
+duchy-lorraine,48.6942,6.5262,,,Duché de Lorraine,,,,,territory,medium,centre of 2509 located member(s)
 duren,49.3036,6.66222,Q1271996,,Düren,Düren,Düren,,DE,wikidata,high,1.00 near the index's commune (1 km)
 eberswillcr,49.27513,6.401,,,Ebersviller,,,,FR,hist_map,medium,0.91 near the index's canton (10 km)
 eblange,49.22333,6.48194,Q21674,,Éblange,Eblingen,Éblange,,FR,hist_map,high,1.00 near the index's canton (5 km)
@@ -585,7 +584,7 @@ flainval,48.61889,6.39889,Q226244,,Flainval,Flainval,Flainval,,FR,wikidata,high,
 flasgarten,49.20639,6.45028,,,Flasgarten,,,,FR,approximate,low,not in Wikidata/GeoNames; placed at its commune Gucnkirchen
 flaslroii,49.37194,6.53472,Q22229,,Flastroff,Flastroff,Flastroff,,FR,rule,high,"Flastroff: Flachstorff (1594), dén. Th. Alix (Bouteiller)"
 flatten,49.42625,6.51227,,,Flatten,,,,FR,hist_map,medium,"exact name, no anchor; the index's commune Launstroiï is not found"
-fliessborn,,,,,Fliessborn,,,,FR,unlocated,low,
+fliessborn,49.19,6.32972,,,Fliessborn,,,,FR,approximate,low,"Fliessborn, of the prévôté of Sierck: placed at Vry, the commune H. Hiegel's index gives (Fliessborn (M., Vry), p. 13; in hist_map)"
 flin,48.4975,6.655,Q1101374,,Flin,Flin,Flin,,FR,wikidata,high,1.00 near the index's canton (11 km)
 folckling,49.14756,6.89482,,3018155,Folckling,,,,FR,geonames,high,1.00 near the index's canton (5 km)
 folpcrswillcr,49.12346,7.10632,Q3075119,,Folpersviller,Folpersviller,Folpersviller,,FR,hist_map,medium,0.92 near the index's canton (3 km)
@@ -701,7 +700,7 @@ gronig,49.5167,7.08333,Q1431114,,Gronig,Gronig,Gronig,,DE,hist_map,high,1.00 nea
 gros-kedercbing,49.06835,7.21914,,,Grosréderching,Großrederchingen,,,FR,hist_map,medium,0.86 near the index's canton (4 km)
 grosbliederstroff,49.15639,7.02778,Q22395,,Grosbliederstroff,Großblittersdorf,Grosbliederstroff,,FR,hist_map,high,1.00 near the index's canton (6 km)
 grosrouvre,48.83028,5.84,Q213256,,Grosrouvres,Grosrouvres,Grosrouvres,,FR,rule,high,Grosrouvres: canton de Domèvre (the index)
-gross-hemmersdorf,49.35502,6.61399,,2906537,Grosshemmersdorf,,,,DE,geonames,medium,"1.00; Q1604852 went to kerperieh-ilemmersdorf, whose name fits it better"
+gross-hemmersdorf,49.35502,6.61399,,,Grosshemmersdorf,Großhemmersdorf,,,DE,rule,high,"Großhemmersdorf (GeoNames 2906537), left of the Nied: Hymestroff, offices of Sierck and Boulay (H. Hiegel, in hist_map)"
 grundwiller,49.04389,6.97083,Q22061,,Grundviller,Grundweiler,Grundviller,,FR,hist_map,medium,0.91 near the index's canton (10 km)
 gucndersberg,49.1136,7.43548,Q2969307,,Gentersberg,,Gentersberg,,FR,hist_map,medium,0.87 near the index's commune (2 km)
 guebcnbausen,49.07522,6.94212,,3014440,Guebcnbausen,,,,FR,geonames,medium,0.92 near the index's canton (10 km)
@@ -834,7 +833,6 @@ humbertois,48.1495,6.4528,,,Humbertois,,,,FR,approximate,low,not in Wikidata/Geo
 hundling,49.10694,6.98139,Q22199,,Hundling,Hundlingen,Hundling,,FR,hist_map,high,1.00 near the index's canton (6 km)
 hurbache,48.34972,6.93444,Q1028158,,Hurbache,Hurbache,Hurbache,,FR,wikidata,high,1.00 near the index's canton (6 km)
 hutte,48.1325,6.65306,,,Hutte,,,,FR,approximate,low,a hamlet of Xamontarupt (the index)
-hymerstroff,,,,,Hymerstroff,,,,,unlocated,low,
 hymont,48.26583,6.14167,Q752827,,Hymont,Hymont,Hymont,,FR,wikidata,high,1.00 near the index's canton (4 km)
 idontctair,48.27833,7.0375,,,Le Moncel,,,,FR,approximate,low,"Le Moncel, a farm of Neuvillers-sur-Fave: Le Moncel (1594), Alix n° 407 (Marichal, DicoTopo); the index's line was misread by correction 44"
 igncy,48.27472,6.39556,Q753302,,Igney,Igney,Igney,,FR,wikidata,high,1.00 near the index's canton (4 km)
@@ -884,7 +882,7 @@ kemplich,49.33056,6.39167,Q21686,,Kemplich,Kemplich,Kemplich,,FR,hist_map,high,1
 kerbaeb,49.16639,6.965,Q22136,,Kerbach,Kerbach,Kerbach,,FR,hist_map,medium,0.86 near the index's canton (5 km)
 kerling-les-sierek,49.39806,6.34972,Q21766,,Kerling-lès-Sierck,Kerling-lès-Sierck,Kerling-lès-Sierck,,FR,hist_map,high,1.00 near the index's canton (5 km)
 kerlingcn,49.3172,6.65083,Q1739267,,Kerlingcn,Kerlingen,Kerlingen,,DE,hist_map,medium,ambiguous without an anchor (2 spots)
-kerperieh-ilemmersdorf,49.35349,6.62768,Q1604852,,Kerprich-Hemmersdorf,Kerprichhemmersdorf,Kerprichhemmersdorf,,DE,hist_map,medium,0.90 near the index's commune (7 km)
+kerperieh-ilemmersdorf,49.35349,6.62768,,,Kerprich-Hemmersdorf,,,,DE,rule,high,"Kerprich-Hemmersdorf, right of the Nied, office of Siersberg (hist_map); the item Q1604852 both share is not taken by Großhemmersdorf"
 kerprich-aux-bois,48.73889,6.96028,Q21668,,Kerprich-aux-Bois,Kerprich-aux-Bois,Kerprich-aux-Bois,,FR,hist_map,high,1.00 near the index's canton (7 km)
 kerprich-les-dieuze,48.82417,6.69833,Q28040537,,Kerprich-lès-Dieuze,Kerprich-lès-Dieuze,Kerprich-lès-Dieuze,,FR,hist_map,high,1.00 near the index's canton (2 km)
 kilzing,49.45114,6.4104,,,Kitzing,Kutzingen,,,FR,hist_map,high,1.00 near the index's commune (1 km)
@@ -1222,7 +1220,7 @@ mayoralty-bertrimoutier,48.27167,7.05417,,,Mairie de Bertrimoutier,,,,,territory
 mayoralty-berungen,49.03423,7.26796,,,Mairie de Berùngen,,,,,territory,medium,centre of 10 located member(s)
 mayoralty-bousseviller,49.12111,7.46417,,,Mairie de Bousseviller,,,,,territory,medium,seat: bousseviller
 mayoralty-hilsperg,49.12896,7.36152,,,Mairie d'Hilsperg,,,,,territory,medium,centre of 30 located member(s)
-mayoralty-longchamp,47.92427,6.68399,,,Mairie de Longchamp,,,,,territory,medium,centre of 16 located member(s)
+mayoralty-longchamp,47.92441,6.68274,,,Mairie de Longchamp,,,,,territory,medium,centre of 17 located member(s)
 mayoralty-mandray,48.21833,6.99583,,,Mairie de Mandray,,,,,territory,medium,seat: mandray
 mayoralty-meurthe,48.21564,6.9492,,,Mairie de Meurthe,,,,,territory,medium,centre of 9 located member(s)
 mayoralty-rolbing,49.17167,7.43972,,,Mairie de Rolbing,,,,,territory,medium,seat: rolbing
@@ -1788,7 +1786,7 @@ steinbacb,49.46099,6.9586,Q16294817,,Steinbach,Steinbach,Steinbach,,DE,hist_map,
 sterek-hauie,49.39806,6.34972,,,Sierck-Haute,,,,FR,approximate,low,"not in Wikidata/GeoNames; placed at its commune Kerling-lés-Sierck; Sierck-Haute, in Kerling-lès-Sierck (DicoTopo: Udensircq); the index's Sterek-Hauie"
 stoneourt,49.05631,6.41595,Q136533000,,Stoncourt,,,,FR,hist_map,high,1.00 near the index's canton (0 km)
 sturzelbronn,49.05694,7.58583,Q22332,,Sturzelbronn,Stürzelbronn,Sturzelbronn,,FR,hist_map,high,1.00 near the index's canton (12 km)
-sub-provostship-sierck,49.38147,6.45038,,,Sous-prévôté de Sierck,,,,,territory,medium,centre of 48 located member(s)
+sub-provostship-sierck,49.38093,6.45372,,,Sous-prévôté de Sierck,,,,,territory,medium,centre of 49 located member(s)
 suiiit-gangolph,49.4733,6.60861,,,Suiiit-Gangolph',,,,DE,approximate,low,not in Wikidata/GeoNames; placed at its commune Besseringen
 suisse,48.96583,6.57944,Q22036,,Suisse,Suisse,Suisse,,FR,hist_map,high,1.00 near the index's canton (12 km)
 sun-de-laistrc,,,,,Sun de Laistrc,,,,FR,unlocated,low,

@@ -835,7 +835,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 835,Vcntron.,Vcntron,,ban-vagney,,fief,,,,main,,ventron,64,medium,index match by confused number (1.00)
 836,Lespahge.,Lespahge,,mayoralty-longchamp,,fief,,,,main,,lepangc,64,high,
 837,Maxonchamps.,Maxonchamps,,mayoralty-longchamp,,fief,,,,main,,maxonchamp,64,high,
-838,Buz.,Buz,,mayoralty-longchamp,,fief,,,,main,,buz,64,low,index match by none (0.00)
+838,Buz.,Ruz,,mayoralty-longchamp,,fief,,,,main,,rupt-sur-moselle,64,high,
 839,L'Estat.,L'Estat,,mayoralty-longchamp,,fief,,,,main,,lette,64,high,
 840,La Boche.,La Boche,,mayoralty-longchamp,,fief,,,,main,,la-roche,64,high,
 841,Fcrdruz.,Fcrdruz,,mayoralty-longchamp,,fief,,,,main,,ferdrupt,64,high,
@@ -1235,7 +1235,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1235,Mellick.,Mellick,,sub-provostship-sierck,,domain,,,,main,,mailing,78,medium,index match by confused number (0.95)
 1236,Udern.,Udern,,sub-provostship-sierck,,domain,,,,main,,ouderen,79,high,
 1237,Lonstorfî.,Lonstorfî,,sub-provostship-sierck,,domain,,,,main,,launstroff,79,high,
-1238,Hymerstroff.,Hymerstroff,,sub-provostship-sierck,,domain,,,,main,,hymerstroff,79,low,index match by none (0.00)
+1238,Hymerstroff.,Hymerstroff,,sub-provostship-sierck,,domain,,,,main,,grosshemmersdorf,79,high,
 1239,Tintingen.,Tintingen,,sub-provostship-sierck,,domain,,,,main,,tunting,79,medium,index match by confused number (0.75)
 1240,Busingen.,Busingen,,sub-provostship-sierck,,domain,,,,main,,bising,79,high,
 1241,Lumersfeldl.,Lumersfeldl,,sub-provostship-sierck,,domain,,,,main,,laumesfeld,79,high,
@@ -1284,67 +1284,67 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1284,Bublingen.,Bublingen,,provostship-conde-sierck,,domain,,,,main,,piblange,80,high,
 1285,"Viller-Bctnach, abbaye de l'ordre de Citeaux.",Viller-Bctnach,abbey,provostship-conde-sierck,,clergy,,,,main,cistercian,villers-bettnach,80,high,
 1286,"Fraystorff, abbaye dudict ordre de Citeaux.",Fraystorff,abbey,provostship-conde-sierck,,clergy,,,,main,cistercian,freistroff,80,high,
-1287,Obcrperl.,Obcrperl,,district-perl,,clergy,,,,main,,oberperl,80,high,
-1288,Niderpcrl et,Niderpcrl et,,district-perl,,clergy,,,,main,,perl,80,high,
-1289,Syndorfi.,Syndorfi,,district-perl,,clergy,,,,main,,sehndorf,80,high,
-1290,AÏlorfi.,AÏlorfi,,district-perl,,clergy,,,,main,,niedaltdorf,80,medium,index match by number (0.36)
-1291,Luckcn.,Luckcn,,district-perl,,clergy,,,,main,,oberleuken,80,medium,index match by number (0.36)
-1292,Wuchern.,Wuchern,,district-perl,,clergy,,,,main,,wochern,80,high,
-1293,"Conchen, aliàs Condé.",Conchen,,district-perl,,clergy,,,,main,,conde,80,high,
-1294,Morthen.,Morthen,,district-perl,,clergy,,,,main,,northen,80,high,
-1295,"Mehingen, aliàs Mengen.",Mehingen,,district-perl,,clergy,,,,main,,megange,80,high,
-1296,Gerlingcn.,Gerlingcn,,district-perl,,clergy,,,,main,,guirlange,80,high,
-1297,Publingcn.,Publingcn,,district-perl,,clergy,,,,main,,piblange,80,high,
-1298,Drachenach.,Drachenach,,district-perl,,clergy,,,,main,,drogny,80,high,
-1299,Felstrofî.,Felstrofî,,district-perl,,clergy,,,,main,,filstroff,80,high,
-1300,Gerolfingen.,Gerolfingen,,district-perl,,clergy,,,,main,,guerlefang,80,high,
-1301,Dudingcn.,Dudingcn,,district-perl,,clergy,,,,main,,diding,80,medium,index match by confused number (0.95)
-1302,Eppingen.,Eppingen,,district-perl,,clergy,,,,main,,epange,81,medium,index match by confused number (0.95)
-1303,Schartzmorther.,Schartzmorther,,district-perl,,clergy,,,,main,,scharhmorther,81,high,
-1304,Fliessborn.,Fliessborn,,district-perl,,clergy,,,,main,,fliessborn,81,medium,index match by confused number (1.00)
-1305,Hasenholb.,Hasenholb,,district-perl,,clergy,,,,main,,hasenholh,81,high,
-1306,Gadcrscheuren.,Gadcrscheuren,,district-perl,,clergy,,,,main,,godchurc,81,high,
-1307,Schcuren.,Schcuren,,district-perl,,clergy,,,,main,,scheuer-hof,81,medium,index match by index number (1.00)
-1308,Nodlingen.,Nodlingen,,district-perl,,clergy,,,,main,,neudlangc,81,high,
-1309,Bingen.,Bingen,,district-perl,,clergy,,,,main,,bubingen,81,medium,index match by confused number (0.95)
-1310,Bury.,Bury,,district-perl,,clergy,,,,main,,kalembourg,81,high,
-1311,Freistorff.,Freistorff,,district-perl,,clergy,,,,main,,freistroff,81,medium,index match by confused number (0.90)
-1312,"Clemey, aliàs Schombcrg.",Clemey,,district-perl,,clergy,,,,main,,chemery,81,medium,index match by confused number (0.95)
-1313,Freistorff.,Freistorff,,district-perl,,fief,,,,main,,freistroff,81,medium,index match by loose number (0.90)
-1314,Obercontz.,Obercontz,,district-perl,,fief,,,,main,,haute-kontz,81,medium,index match by confused number (0.95)
-1315,Anseldingen.,Anseldingen,,district-perl,,fief,,,,main,,anzeling,81,medium,index match by loose number (0.95)
-1316,Budingen.,Budingen,,district-perl,,fief,,,,main,,budange,81,medium,index match by confused number (0.95)
-1317,Neunieh.,Neunieh,,district-perl,,fief,,,,main,,nennig,81,medium,index match by index number (1.00)
-1318,Timstorff.,Timstorff,,district-perl,,fief,,,,main,,tunsdorf,81,medium,index match by index number (1.00)
-1319,Edelnigen.,Edelnigen,,district-perl,,fief,,,,main,,edelnigen,81,low,index match by none (0.00)
-1320,"Burg-Esch, chasteau et village.",Burg-Esch,castle|village,district-perl,,fief,,,,main,,chateau-de-bourg-esch,81,medium,index match by confused number (0.94)
-1321,"Berg, chustcau et village.",Berg,village,district-perl,,fief,,,,main,,berg,81,medium,index match by index number (1.00)
-1322,Beuren.,Beuren,,district-perl,,fief,,,,main,,beuren,81,medium,index match by confused number (1.00)
-1323,Hechlingen.,Hechlingen,,district-perl,,fief,,,,main,,heckling,81,medium,index match by index number (1.00)
-1324,Schwcrdorfr.,Schwcrdorfr,,district-perl,,fief,,,,main,,schwerdorff,81,high,
-1325,Gursingen.,Gursingen,,district-perl,,fief,,,,main,,guerstling,81,high,
-1326,Kutssingcn.,Kutssingcn,,district-perl,,fief,,,,main,,kitzing,81,high,
-1327,Mensskirch.,Mensskirch,,district-perl,,fief,,,,main,,menskirch,81,high,
-1328,Rutzingen.,Rutzingen,,district-perl,,fief,,,,main,,ritzing,81,high,
-1329,Metzer-Esch.,Metzer-Esch,,district-perl,,fief,,,,main,,metzeresche,81,high,
-1330,Ebcrsweillcr.,Ebcrsweillcr,,district-perl,,fief,,,,main,,ebersviller,81,medium,index match by confused number (0.96)
-1331,Golman.,Golman,,district-perl,,fief,,,,main,,colmen,81,medium,index match by index number (1.00)
-1332,Hombourg auiïdcr Kandcl.,Hombourg auiïdcr Kandcl,,district-perl,,fief,,,,main,,hombourg-sur-kaner,81,medium,index match by index number (1.00)
-1333,Waldtvtiss.,Waldtvtiss,,district-perl,,fief,,,,main,,waldwisse,81,medium,index match by index number (1.00)
-1334,Bcltsstroff.,Bcltsstroff,,district-perl,,fief,,,,main,,bettelainville,81,low,index match by none (0.00)
-1335,Ansclnigen.,Ansclnigen,,district-perl,,fief,,,,main,,alzing,81,high,
-1336,Dudingen.,Dudingen,,district-perl,,fief,,,,main,,diding,82,medium,index match by loose number (0.95)
-1337,Kirff.,Kirff,,district-perl,,fief,,,,main,,kirf,82,medium,index match by loose number (0.89)
-1338,Brcttingen.,Brcttingen,,district-perl,,fief,,,,main,,bettingen,82,low,index match by name (0.95)
-1339,Eymerstorlï.,Eymerstorlï,,district-perl,,fief,,,,main,,eimersdorf,82,high,
-1340,Lugsingen.,Lugsingen,,district-perl,,fief,,,,main,,ising,82,high,
-1341,Pomern.,Pomern,,district-perl,,fief,,,,main,,pomern,82,medium,index match by confused number (1.00)
-1342,Ryol.,Ryol,,district-perl,,fief,,,,main,,riol,82,high,
-1343,Rodingcn.,Rodingcn,,district-perl,,fief,,,,main,,rudling,82,medium,index match by confused number (0.95)
-1344,Wiss.,Wiss,,district-perl,,fief,,,,main,,wies,82,medium,index match by confused number (0.75)
-1345,Zuzingen.,Zuzingen,,district-perl,,fief,,,,main,,zeurange,82,high,
-1346,"Mentzberg, chasteau.",Mentzberg,castle,district-perl,,fief,,,,main,,meinsberg,82,high,
-1347,"Monder, chasteau, moitié Lorraine et moitié Trèverois.",Monder,castle,district-perl,,fief,,,,main,,monclair,82,medium,index match by number (0.38)
+1287,Obcrperl.,Obcrperl,,court-perl,,clergy,,,,main,,oberperl,80,high,
+1288,Niderpcrl et,Niderpcrl et,,court-perl,,clergy,,,,main,,perl,80,high,
+1289,Syndorfi.,Syndorfi,,court-perl,,clergy,,,,main,,sehndorf,80,high,
+1290,AÏlorfi.,AÏlorfi,,provostship-sierck,,clergy,,,,main,,niedaltdorf,80,medium,index match by number (0.36)
+1291,Luckcn.,Luckcn,,provostship-sierck,,clergy,,,,main,,oberleuken,80,medium,index match by number (0.36)
+1292,Wuchern.,Wuchern,,provostship-sierck,,clergy,,,,main,,wochern,80,high,
+1293,"Conchen, aliàs Condé.",Conchen,,provostship-sierck,,clergy,,,,main,,conde,80,high,
+1294,Morthen.,Morthen,,provostship-sierck,,clergy,,,,main,,northen,80,high,
+1295,"Mehingen, aliàs Mengen.",Mehingen,,provostship-sierck,,clergy,,,,main,,megange,80,high,
+1296,Gerlingcn.,Gerlingcn,,provostship-sierck,,clergy,,,,main,,guirlange,80,high,
+1297,Publingcn.,Publingcn,,provostship-sierck,,clergy,,,,main,,piblange,80,high,
+1298,Drachenach.,Drachenach,,provostship-sierck,,clergy,,,,main,,drogny,80,high,
+1299,Felstrofî.,Felstrofî,,provostship-sierck,,clergy,,,,main,,filstroff,80,high,
+1300,Gerolfingen.,Gerolfingen,,provostship-sierck,,clergy,,,,main,,guerlefang,80,high,
+1301,Dudingcn.,Dudingcn,,provostship-sierck,,clergy,,,,main,,diding,80,medium,index match by confused number (0.95)
+1302,Eppingen.,Eppingen,,provostship-sierck,,clergy,,,,main,,epange,81,medium,index match by confused number (0.95)
+1303,Schartzmorther.,Schartzmorther,,provostship-sierck,,clergy,,,,main,,scharhmorther,81,high,
+1304,Fliessborn.,Fliessborn,,provostship-sierck,,clergy,,,,main,,fliessborn,81,medium,index match by confused number (1.00)
+1305,Hasenholb.,Hasenholb,,provostship-sierck,,clergy,,,,main,,hasenholh,81,high,
+1306,Gadcrscheuren.,Gadcrscheuren,,provostship-sierck,,clergy,,,,main,,godchurc,81,high,
+1307,Schcuren.,Schcuren,,provostship-sierck,,clergy,,,,main,,scheuer-hof,81,medium,index match by index number (1.00)
+1308,Nodlingen.,Nodlingen,,provostship-sierck,,clergy,,,,main,,neudlangc,81,high,
+1309,Bingen.,Bingen,,provostship-sierck,,clergy,,,,main,,bubingen,81,medium,index match by confused number (0.95)
+1310,Bury.,Bury,,provostship-sierck,,clergy,,,,main,,kalembourg,81,high,
+1311,Freistorff.,Freistorff,,provostship-sierck,,clergy,,,,main,,freistroff,81,medium,index match by confused number (0.90)
+1312,"Clemey, aliàs Schombcrg.",Clemey,,provostship-sierck,,clergy,,,,main,,chemery,81,medium,index match by confused number (0.95)
+1313,Freistorff.,Freistorff,,provostship-sierck,,fief,,,,main,,freistroff,81,medium,index match by loose number (0.90)
+1314,Obercontz.,Obercontz,,provostship-sierck,,fief,,,,main,,haute-kontz,81,medium,index match by confused number (0.95)
+1315,Anseldingen.,Anseldingen,,provostship-sierck,,fief,,,,main,,anzeling,81,medium,index match by loose number (0.95)
+1316,Budingen.,Budingen,,provostship-sierck,,fief,,,,main,,budange,81,medium,index match by confused number (0.95)
+1317,Neunieh.,Neunieh,,provostship-sierck,,fief,,,,main,,nennig,81,medium,index match by index number (1.00)
+1318,Timstorff.,Timstorff,,provostship-sierck,,fief,,,,main,,tunsdorf,81,medium,index match by index number (1.00)
+1319,Edelnigen.,Edelnigen,,provostship-sierck,,fief,,,,main,,edelnigen,81,low,index match by none (0.00)
+1320,"Burg-Esch, chasteau et village.",Burg-Esch,castle|village,provostship-sierck,,fief,,,,main,,chateau-de-bourg-esch,81,medium,index match by confused number (0.94)
+1321,"Berg, chustcau et village.",Berg,village,provostship-sierck,,fief,,,,main,,berg,81,medium,index match by index number (1.00)
+1322,Beuren.,Beuren,,provostship-sierck,,fief,,,,main,,beuren,81,medium,index match by confused number (1.00)
+1323,Hechlingen.,Hechlingen,,provostship-sierck,,fief,,,,main,,heckling,81,medium,index match by index number (1.00)
+1324,Schwcrdorfr.,Schwcrdorfr,,provostship-sierck,,fief,,,,main,,schwerdorff,81,high,
+1325,Gursingen.,Gursingen,,provostship-sierck,,fief,,,,main,,guerstling,81,high,
+1326,Kutssingcn.,Kutssingcn,,provostship-sierck,,fief,,,,main,,kitzing,81,high,
+1327,Mensskirch.,Mensskirch,,provostship-sierck,,fief,,,,main,,menskirch,81,high,
+1328,Rutzingen.,Rutzingen,,provostship-sierck,,fief,,,,main,,ritzing,81,high,
+1329,Metzer-Esch.,Metzer-Esch,,provostship-sierck,,fief,,,,main,,metzeresche,81,high,
+1330,Ebcrsweillcr.,Ebcrsweillcr,,provostship-sierck,,fief,,,,main,,ebersviller,81,medium,index match by confused number (0.96)
+1331,Golman.,Golman,,provostship-sierck,,fief,,,,main,,colmen,81,medium,index match by index number (1.00)
+1332,Hombourg auiïdcr Kandcl.,Hombourg auiïdcr Kandcl,,provostship-sierck,,fief,,,,main,,hombourg-sur-kaner,81,medium,index match by index number (1.00)
+1333,Waldtvtiss.,Waldtvtiss,,provostship-sierck,,fief,,,,main,,waldwisse,81,medium,index match by index number (1.00)
+1334,Bcltsstroff.,Bcltsstroff,,provostship-sierck,,fief,,,,main,,bettelainville,81,low,index match by none (0.00)
+1335,Ansclnigen.,Ansclnigen,,provostship-sierck,,fief,,,,main,,alzing,81,high,
+1336,Dudingen.,Dudingen,,provostship-sierck,,fief,,,,main,,diding,82,medium,index match by loose number (0.95)
+1337,Kirff.,Kirff,,provostship-sierck,,fief,,,,main,,kirf,82,medium,index match by loose number (0.89)
+1338,Brcttingen.,Brcttingen,,provostship-sierck,,fief,,,,main,,bettingen,82,low,index match by name (0.95)
+1339,Eymerstorlï.,Eymerstorlï,,provostship-sierck,,fief,,,,main,,eimersdorf,82,high,
+1340,Lugsingen.,Lugsingen,,provostship-sierck,,fief,,,,main,,ising,82,high,
+1341,Pomern.,Pomern,,provostship-sierck,,fief,,,,main,,pomern,82,medium,index match by confused number (1.00)
+1342,Ryol.,Ryol,,provostship-sierck,,fief,,,,main,,riol,82,high,
+1343,Rodingcn.,Rodingcn,,provostship-sierck,,fief,,,,main,,rudling,82,medium,index match by confused number (0.95)
+1344,Wiss.,Wiss,,provostship-sierck,,fief,,,,main,,wies,82,medium,index match by confused number (0.75)
+1345,Zuzingen.,Zuzingen,,provostship-sierck,,fief,,,,main,,zeurange,82,high,
+1346,"Mentzberg, chasteau.",Mentzberg,castle,provostship-sierck,,fief,,,,main,,meinsberg,82,high,
+1347,"Monder, chasteau, moitié Lorraine et moitié Trèverois.",Monder,castle,provostship-sierck,,fief,,,,main,,monclair,82,medium,index match by number (0.38)
 1348,"Bolchcn, Boullay.",Bolchcn,,office-boulay,,domain,,,,main,,boulay,82,medium,index match by number (0.46)
 1349,"Mehingen, aliàs Mengen.",Mehingen,,office-boulay,,domain,,,,main,,megange,82,medium,index match by index number (1.00)
 1350,Hassgarten.,Hassgarten,,office-boulay,,domain,,,,main,,flasgarten,82,medium,index match by confused number (0.80)
