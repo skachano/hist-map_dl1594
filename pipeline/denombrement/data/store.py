@@ -39,8 +39,33 @@ class Dataset:
     issues: list[Issue] = field(default_factory=list)  # parse errors found while loading
 
 
+class _UniqueKeyLoader(yaml.SafeLoader):
+    """A YAML loader that refuses a key repeated in one mapping: YAML keeps the last value without a
+    word, and a rule added to rules.yaml for a place that already has one was silently lost."""
+
+    def construct_mapping(self, node, deep=False):
+        seen = {}
+        for key_node, _ in node.value:
+            key = self.construct_object(key_node, deep=deep)
+            if key in seen:
+                raise ValueError(f"{getattr(self, 'name', 'YAML')}: duplicate key {key!r} on lines "
+                                 f"{seen[key] + 1} and {key_node.start_mark.line + 1}")
+            seen[key] = key_node.start_mark.line
+        return super().construct_mapping(node, deep=deep)
+
+
+def load_yaml(path: Path):
+    """A YAML file, with an error for a key repeated in one mapping."""
+    loader = _UniqueKeyLoader(path.read_text())
+    loader.name = path.name
+    try:
+        return loader.get_single_data()
+    finally:
+        loader.dispose()
+
+
 def load_vocab(path: Path) -> dict[str, dict[str, dict]]:
-    return yaml.safe_load(path.read_text())
+    return load_yaml(path)
 
 
 def load(directory: Path = config.CURATED_DIR) -> Dataset:

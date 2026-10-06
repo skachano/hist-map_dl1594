@@ -14,13 +14,13 @@ import unicodedata
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
-import yaml
 
 from denombrement import config
+from denombrement.data.store import load_yaml
 from denombrement.parse import numbering
 from denombrement.text import book, clean
 
-OVERRIDES = yaml.safe_load((Path(__file__).parent / "headings.yaml").read_text())
+OVERRIDES = load_yaml(Path(__file__).parent / "headings.yaml")
 
 
 def fold(text: str) -> str:

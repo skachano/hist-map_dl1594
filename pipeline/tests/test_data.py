@@ -143,3 +143,15 @@ def test_schema_has_vocabulary_enums(sample):
     p = schema.table_schema(Place, sample.vocab)
     assert {"village", "provostship", "lordship"} <= set(p["properties"]["place_type"]["enum"])
     json.dumps(s)
+
+
+def test_a_repeated_yaml_key_is_an_error(tmp_path):
+    """rules.yaml: YAML keeps the last of two values for one key without a word; the loader refuses."""
+    import pytest
+    from denombrement.data.store import load_yaml
+    p = tmp_path / "rules.yaml"
+    p.write_text("geocode:\n  ruelle: {at: Saint-Léonard}\n  other: {at: Fraize}\n  ruelle: {unlocated: true}\n")
+    with pytest.raises(ValueError, match=r"rules.yaml: duplicate key 'ruelle' on lines 2 and 4"):
+        load_yaml(p)
+    p.write_text("geocode:\n  ruelle: {at: Saint-Léonard}\nentry_index:\n  ruelle: x\n")   # one per mapping is fine
+    assert load_yaml(p)["entry_index"] == {"ruelle": "x"}

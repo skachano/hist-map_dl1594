@@ -15,12 +15,11 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 
-import yaml
 
 from denombrement import config
 from denombrement.curate import corrections, reconcile
 from denombrement.data import models
-from denombrement.data.store import load_vocab
+from denombrement.data.store import load_vocab, load_yaml
 from denombrement.parse import numbering
 from denombrement.text import clean
 
@@ -103,7 +102,7 @@ def read_jsonl(path: Path) -> list[dict]:
 
 def load_rules() -> dict:
     path = config.CURATED_DIR / "rules.yaml"
-    return yaml.safe_load(path.read_text()) or {} if path.exists() else {}
+    return load_yaml(path) or {} if path.exists() else {}
 
 
 def load_manual(table: str) -> list[dict]:

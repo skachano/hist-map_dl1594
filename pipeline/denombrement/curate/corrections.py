@@ -32,9 +32,9 @@ def _letters(text: str) -> str:
 def _index_lines() -> dict[tuple[str, str], list[str]]:
     """rules.yaml `index_lines`: index lines the scan misread or merged, as printed. Keyed by
     "page|name as read"; each value is the printed text of one line or a list of lines."""
-    import yaml
+    from denombrement.data.store import load_yaml
     path = config.CURATED_DIR / "rules.yaml"
-    rules = (yaml.safe_load(path.read_text()) or {}) if path.exists() else {}
+    rules = (load_yaml(path) or {}) if path.exists() else {}
     out = {}
     for key, text in (rules.get("index_lines") or {}).items():
         page, _, name = str(key).partition("|")
