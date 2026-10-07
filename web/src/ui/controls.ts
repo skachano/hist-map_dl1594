@@ -9,6 +9,8 @@ const LANG_NAMES: Record<Lang, string> = { en: "English", fr: "Français", de: "
 
 export function renderHeader(root: HTMLElement, _data: Dataset, store: Store): void {
   const { lang, view } = store.state;
+  // The header is rebuilt on every change; the rows that scroll sideways on phones keep their place.
+  const scrolled = [".views", ".modes"].map((s) => root.querySelector(s)?.scrollLeft ?? 0);
   fill(root,
     view !== "table" ? h("button", { class: "skip", onclick: () => store.set({ view: "table" }) },
       t("skipToTable", lang)) : null,
@@ -27,4 +29,5 @@ export function renderHeader(root: HTMLElement, _data: Dataset, store: Store): v
         "aria-pressed": String(l === store.state.layer), onclick: () => store.set({ layer: l }) },
       t(`layer_${l ?? "tenures"}` as StringKey, lang)))) : null,
   );
+  [".views", ".modes"].forEach((s, i) => { const el = root.querySelector(s); if (el) el.scrollLeft = scrolled[i]; });
 }

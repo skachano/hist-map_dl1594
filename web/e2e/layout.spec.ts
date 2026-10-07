@@ -12,3 +12,15 @@ for (const hash of VIEWS) {
     expect(errors).toEqual([]);
   });
 }
+
+test("the Settlements row stays scrolled where it was", async ({ page }) => {
+  await open(page, "#/map?lang=en");
+  const modes = page.locator("header .modes");
+  const max = await modes.evaluate((el) => el.scrollWidth - el.clientWidth);
+  test.skip(max <= 0, "the row fits the screen");
+  await modes.evaluate((el) => { el.scrollLeft = el.scrollWidth; });
+  const before = await modes.evaluate((el) => el.scrollLeft);
+  await modes.locator("button").last().click();
+  await expect(modes.locator("button").last()).toHaveAttribute("aria-pressed", "true");
+  expect(await modes.evaluate((el) => el.scrollLeft)).toBe(before);
+});
