@@ -71,6 +71,7 @@ aside {
 #legend .others li { grid-template-columns: 16px 1fr auto; }
 
 /* buttons that read as links */
+.about a { color: var(--link); }
 button.link { border: none; background: none; padding: 0; color: var(--link); text-align: left; cursor: pointer; }
 button.link:hover { text-decoration: underline; }
 button.link.strong { font-weight: 600; }
@@ -154,6 +155,10 @@ ol.changes { list-style: none; padding: 0; margin: 0; }
 .about { max-width: 720px; line-height: 1.55; }
 .about h2 { font-size: 20px; }
 .about h3 { font-size: 15px; margin: 18px 0 4px; }
+.about h4 { font-size: 14px; margin: 14px 0 4px; }
+.about .table-wrap { margin: 8px 0; }
+.about .matrix { line-height: 1.4; min-width: 600px; }   /* scrolls in its frame on a phone */
+.matrix tr.group th { background: var(--page); font-weight: 600; white-space: normal; }
 .rights-explained dt { font-weight: 600; margin-top: 10px; scroll-margin-top: 8px; }
 .rights-explained dt .muted { font-weight: 400; }
 .rights-explained dd { margin: 2px 0 0; }

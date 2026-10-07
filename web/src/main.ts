@@ -136,7 +136,7 @@ async function start(): Promise<void> {
     else fill(side);
     page.hidden = onMap;
     if (state.view === "table") renderTable(page, data, state, store);
-    else if (state.view === "about") renderAbout(page, data, state.lang);
+    else if (state.view === "about") renderAbout(page, data, state.lang, store);
     else fill(page);
     renderPanel($("panel"), data, onMap ? state : { ...state, place: undefined }, store);
     if (!onMap) tooltip.hidden = true;
