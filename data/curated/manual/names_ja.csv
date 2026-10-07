@@ -295,7 +295,6 @@ freistroff,フレストロフ,hist_map
 fremersdorf,フレマースドルフ,hist_map
 fremestroff,フレメストロフ,hist_map
 freybouse,フレイブス,hist_map
-freyming,フレマン,hist_map
 furschweiler-les-namborn,フルシュヴァイラー,hist_map
 furweiler,フューアヴァイラー,hist_map
 gawestroff,ガヴェストロフ,hist_map
@@ -367,7 +366,6 @@ holving,オルヴァン,hist_map
 hombourg-bas,オンブール＝バ,hist_map
 hombourg-sur-kaner,ビュダンジュ,hist_map
 hommarting,オマルタン,hist_map
-honzrath,ホンツラート,hist_map
 hoste,オスト,hist_map
 hottviller,オットヴィレール,hist_map
 hultehouse,ユルトゥーズ,hist_map
@@ -835,7 +833,7 @@ buzy,ビュジー,written
 benamenil,ベナメニル,written
 benifosse,ベニフォッス,written
 bockweiler,ベックヴァイラー,written
-itnbiiujen,ビュービンゲン,written
+gaubiving,ゴビヴァン,hist_map
 capucins-de-nancy,ナンシーのカプチン会修道院,written
 ceintrey,サントレ,written
 celles,セル,written
@@ -1532,7 +1530,7 @@ norbepaire,ノルベペール,written
 norroy-le-veneur,ノロワ＝ル＝ヴヌール,written
 norroy-sur-vair,ノロワ,written
 noussewiller-les-putlelange,ヌスヴィレール,written
-ocft,エルト,written
+eft,エフト,written
 ochey,オシェ,written
 odenhoven,オーデンホーフェン,written
 offroicourt,オフロワクール,written
@@ -1798,7 +1796,7 @@ souveraincourl,スヴランクール,written
 spadangea,スパダンジュ,written
 sponville,スポンヴィル,written
 stanuemiein,シュタンヴェンシュタイン,written
-suiiit-gangolph,ザンクト・ガンゴルフ,written
+sankt-gangolf,ザンクト・ガンゴルフ,written
 sur-la-cote,シュル＝ラ＝コート,written
 taintrux,タントリュ,written
 tannois,タノワ,written
@@ -1955,3 +1953,6 @@ ecrouves,エクルーヴ,written
 eloyes,エロワ,written
 etreval,エトルヴァル,written
 evaux-et-menil,エヴォー＝エ＝メニル,written
+himrod,イムロッド,hist_map
+penning,ペナン,hist_map
+buchingen,ブッヒンゲン,hist_map

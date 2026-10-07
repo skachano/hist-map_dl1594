@@ -482,6 +482,10 @@ entry_places:
   610: laveline-devant-bruyeres-610   # "Leavéline": Laveline-devant-Bruyères; the line for Laveline-du-Houx is 702's
   852: le-charmois-bains   # "Le Charmois devant Bains": Le Charmois of Bains-les-Bains, not Charmois-l'Orgueilleux (996)
   1051: la-neuveville-girancourt   # "La Neufville" (ban of Girancourt): La Neuveville of Girancourt, not of Montfort (900)
+  # entries H. Hiegel's bailiwick d'Allemagne (hist_map) places apart from the index line that names them
+  1653: himrod      # "Himradt" (Puttelange): Himrod, a lost village of the seigneurie of Puttelange; not the index's Honzrath by Merzig, 45 km away
+  1390: penning     # "Pfeningen" (fiefs of Boulay): Penning (Pfeningen, Pfenningen), of the county of Boulay; not Freyming, whose line prints 1590
+  1389: buchingen   # "Buchingen" (fiefs of Boulay): Buchingen-lès-Eblange, of the county of Boulay; the index's Bockange (1259, 1282) is Sierck's
 
 # Locations: {wikidata: Q…}, {lat, lon}, {approximate: other-place} or {unlocated: true}, with a note.
 geocode:
@@ -530,6 +534,13 @@ geocode:
   saint-julien: {wikidata: Q580467, note: "Saint-Julien-lès-Gorze: Bouteiller gives this Saint-Julien (1594) from Alix (DicoTopo); the index's canton de Commercy is Saint-Julien-sous-les-Côtes"}
   quessonviller: {"at": "Dommartin-lès-Remiremont", "name_fr": "Xonvillers", "note": "Xonvillers, a farm of Dommartin-lès-Remiremont: Quessonville, Alix n° 775 (Marichal, DicoTopo); not a grange of Celles"}
   celles: {"at": "Saint-Amé", "name_fr": "Celles", "note": "Celles, a hamlet and mairie of Saint-Amé (Selle, 1590; DicoTopo), in the ban de Ramonchamp by Remiremont; not Celles-sur-Plaine"}
+  himrod: {lat: 49.0525, lon: 6.93083, name_fr: "Himrod", country: FR, note: "Himrod (Himmrod), a lost village of the seigneurie of Puttelange (H. Hiegel, in hist_map)"}
+  penning: {lat: 49.23194, lon: 6.56056, name_fr: "Penning", name_de: "Pfenningen", country: FR, note: "Penning (Pfeningen, Pfenningen), a hamlet in the county of Boulay (H. Hiegel, in hist_map)"}
+  buchingen: {lat: 49.22333, lon: 6.48194, name_fr: "Buchingen", country: FR, note: "Buchingen-lès-Eblange, in the provostship of Eblange, county of Boulay (H. Hiegel, in hist_map)"}
+  itnbiiujen: {wikidata: Q3099315, name_fr: "Gaubiving", note: "Gaubiving (Bubingen), by Behren in the seigneurie of Forbach (H. Hiegel, in hist_map); not Bübingen by Saarbrücken"}
+  ocft: {lat: 49.47638, lon: 6.44691, name_fr: "Eft", name_de: "Eft", name_en: "Eft", country: DE, note: "Eft (Efft; GeoNames 2933272, as in hist_map), of Eft-Hellendorf: the index's Oeft (Eft), com. d'Orscholz (the scan reads Ocft); Esft in Alix"}
+  suiiit-gangolph: {lat: 49.48333, lon: 6.58333, name_fr: "Sankt Gangolf", name_de: "Sankt Gangolf", name_en: "Sankt Gangolf", country: DE, note: "Sankt Gangolf, the church (GeoNames 3207569) by Besseringen: the index's Saint-Gangolph, église et presbytère, com. de Besseringen (the scan reads Suiiit-Gangolph')"}
+  baldringen: {note: "Baldringen, com. de Zerf, as the editors' index identifies Balderingen (1459); 17-23 km east of the Saar from the other villages of the Saargau. Not Ballern, which is Baldern (1448), though H. Hiegel (hist_map) spells Ballern Baldringen"}
   kolchen: {lat: 49.63419, lon: 6.44363, name_fr: "Köllig", name_de: "Köllig", name_en: "Köllig", country: DE, note: "Köllig (Kölchen; GeoNames 2886322, as in hist_map), a village of Nittel on the Moselle, by Nittel (entry 1411) in the office of Siersberg. The editors' note gives Colchen, a fief of the communauté of Guidesweiler (Güdesweiler), after Bugnon and Durival, probably wrongly"}
   # unlocated places found in DicoTopo (make dicotopo, 2026-10-05): the entry cited by Marichal or Bouteiller, or the
   # index's identification or commune confirmed; a hamlet at its commune, a commune at its item

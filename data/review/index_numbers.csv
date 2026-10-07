@@ -6,13 +6,15 @@ not in index,,,,,1038,Pierreficte,71,,pierreficte,
 not in index,,,,,1051,La Neufville,71,,la-neuveville-girancourt,
 not in index,,,,,1319,Edelnigen,81,,edelnigen,
 not in index,,,,,1334,Bettsstroff,81,,bettelainville,
-not in index,,,,,1653,Himradt,92,,honzrath,
+not in index,,,,,1389,Buchingen,83,,buchingen,
+not in index,,,,,1390,Pfeningen,83,,penning,
+not in index,,,,,1653,Himradt,92,,himrod,
 not in index,,,,,1832,Lorro,98,,lorro,
 not in index,,,,,2134,La Fosse,109,,la-fosse,
 not in index,,,,,2229,Conthil,113,,contwig,
 not in index,,,,,2231,Momborn,113,,montbronn,
 no entry,194,Bary,1510,,,,,1.00,,"1310 is Bury, Kalembourg (Kalemburg, Bury: dén. Th. Alix, Bouteiller), as entry 1274; rules.yaml entry_index"
-no entry,189,Bebing,1756,,,,,1.00,,Bubingen (1736) is Bubingen
+no entry,189,Bebing,1756,,,,,1.00,,Bubingen (1736) is Gaubiving
 no entry,189,Bellefontaine,709,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
 no entry,189,Bellefontaine,710,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
 no entry,189,Bellefontaine,711,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
@@ -21,6 +23,7 @@ no entry,189,Bellefontaine,713,,,,,1.00,,"709-715: the ban of Bellefontaine, who
 no entry,189,Bellefontaine,714,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
 no entry,189,Bellefontaine,715,,,,,1.00,,"709-715: the ban of Bellefontaine, whose villages these entries are"
 no entry,190,Bettlainville,1534,,,,,1.00,,printed 1534: Henselhofen (corrections)
+no entry,191,Bockange,1389,,,,,1.00,bockange,Buchingen (1389) is Buchingen-lès-Eblange
 no entry,192,Bonfays,2412,,,,,1.00,bonfays-legeville-et-bonfays,2412 is the Dominican nuns of Nancy
 no entry,192,Bouvroy,776,,,,,1.00,,"776 is Rouveroy, the grange of Rouveroye near Remiremont (Rouveroye's line, rules.yaml entry_index); not a grange of Celles"
 no entry,193,Bouzey,1190,,,,,1.00,,"1190 is Bouzey of Châtenois: Dombrot-sur-Vair, ci-devant Bouzey (Dombrot's line, rules.yaml entry_index); not the mill of Sanchey"
@@ -28,6 +31,7 @@ no entry,196,Charniois-rOrgueilIcux,852,,,,,1.00,charmois-l-orgueilleux,"852 is 
 no entry,203,Edling,1519,,,,,1.00,edling,Edlingen (1719) is Adelange
 no entry,204,Enssens-la-Ville,968,,,,,1.00,,"968 is not a place of its own: ""Dommartin enssens la Ville"" (967-968), Dommartin-lès-Ville (Alix n° 968, Marichal); rules.yaml entry_index"
 no entry,208,Fosses (les Hautes et Basses-),2154,,,,,1.00,,"printed 2154: Drulben, which is Trulben"
+no entry,210,Freyming,1590,,,,,1.00,,Pfeningen (1390) is Penning; 1590 is Semanges
 no entry,217,Hestroff,1351,,,,,1.00,hestroff,the editor's corrections: 'ce numéro doit être effacé à l'art. Hestroff' (1351 is Helstroff)
 no entry,218,Honzrath,1653,,,,,1.00,,"printed 1653: Himradt, which is Hellimer; no entry of Merzig fits"
 no entry,219,Hymont,1,,,,,1.00,hymont,Chenymont (971) is Chenilmont
@@ -89,7 +93,6 @@ manual,228,Mégange,1549,,1349,Mehingen,82,1.00,megange,printed 1349
 manual,193,Brccklangc,1558,,1358,Brechlingen,82,1.00,brecklange,printed 1358
 manual,204,Ëlvangc,1574,,1374,Elwingen,83,1.00,elvange,printed 1374
 manual,226,MainviHers,1577,,1377,Maulveiller,83,1.00,mainvillers,printed 1377
-manual,210,Freyming,1590,,1390,Pfeningen,83,1.00,freyming,printed 1390
 manual,256,Velving (?),1594,,1394,Weiblingen,83,1.00,velving,printed 1394
 manual,206,Falck,1599,,1399,Falt,84,1.00,falck,printed 1399
 manual,203,Eimersdorf,1422*,,1422,Hymerrstorff,84,1.00,eimersdorf,printed 1422
@@ -108,7 +111,7 @@ manual,256,Vergaville,I63i,,1638,Wargaville,92,1.00,vergaville,printed 1638
 manual,210,Gawestroff(autrefois Weistroff),1689,,1689,Wistorff,93,1.00,gawestroff,"Wistorff: Weistroff, the old name"
 manual,221,Kerlingcn (Kerling-lès-Sarrelouts),1695,,1693,Kerlingen,93,1.00,kerlingen,printed 1695 (3/5): Kerlingen is entry 1693; 1695 is Eidlingen
 manual,262,Zinzing,1751,,1731,Zintsingen,95,1.00,zinzing,printed 1731
-manual,194,Itnbiiujen,1736,,1736,Bubingen,95,1.00,itnbiiujen,Bubingen
+manual,194,Itnbiiujen,1736,,1736,Bubingen,95,1.00,gaubiving,Bubingen
 manual,252,They,1751,,1751,They-soub-Vaudémont,95,1.00,they-sous-vaudemont,They-sous-Vaudémont
 manual,210,Frizon (la Haute et la Basse-),1805,,1803,Frizon-la-Haulte,97,1.00,frizon,Frizon-la-Haute
 manual,210,Frizon (la Haute et la Basse-),4,,1804,Frizon-la-Basse,97,1.00,frizon,Frizon-la-Basse
@@ -1537,7 +1540,7 @@ agrees,256,Veckring(?),1225,,1225,Werberingen,78,0.95,veckring,
 agrees,224,Lemcstroff,1226,,1226,Lemerstroff,78,0.95,lemestroff,
 agrees,221,Kirseh-lês-Sicrek,1227,,1227,Kirch,78,0.50,kirsch-les-sierck,
 agrees,261,Weilen,1228,,1228,Witten,78,0.83,weiten,
-agrees,236,Ocft (Eft),1229,,1229,Esft,78,0.55,ocft,
+agrees,236,Ocft (Eft),1229,,1229,Esft,78,0.55,eft,
 agrees,216,Hellendoriï,1230,,1230,Hellendorff,78,0.82,hellendorf,
 agrees,229,Merschweiller,1231,,1231,Mersweiller,78,0.91,merschweiller,
 agrees,185,Apach,1232,,1232,Appach,78,0.91,apach,
@@ -1627,7 +1630,6 @@ agrees,227,Marangc-Zondrangc,1376,,1376,Meringen,83,0.95,marange-zondrange,
 agrees,255,Varize,82,,1382,Warize,83,0.83,varize,
 agrees,218,Holling,87,,1387,Hollingen,83,0.88,holling,
 agrees,242,Rémclfang,1388,,1388,Rumelfingen,83,0.95,remelfang,
-agrees,191,Bockange,1389,,1389,Buchingen,83,0.95,bockange,
 agrees,255,Valmunster,1391,,1391,Walmunster,83,0.90,valmunster,
 agrees,260,VVallerfangen (Vaudrevange),1400,,1400,Valderfanges,84,0.56,vaudrevange,
 agrees,209,Fraulaulcrn (Lautern),1401,,1401,Lauthern,84,0.54,fraulautern,
@@ -1651,7 +1653,7 @@ agrees,229,Merchingen,1423,,1423,Morchingen,85,0.95,merchingen,
 agrees,203,Dreisbach,1424,,1424,Dreyssbach,85,0.84,dreisbach,
 agrees,235,Nohn,1425,,1425,Nonne,85,0.67,nohn,
 agrees,190,Besseringen,1426,,1426,Besseringen,85,1.00,besseringen,
-agrees,250,Suiiit-Gangolph',1427,,1427,Sainct-Gangolphe,85,0.79,suiiit-gangolph,
+agrees,250,Suiiit-Gangolph',1427,,1427,Sainct-Gangolphe,85,0.79,sankt-gangolf,
 agrees,230,Meillach,1428,,1428,Mettloch,85,0.75,mettlach,
 agrees,221,Kcuchingen,1429,,1429,Kuchingen,85,0.95,keuchingen,
 agrees,216,Hargarten (llargarten-lès-Becking),32,,1432,Hargarten,85,0.64,hargarten,

@@ -1226,7 +1226,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1226,Lemerstroff.,Lemerstroff,,provostship-sierck-prevote-propre,,domain,,,,main,,lemestroff,78,high,
 1227,Kirch.,Kirch,,provostship-sierck-prevote-propre,,domain,,,,main,,kirsch-les-sierck,78,high,
 1228,Witten.,Witten,,sub-provostship-sierck,,domain,,,,main,,weiten,78,high,
-1229,Esft.,Esft,,sub-provostship-sierck,,domain,,,,main,,ocft,78,high,
+1229,Esft.,Esft,,sub-provostship-sierck,,domain,,,,main,,eft,78,high,
 1230,Hellendorff.,Hellendorff,,sub-provostship-sierck,,domain,,,,main,,hellendorf,78,high,
 1231,Mersweiller.,Mersweiller,,sub-provostship-sierck,,domain,,,,main,,merschweiller,78,high,
 1232,Appach.,Appach,,sub-provostship-sierck,,domain,,,,main,,apach,78,high,
@@ -1386,8 +1386,8 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1386,Tuttingen.,Tuttingen,,office-boulay,,fief,,,,main,,titling,83,medium,index match by confused number (0.95)
 1387,Hollingen.,Hollingen,,office-boulay,,fief,,,,main,,holling,83,high,
 1388,Rumelfingen.,Rumelfingen,,office-boulay,,fief,,,,main,,remelfang,83,high,
-1389,Buchingen.,Buchingen,,office-boulay,,fief,,,,main,,bockange,83,high,
-1390,"Pfeningen,",Pfeningen,,office-boulay,,fief,,,,main,,freyming,83,medium,index match by index number (1.00)
+1389,Buchingen.,Buchingen,,office-boulay,,fief,,,,main,,buchingen,83,high,
+1390,"Pfeningen,",Pfeningen,,office-boulay,,fief,,,,main,,penning,83,high,
 1391,Walmunster.,Walmunster,,office-boulay,,fief,,,,main,,valmunster,83,high,
 1392,Dalheim.,Dalheim,,office-boulay,,fief,,,,main,,dalem,83,medium,index match by confused number (0.83)
 1393,Lanthrum.,Lanthrum,,office-boulay,,fief,,,,main,,loutremange,83,medium,index match by loose number (0.95)
@@ -1424,7 +1424,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1424,Dreyssbach.,Dreyssbach,,office-siersberg,,domain,,,,main,,dreisbach,85,high,
 1425,Nonne.,Nonne,,office-siersberg,,domain,,,,main,,nohn,85,high,
 1426,Besseringen.,Besseringen,,office-siersberg,,domain,,,,main,,besseringen,85,high,
-1427,Sainct-Gangolphe.,Sainct-Gangolphe,,office-siersberg,,domain,,,,main,,suiiit-gangolph,85,high,
+1427,Sainct-Gangolphe.,Sainct-Gangolphe,,office-siersberg,,domain,,,,main,,sankt-gangolf,85,high,
 1428,Mettloch.,Mettloch,,office-siersberg,,clergy,,,,main,,mettlach,85,high,
 1429,Kuchingen.,Kuchingen,,office-siersberg,,clergy,,,,main,,keuchingen,85,high,
 1430,Berkingen.,Berkingen,,office-siersberg,,clergy,,,,main,,beckingen,85,medium,index match by confused number (0.95)
@@ -1650,7 +1650,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1650,Nebingen.,Nebingen,,castellany-marimont,,fief,,,,main,,nebing,92,high,
 1651,La ville de Puttelenges.,La ville de Puttelenges,town,district-puttelange,lordship-puttelange,other,,,,main,,pultelange-les-sarralbe,92,high,
 1652,Dieffembach.,Dieffembach,,district-puttelange,lordship-puttelange,other,,,,main,,diefenbach-les-puttelange,92,high,number read from '1653'
-1653,Himradt.,Himradt,,district-puttelange,lordship-puttelange,other,,,,main,,honzrath,92,high,
+1653,Himradt.,Himradt,,district-puttelange,lordship-puttelange,other,,,,main,,himrod,92,high,
 1654,Reichlingen.,Reichlingen,,district-puttelange,lordship-puttelange,other,,,,main,,richeling,92,high,
 1655,Balleringen.,Balleringen,,district-puttelange,lordship-puttelange,other,,,,main,,ballering,92,high,
 1656,Bertringen.,Bertringen,,district-puttelange,lordship-puttelange,other,,,,main,,bettring,92,high,
@@ -1733,7 +1733,7 @@ no,text,name,descriptors,district_id,realm_id,section,holder_id,share,share_with
 1733,Dutlingen.,Dutlingen,,district-forbach,lordship-forbach,other,,,,main,,dittclingen,95,medium,index match by confused number (0.95)
 1734,Kirbach.,Kirbach,,district-forbach,lordship-forbach,other,,,,main,,kerbach,95,medium,index match by confused number (0.95)
 1735,Kordenburn.,Kordenburn,,district-forbach,lordship-forbach,other,,,,main,,cadenbronn,95,high,
-1736,Bubingen.,Bubingen,,district-forbach,lordship-forbach,other,,,,main,,itnbiiujen,95,medium,index match by index number (1.00)
+1736,Bubingen.,Bubingen,,district-forbach,lordship-forbach,other,,,,main,,gaubiving,95,medium,index match by index number (1.00)
 1737,Berren.,Berren,,district-forbach,lordship-forbach,other,,,,main,,behren,95,medium,index match by confused number (0.83)
 1738,"Vaudémont, chasteau, ville et église collégiatte de Sainct-Jean-Baptiste.",Vaudémont,castle|town,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,vaudemont,95,medium,index match by confused number (1.00)
 1739,"Vézelise, chasteau et ville.",Vézelise,castle|town,bailiwick-vaudemont,county-vaudemont,domain,,,,main,,vezelise,95,medium,index match by confused number (1.00)
