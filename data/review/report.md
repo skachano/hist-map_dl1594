@@ -580,6 +580,6 @@ Every number printed in the index resolved to the entry it means, and every entr
 - agrees: 2010
 - spelling differs: 67
 - corrected: 309
-- manual: 98
-- no entry: 31
+- manual: 97
+- no entry: 32
 - not in index: 14

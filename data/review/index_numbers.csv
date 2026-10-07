@@ -29,6 +29,7 @@ no entry,192,Bouvroy,776,,,,,1.00,,"776 is Rouveroy, the grange of Rouveroye nea
 no entry,193,Bouzey,1190,,,,,1.00,,"1190 is Bouzey of Châtenois: Dombrot-sur-Vair, ci-devant Bouzey (Dombrot's line, rules.yaml entry_index); not the mill of Sanchey"
 no entry,196,Charniois-rOrgueilIcux,852,,,,,1.00,charmois-l-orgueilleux,"852 is Le Charmois devant Bains, of Bains-les-Bains (Marichal); not Charmois-l'Orgueilleux (rules.yaml entry_places)"
 no entry,203,Edling,1519,,,,,1.00,edling,Edlingen (1719) is Adelange
+no entry,203,Eimersdorf,1422*,,,,,1.00,eimersdorf,"the editors' correction 23: 1422 is Kerperich-Hemmersdorf (and Eimersdorf only 1339, read 1559)"
 no entry,204,Enssens-la-Ville,968,,,,,1.00,,"968 is not a place of its own: ""Dommartin enssens la Ville"" (967-968), Dommartin-lès-Ville (Alix n° 968, Marichal); rules.yaml entry_index"
 no entry,208,Fosses (les Hautes et Basses-),2154,,,,,1.00,,"printed 2154: Drulben, which is Trulben"
 no entry,210,Freyming,1590,,,,,1.00,,Pfeningen (1390) is Penning; 1590 is Semanges
@@ -95,7 +96,6 @@ manual,204,Ëlvangc,1574,,1374,Elwingen,83,1.00,elvange,printed 1374
 manual,226,MainviHers,1577,,1377,Maulveiller,83,1.00,mainvillers,printed 1377
 manual,256,Velving (?),1594,,1394,Weiblingen,83,1.00,velving,printed 1394
 manual,206,Falck,1599,,1399,Falt,84,1.00,falck,printed 1399
-manual,203,Eimersdorf,1422*,,1422,Hymerrstorff,84,1.00,eimersdorf,printed 1422
 manual,221,Kerperieh-ilemmersdorf,59,,1439,Krispeig,85,1.00,kerprich-hemmersdorf,"corrections: ""1421, 22, 39, 40"""
 manual,221,Kerperieh-ilemmersdorf,40,,1440,Hymesstorff,85,1.00,kerprich-hemmersdorf,"corrections: ""1421, 22, 39, 40"""
 manual,190,Sctthujen ou Bctting',1457,,1457,Bettingen,86,1.00,bethingen,printed 1457
